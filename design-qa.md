@@ -32,6 +32,7 @@ Rendered target: the local Liquid fixture at `http://127.0.0.1:9293`, checked at
 - Header override: no announcement elements render; the exact supplied transparent 1055×1491 logo loads at the left and search stays in the right utility group on 1280×720 and 390×844 layouts.
 - Header interactions: the native search modal opens and its close control restores the closed state; the mobile drawer opens with all six category links and closes from its summary control.
 - Header clarity follow-up: the logo window increased to 70×74 px on desktop and 58×61 px on mobile with transparent inset space around the visible strokes. Desktop navigation shares the 94 px header bar and its measured center aligns exactly with the header center.
+- Scrolling follow-up: root `HTML` is the sole vertical page scroller; the theme body no longer creates a duplicate scrollbar.
 - Horizontal page movement is visually suppressed while product and category rails retain local horizontal scrolling.
 - Theme Check: 0 errors, 9 inherited Dawn warnings.
 - JavaScript syntax, JSON parsing and `git diff --check`: passed.
