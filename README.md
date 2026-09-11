@@ -208,6 +208,13 @@ Use local Git authentication for `omarashraaf`; the Codex connector previously u
 - Files: `assets/alma-packshot-*.webp`, `assets/alma-theme.css`, `sections/alma-favourites.liquid`, `snippets/alma-scroll-controls.liquid`, `templates/index.json`, `design-qa.md`, and this README.
 - Checks: the local fixture renders 23 products in the All products tab and all 23 cards resolve their handle-specific WebP without broken images. At 1280×720 the next control moves exactly 304 px, reaches a disabled end state and introduces no document overflow; at 390×844 it moves exactly 335 px and remains contained. `HTML` remains the sole vertical page scroller. The live Diptyque reference was re-inspected for the 40 px side-overlay control treatment. Theme Check, syntax, JSON, whitespace and final desktop/mobile screenshot results are recorded in `design-qa.md`.
 
+### 2026-09-11 — Keep the main product rail fragrance-only
+
+- Request: remove products unrelated to perfume, especially the gift card, from the main All products rail.
+- Changed: renamed the main rail to “The ALMA fragrance collection” and the first tab to “All fragrances”. Replaced the entire-catalog source with the combined 15-product spray and solid fragrance assortment: six spray-related products and nine solid-related products. Gift cards, lotions, Dukhoon, charms, shimmer oil and layering kits no longer appear in this rail; they remain available through their dedicated gifting, editorial and wardrobe sections. The existing Spray Perfumes and Solid Perfumes tabs remain unchanged.
+- Files: `sections/alma-favourites.liquid`, `templates/index.json`, `design-qa.md`, and this README.
+- Checks: the local fixture renders exactly 15 items in All fragrances, contains no gift card or unrelated category handles, retains functional one-card controls and has no document horizontal overflow. Theme Check, syntax, JSON and desktop/mobile browser results are recorded in `design-qa.md`.
+
 ## Continuation prompt
 
 ```text

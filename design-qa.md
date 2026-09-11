@@ -51,3 +51,10 @@ Unverified locally: Shopify Theme Editor behavior, live newsletter/contact submi
 - Desktop 1280×720: four cards are visible; the forward control is a 40 px edge overlay, one click advances exactly one 304 px card, the end state disables the forward control, all lazy-loaded packshots resolve and document horizontal overflow is 0 px.
 - Mobile 390×844: one 82vw card is visible; one click advances exactly 335 px, controls remain inside the section and document horizontal overflow is 0 px.
 - Console: the local fixture reports no errors. Its two existing preload warnings remain unrelated to this change.
+
+# Fragrance-only main rail — 2026-09-11
+
+- Main heading/tab: “The ALMA fragrance collection” / “All fragrances”.
+- Included set: 15 perfume-related products, matching the union of the imported spray and solid collections.
+- Excluded from the main rail: gift card, lotions, Dukhoon, charm accessory, shimmer oil and layering kits. Those product families remain linked from their dedicated homepage sections.
+- Desktop and mobile: the first tab retains four-visible desktop and one-visible mobile proportions, one-card arrow movement, intact packshot loading and zero document horizontal overflow.

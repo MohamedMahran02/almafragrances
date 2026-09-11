@@ -30,7 +30,7 @@
     "featured_collection": {
       "type": "alma-favourites",
       "settings": {
-        "title": "The complete ALMA collection",
+        "title": "The ALMA fragrance collection",
         "products_to_show": 24,
         "product_link_label": "Choose options"
       },
@@ -38,9 +38,25 @@
         "all": {
           "type": "collection",
           "settings": {
-            "label": "All products",
+            "label": "All fragrances",
             "collection": "all",
-            "products": []
+            "products": [
+              "alma-hair-and-body-perfume",
+              "alma-oud-intense-perfume",
+              "alma-leather-luxe-perfume",
+              "lolo-vanilla-perfume",
+              "luma-perfume",
+              "alma-perfumes-box-of-minis",
+              "alma-oud",
+              "alma-arabia",
+              "alma-vanilla-bloom",
+              "alma-sandalwood",
+              "alma-leather",
+              "lolo-vanilla",
+              "almaxeman",
+              "alma-refill-pouches",
+              "alma-box-of-minis"
+            ]
           }
         },
         "spray": {
