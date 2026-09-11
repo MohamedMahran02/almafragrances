@@ -4,14 +4,14 @@ Source: user-provided brand direction on 2026-09-11 and the supplied `Bag.pdf`. 
 
 ## Workflow and approval
 
-The full strategy is saved in `../design/CLIENT-STRATEGY.txt`. The user rejected the original three concepts and hybrid, then requested https://snif.co/ as the new reference. Three replacement mockups are saved as `../design/previews/snif-direction-1.png` through `snif-direction-3.png`. Read `../design/SNIF-REFERENCE.md` for their displayed mapping and source analysis, and `../design/PLAN.md` for the production plan. All current candidates remain unapproved. Obtain selection/approval before implementing in the supplied Dawn theme.
+The full strategy is saved in `../design/CLIENT-STRATEGY.txt`. Latest request: explore Diptyque (https://diptyqueparis.com/fr-fr) and replace the website wordmark with the supplied icon. Read `../design/DIPTYQUE-REFERENCE.md` for current previews and the approved logo decision. No full UI design is approved. Original/hybrid designs are rejected history; the Snif set is unapproved historical exploration. Obtain UI approval before theme design implementation.
 
 ## Identity
 
 - Correct name and capitalization in the detailed strategy: **ALMA by Reem Fragrances**.
-- Keep the existing ALMA logo and identity; elevate the presentation without redesigning the identity.
+- Latest explicit user decision: use `logo-icon.png` as the website logo, replacing the lowercase wordmark. This unmodified source comes from `E:/Alma Fragrances branding/logo icon.png`. Preserve its burgundy calligraphic artwork and proportions. Product packaging is unchanged.
 - `Bag.pdf` has two pages. Page 1 shows a large flowing ornamental mark on a pale cream background. Page 2 shows the lowercase serif `alma` wordmark with the source tagline `Body Fragrances by Reem.` beneath it. The artwork appears very dark burgundy/brown on cream. These are visual observations, not measured brand color specifications.
-- The PDF tagline is existing artwork; it does not override the user's supplied business name. Preserve original logo artwork instead of approximating it with a new font or a generated replacement.
+- The PDF tagline is existing artwork; it does not override the user's supplied business name. The later supplied icon is now the selected website mark. Preserve source artwork instead of approximating it with a new font or a generated replacement.
 
 ## Art direction
 
@@ -20,7 +20,7 @@ The full strategy is saved in `../design/CLIENT-STRATEGY.txt`. The user rejected
 - Base: warm ivory/cream, espresso/dark brown, black.
 - Accents: blush pink, chrome, and scent/campaign-specific colors.
 - Mobile: clean, fast, easy to shop.
-- Latest reference decision (2026-09-11): use snif.co. Current proposals adopt its bold sans hierarchy, campaign photography, rounded navigation and pill buttons while retaining ALMA identity. Earlier delicate serif mockups are rejected; final fonts and full section sequence await selection.
+- Latest reference decision (2026-09-11): explore Diptyque with centered icon identity, separate navigation row, atmospheric campaign imagery, restrained serif headings and rectangular CTAs. Final full design and sequence await selection; Snif is historical.
 
 ## Shopping architecture and content
 
@@ -45,4 +45,4 @@ Desired main sections: Perfumes, Solid Perfumes, Lotions, Charms, Dukhon, Layeri
 
 ## Next handoff
 
-Await selection/refinement of the new Snif-referenced mockups, record the exact approved image and complete sequence, then implement approved changes. No theme code or live Shopify data has changed during design exploration. Read the detailed strategy and plan for the proposed expanded homepage sequence.
+Await selection/refinement of the new Diptyque-referenced mockups, record the exact approved image and complete sequence, then implement approved changes. No theme code or live Shopify data has changed during design exploration. Read the detailed strategy and plan for the proposed expanded homepage sequence.

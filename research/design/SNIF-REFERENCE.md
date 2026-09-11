@@ -1,5 +1,7 @@
 # Snif reference revision — 2026-09-11
 
+Historical exploration: the subsequent user request uses Diptyque and a new icon logo. See DIPTYQUE-REFERENCE.md for current options and identity decision. This Snif set remains unapproved and is not the current build target. References below describe that earlier exploration.
+
 The user rejected the original three concepts and combined preview: “i dont like these designs snif.co take this as a ref and show me”. Those files remain historical only. None was approved.
 
 ## Source inspection

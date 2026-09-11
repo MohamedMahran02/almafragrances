@@ -1,6 +1,6 @@
 # ALMA design selection and implementation plan
 
-Status: the user rejected the original designs and combined preview, and requested snif.co as the new reference. Three replacement mockups are shown, all pending selection/approval. Read SNIF-REFERENCE.md for current displayed-number mapping, actual source captures, alternative opening sequences and limitations. No theme implementation started.
+Status: current exploration uses Diptyque and the newly supplied icon. Read DIPTYQUE-REFERENCE.md for latest option mapping, exact identity decision, source captures and limitations. The supplied icon is authorized as website logo; none of the complete UI mockups is approved. Snif is superseded for current exploration; original designs/hybrid are rejected history. No theme implementation started.
 
 ## Rejected combined candidate (history)
 
@@ -15,11 +15,11 @@ Status: the user rejected the original designs and combined preview, and request
 
 Read `CLIENT-STRATEGY.txt`: the full 40-part prompt copied verbatim from the user attachment. It is the user's request, not third-party instructions. Read it with the root README, AGENTS.md, and `../brand/BRIEF.md`. The earlier explicit requirement for approval of a UI mockup before implementation remains active.
 
-Correct name: **ALMA by Reem Fragrances**. Extend the supplied Dawn 15.5.0 theme with Liquid, JSON templates, reusable sections/blocks/snippets, native CSS and small vanilla JS modules. Shopify remains the source of truth. Do not create a separate headless/React application or rebuild Shopify commerce infrastructure.
+Correct name: **ALMA by Reem Fragrances**. Website identity: use `../brand/logo-icon.png`, selected explicitly by the user on 2026-09-11, instead of the lowercase header wordmark. Preserve exact artwork and original product packaging. This latest decision overrides conflicting identity language in the archived original strategy. Extend the supplied Dawn 15.5.0 theme with Liquid, JSON templates, reusable sections/blocks/snippets, native CSS and small vanilla JS modules. Shopify remains the source of truth. Do not create a separate headless/React application or rebuild Shopify commerce infrastructure.
 
 ## Rejected original visual selection mapping (history)
 
-These historical numbers follow the original display order. Current selection numbers refer to the new Snif set in SNIF-REFERENCE.md, not this table:
+These historical numbers follow the original display order. Current selection numbers refer to the Diptyque set in DIPTYQUE-REFERENCE.md, not this table or the Snif set:
 
 | Displayed option | Image | Exact generation prompt |
 | --- | --- | --- |
@@ -38,7 +38,7 @@ These are visual concepts, not screenshots of a running Shopify theme. They show
 - Lotion renderings are illustrative; the original amber-pump image is `references/alma-arabia-hand-and-body-lotion.jpg`.
 - The metallic compact in option 3 is not an actual catalog product. Replace it with the real ALMA metallic solid charm tube from `references/alma-charm-collection.png`. Layout approval does not authorize invented merchandise.
 - Small marketing captions are proposals, not approved factual claims. Use client copy and actual product descriptions/metafields. Never invent notes, reviews, ratings, rankings, or gifting services.
-- Raster typography is a visual approximation. The earlier Instrument Serif/Instrument Sans preference must be reconciled with the new Snif-inspired bold sans direction. Choose licensed fonts after selection, never to approximate the existing logo.
+- Raster typography is a visual approximation. The latest Diptyque reference proposes restrained regular serif headings with plain sans UI. Reconcile final licensed fonts after selection; Snif bold sans is historical. Choose licensed fonts after selection, never to approximate the existing logo.
 - Sample products/prices come from the September 11 public capture. Use live Shopify objects and localized prices in production, not hard-coded snapshot data.
 
 ## Repository and current-site inspection
@@ -110,7 +110,7 @@ Choose exact types/cardinality from current docs and actual content during imple
 
 ## Outstanding approval and production dependencies
 
-Immediate next step: user selects/refines one of the three new Snif-referenced images in SNIF-REFERENCE.md. Record its exact path and approval, reconcile its alternative opening hierarchy with the full content plan, and show a revised image if feedback changes the design before building.
+Immediate next step: user selects/refines one of the three new Diptyque-referenced images in DIPTYQUE-REFERENCE.md. Record its exact path and approval, reconcile its alternative opening hierarchy with the full content plan, and show a revised image if feedback changes the design before building.
 
 Still unverified: Shopify admin connection/theme ID, complete integration inventory, current theme settings, actual navigation/page records, optional metafield definitions/data, final campaign assets/copy and gifting service details. Public research is not a completed migration. Customers/orders must remain untouched; never place private exports in this public repository.
 
