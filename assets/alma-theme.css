@@ -65,8 +65,8 @@ html { overflow-x: hidden; }
 .alma-scroll-gallery__footer { display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin-top: 2rem; }
 .alma-scroll-gallery__progress { position: relative; display: block; width: min(24rem, 45vw); height: 1px; overflow: hidden; background: var(--alma-line); }
 .alma-scroll-gallery__progress-value { position: absolute; inset: 0; background: var(--alma-ink); transform: scaleX(var(--alma-scroll-progress, .25)); transform-origin: left center; transition: transform .2s ease; }
-.alma-scroll-gallery__controls { position: absolute; z-index: 2; top: 18rem; right: -.1rem; left: -.1rem; display: flex; justify-content: space-between; pointer-events: none; }
-.alma-scroll-gallery__button { box-sizing: border-box; display: grid; width: 4rem; height: 4rem; padding: 0; place-items: center; border: 1px solid var(--alma-ink); border-radius: 999px; background: #fff; color: var(--alma-ink); cursor: pointer; pointer-events: auto; transition: transform .18s ease; }
+.alma-scroll-gallery__controls { position: absolute; z-index: 2; top: 18rem; right: 1.2rem; left: 1.2rem; display: flex; justify-content: space-between; pointer-events: none; }
+.alma-scroll-gallery__button { box-sizing: border-box; display: grid; width: 4rem; height: 4rem; padding: 0; place-items: center; border: 1px solid var(--alma-ink); border-radius: 999px; background: transparent; color: var(--alma-ink); cursor: pointer; pointer-events: auto; transition: transform .18s ease; }
 .alma-scroll-gallery__button svg { display: block; fill: none; stroke: currentColor; stroke-width: 1.35; stroke-linecap: round; stroke-linejoin: round; }
 .alma-scroll-gallery__button:hover:not(:disabled), .alma-scroll-gallery__button:focus-visible { transform: scale(1.06); }
 .alma-scroll-gallery__button:disabled { pointer-events: none; opacity: 0; }
@@ -103,8 +103,8 @@ html { overflow-x: hidden; }
 .alma-wardrobe__grid { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 4.8rem) / 4); gap: 1.6rem; overflow-x: auto; padding-bottom: 1.5rem; scroll-snap-type: x mandatory; scrollbar-width: none; }
 .alma-wardrobe__grid::-webkit-scrollbar { display: none; }
 .alma-wardrobe__card, .alma-wardrobe__card:first-child, .alma-wardrobe__card:nth-child(5) { grid-column: auto; display: grid; gap: 1.5rem; color: inherit; text-align: center; text-decoration: none; scroll-snap-align: start; }
-.alma-wardrobe__media { display: block; overflow: hidden; }
-.alma-wardrobe__image, .alma-wardrobe__card:first-child .alma-wardrobe__image, .alma-wardrobe__card:nth-child(5) .alma-wardrobe__image { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; transition: transform .5s ease; }
+.alma-wardrobe__media { display: block; aspect-ratio: 4 / 5; overflow: hidden; background: #f4f2ed; }
+.alma-wardrobe__image, .alma-wardrobe__card:first-child .alma-wardrobe__image, .alma-wardrobe__card:nth-child(5) .alma-wardrobe__image { box-sizing: border-box; display: block; width: 100%; height: 100%; padding: 2.4rem; object-fit: contain; transition: transform .5s ease; }
 .alma-wardrobe__card:hover .alma-wardrobe__image { transform: scale(1.015); }
 .alma-wardrobe__label { font-family: Georgia, 'Times New Roman', serif; font-size: 1.5rem; }
 
@@ -151,6 +151,7 @@ html { overflow-x: hidden; }
   .alma-favourites h2 { margin-bottom: 2.2rem; }
   .alma-favourites__tabs { gap: .6rem 2rem; margin-bottom: 2.5rem; }
   .alma-favourites__grid { grid-auto-columns: 82vw; gap: 1.5rem; }
+  .alma-scroll-gallery__controls { right: .8rem; left: .8rem; }
   .alma-product { scroll-snap-align: start; }
   .alma-product__image { height: 36rem; }
   .alma-product__description { min-height: 0; }
@@ -166,6 +167,7 @@ html { overflow-x: hidden; }
   .alma-editorial--immersive .alma-editorial__content { min-height: 34rem; }
   .alma-wardrobe { padding: 7rem 1.5rem 5rem; }
   .alma-wardrobe__grid { grid-template-columns: none; grid-auto-columns: 75vw; gap: 1.2rem; }
+  .alma-wardrobe__image, .alma-wardrobe__card:first-child .alma-wardrobe__image, .alma-wardrobe__card:nth-child(5) .alma-wardrobe__image { padding: 1.8rem; }
   .alma-service-band { padding: 4.5rem 2rem; }
   .alma-service-band__grid { grid-template-columns: 1fr; }
   .alma-service-band__item { padding: 2.8rem 0; border-right: 0; border-bottom: 1px solid var(--alma-line); }

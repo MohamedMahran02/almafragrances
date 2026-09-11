@@ -7,11 +7,24 @@
     {%- for block in section.blocks -%}
       {%- assign wardrobe_collection = block.settings.collection -%}
       {%- assign wardrobe_image = block.settings.image -%}
-      {%- if wardrobe_image == blank and wardrobe_collection != blank -%}{%- assign wardrobe_image = wardrobe_collection.featured_image | default: wardrobe_collection.products.first.featured_image -%}{%- endif -%}
+      {%- assign wardrobe_asset = '' -%}
+      {%- if wardrobe_image == blank -%}
+        {%- case block.settings.label -%}
+          {%- when 'Spray Perfumes' -%}{%- assign wardrobe_asset = 'alma-packshot-alma-hair-and-body-perfume.webp' -%}
+          {%- when 'Solid Perfumes' -%}{%- assign wardrobe_asset = 'alma-packshot-lolo-vanilla.webp' -%}
+          {%- when 'Lotions' -%}{%- assign wardrobe_asset = 'alma-packshot-alma-arabia-hand-and-body-lotion.webp' -%}
+          {%- when 'Dukhoon' -%}{%- assign wardrobe_asset = 'alma-packshot-alma-dokhon.webp' -%}
+          {%- when 'Solid Charms' -%}{%- assign wardrobe_asset = 'alma-packshot-alma-charm-collection.webp' -%}
+          {%- when 'Layering & Kits' -%}{%- assign wardrobe_asset = 'alma-packshot-alma-layering-box.webp' -%}
+        {%- endcase -%}
+      {%- endif -%}
+      {%- if wardrobe_image == blank and wardrobe_asset == blank and wardrobe_collection != blank -%}{%- assign wardrobe_image = wardrobe_collection.featured_image | default: wardrobe_collection.products.first.featured_image -%}{%- endif -%}
       {%- assign wardrobe_link = wardrobe_collection.url | default: routes.all_products_collection_url -%}
       <a class="alma-wardrobe__card" href="{{ wardrobe_link }}" {{ block.shopify_attributes }}>
         <span class="alma-wardrobe__media">
-          {%- if wardrobe_image != blank -%}
+          {%- if wardrobe_asset != blank -%}
+            <img class="alma-wardrobe__image" src="{{ wardrobe_asset | asset_url }}" width="1000" height="1000" loading="lazy" alt="{{ block.settings.label | default: wardrobe_collection.title | escape }}">
+          {%- elsif wardrobe_image != blank -%}
             {%- assign wardrobe_alt = wardrobe_image.alt | default: block.settings.label -%}
             {{ wardrobe_image | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '320, 480, 720, 960, 1200', sizes: '(min-width: 990px) 33vw, 50vw', class: 'alma-wardrobe__image', alt: wardrobe_alt }}
           {%- else -%}{{ 'collection-1' | placeholder_svg_tag: 'alma-wardrobe__image placeholder-svg' }}{%- endif -%}

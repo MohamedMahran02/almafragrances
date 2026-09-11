@@ -58,3 +58,10 @@ Unverified locally: Shopify Theme Editor behavior, live newsletter/contact submi
 - Included set: 15 perfume-related products, matching the union of the imported spray and solid collections.
 - Excluded from the main rail: gift card, lotions, Dukhoon, charm accessory, shimmer oil and layering kits. Those product families remain linked from their dedicated homepage sections.
 - Desktop and mobile: the first tab retains four-visible desktop and one-visible mobile proportions, one-card arrow movement, intact packshot loading and zero document horizontal overflow.
+
+# Transparent controls and curated wardrobe — 2026-09-11
+
+- Arrow correction: each 40 px control is inset within its rail instead of touching the clipped boundary; computed background is transparent and both button edges remain inside the containing gallery at 1280×720 and 390×844.
+- Wardrobe media: six intentional 1000×1000 WebPs replace automatic collection thumbnails. The rendered desktop tiles are consistent 288×360 frames with `object-fit: contain`, internal padding and no broken images.
+- Interaction: desktop product/wardrobe forward controls move 304/304 px; mobile controls move 335/305 px. The document remains free of horizontal overflow at both sizes.
+- Intentional fallback: Theme Editor image overrides remain authoritative; newly named category labels without curated assets fall back to their Shopify collection image.

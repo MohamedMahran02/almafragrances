@@ -46,7 +46,7 @@ Retain Shopify's `content_for_header` and `content_for_layout`, native product f
 
 ### Current actual sequence
 
-Homepage: single-row utility header with a larger left-aligned transparent ALMA icon, centered category navigation and right-side search/account/cart utilities → campaign hero → ritual introduction → tabbed favourites carousel with four products visible and up to eight available per tab → 50/50 layering editorial feature with three product steps → full-width Dukhoon image and centered story → four-product gifting carousel → horizontally scrollable six-category ALMA wardrobe → compact three-part ALMA experience band → split newsletter/help footer. Product and wardrobe rails include previous/next arrows and progress indicators. The announcement strip is intentionally removed. Hero and ritual remain inside the same `image_banner` section ID. The 2026-09-11 fidelity pass explicitly changed the visual anatomy to follow the live Diptyque homepage more closely while retaining ALMA content and commerce.
+Homepage: single-row utility header with a larger left-aligned transparent ALMA icon, centered category navigation and right-side search/account/cart utilities → campaign hero → ritual introduction → tabbed fragrance carousel with four products visible and 15 fragrance products in its combined tab → 50/50 layering editorial feature with three product steps → full-width Dukhoon image and centered story → four-product gifting carousel → horizontally scrollable six-category ALMA wardrobe → compact three-part ALMA experience band → split newsletter/help footer. Product and wardrobe rails include inset transparent previous/next controls and progress indicators. The announcement strip is intentionally removed. Hero and ritual remain inside the same `image_banner` section ID. The 2026-09-11 fidelity pass explicitly changed the visual anatomy to follow the live Diptyque homepage more closely while retaining ALMA content and commerce.
 
 ```text
 header-group.order:           [header]
@@ -214,6 +214,13 @@ Use local Git authentication for `omarashraaf`; the Codex connector previously u
 - Changed: renamed the main rail to “The ALMA fragrance collection” and the first tab to “All fragrances”. Replaced the entire-catalog source with the combined 15-product spray and solid fragrance assortment: six spray-related products and nine solid-related products. Gift cards, lotions, Dukhoon, charms, shimmer oil and layering kits no longer appear in this rail; they remain available through their dedicated gifting, editorial and wardrobe sections. The existing Spray Perfumes and Solid Perfumes tabs remain unchanged.
 - Files: `sections/alma-favourites.liquid`, `templates/index.json`, `design-qa.md`, and this README.
 - Checks: the local fixture renders exactly 15 items in All fragrances, contains no gift card or unrelated category handles, retains functional one-card controls and has no document horizontal overflow. Theme Check, syntax, JSON and desktop/mobile browser results are recorded in `design-qa.md`.
+
+### 2026-09-11 — Correct rail controls and curate wardrobe imagery
+
+- Request: stop the carousel arrows from being cropped, remove their white fill and improve the low-quality/random imagery in Explore the ALMA wardrobe.
+- Changed: inset every reusable rail control inside its clipping boundary and made the circle interior fully transparent while retaining the thin outline and SVG chevron. Replaced the wardrobe's automatic collection thumbnails with six deliberate 1000 px WebP packshots: spray perfume bottle, solid perfume jar, lotion bottle, Dukhoon jar, solid charm and layering box. Theme Editor image overrides still take precedence, and unknown/new category labels still fall back to their Shopify collection image. Wardrobe media now uses a consistent 4:5 pale studio tile with contained, padded products instead of cropping lifestyle photos.
+- Files: `assets/alma-theme.css`, `sections/alma-wardrobe.liquid`, `design-qa.md`, and this README.
+- Checks: all six wardrobe images resolve at 1000×1000 with no broken media; rendered tiles measure 288×360 at 1280 px. Controls are fully inside their rail, compute to a transparent background and retain 40 px resting dimensions. Product/wardrobe movement is 304/304 px on desktop and 335/305 px on mobile, with no document overflow. Theme Check, syntax, whitespace and final browser evidence are recorded in `design-qa.md`.
 
 ## Continuation prompt
 
