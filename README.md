@@ -4,7 +4,11 @@ Repository for the Alma Fragrances Shopify theme.
 
 ## Status
 
-GitHub is initialized on `main`. Shopify theme files still need to be added before this branch can be connected to a Shopify theme.
+Shopify Dawn 15.5.0 has been imported from the supplied `theme-export-shopify-main.zip` into the repository root. All 360 theme files were verified against the archive using SHA-256 during import.
+
+This theme is the base for future edits. Preserve its template structure and section/block order unless a change is explicitly requested.
+
+The initial homepage sequence is **announcement bar > header > image banner > featured products > footer**, with email subscription in the footer.
 
 ## Development workflow
 
@@ -14,7 +18,7 @@ Once connected, Shopify synchronizes updates from this branch to its linked them
 
 ## Connect to Shopify
 
-After the theme files are present:
+To connect this theme:
 
 1. In Shopify admin, open **Online Store > Themes**.
 2. Under **Theme library**, choose **Add theme > Connect from GitHub**.
