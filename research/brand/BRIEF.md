@@ -4,7 +4,7 @@ Source: user-provided brand direction on 2026-09-11 and the supplied `Bag.pdf`. 
 
 ## Workflow and approval
 
-The full strategy is saved in `../design/CLIENT-STRATEGY.txt`. After three original options, the user requested option 1's hero with option 2's design. The combined mockup is `../design/previews/hybrid-1-hero-2-design-v1.png`; selection history and production plan are in `../design/PLAN.md`. The combined candidate remains unapproved. Obtain approval before implementing the design in the supplied Dawn theme.
+The full strategy is saved in `../design/CLIENT-STRATEGY.txt`. The user rejected the original three concepts and hybrid, then requested https://snif.co/ as the new reference. Three replacement mockups are saved as `../design/previews/snif-direction-1.png` through `snif-direction-3.png`. Read `../design/SNIF-REFERENCE.md` for their displayed mapping and source analysis, and `../design/PLAN.md` for the production plan. All current candidates remain unapproved. Obtain selection/approval before implementing in the supplied Dawn theme.
 
 ## Identity
 
@@ -20,6 +20,7 @@ The full strategy is saved in `../design/CLIENT-STRATEGY.txt`. After three origi
 - Base: warm ivory/cream, espresso/dark brown, black.
 - Accents: blush pink, chrome, and scent/campaign-specific colors.
 - Mobile: clean, fast, easy to shop.
+- Latest reference decision (2026-09-11): use snif.co. Current proposals adopt its bold sans hierarchy, campaign photography, rounded navigation and pill buttons while retaining ALMA identity. Earlier delicate serif mockups are rejected; final fonts and full section sequence await selection.
 
 ## Shopping architecture and content
 
@@ -44,4 +45,4 @@ Desired main sections: Perfumes, Solid Perfumes, Lotions, Charms, Dukhon, Layeri
 
 ## Next handoff
 
-Await approval/refinement of the combined mockup, record the exact approved image, then implement approved changes. No theme code or live Shopify data has changed during design exploration. Read the detailed strategy and plan for the proposed expanded homepage sequence.
+Await selection/refinement of the new Snif-referenced mockups, record the exact approved image and complete sequence, then implement approved changes. No theme code or live Shopify data has changed during design exploration. Read the detailed strategy and plan for the proposed expanded homepage sequence.

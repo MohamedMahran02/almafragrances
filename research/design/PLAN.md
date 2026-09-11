@@ -1,15 +1,15 @@
 # ALMA design selection and implementation plan
 
-Status: the original three mockups were displayed, and the user requested a combination of option 1's hero with option 2's design. That combined preview is now generated and shown. It has not been approved for implementation. No theme implementation started.
+Status: the user rejected the original designs and combined preview, and requested snif.co as the new reference. Three replacement mockups are shown, all pending selection/approval. Read SNIF-REFERENCE.md for current displayed-number mapping, actual source captures, alternative opening sequences and limitations. No theme implementation started.
 
-## Current combined candidate
+## Rejected combined candidate (history)
 
 - Image: `previews/hybrid-1-hero-2-design-v1.png`.
 - Exact prompt: `previews/hybrid-1-hero-2-design-v1-prompt.txt`.
 - User request: show option 1's landing/hero with option 2's design.
 - Composition: option 1 cinematic full-width hero/photo/headline/CTA; option 2 centered-logo header, typography, fine rules, open product groupings, scent worlds, and ritual layout. Same preview section order.
 - Inputs: original option 1 and option 2 images, official logo-page render, and actual lotion reference. Built-in Image Generation edit; original options preserved.
-- Approval: pending. Asking to see a combination is not approval to implement. Record approval or refinements before build. All original fidelity/production limitations below remain applicable.
+- Approval: rejected in the subsequent Snif-reference request. Preserve this file as history; it is not a build target. All original fidelity/production limitations below remain applicable.
 
 ## Sources and decision gate
 
@@ -17,9 +17,9 @@ Read `CLIENT-STRATEGY.txt`: the full 40-part prompt copied verbatim from the use
 
 Correct name: **ALMA by Reem Fragrances**. Extend the supplied Dawn 15.5.0 theme with Liquid, JSON templates, reusable sections/blocks/snippets, native CSS and small vanilla JS modules. Shopify remains the source of truth. Do not create a separate headless/React application or rebuild Shopify commerce infrastructure.
 
-## Stable visual selection mapping
+## Rejected original visual selection mapping (history)
 
-Numbers follow the actual order the generated images appeared in this task:
+These historical numbers follow the original display order. Current selection numbers refer to the new Snif set in SNIF-REFERENCE.md, not this table:
 
 | Displayed option | Image | Exact generation prompt |
 | --- | --- | --- |
@@ -38,7 +38,7 @@ These are visual concepts, not screenshots of a running Shopify theme. They show
 - Lotion renderings are illustrative; the original amber-pump image is `references/alma-arabia-hand-and-body-lotion.jpg`.
 - The metallic compact in option 3 is not an actual catalog product. Replace it with the real ALMA metallic solid charm tube from `references/alma-charm-collection.png`. Layout approval does not authorize invented merchandise.
 - Small marketing captions are proposals, not approved factual claims. Use client copy and actual product descriptions/metafields. Never invent notes, reviews, ratings, rankings, or gifting services.
-- Raster typography is a visual approximation. Use license-verified Instrument Serif/Instrument Sans or approved alternatives in the theme, never to approximate the existing logo.
+- Raster typography is a visual approximation. The earlier Instrument Serif/Instrument Sans preference must be reconciled with the new Snif-inspired bold sans direction. Choose licensed fonts after selection, never to approximate the existing logo.
 - Sample products/prices come from the September 11 public capture. Use live Shopify objects and localized prices in production, not hard-coded snapshot data.
 
 ## Repository and current-site inspection
@@ -110,7 +110,7 @@ Choose exact types/cardinality from current docs and actual content during imple
 
 ## Outstanding approval and production dependencies
 
-Immediate next step: user approves or refines the combined candidate above. Record its exact path and approval. If feedback changes the design, show the revised image before building.
+Immediate next step: user selects/refines one of the three new Snif-referenced images in SNIF-REFERENCE.md. Record its exact path and approval, reconcile its alternative opening hierarchy with the full content plan, and show a revised image if feedback changes the design before building.
 
 Still unverified: Shopify admin connection/theme ID, complete integration inventory, current theme settings, actual navigation/page records, optional metafield definitions/data, final campaign assets/copy and gifting service details. Public research is not a completed migration. Customers/orders must remain untouched; never place private exports in this public repository.
 

@@ -15,10 +15,10 @@ This repository is the shared project memory. Another team should be able to con
 | Original archive | `E:\Downloads\theme-export-shopify-main.zip`; extracted files are committed, so this ZIP is not required to continue |
 | Theme baseline commit | `d35f787` — 360 theme files imported without changing their bytes |
 | Custom storefront implementation | No Alma-specific design, content, or functional edits have been made yet |
-| Latest work | Combined mockup created: option 1 cinematic hero with option 2 header, typography, and lower-page design; see `research/design/previews/hybrid-1-hero-2-design-v1.png` |
+| Latest work | Earlier designs rejected; three new Snif-referenced mockups shown and saved as `research/design/previews/snif-direction-1.png` through `snif-direction-3.png`; see `research/design/SNIF-REFERENCE.md` |
 | Shopify connection | Public URL is known; the repository-to-theme connection and linked theme ID remain unverified |
 | Shopify preview/publication | Not verified; a successful GitHub push does not establish live publication |
-| Next implementation | Await approval/refinement of the combined mockup; the request to see this combination is not implementation approval |
+| Next implementation | Await selection/refinement of the new Snif-referenced mockups; none is approved for implementation |
 
 ## Brand direction and design approval
 
@@ -26,15 +26,15 @@ The correct client name is **ALMA by Reem Fragrances**, as capitalized in the de
 
 Read [the client brief](research/brand/BRIEF.md), [full supplied strategy](research/design/CLIENT-STRATEGY.txt), [design/implementation plan](research/design/PLAN.md), and [catalog capture notes](research/storefront/README.md). Product categories: Spray Perfumes, Solid Perfumes, Lotions, Dukhoon, Solid Charms, Layering & Kits. The new strategy proposes an expanded homepage; the imported theme sequence documented below remains unchanged until approved implementation.
 
-**User-required gate:** the strategy and original three options have been reviewed; the user requested a preview combining option 1's hero with option 2's design. The combined mockup is now shown but remains unapproved. Implement only after approval. Research/documentation are permitted before that gate.
+**User-required gate:** the user rejected the earlier designs, including the combined preview, and supplied https://snif.co/ as the new visual reference. Three new mockups have been shown; none is approved. Implement only after selection/approval. Research/documentation are permitted before that gate.
 
 ### Visual options and proposed sequence
 
-**Current candidate:** [combined mockup v1](research/design/previews/hybrid-1-hero-2-design-v1.png). It combines option 1's full-width cinematic hero and overlaid headline/CTA with option 2's centered-logo header, typography, fine rules, open product row, scent-world imagery/layout, and ritual treatment. Preview order remains Hero → Best sellers → Scent worlds → ALMA ritual. This is a requested visual refinement, not approval to build. The original options below remain available as history.
+**Current candidates:** [Snif direction 1](research/design/previews/snif-direction-1.png), [Snif direction 2](research/design/previews/snif-direction-2.png), [Snif direction 3](research/design/previews/snif-direction-3.png), numbered in their actual displayed order. See [reference analysis and mapping](research/design/SNIF-REFERENCE.md) for sources, prompts and limitations. Bold sans headings, rounded navigation, pill controls and campaign/product photography now guide the exploration. Original ALMA identity remains required. Preview sequences: 1 — Hero → Best sellers → Category tiles; 2 — Hero → Scent worlds → Best sellers; 3 — Hero → Ritual → Featured perfume. These are proposed alternatives, not approved sequence changes. The combined mockup and original options below are rejected history.
 
-The displayed order is preserved as [option 1](research/design/previews/option-1.png), [option 2](research/design/previews/option-2.png), and [option 3](research/design/previews/option-3.png). These are generated homepage design mockups, not screenshots of a working theme. The generation prompts, original image references, and an actual existing-site screenshot are saved under `research/design/`. Do not treat generated logos, labels, illustrative packaging, or captions as authoritative assets/content; use the original logo and actual Shopify media in implementation. In particular, option 3's metallic compact is not an existing ALMA product and must be replaced with the actual solid charm tube.
+The rejected original set's displayed order is preserved as [option 1](research/design/previews/option-1.png), [option 2](research/design/previews/option-2.png), and [option 3](research/design/previews/option-3.png). These are generated homepage design mockups, not screenshots of a working theme. The generation prompts, original image references, and an actual existing-site screenshot are saved under `research/design/`. Do not treat generated logos, labels, illustrative packaging, or captions as authoritative assets/content; use the original logo and actual Shopify media in implementation. In particular, option 3's metallic compact is not an existing ALMA product and must be replaced with the actual solid charm tube.
 
-Proposed new homepage: **Hero → Best sellers → Scent worlds → ALMA ritual → Layer it with → Category wardrobe → Solid Charms → Dukhoon → Gifting by ALMA → Reviews/community → Brand story → Newsletter/footer**. The mockups show the opening four areas only; all remaining areas and other pages are in the plan. No mobile, PDP, cart, or functional QA has been completed for the proposed design. Record the exact selected reference and any refinements before coding.
+Proposed new homepage: **Hero → Best sellers → Scent worlds → ALMA ritual → Layer it with → Category wardrobe → Solid Charms → Dukhoon → Gifting by ALMA → Reviews/community → Brand story → Newsletter/footer**. The original mockups showed four opening areas; the new Snif mockups each show three areas with alternative hierarchy. All remaining content and other pages remain in the plan; reconcile the final order after selection. No mobile, PDP, cart, or functional QA has been completed for the proposed design. Record the exact selected reference and any refinements before coding.
 
 Existing website: https://www.almafragrances.com/. Preserve products, customers, orders, URLs/SEO, and integrations. The public snapshot contains 23 products, 189 variants, 42 image references, 11 collections, product-page SEO metadata, and 40 sitemap URLs. All 23 sitemap product URLs are covered. Private store records and integrations require authorized Shopify access; this is not a completed migration.
 
@@ -88,7 +88,7 @@ The theme lives at the repository root. Do not wrap it in a `theme-export-shopif
 | `README.md` | Current state, structure, workflow, and change history | — |
 | `research/brand/` | Client brief and original packaging PDF reference | — |
 | `research/storefront/` | Public catalog, collection memberships, SEO metadata, URL inventory, and capture notes | — |
-| `research/design/` | User's full strategy, production plan, source reference images, and three visual mockups with generation prompts | — |
+| `research/design/` | User's full strategy, production plan, source reference images, rejected historical mockups, and current Snif-referenced mockups with exact generation prompts | — |
 
 The baseline totals **360 theme files**. These are historical import counts; describe structural additions/removals when they occur.
 
@@ -263,6 +263,14 @@ Record the store domain, linked theme/branch, and verified preview/publication s
 - Validation: visually inspected the combined image against the requested sources, verified saved PNG and documentation references, checked the diff and unchanged theme scope. Existing raster/generated-logo/packaging/copy limitations still apply; use exact source assets in implementation.
 - Next: user approval or further refinement of this combined candidate before implementation. Functional/mobile/Shopify QA remains pending.
 
+### 2026-09-11 — Snif reference and replacement visual options
+
+- Request: reject the earlier designs and use snif.co as the reference for new previews.
+- Work: captured three actual Snif viewport screenshots; generated and saved three independent ALMA mockups and exact prompts; added research/design/SNIF-REFERENCE.md. Updated README, plan and brand brief to mark prior designs rejected and the new options pending.
+- Result: bold sans typography, campaign-led photography, rounded navigation and pill controls; three proposed opening sequences recorded above. Existing twelve-area content scope remains pending reconciliation after selection. Dawn theme files and all actual section/block orders remain unchanged.
+- Validation: inspected source screenshots, original product/logo assets and all generated previews; verified PNG dimensions, saved files, documentation diff and unchanged theme scope. These are raster mockups, with generated asset/copy limitations documented in SNIF-REFERENCE.md; no functional/mobile/Shopify QA claimed.
+- Next: select/refine one of the latest three displayed images before implementation. Shopify connection and publication remain unverified.
+
 ## Prompt for another Codex account or team
 
 Copy this prompt and replace its final placeholder with the requested change:
@@ -274,7 +282,7 @@ First read AGENTS.md and the entire README.md. Inspect current files and recent 
 
 The approved base is the supplied Shopify Dawn 15.5.0 theme imported in d35f787. Make edits within this theme. Preserve its layout, section IDs, section sequence, and block order unless I explicitly request changes to them. The baseline homepage is announcement bar, header, image banner, featured products, then footer with email subscription. Read the README for the other page sequences and any later approved changes.
 
-Read research/brand/BRIEF.md, research/storefront/README.md, research/design/CLIENT-STRATEGY.txt, and research/design/PLAN.md. The correct name is ALMA by Reem Fragrances. The original three options remain saved. The current candidate is research/design/previews/hybrid-1-hero-2-design-v1.png: option 1 cinematic hero combined with option 2 header, typography and lower sections. The user requested to see this combination but has not approved implementation. Obtain approval/refinements and record the exact approved reference before coding. Preserve original logo/product assets and store records/URLs/integrations. The public catalog is reference, not a completed migration. The twelve homepage areas, other pages and QA remain in scope in the plan; the actual theme is unchanged.
+Read research/brand/BRIEF.md, research/storefront/README.md, research/design/CLIENT-STRATEGY.txt, and research/design/PLAN.md. The correct name is ALMA by Reem Fragrances. The user rejected the original three designs and hybrid, then named https://snif.co/ as the new visual reference. Read research/design/SNIF-REFERENCE.md. The current displayed options 1, 2 and 3 are research/design/previews/snif-direction-1.png, snif-direction-2.png and snif-direction-3.png. They propose different opening-section hierarchies using bold sans type, rounded navigation and pill controls. None is approved. Obtain selection/refinements, reconcile the complete page sequence and record the exact approved image before coding. Preserve original logo/product assets and store records/URLs/integrations. The public catalog is reference, not a completed migration. The twelve homepage areas, other pages and QA remain in scope in the plan; the actual theme is unchanged.
 
 Check the branch, remote, working tree, and your GitHub push access. Pull before editing and preserve existing work, including other teams' and Shopify-generated commits. Use Context7 docs before package/framework/API-dependent implementation or setup. Implement my requested change and run appropriate checks; state what you could not verify.
 
