@@ -1,6 +1,15 @@
 # ALMA design selection and implementation plan
 
-Status: three independent desktop homepage mockups generated and displayed. No option selected or approved. No theme implementation started.
+Status: the original three mockups were displayed, and the user requested a combination of option 1's hero with option 2's design. That combined preview is now generated and shown. It has not been approved for implementation. No theme implementation started.
+
+## Current combined candidate
+
+- Image: `previews/hybrid-1-hero-2-design-v1.png`.
+- Exact prompt: `previews/hybrid-1-hero-2-design-v1-prompt.txt`.
+- User request: show option 1's landing/hero with option 2's design.
+- Composition: option 1 cinematic full-width hero/photo/headline/CTA; option 2 centered-logo header, typography, fine rules, open product groupings, scent worlds, and ritual layout. Same preview section order.
+- Inputs: original option 1 and option 2 images, official logo-page render, and actual lotion reference. Built-in Image Generation edit; original options preserved.
+- Approval: pending. Asking to see a combination is not approval to implement. Record approval or refinements before build. All original fidelity/production limitations below remain applicable.
 
 ## Sources and decision gate
 
@@ -101,7 +110,7 @@ Choose exact types/cardinality from current docs and actual content during imple
 
 ## Outstanding approval and production dependencies
 
-Immediate next step: user chooses one displayed option or requests refinements. Record the exact selected image path and approval. If feedback changes the design, show the revised image before building.
+Immediate next step: user approves or refines the combined candidate above. Record its exact path and approval. If feedback changes the design, show the revised image before building.
 
 Still unverified: Shopify admin connection/theme ID, complete integration inventory, current theme settings, actual navigation/page records, optional metafield definitions/data, final campaign assets/copy and gifting service details. Public research is not a completed migration. Customers/orders must remain untouched; never place private exports in this public repository.
 

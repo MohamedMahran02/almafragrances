@@ -4,7 +4,7 @@ Source: user-provided brand direction on 2026-09-11 and the supplied `Bag.pdf`. 
 
 ## Workflow and approval
 
-The full strategy prompt was supplied on 2026-09-11 and is saved in `../design/CLIENT-STRATEGY.txt`. Three homepage mockups are saved in `../design/previews/`, with the selection mapping and production plan in `../design/PLAN.md`. No option is selected or approved. Obtain user approval before implementing the design in the supplied Dawn theme.
+The full strategy is saved in `../design/CLIENT-STRATEGY.txt`. After three original options, the user requested option 1's hero with option 2's design. The combined mockup is `../design/previews/hybrid-1-hero-2-design-v1.png`; selection history and production plan are in `../design/PLAN.md`. The combined candidate remains unapproved. Obtain approval before implementing the design in the supplied Dawn theme.
 
 ## Identity
 
@@ -44,4 +44,4 @@ Desired main sections: Perfumes, Solid Perfumes, Lotions, Charms, Dukhon, Layeri
 
 ## Next handoff
 
-Await selection/refinement of the three displayed mockups, record the exact approved image, then implement approved changes. No theme code or live Shopify data has changed during intake/design exploration. Read the detailed strategy and plan for the proposed expanded homepage sequence.
+Await approval/refinement of the combined mockup, record the exact approved image, then implement approved changes. No theme code or live Shopify data has changed during design exploration. Read the detailed strategy and plan for the proposed expanded homepage sequence.
