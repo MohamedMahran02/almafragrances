@@ -4,12 +4,12 @@
     "color_schemes": {
       "scheme-1": {
         "settings": {
-          "background": "#F8F6EF",
+          "background": "#FFFFFF",
           "background_gradient": "",
-          "text": "#291614",
-          "button": "#291614",
-          "button_label": "#F8F6EF",
-          "secondary_button_label": "#291614",
+          "text": "#11100F",
+          "button": "#11100F",
+          "button_label": "#FFFFFF",
+          "secondary_button_label": "#11100F",
           "shadow": "#121212"
         }
       },

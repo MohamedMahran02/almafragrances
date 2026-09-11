@@ -1,15 +1,40 @@
-# Design QA — approved Diptyque option 1
+# Design QA — live Diptyque fidelity pass
 
-Result: passed
+Result: passed locally on 2026-09-11.
 
-Scope: the selected homepage opening implemented within Dawn. This result applies to local visual/interaction checks, not Shopify runtime, synchronization, complete strategy implementation or publication.
+## Scope and reference
 
-Reference: `research/design/previews/diptyque-direction-1.png` (1024×1536). Rendered: `research/design/previews/implemented-desktop.png` (1024px viewport; browser scrollbar leaves 1009px content) and `implemented-mobile.png` (390px viewport, 375px content). Reference and rendered screenshots were inspected together. The reference ends around the favourites area; the rendered full-page screenshot also includes the preserved native footer. Mobile is a responsive adaptation, since no approved mobile mockup was supplied.
+Reference: `https://diptyqueparis.com/fr-fr`, inspected live at the available 1280×720 browser viewport. The flow under test was: homepage loads → first meaningful screen renders → product tabs change panels → mobile navigation opens and Escape closes it.
 
-Verified hierarchy: announcement, centered exact icon and native utility controls, category navigation, wide warm campaign still life and rectangular CTA, centered ritual intro/link, favourites heading/tabs, two desktop cards or one mobile column, footer/newsletter. Header and ritual spacing were tightened after initial comparison. Serif heading weight, ivory/espresso palette, flat card presentation and restrained links follow the selected direction.
+Rendered target: the local Liquid fixture at `http://127.0.0.1:9293`, checked at 1280×720 desktop and 390×844 mobile. The local fixture renders the real Dawn layout, ALMA sections/snippets and public catalog snapshot; it is not a Shopify commerce emulator.
 
-Intentional differences: original Shopify product photographs replace invented mockup packshots/packaging. The generated campaign uses source-informed packaging but labels remain approximate. Header ivory matches the unmodified icon source. Native sale pricing is retained. Gifting/About links appear only when real page URLs are configured. No decorative slider indicator is shown for a non-carousel grid. The local fixture uses Arial in place of Shopify's Assistant body font. Native cart/search icons are retained.
+## Fidelity ledger
 
-Interaction checks: click and arrow-key favourites selection changes the visible panel and selected/focused tab. Native mobile drawer opens and closes with Escape after its animation. Desktop/mobile have no horizontal overflow; visible campaign/product images loaded. An empty catalog renders editorial images without fabricated prices/stock. Theme Check: 0 errors, 9 inherited Dawn warnings. JavaScript syntax and Git whitespace checks passed. Final local render: zero console errors, two fixture font preload warnings.
+| Comparison point | Live reference | ALMA result |
+| --- | --- | --- |
+| Header | pale announcement, centered identity, utilities, shallow navigation row | same structure/proportions with the approved ALMA icon and six real categories |
+| Hero | full-width cinematic media, approximately 56vw/802px tall, centered bordered CTA | full-width ALMA campaign at the same proportion with centered rectangular CTA |
+| Introduction | white centered band, restrained 32px serif title, narrow copy and underlined link | matching white band, scale, centered measure and link treatment |
+| Product rails | pale-gray surface, four visible products, centered tabs, small typography and progress line | two four-product ALMA rails using live products/prices and the same visual hierarchy |
+| Editorial split | 50/50 white composition, centered copy and dark purchase CTA opposite large media | ALMA layering story uses the same 50/50 media-right structure and CTA hierarchy |
+| Immersive story | full-width 802px image followed by centered title/copy/actions | ALMA Dukhoon uses full-width media followed by a centered 367px-style copy band |
+| Universe | centered heading and four visible image-led categories in a horizontal rail | six ALMA categories in a four-visible horizontal rail with hidden native scrollbar |
+| Services/footer | compact pale service strip and two-column newsletter/help area | three factual ALMA services plus split newsletter/help panels and native Dawn footer controls |
+| Mobile | reduced chrome, large image-led first viewport and horizontal content rails | 390×844 view uses drawer navigation, 640px campaign, horizontal product/category rails and stacked footer panels |
 
-Unverified: Shopify Theme Editor runtime, receiving test-store data, synchronization, transactions, localization, third-party integrations and live publication. User confirms the branch connection; no store URL or theme ID was provided. Run these checks against the linked Shopify test theme before treating the full store rebuild as ready for customers.
+## Functional checks
+
+- Page identity and meaningful DOM content: passed.
+- Framework/error overlay: none.
+- New desktop browser tab console: no errors or warnings.
+- Favourites tabs: All → Spray Perfumes updates `aria-selected` and shows the corresponding panel.
+- Mobile menu: opens with all six ALMA category links; Escape closes the drawer.
+- Horizontal page movement is visually suppressed while product and category rails retain local horizontal scrolling.
+- Theme Check: 0 errors, 9 inherited Dawn warnings.
+- JavaScript syntax, JSON parsing and `git diff --check`: passed.
+
+## Required differences and remaining risk
+
+The ALMA logo, photography, products, prices, category names, copy and claims intentionally replace Diptyque's proprietary brand assets and content. Proprietary Diptyque fonts, videos and imagery were not copied. The available in-app browser limited the live reference capture to 1280×720; ALMA itself was also verified at 390×844 using the local responsive fixture.
+
+Unverified locally: Shopify Theme Editor behavior, live newsletter/contact submissions, checkout/payment, localization, apps, branch-to-theme synchronization and public publication. Those require checks on the connected Shopify theme after the pushed commit synchronizes.

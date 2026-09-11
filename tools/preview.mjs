@@ -50,7 +50,7 @@ settings.color_schemes=Object.entries(settings.color_schemes).map(([id,value])=>
 const font={family:'Arial',fallback_families:'sans-serif',weight:400,style:'normal',system:true};
 settings.type_header_font=font; settings.type_body_font=font;
 const source=json('research/storefront/products.json').products;
-const products=Object.fromEntries(source.map(p=>[p.handle,{...p,url:`/products/${p.handle}`,type:p.product_type,price:Math.min(...p.variants.map(v=>Number(v.price)*100)),compare_at_price:Number(p.variants[0].compare_at_price)*100,available:p.variants.some(v=>v.available),featured_image:p.images[0],price_varies:new Set(p.variants.map(v=>v.price)).size>1}]));
+const products=Object.fromEntries(source.map(p=>[p.handle,{...p,url:`/products/${p.handle}`,type:p.product_type,description:p.body_html,price:Math.min(...p.variants.map(v=>Number(v.price)*100)),compare_at_price:Number(p.variants[0].compare_at_price)*100,available:p.variants.some(v=>v.available),featured_image:p.images[0],price_varies:new Set(p.variants.map(v=>v.price)).size>1}]));
 const collections={all:{url:'/collections/all',products:Object.values(products)}};
 const mappings={
  'best-sellers':['alma-hair-and-body-perfume','lolo-vanilla'],

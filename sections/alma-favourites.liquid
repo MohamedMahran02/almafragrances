@@ -34,6 +34,7 @@
               {%- endif -%}
             </a>
             <h3><a href="{{ product.url }}">{{ product.title | escape }}</a></h3>
+            {%- if product.description != blank -%}<p class="alma-product__description">{{ product.description | strip_html | truncatewords: 16 }}</p>{%- endif -%}
             {%- if product.type != blank -%}<p class="alma-product__type">{{ product.type | escape }}</p>{%- endif -%}
             {% render 'price', product: product %}
             <a class="alma-text-link" href="{{ product.url }}">{{ section.settings.product_link_label | escape }}<span class="visually-hidden"> — {{ product.title | escape }}</span></a>
@@ -50,6 +51,7 @@
           </article>
         {%- endfor -%}
       </div>
+      <span class="alma-favourites__progress" aria-hidden="true"></span>
     </div>
     {%- endif -%}
   {%- endfor -%}

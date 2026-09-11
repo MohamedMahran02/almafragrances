@@ -170,6 +170,9 @@
               {%- if section.settings.newsletter_heading != blank -%}
                 <h2 class="footer-block__heading inline-richtext">{{ section.settings.newsletter_heading }}</h2>
               {%- endif -%}
+              {%- if section.settings.newsletter_text != blank -%}
+                <div class="alma-footer__newsletter-text rte">{{ section.settings.newsletter_text }}</div>
+              {%- endif -%}
               {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
                 <input type="hidden" name="contact[tags]" value="newsletter">
                 <div class="newsletter-form__field-wrapper">
@@ -235,6 +238,14 @@
               {%- endform -%}
             </div>
           {%- endif -%}
+
+          <div class="alma-footer__help">
+            {%- if section.settings.help_heading != blank -%}<h2>{{ section.settings.help_heading | escape }}</h2>{%- endif -%}
+            {%- if section.settings.help_text != blank -%}<div class="rte">{{ section.settings.help_text }}</div>{%- endif -%}
+            {%- if section.settings.help_link_label != blank -%}
+              <a class="alma-button" href="{{ section.settings.help_link | default: routes.root_url }}">{{ section.settings.help_link_label | escape }}</a>
+            {%- endif -%}
+          </div>
 
           {%- if shop.features.follow_on_shop? and section.settings.enable_follow_on_shop -%}
             <div class="footer__follow-on-shop">
@@ -446,6 +457,35 @@
       "id": "newsletter_heading",
       "default": "t:sections.footer.settings.newsletter_heading.default",
       "label": "t:sections.footer.settings.newsletter_heading.label"
+    },
+    {
+      "type": "richtext",
+      "id": "newsletter_text",
+      "label": "Newsletter text",
+      "default": "<p>Discover new creations, layering rituals and thoughtful gifting from ALMA.</p>"
+    },
+    {
+      "type": "text",
+      "id": "help_heading",
+      "label": "Help heading",
+      "default": "Need help?"
+    },
+    {
+      "type": "richtext",
+      "id": "help_text",
+      "label": "Help text",
+      "default": "<p>Our team is here to help you find your fragrance and build your ritual.</p>"
+    },
+    {
+      "type": "text",
+      "id": "help_link_label",
+      "label": "Help link label",
+      "default": "Contact us"
+    },
+    {
+      "type": "url",
+      "id": "help_link",
+      "label": "Help link"
     },
     {
       "type": "header",

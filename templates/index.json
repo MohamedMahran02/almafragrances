@@ -31,7 +31,7 @@
       "type": "alma-favourites",
       "settings": {
         "title": "ALMA favourites",
-        "products_to_show": 2,
+        "products_to_show": 4,
         "product_link_label": "Choose options"
       },
       "blocks": {
@@ -42,7 +42,9 @@
             "collection": "best-sellers",
             "products": [
               "alma-hair-and-body-perfume",
-              "lolo-vanilla"
+              "lolo-vanilla",
+              "luma-perfume",
+              "alma-arabia"
             ]
           }
         },
@@ -83,8 +85,9 @@
         "link_label": "Explore layering",
         "link": "shopify://collections/layering-kits",
         "steps_label": "Lotion, solid perfume and spray perfume",
-        "media_position": "left",
-        "tone": "blush"
+        "layout": "split",
+        "media_position": "right",
+        "tone": "ivory"
       }
     },
     "dukhon_story": {
@@ -96,20 +99,27 @@
         "product": "alma-dokhon",
         "link_label": "Discover Dukhoon",
         "link": "shopify://collections/alma-dokhon",
+        "layout": "immersive",
         "media_position": "right",
-        "tone": "dark"
+        "tone": "ivory"
       }
     },
     "gifting_story": {
-      "type": "alma-editorial-feature",
+      "type": "alma-favourites",
+      "blocks": {
+        "gifts": {
+          "type": "collection",
+          "settings": {
+            "label": "Gifts & rituals",
+            "products": ["alma-fragrances-gift-card", "alma-layering-box", "alma-box-of-minis", "alma-charm-collection"]
+          }
+        }
+      },
+      "block_order": ["gifts"],
       "settings": {
-        "eyebrow": "Gifting by ALMA",
-        "heading": "A gift made personal",
-        "text": "<p>Choose an ALMA gift card and let them find the fragrance, texture or ritual that feels entirely their own.</p>",
-        "product": "alma-fragrances-gift-card",
-        "link_label": "Choose a gift card",
-        "media_position": "left",
-        "tone": "ivory"
+        "title": "Gifting by ALMA",
+        "products_to_show": 4,
+        "product_link_label": "Discover"
       }
     },
     "wardrobe": {
