@@ -11,7 +11,7 @@ Fresh handoff started at the user's request on 2026-09-11. Previous README updat
 - Current design reference: https://diptyqueparis.com/fr-fr.
 - Website logo: the user-selected icon in `research/brand/logo-icon.png`. Use its exact artwork; do not change existing product packaging.
 - The user selected **option 1**, `research/design/previews/diptyque-direction-1.png`, and authorized implementation and pushes. No further design approval is needed for this selection.
-- Implemented campaign/ritual and favourites sections, the supplied icon, editorial styling and ALMA category navigation. The reported desktop hero width defect is fixed and verified on the connected Shopify theme.
+- Implemented the complete Diptyque-referenced homepage rhythm with ALMA content: campaign/ritual opening, favourites, layering feature, Dukhoon feature, gifting feature, six-category wardrobe, service band, newsletter and footer. The supplied icon and real Shopify catalog imagery are used throughout.
 - Verified test store: `https://dk5qhx-ax.myshopify.com/`. The user confirms `main` is connected to its Shopify theme. The store is a trial account and the connected theme is visible on the public storefront; publication state and exact theme ID were not inspected.
 - The test store now contains the current public ALMA catalog: 23 active products, 189 variants, 42 product images and six requested category collections. Twenty-two standard products were imported from the generated CSV; the gift card was created through Shopify's gift-card product flow.
 
@@ -46,14 +46,17 @@ Retain Shopify's `content_for_header` and `content_for_layout`, native product f
 
 ### Current actual sequence
 
-Homepage: announcement bar → centered icon/utility header and category navigation → campaign hero → ritual introduction → favourites with All / Spray Perfumes / Solid Perfumes tabs → native footer/newsletter. Hero and ritual are inside the same `image_banner` section ID; existing top-level order is preserved.
+Homepage: announcement bar → centered icon/utility header and category navigation → campaign hero → ritual introduction → favourites with All / Spray Perfumes / Solid Perfumes tabs → layering editorial feature with three product steps → dark Dukhoon editorial feature → gifting editorial feature → six-category ALMA wardrobe → three-part ALMA experience band → native newsletter/footer. Hero and ritual remain inside the same `image_banner` section ID. The user explicitly requested the expanded homepage after reviewing the initial two-section implementation.
 
 ```text
 header-group.order:           [announcement-bar, header]
 announcement-bar.block_order: [announcement-bar-0]
-index.order:                  [image_banner, featured_collection]
+index.order:                  [image_banner, featured_collection, layering_story, dukhon_story, gifting_story, wardrobe, services]
 image_banner.block_order:     [heading, button]
 featured_collection.block_order: [all, spray, solid]
+layering_story.block_order:   [lotion, solid, spray]
+wardrobe.block_order:         [spray, solid, lotions, dukhon, charms, layering]
+services.block_order:         [gifting, ritual, wardrobe]
 footer-group.order:           [footer]
 product.order:                [main, disclosures, related-products]
 product.main.block_order:     [vendor, title, price, variant_picker, quantity_selector, buy_buttons, description, share]
@@ -87,6 +90,9 @@ The public catalog snapshot under `research/storefront/` contains 23 products, 1
 - `assets/alma-theme.css`: responsive campaign/grid, regular Georgia serif headings, native body font, warm ivory/espresso colors, rectangular CTA and cropped icon. Mobile uses a central hero crop and one product column. Header background matches the source icon's exact `#EDEBDB` background; artwork pixels are unchanged.
 - `snippets/alma-logo.liquid` and `assets/alma-logo-icon.png`: exact supplied artwork, cropped visually with CSS. `header.liquid` retains Dawn's utility controls, menu drawer, app blocks, account and cart.
 - `snippets/alma-navigation-links.liquid`: six category links in the requested order, mapped to the collections created by the catalog import: `alma-perfumes`, `alma-solids-مخمريات`, `alma-lotions`, `alma-dokhon`, `alma-solid-charms`, and `layering-kits`. Optional Gifting/About URLs are in Theme settings → ALMA identity. They remain hidden until real destinations are selected. Disable ALMA navigation to restore the selected native Shopify menu.
+- `sections/alma-editorial-feature.liquid`: reusable Diptyque-referenced image-and-copy feature with left/right media, ivory/blush/dark treatments, an optional live featured product/price and up to three linked product steps. Homepage instances cover layering, Dukhoon and gifting; all text, products, images, links and treatments are editable in Theme Editor.
+- `sections/alma-wardrobe.liquid`: asymmetrical six-category image gallery using each live collection's image or first product image, with optional image overrides. It preserves the requested category order and links directly to the imported collections.
+- `sections/alma-service-band.liquid`: restrained three-column closing band for factual ALMA destinations: gift cards, the three-step ritual and the complete catalog. It does not invent shipping, samples, returns or client-service promises.
 - `config/settings_schema.json`: ALMA identity controls. `settings_data.json.current` was expanded from the Dawn preset string to its equivalent full object before applying ALMA toggles and scheme-1 colors. Other preset values remain intact.
 - `layout/theme.liquid`: loads ALMA CSS and optional body class; native Shopify metadata, integrations and commerce hooks remain.
 
@@ -104,7 +110,7 @@ No customers, orders, private integrations, discount rules, shipping rules, taxe
 - Run `npm run preview:local`, open `http://127.0.0.1:9293`. `?empty=1` exercises an empty catalog. `tools/preview.mjs` renders the actual Liquid layout/sections/snippets using LiquidJS 10.29.0, public catalog fixtures and limited Shopify filters. It is a visual harness, not a Shopify emulator: real store routes, checkout, localization and form submissions are not served. Preview body font uses Arial; deployed theme uses Dawn's configured Assistant font.
 - Desktop 1024×1536 and mobile 390×844 checked. No horizontal overflow or broken visible images. Tab selection by click/keyboard and native mobile menu open/Escape-close were checked. The final local page had no browser console errors; two fixture font-preload warnings remain.
 - Screenshots: `research/design/previews/implemented-desktop.png` and `implemented-mobile.png`. See `design-qa.md` for scope, comparisons and known differences.
-- Remaining broader rebuild work: confirmed Gifting/About content and pages, additional homepage story/category/scent/review sections, and richer PDP layering/scent content from the strategy. These are not claimed complete by the selected opening-page implementation. Store synchronization and actual commerce still need verification on Shopify.
+- Remaining broader rebuild work: dedicated Gifting/About/Layering pages, richer PDP scent/layering metafields, verified review integration and final client campaign photography/copy. The homepage architecture is now complete for the requested Diptyque reference rhythm; these supporting surfaces remain separate tasks.
 
 ### Required change workflow
 
@@ -146,13 +152,22 @@ Use local Git authentication for `omarashraaf`; the Codex connector previously u
 - Files: `assets/alma-theme.css`, `templates/index.json`, `snippets/alma-navigation-links.liquid`, `tools/build-shopify-product-csv.mjs`, `research/storefront/shopify-products-import.csv`, and this README.
 - Checks: Shopify import preview reported 22 products, 183 SKUs and 41 images without category warnings; admin product, variant image, category and collection views were visually checked. Theme Check passed with 0 errors/9 inherited Dawn warnings; generator JavaScript syntax, homepage JSON parsing, CSV regeneration and Git whitespace checks passed. After GitHub/Shopify sync, the live 1,920 px viewport measured a 1,905 px hero and 1,905 px page body with no horizontal overflow; all six navigation URLs resolve to their real collections and both selected homepage products render with source images and prices. The imported Alma perfume PDP renders its bilingual description, sale pricing, recommendations and native purchase form; adding it produced Shopify's “Item added to your cart” state and a one-item cart indicator. Checkout/payment was not attempted.
 
+### 2026-09-11 — Complete the Diptyque-referenced homepage
+
+- Request/clarification: the user expected the full reference homepage rather than only the approved mockup's opening sections. This explicitly authorizes expanding the homepage sequence.
+- Reference mapping: inspected the current Diptyque homepage structure from hero through product tabs, alternating editorial media stories, related-product storytelling, visual category universe, service band, newsletter/help and footer. Recreated that rhythm for ALMA without copying Diptyque text, branding or media.
+- Changed: added reusable editorial features for layering, Dukhoon and gifting; a six-category ALMA wardrobe gallery; and an ALMA experience band. All visuals resolve from real imported Shopify products/collections by default and support Theme Editor overrides. Responsive layouts stack cleanly on mobile and reduced-motion preferences disable gallery scaling.
+- Sequence: `[image_banner, featured_collection, layering_story, dukhon_story, gifting_story, wardrobe, services]`; nested orders are recorded above. Header/footer and native commerce templates remain intact.
+- Files: `sections/alma-editorial-feature.liquid`, `sections/alma-wardrobe.liquid`, `sections/alma-service-band.liquid`, `templates/index.json`, `assets/alma-theme.css`, `tools/preview.mjs`, and this README.
+- Checks so far: Context7 Shopify section/schema guidance consulted; Theme Check passes with 0 errors/9 inherited Dawn warnings; all new schemas and homepage JSON parse; Git whitespace check passes. Local 1280 px visual inspection confirms seven homepage sections, no horizontal overflow, no broken loaded images, working real product/collection links and the intended alternating ivory/blush/dark editorial rhythm. Live Shopify desktop/mobile verification follows the push.
+
 ## Continuation prompt
 
 ```text
 Continue ALMA by Reem Fragrances at https://github.com/omarashraaf/almafragrances on main.
 Read AGENTS.md and the entire README first, then inspect files and recent Git history. The README was intentionally reset at the user's request; append all future updates from that point.
 The user authorized building directly within the supplied Dawn 15.5.0 theme and pushing completed work to main. Preserve store data, URLs, native commerce and integrations. Use research/brand/logo-icon.png as the website logo without redesigning product packaging.
-The user selected research/design/previews/diptyque-direction-1.png. The first design is implemented with alma-campaign and alma-favourites sections; do not ask for design/build approval again. Main is connected to the verified test storefront https://dk5qhx-ax.myshopify.com/. The test store contains 23 products/189 variants and six category collections imported from the public source snapshot; read the currency and inventory limitations above before production work.
+The user selected research/design/previews/diptyque-direction-1.png and later clarified that the full Diptyque homepage rhythm is required. The homepage is expanded through layering, Dukhoon, gifting, wardrobe and service sections; do not collapse it back to only the opening sections. Main is connected to the verified test storefront https://dk5qhx-ax.myshopify.com/. The test store contains 23 products/189 variants and six category collections imported from the public source snapshot; read the currency and inventory limitations above before production work.
 Use Context7 before external API/package-dependent implementation. Pull before edits. Update README in every change commit, documenting current structure/order, implementation, checks, limitations and next steps. Push and verify remote main; verify Shopify connection, synchronization and publication separately.
 Next requested work: [describe the next change].
 ```

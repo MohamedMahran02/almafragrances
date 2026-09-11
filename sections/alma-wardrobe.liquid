@@ -1,0 +1,23 @@
+<section class="alma-wardrobe page-width" aria-labelledby="AlmaWardrobe-{{ section.id }}">
+  <div class="alma-wardrobe__heading"><h2 id="AlmaWardrobe-{{ section.id }}">{{ section.settings.heading | escape }}</h2>{%- if section.settings.text != blank -%}<div class="rte">{{ section.settings.text }}</div>{%- endif -%}</div>
+  <div class="alma-wardrobe__grid">
+    {%- for block in section.blocks -%}
+      {%- assign wardrobe_collection = block.settings.collection -%}
+      {%- assign wardrobe_image = block.settings.image -%}
+      {%- if wardrobe_image == blank and wardrobe_collection != blank -%}{%- assign wardrobe_image = wardrobe_collection.featured_image | default: wardrobe_collection.products.first.featured_image -%}{%- endif -%}
+      {%- assign wardrobe_link = wardrobe_collection.url | default: routes.all_products_collection_url -%}
+      <a class="alma-wardrobe__card" href="{{ wardrobe_link }}" {{ block.shopify_attributes }}>
+        <span class="alma-wardrobe__media">
+          {%- if wardrobe_image != blank -%}
+            {%- assign wardrobe_alt = wardrobe_image.alt | default: block.settings.label -%}
+            {{ wardrobe_image | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '320, 480, 720, 960, 1200', sizes: '(min-width: 990px) 33vw, 50vw', class: 'alma-wardrobe__image', alt: wardrobe_alt }}
+          {%- else -%}{{ 'collection-1' | placeholder_svg_tag: 'alma-wardrobe__image placeholder-svg' }}{%- endif -%}
+        </span>
+        <span class="alma-wardrobe__label">{{ block.settings.label | default: wardrobe_collection.title | escape }}</span>
+      </a>
+    {%- endfor -%}
+  </div>
+</section>
+{% schema %}
+{"name":"ALMA wardrobe","settings":[{"type":"text","id":"heading","label":"Heading","default":"Explore the ALMA wardrobe"},{"type":"richtext","id":"text","label":"Text","default":"<p>Fragrance for skin, space and every part of your ritual.</p>"}],"max_blocks":6,"blocks":[{"type":"collection","name":"Category","settings":[{"type":"collection","id":"collection","label":"Collection"},{"type":"image_picker","id":"image","label":"Override image"},{"type":"text","id":"label","label":"Label"}]}],"presets":[{"name":"ALMA wardrobe","blocks":[{"type":"collection"},{"type":"collection"},{"type":"collection"},{"type":"collection"},{"type":"collection"},{"type":"collection"}]}]}
+{% endschema %}

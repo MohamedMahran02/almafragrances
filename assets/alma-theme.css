@@ -36,6 +36,49 @@
 .alma-product__type { font-size: 1.3rem; margin: 0 0 .6rem; }
 .alma-product .price { font-size: 1.4rem; margin: .8rem 0 1rem; }
 .alma-theme .footer { border-top: 1px solid rgba(var(--color-foreground), .18); }
+.alma-editorial { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(34rem, .85fr); min-height: 72rem; background: #f6f2e9; }
+.alma-editorial--right { grid-template-columns: minmax(34rem, .85fr) minmax(0, 1.15fr); }
+.alma-editorial--right .alma-editorial__media { order: 2; }
+.alma-editorial--right .alma-editorial__content { order: 1; }
+.alma-editorial--blush { background: #ead6d2; }
+.alma-editorial--dark { background: #210407; color: #f8f1e6; }
+.alma-editorial__media { min-height: 72rem; overflow: hidden; }
+.alma-editorial__image { width: 100%; height: 100%; min-height: 72rem; display: block; object-fit: cover; }
+.alma-editorial__content { display: flex; flex-direction: column; justify-content: center; padding: clamp(5rem, 8vw, 12rem); }
+.alma-editorial__eyebrow { margin: 0 0 2rem; font-size: 1.1rem; letter-spacing: .2em; text-transform: uppercase; }
+.alma-editorial h2 { max-width: 10ch; margin: 0 0 2.4rem; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(4.6rem, 6vw, 9rem); font-weight: 400; line-height: .95; }
+.alma-editorial--dark h2, .alma-editorial--dark .price, .alma-editorial--dark .price-item { color: #f8f1e6; }
+.alma-editorial__text { max-width: 46rem; font-size: 1.5rem; line-height: 1.75; }
+.alma-editorial__product-line { display: flex; align-items: baseline; justify-content: space-between; gap: 2rem; width: 100%; max-width: 46rem; margin: 3rem 0 1rem; padding-top: 1.5rem; border-top: 1px solid currentColor; }
+.alma-editorial__product-line .price { font-size: 1.3rem; }
+.alma-editorial .alma-button { align-self: flex-start; margin-top: 2rem; padding: 1.3rem 2.2rem; border: 1px solid currentColor; color: inherit; text-decoration: none; }
+.alma-editorial--dark .alma-button { background: #f8f1e6; border-color: #f8f1e6; color: #210407; }
+.alma-editorial__steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; width: 100%; max-width: 52rem; margin-top: 5rem; }
+.alma-editorial__step { display: grid; gap: .8rem; color: inherit; text-decoration: none; }
+.alma-editorial__step-number { font-size: 1rem; letter-spacing: .16em; }
+.alma-editorial__step-image { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.alma-editorial__step-label { font-family: Georgia, 'Times New Roman', serif; font-size: 1.4rem; }
+.alma-wardrobe { padding-top: clamp(7rem, 10vw, 14rem); padding-bottom: clamp(7rem, 10vw, 14rem); }
+.alma-wardrobe__heading { display: grid; grid-template-columns: 1.4fr 1fr; align-items: end; gap: 4rem; margin-bottom: 5rem; }
+.alma-wardrobe h2, .alma-service-band h2 { margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(4.5rem, 6vw, 8rem); font-weight: 400; line-height: 1; }
+.alma-wardrobe__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.6rem; }
+.alma-wardrobe__card { display: grid; gap: 1.2rem; color: inherit; text-decoration: none; }
+.alma-wardrobe__card:first-child, .alma-wardrobe__card:nth-child(5) { grid-column: span 2; }
+.alma-wardrobe__media { display: block; overflow: hidden; }
+.alma-wardrobe__image { width: 100%; aspect-ratio: 1 / 1.08; display: block; object-fit: cover; transition: transform .5s ease; }
+.alma-wardrobe__card:first-child .alma-wardrobe__image, .alma-wardrobe__card:nth-child(5) .alma-wardrobe__image { aspect-ratio: 2 / 1.08; }
+.alma-wardrobe__card:hover .alma-wardrobe__image { transform: scale(1.015); }
+.alma-wardrobe__label { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(2rem, 2vw, 3rem); }
+.alma-service-band { padding-top: 8rem; padding-bottom: 9rem; border-top: 1px solid rgba(var(--color-foreground), .18); }
+.alma-service-band h2 { margin-bottom: 5rem; font-size: clamp(3.8rem, 5vw, 6rem); }
+.alma-service-band__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid rgba(var(--color-foreground), .2); }
+.alma-service-band__item { min-height: 24rem; padding: 2rem 4rem 2rem 0; border-right: 1px solid rgba(var(--color-foreground), .2); }
+.alma-service-band__item + .alma-service-band__item { padding-left: 4rem; }
+.alma-service-band__item:last-child { border-right: 0; }
+.alma-service-band__number { font-size: 1rem; letter-spacing: .16em; }
+.alma-service-band__item h3 { margin: 5rem 0 1rem; font-family: Georgia, 'Times New Roman', serif; font-size: 2.8rem; font-weight: 400; }
+.alma-service-band__item .rte { min-height: 5rem; font-size: 1.4rem; }
+@media (prefers-reduced-motion: reduce) { .alma-wardrobe__image { transition: none; } }
 @media (min-width: 1440px) { .alma-campaign__media { aspect-ratio: auto; height: min(55.556vw, 80rem); } }
 @media (max-width: 989px) {
   .alma-logo { width: 5rem; }
@@ -51,4 +94,21 @@
   .alma-favourites__tabs { gap: .8rem 2.2rem; }
   .alma-favourites__grid { grid-template-columns: 1fr; gap: 3.2rem; }
   .alma-product__image { height: 34rem; }
+  .alma-editorial, .alma-editorial--right { grid-template-columns: 1fr; min-height: 0; }
+  .alma-editorial--right .alma-editorial__media, .alma-editorial--right .alma-editorial__content { order: initial; }
+  .alma-editorial__media, .alma-editorial__image { min-height: 0; }
+  .alma-editorial__image { aspect-ratio: 4 / 5; }
+  .alma-editorial__content { padding: 6rem 2rem; }
+  .alma-editorial h2 { font-size: clamp(4.2rem, 15vw, 6.4rem); }
+  .alma-editorial__steps { margin-top: 4rem; }
+  .alma-editorial__step-label { font-size: 1.2rem; }
+  .alma-wardrobe { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .alma-wardrobe__heading { grid-template-columns: 1fr; gap: 2rem; margin-bottom: 3.5rem; }
+  .alma-wardrobe__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+  .alma-wardrobe__card:first-child, .alma-wardrobe__card:nth-child(5) { grid-column: span 2; }
+  .alma-wardrobe__card:first-child .alma-wardrobe__image, .alma-wardrobe__card:nth-child(5) .alma-wardrobe__image { aspect-ratio: 1.55 / 1; }
+  .alma-service-band { padding-left: 2rem; padding-right: 2rem; }
+  .alma-service-band__grid { grid-template-columns: 1fr; }
+  .alma-service-band__item, .alma-service-band__item + .alma-service-band__item { min-height: 0; padding: 2.5rem 0 3rem; border-right: 0; border-bottom: 1px solid rgba(var(--color-foreground), .2); }
+  .alma-service-band__item h3 { margin-top: 2.5rem; }
 }

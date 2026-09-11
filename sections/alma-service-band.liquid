@@ -1,0 +1,11 @@
+<section class="alma-service-band page-width" aria-labelledby="AlmaService-{{ section.id }}">
+  <h2 id="AlmaService-{{ section.id }}">{{ section.settings.heading | escape }}</h2>
+  <div class="alma-service-band__grid">
+    {%- for block in section.blocks -%}
+      <div class="alma-service-band__item" {{ block.shopify_attributes }}><span class="alma-service-band__number">0{{ forloop.index }}</span><h3>{{ block.settings.heading | escape }}</h3>{%- if block.settings.text != blank -%}<div class="rte">{{ block.settings.text }}</div>{%- endif -%}{%- if block.settings.link_label != blank and block.settings.link != blank -%}<a class="alma-text-link" href="{{ block.settings.link }}">{{ block.settings.link_label | escape }}</a>{%- endif -%}</div>
+    {%- endfor -%}
+  </div>
+</section>
+{% schema %}
+{"name":"ALMA services","settings":[{"type":"text","id":"heading","label":"Heading","default":"At your service"}],"max_blocks":4,"blocks":[{"type":"service","name":"Service","settings":[{"type":"text","id":"heading","label":"Heading"},{"type":"richtext","id":"text","label":"Text"},{"type":"text","id":"link_label","label":"Link label"},{"type":"url","id":"link","label":"Link"}]}],"presets":[{"name":"ALMA services","blocks":[{"type":"service"},{"type":"service"},{"type":"service"}]}]}
+{% endschema %}

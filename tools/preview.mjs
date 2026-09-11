@@ -52,14 +52,29 @@ settings.type_header_font=font; settings.type_body_font=font;
 const source=json('research/storefront/products.json').products;
 const products=Object.fromEntries(source.map(p=>[p.handle,{...p,url:`/products/${p.handle}`,type:p.product_type,price:Math.min(...p.variants.map(v=>Number(v.price)*100)),compare_at_price:Number(p.variants[0].compare_at_price)*100,available:p.variants.some(v=>v.available),featured_image:p.images[0],price_varies:new Set(p.variants.map(v=>v.price)).size>1}]));
 const collections={all:{url:'/collections/all',products:Object.values(products)}};
-const mappings={'best-sellers':['alma-hair-and-body-perfume','lolo-vanilla'],'alma-perfumes':['alma-hair-and-body-perfume'],'alma-makhmaria-s-solid-perfume':['lolo-vanilla']};
+const mappings={
+ 'best-sellers':['alma-hair-and-body-perfume','lolo-vanilla'],
+ 'alma-perfumes':['alma-hair-and-body-perfume','luma-perfume','alma-oud-intense-perfume','lolo-vanilla-perfume','alma-leather-luxe-perfume','almaxeman'],
+ 'alma-solids-مخمريات':['alma-leather','alma-arabia','alma-sandalwood','alma-oud','lolo-vanilla','alma-refill-pouches','alma-box-of-minis','alma-vanilla-bloom','almaxeman'],
+ 'alma-lotions':['alma-arabia-hand-and-body-lotion','alma-mini-hand-and-body-lotion'],
+ 'alma-dokhon':['alma-dokhon'],
+ 'alma-solid-charms':['alma-charm-collection'],
+ 'layering-kits':['alma-layering-box','luma-summer-kit']
+};
 for(const [handle,handles] of Object.entries(mappings)) collections[handle]={url:`/collections/${handle}`,products:handles.map(h=>products[h]).filter(Boolean)};
-const makeSection=(id,section,empty=false)=>({id,...section,blocks:(section.block_order??[]).map(blockId=>{
- const b=structuredClone(section.blocks[blockId]);
- if(b.settings.collection) b.settings.collection=empty?null:collections[b.settings.collection];
- if(b.settings.products) b.settings.products=empty?[]:b.settings.products.map(h=>products[h]).filter(Boolean);
- return {id:blockId,...b};
-})});
+const makeSection=(id,section,empty=false)=>{
+ const settings=structuredClone(section.settings??{});
+ if(settings.collection) settings.collection=empty?null:collections[settings.collection];
+ if(settings.product) settings.product=empty?null:products[settings.product];
+ const blocks=(section.block_order??[]).map(blockId=>{
+  const b=structuredClone(section.blocks[blockId]);
+  if(b.settings.collection) b.settings.collection=empty?null:collections[b.settings.collection];
+  if(b.settings.product) b.settings.product=empty?null:products[b.settings.product];
+  if(b.settings.products) b.settings.products=empty?[]:b.settings.products.map(h=>products[h]).filter(Boolean);
+  return {id:blockId,...b};
+ });
+ return {id,...section,settings,blocks};
+};
 const routes={root_url:'/',all_products_collection_url:'/collections/all',cart_url:'/cart',cart_add_url:'/cart/add',cart_change_url:'/cart/change',cart_update_url:'/cart/update',predictive_search_url:'/search/suggest',search_url:'/search',account_login_url:'/account/login',account_url:'/account'};
 const base={settings,collections,all_products:products,routes,request:{page_type:'index',path:'/',locale:{iso_code:'en'}},shop:{name:'ALMA by Reem Fragrances',url:'http://localhost:9293',customer_accounts_enabled:true,enabled_payment_types:[],policies:[]},cart:{item_count:0,items:[]},localization:{available_countries:[],available_languages:[],country:{iso_code:'AE',currency:{iso_code:'AED'}},language:{iso_code:'en'}},linklists:{},page_title:'ALMA by Reem Fragrances',canonical_url:'http://localhost:9293',powered_by_link:'',form:{},content_for_header:''};
 async function render(empty) {
