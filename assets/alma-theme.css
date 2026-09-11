@@ -14,8 +14,6 @@ html { overflow-x: hidden; }
   overflow-x: hidden;
 }
 .alma-theme h1, .alma-theme h2, .alma-theme h3 { letter-spacing: -.025em; }
-.alma-theme .announcement-bar { background: #f4f4f3; }
-.alma-theme .announcement-bar__message { min-height: 4rem; padding: 1rem 0; font-family: var(--font-body-family); font-size: 1.2rem; letter-spacing: 0; }
 .alma-theme .header-wrapper { background: #fff; }
 .alma-theme .header { max-width: none; padding-left: 3.2rem; padding-right: 3.2rem; }
 .alma-theme .header__heading-link { padding: .2rem; }
@@ -23,8 +21,8 @@ html { overflow-x: hidden; }
 .alma-theme .header__menu-item { padding: .8rem 1.35rem; color: var(--alma-ink); font-size: 1.35rem; }
 .alma-theme .header__icons { gap: .2rem; }
 .alma-theme .header-wrapper--border-bottom { border-color: var(--alma-line); }
-.alma-logo { position: relative; display: block; width: 5.4rem; aspect-ratio: 910 / 969; overflow: hidden; }
-.alma-logo img { position: absolute; top: -35.294%; left: -14.286%; width: 128.572%; max-width: none; height: auto; }
+.alma-logo { position: relative; display: block; width: 5.4rem; aspect-ratio: 891 / 943; overflow: hidden; }
+.alma-logo img { position: absolute; top: -31%; left: -7.86%; width: 118.41%; max-width: none; height: auto; }
 
 .alma-campaign { color: var(--alma-ink); background: #fff; }
 .alma-campaign__media { position: relative; height: min(56.25vw, 80.2rem); min-height: 56rem; overflow: hidden; background: #c4ad8e; }
@@ -127,7 +125,6 @@ html { overflow-x: hidden; }
   .alma-editorial__content { padding-left: 5rem; padding-right: 5rem; }
 }
 @media (max-width: 749px) {
-  .alma-theme .announcement-bar__message { min-height: 3.6rem; padding: .8rem 0; font-size: 1.15rem; }
   .alma-theme .header { min-height: 7.8rem; padding-left: 1.5rem; padding-right: 1.5rem; }
   .alma-campaign__media { height: 64rem; min-height: 0; }
   .alma-campaign__image { object-position: center; }
