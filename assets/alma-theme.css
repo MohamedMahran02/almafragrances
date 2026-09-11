@@ -36,7 +36,7 @@
 .alma-product__type { font-size: 1.3rem; margin: 0 0 .6rem; }
 .alma-product .price { font-size: 1.4rem; margin: .8rem 0 1rem; }
 .alma-theme .footer { border-top: 1px solid rgba(var(--color-foreground), .18); }
-@media (min-width: 1440px) { .alma-campaign__media { max-height: 80rem; } }
+@media (min-width: 1440px) { .alma-campaign__media { aspect-ratio: auto; height: min(55.556vw, 80rem); } }
 @media (max-width: 989px) {
   .alma-logo { width: 5rem; }
   .alma-theme .header { padding-top: 1rem; padding-bottom: 1rem; }

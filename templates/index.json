@@ -41,7 +41,7 @@
             "label": "All",
             "collection": "best-sellers",
             "products": [
-              "alma-hair-and-body-perfume",
+              "alma-perfume",
               "lolo-vanilla"
             ]
           }
@@ -57,7 +57,7 @@
           "type": "collection",
           "settings": {
             "label": "Solid Perfumes",
-            "collection": "alma-makhmaria-s-solid-perfume"
+            "collection": "alma-solids-مخمريات"
           }
         }
       },
