@@ -1,0 +1,1815 @@
+You are acting as both a senior luxury e-commerce art director and a senior Shopify theme engineer.
+
+Your task is to redesign and rebuild the existing Shopify storefront for:
+
+ALMA by Reem Fragrances
+Current website: https://www.almafragrances.com/
+
+This is a REAL production Shopify rebuild, not a concept landing page.
+
+The final result must feel like a highly art-directed fragrance/fashion editorial website while remaining fast, accessible, conversion-focused, maintainable through Shopify Theme Editor, and fully responsive.
+
+======================================================================
+01. PRIMARY OBJECTIVE
+======================================================================
+
+Rebuild the ALMA Shopify storefront while PRESERVING the existing Shopify store infrastructure.
+
+The redesign must NOT:
+
+- delete or recreate products unnecessarily
+- delete customers
+- delete orders
+- change existing product handles without a deliberate migration
+- break existing URLs
+- destroy SEO metadata
+- replace existing integrations unnecessarily
+- break Shopify Markets
+- break checkout
+- hard-code product/catalog information that Shopify already manages
+- convert the project into a separate headless commerce application unless the existing repository is already headless
+
+The preferred architecture is a custom Shopify Online Store 2.0 theme using:
+
+- Liquid
+- JSON templates
+- reusable sections
+- blocks
+- snippets
+- CSS
+- JavaScript
+- Shopify metafields/metaobjects where appropriate
+- Shopify Theme Editor settings
+- app blocks for third-party integrations wherever supported
+
+Do not rebuild Shopify's commerce infrastructure.
+
+Focus on rebuilding the storefront experience.
+
+Before making destructive changes, inspect the existing repository and understand its structure.
+
+======================================================================
+02. BRAND
+======================================================================
+
+Correct brand name:
+
+ALMA by Reem Fragrances
+
+IMPORTANT:
+Preserve the EXISTING ALMA logo and identity.
+
+Do NOT:
+- redesign the ALMA wordmark
+- approximate it with another font
+- redraw the logo
+- modify its proportions
+- change its letterforms
+
+If official logo assets already exist in the repository, use those exact assets.
+
+If official assets are missing, create a clearly documented placeholder reference rather than recreating the logo inaccurately.
+
+The visual character should be:
+
+Sophisticated
+Editorial
+Timeless
+Sensual
+Feminine
+Playful in controlled moments
+Fashion-led
+Premium
+Warm
+Expressive
+
+It must NOT feel like:
+
+- a generic beige beauty Shopify template
+- a sterile minimalist cosmetics website
+- a SaaS website
+- a generic luxury template
+- a collection of rounded cards
+- a pink feminine cliché
+- overly corporate
+- overly ornamental
+
+Think:
+
+fashion editorial × intimate femininity × perfume ritual × tactile objects
+
+ALMA should feel like a brand with a strong creative director.
+
+======================================================================
+03. CORE CREATIVE IDEA: LAYERING
+======================================================================
+
+Layering is the central ALMA concept.
+
+The fragrance ritual is:
+
+01 Lotion
+↓
+02 Solid Perfume
+↓
+03 Spray Perfume
+
+Do not treat this as just one informational section.
+
+Use LAYERING as a visual system throughout the website.
+
+Examples:
+
+- photography overlapping typography
+- products partially overlapping other products
+- layered panels
+- images moving across one another
+- compositions appearing to build progressively
+- recommended products appearing behind / below the primary scent
+- controlled transparency
+- stacked objects
+- editorial image crops
+- sequential scroll interactions
+
+The design should visually communicate that ALMA scents are meant to be composed rather than simply purchased individually.
+
+======================================================================
+04. PRODUCT CATEGORIES
+======================================================================
+
+Primary commercial categories:
+
+Spray Perfumes
+Solid Perfumes
+Lotions
+Dukhoon
+Solid Charms
+Layering & Kits
+
+Primary navigation architecture:
+
+SHOP
+  Spray Perfumes
+  Solid Perfumes
+  Lotions
+  Dukhoon
+  Solid Charms
+  Layering & Kits
+
+LAYERING
+
+GIFTING BY ALMA
+
+ABOUT
+
+Utility navigation:
+
+Search
+Account
+Bag
+
+Use the store's actual Shopify collections and URLs whenever possible.
+
+Do not create fake catalog content if existing data can be queried from Shopify.
+
+======================================================================
+05. COLOR SYSTEM
+======================================================================
+
+Create a restrained core ALMA palette.
+
+Foundation:
+
+Warm Ivory / Cream
+approximately:
+#EDECD7
+
+Deep ALMA Wine / Espresso
+approximately:
+#1D0004
+
+Black / Ink
+approximately:
+#0A0908
+
+Warm neutral secondary text.
+
+The core website must remain recognizable primarily through:
+
+ivory
+dark espresso/wine
+black
+typography
+ALMA imagery
+
+Then use campaign/scent accents selectively.
+
+Possible accent families:
+
+Blush pink
+Chrome / silver
+Pale pistachio
+Powder blue
+Lilac
+Burnt amber
+Deep cherry
+Muted warm red
+
+DO NOT turn the entire website pink.
+
+Accent colors should behave like campaign styling or scent personalities.
+
+Examples:
+
+Soft & Clean
+→ ivory + pale blue / pistachio
+
+Warm & Bold
+→ espresso + cherry / amber
+
+Arabic & Deep
+→ dark brown / black + smoke / metallic accents
+
+Solid Charms
+→ chrome + blush
+
+Dukhoon
+→ espresso + black + warm amber
+
+Keep contrast accessible.
+
+======================================================================
+06. TYPOGRAPHY
+======================================================================
+
+Use an editorial display typeface paired with a disciplined modern sans-serif.
+
+Preferred starting combination if licensing allows:
+
+Display:
+Instrument Serif
+
+UI / body:
+Instrument Sans
+
+If those fonts are unavailable, select high-quality alternatives with similar character.
+
+Do NOT approximate the ALMA LOGO with these fonts.
+
+Typography should be a major visual element.
+
+Use:
+
+- oversized editorial headlines
+- strong whitespace
+- occasional extreme scale
+- elegant line breaks
+- relatively small but readable UI typography
+- sophisticated image-caption relationships
+
+Avoid:
+
+- excessive all-caps tiny luxury text
+- huge amounts of letter spacing
+- meaningless eyebrow labels
+- badges/pills everywhere
+- decorative fonts for body copy
+
+Good display language can include simple emotional statements such as:
+
+SOFT.
+WARM.
+YOURS.
+
+or
+
+WEAR IT YOUR WAY.
+
+or
+
+YOUR SCENT,
+IN LAYERS.
+
+Do not invent excessive marketing copy throughout the store.
+
+======================================================================
+07. LAYOUT SYSTEM
+======================================================================
+
+The site should feel editorial rather than component-library driven.
+
+Avoid repeating:
+
+heading
+text
+3 cards
+heading
+text
+3 cards
+
+for every section.
+
+Create varied section rhythm using:
+
+- full-bleed imagery
+- asymmetric two-column layouts
+- oversized typography
+- portrait imagery
+- narrow typographic columns
+- horizontal product rails
+- stacked compositions
+- controlled overlaps
+- dark interruptions
+- open whitespace
+- image-led sections
+- magazine-like layouts
+
+Do NOT put every element inside a rounded card.
+
+Use border radius very sparingly.
+
+Avoid heavy shadows.
+
+Avoid excessive gradients.
+
+Use strong typography and imagery instead.
+
+======================================================================
+08. HEADER
+======================================================================
+
+Create a premium minimal header.
+
+Desktop:
+
+Left / central brand logo depending on composition.
+
+Navigation:
+Shop
+Layering
+Gifting by ALMA
+About
+
+Utilities:
+Search
+Account
+Bag
+
+SHOP should open an elegant mega-menu or editorial dropdown containing:
+
+Spray Perfumes
+Solid Perfumes
+Lotions
+Dukhoon
+Solid Charms
+Layering & Kits
+
+The menu should feel refined and lightweight.
+
+Potential inclusion:
+one campaign or category image inside the mega-menu if manageable through Shopify settings.
+
+Header behavior:
+
+- transparent over suitable hero images OR ivory background depending on homepage design
+- transitions to solid background after scrolling where required
+- no oversized header
+- clear hover/focus states
+- accessible keyboard navigation
+
+Mobile:
+clean full-screen or large drawer navigation.
+
+======================================================================
+09. HOMEPAGE
+======================================================================
+
+Build the homepage with approximately the following structure.
+
+Do not make every section visually identical.
+
+----------------------------------------------
+SECTION 1 — HERO
+----------------------------------------------
+
+Create an editorial campaign hero.
+
+Prefer a large cinematic photograph or campaign film when media is available.
+
+Requirements:
+
+- strong ALMA logo / brand presence
+- restrained copy
+- one strong CTA
+- premium imagery
+- no generic beige product-on-pedestal aesthetic
+- no unnecessary pill badges
+- no feature icon rows
+- no fake statistics
+
+Possible headline direction:
+
+Your scent, in layers.
+
+CTA:
+Discover ALMA
+
+The hero should immediately communicate:
+
+fragrance
+skin
+ritual
+femininity
+fashion
+
+Provide Shopify settings for:
+
+desktop image/video
+mobile image/video
+headline
+copy
+CTA
+alignment
+overlay intensity only if genuinely needed
+text color
+
+----------------------------------------------
+SECTION 2 — BEST SELLERS
+----------------------------------------------
+
+Use Shopify collection/product data.
+
+Create a horizontal product rail or refined editorial product listing.
+
+Product card requirements:
+
+- strong large product photography
+- product name
+- format/category
+- price
+- quick add where appropriate
+- hover alternate image on desktop if product has one
+- subtle interaction
+
+Do not over-frame each item.
+
+Product photography should dominate.
+
+----------------------------------------------
+SECTION 3 — SHOP BY SCENT
+----------------------------------------------
+
+Create an editorial section around existing ALMA scent-world concepts:
+
+Soft & Clean
+Warm & Bold
+Arabic & Deep
+
+These should feel like three different moods rather than generic category cards.
+
+Use large photography, typography and accent color.
+
+Potential headline:
+
+What are you in the mood for?
+
+Allow section blocks to be managed in Theme Editor.
+
+Each block:
+
+title
+description
+image
+collection link
+accent color
+text color
+
+----------------------------------------------
+SECTION 4 — THE ALMA RITUAL
+----------------------------------------------
+
+This is one of the signature website experiences.
+
+Communicate:
+
+01 Lotion
+02 Solid Perfume
+03 Perfume
+
+Desktop:
+create a controlled scroll interaction where products or imagery build on top of each other.
+
+Example behavior:
+
+Lotion enters.
+Solid perfume joins / overlaps.
+Perfume enters last.
+The final composition shows the completed ritual.
+
+Do NOT make the animation excessively complex or performance-heavy.
+
+Use CSS transforms and lightweight JS / IntersectionObserver.
+
+Respect prefers-reduced-motion.
+
+Mobile:
+turn this into a beautiful vertical sequence rather than forcing desktop parallax.
+
+Include concise explanations for each step.
+
+----------------------------------------------
+SECTION 5 — LAYER IT WITH
+----------------------------------------------
+
+Create a commercial layering module.
+
+Show one hero product and complementary recommended products.
+
+Structure approximately:
+
+YOUR SCENT
+
+primary product
+
+LAYER IT WITH
+
+recommended lotion
+recommended solid perfume
+recommended spray perfume if relevant
+
+Provide an:
+ADD THE RITUAL
+or
+ADD ALL TO BAG
+
+interaction where technically practical.
+
+This section must use actual Shopify product objects.
+
+Architect recommendations using product-reference metafields.
+
+Potential metafields:
+
+custom.layer_with_lotion
+custom.layer_with_solid
+custom.layer_with_perfume
+
+Use graceful fallbacks if metafields are empty.
+
+----------------------------------------------
+SECTION 6 — SHOP THE ALMA WARDROBE
+----------------------------------------------
+
+Show:
+
+Spray Perfumes
+Solid Perfumes
+Lotions
+Dukhoon
+Solid Charms
+Layering & Kits
+
+Do NOT create six identical square cards.
+
+Create editorial variation:
+
+portrait imagery
+narrow panels
+large horizontal images
+typography-led areas
+
+Maintain responsive usability.
+
+----------------------------------------------
+SECTION 7 — SOLID CHARMS
+----------------------------------------------
+
+Visually change the mood.
+
+Think:
+
+fragrance jewelry
+fashion accessory
+bag charm
+metal hardware
+chrome
+macro details
+playful femininity
+
+Use chrome / blush accents.
+
+Photography can show:
+
+handbags
+metal clips
+hands
+jewelry
+close product details
+
+Headline direction:
+
+SCENT,
+TO GO.
+
+or similar restrained messaging.
+
+CTA:
+Shop Solid Charms
+
+----------------------------------------------
+SECTION 8 — DUKHOON
+----------------------------------------------
+
+Create a dramatic darker section.
+
+Background:
+espresso / black.
+
+Use:
+
+smoke
+warm light
+texture
+ritual
+Arabic scent culture
+
+Do not make it cliché or overly ornamental.
+
+Let this section interrupt the soft visual rhythm of the site.
+
+Large product image.
+
+Large typography.
+
+CTA:
+Discover Dukhoon
+
+----------------------------------------------
+SECTION 9 — GIFTING BY ALMA
+----------------------------------------------
+
+This must be treated as a SERVICE and a brand experience, not merely "gift sets."
+
+Potential content hierarchy:
+
+Gifting by ALMA
+
+Personalized gifting created around the recipient, occasion or event.
+
+Possible service categories if content exists:
+
+Personalized Gifts
+Curated Sets
+Build Your Gift
+Gift Messages
+Occasion Gifting
+Corporate / Event Gifting
+
+Do NOT invent services that are not confirmed.
+
+Build the page architecture so these can be added.
+
+Homepage module should lead to a dedicated Gifting page.
+
+----------------------------------------------
+SECTION 10 — REVIEWS / COMMUNITY
+----------------------------------------------
+
+Create a sophisticated social proof section.
+
+Combine:
+
+reviews
+UGC imagery where available
+customer quotes
+
+Avoid a generic Shopify review-widget appearance when possible.
+
+Third-party review integrations should use app blocks / theme app extensions where supported.
+
+----------------------------------------------
+SECTION 11 — BRAND STORY
+----------------------------------------------
+
+Small editorial ALMA brand story.
+
+Large photography.
+
+Restrained copy.
+
+Link:
+About ALMA
+
+----------------------------------------------
+SECTION 12 — NEWSLETTER / FOOTER
+----------------------------------------------
+
+Keep newsletter treatment elegant and minimal.
+
+Footer should include:
+
+Shop
+Layering
+Gifting
+About
+Contact
+Shipping / Returns where existing
+Privacy
+Terms
+Social links
+Currency / language controls if Shopify Markets uses them
+
+Preserve existing legal destinations.
+
+======================================================================
+10. PRODUCT PAGE
+======================================================================
+
+Create a sensory editorial product template.
+
+FIRST VIEWPORT DESKTOP:
+
+approximately:
+
+58% media
+42% purchasing information
+
+LEFT:
+product gallery
+
+RIGHT:
+sticky purchase panel
+
+Information hierarchy:
+
+Product name
+Product category / format
+Price
+
+Short scent description
+
+Variant / size selection
+
+Add to Bag
+
+Mood
+example:
+Warm · Creamy · Addictive
+
+Key Notes
+
+Layer it with
+
+Keep checkout/purchase interaction extremely clear.
+
+The page must remain conversion-oriented.
+
+----------------------------------------------
+
+PRODUCT MEDIA
+
+Support:
+
+large images
+portrait images
+detail images
+application/lifestyle images
+product video if available
+
+Mobile:
+swipeable gallery.
+
+----------------------------------------------
+
+SCENT STORY
+
+After purchasing module, include editorial sections such as:
+
+THE FEELING
+
+large atmospheric image
+large text
+
+THE NOTES
+
+top / heart / base if data exists
+
+or simple key notes if that is how ALMA structures scents.
+
+Do not invent note pyramids when product data does not contain them.
+
+----------------------------------------------
+
+HOW TO WEAR IT
+
+Explain application.
+
+----------------------------------------------
+
+LAYER IT WITH
+
+Show complementary products using metafields.
+
+Strong visual hierarchy.
+
+----------------------------------------------
+
+COMPLETE THE RITUAL
+
+Potentially show:
+
+Lotion
+Solid Perfume
+Spray Perfume
+
+with an add-all interaction.
+
+----------------------------------------------
+
+REVIEWS
+
+Integrate existing review app where possible.
+
+----------------------------------------------
+
+YOU MAY ALSO LIKE
+
+Use Shopify product recommendations API or related collection logic.
+
+======================================================================
+11. COLLECTION PAGES
+======================================================================
+
+Create premium collection templates.
+
+Do not immediately begin with a plain Shopify grid.
+
+Include an editorial introduction.
+
+Collection hero may contain:
+
+title
+short mood description
+image
+accent color
+
+Examples:
+
+SOFT & CLEAN
+
+Bare skin.
+Fresh sheets.
+Quiet mornings.
+
+WARM & BOLD
+
+Deeper colors and richer image treatment.
+
+ARABIC & DEEP
+
+Dark, smoky, tactile atmosphere.
+
+Below the hero:
+
+filters
+sorting
+product grid
+
+Keep collection UX practical.
+
+Use Shopify's native filtering infrastructure when available.
+
+Desktop product grid:
+3–4 columns depending on viewport.
+
+Mobile:
+2 columns where practical.
+
+Product imagery must remain large.
+
+======================================================================
+12. LAYERING PAGE
+======================================================================
+
+Create a dedicated Layering experience.
+
+This page should be a major ALMA destination.
+
+Suggested structure:
+
+Hero:
+THE ART OF LAYERING
+
+Introduction.
+
+Then:
+
+STEP 01
+LOTION
+
+STEP 02
+SOLID PERFUME
+
+STEP 03
+PERFUME
+
+Follow with an interactive:
+
+BUILD YOUR ALMA
+
+Allow customer to choose:
+
+Lotion
++
+Solid Perfume
++
+Spray Perfume
+
+Display the selected products together.
+
+Show combined total.
+
+Allow:
+ADD THE RITUAL TO BAG
+
+If implementing full interactive selection becomes excessively complex within Shopify Liquid, progressively enhance with JS while keeping the products real Shopify variants and using Shopify Cart AJAX APIs.
+
+No fake checkout flows.
+
+Then include curated layering combinations managed through Shopify blocks/metaobjects.
+
+======================================================================
+13. GIFTING BY ALMA PAGE
+======================================================================
+
+Create a dedicated premium service page.
+
+Mood:
+
+intimate
+generous
+personal
+fashion editorial
+
+Use imagery of:
+
+boxes
+ribbons
+cards
+hands
+products
+close packaging details
+
+Potential structure:
+
+Hero
+
+THE ALMA WAY OF GIFTING
+
+PERSONALIZED GIFTING
+
+CURATED SETS
+
+GIFT FOR AN OCCASION
+
+BESPOKE / EVENT GIFTING
+only if client actually supports this
+
+FAQ
+
+Contact / enquiry CTA if custom gifting requires human service.
+
+All content should be manageable from Theme Editor or page metafields where appropriate.
+
+======================================================================
+14. ABOUT PAGE
+======================================================================
+
+Build an editorial About experience.
+
+Do not create a generic corporate About page.
+
+Use:
+
+brand story
+Reem
+ALMA philosophy
+fragrance ritual
+imagery
+large typography
+
+Support sections that client can populate later without code changes.
+
+======================================================================
+15. METAFIELDS
+======================================================================
+
+Design the PDP architecture to use structured Shopify metafields.
+
+Where possible, support:
+
+custom.scent_mood
+custom.scent_family
+custom.key_notes
+custom.top_notes
+custom.heart_notes
+custom.base_notes
+custom.intensity
+custom.how_to_use
+
+custom.layer_with_lotion
+custom.layer_with_solid
+custom.layer_with_perfume
+
+custom.campaign_accent
+custom.mood_image
+custom.ingredient_image
+
+custom.gifting_eligible
+
+Do NOT fail when these metafields are absent.
+
+Conditionally render sections only when usable data exists.
+
+If appropriate, document recommended metafield definitions in README or project documentation.
+
+Do not automatically create or modify live store metafields using APIs unless explicitly authorized.
+
+======================================================================
+16. CART
+======================================================================
+
+Use an elegant cart drawer.
+
+Cart drawer should support:
+
+product thumbnail
+name
+variant
+price
+quantity
+remove
+
+Subtotal
+
+Checkout button
+
+Potential ALMA-specific enhancement:
+
+if someone adds only a perfume and appropriate layering products exist, show a restrained:
+
+Layer it with
+
+recommendation.
+
+Do not overwhelm checkout intent with upsells.
+
+Use Shopify AJAX Cart APIs properly.
+
+Provide loading/error states.
+
+======================================================================
+17. SEARCH
+======================================================================
+
+Create an elegant predictive search experience.
+
+Search:
+
+products
+collections where appropriate
+
+Use Shopify predictive search.
+
+Visual results should show:
+
+image
+name
+type
+price
+
+Mobile should be especially easy.
+
+======================================================================
+18. MOBILE EXPERIENCE
+======================================================================
+
+Mobile is critical.
+
+Design MOBILE intentionally.
+
+Do not simply shrink desktop.
+
+Requirements:
+
+- fast initial load
+- clear navigation
+- large tap targets
+- swipeable product imagery
+- readable typography
+- minimal layout shift
+- no accidental horizontal overflow
+- sticky PDP Add to Bag when useful
+- quick access to cart
+- layering flow becomes vertical
+- animations simplified
+- image sizes optimized
+- category rails swipe naturally
+- menus easy to dismiss
+- filters usable with one hand
+
+Test at approximately:
+
+390 × 844
+430 × 932
+
+and smaller devices.
+
+======================================================================
+19. MOTION
+======================================================================
+
+Use motion with discipline.
+
+90% of animations should be subtle.
+
+Preferred effects:
+
+masked image reveals
+very slight media scale
+vertical text reveal
+fade/translate
+smooth drawer transitions
+layer stacking
+subtle horizontal marquee ONLY when editorially justified
+
+Signature animation:
+
+THE ALMA RITUAL layering sequence.
+
+Avoid:
+
+cursor gimmicks
+floating particle fields
+excessive parallax
+WebGL for no reason
+glowing gradients
+3D product spinning by default
+constant movement
+animations that delay shopping
+
+Use:
+
+IntersectionObserver
+CSS transforms
+opacity
+requestAnimationFrame only where necessary
+
+Respect:
+prefers-reduced-motion.
+
+======================================================================
+20. IMAGE HANDLING
+======================================================================
+
+Use Shopify image_url / image_tag and responsive srcsets.
+
+Avoid hard-coded giant images.
+
+Set:
+
+width
+height
+aspect ratio
+
+where possible to reduce CLS.
+
+Use lazy loading below the fold.
+
+Do not lazy-load the critical hero image if that damages LCP.
+
+Create separate mobile image settings when crop differences matter.
+
+Do not add visual color overlays unless required for readability.
+
+If an image works naturally, leave it untouched.
+
+======================================================================
+21. PERFORMANCE
+======================================================================
+
+Performance is a core requirement.
+
+Prioritize:
+
+fast LCP
+low CLS
+low JS execution
+responsive images
+minimal dependencies
+native CSS
+progressive enhancement
+
+Do NOT bring in a huge animation/UI framework simply to create basic interactions.
+
+Prefer:
+
+native CSS
+small vanilla JS modules
+Shopify-native behavior
+
+Lazy load noncritical assets.
+
+Avoid loading scripts globally when needed on only one template.
+
+======================================================================
+22. ACCESSIBILITY
+======================================================================
+
+Use semantic HTML.
+
+Ensure:
+
+keyboard-accessible menus
+focus states
+correct buttons vs links
+alt text support
+accessible accordions
+accessible cart drawer
+accessible modal behavior
+form labels
+sufficient contrast
+reduced motion support
+ARIA only where appropriate
+
+Do not sacrifice accessibility for editorial design.
+
+======================================================================
+23. SEO / MIGRATION SAFETY
+======================================================================
+
+This is a rebuild of an existing store.
+
+SEO preservation is critical.
+
+DO NOT casually change existing:
+
+product handles
+collection handles
+page handles
+
+Preserve:
+
+canonical URLs
+product structured information
+title tags
+meta descriptions
+social sharing metadata
+existing URLs
+
+If a URL absolutely must change:
+document it and specify the required Shopify 301 redirect.
+
+Maintain semantic heading structure.
+
+Each page should have one appropriate H1.
+
+Do not add invisible keyword spam.
+
+Do not remove content purely because the new design uses less visible copy without considering SEO implications.
+
+======================================================================
+24. EXISTING SHOPIFY DATA
+======================================================================
+
+Treat Shopify as the source of truth.
+
+Products:
+read existing product objects.
+
+Customers:
+do not touch.
+
+Orders:
+do not touch.
+
+Collections:
+reuse existing collections wherever possible.
+
+Navigation:
+reuse Shopify menus or map new menus in Theme Editor.
+
+Pages:
+reuse existing page records where appropriate.
+
+Integrations:
+inspect before modifying or removing existing snippets/scripts.
+
+Never wipe existing data.
+
+======================================================================
+25. INTERNATIONALIZATION
+======================================================================
+
+Build the theme ready for translation.
+
+Do NOT hard-code UI strings across Liquid templates.
+
+Use Shopify locale JSON files for reusable theme UI language.
+
+Support RTL styling architecture so Arabic can be added properly.
+
+Use:
+
+html[dir="rtl"]
+
+and logical CSS properties where practical:
+
+margin-inline
+padding-inline
+inset-inline
+text-align:start
+
+Do not mix Arabic and English in a structurally broken layout.
+
+If the current store is English-only, maintain English while leaving the theme translation-ready.
+
+======================================================================
+26. DESIGN TOKENS
+======================================================================
+
+Create a central token system using CSS custom properties.
+
+Example categories:
+
+--color-ivory
+--color-espresso
+--color-ink
+--color-muted
+--color-border
+--color-accent
+
+--font-display
+--font-body
+
+--space-1
+--space-2
+...
+--space-10
+
+--container
+--container-wide
+
+--header-height
+
+--transition-fast
+--transition-medium
+
+Use fluid typography using clamp() where suitable.
+
+Example conceptual scale:
+
+Display XL:
+clamp(4rem, 10vw, 10rem)
+
+Display:
+clamp(3rem, 7vw, 7rem)
+
+H1:
+clamp(2.8rem, 5vw, 5.5rem)
+
+H2:
+clamp(2rem, 4vw, 4rem)
+
+Body large:
+1.25rem
+
+Body:
+1rem
+
+Do not blindly use these numbers if they visually fail.
+
+======================================================================
+27. SHOPIFY THEME EDITOR
+======================================================================
+
+The marketing team must be able to operate the website.
+
+Create proper schema settings for custom sections.
+
+Common settings should support:
+
+heading
+body
+images
+mobile images
+video
+buttons
+links
+alignment
+theme
+accent color
+background
+product
+collection
+spacing
+
+Do not create a theme where every homepage change requires editing Liquid.
+
+Use blocks for repeatable content.
+
+Use presets where useful.
+
+======================================================================
+28. FILE ARCHITECTURE
+======================================================================
+
+Keep implementation modular.
+
+Expected general Shopify structure:
+
+layout/
+  theme.liquid
+
+templates/
+  index.json
+  product.json
+  collection.json
+  page.json
+  search.json
+  etc.
+
+sections/
+  alma-hero.liquid
+  alma-best-sellers.liquid
+  alma-scent-worlds.liquid
+  alma-ritual.liquid
+  alma-layering.liquid
+  alma-category-editorial.liquid
+  alma-charms.liquid
+  alma-dukhoon.liquid
+  alma-gifting.liquid
+  alma-reviews.liquid
+  alma-story.liquid
+  header.liquid
+  footer.liquid
+  etc.
+
+snippets/
+  product-card.liquid
+  price.liquid
+  icon-*.liquid
+  responsive-image.liquid
+  layering-product.liquid
+  etc.
+
+assets/
+  alma-base.css
+  alma-components.css
+  alma-product.css
+  alma-motion.js
+  cart-drawer.js
+  predictive-search.js
+  etc.
+
+Do not create unnecessary fragmentation.
+
+Follow the current repository conventions if an existing theme architecture already exists.
+
+======================================================================
+29. CSS QUALITY
+======================================================================
+
+Write clean production CSS.
+
+Use:
+
+CSS custom properties
+grid
+flexbox
+logical properties
+clamp()
+aspect-ratio
+object-fit
+container-aware layouts where useful
+
+Avoid excessive !important.
+
+Avoid enormous selector nesting.
+
+Avoid copying similar styles repeatedly.
+
+Use reusable patterns.
+
+Do not use Tailwind unless this repository already uses Tailwind and it is appropriate.
+
+======================================================================
+30. JAVASCRIPT QUALITY
+======================================================================
+
+Use JavaScript only for behavior that needs JavaScript.
+
+Build small modules/classes/components.
+
+Handle:
+
+section re-rendering in Shopify Theme Editor
+DOM lifecycle
+loading states
+errors
+
+Avoid global pollution.
+
+Do not attach huge numbers of unnecessary event listeners.
+
+Do not bring React/Vue into a standard Shopify theme for small storefront interactions.
+
+======================================================================
+31. EMPTY / INCOMPLETE CONTENT
+======================================================================
+
+Do not invent fake real-world product claims.
+
+If a section requires data not present in Shopify:
+
+- create the architecture
+- provide Theme Editor settings or metafield support
+- gracefully hide unavailable fields
+- use clear developer placeholders only when absolutely necessary
+
+Never display Lorem Ipsum in the production storefront.
+
+======================================================================
+32. VISUAL RESTRICTIONS
+======================================================================
+
+Do NOT create:
+
+generic cream cards
+floating rounded rectangles everywhere
+fake glassmorphism
+purple/blue startup gradients
+giant button pills
+generic icon feature grids
+meaningless badges
+fake "award winning" claims
+fake press logos
+fake reviews
+fake user numbers
+fake sustainability claims
+fake fragrance notes
+random star ratings
+AI-generated statistics
+
+Do not add content simply to fill whitespace.
+
+Whitespace is allowed.
+
+======================================================================
+33. DESIGN DETAILS
+======================================================================
+
+Buttons:
+
+Prefer simple editorial buttons.
+
+Possible styles:
+
+dark rectangular button
+text link + arrow
+thin outline button
+
+Moderate radius or square geometry.
+
+Avoid exaggerated pill buttons.
+
+Product cards:
+
+Mostly open / frameless.
+
+Photography first.
+
+Typography secondary.
+
+Hover interactions subtle.
+
+Section headings:
+
+Allow large typography.
+
+Occasionally align headings asymmetrically.
+
+Use horizontal rule / fine line details sparingly.
+
+Chrome elements:
+
+Very thin borders.
+
+No heavy UI chrome.
+
+======================================================================
+34. FIRST DEVELOPMENT PASS
+======================================================================
+
+Start by doing the following:
+
+1. Inspect the repository.
+2. Identify the current Shopify theme architecture.
+3. Identify reusable functionality already present.
+4. Identify app integrations and custom Liquid that must remain.
+5. Identify existing header, footer, product form, cart and search implementation.
+6. Identify existing brand assets.
+7. Identify existing locales.
+8. Identify existing product/collection templates.
+9. Do NOT delete functional commerce code without understanding it.
+10. Create an implementation plan.
+
+Then execute the plan.
+
+Do NOT stop after merely describing the plan.
+
+======================================================================
+35. IMPLEMENTATION ORDER
+======================================================================
+
+Build in this order:
+
+Foundation
+→ typography / tokens
+→ header
+→ homepage hero
+→ homepage sections
+→ product cards
+→ product page
+→ collection pages
+→ layering page
+→ gifting page
+→ about
+→ cart
+→ search
+→ mobile
+→ motion
+→ accessibility
+→ performance
+→ SEO QA
+
+After each major surface, visually inspect it before moving on.
+
+======================================================================
+36. QA
+======================================================================
+
+Before considering the rebuild complete, run proper QA.
+
+Verify:
+
+DESKTOP
+1440px
+1280px
+1024px
+
+MOBILE
+430px
+390px
+375px
+
+Check:
+
+header
+navigation
+mega-menu
+search
+cart drawer
+quick add
+variant selection
+product form
+product recommendations
+layering metafields
+add-all layering action
+filters
+sorting
+mobile menu
+footer
+newsletter
+forms
+404
+empty cart
+out-of-stock products
+sale products
+products with multiple variants
+products missing optional metafields
+long product names
+RTL readiness
+keyboard navigation
+reduced motion
+image loading
+
+Run Theme Check if available.
+
+Resolve Liquid errors.
+
+Resolve JS console errors.
+
+Resolve visible overflow.
+
+Resolve accessibility issues.
+
+======================================================================
+37. VISUAL QA
+======================================================================
+
+Do not judge the design only from code.
+
+Actually run the Shopify theme and inspect it in the browser.
+
+Ask:
+
+Does this look like a high-end fragrance/fashion brand?
+
+Or does it look like a Shopify template?
+
+If it looks templated, keep refining.
+
+Check specifically:
+
+- typography scale
+- whitespace
+- image crops
+- image quality
+- section rhythm
+- product card density
+- header scale
+- accent color usage
+- editorial asymmetry
+- mobile composition
+
+The visual quality target is agency-level.
+
+======================================================================
+38. PERFORMANCE QA
+======================================================================
+
+Audit for:
+
+large images
+unused JS
+render blocking code
+layout shifts
+huge DOM trees
+unnecessary apps/scripts
+slow hero loading
+
+Optimize where possible without breaking required integrations.
+
+======================================================================
+39. FINAL DELIVERABLE
+======================================================================
+
+At completion provide:
+
+1. Summary of architecture.
+2. Files created.
+3. Files substantially modified.
+4. Existing functionality intentionally preserved.
+5. Any integrations that need manual verification.
+6. Shopify metafields recommended/required.
+7. Theme Editor configuration instructions.
+8. Any product data still required from the client.
+9. Any URL changes and redirects required.
+10. Any known limitations.
+11. QA performed.
+12. Remaining recommended improvements.
+
+======================================================================
+40. MOST IMPORTANT CREATIVE TEST
+======================================================================
+
+ALMA should NOT look like:
+
+"premium perfume website template."
+
+It should look specifically like:
+
+ALMA by Reem Fragrances.
+
+The design's recognizable ingredients should be:
+
+ALMA typography
+warm ivory
+deep espresso/wine
+fashion-editorial photography
+playful feminine accents
+strong scent-specific campaign colors
+visual layering
+the Lotion → Solid → Perfume ritual
+Solid Charms treated like fragrance jewelry
+Dukhoon as a deep atmospheric interruption
+Gifting treated as a bespoke ALMA service
+
+Keep commerce easy.
+
+Keep the art direction memorable.
+
+Do not sacrifice usability for visual experimentation.
+
+Build the complete production-quality Shopify storefront.

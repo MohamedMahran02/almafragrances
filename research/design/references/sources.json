@@ -1,0 +1,37 @@
+[
+  {
+    "handle": "alma-hair-and-body-perfume",
+    "title": "Alma perfume",
+    "price": "180.00",
+    "url": "https://cdn.shopify.com/s/files/1/0859/6150/7108/files/D17B22B5-DD64-4133-BDB0-79778A5D35A4.jpg?v=1731399586",
+    "path": "research/design/references/alma-hair-and-body-perfume.jpg"
+  },
+  {
+    "handle": "alma-arabia-hand-and-body-lotion",
+    "title": "Alma hands and body lotion",
+    "price": "99.00",
+    "url": "https://cdn.shopify.com/s/files/1/0859/6150/7108/files/4CF39690-DF1F-4DC3-83EA-37DFA8A404F5.jpg?v=1742295154",
+    "path": "research/design/references/alma-arabia-hand-and-body-lotion.jpg"
+  },
+  {
+    "handle": "lolo-vanilla",
+    "title": "lolo Vanilla",
+    "price": "240.00",
+    "url": "https://cdn.shopify.com/s/files/1/0859/6150/7108/files/3DA549B5-3E70-4E04-B11D-74B662076C54.png?v=1747310168",
+    "path": "research/design/references/lolo-vanilla.png"
+  },
+  {
+    "handle": "alma-charm-collection",
+    "title": "Alma charm collection",
+    "price": "99.00",
+    "url": "https://cdn.shopify.com/s/files/1/0859/6150/7108/files/IMG-1135.png?v=1783060001",
+    "path": "research/design/references/alma-charm-collection.png"
+  },
+  {
+    "handle": "alma-dokhon",
+    "title": "Alma Dokhon",
+    "price": "120.00",
+    "url": "https://cdn.shopify.com/s/files/1/0859/6150/7108/files/4D4CD465-868B-4A60-893A-647C646DAFE5.jpg?v=1786719284",
+    "path": "research/design/references/alma-dokhon.jpg"
+  }
+]

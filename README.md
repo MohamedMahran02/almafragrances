@@ -15,18 +15,24 @@ This repository is the shared project memory. Another team should be able to con
 | Original archive | `E:\Downloads\theme-export-shopify-main.zip`; extracted files are committed, so this ZIP is not required to continue |
 | Theme baseline commit | `d35f787` — 360 theme files imported without changing their bytes |
 | Custom storefront implementation | No Alma-specific design, content, or functional edits have been made yet |
-| Latest work | Brand intake, packaging review, and public storefront catalog/SEO snapshot; see `research/brand/BRIEF.md` and `research/storefront/README.md` |
+| Latest work | Full client strategy archived, three homepage mockups generated, and implementation plan recorded in `research/design/PLAN.md` |
 | Shopify connection | Public URL is known; the repository-to-theme connection and linked theme ID remain unverified |
 | Shopify preview/publication | Not verified; a successful GitHub push does not establish live publication |
-| Next implementation | Await the strategy/design prompt, show a UI mockup image, obtain user approval, then implement the approved design within the theme |
+| Next implementation | Await user selection/refinement of displayed mockup 1, 2, or 3; record approval before implementing the theme |
 
 ## Brand direction and design approval
 
-The correct client name is **Alma by reem fragrances**. Preserve the existing logo. The requested direction is sophisticated, editorial, timeless, premium, and playfully feminine: warm ivory/cream, espresso/dark brown, and black, with blush pink/chrome/campaign accents. Highlight **Lotion → Solid Perfume → Perfume** and `Layer it with` recommendations. Personalized **Gifting by ALMA** needs a dedicated section.
+The correct client name is **ALMA by Reem Fragrances**, as capitalized in the detailed strategy. Preserve the existing logo. The requested direction is sophisticated, editorial, timeless, premium, and playfully feminine: warm ivory/cream, espresso/dark brown, and black, with blush pink/chrome/campaign accents. Highlight **Lotion → Solid Perfume → Perfume** and `Layer it with` recommendations. Personalized **Gifting by ALMA** needs a dedicated section.
 
-Read [the full client brief](research/brand/BRIEF.md) and [the catalog capture notes](research/storefront/README.md) before design work. Product categories: Spray perfumes, Solid perfumes, Lotions, Dukhoon, Solid charms, Layering & kits. Homepage content priorities include best sellers, category/scent shopping, layering, gifting, Dukhon, and reviews. The exact proposed new sequence awaits the design prompt and approval; the imported theme sequence documented below remains unchanged.
+Read [the client brief](research/brand/BRIEF.md), [full supplied strategy](research/design/CLIENT-STRATEGY.txt), [design/implementation plan](research/design/PLAN.md), and [catalog capture notes](research/storefront/README.md). Product categories: Spray Perfumes, Solid Perfumes, Lotions, Dukhoon, Solid Charms, Layering & Kits. The new strategy proposes an expanded homepage; the imported theme sequence documented below remains unchanged until approved implementation.
 
-**User-required gate:** receive the strategy/design prompt, show a UI mockup image for approval, and implement only after approval. No mockup or design has been approved yet. Research/documentation are permitted before that gate.
+**User-required gate:** the strategy has been received and three mockups shown. Implement only after user selection/approval; no option has been approved yet. Research/documentation are permitted before that gate.
+
+### Visual options and proposed sequence
+
+The displayed order is preserved as [option 1](research/design/previews/option-1.png), [option 2](research/design/previews/option-2.png), and [option 3](research/design/previews/option-3.png). These are generated homepage design mockups, not screenshots of a working theme. The generation prompts, original image references, and an actual existing-site screenshot are saved under `research/design/`. Do not treat generated logos, labels, illustrative packaging, or captions as authoritative assets/content; use the original logo and actual Shopify media in implementation. In particular, option 3's metallic compact is not an existing ALMA product and must be replaced with the actual solid charm tube.
+
+Proposed new homepage: **Hero → Best sellers → Scent worlds → ALMA ritual → Layer it with → Category wardrobe → Solid Charms → Dukhoon → Gifting by ALMA → Reviews/community → Brand story → Newsletter/footer**. The mockups show the opening four areas only; all remaining areas and other pages are in the plan. No mobile, PDP, cart, or functional QA has been completed for the proposed design. Record the exact selected reference and any refinements before coding.
 
 Existing website: https://www.almafragrances.com/. Preserve products, customers, orders, URLs/SEO, and integrations. The public snapshot contains 23 products, 189 variants, 42 image references, 11 collections, product-page SEO metadata, and 40 sitemap URLs. All 23 sitemap product URLs are covered. Private store records and integrations require authorized Shopify access; this is not a completed migration.
 
@@ -80,6 +86,7 @@ The theme lives at the repository root. Do not wrap it in a `theme-export-shopif
 | `README.md` | Current state, structure, workflow, and change history | — |
 | `research/brand/` | Client brief and original packaging PDF reference | — |
 | `research/storefront/` | Public catalog, collection memberships, SEO metadata, URL inventory, and capture notes | — |
+| `research/design/` | User's full strategy, production plan, source reference images, and three visual mockups with generation prompts | — |
 
 The baseline totals **360 theme files**. These are historical import counts; describe structural additions/removals when they occur.
 
@@ -202,7 +209,7 @@ Record the store domain, linked theme/branch, and verified preview/publication s
 - Imported source has pre-existing whitespace warnings from `git diff --check`. These were preserved to keep the supplied theme unchanged; documentation whitespace checks passed.
 - No Shopify Theme Check run, authenticated storefront preview, browser interaction test, or publication verification has been recorded. Structural checks do not establish those results.
 - No package/build/test setup is committed. This theme uses Liquid, JSON, CSS, and JavaScript; do not assume React/Next.js or an npm script exists.
-- Brand direction, the original two-page `Bag.pdf`, the existing storefront URL, and a public catalog snapshot are now available under `research/`. Shopify admin access, private records/integrations, and the promised strategy/design prompt remain outstanding.
+- Brand direction, original `Bag.pdf`, full strategy, existing-site screenshot, public catalog, production plan, and visual mockups are available under `research/`. Visual selection, Shopify admin access, complete live integration verification, and final content/assets remain outstanding. A public browser reference capture is not functional QA of the new design.
 
 ## Change log
 
@@ -238,6 +245,14 @@ Record the store domain, linked theme/branch, and verified preview/publication s
 - Sequence: theme files and current section/block order unchanged; future proposed structure must be reviewed and approved.
 - Next: receive the promised strategy/design prompt, create a UI mockup for approval, and verify Shopify access before any store migration/integration work.
 
+### 2026-09-11 — Strategy and visual selection previews
+
+- Request: follow the full luxury Shopify strategy while preserving the earlier requirement to approve a UI mockup before implementation.
+- Work: archived the 40-part user prompt in `research/design/CLIENT-STRATEGY.txt`; added `PLAN.md`, three generated previews and their exact prompts, current-site screenshot, official logo-page render, and five original product reference images with source URLs. Updated this README, `AGENTS.md`, and the brand brief with the current approval state.
+- Sequence: proposed twelve homepage areas recorded separately from the unchanged imported theme. No theme files or live Shopify records were changed.
+- Validation: inspected the current public page, original logo/product references, and all three generated mockups. Inspected existing commerce/app-block integration points in source. Documented generative packaging/logo/copy limitations; verified source prompt copy and documentation-only/theme-unchanged scope.
+- Remaining: user must select/refine a visual option. Follow the staged production plan after approval; mobile/PDP/cart/all remaining pages, real Shopify rendering and full production QA remain pending.
+
 ## Prompt for another Codex account or team
 
 Copy this prompt and replace its final placeholder with the requested change:
@@ -249,7 +264,7 @@ First read AGENTS.md and the entire README.md. Inspect current files and recent 
 
 The approved base is the supplied Shopify Dawn 15.5.0 theme imported in d35f787. Make edits within this theme. Preserve its layout, section IDs, section sequence, and block order unless I explicitly request changes to them. The baseline homepage is announcement bar, header, image banner, featured products, then footer with email subscription. Read the README for the other page sequences and any later approved changes.
 
-Read research/brand/BRIEF.md and research/storefront/README.md. The correct name is Alma by reem fragrances. The user requires a UI mockup image for approval before implementing the design, after receiving their strategy/design prompt. No mockup has been approved yet. Preserve the existing logo and store records/URLs/integrations. The public catalog snapshot is reference material, not a completed Shopify migration.
+Read research/brand/BRIEF.md, research/storefront/README.md, research/design/CLIENT-STRATEGY.txt, and research/design/PLAN.md. The correct name is ALMA by Reem Fragrances. Three mockups are saved in research/design/previews/option-1.png through option-3.png in displayed order. No option has been selected/approved yet. Obtain selection or refinements before implementing; record the exact approved reference. Preserve original logo/product assets and store records/URLs/integrations. The public catalog snapshot is reference, not a completed migration. The strategy proposes twelve homepage areas, with other pages and QA detailed in the plan; the current theme remains unchanged.
 
 Check the branch, remote, working tree, and your GitHub push access. Pull before editing and preserve existing work, including other teams' and Shopify-generated commits. Use Context7 docs before package/framework/API-dependent implementation or setup. Implement my requested change and run appropriate checks; state what you could not verify.
 

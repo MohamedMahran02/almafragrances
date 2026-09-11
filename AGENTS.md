@@ -28,7 +28,7 @@
 
 ## Mandatory shared handoff for every account and team
 
-- Design approval gate: the user will provide a strategy/design prompt, then must see and approve a UI mockup image before theme design implementation. Intake research and documentation are authorized; do not implement an unapproved design. Read `research/brand/BRIEF.md` for the client direction.
+- Design approval gate: the strategy is saved in `research/design/CLIENT-STRATEGY.txt`; three visual options and the production plan are recorded in `research/design/PLAN.md`. The user must select/approve a UI mockup before theme design implementation. Research/documentation are authorized. Read `research/brand/BRIEF.md` for client direction. A displayed mockup is not automatically approved.
 
 - Read `AGENTS.md` and the entire `README.md` before every edit. Confirm the documented state against the files and recent Git history.
 - Update `README.md` after every edit, including implementation, configuration, documentation, and workflow changes. Include the README update in the same commit as the change.

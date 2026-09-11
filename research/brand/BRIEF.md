@@ -4,11 +4,11 @@ Source: user-provided brand direction on 2026-09-11 and the supplied `Bag.pdf`. 
 
 ## Workflow and approval
 
-The user will send a separate brand strategy, design structure, and implementation-steps prompt. Receive that prompt before designing. Then show a UI mockup image for approval before implementing the design in the Shopify theme. No mockup has been created or approved yet. Continue using the imported Dawn theme; any proposed sequence changes must be reviewed in the mockup and approved before implementation.
+The full strategy prompt was supplied on 2026-09-11 and is saved in `../design/CLIENT-STRATEGY.txt`. Three homepage mockups are saved in `../design/previews/`, with the selection mapping and production plan in `../design/PLAN.md`. No option is selected or approved. Obtain user approval before implementing the design in the supplied Dawn theme.
 
 ## Identity
 
-- Correct name supplied by the user: **Alma by reem fragrances**.
+- Correct name and capitalization in the detailed strategy: **ALMA by Reem Fragrances**.
 - Keep the existing ALMA logo and identity; elevate the presentation without redesigning the identity.
 - `Bag.pdf` has two pages. Page 1 shows a large flowing ornamental mark on a pale cream background. Page 2 shows the lowercase serif `alma` wordmark with the source tagline `Body Fragrances by Reem.` beneath it. The artwork appears very dark burgundy/brown on cream. These are visual observations, not measured brand color specifications.
 - The PDF tagline is existing artwork; it does not override the user's supplied business name. Preserve original logo artwork instead of approximating it with a new font or a generated replacement.
@@ -44,4 +44,4 @@ Desired main sections: Perfumes, Solid Perfumes, Lotions, Charms, Dukhon, Layeri
 
 ## Next handoff
 
-Await the strategy/design prompt, produce the requested UI preview for approval, and only then implement approved changes. No theme code or live Shopify data was changed during this intake.
+Await selection/refinement of the three displayed mockups, record the exact approved image, then implement approved changes. No theme code or live Shopify data has changed during intake/design exploration. Read the detailed strategy and plan for the proposed expanded homepage sequence.
