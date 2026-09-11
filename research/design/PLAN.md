@@ -1,5 +1,7 @@
 # ALMA design selection and implementation plan
 
+Implementation status update: the user authorized starting the build in the existing GitHub Shopify theme and resetting the README history. The exact Diptyque option number has not been specified; a selection question is pending. Do not ask for build authorization again. This update supersedes the historical approval statements below.
+
 Status: current exploration uses Diptyque and the newly supplied icon. Read DIPTYQUE-REFERENCE.md for latest option mapping, exact identity decision, source captures and limitations. The supplied icon is authorized as website logo; none of the complete UI mockups is approved. Snif is superseded for current exploration; original designs/hybrid are rejected history. No theme implementation started.
 
 ## Rejected combined candidate (history)

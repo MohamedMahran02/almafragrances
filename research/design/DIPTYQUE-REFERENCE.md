@@ -1,5 +1,7 @@
 # Diptyque reference and website logo decision — 2026-09-11
 
+Implementation status update: the user authorized starting the build directly in the supplied GitHub Shopify theme. The exact option number is unresolved; a layout-selection question is pending. This authorization supersedes older approval statements below. The README has been reset for implementation at the user's request.
+
 Latest request: explore https://diptyqueparis.com/fr-fr as the design reference and change the website logo to the user's supplied `E:/Alma Fragrances branding/logo icon.png`. This is the current exploration; the preceding Snif set remains unapproved historical reference. The user did not approve theme implementation by providing this reference.
 
 ## Approved identity asset

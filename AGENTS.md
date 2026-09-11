@@ -29,7 +29,7 @@
 ## Latest identity and design reference
 
 - The user explicitly selected `research/brand/logo-icon.png` as the website logo on 2026-09-11, replacing the lowercase header wordmark. Preserve the exact supplied icon artwork; do not redraw it or redesign existing product packaging. This decision supersedes conflicting identity language in older briefs/prompts.
-- The latest visual exploration uses https://diptyqueparis.com/fr-fr. Current option mapping and source captures are in `research/design/DIPTYQUE-REFERENCE.md`. Earlier Snif options are unapproved history. The logo choice is authorized; full UI approval is still pending.
+- The latest visual exploration uses https://diptyqueparis.com/fr-fr. Current option mapping and source captures are in `research/design/DIPTYQUE-REFERENCE.md`. Earlier Snif options are unapproved history. The user authorized starting the build; the exact Diptyque option number remains unresolved. Obtain that layout choice without re-requesting build authorization. The logo choice is authorized.
 
 ## Mandatory shared handoff for every account and team
 
@@ -38,7 +38,7 @@
 - Read `AGENTS.md` and the entire `README.md` before every edit. Confirm the documented state against the files and recent Git history.
 - Update `README.md` after every edit, including implementation, configuration, documentation, and workflow changes. Include the README update in the same commit as the change.
 - Keep current status, structure, exact section/block sequences, implementation decisions, validation results, limitations, and next steps accurate. Append a dated change-log entry covering the request, what changed, why, affected files, checks, and remaining work.
-- Preserve previous log entries and other teams' updates. Reconcile concurrent code and README edits without overwriting unrelated work.
+- The user explicitly reset the README on 2026-09-11: remove previous update entries and start a fresh implementation handoff. Preserve new entries from this reset onward and reconcile concurrent changes without overwriting unrelated work. Earlier history remains in Git; do not restore the removed log into the README.
 - Before handing off incomplete work, document what is done, uncommitted or unpushed, blocked, and still required. Distinguish verified local/GitHub results from unverified Shopify connection, preview, or publication.
 - Keep the reusable continuation prompt current so every account/team can resume from the repository alone without prior chat history or the original ZIP.
 - Record actual user decisions and verified results; do not invent requirements, tests, store details, or deployment status. Never include credentials or tokens.
