@@ -12,7 +12,7 @@ Rendered target: the local Liquid fixture at `http://127.0.0.1:9293`, checked at
 
 | Comparison point | Live reference | ALMA result |
 | --- | --- | --- |
-| Header | pale announcement, centered identity, utilities, shallow navigation row | intentional user override: no announcement, supplied transparent ALMA icon on the left, search/account/cart utilities on the right, and six real categories |
+| Header | pale announcement, centered identity, utilities, shallow navigation row | intentional user override: no announcement; enlarged supplied transparent ALMA icon at left; six real category tabs centered in the same desktop bar; search/account/cart at right |
 | Hero | full-width cinematic media, approximately 56vw/802px tall, centered bordered CTA | full-width ALMA campaign at the same proportion with centered rectangular CTA |
 | Introduction | white centered band, restrained 32px serif title, narrow copy and underlined link | matching white band, scale, centered measure and link treatment |
 | Product rails | pale-gray surface, four visible products, centered tabs, small typography and progress line | two four-product ALMA rails using live products/prices and the same visual hierarchy |
@@ -31,6 +31,7 @@ Rendered target: the local Liquid fixture at `http://127.0.0.1:9293`, checked at
 - Mobile menu: opens with all six ALMA category links; Escape closes the drawer.
 - Header override: no announcement elements render; the exact supplied transparent 1055×1491 logo loads at the left and search stays in the right utility group on 1280×720 and 390×844 layouts.
 - Header interactions: the native search modal opens and its close control restores the closed state; the mobile drawer opens with all six category links and closes from its summary control.
+- Header clarity follow-up: the logo window increased to 70×74 px on desktop and 58×61 px on mobile with transparent inset space around the visible strokes. Desktop navigation shares the 94 px header bar and its measured center aligns exactly with the header center.
 - Horizontal page movement is visually suppressed while product and category rails retain local horizontal scrolling.
 - Theme Check: 0 errors, 9 inherited Dawn warnings.
 - JavaScript syntax, JSON parsing and `git diff --check`: passed.
