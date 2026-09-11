@@ -1,0 +1,13 @@
+{%- liquid
+  assign handles = 'alma-perfumes,alma-makhmaria-s-solid-perfume,alma-hands-and-body-lotions-collections,alma-dokhon,alma-solid-charms,layering-kits' | split: ','
+  assign labels = 'Spray Perfumes,Solid Perfumes,Lotions,Dukhoon,Solid Charms,Layering & Kits' | split: ','
+  assign link_class = 'header__menu-item list-menu__item link link--text focus-inset'
+  if mobile
+    assign link_class = 'menu-drawer__menu-item list-menu__item link link--text focus-inset'
+  endif
+-%}
+{%- for handle in handles -%}
+  <li><a class="{{ link_class }}" href="{{ collections[handle].url | default: routes.all_products_collection_url }}"{% if collections[handle].url == request.path %} aria-current="page"{% endif %}>{{ labels[forloop.index0] | escape }}</a></li>
+{%- endfor -%}
+{%- if settings.alma_gifting_link != blank -%}<li><a class="{{ link_class }}" href="{{ settings.alma_gifting_link }}">Gifting</a></li>{%- endif -%}
+{%- if settings.alma_about_link != blank -%}<li><a class="{{ link_class }}" href="{{ settings.alma_about_link }}">About</a></li>{%- endif -%}

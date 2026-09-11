@@ -29,7 +29,7 @@
 ## Latest identity and design reference
 
 - The user explicitly selected `research/brand/logo-icon.png` as the website logo on 2026-09-11, replacing the lowercase header wordmark. Preserve the exact supplied icon artwork; do not redraw it or redesign existing product packaging. This decision supersedes conflicting identity language in older briefs/prompts.
-- The latest visual exploration uses https://diptyqueparis.com/fr-fr. Current option mapping and source captures are in `research/design/DIPTYQUE-REFERENCE.md`. Earlier Snif options are unapproved history. The user authorized starting the build; the exact Diptyque option number remains unresolved. Obtain that layout choice without re-requesting build authorization. The logo choice is authorized.
+- The latest visual exploration uses https://diptyqueparis.com/fr-fr. Current option mapping and source captures are in `research/design/DIPTYQUE-REFERENCE.md`. Earlier Snif options are unapproved history. The user authorized starting the build; the user then selected the first Diptyque option (research/design/previews/diptyque-direction-1.png). The design approval gate is satisfied for this implementation. The logo choice is authorized.
 
 ## Mandatory shared handoff for every account and team
 

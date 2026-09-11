@@ -8,6 +8,40 @@
     "theme_support_url": "https://support.shopify.com/"
   },
   {
+    "name": "ALMA identity",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "alma_enabled",
+        "label": "Enable ALMA editorial styling",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "alma_use_icon",
+        "label": "Use the supplied ALMA icon",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "alma_navigation",
+        "label": "Use ALMA category navigation",
+        "default": true,
+        "info": "Uses existing ALMA collections, or All products when a collection is missing. Disable to use the selected Shopify menu."
+      },
+      {
+        "type": "url",
+        "id": "alma_gifting_link",
+        "label": "Gifting page link"
+      },
+      {
+        "type": "url",
+        "id": "alma_about_link",
+        "label": "About page link"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.logo.name",
     "settings": [
       {

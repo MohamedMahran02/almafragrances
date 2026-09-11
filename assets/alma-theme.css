@@ -1,0 +1,54 @@
+/* ALMA direction 1. Native Dawn commerce components and focus behavior remain intact. */
+.alma-theme { --font-heading-family: Georgia, 'Times New Roman', serif; --font-heading-weight: 400; --font-heading-style: normal; }
+.alma-theme h1, .alma-theme h2, .alma-theme h3 { letter-spacing: -.025em; }
+.alma-theme .announcement-bar__message { font-family: Georgia, 'Times New Roman', serif; font-size: 1.5rem; letter-spacing: .01em; padding: .9rem 0; }
+.alma-theme .header { max-width: 1440px; }
+.alma-theme .header-wrapper { background: #edebdb; }
+.alma-theme .header__heading-link { padding: .5rem; }
+.alma-logo { display: block; position: relative; width: 6.4rem; aspect-ratio: 910 / 969; overflow: hidden; }
+.alma-logo img { position: absolute; width: 128.572%; max-width: none; height: auto; left: -14.286%; top: -35.294%; }
+.alma-theme .header__inline-menu { margin-top: 0; }
+.alma-theme .header__menu-item { font-size: 1.35rem; padding: .8rem 1.45rem; color: rgb(var(--color-foreground)); }
+.alma-theme .header-wrapper--border-bottom { border-color: rgba(var(--color-foreground), .16); }
+.alma-campaign { color: rgb(var(--color-foreground)); }
+.alma-campaign__media { position: relative; aspect-ratio: 1.8; overflow: hidden; background: #bfa281; }
+.alma-campaign__image { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 52% center; }
+.alma-campaign__button { position: absolute; bottom: 3.6rem; left: 50%; transform: translateX(-50%); background: #f8f6ee; color: #251513; min-width: 22rem; min-height: 4.6rem; padding: 1.1rem 2.4rem; font-size: 1.4rem; white-space: nowrap; --color-button-text: 37,21,19; --alpha-button-background: 1; --border-offset: 0; }
+.alma-campaign__button { font-family: Georgia, 'Times New Roman', serif; border: 1px solid #756d60; letter-spacing: 0; font-size: 1.6rem; }
+.alma-ritual { text-align: center; padding: 3.5rem 2rem 4.7rem; }
+.alma-ritual h2 { font-size: clamp(3.4rem, 4.1vw, 5.8rem); line-height: 1.15; margin: 0 0 2.1rem; }
+.alma-ritual__text { font-size: 1.6rem; line-height: 1.65; letter-spacing: .005em; }
+.alma-ritual__text p { margin: 0 0 2rem; }
+.alma-text-link { color: inherit; text-underline-offset: .55rem; text-decoration-thickness: 1px; font-size: 1.4rem; display: inline-block; padding: .6rem 0; }
+.alma-text-link:hover { text-decoration-thickness: 2px; }
+.alma-favourites { display: block; text-align: center; padding-top: 1rem; padding-bottom: 7rem; }
+.alma-favourites h2 { font-size: clamp(3.2rem, 3.5vw, 4.8rem); margin: 0 0 .7rem; }
+.alma-favourites__tabs { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem 3rem; margin-bottom: 1rem; }
+.alma-favourites__tab { color: inherit; font-size: 1.4rem; text-decoration: none; padding: 1rem 0; border-bottom: 1px solid transparent; }
+.alma-favourites__tab[aria-selected='true'], .alma-favourites__tab:hover { border-color: currentColor; }
+.alma-favourites__panel[hidden] { display: none; }
+.alma-favourites__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4rem; }
+.alma-product { min-width: 0; padding-bottom: 2rem; }
+.alma-product__image-link { display: block; }
+.alma-product__image { display: block; width: 100%; height: clamp(24rem, 23.5vw, 34rem); object-fit: contain; margin: 0 auto 2rem; }
+.alma-product h3 { font-size: 2.1rem; margin: 0 0 .6rem; }
+.alma-product h3 a { color: inherit; text-decoration: none; }
+.alma-product__type { font-size: 1.3rem; margin: 0 0 .6rem; }
+.alma-product .price { font-size: 1.4rem; margin: .8rem 0 1rem; }
+.alma-theme .footer { border-top: 1px solid rgba(var(--color-foreground), .18); }
+@media (min-width: 1440px) { .alma-campaign__media { max-height: 80rem; } }
+@media (max-width: 989px) {
+  .alma-logo { width: 5rem; }
+  .alma-theme .header { padding-top: 1rem; padding-bottom: 1rem; }
+}
+@media (max-width: 749px) {
+  .alma-theme .announcement-bar__message { font-size: 1.3rem; }
+  .alma-campaign__media { aspect-ratio: .88; }
+  .alma-campaign__button { bottom: 2.4rem; min-width: 21rem; }
+  .alma-ritual { padding: 4.2rem 2rem 3.5rem; }
+  .alma-ritual__text { font-size: 1.45rem; }
+  .alma-favourites { padding-bottom: 4rem; }
+  .alma-favourites__tabs { gap: .8rem 2.2rem; }
+  .alma-favourites__grid { grid-template-columns: 1fr; gap: 3.2rem; }
+  .alma-product__image { height: 34rem; }
+}
