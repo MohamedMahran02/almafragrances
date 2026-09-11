@@ -51,7 +51,9 @@ html { overflow-x: hidden; }
 .alma-favourites__tab { padding: .7rem 0; border-bottom: 1px solid transparent; color: inherit; font-size: 1.3rem; text-decoration: none; }
 .alma-favourites__tab[aria-selected='true'], .alma-favourites__tab:hover { border-color: currentColor; }
 .alma-favourites__panel[hidden] { display: none; }
-.alma-favourites__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.6rem; }
+.alma-scroll-gallery { display: block; }
+.alma-favourites__grid { display: grid; grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: calc((100% - 4.8rem) / 4); gap: 1.6rem; overflow-x: auto; padding-bottom: 1rem; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.alma-favourites__grid::-webkit-scrollbar { display: none; }
 .alma-product { min-width: 0; padding-bottom: 2rem; }
 .alma-product__image-link { display: block; }
 .alma-product__image { display: block; width: 100%; height: clamp(27rem, 27vw, 40rem); margin: 0 auto 2.2rem; object-fit: contain; }
@@ -60,7 +62,13 @@ html { overflow-x: hidden; }
 .alma-product__description { min-height: 4rem; max-width: 28rem; margin: 0 auto 1rem; color: var(--alma-muted); font-size: 1.25rem; line-height: 1.45; }
 .alma-product__type { margin: 0 0 .6rem; color: var(--alma-muted); font-size: 1.2rem; }
 .alma-product .price { margin: .8rem 0 1rem; font-size: 1.3rem; }
-.alma-favourites__progress { display: block; width: 24rem; height: 1px; margin: 2rem auto 0; background: linear-gradient(to right, var(--alma-ink) 0 25%, var(--alma-line) 25% 100%); }
+.alma-scroll-gallery__footer { display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin-top: 2rem; }
+.alma-scroll-gallery__progress { position: relative; display: block; width: min(24rem, 45vw); height: 1px; overflow: hidden; background: var(--alma-line); }
+.alma-scroll-gallery__progress-value { position: absolute; inset: 0; background: var(--alma-ink); transform: scaleX(var(--alma-scroll-progress, .25)); transform-origin: left center; transition: transform .2s ease; }
+.alma-scroll-gallery__controls { display: flex; gap: .8rem; }
+.alma-scroll-gallery__button { display: grid; width: 4.4rem; height: 4.4rem; padding: 0; place-items: center; border: 1px solid var(--alma-ink); border-radius: 50%; background: transparent; color: var(--alma-ink); cursor: pointer; font-size: 2rem; line-height: 1; }
+.alma-scroll-gallery__button:hover:not(:disabled), .alma-scroll-gallery__button:focus-visible { background: var(--alma-ink); color: #fff; }
+.alma-scroll-gallery__button:disabled { border-color: var(--alma-line); color: var(--alma-muted); cursor: default; opacity: .45; }
 
 .alma-editorial { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); min-height: 72rem; background: #fff; color: var(--alma-ink); }
 .alma-editorial--right .alma-editorial__media { order: 2; }
@@ -127,7 +135,7 @@ html { overflow-x: hidden; }
 @media (max-width: 989px) {
   .alma-logo { width: 5.8rem; }
   .alma-theme .header { padding-top: .8rem; padding-bottom: .8rem; }
-  .alma-favourites__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3rem 1.6rem; }
+  .alma-favourites__grid { grid-auto-columns: calc((100% - 1.6rem) / 2); gap: 3rem 1.6rem; }
   .alma-editorial__content { padding-left: 5rem; padding-right: 5rem; }
 }
 @media (max-width: 749px) {
@@ -141,8 +149,8 @@ html { overflow-x: hidden; }
   .alma-favourites { padding: 5.5rem 1.5rem 6rem; }
   .alma-favourites h2 { margin-bottom: 2.2rem; }
   .alma-favourites__tabs { gap: .6rem 2rem; margin-bottom: 2.5rem; }
-  .alma-favourites__grid { display: flex; gap: 1.5rem; overflow-x: auto; padding-bottom: 1rem; scroll-snap-type: x mandatory; }
-  .alma-product { flex: 0 0 82vw; scroll-snap-align: start; }
+  .alma-favourites__grid { grid-auto-columns: 82vw; gap: 1.5rem; }
+  .alma-product { scroll-snap-align: start; }
   .alma-product__image { height: 36rem; }
   .alma-product__description { min-height: 0; }
   .alma-editorial, .alma-editorial--right { display: flex; flex-direction: column; min-height: 0; }

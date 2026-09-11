@@ -36,6 +36,7 @@ if (!customElements.get('alma-favourites')) {
         tab.tabIndex = i === index ? 0 : -1;
         this.panels[i].hidden = i !== index;
       });
+      requestAnimationFrame(() => this.panels[index]?.querySelector('alma-scroll-gallery')?.refresh());
     }
   });
 }

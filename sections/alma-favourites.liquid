@@ -1,5 +1,6 @@
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'alma-favourites.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'alma-scroll-gallery.js' | asset_url }}" defer="defer"></script>
 <alma-favourites class="alma-favourites page-width">
   <h2 id="AlmaFavourites-{{ section.id }}">{{ section.settings.title | escape }}</h2>
   <div class="alma-favourites__tabs" aria-labelledby="AlmaFavourites-{{ section.id }}">
@@ -22,7 +23,9 @@
     -%}
     {%- if forloop.first or chosen_products != blank -%}
     <div class="alma-favourites__panel" id="AlmaPanel-{{ section.id }}-{{ block.id }}" aria-labelledby="AlmaTab-{{ section.id }}-{{ block.id }}">
-      <div class="alma-favourites__grid">
+      {%- assign product_track_id = 'AlmaProducts-' | append: section.id | append: '-' | append: block.id -%}
+      <alma-scroll-gallery class="alma-scroll-gallery">
+      <div class="alma-favourites__grid" id="{{ product_track_id }}" data-alma-scroll-track role="region" aria-label="{{ block.settings.label | escape }} products" tabindex="0">
         {%- for product in chosen_products limit: section.settings.products_to_show -%}
           <article class="alma-product">
             <a class="alma-product__image-link" href="{{ product.url }}">
@@ -51,7 +54,8 @@
           </article>
         {%- endfor -%}
       </div>
-      <span class="alma-favourites__progress" aria-hidden="true"></span>
+      {% render 'alma-scroll-controls', track_id: product_track_id, label: 'Product carousel controls', item_name: 'products' %}
+      </alma-scroll-gallery>
     </div>
     {%- endif -%}
   {%- endfor -%}
@@ -61,7 +65,7 @@
   "name":"ALMA favourites",
   "settings":[
     {"type":"text","id":"title","label":"Heading","default":"ALMA favourites"},
-    {"type":"range","id":"products_to_show","label":"Products per tab","min":2,"max":8,"step":2,"default":2},
+    {"type":"range","id":"products_to_show","label":"Products per tab","min":2,"max":8,"step":2,"default":8},
     {"type":"text","id":"product_link_label","label":"Product link label","default":"Choose options"}
   ],
   "max_blocks":6,
