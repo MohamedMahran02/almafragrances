@@ -27,14 +27,10 @@
       <alma-scroll-gallery class="alma-scroll-gallery">
       <div class="alma-favourites__grid" id="{{ product_track_id }}" data-alma-scroll-track role="region" aria-label="{{ block.settings.label | escape }} products" tabindex="0">
         {%- for product in chosen_products limit: section.settings.products_to_show -%}
+          {%- assign packshot_asset = 'alma-packshot-' | append: product.handle | append: '.webp' -%}
           <article class="alma-product">
             <a class="alma-product__image-link" href="{{ product.url }}">
-              {%- if product.featured_image -%}
-                {%- assign image_alt = product.featured_image.alt | default: product.title -%}
-                {{ product.featured_image | image_url: width: 1000 | image_tag: loading: 'lazy', widths: '240, 360, 540, 750, 1000', sizes: '(min-width: 1200px) 540px, (min-width: 750px) 45vw, 90vw', class: 'alma-product__image', alt: image_alt }}
-              {%- else -%}
-                {{ 'product-1' | placeholder_svg_tag: 'alma-product__image placeholder-svg' }}
-              {%- endif -%}
+              <img class="alma-product__image" src="{{ packshot_asset | asset_url }}" width="1000" height="1000" loading="lazy" alt="{{ product.title | escape }} product packshot">
             </a>
             <h3><a href="{{ product.url }}">{{ product.title | escape }}</a></h3>
             {%- if product.description != blank -%}<p class="alma-product__description">{{ product.description | strip_html | truncatewords: 16 }}</p>{%- endif -%}
@@ -62,18 +58,18 @@
 </alma-favourites>
 {% schema %}
 {
-  "name":"ALMA favourites",
+  "name":"ALMA product collection",
   "settings":[
-    {"type":"text","id":"title","label":"Heading","default":"ALMA favourites"},
-    {"type":"range","id":"products_to_show","label":"Products per tab","min":2,"max":8,"step":2,"default":8},
+    {"type":"text","id":"title","label":"Heading","default":"The complete ALMA collection"},
+    {"type":"range","id":"products_to_show","label":"Products per tab","min":4,"max":24,"step":4,"default":24},
     {"type":"text","id":"product_link_label","label":"Product link label","default":"Choose options"}
   ],
   "max_blocks":6,
   "blocks":[{"type":"collection","name":"Product tab","settings":[
     {"type":"text","id":"label","label":"Tab label","default":"All"},
     {"type":"collection","id":"collection","label":"Collection"},
-    {"type":"product_list","id":"products","label":"Selected products","limit":8,"info":"Optional. Overrides the collection. Product availability and prices come from Shopify."}
+    {"type":"product_list","id":"products","label":"Selected products","limit":24,"info":"Optional. Overrides the collection. Product availability and prices come from Shopify."}
   ]}],
-  "presets":[{"name":"ALMA favourites","blocks":[{"type":"collection","settings":{"label":"All"}}]}]
+  "presets":[{"name":"ALMA product collection","blocks":[{"type":"collection","settings":{"label":"All products"}}]}]
 }
 {% endschema %}

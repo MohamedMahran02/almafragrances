@@ -43,3 +43,11 @@ Rendered target: the local Liquid fixture at `http://127.0.0.1:9293`, checked at
 The ALMA logo, photography, products, prices, category names, copy and claims intentionally replace Diptyque's proprietary brand assets and content. Proprietary Diptyque fonts, videos and imagery were not copied. The available in-app browser limited the live reference capture to 1280×720; ALMA itself was also verified at 390×844 using the local responsive fixture.
 
 Unverified locally: Shopify Theme Editor behavior, live newsletter/contact submissions, checkout/payment, localization, apps, branch-to-theme synchronization and public publication. Those require checks on the connected Shopify theme after the pushed commit synchronizes.
+# Complete catalog packshot rail — 2026-09-11
+
+- Reference target: Diptyque's product rail uses restrained product-only tiles and 40 px circular previous/next controls overlaid at the track edges. The ALMA implementation now follows that control placement and visual weight with its own simple SVG chevrons.
+- Content: the main rail heading is “The complete ALMA collection”; the All products tab renders all 23 imported Shopify products rather than the previous four-product override.
+- Media: 23 generated 1000 px WebP packshots are mapped by product handle. All use a seamless warm off-white studio field with no lifestyle setting, people or decorative scenery. The complete generated contact sheet was visually reviewed; the Lolo Vanilla jar was regenerated once to correct its front-label framing.
+- Desktop 1280×720: four cards are visible; the forward control is a 40 px edge overlay, one click advances exactly one 304 px card, the end state disables the forward control, all lazy-loaded packshots resolve and document horizontal overflow is 0 px.
+- Mobile 390×844: one 82vw card is visible; one click advances exactly 335 px, controls remain inside the section and document horizontal overflow is 0 px.
+- Console: the local fixture reports no errors. Its two existing preload warnings remain unrelated to this change.

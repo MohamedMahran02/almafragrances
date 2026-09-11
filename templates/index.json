@@ -30,22 +30,17 @@
     "featured_collection": {
       "type": "alma-favourites",
       "settings": {
-        "title": "ALMA favourites",
-        "products_to_show": 8,
+        "title": "The complete ALMA collection",
+        "products_to_show": 24,
         "product_link_label": "Choose options"
       },
       "blocks": {
         "all": {
           "type": "collection",
           "settings": {
-            "label": "All",
-            "collection": "best-sellers",
-            "products": [
-              "alma-hair-and-body-perfume",
-              "lolo-vanilla",
-              "luma-perfume",
-              "alma-arabia"
-            ]
+            "label": "All products",
+            "collection": "all",
+            "products": []
           }
         },
         "spray": {
