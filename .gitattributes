@@ -1,0 +1,2 @@
+# Preserve supplied PDF references without text conversion.
+*.pdf binary

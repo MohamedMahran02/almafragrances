@@ -1,0 +1,201 @@
+{
+  "source": "https://www.almafragrances.com",
+  "fetched_at": "2026-09-11T10:57:40.184Z",
+  "collections": [
+    {
+      "id": 652186190116,
+      "handle": "start-here",
+      "title": "Alma Discovery Collection",
+      "product_ids": [
+        9075744211236,
+        10072272929060,
+        10072279810340,
+        10407602258212
+      ],
+      "product_handles": [
+        "alma-box-of-minis",
+        "alma-perfumes-box-of-minis",
+        "alma-mini-hand-and-body-lotion",
+        "alma-dokhon"
+      ]
+    },
+    {
+      "id": 660554416420,
+      "handle": "alma-dokhon",
+      "title": "Alma dokhon",
+      "product_ids": [
+        10407602258212
+      ],
+      "product_handles": [
+        "alma-dokhon"
+      ]
+    },
+    {
+      "id": 638301602084,
+      "handle": "alma-hands-and-body-lotions-collections",
+      "title": "Alma lotions",
+      "product_ids": [
+        10072279810340,
+        10033840652580
+      ],
+      "product_handles": [
+        "alma-mini-hand-and-body-lotion",
+        "alma-arabia-hand-and-body-lotion"
+      ]
+    },
+    {
+      "id": 635032535332,
+      "handle": "alma-perfumes",
+      "title": "Alma perfumes",
+      "product_ids": [
+        9923658547492,
+        10311960690980,
+        10033785831716,
+        10071723671844,
+        10334614421796,
+        10072272929060
+      ],
+      "product_handles": [
+        "alma-hair-and-body-perfume",
+        "alma-oud-intense-perfume",
+        "alma-leather-luxe-perfume",
+        "lolo-vanilla-perfume",
+        "luma-perfume",
+        "alma-perfumes-box-of-minis"
+      ]
+    },
+    {
+      "id": 655963029796,
+      "handle": "alma-solid-charms",
+      "title": "Alma solid charms",
+      "product_ids": [
+        10516365279524
+      ],
+      "product_handles": [
+        "alma-charm-collection"
+      ]
+    },
+    {
+      "id": 634268647716,
+      "handle": "alma-makhmaria-s-solid-perfume",
+      "title": "Alma Solids-مخمريات",
+      "product_ids": [
+        9075935445284,
+        9076154859812,
+        9075878166820,
+        9075966509348,
+        9076157612324,
+        10074335281444,
+        9564882862372,
+        10051443163428,
+        9075744211236
+      ],
+      "product_handles": [
+        "alma-oud",
+        "alma-arabia",
+        "alma-vanilla-bloom",
+        "alma-sandalwood",
+        "alma-leather",
+        "lolo-vanilla",
+        "almaxeman",
+        "alma-refill-pouches",
+        "alma-box-of-minis"
+      ]
+    },
+    {
+      "id": 652315001124,
+      "handle": "arabic-and-deep",
+      "title": "Arabic and Deep",
+      "product_ids": [
+        10311960690980,
+        9076154859812,
+        10407602258212,
+        9923658547492,
+        10033840652580,
+        9075935445284
+      ],
+      "product_handles": [
+        "alma-oud-intense-perfume",
+        "alma-arabia",
+        "alma-dokhon",
+        "alma-hair-and-body-perfume",
+        "alma-arabia-hand-and-body-lotion",
+        "alma-oud"
+      ]
+    },
+    {
+      "id": 652315230500,
+      "handle": "best-sellers",
+      "title": "Best sellers",
+      "product_ids": [
+        10077395648804,
+        10051443163428,
+        10311960690980,
+        10074335281444,
+        10407602258212,
+        9923658547492,
+        10072279810340
+      ],
+      "product_handles": [
+        "alma-layering-box",
+        "alma-refill-pouches",
+        "alma-oud-intense-perfume",
+        "lolo-vanilla",
+        "alma-dokhon",
+        "alma-hair-and-body-perfume",
+        "alma-mini-hand-and-body-lotion"
+      ]
+    },
+    {
+      "id": 648136294692,
+      "handle": "layering-kits",
+      "title": "Layering & kits",
+      "product_ids": [
+        10077395648804,
+        10155402592548
+      ],
+      "product_handles": [
+        "alma-layering-box",
+        "luma-summer-kit"
+      ]
+    },
+    {
+      "id": 652314804516,
+      "handle": "soft-and-clean",
+      "title": "Soft and clean",
+      "product_ids": [
+        10074335281444,
+        9564882862372,
+        10071723671844,
+        10334614421796,
+        9075878166820,
+        10033840652580
+      ],
+      "product_handles": [
+        "lolo-vanilla",
+        "almaxeman",
+        "lolo-vanilla-perfume",
+        "luma-perfume",
+        "alma-vanilla-bloom",
+        "alma-arabia-hand-and-body-lotion"
+      ]
+    },
+    {
+      "id": 652314902820,
+      "handle": "warm-and-bold",
+      "title": "Warm and bold",
+      "product_ids": [
+        9076157612324,
+        10033785831716,
+        9075966509348,
+        10033840652580
+      ],
+      "product_handles": [
+        "alma-leather",
+        "alma-leather-luxe-perfume",
+        "alma-sandalwood",
+        "alma-arabia-hand-and-body-lotion"
+      ]
+    }
+  ]
+}
