@@ -49,6 +49,15 @@ const stripHtml = html => String(html || '')
   .replace(/\s+/g, ' ')
   .trim();
 
+const hasArabicText = value => /[\u0600-\u06ff\u0750-\u077f\u08a0-\u08ff\ufb50-\ufdff\ufe70-\ufeff]/.test(value);
+
+const englishOnlyHtml = html => {
+  const source = String(html || '');
+  const blocks = [...source.matchAll(/<(p|ul|ol|div|h[1-6])\b[\s\S]*?<\/\1>/gi)].map(match => match[0]);
+  if (blocks.length === 0) return hasArabicText(source) ? '' : source;
+  return blocks.filter(block => !hasArabicText(stripHtml(block))).join('\n');
+};
+
 const escapeCsv = value => {
   const text = value == null ? '' : String(value);
   return /[",\r\n]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
@@ -62,12 +71,15 @@ for (const product of importedProducts) {
   const primaryCollection = categoryPriority
     .map(handle => memberCollections.find(collection => collection.handle === handle))
     .find(Boolean);
-  const collectionTitle = primaryCollection?.title || categoryFallback(product);
+  const collectionTitle = primaryCollection?.handle === 'alma-makhmaria-s-solid-perfume'
+    ? 'Alma Solid Perfumes'
+    : primaryCollection?.title || categoryFallback(product);
   const membershipTags = memberCollections.map(collection => `collection-${collection.handle}`);
   const tags = [...new Set([...(product.tags || []), ...membershipTags])].join(', ');
   const optionNames = product.options || [];
   const imageCount = product.images?.length || 0;
   const rowCount = Math.max(product.variants.length, imageCount, 1);
+  const englishBodyHtml = englishOnlyHtml(product.body_html);
 
   for (let index = 0; index < rowCount; index += 1) {
     const variant = product.variants[index];
@@ -76,7 +88,7 @@ for (const product of importedProducts) {
     const values = {
       'Handle': product.handle,
       'Title': first ? product.title : '',
-      'Body (HTML)': first ? product.body_html : '',
+      'Body (HTML)': first ? englishBodyHtml : '',
       'Vendor': first ? (product.vendor || 'ALMA by Reem Fragrances') : '',
       'Product Category': first ? 'Health & Beauty > Personal Care > Cosmetics > Perfumes & Colognes' : '',
       'Type': first ? product.product_type : '',
@@ -103,7 +115,7 @@ for (const product of importedProducts) {
       'Image Alt Text': image ? `${product.title} — image ${image.position || index + 1}` : '',
       'Gift Card': first ? 'FALSE' : '',
       'SEO Title': first ? product.title.slice(0, 70) : '',
-      'SEO Description': first ? stripHtml(product.body_html).slice(0, 320) : '',
+      'SEO Description': first ? stripHtml(englishBodyHtml).slice(0, 320) : '',
       'Google Shopping / Condition': variant ? 'new' : '',
       'Google Shopping / Custom Product': variant ? 'TRUE' : '',
       'Variant Image': variant?.featured_image?.src || '',

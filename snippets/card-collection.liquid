@@ -93,7 +93,11 @@
                 class="full-unstyled-link"
               >
                 {%- if card_collection.title != blank -%}
-                  {{- card_collection.title | escape -}}
+                  {%- if card_collection.handle == 'alma-solids-مخمريات' -%}
+                    Alma Solid Perfumes
+                  {%- else -%}
+                    {{- card_collection.title | escape -}}
+                  {%- endif -%}
                 {%- else -%}
                   {{ 'onboarding.collection_title' | t }}
                 {%- endif -%}
@@ -105,7 +109,7 @@
               </a>
             </h3>
             {%- if card_collection.description != blank -%}
-              <p class="card__caption">
+              <p class="card__caption" data-alma-hide-if-arabic>
                 {{- card_collection.description | strip_html | truncatewords: 12 -}}
                 <span class="icon-wrap">
                   {{- 'icon-arrow.svg' | inline_asset_content -}}
@@ -129,7 +133,11 @@
               class="full-unstyled-link"
             >
               {%- if card_collection.title != blank -%}
-                {{- card_collection.title | escape -}}
+                {%- if card_collection.handle == 'alma-solids-مخمريات' -%}
+                  Alma Solid Perfumes
+                {%- else -%}
+                  {{- card_collection.title | escape -}}
+                {%- endif -%}
               {%- else -%}
                 {{ 'onboarding.collection_title' | t }}
               {%- endif -%}
@@ -141,7 +149,7 @@
             </a>
           </h3>
           {%- if card_collection.featured_image == null and card_collection.description != blank -%}
-            <p class="card__caption">
+            <p class="card__caption" data-alma-hide-if-arabic>
               {{- card_collection.description | strip_html | truncatewords: 12 -}}
               <span class="icon-wrap">
                 {{- 'icon-arrow.svg' | inline_asset_content -}}

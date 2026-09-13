@@ -65,3 +65,12 @@ Unverified locally: Shopify Theme Editor behavior, live newsletter/contact submi
 - Wardrobe media: six intentional 1000×1000 WebPs replace automatic collection thumbnails. The rendered desktop tiles are consistent 288×360 frames with `object-fit: contain`, internal padding and no broken images.
 - Interaction: desktop product/wardrobe forward controls move 304/304 px; mobile controls move 335/305 px. The document remains free of horizontal overflow at both sizes.
 - Intentional fallback: Theme Editor image overrides remain authoritative; newly named category labels without curated assets fall back to their Shopify collection image.
+
+## 2026-09-13 English storefront and currency follow-up
+
+- Removed product-description excerpts from ALMA homepage rails so bilingual catalog body copy cannot appear on cards.
+- English-locale filtering now removes Arabic blocks from native product/collection descriptions, normalizes retained English stored with RTL attributes and hides mixed truncated collection captions.
+- The mixed `Alma Solids-مخمريات` display title is rendered as `Alma Solid Perfumes`; its existing handle is preserved so collection URLs do not break.
+- JavaScript syntax and a DOM-behavior fixture pass. The regenerated 22-product/183-variant CSV has no Arabic characters in customer-facing import content, and the local homepage endpoint returned HTTP 200 with no product-description excerpts.
+- Browser automation and two Theme Check attempts stalled during this pass. The previous Theme Check baseline remains 0 errors and 9 inherited Dawn warnings; no new completed visual-browser result is claimed.
+- AED cannot be validated locally: native prices follow Shopify's store currency. `currency_code_enabled` is already true, while the authenticated Shopify Admin currency change remains outstanding.
