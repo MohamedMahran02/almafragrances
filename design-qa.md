@@ -31,8 +31,9 @@
 
 - Desktop 1265 × 720: three experience columns, zero experience images, four footer groups, newsletter and copyright; no `footer__content-bottom`; document `scrollWidth` equals `clientWidth` at 1265 px.
 - Mobile 375 × 844: no lower strip; four groups initialize closed; Explore ALMA opens through its visible summary and exposes all four links; document `scrollWidth` equals `clientWidth` at 375 px.
+- Restarted local sync-safeguard check: `data-alma-service-layout="text"` is present; the section contains zero images, three descriptions and three links; document `scrollWidth` equals `clientWidth` at 1265 px.
 - Local preview reports no captured runtime errors. The fixture has no enabled payment types, so payment-icon rendering cannot be visually exercised locally.
-- Theme Check passes with 0 errors and the same 9 inherited Dawn warnings; footer JavaScript syntax, footer-group/homepage JSON and Git whitespace validation pass.
+- Theme Check passes with 0 errors and the same 9 inherited Dawn warnings; footer JavaScript syntax, footer-group/homepage JSON and Git whitespace validation pass. Public verification remains blocked because the unauthenticated storefront redirects to `/password` and the signed-in external Chrome session is not connected for browser control.
 
 **Implementation checklist**
 

@@ -346,7 +346,7 @@ Use local Git authentication for `omarashraaf`; the Codex connector previously u
 - Finding: the public Shopify storefront loaded the latest footer/CSS but retained the retired image-based `alma-service-band` Liquid from commit `5cf2a15`. Because those legacy images no longer had sizing rules, they expanded across the desktop section. The local fixture was already rendering the intended text-only section, so local-only verification missed this partial theme-sync state.
 - Changed: added an explicit `alma-service-band--text` class and `data-alma-service-layout="text"` marker to the restored section, reformatted its three text blocks so the section file is included in a new Git change, and added a defensive CSS rule that hides legacy service imagery if Shopify temporarily serves stale markup again. No content or section/block order changed.
 - Files: `sections/alma-service-band.liquid`, `assets/alma-theme.css`, `design-qa.md`, and this README.
-- Checks: verify the new marker, zero service images, three descriptions/links, desktop containment and public Shopify rendering after the connected theme receives the new commit. Theme Check, homepage JSON and Git whitespace results are recorded in `design-qa.md`.
+- Checks: the restarted local fixture renders the new `data-alma-service-layout="text"` marker with zero service images, three descriptions, three links and no horizontal overflow. Theme Check passes with no errors and the same inherited Dawn warnings; homepage JSON and Git whitespace checks pass. Public Shopify verification remains blocked by the storefront password until the connected theme receives the commit and an authenticated view is refreshed.
 
 ## Continuation prompt
 
