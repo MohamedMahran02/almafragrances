@@ -146,3 +146,28 @@ Validation:
 - Theme Check: 0 errors and the same 9 inherited Dawn warnings. `git diff --check` passes.
 
 final result: passed
+
+## 2026-09-13 responsive Dukhoon campaign replacement
+
+Reference evidence:
+
+- `C:\Users\TYARA12\AppData\Local\Temp\codex-clipboard-65e6f642-d8db-40c8-9f6e-f77ddaf134ba.png` shows the previous portrait product photo forced into a shallow full-width `cover` crop, cutting off the jar and lid.
+
+Rendered evidence:
+
+- `C:\Users\TYARA12\AppData\Local\Temp\alma-dukhon-responsive-desktop.png` — generated landscape campaign at the desktop breakpoint.
+- `C:\Users\TYARA12\AppData\Local\Temp\alma-dukhon-responsive-mobile.png` — dedicated generated portrait campaign at the mobile breakpoint.
+
+Mismatch ledger and fix:
+
+- P1: the 870×1080 source product image was stretched across a 1265×720 immersive media area with `object-fit: cover`, removing most of the product from view.
+- Fix: generated crop-safe 1774×887 landscape and 1024×1536 portrait campaigns from the exact ALMA Dukhoon packshot. Added a responsive `<picture>` and explicit Theme Editor checkbox so the homepage serves the landscape asset above 749 px and the portrait asset below it; a selected image override remains authoritative.
+
+Validation:
+
+- Desktop 1365×768: `<picture>` is present, media renders at 1350×768, `currentSrc` is `alma-dukhon-editorial-desktop.jpg`, natural dimensions are 1774×887 and the complete product is visible.
+- Mobile 390×844: media renders at 375×500, `currentSrc` is `alma-dukhon-editorial-mobile.jpg`, natural dimensions are 1024×1536 and the complete product is visible.
+- Responsive scroll interaction exposes the campaign followed by “A deeper atmosphere” without overlap; broken-image count and horizontal overflow are zero. Page identity, meaningful DOM content, framework-overlay absence and console health pass.
+- Theme Check: 0 errors and the same 9 inherited Dawn warnings. Homepage JSON and `git diff --check` pass.
+
+final result: passed

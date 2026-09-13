@@ -82,6 +82,7 @@ html { overflow-x: hidden; }
 .alma-editorial--right .alma-editorial__content { order: 1; }
 .alma-editorial--blush, .alma-editorial--dark { background: #fff; color: var(--alma-ink); }
 .alma-editorial__media { min-height: 72rem; overflow: hidden; }
+.alma-editorial__picture { display: block; width: 100%; height: 100%; }
 .alma-editorial__image { display: block; width: 100%; height: 100%; min-height: 72rem; object-fit: cover; }
 .alma-editorial__content { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 7rem clamp(4rem, 8vw, 13rem); text-align: center; }
 .alma-editorial__eyebrow { margin: 0 0 1.4rem; font-size: 1.2rem; letter-spacing: .04em; }

@@ -111,6 +111,7 @@
         "link_label": "Discover Dukhoon",
         "link": "shopify://collections/alma-dokhon",
         "layout": "immersive",
+        "use_dukhon_campaign": true,
         "media_position": "right",
         "tone": "ivory"
       }
