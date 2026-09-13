@@ -6,6 +6,8 @@
       {%- else -%}
         <img class="alma-campaign__image" src="{{ 'alma-campaign-hero.png' | asset_url }}" width="1683" height="934" alt="ALMA spray and solid perfume in warm evening light" loading="eager" fetchpriority="high">
       {%- endif -%}
+    </div>
+    <div class="alma-campaign__actions">
       {%- for block in section.blocks -%}
         {%- if block.type == 'buttons' and block.settings.button_label_1 != blank -%}
           <a class="alma-campaign__button button button--secondary" href="{{ block.settings.button_link_1 | default: routes.all_products_collection_url }}" {{ block.shopify_attributes }}>{{ block.settings.button_label_1 | escape }}</a>

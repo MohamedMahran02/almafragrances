@@ -122,6 +122,29 @@ Validation:
 
 final result: passed
 
+## 2026-09-13 restored landing artwork and bounded CTA
+
+Target flow: homepage loads with the approved original campaign composition → the CTA is visible in the initial viewport → scrolling moves through the full-height artwork while the CTA remains at its viewport position → the CTA releases at the media boundary and the ritual follows.
+
+Evidence:
+
+- `C:\Users\TYARA12\AppData\Local\Temp\alma-hero-restored-initial.png` — desktop initial viewport.
+- `C:\Users\TYARA12\AppData\Local\Temp\alma-hero-restored-scroll.png` — desktop during the bounded sticky stage.
+- `C:\Users\TYARA12\AppData\Local\Temp\alma-hero-restored-mobile.png` — mobile image-contained CTA state.
+
+Mismatch and fix:
+
+- P1: the preceding implementation forced the 1683×934 artwork into a 522 px desktop viewport frame with `object-fit: cover`, producing an aggressive vertical crop even though the source image had not changed.
+- Fix: restored the earlier 56.25vw/802 px-capped campaign proportions and allowed the image to move normally. A separate absolute action track bounds the sticky CTA to the image, preserving first-screen visibility without pinning or cropping the artwork itself.
+
+Validation:
+
+- Desktop 1365×617: header 95.1 px; campaign 767.8 px; CTA y=519.1–567.1 at page top. The CTA remains y=519–567 through 260 px of scroll, then releases upward when the campaign bottom crosses its 48 px height. At 220 px scroll the original lower product/table composition is revealed while the CTA remains visible.
+- Mobile 390×844: header 82.4 px; campaign 640 px; CTA remains wholly within the campaign with a 30 px bottom inset; the 240 px ritual begins immediately after the image with no overlap.
+- Page title/URL and meaningful content pass. No framework overlay, broken images or horizontal document overflow were found. A final reload exposed a pre-existing product-rail initialization race; `alma-favourites.js` now waits for the `alma-scroll-gallery` custom element before calling `refresh`, and the repeated clean reload has no console errors or warnings.
+
+final result: passed
+
 ## 2026-09-13 ritual introduction spacing
 
 Reference evidence:

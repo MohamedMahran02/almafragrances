@@ -36,7 +36,14 @@ if (!customElements.get('alma-favourites')) {
         tab.tabIndex = i === index ? 0 : -1;
         this.panels[i].hidden = i !== index;
       });
-      requestAnimationFrame(() => this.panels[index]?.querySelector('alma-scroll-gallery')?.refresh());
+      requestAnimationFrame(() => {
+        const gallery = this.panels[index]?.querySelector('alma-scroll-gallery');
+        if (typeof gallery?.refresh === 'function') {
+          gallery.refresh();
+          return;
+        }
+        customElements.whenDefined('alma-scroll-gallery').then(() => gallery?.refresh?.());
+      });
     }
   });
 }
