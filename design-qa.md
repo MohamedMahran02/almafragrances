@@ -122,6 +122,16 @@ Validation:
 
 final result: passed
 
+## 2026-09-13 scrolled mobile menu positioning
+
+Target flow: mobile homepage loads → customer scrolls into later content → taps Menu in the sticky header → drawer opens in the current viewport → customer closes it and remains on the page.
+
+- Before: at 390×844 and page scroll y=1117, the open header resolved to y=−1117…−1038 and the drawer to y=−1039…−273, leaving the current screen unchanged. Evidence: `C:\Users\TYARA12\AppData\Local\Temp\alma-mobile-menu-scrolled-before.png`.
+- Fix: below 990 px, `.section-header.menu-open` is fixed to the viewport. This keeps Dawn's existing absolute drawer positioned below the visible header while its standard body scroll lock is active.
+- After: opening from the product area places the header at y=0…79 and the drawer at y=78…844. All six category links are visible, the drawer closes normally, horizontal overflow remains zero and no framework overlay or relevant console error appears. Evidence: `C:\Users\TYARA12\AppData\Local\Temp\alma-mobile-menu-scrolled-fixed.png`.
+
+final result: passed
+
 ## 2026-09-13 landing CTA release inset
 
 - Evidence supplied by the user: `C:\Users\TYARA12\AppData\Local\Temp\codex-clipboard-fac6ef8d-65d7-4c17-ad7c-b68fe0d935ef.png` showed the desktop CTA's bottom border touching the campaign/ritual boundary after the sticky stage.
