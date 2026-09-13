@@ -341,6 +341,13 @@ Use local Git authentication for `omarashraaf`; the Codex connector previously u
 - Files: `sections/footer.liquid`, `assets/alma-theme.css`, `design-qa.md`, and this README. Homepage/footer section order and all block-order arrays are unchanged.
 - Checks: at a 1265 px desktop client width, the experience is 297.9 px high with three equal 373.3 px text columns and zero images; the one-piece footer is 298.8 px high with four groups, copyright and newsletter, and no `footer__content-bottom`. At a 375 px mobile client width, the lower strip remains absent, all four groups initialize closed, Explore ALMA opens correctly, and the document has no horizontal overflow. Theme Check, JavaScript, JSON and Git whitespace results are recorded in `design-qa.md`.
 
+### 2026-09-13 — Force the restored experience markup through Shopify theme sync
+
+- Finding: the public Shopify storefront loaded the latest footer/CSS but retained the retired image-based `alma-service-band` Liquid from commit `5cf2a15`. Because those legacy images no longer had sizing rules, they expanded across the desktop section. The local fixture was already rendering the intended text-only section, so local-only verification missed this partial theme-sync state.
+- Changed: added an explicit `alma-service-band--text` class and `data-alma-service-layout="text"` marker to the restored section, reformatted its three text blocks so the section file is included in a new Git change, and added a defensive CSS rule that hides legacy service imagery if Shopify temporarily serves stale markup again. No content or section/block order changed.
+- Files: `sections/alma-service-band.liquid`, `assets/alma-theme.css`, `design-qa.md`, and this README.
+- Checks: verify the new marker, zero service images, three descriptions/links, desktop containment and public Shopify rendering after the connected theme receives the new commit. Theme Check, homepage JSON and Git whitespace results are recorded in `design-qa.md`.
+
 ## Continuation prompt
 
 ```text

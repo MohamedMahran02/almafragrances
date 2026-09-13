@@ -120,6 +120,8 @@ html { overflow-x: hidden; }
 .alma-service-band__item h3 { margin: 0 0 1rem; font-family: Georgia, 'Times New Roman', serif; font-size: 1.7rem; font-weight: 400; }
 .alma-service-band__item .rte { min-height: 0; color: var(--alma-muted); font-size: 1.25rem; }
 .alma-service-band__item .alma-text-link { font-size: 1.25rem; }
+/* Prevent retired image markup from expanding if Shopify serves a stale section revision during theme sync. */
+.alma-service-band__media, .alma-service-band__image { display: none !important; }
 
 .alma-theme .footer { margin-top: 0; border-top: 1px solid var(--alma-line); background: var(--alma-soft); color: var(--alma-ink); }
 .alma-footer__main { display: grid; grid-template-columns: minmax(12rem, .62fr) minmax(52rem, 2.65fr) minmax(26rem, 1.15fr); gap: clamp(2.5rem, 4vw, 6rem); max-width: 136rem; padding-top: 4.2rem; padding-bottom: 4rem; }

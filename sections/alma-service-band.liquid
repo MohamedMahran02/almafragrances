@@ -1,8 +1,17 @@
-<section class="alma-service-band page-width" aria-labelledby="AlmaService-{{ section.id }}">
+{% comment %}
+  Text-only service layout. Keep this marker in the section output so connected
+  Shopify themes can be checked for stale image-based markup after Git sync.
+{% endcomment %}
+<section class="alma-service-band alma-service-band--text page-width" data-alma-service-layout="text" aria-labelledby="AlmaService-{{ section.id }}">
   <h2 id="AlmaService-{{ section.id }}">{{ section.settings.heading | escape }}</h2>
   <div class="alma-service-band__grid">
     {%- for block in section.blocks -%}
-      <div class="alma-service-band__item" {{ block.shopify_attributes }}><span class="alma-service-band__mark" aria-hidden="true">✦</span><h3>{{ block.settings.heading | escape }}</h3>{%- if block.settings.text != blank -%}<div class="rte">{{ block.settings.text }}</div>{%- endif -%}{%- if block.settings.link_label != blank and block.settings.link != blank -%}<a class="alma-text-link" href="{{ block.settings.link }}">{{ block.settings.link_label | escape }}</a>{%- endif -%}</div>
+      <div class="alma-service-band__item" {{ block.shopify_attributes }}>
+        <span class="alma-service-band__mark" aria-hidden="true">✦</span>
+        <h3>{{ block.settings.heading | escape }}</h3>
+        {%- if block.settings.text != blank -%}<div class="rte">{{ block.settings.text }}</div>{%- endif -%}
+        {%- if block.settings.link_label != blank and block.settings.link != blank -%}<a class="alma-text-link" href="{{ block.settings.link }}">{{ block.settings.link_label | escape }}</a>{%- endif -%}
+      </div>
     {%- endfor -%}
   </div>
 </section>

@@ -17,6 +17,7 @@
 1. P1 — separate burgundy utility strip conflicted with the selected ivory/black/gray palette and created a second footer section. Fixed by removing `footer__content-bottom`, retaining policies in Legal, moving copyright into the brand column and moving available payment icons beside the newsletter.
 2. P1 — the supplied desktop capture showed the retired service images at uncontrolled scale. Fixed by retaining image-free service markup and bounding the restored three-column grid to 1120 px; the final rendered section contains zero images.
 3. Final comparison — passed. The combined view shows one neutral footer and a compact three-column text experience with no burgundy UI region or oversized image.
+4. P0 live-sync regression — the public Shopify storefront served the retired image-based service markup while loading the newer CSS, producing uncontrolled full-width images. A new `alma-service-band--text`/`data-alma-service-layout="text"` section revision and defensive legacy-image rule are ready; public storefront verification is required after theme sync.
 
 **Required fidelity surfaces**
 
@@ -41,4 +42,4 @@
 - [x] Restore and bound the image-free desktop ALMA experience.
 - [x] Verify desktop/mobile containment and mobile disclosures.
 
-final result: passed
+final result: blocked
