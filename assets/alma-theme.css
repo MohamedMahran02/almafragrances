@@ -13,6 +13,8 @@ html { overflow-x: hidden; }
 }
 .alma-theme h1, .alma-theme h2, .alma-theme h3 { letter-spacing: -.025em; }
 .alma-theme .header-wrapper { background: #fff; }
+.alma-theme .alma-header-wrapper--home { height: 13.25rem; overflow: visible; border-bottom: 0; background: transparent; }
+.alma-theme .alma-header-wrapper--home .alma-header--home { background: #fff; box-shadow: 0 1px 0 var(--alma-line); }
 .alma-theme .header { max-width: none; padding-left: 3.2rem; padding-right: 3.2rem; }
 .alma-theme .header__heading-link { padding: .2rem; }
 .alma-theme .header__inline-menu { margin-top: 0; }
@@ -20,7 +22,7 @@ html { overflow-x: hidden; }
 .alma-theme .header__icons { gap: .2rem; }
 .alma-theme .header-wrapper--border-bottom { border-color: var(--alma-line); }
 .alma-theme .section-header.shopify-section-header-sticky { z-index: 10; }
-.alma-logo { position: relative; display: block; width: 7rem; aspect-ratio: 891 / 943; overflow: hidden; transition: width .3s cubic-bezier(.52, 0, .61, .99); }
+.alma-logo { position: relative; display: block; width: 7rem; aspect-ratio: 891 / 943; overflow: hidden; }
 .alma-logo img { position: absolute; top: -24.5%; left: -4.25%; width: 108.5%; max-width: none; height: auto; image-rendering: auto; }
 .alma-theme .scrolled-past-header .alma-logo { width: 5rem; }
 .alma-header-wordmark { display: none; }
@@ -30,15 +32,13 @@ html { overflow-x: hidden; }
   .alma-theme .header--middle-left .header__heading { justify-self: start; }
   .alma-theme .header--middle-left .header__inline-menu { justify-self: center; }
   .alma-theme .header--middle-left .header__inline-menu > .list-menu--inline { justify-content: center; }
-  .alma-theme .alma-header--home { grid-template-areas: 'compact wordmark icons' 'nav nav nav'; grid-template-rows: 7.1rem auto; row-gap: .6rem; padding-top: 1rem; padding-bottom: 1.2rem; }
-  .alma-theme .alma-header--home .header__heading { grid-area: compact; display: none; }
-  .alma-theme .alma-header--home .alma-header-wordmark { position: relative; grid-area: wordmark; display: block; width: 14rem; height: 7.1rem; overflow: hidden; justify-self: center; }
+  .alma-theme .alma-header--home { position: relative; grid-template-areas: 'compact wordmark icons' 'nav nav nav'; grid-template-rows: var(--alma-brand-row-height, 7.1rem) auto; row-gap: var(--alma-header-row-gap, .6rem); padding-top: var(--alma-header-padding-top, 1rem); padding-bottom: var(--alma-header-padding-bottom, 1.2rem); }
+  .alma-theme .alma-header--home .header__heading { position: absolute; z-index: 2; top: var(--alma-icon-top, .75rem); left: 5rem; display: block; margin: 0; opacity: var(--alma-icon-opacity, 0); pointer-events: none; }
+  .alma-theme .alma-header--home .header__heading .alma-logo { width: 5rem; }
+  .alma-theme .alma-header--home .alma-header-wordmark { position: absolute; z-index: 2; top: var(--alma-wordmark-top, 1rem); left: var(--alma-wordmark-left, 50%); display: block; width: 14rem; height: 7.1rem; overflow: hidden; opacity: var(--alma-wordmark-opacity, 1); transform: translateX(var(--alma-wordmark-fallback-x, -50%)) scale(var(--alma-wordmark-scale, 1)); transform-origin: top left; }
   .alma-theme .alma-header--home .alma-header-wordmark img { position: absolute; top: -11.82rem; left: -2.41rem; display: block; width: 20.69rem; max-width: none; height: auto; }
   .alma-theme .alma-header--home .header__inline-menu { grid-area: nav; }
-  .alma-theme .alma-header--home .header__icons { grid-area: icons; align-self: center; justify-self: end; }
-  .alma-theme .scrolled-past-header .alma-header--home { grid-template-areas: 'compact nav icons'; grid-template-rows: auto; min-height: 7.2rem; row-gap: 0; padding-top: .6rem; padding-bottom: .6rem; }
-  .alma-theme .scrolled-past-header .alma-header--home .header__heading { display: block; }
-  .alma-theme .scrolled-past-header .alma-header--home .alma-header-wordmark { display: none; }
+  .alma-theme .alma-header--home .header__icons { position: absolute; z-index: 2; top: var(--alma-icons-top, 2.35rem); right: 5rem; }
 }
 
 .alma-campaign { color: var(--alma-ink); background: #fff; }
@@ -166,20 +166,21 @@ html { overflow-x: hidden; }
 
 @media (prefers-reduced-motion: reduce) { .alma-wardrobe__image { transition: none; } }
 @media (max-width: 989px) {
+  .alma-theme .alma-header-wrapper--home { height: 6rem; }
   .alma-logo { width: 5.8rem; }
   .alma-theme .header { padding-top: .8rem; padding-bottom: .8rem; }
   .alma-theme .alma-header--home { position: relative; }
-  .alma-theme .alma-header--home .header__heading { display: none; }
-  .alma-theme .alma-header--home .alma-header-wordmark { position: absolute; z-index: 1; top: 50%; left: 50%; display: block; width: 11.5rem; height: 5.83rem; overflow: hidden; transform: translate(-50%, -50%); }
+  .alma-theme .alma-header--home .header__heading { position: absolute; z-index: 2; grid-area: auto; top: var(--alma-icon-top, .1rem); left: var(--alma-icon-left, 6.4rem); display: block; margin: 0; opacity: var(--alma-icon-opacity, 0); pointer-events: none; }
+  .alma-theme .alma-header--home .alma-header-wordmark { position: absolute; z-index: 2; top: var(--alma-wordmark-top, 50%); left: var(--alma-wordmark-left, 50%); display: block; width: 11.5rem; height: 5.83rem; overflow: hidden; opacity: var(--alma-wordmark-opacity, 1); transform: translate(var(--alma-wordmark-fallback-x, -50%), var(--alma-wordmark-fallback-y, -50%)) scale(var(--alma-wordmark-scale, 1)); transform-origin: top left; }
   .alma-theme .alma-header--home .alma-header-wordmark img { position: absolute; top: -9.71rem; left: -1.98rem; display: block; width: 16.99rem; max-width: none; height: auto; }
-  .alma-theme .scrolled-past-header .alma-header--home .header__heading { display: block; }
-  .alma-theme .scrolled-past-header .alma-header--home .alma-header-wordmark { display: none; }
   .alma-theme .section-header.menu-open { position: fixed; inset: 0 0 auto; width: 100%; }
   .alma-favourites__grid { grid-auto-columns: calc((100% - 1.6rem) / 2); gap: 3rem 1.6rem; }
   .alma-editorial__content { padding-left: 5rem; padding-right: 5rem; }
 }
 @media (max-width: 749px) {
+  .alma-theme .alma-header-wrapper--home { height: 7.8rem; }
   .alma-theme .header { min-height: 7.8rem; padding-left: 1.5rem; padding-right: 1.5rem; }
+  .alma-theme .alma-header--home .header__heading .alma-logo { width: 4.8rem; }
   .alma-theme .alma-header--home .alma-header-wordmark { width: 10.5rem; height: 5.33rem; }
   .alma-theme .alma-header--home .alma-header-wordmark img { top: -8.87rem; left: -1.81rem; width: 15.52rem; }
   .alma-theme .scrolled-past-header .alma-logo { width: 4.8rem; }

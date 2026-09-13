@@ -122,7 +122,7 @@
   {% if header_tag == 'sticky-header' %}
     data-sticky-type="{{ section.settings.sticky_header_type }}"
   {% endif %}
-  class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}"
+  class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if request.page_type == 'index' %} alma-header-wrapper--home{% endif %}{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}"
 >
   {%- liquid
     assign social_links = false
@@ -329,6 +329,10 @@
 
     connectedCallback() {
       this.header = document.querySelector('.section-header');
+      this.almaHomeHeader = this.querySelector('.alma-header--home');
+      this.almaWordmark = this.querySelector('.alma-header-wordmark');
+      this.almaIconHeading = this.querySelector('.header__heading');
+      this.almaIconLink = this.almaIconHeading?.querySelector('a');
       this.headerIsAlwaysSticky =
         this.getAttribute('data-sticky-type') === 'always' ||
         this.getAttribute('data-sticky-type') === 'reduce-logo-size';
@@ -347,21 +351,29 @@
       this.predictiveSearch = this.querySelector('predictive-search');
 
       this.onScrollHandler = this.onScroll.bind(this);
+      this.onResizeHandler = () => {
+        this.updateAlmaHeaderProgress(window.pageYOffset || document.documentElement.scrollTop);
+        this.setHeaderHeight();
+      };
       this.hideHeaderOnScrollUp = () => (this.preventReveal = true);
 
       this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
       window.addEventListener('scroll', this.onScrollHandler, false);
+      window.addEventListener('resize', this.onResizeHandler, false);
 
       this.createObserver();
+      this.updateAlmaHeaderProgress(window.pageYOffset || document.documentElement.scrollTop);
     }
 
     setHeaderHeight() {
-      document.documentElement.style.setProperty('--header-height', `${this.header.offsetHeight}px`);
+      const renderedHeader = this.almaHomeHeader || this.header;
+      document.documentElement.style.setProperty('--header-height', `${renderedHeader.offsetHeight}px`);
     }
 
     disconnectedCallback() {
       this.removeEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
       window.removeEventListener('scroll', this.onScrollHandler);
+      window.removeEventListener('resize', this.onResizeHandler);
     }
 
     createObserver() {
@@ -377,6 +389,14 @@
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
       if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
+
+      if (this.almaHomeHeader) {
+        const progress = this.updateAlmaHeaderProgress(scrollTop);
+        this.header.classList.toggle('scrolled-past-header', progress >= 1);
+        this.currentScrollTop = scrollTop;
+        requestAnimationFrame(this.setHeaderHeight.bind(this));
+        return;
+      }
 
       if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
         this.header.classList.add('scrolled-past-header');
@@ -402,6 +422,62 @@
 
       this.currentScrollTop = scrollTop;
       requestAnimationFrame(this.setHeaderHeight.bind(this));
+    }
+
+    updateAlmaHeaderProgress(scrollTop) {
+      if (!this.almaHomeHeader || !this.almaWordmark || !this.almaIconHeading) return 0;
+
+      const desktop = window.matchMedia('(min-width: 990px)').matches;
+      const scrollRange = desktop ? 132 : 96;
+      const progress = Math.min(1, Math.max(0, scrollTop / scrollRange));
+      const easedProgress = progress * progress * (3 - 2 * progress);
+      const headerRect = this.almaHomeHeader.getBoundingClientRect();
+      const wordmarkWidth = this.almaWordmark.offsetWidth;
+      const wordmarkHeight = this.almaWordmark.offsetHeight;
+      const iconWidth = this.almaIconHeading.offsetWidth;
+      const iconHeight = this.almaIconHeading.offsetHeight;
+      const drawer = this.almaHomeHeader.querySelector('header-drawer');
+      const openHeight = desktop ? 132.5 : this.almaHomeHeader.offsetHeight;
+      const closedHeight = desktop ? 72 : openHeight;
+      const startLeft = (this.almaHomeHeader.clientWidth - wordmarkWidth) / 2;
+      const endLeft = desktop ? 50 : Math.max(0, (drawer?.getBoundingClientRect().right || 47) - headerRect.left);
+      const startTop = desktop ? 10 : (openHeight - wordmarkHeight) / 2;
+      const endTop = (closedHeight - iconHeight) / 2;
+      const finalScale = Math.min(iconWidth / wordmarkWidth, iconHeight / wordmarkHeight);
+      const interpolate = (start, end) => start + (end - start) * easedProgress;
+      const wordmarkOpacity = Math.max(0, 1 - progress / 0.82);
+      const iconOpacity = Math.max(0, Math.min(1, (progress - 0.18) / 0.82));
+
+      this.almaHomeHeader.style.setProperty('--alma-header-progress', progress.toFixed(4));
+      this.almaHomeHeader.style.setProperty('--alma-wordmark-left', `${interpolate(startLeft, endLeft)}px`);
+      this.almaHomeHeader.style.setProperty('--alma-wordmark-top', `${interpolate(startTop, endTop)}px`);
+      this.almaHomeHeader.style.setProperty('--alma-wordmark-scale', interpolate(1, finalScale).toFixed(4));
+      this.almaHomeHeader.style.setProperty('--alma-wordmark-opacity', wordmarkOpacity.toFixed(4));
+      this.almaHomeHeader.style.setProperty('--alma-wordmark-fallback-x', '0px');
+      this.almaHomeHeader.style.setProperty('--alma-wordmark-fallback-y', '0px');
+      this.almaHomeHeader.style.setProperty('--alma-icon-opacity', iconOpacity.toFixed(4));
+      this.almaHomeHeader.style.setProperty('--alma-icon-left', `${endLeft}px`);
+      this.almaHomeHeader.style.setProperty('--alma-icon-top', `${endTop}px`);
+
+      if (desktop) {
+        this.almaHomeHeader.style.setProperty('--alma-brand-row-height', `${interpolate(71, 0)}px`);
+        this.almaHomeHeader.style.setProperty('--alma-header-row-gap', `${interpolate(6, 0)}px`);
+        this.almaHomeHeader.style.setProperty('--alma-header-padding-top', `${interpolate(10, 19)}px`);
+        this.almaHomeHeader.style.setProperty('--alma-header-padding-bottom', `${interpolate(12, 19)}px`);
+        this.almaHomeHeader.style.setProperty('--alma-icons-top', `${interpolate(23.5, 14)}px`);
+      }
+
+      this.almaWordmark.style.pointerEvents = progress < 0.65 ? 'auto' : 'none';
+      this.almaIconHeading.style.pointerEvents = progress > 0.35 ? 'auto' : 'none';
+      this.almaWordmark.toggleAttribute('aria-hidden', progress >= 0.5);
+      this.almaWordmark.tabIndex = progress >= 0.5 ? -1 : 0;
+      if (this.almaIconLink) {
+        this.almaIconLink.toggleAttribute('aria-hidden', progress < 0.5);
+        this.almaIconLink.tabIndex = progress < 0.5 ? -1 : 0;
+      }
+      this.almaHomeHeader.dataset.almaScrollProgress = progress.toFixed(4);
+
+      return progress;
     }
 
     hide() {
