@@ -1,15 +1,17 @@
 <section class="alma-campaign" aria-labelledby="AlmaRitual-{{ section.id }}">
   <div class="alma-campaign__media">
-    {%- if section.settings.image != blank -%}
-      {{ section.settings.image | image_url: width: 2400 | image_tag: widths: '480, 750, 1100, 1500, 2000, 2400', sizes: '100vw', loading: 'eager', fetchpriority: 'high', class: 'alma-campaign__image' }}
-    {%- else -%}
-      <img class="alma-campaign__image" src="{{ 'alma-campaign-hero.png' | asset_url }}" width="1683" height="934" alt="ALMA spray and solid perfume in warm evening light" loading="eager" fetchpriority="high">
-    {%- endif -%}
-    {%- for block in section.blocks -%}
-      {%- if block.type == 'buttons' and block.settings.button_label_1 != blank -%}
-        <a class="alma-campaign__button button button--secondary" href="{{ block.settings.button_link_1 | default: routes.all_products_collection_url }}" {{ block.shopify_attributes }}>{{ block.settings.button_label_1 | escape }}</a>
+    <div class="alma-campaign__frame">
+      {%- if section.settings.image != blank -%}
+        {{ section.settings.image | image_url: width: 2400 | image_tag: widths: '480, 750, 1100, 1500, 2000, 2400', sizes: '100vw', loading: 'eager', fetchpriority: 'high', class: 'alma-campaign__image' }}
+      {%- else -%}
+        <img class="alma-campaign__image" src="{{ 'alma-campaign-hero.png' | asset_url }}" width="1683" height="934" alt="ALMA spray and solid perfume in warm evening light" loading="eager" fetchpriority="high">
       {%- endif -%}
-    {%- endfor -%}
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'buttons' and block.settings.button_label_1 != blank -%}
+          <a class="alma-campaign__button button button--secondary" href="{{ block.settings.button_link_1 | default: routes.all_products_collection_url }}" {{ block.shopify_attributes }}>{{ block.settings.button_label_1 | escape }}</a>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
   </div>
   <div class="alma-ritual">
     {%- for block in section.blocks -%}

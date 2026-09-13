@@ -74,3 +74,50 @@ Unverified locally: Shopify Theme Editor behavior, live newsletter/contact submi
 - JavaScript syntax and a DOM-behavior fixture pass. The regenerated 22-product/183-variant CSV has no Arabic characters in customer-facing import content, and the local homepage endpoint returned HTTP 200 with no product-description excerpts.
 - Browser automation and two Theme Check attempts stalled during this pass. The previous Theme Check baseline remains 0 errors and 9 inherited Dawn warnings; no new completed visual-browser result is claimed.
 - AED cannot be validated locally: native prices follow Shopify's store currency. `currency_code_enabled` is already true, while the authenticated Shopify Admin currency change remains outstanding.
+
+## 2026-09-13 landing hero and sticky-scroll comparison
+
+Source visual truth:
+
+- `C:\Users\TYARA12\OneDrive\Pictures\Screenshots\Screenshot 2026-09-13 145912.png` — initial Diptyque landing state, 1365×727 px including 110 px browser chrome.
+- `C:\Users\TYARA12\OneDrive\Pictures\Screenshots\Screenshot 2026-09-13 145935.png` — early-scroll compact-header state, 1365×727 px including 110 px browser chrome.
+
+Implementation evidence:
+
+- `C:\Users\TYARA12\AppData\Local\Temp\alma-hero-desktop-initial-final.png` — local initial state.
+- `C:\Users\TYARA12\AppData\Local\Temp\alma-hero-desktop-midscroll-final.png` — local state after 99 px scroll.
+- `C:\Users\TYARA12\AppData\Local\Temp\alma-hero-mobile-final.png` — local mobile initial state.
+- `C:\Users\TYARA12\AppData\Local\Temp\alma-hero-qa-comparison.png` — normalized two-state source/implementation comparison board.
+
+Viewport and normalization:
+
+- Desktop CSS viewport: 1365×617 at device density 1. Browser screenshots are 1350×617 because the 15 px vertical scrollbar is excluded. Each source screenshot was cropped from y=110 to y=727, then scaled from 1365×617 to the same 1350×617 comparison slot.
+- Mobile CSS viewport: 390×844 at device density 1; rendered page width is 375 px plus the 15 px scrollbar.
+- States compared: top-of-page landing and 99 px opening scroll. The full viewport already isolates the header, hero crop and CTA at readable scale, so an additional focused crop was not needed.
+
+Full-view comparison:
+
+- Layout and rhythm: the implementation now follows the reference's full first-screen hero, bottom-centred rectangular CTA, compact sticky scroll state and clean release into the next content section.
+- Typography: Georgia provides the intended restrained serif CTA treatment; header navigation retains Dawn's configured body font and ALMA's existing scale. No actionable hierarchy or wrapping mismatch remains.
+- Colors and tokens: white header, black type/borders and warm full-bleed campaign palette match the reference structure. Hover remains ALMA's approved black inversion.
+- Image quality: the existing 1683×934 ALMA campaign artwork remains sharp and uses a deliberate 52%/54% desktop and 50%/52% mobile crop. It replaces Diptyque's proprietary video intentionally; no placeholder or CSS-drawn imagery is used.
+- Copy/content: `Discover the collection`, ALMA navigation and the user-selected icon remain authoritative. The reference announcement quote stays omitted because the user previously requested its removal.
+
+Comparison history:
+
+- Pass 1 — P1: the sticky header could render behind the hero in the local section-group fixture, and the CTA moved from y=519 to y=399 after 99 px scroll instead of retaining the reference position. Fix: added an explicit z-index to the sticky section, wrapped the image/CTA in a sticky campaign frame and introduced a 120 px desktop hold with compact-header dimensions.
+- Pass 2 — passed: initial header/hero heights measure 95/522 px and end exactly at the 617 px viewport boundary. At 99 px scroll, header/hero heights measure 74/543 px; CTA remains y=519–567 in both states, the header stays visible and the image fills the remaining viewport. At 359 px scroll, the frame releases and the ritual begins at y=357.
+- Mobile — passed: header/hero heights measure 82/762 px and total exactly 844 px; CTA is visible at y=766–814, the central crop shows both ALMA products, broken-image count is zero and horizontal overflow is zero.
+
+Findings:
+
+- No actionable P0, P1 or P2 differences remain within the requested interaction and the existing ALMA identity constraints.
+- Intentional differences: no announcement strip, ALMA icon remains left in the single-row header, and ALMA photography/copy replaces proprietary Diptyque media and branding.
+
+Validation:
+
+- Theme Check: 0 errors, 9 inherited Dawn warnings across 186 files.
+- Header JSON and preview JavaScript parse successfully; `git diff --check` passes.
+- Desktop and mobile browser console error lists are empty; no horizontal overflow or broken mobile images were detected.
+
+final result: passed
