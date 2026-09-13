@@ -168,12 +168,20 @@ html { overflow-x: hidden; }
 @media (max-width: 989px) {
   .alma-logo { width: 5.8rem; }
   .alma-theme .header { padding-top: .8rem; padding-bottom: .8rem; }
+  .alma-theme .alma-header--home { position: relative; }
+  .alma-theme .alma-header--home .header__heading { display: none; }
+  .alma-theme .alma-header--home .alma-header-wordmark { position: absolute; z-index: 1; top: 50%; left: 50%; display: block; width: 11.5rem; height: 5.83rem; overflow: hidden; transform: translate(-50%, -50%); }
+  .alma-theme .alma-header--home .alma-header-wordmark img { position: absolute; top: -9.71rem; left: -1.98rem; display: block; width: 16.99rem; max-width: none; height: auto; }
+  .alma-theme .scrolled-past-header .alma-header--home .header__heading { display: block; }
+  .alma-theme .scrolled-past-header .alma-header--home .alma-header-wordmark { display: none; }
   .alma-theme .section-header.menu-open { position: fixed; inset: 0 0 auto; width: 100%; }
   .alma-favourites__grid { grid-auto-columns: calc((100% - 1.6rem) / 2); gap: 3rem 1.6rem; }
   .alma-editorial__content { padding-left: 5rem; padding-right: 5rem; }
 }
 @media (max-width: 749px) {
   .alma-theme .header { min-height: 7.8rem; padding-left: 1.5rem; padding-right: 1.5rem; }
+  .alma-theme .alma-header--home .alma-header-wordmark { width: 10.5rem; height: 5.33rem; }
+  .alma-theme .alma-header--home .alma-header-wordmark img { top: -8.87rem; left: -1.81rem; width: 15.52rem; }
   .alma-theme .scrolled-past-header .alma-logo { width: 4.8rem; }
   .alma-campaign__media { height: 64rem; min-height: 0; }
   .alma-campaign__image { object-position: center; }
@@ -225,6 +233,10 @@ html { overflow-x: hidden; }
   .alma-footer-nav__group:not([open]) ul { display: none !important; }
   .alma-footer-nav__group ul { gap: 1.2rem; padding: .2rem 0 2.2rem; }
   .alma-footer-nav__group a { font-size: 1.25rem; }
+}
+@media (max-width: 374px) {
+  .alma-theme .alma-header--home .alma-header-wordmark { width: 9.2rem; height: 4.67rem; }
+  .alma-theme .alma-header--home .alma-header-wordmark img { top: -7.77rem; left: -1.58rem; width: 13.6rem; }
 }
 
 @media (max-width: 599px) {
