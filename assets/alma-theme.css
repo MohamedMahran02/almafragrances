@@ -5,7 +5,6 @@ html { overflow-x: hidden; }
   --alma-muted: #66635f;
   --alma-line: #d8d7d4;
   --alma-soft: #f6f6f5;
-  --alma-wine: #3d0010;
   --font-heading-family: Georgia, 'Times New Roman', serif;
   --font-heading-weight: 400;
   --font-heading-style: normal;
@@ -112,12 +111,12 @@ html { overflow-x: hidden; }
 .alma-wardrobe__card:hover .alma-wardrobe__image { transform: scale(1.015); }
 .alma-wardrobe__label { font-family: Georgia, 'Times New Roman', serif; font-size: 1.5rem; }
 
-.alma-service-band { max-width: none; padding: 5.5rem 3.2rem 6rem; border-top: 1px solid var(--alma-line); background: var(--alma-soft); text-align: center; }
-.alma-service-band h2 { margin-bottom: 4rem; font-size: 2.2rem; }
-.alma-service-band__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.alma-service-band { max-width: none; overflow: hidden; padding: 4rem 3.2rem 4.4rem; border-top: 1px solid var(--alma-line); background: var(--alma-soft); text-align: center; }
+.alma-service-band h2 { margin-bottom: 3rem; font-size: 2.2rem; }
+.alma-service-band__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 112rem; margin: 0 auto; }
 .alma-service-band__item { min-height: 0; padding: 0 3.5rem; border-right: 1px solid var(--alma-line); }
 .alma-service-band__item:last-child { border-right: 0; }
-.alma-service-band__mark { display: block; margin-bottom: 1.6rem; color: var(--alma-wine); font-size: 2rem; }
+.alma-service-band__mark { display: block; margin-bottom: 1.2rem; color: var(--alma-ink); font-size: 2rem; }
 .alma-service-band__item h3 { margin: 0 0 1rem; font-family: Georgia, 'Times New Roman', serif; font-size: 1.7rem; font-weight: 400; }
 .alma-service-band__item .rte { min-height: 0; color: var(--alma-muted); font-size: 1.25rem; }
 .alma-service-band__item .alma-text-link { font-size: 1.25rem; }
@@ -128,16 +127,18 @@ html { overflow-x: hidden; }
 .alma-footer__logo { display: grid; width: 7.2rem; height: 8.8rem; margin-bottom: 1.6rem; place-items: center; }
 .alma-footer__logo img { display: block; width: 5.5rem; height: 7.8rem; object-fit: contain; }
 .alma-footer__brand > p { margin: 0 0 .8rem; color: var(--alma-muted); font-size: 1.1rem; line-height: 1.45; }
-.alma-footer__brand .alma-footer__market { max-width: 17rem; color: var(--alma-wine); }
+.alma-footer__brand .alma-footer__market { max-width: 17rem; color: var(--alma-ink); }
+.alma-footer__copyright-inline { margin-top: 1.2rem; color: var(--alma-muted); font-size: 1rem; }
+.alma-footer__copyright-inline a { color: inherit; text-decoration: none; }
 .alma-footer__brand .list-social { justify-content: flex-start; margin: .8rem 0 0; }
-.alma-footer__brand .list-social__link { color: var(--alma-wine); }
+.alma-footer__brand .list-social__link { color: var(--alma-ink); }
 .alma-footer-nav { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(2rem, 3vw, 4.5rem); }
-.alma-footer-nav__group summary, .alma-footer__newsletter h2 { display: flex; align-items: center; justify-content: space-between; margin: 0 0 2rem; color: var(--alma-wine); font-family: var(--font-body-family); font-size: 1.15rem; font-weight: 700; letter-spacing: .14em; line-height: 1.3; list-style: none; text-transform: uppercase; pointer-events: none; }
+.alma-footer-nav__group summary, .alma-footer__newsletter h2 { display: flex; align-items: center; justify-content: space-between; margin: 0 0 2rem; color: var(--alma-ink); font-family: var(--font-body-family); font-size: 1.15rem; font-weight: 700; letter-spacing: .14em; line-height: 1.3; list-style: none; text-transform: uppercase; pointer-events: none; }
 .alma-footer-nav__group summary::-webkit-details-marker { display: none; }
 .alma-footer-nav__group summary .svg-wrapper { display: none; }
 .alma-footer-nav__group ul { display: grid !important; gap: 1rem; margin: 0; }
 .alma-footer-nav__group a { color: var(--alma-muted); font-size: 1.2rem; line-height: 1.35; text-decoration: none; }
-.alma-footer-nav__group a:hover { color: var(--alma-wine); text-decoration: underline; text-underline-offset: .4rem; }
+.alma-footer-nav__group a:hover { color: var(--alma-ink); text-decoration: underline; text-underline-offset: .4rem; }
 .alma-footer__newsletter h2 { justify-content: flex-start; }
 .alma-footer__newsletter-text { max-width: 34rem; margin: 0 0 2.4rem; color: var(--alma-muted); font-size: 1.2rem; line-height: 1.5; }
 .alma-footer__newsletter-text p { margin: 0; }
@@ -145,20 +146,13 @@ html { overflow-x: hidden; }
 .alma-theme .alma-footer__newsletter .newsletter-form__field-wrapper { max-width: none; }
 .alma-theme .alma-footer__newsletter .field { min-height: 4.8rem; }
 .alma-theme .alma-footer__newsletter .field:after { border-radius: 0; box-shadow: 0 0 0 1px var(--alma-ink); }
-.alma-theme .alma-footer__newsletter .field:hover.field:after { box-shadow: 0 0 0 2px var(--alma-wine); }
+.alma-theme .alma-footer__newsletter .field:hover.field:after { box-shadow: 0 0 0 2px var(--alma-ink); }
 .alma-theme .alma-footer__newsletter .field__input { border-radius: 0; background: #fff; color: var(--alma-ink); }
 .alma-theme .alma-footer__newsletter .field__label { color: var(--alma-muted); }
-.alma-theme .alma-footer__newsletter .newsletter-form__button { width: 5rem; background: #8d0028 !important; color: #fff; }
-.alma-theme .alma-footer__newsletter .newsletter-form__button:hover { background: #a60035 !important; }
-.alma-theme .footer__content-bottom { display: flex; flex-direction: column; gap: 1.2rem; padding: 0 3.2rem 1.8rem; border-top: 0; background: var(--alma-wine); color: #fff; }
-.alma-theme .footer__content-bottom-wrapper { max-width: 136rem; width: 100%; min-height: 0; padding: 0; }
-.alma-theme .footer__content-bottom-wrapper:first-child { display: flex; align-items: center; justify-content: space-between; }
-.alma-theme .footer__localization, .alma-theme .footer__column--info { display: flex; align-items: center; gap: 2rem; }
-.alma-theme .footer__content-bottom-wrapper:last-child { padding-top: 1.8rem; border-top: 1px solid rgba(255,255,255,.3); }
-.alma-theme .footer__copyright { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .8rem 3rem; width: 100%; color: rgba(255, 255, 255, .65); }
-.alma-theme .footer__copyright .policies { display: flex; flex-wrap: wrap; gap: 1.8rem; margin: 0; }
-.alma-theme .footer__copyright a, .alma-theme .footer__content-bottom .link { color: inherit; }
-.alma-theme .footer__content-bottom .list-social { margin: 0; }
+.alma-theme .alma-footer__newsletter .newsletter-form__button { width: 5rem; background: var(--alma-ink) !important; color: #fff; }
+.alma-theme .alma-footer__newsletter .newsletter-form__button:hover { background: #2b2926 !important; }
+.alma-footer__payment { margin-top: 1.6rem; }
+.alma-footer__payment .list-payment { justify-content: flex-start; padding-top: 0; }
 
 @media (prefers-reduced-motion: reduce) { .alma-wardrobe__image { transition: none; } }
 @media (max-width: 989px) {
@@ -221,10 +215,6 @@ html { overflow-x: hidden; }
   .alma-footer-nav__group:not([open]) ul { display: none !important; }
   .alma-footer-nav__group ul { gap: 1.2rem; padding: .2rem 0 2.2rem; }
   .alma-footer-nav__group a { font-size: 1.25rem; }
-  .alma-theme .footer__content-bottom { gap: 1.4rem; padding: 0 2rem 2rem; }
-  .alma-theme .footer__content-bottom-wrapper:first-child { align-items: flex-start; gap: 1.5rem; }
-  .alma-theme .footer__localization, .alma-theme .footer__column--info { align-items: flex-start; }
-  .alma-theme .footer__copyright { justify-content: flex-start; }
 }
 
 @media (max-width: 599px) {
@@ -236,7 +226,5 @@ html { overflow-x: hidden; }
   .alma-footer-nav { order: 3; display: block; }
   .alma-footer__newsletter h2 { margin-bottom: 1.4rem; }
   .alma-theme .alma-footer__newsletter .newsletter-form { max-width: none; }
-  .alma-theme .footer__content-bottom-wrapper:first-child { flex-wrap: wrap; }
-  .alma-theme .footer__copyright { display: grid; gap: 1.4rem; }
-  .alma-theme .footer__copyright .policies { gap: 1rem 1.8rem; }
+  .alma-footer__payment .list-payment { justify-content: center; }
 }

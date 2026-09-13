@@ -1,47 +1,44 @@
-# Design QA — compact ALMA-branded footer
+# Design QA — neutral one-piece footer and corrected desktop experience
 
-**Source and state**
+**Source visual truth**
 
-- Compact layout reference: `C:\Users\TYARA12\AppData\Local\Temp\codex-clipboard-820c4588-d5a7-4262-905f-9d8d28905b71.png`.
-- Required data reference: `C:\Users\TYARA12\AppData\Local\Temp\codex-clipboard-fcb8807b-2797-441b-9d80-0f46d9daaac3.png`, containing Shop, Explore ALMA, Help and Legal.
-- Implementation screenshots: `C:\Users\TYARA12\AppData\Local\Temp\alma-footer-brand-desktop.png` at a 1350 × 720 CSS viewport and `C:\Users\TYARA12\AppData\Local\Temp\alma-footer-brand-mobile.png` at 390 × 844, density 1.
-- Combined comparison: `C:\Users\TYARA12\AppData\Local\Temp\alma-footer-brand-comparison.png` (2667 × 327). The source ticker was excluded because ALMA's announcement bar remains intentionally removed; both footer regions were normalized to 327 px high.
-- State: homepage at the footer; four desktop groups open; four mobile groups initially closed, with Explore ALMA opened through its visible summary control.
+- User issue capture, separate burgundy footer strip: `C:\Users\TYARA12\AppData\Local\Temp\codex-clipboard-6d0f63de-bf55-43c6-9396-b232c957c5b4.png` (1351 × 101 px).
+- User issue capture, retired oversized ALMA experience imagery: `C:\Users\TYARA12\AppData\Local\Temp\codex-clipboard-81025632-cade-424a-8662-e59311f34e58.png` (1300 × 531 px).
+- Required target state: remove the first captured region, preserve its essential data in the upper footer, and restore the approved image-free three-column ALMA experience.
 
-**Full-view comparison evidence**
+**Implementation evidence**
 
-The board shows the compact structural reference on the left and the ALMA adaptation on the right. Both use a shallow brand/navigation/newsletter grid, rectangular email form, strong submit block, fine divider and low closing row. ALMA expands the central navigation from two to four narrow columns to preserve the complete original footer data requested by the user.
+- Desktop screenshot: `C:\Users\TYARA12\AppData\Local\Temp\alma-footer-experience-corrected-desktop.jpg` (1265 × 720 px), CSS viewport 1265 × 720, density 1.
+- Mobile screenshot: `C:\Users\TYARA12\AppData\Local\Temp\alma-footer-corrected-mobile.jpg` (375 × 844 px), CSS viewport 375 × 844, density 1.
+- Combined desktop issue/implementation comparison: `C:\Users\TYARA12\AppData\Local\Temp\alma-footer-experience-correction-comparison.jpg` (2542 × 720 px). The two issue captures are normalized into the left 1265 px column; the implementation occupies the right 1265 px column.
 
-**Focused region comparison evidence**
+**Findings and iteration history**
 
-The 327 px-high comparison keeps the logo, all headings, link density, newsletter input and bottom row readable, so a separate crop was unnecessary. The deliberate visual changes are ALMA's supplied icon, warm neutral background, wine headings/action, and wine closing band.
+1. P1 — separate burgundy utility strip conflicted with the selected ivory/black/gray palette and created a second footer section. Fixed by removing `footer__content-bottom`, retaining policies in Legal, moving copyright into the brand column and moving available payment icons beside the newsletter.
+2. P1 — the supplied desktop capture showed the retired service images at uncontrolled scale. Fixed by retaining image-free service markup and bounding the restored three-column grid to 1120 px; the final rendered section contains zero images.
+3. Final comparison — passed. The combined view shows one neutral footer and a compact three-column text experience with no burgundy UI region or oversized image.
 
 **Required fidelity surfaces**
 
-- Typography: compact uppercase tracked headings and small neutral links preserve the reference hierarchy while using the theme's configured body type.
-- Spacing/layout: the 262.1 px main footer grid and 72.4 px closing area keep the total desktop footer at 335.5 px. Brand, four data columns and newsletter share one row; mobile stacks brand/newsletter above four disclosure rows.
-- Colors/tokens: the browser renders the main field at `rgb(246, 246, 245)` and headings/closing band at `rgb(61, 0, 16)`, matching ALMA's established warm neutral and burgundy system.
-- Image quality: the exact 1055 × 1491 ALMA logo asset renders directly on the neutral field with no white tile, filter, redraw or replacement.
-- Copy/content: all 15 original links are restored across Shop (4), Explore ALMA (4), Help (4) and Legal (3), with the existing newsletter copy and UAE/English identity. No reference-brand copy or unverified service promise was introduced.
+- Fonts/typography: restrained serif experience headings and existing compact uppercase footer headings remain consistent with the established storefront.
+- Spacing/layout: desktop experience measures 297.9 px with three equal 373.3 px columns; footer measures 298.8 px and no separate closing strip remains.
+- Colors/tokens: footer background is `rgb(246, 246, 245)`; headings, markers, field outline and submit action use `rgb(17, 16, 15)`. Burgundy UI tokens and hard-coded burgundy controls are removed; the supplied logo pixels are unchanged.
+- Image quality: the experience contains no images or third-party overlays. The exact supplied ALMA logo remains the only footer brand image.
+- Copy/content: all four footer groups and 15 original links remain. Copyright and UAE/English context moved into the main footer; legal links were not duplicated.
 
-**Findings and comparison history**
+**Responsive and interaction checks**
 
-1. Prior pass — P1: the compact structure was correct but generic near-black styling suppressed ALMA's brand palette and only two navigation groups remained.
-2. Final pass — passed: restored all four original groups and applied the theme's warm neutral/wine treatment throughout. The composition remains compact at 335.5 px, with no actionable P0/P1/P2 findings.
-
-**Interaction and responsive checks**
-
-- Desktop 1350 × 720: four groups open with 4/4/4/3 links; 19 total footer anchors including brand and bottom policy links; customer newsletter present; document `scrollWidth` equals its 1265 px client width.
-- Mobile 390 × 844: footer measures 793.9 px; all four groups initialize closed; Explore ALMA opens and exposes Dukhoon, Solid Charms, Layering & Kits and Gift Cards; logo loads; document `scrollWidth` equals its 375 px client width.
-- Browser console error logs are empty. The local fixture cannot submit a real newsletter registration, inspect live payment availability or establish full assistive-technology behavior.
-- Theme Check passes with 0 errors and the same 9 inherited Dawn warnings; footer JavaScript syntax, footer-group JSON and Git whitespace validation pass.
+- Desktop 1265 × 720: three experience columns, zero experience images, four footer groups, newsletter and copyright; no `footer__content-bottom`; document `scrollWidth` equals `clientWidth` at 1265 px.
+- Mobile 375 × 844: no lower strip; four groups initialize closed; Explore ALMA opens through its visible summary and exposes all four links; document `scrollWidth` equals `clientWidth` at 375 px.
+- Local preview reports no captured runtime errors. The fixture has no enabled payment types, so payment-icon rendering cannot be visually exercised locally.
+- Theme Check passes with 0 errors and the same 9 inherited Dawn warnings; footer JavaScript syntax, footer-group/homepage JSON and Git whitespace validation pass.
 
 **Implementation checklist**
 
-- [x] Keep the compact reference structure.
-- [x] Apply ALMA's existing color system and exact logo.
-- [x] Restore all four original data groups and 15 links.
-- [x] Preserve native Shopify newsletter and platform hooks.
-- [x] Verify desktop/mobile containment and mobile disclosure behavior.
+- [x] Remove the separate burgundy footer section.
+- [x] Keep essential footer data in the neutral upper section.
+- [x] Replace burgundy UI treatments with the site black/ivory/gray palette.
+- [x] Restore and bound the image-free desktop ALMA experience.
+- [x] Verify desktop/mobile containment and mobile disclosures.
 
 final result: passed
