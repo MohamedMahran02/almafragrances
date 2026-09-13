@@ -4,6 +4,7 @@
 {{ 'component-list-menu.css' | asset_url | stylesheet_tag }}
 {{ 'component-list-payment.css' | asset_url | stylesheet_tag }}
 {{ 'component-list-social.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'alma-footer.js' | asset_url }}" defer="defer"></script>
 
 {%- style -%}
   .footer {
@@ -29,6 +30,12 @@
 
 <footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
   {%- liquid
+    assign alma_help_url = section.settings.help_link | default: routes.root_url
+    if alma_help_url == 'shopify://pages/contact'
+      assign alma_help_url = '/pages/contact'
+    endif
+    assign alma_collections_url = routes.collections_url | default: '/collections'
+
     assign has_social_icons = true
     if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
       assign has_social_icons = false
@@ -243,7 +250,7 @@
             {%- if section.settings.help_heading != blank -%}<h2>{{ section.settings.help_heading | escape }}</h2>{%- endif -%}
             {%- if section.settings.help_text != blank -%}<div class="rte">{{ section.settings.help_text }}</div>{%- endif -%}
             {%- if section.settings.help_link_label != blank -%}
-              <a class="alma-button" href="{{ section.settings.help_link | default: routes.root_url }}">{{ section.settings.help_link_label | escape }}</a>
+              <a class="alma-button" href="{{ alma_help_url }}">{{ section.settings.help_link_label | escape }}</a>
             {%- endif -%}
           </div>
 
@@ -253,13 +260,63 @@
             </div>
           {%- endif -%}
 
-          {%- if section.settings.show_social and has_social_icons -%}
-            {%- render 'social-icons', class: 'footer__list-social' -%}
-          {%- endif -%}
         </div>
       </div>
     {%- endunless -%}
   {%- endif -%}
+
+  <alma-footer-navigation class="alma-footer-nav page-width" role="navigation" aria-label="Footer navigation">
+    <details class="alma-footer-nav__group" open>
+      <summary>
+        <span>Shop</span>
+        <span class="svg-wrapper">{{- 'icon-caret.svg' | inline_asset_content -}}</span>
+      </summary>
+      <ul class="list-unstyled" role="list">
+        <li><a href="{{ routes.all_products_collection_url }}">All products</a></li>
+        <li><a href="{{ alma_collections_url }}/alma-perfumes">Spray Perfumes</a></li>
+        <li><a href="{{ alma_collections_url }}/alma-solids-%D9%85%D8%AE%D9%85%D8%B1%D9%8A%D8%A7%D8%AA">Solid Perfumes</a></li>
+        <li><a href="{{ alma_collections_url }}/alma-lotions">Lotions</a></li>
+      </ul>
+    </details>
+
+    <details class="alma-footer-nav__group" open>
+      <summary>
+        <span>Explore ALMA</span>
+        <span class="svg-wrapper">{{- 'icon-caret.svg' | inline_asset_content -}}</span>
+      </summary>
+      <ul class="list-unstyled" role="list">
+        <li><a href="{{ alma_collections_url }}/alma-dokhon">Dukhoon</a></li>
+        <li><a href="{{ alma_collections_url }}/alma-solid-charms">Solid Charms</a></li>
+        <li><a href="{{ alma_collections_url }}/layering-kits">Layering &amp; Kits</a></li>
+        <li><a href="/products/alma-fragrances-gift-card">Gift Cards</a></li>
+      </ul>
+    </details>
+
+    <details class="alma-footer-nav__group" open>
+      <summary>
+        <span>Help</span>
+        <span class="svg-wrapper">{{- 'icon-caret.svg' | inline_asset_content -}}</span>
+      </summary>
+      <ul class="list-unstyled" role="list">
+        <li><a href="{{ alma_help_url }}">Contact us</a></li>
+        <li><a href="{{ routes.search_url }}">Search</a></li>
+        <li><a href="{{ routes.account_url }}">My account</a></li>
+        <li><a href="{{ routes.cart_url }}">Shopping bag</a></li>
+      </ul>
+    </details>
+
+    <details class="alma-footer-nav__group" open>
+      <summary>
+        <span>Legal</span>
+        <span class="svg-wrapper">{{- 'icon-caret.svg' | inline_asset_content -}}</span>
+      </summary>
+      <ul class="list-unstyled" role="list">
+        <li><a href="/policies/privacy-policy">Privacy policy</a></li>
+        <li><a href="/policies/terms-of-service">Terms of service</a></li>
+        <li><a href="/policies/refund-policy">Refund policy</a></li>
+      </ul>
+    </details>
+  </alma-footer-navigation>
 
   <div
     class="footer__content-bottom{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -269,6 +326,7 @@
   >
     <div class="footer__content-bottom-wrapper page-width">
       <div class="footer__column footer__localization isolate">
+        <p class="alma-footer__market">United Arab Emirates <span aria-hidden="true">·</span> English</p>
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
           <localization-form>
             {%- form 'localization', id: 'FooterCountryForm', class: 'localization-form' -%}
@@ -306,6 +364,9 @@
             </ul>
           </div>
         {%- endif -%}
+        {%- if section.settings.show_social and has_social_icons -%}
+          {%- render 'social-icons', class: 'footer__list-social' -%}
+        {%- endif -%}
       </div>
     </div>
     <div class="footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}">
@@ -313,7 +374,6 @@
         <small class="copyright__content"
           >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
         </small>
-        <small class="copyright__content">{{ powered_by_link }}</small>
         {%- if section.settings.show_policy -%}
           <ul class="policies list-unstyled">
             {%- for policy in shop.policies -%}

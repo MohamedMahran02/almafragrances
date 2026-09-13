@@ -1,53 +1,70 @@
-# Design QA — mobile ALMA wardrobe grid
+# Design QA — ALMA footer rebuild
 
-- Source visual truth: `C:\Users\TYARA12\AppData\Local\Temp\codex-clipboard-263c0385-48b0-4857-b132-4e7bca0c0d37.png`
-- Browser-rendered implementation: `C:\Users\TYARA12\AppData\Local\Temp\alma-wardrobe-mobile-353-with-header.png`
-- Combined comparison evidence: `C:\Users\TYARA12\AppData\Local\Temp\alma-wardrobe-mobile-comparison.png`
-- Viewport: 353 × 603 CSS px at device scale factor 1.
-- Pixels and normalization: source 353 × 603 px; implementation 353 × 603 px. The focused comparison removes the implementation's 78 px sticky site header, which is outside the supplied section reference, and compares equal-width 353 × 525 px regions side by side.
-- State: homepage scrolled to the start of “Explore the ALMA wardrobe”; mobile breakpoint below 750 px.
+- Source visual truth: live `https://diptyqueparis.com/fr-fr` footer captured on 2026-09-13.
+- Source screenshots: `C:\Users\TYARA12\AppData\Local\Temp\diptyque-footer-reference-01.png`, `C:\Users\TYARA12\AppData\Local\Temp\diptyque-footer-reference-02.png`, and `C:\Users\TYARA12\AppData\Local\Temp\diptyque-footer-mobile-reference.png`.
+- Browser-rendered implementation: `C:\Users\TYARA12\AppData\Local\Temp\alma-footer-desktop-final-top.png`, `C:\Users\TYARA12\AppData\Local\Temp\alma-footer-desktop-final-bottom.png`, and `C:\Users\TYARA12\AppData\Local\Temp\alma-footer-mobile-final.png`.
+- Combined comparison evidence: `C:\Users\TYARA12\AppData\Local\Temp\alma-footer-comparison.png`.
+- Desktop viewport: 1280 × 720 CSS px at density 1; screenshots exclude the 15 px Windows scrollbar from the 1265 px content area.
+- Mobile viewport: 390 × 844 CSS px at density 1; the rendered document client width is 375 px.
+- State: homepage at the footer; reference country prompt dismissed; desktop groups expanded; mobile groups initially collapsed and Shop tested open.
+
+## Audit findings before implementation
+
+- P1 structural gap: ALMA had no footer navigation between the newsletter/help panels and copyright, while the reference uses a substantial four-column destination layer.
+- P2 hierarchy gap: the white copyright-only ending lacked the clear visual closure of the reference's black market/social utility bar.
+- P2 responsive gap: no compact mobile navigation pattern existed because no footer link groups were present.
+- Confirmed strength: the existing split newsletter/help panels already matched the reference's broad composition and preserved a real Shopify customer form.
 
 ## Full-view comparison evidence
 
-The supplied reference and browser capture were combined into one 706 × 525 px comparison image. Both show a centered two-line serif title, two equal image columns, a compact gap between the columns, square image fields, centered labels with one-pixel underlines and generous repeated row spacing. ALMA's approved English category names and packshots intentionally replace Diptyque's French copy and proprietary imagery.
+The combined 1280 × 360 evidence places the live reference and revised implementation together. Both now use a split newsletter/help area, a spacious four-column navigation layer and a dark full-width closing bar. ALMA intentionally uses its own English navigation, UAE context, products and verified destinations. The reference has more service links and configured social accounts; these were not fabricated for ALMA.
 
 ## Focused region comparison evidence
 
-The first two rows are large enough in the combined comparison to evaluate the requested component without another crop. At 353 px, ALMA renders two 145 px cards separated by 8 px; the grid begins 121.7 px below the section edge and repeats with a 55 px row gap. The labels use 15.5 px Georgia with 1.15 line height and wrap only where the longer ALMA category names require it. All six 1000 × 1000 WebP packshots load without crop or distortion.
+The desktop navigation and closing bar are readable in the combined comparison. The mobile screenshot and DOM measurements separately verify the reference's accordion behavior: four ALMA groups initialize closed and the Shop group expands from 64.9 px to 240.9 px to expose four links. Another focused crop was not needed.
 
 ## Required fidelity surfaces
 
-- Fonts and typography: regular Georgia serif matches the reference hierarchy; heading and labels are centered, with controlled wrapping and thin label underlines.
-- Spacing and layout rhythm: two equal columns, 8 px column gap, 55 px row gap, square media and a compact section opening match the reference's mobile composition.
-- Colors and visual tokens: white section canvas, warm off-white image fields and black typography remain consistent with both the reference and the existing ALMA system.
-- Image quality and asset fidelity: approved ALMA 1000 px WebP packshots are contained and uncropped; no placeholder, CSS-drawn or substitute imagery is used.
-- Copy and content: English ALMA category names and existing destinations remain authoritative; the mobile supporting sentence is hidden to match the reference's title-to-grid rhythm.
+- Fonts and typography: regular Georgia headings and group titles preserve the reference's restrained serif hierarchy; body links remain compact, readable and consistently spaced.
+- Spacing and layout rhythm: 460 px desktop newsletter/help panels lead into a 328 px four-column navigation area and a 116 px dark closing bar. Mobile panels stack at 360 px each, followed by 64.9 px collapsed rows.
+- Colors and visual tokens: white newsletter, soft-gray help panel, one-pixel separators and near-black utility bar match the reference's hierarchy using existing ALMA tokens.
+- Image quality and asset fidelity: the footer introduces no new imagery or fake assets. Existing theme-provided caret and social/payment assets remain authoritative.
+- Copy and content: all text is English and ALMA-specific. No unverified shipping, returns, phone, opening hours, samples or service promises were copied from the reference.
 
-## Findings
+## Accessibility and interaction evidence
 
-- No actionable P0, P1 or P2 differences remain for the requested mobile section.
-- Accepted product constraint: longer ALMA labels wrap more often than the shorter French reference labels.
-- Accepted environment difference: the Windows preview scrollbar reduces the 353 px viewport's document client width to 338 px; the grid remains fully contained with no horizontal page overflow.
+- The new navigation wrapper exposes `role="navigation"` and `aria-label="Footer navigation"` inside the existing contentinfo landmark.
+- Mobile groups use native `details`/`summary`, preserving keyboard and assistive-technology disclosure semantics; no-JavaScript fallback leaves all groups expanded.
+- The Shopify newsletter retains its visible label, required email input, submission button and success/error output.
+- The Shop disclosure was activated in the in-app browser and exposed All products, Spray Perfumes, Solid Perfumes and Lotions.
+- Screenshots cannot prove full keyboard traversal, screen-reader announcements or policy-page content; those remain live-theme verification items.
 
 ## Comparison history
 
-1. Initial implementation rendered a one-card horizontal mobile rail with visible arrows/progress, 4:5 tiles and the supporting sentence. This was a P1 structural mismatch.
-2. Rebuilt the mobile section as a two-column grid, removed mobile carousel chrome, hid the sentence, changed tiles to square and added underlined labels. The first pass used 150 px cards.
-3. Increased horizontal padding from 15 px to 20 px, yielding 145 px cards and closer reference margins. The revised comparison has no actionable P0/P1/P2 findings.
+1. Before: split newsletter/help panels followed directly by an 81 px white copyright strip. P1/P2 findings remained.
+2. Pass 1: added four desktop columns, native mobile disclosures and dark utility bar. Browser refresh initially showed cached Liquid; the local preview server was restarted.
+3. Pass 2: normalized the Theme Editor contact URI so both visible Contact us links resolve to `/pages/contact`. Desktop and mobile retests have no actionable P0/P1/P2 findings.
 
-## Interaction and responsive checks
+## Responsive verification
 
-- 353 × 603: six cards in a two-column grid, carousel footer hidden, no broken images, document `scrollWidth` equals `clientWidth` (338 px).
-- 390 × 844: two 163.5 px columns, carousel footer hidden, no broken images or horizontal overflow, meaningful page content and no framework error overlay.
-- 1280 × 720: desktop behavior preserved with four 288.25 px visible cards, horizontal overflow, progress/footer visible and next control enabled.
-- The first category link was activated in the local preview harness and its real `/collections/alma-perfumes` destination remains present; the harness serves its homepage fixture for collection paths and is not a Shopify route emulator.
+- 1280 × 720: 15 navigation links, four expanded groups, one customer form, `/pages/contact` on both contact links, zero broken footer images and document `scrollWidth` equal to `clientWidth` (1265 px).
+- 390 × 844: four groups initialize closed; Shop opens and exposes four links; the newsletter form remains present; zero broken footer images; document `scrollWidth` equals `clientWidth` (375 px); no framework error overlay.
+- Desktop keeps localization, payment and optional social hooks. With no social profile URLs configured, no social icons are invented.
+- Theme Check passes with 0 errors and the same 9 inherited Dawn warnings; `alma-footer.js` syntax, footer-group JSON and Git whitespace checks pass.
+
+## Findings
+
+- No actionable P0, P1 or P2 differences remain within the requested footer scope and ALMA's verified content constraints.
+- P3: the live store can populate real social profile URLs later; the dark utility bar will render Dawn's native icons automatically.
 
 ## Implementation checklist
 
-- [x] Match the mobile two-column category layout.
-- [x] Preserve approved ALMA imagery and English destinations.
-- [x] Remove mobile-only carousel chrome.
-- [x] Preserve desktop carousel behavior.
-- [x] Verify responsive containment and loaded imagery.
+- [x] Preserve native Shopify newsletter behavior.
+- [x] Add useful ALMA footer destinations.
+- [x] Match the desktop four-column hierarchy.
+- [x] Match the mobile accordion behavior.
+- [x] Add the dark closing utility bar.
+- [x] Avoid unverified service claims.
+- [x] Verify responsive containment and links.
 
 final result: passed
