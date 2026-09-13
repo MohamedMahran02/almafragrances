@@ -69,7 +69,20 @@
 
     <details class="alma-footer-nav__group" open>
       <summary>
-        <span>Customer care</span>
+        <span>Explore ALMA</span>
+        <span class="svg-wrapper">{{- 'icon-caret.svg' | inline_asset_content -}}</span>
+      </summary>
+      <ul class="list-unstyled" role="list">
+        <li><a href="{{ alma_collections_url }}/alma-dokhon">Dukhoon</a></li>
+        <li><a href="{{ alma_collections_url }}/alma-solid-charms">Solid Charms</a></li>
+        <li><a href="{{ alma_collections_url }}/layering-kits">Layering &amp; Kits</a></li>
+        <li><a href="/products/alma-fragrances-gift-card">Gift Cards</a></li>
+      </ul>
+    </details>
+
+    <details class="alma-footer-nav__group" open>
+      <summary>
+        <span>Help</span>
         <span class="svg-wrapper">{{- 'icon-caret.svg' | inline_asset_content -}}</span>
       </summary>
       <ul class="list-unstyled" role="list">
@@ -77,6 +90,18 @@
         <li><a href="{{ routes.search_url }}">Search</a></li>
         <li><a href="{{ routes.account_url }}">My account</a></li>
         <li><a href="{{ routes.cart_url }}">Shopping bag</a></li>
+      </ul>
+    </details>
+
+    <details class="alma-footer-nav__group" open>
+      <summary>
+        <span>Legal</span>
+        <span class="svg-wrapper">{{- 'icon-caret.svg' | inline_asset_content -}}</span>
+      </summary>
+      <ul class="list-unstyled" role="list">
+        <li><a href="/policies/privacy-policy">Privacy policy</a></li>
+        <li><a href="/policies/terms-of-service">Terms of service</a></li>
+        <li><a href="/policies/refund-policy">Refund policy</a></li>
       </ul>
     </details>
     </alma-footer-navigation>
