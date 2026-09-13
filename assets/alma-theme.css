@@ -153,8 +153,6 @@ html { overflow-x: hidden; }
 .alma-theme .alma-footer__newsletter .field__label { color: var(--alma-muted); }
 .alma-theme .alma-footer__newsletter .newsletter-form__button { width: 5rem; background: var(--alma-ink) !important; color: #fff; }
 .alma-theme .alma-footer__newsletter .newsletter-form__button:hover { background: #2b2926 !important; }
-.alma-footer__payment { margin-top: 1.6rem; }
-.alma-footer__payment .list-payment { justify-content: flex-start; padding-top: 0; }
 
 @media (prefers-reduced-motion: reduce) { .alma-wardrobe__image { transition: none; } }
 @media (max-width: 989px) {
@@ -228,5 +226,4 @@ html { overflow-x: hidden; }
   .alma-footer-nav { order: 3; display: block; }
   .alma-footer__newsletter h2 { margin-bottom: 1.4rem; }
   .alma-theme .alma-footer__newsletter .newsletter-form { max-width: none; }
-  .alma-footer__payment .list-payment { justify-content: center; }
 }

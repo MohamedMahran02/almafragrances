@@ -34,6 +34,7 @@
 - Restarted local sync-safeguard check: `data-alma-service-layout="text"` is present; the section contains zero images, three descriptions and three links; document `scrollWidth` equals `clientWidth` at 1265 px.
 - Local preview reports no captured runtime errors. The fixture has no enabled payment types, so payment-icon rendering cannot be visually exercised locally.
 - Theme Check passes with 0 errors and the same 9 inherited Dawn warnings; footer JavaScript syntax, footer-group/homepage JSON and Git whitespace validation pass. Public verification remains blocked because the unauthenticated storefront redirects to `/password` and the signed-in external Chrome session is not connected for browser control.
+- PayPal removal: the footer payment renderer and setting are removed; the local footer contains no `.alma-footer__payment`, `.footer__payment`, `.list-payment` or PayPal badge. Newsletter and navigation remain present.
 
 **Implementation checklist**
 
