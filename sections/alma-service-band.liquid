@@ -2,36 +2,10 @@
   <h2 id="AlmaService-{{ section.id }}">{{ section.settings.heading | escape }}</h2>
   <div class="alma-service-band__grid">
     {%- for block in section.blocks -%}
-      {%- liquid
-        assign service_image = block.settings.image
-        assign service_asset = ''
-        if service_image == blank
-          case block.settings.heading
-            when 'Personal gifting'
-              assign service_asset = 'alma-packshot-alma-fragrances-gift-card.webp'
-            when 'A three-step ritual'
-              assign service_asset = 'alma-packshot-alma-layering-box.webp'
-            when 'The complete wardrobe'
-              assign service_asset = 'alma-packshot-alma-hair-and-body-perfume.webp'
-          endcase
-        endif
-        assign service_link = block.settings.link | replace: 'shopify://products/', '/products/' | replace: 'shopify://collections/', '/collections/'
-      -%}
-      <div class="alma-service-band__item" {{ block.shopify_attributes }}>
-        {%- if service_link != blank -%}<a class="alma-service-band__link" href="{{ service_link }}" aria-label="{{ block.settings.link_label | default: block.settings.heading | escape }}">{%- else -%}<div class="alma-service-band__link">{%- endif -%}
-          <span class="alma-service-band__media">
-            {%- if service_image != blank -%}
-              {{ service_image | image_url: width: 320 | image_tag: loading: 'lazy', widths: '120, 180, 240, 320', sizes: '110px', class: 'alma-service-band__image', alt: block.settings.heading }}
-            {%- elsif service_asset != blank -%}
-              <img class="alma-service-band__image" src="{{ service_asset | asset_url }}" width="1000" height="1000" loading="lazy" alt="{{ block.settings.heading | escape }}">
-            {%- endif -%}
-          </span>
-          <h3>{{ block.settings.heading | escape }}</h3>
-        {%- if service_link != blank -%}</a>{%- else -%}</div>{%- endif -%}
-      </div>
+      <div class="alma-service-band__item" {{ block.shopify_attributes }}><span class="alma-service-band__mark" aria-hidden="true">✦</span><h3>{{ block.settings.heading | escape }}</h3>{%- if block.settings.text != blank -%}<div class="rte">{{ block.settings.text }}</div>{%- endif -%}{%- if block.settings.link_label != blank and block.settings.link != blank -%}<a class="alma-text-link" href="{{ block.settings.link }}">{{ block.settings.link_label | escape }}</a>{%- endif -%}</div>
     {%- endfor -%}
   </div>
 </section>
 {% schema %}
-{"name":"ALMA services","settings":[{"type":"text","id":"heading","label":"Heading","default":"At your service"}],"max_blocks":4,"blocks":[{"type":"service","name":"Service","settings":[{"type":"text","id":"heading","label":"Heading"},{"type":"image_picker","id":"image","label":"Override image"},{"type":"richtext","id":"text","label":"Text"},{"type":"text","id":"link_label","label":"Link label"},{"type":"url","id":"link","label":"Link"}]}],"presets":[{"name":"ALMA services","blocks":[{"type":"service"},{"type":"service"},{"type":"service"}]}]}
+{"name":"ALMA services","settings":[{"type":"text","id":"heading","label":"Heading","default":"At your service"}],"max_blocks":4,"blocks":[{"type":"service","name":"Service","settings":[{"type":"text","id":"heading","label":"Heading"},{"type":"richtext","id":"text","label":"Text"},{"type":"text","id":"link_label","label":"Link label"},{"type":"url","id":"link","label":"Link"}]}],"presets":[{"name":"ALMA services","blocks":[{"type":"service"},{"type":"service"},{"type":"service"}]}]}
 {% endschema %}

@@ -112,15 +112,15 @@ html { overflow-x: hidden; }
 .alma-wardrobe__card:hover .alma-wardrobe__image { transform: scale(1.015); }
 .alma-wardrobe__label { font-family: Georgia, 'Times New Roman', serif; font-size: 1.5rem; }
 
-.alma-service-band { max-width: none; padding: 3.5rem 3.2rem 3.8rem; border-top: 1px solid var(--alma-line); background: #fff; text-align: center; }
-.alma-service-band h2 { margin-bottom: 2.8rem; font-size: 2.6rem; }
-.alma-service-band__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; max-width: 96rem; margin: 0 auto; }
-.alma-service-band__item { min-width: 0; }
-.alma-service-band__link { display: grid; justify-items: center; gap: 1.2rem; color: inherit; text-decoration: none; }
-.alma-service-band__media { display: block; width: 9.6rem; aspect-ratio: 1; overflow: hidden; border: 1px solid var(--alma-ink); border-radius: 46% / 40%; background: #f4f2ed; }
-.alma-service-band__image { box-sizing: border-box; display: block; width: 100%; height: 100%; padding: .8rem; object-fit: contain; transition: transform .35s ease; }
-.alma-service-band__link:hover .alma-service-band__image { transform: scale(1.035); }
-.alma-service-band__item h3 { max-width: 16rem; margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: 1.45rem; font-weight: 400; line-height: 1.2; }
+.alma-service-band { max-width: none; padding: 5.5rem 3.2rem 6rem; border-top: 1px solid var(--alma-line); background: var(--alma-soft); text-align: center; }
+.alma-service-band h2 { margin-bottom: 4rem; font-size: 2.2rem; }
+.alma-service-band__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.alma-service-band__item { min-height: 0; padding: 0 3.5rem; border-right: 1px solid var(--alma-line); }
+.alma-service-band__item:last-child { border-right: 0; }
+.alma-service-band__mark { display: block; margin-bottom: 1.6rem; color: var(--alma-wine); font-size: 2rem; }
+.alma-service-band__item h3 { margin: 0 0 1rem; font-family: Georgia, 'Times New Roman', serif; font-size: 1.7rem; font-weight: 400; }
+.alma-service-band__item .rte { min-height: 0; color: var(--alma-muted); font-size: 1.25rem; }
+.alma-service-band__item .alma-text-link { font-size: 1.25rem; }
 
 .alma-theme .footer { margin-top: 0; border-top: 1px solid #2a2a2a; background: #090909; color: #fff; }
 .alma-footer__main { display: grid; grid-template-columns: minmax(15rem, .75fr) minmax(34rem, 1.55fr) minmax(28rem, 1fr); gap: clamp(4rem, 6vw, 9rem); max-width: 136rem; padding-top: 3.8rem; padding-bottom: 3.5rem; }
@@ -160,7 +160,7 @@ html { overflow-x: hidden; }
 .alma-theme .footer__copyright a, .alma-theme .footer__content-bottom .link { color: inherit; }
 .alma-theme .footer__content-bottom .list-social { margin: 0; }
 
-@media (prefers-reduced-motion: reduce) { .alma-wardrobe__image, .alma-service-band__image { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .alma-wardrobe__image { transition: none; } }
 @media (max-width: 989px) {
   .alma-logo { width: 5.8rem; }
   .alma-theme .header { padding-top: .8rem; padding-bottom: .8rem; }
@@ -206,11 +206,10 @@ html { overflow-x: hidden; }
   .alma-wardrobe__image, .alma-wardrobe__card:first-child .alma-wardrobe__image, .alma-wardrobe__card:nth-child(5) .alma-wardrobe__image { padding: .8rem; }
   .alma-wardrobe__label { justify-self: center; max-width: 12ch; padding: 0 .2rem .5rem; border-bottom: 1px solid currentColor; font-size: 1.55rem; line-height: 1.15; }
   .alma-wardrobe .alma-scroll-gallery__footer { display: none; }
-  .alma-service-band { padding: 2.8rem 0 3rem; overflow: hidden; }
-  .alma-service-band h2 { margin-bottom: 2.4rem; padding: 0 2rem; font-size: 2.8rem; }
-  .alma-service-band__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem; max-width: none; margin: 0; padding: 0 1.5rem .8rem; }
-  .alma-service-band__media { width: clamp(7.6rem, 24vw, 9rem); }
-  .alma-service-band__item h3 { max-width: 10rem; font-size: 1.3rem; }
+  .alma-service-band { padding: 4.5rem 2rem; }
+  .alma-service-band__grid { grid-template-columns: 1fr; }
+  .alma-service-band__item { padding: 2.8rem 0; border-right: 0; border-bottom: 1px solid var(--alma-line); }
+  .alma-service-band__item:last-child { border-bottom: 0; }
   .alma-footer__main { grid-template-columns: 1fr 1fr; gap: 4rem; padding-top: 4rem; padding-bottom: 4rem; }
   .alma-footer__brand { grid-column: 1; }
   .alma-footer-nav { grid-column: 1 / -1; grid-row: 2; }
