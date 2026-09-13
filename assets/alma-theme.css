@@ -23,12 +23,22 @@ html { overflow-x: hidden; }
 .alma-logo { position: relative; display: block; width: 7rem; aspect-ratio: 891 / 943; overflow: hidden; transition: width .3s cubic-bezier(.52, 0, .61, .99); }
 .alma-logo img { position: absolute; top: -24.5%; left: -4.25%; width: 108.5%; max-width: none; height: auto; image-rendering: auto; }
 .alma-theme .scrolled-past-header .alma-logo { width: 5rem; }
+.alma-header-wordmark { display: none; }
 
 @media (min-width: 990px) {
   .alma-theme .header--middle-left { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); column-gap: 3rem; }
   .alma-theme .header--middle-left .header__heading { justify-self: start; }
   .alma-theme .header--middle-left .header__inline-menu { justify-self: center; }
   .alma-theme .header--middle-left .header__inline-menu > .list-menu--inline { justify-content: center; }
+  .alma-theme .alma-header--home { grid-template-areas: 'compact wordmark icons' 'nav nav nav'; grid-template-rows: 7.1rem auto; row-gap: .6rem; padding-top: 1rem; padding-bottom: 1.2rem; }
+  .alma-theme .alma-header--home .header__heading { grid-area: compact; display: none; }
+  .alma-theme .alma-header--home .alma-header-wordmark { position: relative; grid-area: wordmark; display: block; width: 14rem; height: 7.1rem; overflow: hidden; justify-self: center; }
+  .alma-theme .alma-header--home .alma-header-wordmark img { position: absolute; top: -11.82rem; left: -2.41rem; display: block; width: 20.69rem; max-width: none; height: auto; }
+  .alma-theme .alma-header--home .header__inline-menu { grid-area: nav; }
+  .alma-theme .alma-header--home .header__icons { grid-area: icons; align-self: center; justify-self: end; }
+  .alma-theme .scrolled-past-header .alma-header--home { grid-template-areas: 'compact nav icons'; grid-template-rows: auto; min-height: 7.2rem; row-gap: 0; padding-top: .6rem; padding-bottom: .6rem; }
+  .alma-theme .scrolled-past-header .alma-header--home .header__heading { display: block; }
+  .alma-theme .scrolled-past-header .alma-header--home .alma-header-wordmark { display: none; }
 }
 
 .alma-campaign { color: var(--alma-ink); background: #fff; }

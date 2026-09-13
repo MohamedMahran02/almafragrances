@@ -1,47 +1,46 @@
-# Design QA — neutral one-piece footer and corrected desktop experience
+# Design QA — expanding homepage wordmark header
 
 **Source visual truth**
 
-- User issue capture, separate burgundy footer strip: `C:\Users\TYARA12\AppData\Local\Temp\codex-clipboard-6d0f63de-bf55-43c6-9396-b232c957c5b4.png` (1351 × 101 px).
-- User issue capture, retired oversized ALMA experience imagery: `C:\Users\TYARA12\AppData\Local\Temp\codex-clipboard-81025632-cade-424a-8662-e59311f34e58.png` (1300 × 531 px).
-- Required target state: remove the first captured region, preserve its essential data in the upper footer, and restore the approved image-free three-column ALMA experience.
+- Header reference: `C:\Users\TYARA12\AppData\Local\Temp\codex-clipboard-1db214dc-9d65-47b0-a458-3ab735b2e63a.png` (1351 × 215 px).
+- Supplied ALMA wordmark: `F:\Alma Fragrances Branding\ChatGPT Image Sep 11, 2026, 07_29_34 PM (2).png` (1055 × 1491 px RGBA). Its SHA-256 matches the copied `assets/alma-logo-wordmark.png`.
+- Requested states: wordmark centered above category tabs on the first desktop screen; after scrolling, no wordmark and a compact row with the icon left and tabs centered.
 
 **Implementation evidence**
 
-- Desktop screenshot: `C:\Users\TYARA12\AppData\Local\Temp\alma-footer-experience-corrected-desktop.jpg` (1265 × 720 px), CSS viewport 1265 × 720, density 1.
-- Mobile screenshot: `C:\Users\TYARA12\AppData\Local\Temp\alma-footer-corrected-mobile.jpg` (375 × 844 px), CSS viewport 375 × 844, density 1.
-- Combined desktop issue/implementation comparison: `C:\Users\TYARA12\AppData\Local\Temp\alma-footer-experience-correction-comparison.jpg` (2542 × 720 px). The two issue captures are normalized into the left 1265 px column; the implementation occupies the right 1265 px column.
+- Expanded desktop: `C:\Users\TYARA12\AppData\Local\Temp\alma-header-expanded-desktop.jpg` (1265 × 720 px), CSS viewport 1265 × 720, density 1.
+- Scrolled desktop: `C:\Users\TYARA12\AppData\Local\Temp\alma-header-compact-desktop.jpg` (1265 × 720 px), same viewport and density, page scroll 299 px.
+- Combined reference/expanded/scrolled comparison: `C:\Users\TYARA12\AppData\Local\Temp\alma-header-reference-comparison.jpg` (3819 × 220 px). Each panel is normalized to 1265 × 220 px.
 
-**Findings and iteration history**
+**Findings and comparison history**
 
-1. P1 — separate burgundy utility strip conflicted with the selected ivory/black/gray palette and created a second footer section. Fixed by removing `footer__content-bottom`, retaining policies in Legal, moving copyright into the brand column and moving available payment icons beside the newsletter.
-2. P1 — the supplied desktop capture showed the retired service images at uncontrolled scale. Fixed by retaining image-free service markup and bounding the restored three-column grid to 1120 px; the final rendered section contains zero images.
-3. Final comparison — passed. The combined view shows one neutral footer and a compact three-column text experience with no burgundy UI region or oversized image.
-4. P0 live-sync regression — the public Shopify storefront served the retired image-based service markup while loading the newer CSS, producing uncontrolled full-width images. A new `alma-service-band--text`/`data-alma-service-layout="text"` section revision and defensive legacy-image rule are ready; public storefront verification is required after theme sync.
+1. Initial implementation — P1: the homepage used only the icon in a single desktop row, so it lacked the reference's centered brand-above-navigation hierarchy.
+2. Revised implementation — passed: the first screen now has the supplied wordmark above navigation and transitions to the exact requested icon-left compact row after scrolling.
+3. Intentional difference: search remains in the right utility group because the user previously explicitly moved it to the right. The removed announcement strip remains removed.
 
 **Required fidelity surfaces**
 
-- Fonts/typography: restrained serif experience headings and existing compact uppercase footer headings remain consistent with the established storefront.
-- Spacing/layout: desktop experience measures 297.9 px with three equal 373.3 px columns; footer measures 298.8 px and no separate closing strip remains.
-- Colors/tokens: footer background is `rgb(246, 246, 245)`; headings, markers, field outline and submit action use `rgb(17, 16, 15)`. Burgundy UI tokens and hard-coded burgundy controls are removed; the supplied logo pixels are unchanged.
-- Image quality: the experience contains no images or third-party overlays. The exact supplied ALMA logo remains the only footer brand image.
-- Copy/content: all four footer groups and 15 original links remain. Copyright and UAE/English context moved into the main footer; legal links were not duplicated.
+- Fonts/typography: navigation retains the established storefront body font and restrained size; logo lettering is raster artwork from the supplied wordmark rather than recreated text.
+- Spacing/layout: expanded header is 132.5 px; the wordmark viewport is 140 × 71 px and navigation sits at y=87–120.5 px. Scrolled header is 72 px with icon, tabs and utilities in one row.
+- Colors/tokens: white surface, black navigation/utilities and the supplied logo's original pixels are preserved.
+- Image quality: both header identities use exact source assets. The wordmark file is copied byte-for-byte; CSS crops its transparent outer canvas without resampling or editing the artwork.
+- Copy/content: all six English category tabs remain in their established order. No reference-brand text was copied.
 
 **Responsive and interaction checks**
 
-- Desktop 1265 × 720: three experience columns, zero experience images, four footer groups, newsletter and copyright; no `footer__content-bottom`; document `scrollWidth` equals `clientWidth` at 1265 px.
-- Mobile 375 × 844: no lower strip; four groups initialize closed; Explore ALMA opens through its visible summary and exposes all four links; document `scrollWidth` equals `clientWidth` at 375 px.
-- Restarted local sync-safeguard check: `data-alma-service-layout="text"` is present; the section contains zero images, three descriptions and three links; document `scrollWidth` equals `clientWidth` at 1265 px.
-- Local preview reports no captured runtime errors. The fixture has no enabled payment types, so payment-icon rendering cannot be visually exercised locally.
-- Theme Check passes with 0 errors and the same 9 inherited Dawn warnings; footer JavaScript syntax, footer-group/homepage JSON and Git whitespace validation pass. Public verification remains blocked because the unauthenticated storefront redirects to `/password` and the signed-in external Chrome session is not connected for browser control.
-- PayPal removal: the footer payment renderer and setting are removed; the local footer contains no `.alma-footer__payment`, `.footer__payment`, `.list-payment` or PayPal badge. Newsletter and navigation remain present.
+- Desktop 1265 × 720 initial: wordmark loaded and visible; icon hidden; navigation below; document `scrollWidth` equals `clientWidth`.
+- Desktop after scroll: `.scrolled-past-header` present; wordmark hidden; icon visible at left; navigation centered; utilities right; document remains contained.
+- Mobile 375 × 844: wordmark hidden, icon visible and the existing 78 px mobile header remains unchanged; no horizontal overflow.
+- Page identity and meaningful-content checks pass, no framework overlay is present, and browser error/warning logs are empty.
+- Theme Check passes with 0 errors and the same 9 inherited Dawn warnings; header-group JSON, exact source/asset hash and Git whitespace validation pass.
 
 **Implementation checklist**
 
-- [x] Remove the separate burgundy footer section.
-- [x] Keep essential footer data in the neutral upper section.
-- [x] Replace burgundy UI treatments with the site black/ivory/gray palette.
-- [x] Restore and bound the image-free desktop ALMA experience.
-- [x] Verify desktop/mobile containment and mobile disclosures.
+- [x] Add the exact supplied wordmark above desktop homepage navigation.
+- [x] Hide the compact icon in the expanded state.
+- [x] Collapse to icon-left/tab-centered navigation after scroll.
+- [x] Preserve right-side utilities and mobile behavior.
+- [x] Recalculate the header height after state changes.
+- [x] Verify initial, scrolled and mobile states.
 
-final result: blocked
+final result: passed

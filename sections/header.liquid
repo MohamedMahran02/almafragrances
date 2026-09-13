@@ -136,7 +136,12 @@
       assign localization_forms = true
     endif
   -%}
-  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank or settings.alma_navigation %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
+  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if request.page_type == 'index' %} alma-header--home{% endif %}{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank or settings.alma_navigation %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
+    {%- if request.page_type == 'index' -%}
+      <a href="{{ routes.root_url }}" class="alma-header-wordmark link focus-inset" aria-label="ALMA by Reem Fragrances home">
+        <img src="{{ 'alma-logo-wordmark.png' | asset_url }}" width="1055" height="1491" alt="ALMA Body Fragrances by Reem">
+      </a>
+    {%- endif -%}
     {%- liquid
       if section.settings.menu != blank or settings.alma_navigation
         render 'header-drawer'
@@ -396,6 +401,7 @@
       }
 
       this.currentScrollTop = scrollTop;
+      requestAnimationFrame(this.setHeaderHeight.bind(this));
     }
 
     hide() {
