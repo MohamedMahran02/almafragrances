@@ -122,6 +122,14 @@ Validation:
 
 final result: passed
 
+## 2026-09-13 landing CTA release inset
+
+- Evidence supplied by the user: `C:\Users\TYARA12\AppData\Local\Temp\codex-clipboard-fac6ef8d-65d7-4c17-ad7c-b68fe0d935ef.png` showed the desktop CTA's bottom border touching the campaign/ritual boundary after the sticky stage.
+- Fix: the desktop action track now ends 50 px above the media boundary. The button remains at its original first-screen viewport position and releases into a 50 px bottom inset instead of touching the next white section. Mobile explicitly resets the action track boundary and retains its existing 30 px inset.
+- Validation: at 1280×720 the CTA is visible at page load. At 203 px and 339 px scroll, its bottom remains exactly 50 px above the campaign bottom while the ritual begins only after that boundary. The release-state screenshot is `C:\Users\TYARA12\AppData\Local\Temp\alma-hero-cta-release-inset.png`. The mobile breakpoint explicitly resets the desktop track boundary and preserves its previously verified 30 px inset. Page identity and meaningful content pass; no framework overlay, horizontal overflow or relevant console errors are present.
+
+final result: passed
+
 ## 2026-09-13 restored landing artwork and bounded CTA
 
 Target flow: homepage loads with the approved original campaign composition → the CTA is visible in the initial viewport → scrolling moves through the full-height artwork while the CTA remains at its viewport position → the CTA releases at the media boundary and the ritual follows.

@@ -36,7 +36,7 @@ html { overflow-x: hidden; }
 .alma-campaign__media { position: relative; height: min(56.25vw, 80.2rem); min-height: 56rem; background: #c4ad8e; }
 .alma-campaign__frame { width: 100%; height: 100%; overflow: hidden; background: #c4ad8e; }
 .alma-campaign__image { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 52% center; }
-.alma-campaign__actions { position: absolute; z-index: 1; inset: 0; display: flex; justify-content: center; align-items: flex-start; padding-top: calc(100vh - var(--header-height, 9.4rem) - 9.8rem); padding-top: calc(100svh - var(--header-height, 9.4rem) - 9.8rem); pointer-events: none; }
+.alma-campaign__actions { position: absolute; z-index: 1; inset: 0 0 5rem; display: flex; justify-content: center; align-items: flex-start; padding-top: calc(100vh - var(--header-height, 9.4rem) - 9.8rem); padding-top: calc(100svh - var(--header-height, 9.4rem) - 9.8rem); pointer-events: none; }
 .alma-campaign__button, .alma-editorial .alma-button { min-height: 4.8rem; padding: 1.25rem 2.8rem; border: 1px solid var(--alma-ink); border-radius: 0; background: #fff; color: var(--alma-ink); font-family: Georgia, 'Times New Roman', serif; font-size: 1.5rem; letter-spacing: 0; text-decoration: none; box-shadow: 0 2px 0 var(--alma-ink); }
 .alma-campaign__button { position: sticky; top: calc(100vh - 9.8rem); top: calc(100svh - 9.8rem); min-width: 25rem; white-space: nowrap; pointer-events: auto; --color-button-text: 17, 16, 15; --color-button: 255, 255, 255; --alpha-button-background: 1; --border-offset: 0; }
 .alma-campaign__button::before, .alma-campaign__button::after { box-shadow: none; }
@@ -148,7 +148,7 @@ html { overflow-x: hidden; }
   .alma-theme .scrolled-past-header .alma-logo { width: 4.8rem; }
   .alma-campaign__media { height: 64rem; min-height: 0; }
   .alma-campaign__image { object-position: center; }
-  .alma-campaign__actions { align-items: flex-end; padding: 0 0 3rem; }
+  .alma-campaign__actions { inset: 0; align-items: flex-end; padding: 0 0 3rem; }
   .alma-campaign__button { position: relative; top: auto; min-width: 23rem; }
   .alma-ritual { min-height: 24rem; padding: 4rem 2rem; }
   .alma-ritual h2, .alma-favourites h2, .alma-editorial h2, .alma-wardrobe h2 { font-size: 2.8rem; }
