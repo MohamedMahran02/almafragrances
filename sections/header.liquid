@@ -139,10 +139,7 @@
   <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if request.page_type == 'index' %} alma-header--home{% endif %}{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank or settings.alma_navigation %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
     {%- if request.page_type == 'index' -%}
       <a href="{{ routes.root_url }}" class="alma-header-wordmark link focus-inset" aria-label="ALMA by Reem Fragrances home">
-        <img class="alma-header-wordmark__fallback" src="{{ 'alma-logo-wordmark.png' | asset_url }}" width="1055" height="1491" alt="ALMA Body Fragrances by Reem">
-        <video class="alma-header-wordmark__video" muted playsinline preload="auto" aria-hidden="true" tabindex="-1">
-          <source src="{{ 'alma-logo-morph.webm' | asset_url }}" type="video/webm">
-        </video>
+        <img src="{{ 'alma-logo-wordmark.png' | asset_url }}" width="1055" height="1491" alt="ALMA Body Fragrances by Reem">
       </a>
     {%- endif -%}
     {%- liquid
@@ -334,7 +331,6 @@
       this.header = document.querySelector('.section-header');
       this.almaHomeHeader = this.querySelector('.alma-header--home');
       this.almaWordmark = this.querySelector('.alma-header-wordmark');
-      this.almaMorphVideo = this.querySelector('.alma-header-wordmark__video');
       this.almaIconHeading = this.querySelector('.header__heading');
       this.almaIconLink = this.almaIconHeading?.querySelector('a');
       this.headerIsAlwaysSticky =
@@ -366,28 +362,12 @@
       window.addEventListener('resize', this.onResizeHandler, false);
 
       this.createObserver();
-      this.prepareAlmaMorphVideo();
       this.updateAlmaHeaderProgress(window.pageYOffset || document.documentElement.scrollTop);
     }
 
     setHeaderHeight() {
       const renderedHeader = this.almaHomeHeader || this.header;
       document.documentElement.style.setProperty('--header-height', `${renderedHeader.offsetHeight}px`);
-    }
-
-    prepareAlmaMorphVideo() {
-      if (!this.almaMorphVideo) return;
-
-      const activateMorph = () => {
-        if (!Number.isFinite(this.almaMorphVideo.duration) || this.almaMorphVideo.duration <= 0) return;
-        this.almaMorphVideo.pause();
-        this.almaMorphReady = true;
-        this.classList.add('alma-morph-ready');
-        this.updateAlmaHeaderProgress(window.pageYOffset || document.documentElement.scrollTop);
-      };
-
-      this.almaMorphVideo.addEventListener('loadeddata', activateMorph, { once: true });
-      if (this.almaMorphVideo.readyState >= 2) activateMorph();
     }
 
     disconnectedCallback() {
@@ -461,28 +441,19 @@
       const startTop = desktop ? 10 : (openHeight - wordmarkHeight) / 2;
       const finalScale = Math.min(iconWidth / wordmarkWidth, iconHeight / wordmarkHeight);
       const endLeft = desktop ? 50 : (this.almaHomeHeader.clientWidth - wordmarkWidth * finalScale) / 2;
-      const endTop = this.almaMorphReady
-        ? (closedHeight - wordmarkHeight * finalScale) / 2
-        : (closedHeight - iconHeight) / 2;
+      const endTop = (closedHeight - iconHeight) / 2;
       const interpolate = (start, end) => start + (end - start) * easedProgress;
       const wordmarkOpacity = Math.max(0, 1 - progress / 0.82);
       const iconOpacity = Math.max(0, Math.min(1, (progress - 0.18) / 0.82));
-
-      if (this.almaMorphReady) {
-        const targetTime = this.almaMorphVideo.duration * progress;
-        if (Math.abs(this.almaMorphVideo.currentTime - targetTime) > 0.001) {
-          this.almaMorphVideo.currentTime = targetTime;
-        }
-      }
 
       this.almaHomeHeader.style.setProperty('--alma-header-progress', progress.toFixed(4));
       this.almaHomeHeader.style.setProperty('--alma-wordmark-left', `${interpolate(startLeft, endLeft)}px`);
       this.almaHomeHeader.style.setProperty('--alma-wordmark-top', `${interpolate(startTop, endTop)}px`);
       this.almaHomeHeader.style.setProperty('--alma-wordmark-scale', interpolate(1, finalScale).toFixed(4));
-      this.almaHomeHeader.style.setProperty('--alma-wordmark-opacity', this.almaMorphReady ? '1' : wordmarkOpacity.toFixed(4));
+      this.almaHomeHeader.style.setProperty('--alma-wordmark-opacity', wordmarkOpacity.toFixed(4));
       this.almaHomeHeader.style.setProperty('--alma-wordmark-fallback-x', '0px');
       this.almaHomeHeader.style.setProperty('--alma-wordmark-fallback-y', '0px');
-      this.almaHomeHeader.style.setProperty('--alma-icon-opacity', this.almaMorphReady ? '0' : iconOpacity.toFixed(4));
+      this.almaHomeHeader.style.setProperty('--alma-icon-opacity', iconOpacity.toFixed(4));
       this.almaHomeHeader.style.setProperty('--alma-icon-left', `${endLeft}px`);
       this.almaHomeHeader.style.setProperty('--alma-icon-top', `${endTop}px`);
 
@@ -494,13 +465,13 @@
         this.almaHomeHeader.style.setProperty('--alma-icons-top', `${interpolate(23.5, 14)}px`);
       }
 
-      this.almaWordmark.style.pointerEvents = this.almaMorphReady || progress < 0.65 ? 'auto' : 'none';
-      this.almaIconHeading.style.pointerEvents = this.almaMorphReady ? 'none' : progress > 0.35 ? 'auto' : 'none';
-      this.almaWordmark.toggleAttribute('aria-hidden', !this.almaMorphReady && progress >= 0.5);
-      this.almaWordmark.tabIndex = !this.almaMorphReady && progress >= 0.5 ? -1 : 0;
+      this.almaWordmark.style.pointerEvents = progress < 0.65 ? 'auto' : 'none';
+      this.almaIconHeading.style.pointerEvents = progress > 0.35 ? 'auto' : 'none';
+      this.almaWordmark.toggleAttribute('aria-hidden', progress >= 0.5);
+      this.almaWordmark.tabIndex = progress >= 0.5 ? -1 : 0;
       if (this.almaIconLink) {
-        this.almaIconLink.toggleAttribute('aria-hidden', this.almaMorphReady || progress < 0.5);
-        this.almaIconLink.tabIndex = this.almaMorphReady || progress < 0.5 ? -1 : 0;
+        this.almaIconLink.toggleAttribute('aria-hidden', progress < 0.5);
+        this.almaIconLink.tabIndex = progress < 0.5 ? -1 : 0;
       }
       this.almaHomeHeader.dataset.almaScrollProgress = progress.toFixed(4);
 
