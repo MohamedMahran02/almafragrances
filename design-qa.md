@@ -122,6 +122,17 @@ Validation:
 
 final result: passed
 
+## 2026-09-13 mobile landing CTA sticky behavior
+
+Target flow: compact mobile homepage loads → collection CTA is visible without scrolling → customer scrolls through the hero → CTA stays near the viewport bottom → CTA releases 30 px before the image boundary.
+
+- Source evidence: `C:\Users\TYARA12\AppData\Local\Temp\codex-clipboard-fa6c96b0-8381-41a1-a330-16d5df4aa58c.png` showed the CTA below the visible compact-height landing viewport.
+- Fix: mobile now uses the same bounded sticky action pattern as desktop, with a `min()` calculation that chooses the viewport position on short screens and the natural 30 px media inset on taller screens.
+- Compact mobile 316×599: CTA y=521.4…569.4 at page load; y=521…569 after 80 px scroll; 30 px above the media boundary from 147 px scroll onward. Evidence: `C:\Users\TYARA12\AppData\Local\Temp\alma-mobile-cta-sticky-initial.png` and `C:\Users\TYARA12\AppData\Local\Temp\alma-mobile-cta-sticky-scroll.png`.
+- No image, navigation, section-order or block-order changes were made.
+
+final result: passed
+
 ## 2026-09-13 scrolled mobile menu positioning
 
 Target flow: mobile homepage loads → customer scrolls into later content → taps Menu in the sticky header → drawer opens in the current viewport → customer closes it and remains on the page.
