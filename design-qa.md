@@ -121,3 +121,28 @@ Validation:
 - Desktop and mobile browser console error lists are empty; no horizontal overflow or broken mobile images were detected.
 
 final result: passed
+
+## 2026-09-13 ritual introduction spacing
+
+Reference evidence:
+
+- `C:\Users\TYARA12\AppData\Local\Temp\codex-clipboard-eeda6922-2f0e-4f7c-a96b-4baede7c748f.png` shows the 400 px ritual block with visibly excessive empty space above and below its centered copy.
+
+Rendered evidence:
+
+- `C:\Users\TYARA12\AppData\Local\Temp\alma-ritual-compact-desktop.png` — compact desktop block at 1365×768.
+- `C:\Users\TYARA12\AppData\Local\Temp\alma-ritual-compact-mobile.png` — compact mobile block at 390×844.
+
+Mismatch ledger and fix:
+
+- P1: `.alma-ritual` forced a 400 px desktop / 340 px mobile minimum height with 70 px / 50 px vertical padding, leaving approximately 131 px of empty space on each side of the desktop content group.
+- Fix: reduced the minimum height to 260 px desktop / 240 px mobile and padding to 45 px / 40 px. Copy, centered alignment, links and section/block order are unchanged.
+
+Validation:
+
+- Desktop: section height 260 px; heading begins 60.5 px from the top and the link ends 60.5 px from the bottom; horizontal overflow is zero.
+- Mobile: section height 240 px; heading begins 53.6 px from the top and the link ends 53.6 px from the bottom; horizontal overflow is zero.
+- Scroll interaction reveals the complete compact ritual and the following fragrance rail with no clipping or overlap. Page identity and meaningful DOM content pass; no framework overlay or relevant console error is present.
+- Theme Check: 0 errors and the same 9 inherited Dawn warnings. `git diff --check` passes.
+
+final result: passed
