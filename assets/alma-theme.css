@@ -26,6 +26,11 @@ html { overflow-x: hidden; }
 .alma-logo img { position: absolute; top: -24.5%; left: -4.25%; width: 108.5%; max-width: none; height: auto; image-rendering: auto; }
 .alma-theme .scrolled-past-header .alma-logo { width: 5rem; }
 .alma-header-wordmark { display: none; }
+.alma-header-wordmark__video { position: absolute; top: 50%; left: 50%; display: block; width: 173%; max-width: none; height: auto; opacity: 0; transform: translate(-50%, -50%); pointer-events: none; }
+.alma-theme .alma-morph-ready .alma-header--home .alma-header-wordmark { overflow: visible; }
+.alma-theme .alma-morph-ready .alma-header-wordmark__video { opacity: 1; }
+.alma-theme .alma-morph-ready .alma-header-wordmark__fallback { opacity: 0; }
+.alma-theme .alma-morph-ready .alma-header--home .header__heading { opacity: 0 !important; }
 
 @media (min-width: 990px) {
   .alma-theme .header--middle-left { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); column-gap: 3rem; }
@@ -36,7 +41,7 @@ html { overflow-x: hidden; }
   .alma-theme .alma-header--home .header__heading { position: absolute; z-index: 2; top: var(--alma-icon-top, .75rem); left: 5rem; display: block; margin: 0; opacity: var(--alma-icon-opacity, 0); pointer-events: none; }
   .alma-theme .alma-header--home .header__heading .alma-logo { width: 5rem; }
   .alma-theme .alma-header--home .alma-header-wordmark { position: absolute; z-index: 2; top: var(--alma-wordmark-top, 1rem); left: var(--alma-wordmark-left, 50%); display: block; width: 14rem; height: 7.1rem; overflow: hidden; opacity: var(--alma-wordmark-opacity, 1); transform: translateX(var(--alma-wordmark-fallback-x, -50%)) scale(var(--alma-wordmark-scale, 1)); transform-origin: top left; }
-  .alma-theme .alma-header--home .alma-header-wordmark img { position: absolute; top: -11.82rem; left: -2.41rem; display: block; width: 20.69rem; max-width: none; height: auto; }
+  .alma-theme .alma-header--home .alma-header-wordmark__fallback { position: absolute; top: -11.82rem; left: -2.41rem; display: block; width: 20.69rem; max-width: none; height: auto; }
   .alma-theme .alma-header--home .header__inline-menu { grid-area: nav; }
   .alma-theme .alma-header--home .header__icons { position: absolute; z-index: 2; top: var(--alma-icons-top, 2.35rem); right: 5rem; }
 }
@@ -172,7 +177,7 @@ html { overflow-x: hidden; }
   .alma-theme .alma-header--home { position: relative; }
   .alma-theme .alma-header--home .header__heading { position: absolute; z-index: 2; grid-area: auto; top: var(--alma-icon-top, .1rem); left: var(--alma-icon-left, 6.4rem); display: block; margin: 0; opacity: var(--alma-icon-opacity, 0); pointer-events: none; }
   .alma-theme .alma-header--home .alma-header-wordmark { position: absolute; z-index: 2; top: var(--alma-wordmark-top, 50%); left: var(--alma-wordmark-left, 50%); display: block; width: 11.5rem; height: 5.83rem; overflow: hidden; opacity: var(--alma-wordmark-opacity, 1); transform: translate(var(--alma-wordmark-fallback-x, -50%), var(--alma-wordmark-fallback-y, -50%)) scale(var(--alma-wordmark-scale, 1)); transform-origin: top left; }
-  .alma-theme .alma-header--home .alma-header-wordmark img { position: absolute; top: -9.71rem; left: -1.98rem; display: block; width: 16.99rem; max-width: none; height: auto; }
+  .alma-theme .alma-header--home .alma-header-wordmark__fallback { position: absolute; top: -9.71rem; left: -1.98rem; display: block; width: 16.99rem; max-width: none; height: auto; }
   .alma-theme .section-header.menu-open { position: fixed; inset: 0 0 auto; width: 100%; }
   .alma-favourites__grid { grid-auto-columns: calc((100% - 1.6rem) / 2); gap: 3rem 1.6rem; }
   .alma-editorial__content { padding-left: 5rem; padding-right: 5rem; }
@@ -182,7 +187,7 @@ html { overflow-x: hidden; }
   .alma-theme .header { min-height: 7.8rem; padding-left: 1.5rem; padding-right: 1.5rem; }
   .alma-theme .alma-header--home .header__heading .alma-logo { width: 4.8rem; }
   .alma-theme .alma-header--home .alma-header-wordmark { width: 10.5rem; height: 5.33rem; }
-  .alma-theme .alma-header--home .alma-header-wordmark img { top: -8.87rem; left: -1.81rem; width: 15.52rem; }
+  .alma-theme .alma-header--home .alma-header-wordmark__fallback { top: -8.87rem; left: -1.81rem; width: 15.52rem; }
   .alma-theme .scrolled-past-header .alma-logo { width: 4.8rem; }
   .alma-campaign__media { height: 64rem; min-height: 0; }
   .alma-campaign__image { object-position: center; }
@@ -237,7 +242,7 @@ html { overflow-x: hidden; }
 }
 @media (max-width: 374px) {
   .alma-theme .alma-header--home .alma-header-wordmark { width: 9.2rem; height: 4.67rem; }
-  .alma-theme .alma-header--home .alma-header-wordmark img { top: -7.77rem; left: -1.58rem; width: 13.6rem; }
+  .alma-theme .alma-header--home .alma-header-wordmark__fallback { top: -7.77rem; left: -1.58rem; width: 13.6rem; }
 }
 
 @media (max-width: 599px) {

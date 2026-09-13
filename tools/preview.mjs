@@ -94,7 +94,7 @@ async function render(empty) {
  context.content_for_layout=await renderGroup('templates/index.json');
  return (await engine.renderFile('theme',context)).replaceAll('shopify://collections/','/collections/').replace('<head>','<head><script>window.Shopify={designMode:false};</script>');
 }
-const mime={'.css':'text/css','.js':'text/javascript','.png':'image/png','.jpg':'image/jpeg','.svg':'image/svg+xml'};
+const mime={'.css':'text/css','.js':'text/javascript','.png':'image/png','.jpg':'image/jpeg','.svg':'image/svg+xml','.webm':'video/webm'};
 http.createServer(async(req,res)=>{
  try {
   const url=new URL(req.url,'http://localhost');
@@ -102,7 +102,20 @@ http.createServer(async(req,res)=>{
   if(url.pathname.startsWith('/assets/')) {
    const target=path.resolve(root,'.'+decodeURIComponent(url.pathname));
    if(!target.startsWith(path.join(root,'assets')+path.sep)){res.writeHead(403);res.end();return;}
-   res.setHeader('Content-Type',mime[path.extname(target)]??'application/octet-stream');res.end(fs.readFileSync(target));return;
+   const size=fs.statSync(target).size;
+   const range=req.headers.range;
+   res.setHeader('Content-Type',mime[path.extname(target)]??'application/octet-stream');
+   res.setHeader('Accept-Ranges','bytes');
+   if(range) {
+    const match=/^bytes=(\d*)-(\d*)$/.exec(range);
+    if(!match){res.writeHead(416,{'Content-Range':`bytes */${size}`});res.end();return;}
+    const start=match[1]?Number(match[1]):0;
+    const end=match[2]?Math.min(Number(match[2]),size-1):size-1;
+    if(start>end||start>=size){res.writeHead(416,{'Content-Range':`bytes */${size}`});res.end();return;}
+    res.writeHead(206,{'Content-Range':`bytes ${start}-${end}/${size}`,'Content-Length':end-start+1});
+    fs.createReadStream(target,{start,end}).pipe(res);return;
+   }
+   res.setHeader('Content-Length',size);fs.createReadStream(target).pipe(res);return;
   }
   res.writeHead(404,{'Content-Type':'text/plain'});res.end('Local visual fixture only. Open the Shopify test theme to verify this store route.');
  } catch(e) {res.writeHead(500,{'Content-Type':'text/plain'});res.end(e.stack);console.error(e);}
