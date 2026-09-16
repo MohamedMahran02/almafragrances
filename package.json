@@ -1,6 +1,6 @@
 {
   "name": "alma-dawn-theme",
   "private": true,
-  "scripts": {"check:theme": "shopify theme check --fail-level error", "preview:local": "node tools/preview.mjs"},
+  "scripts": {"check:theme": "shopify theme check --fail-level error", "preview:local": "node tools/preview.mjs", "preview:build": "node tools/preview.mjs --build"},
   "devDependencies": {"@shopify/cli": "4.8.0", "liquidjs": "10.29.0"}
 }

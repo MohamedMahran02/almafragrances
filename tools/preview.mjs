@@ -5,6 +5,8 @@ import http from 'node:http';
 import { Liquid } from 'liquidjs';
 const root = process.cwd();
 const preview = path.join(root, '.preview/liquid');
+const buildOnly = process.argv.includes('--build');
+const previewOrigin = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:9293';
 fs.mkdirSync(preview, {recursive:true});
 const read = p => fs.readFileSync(p, 'utf8');
 const json = p => JSON.parse(read(p));
@@ -76,7 +78,7 @@ const makeSection=(id,section,empty=false)=>{
  return {id,...section,settings,blocks};
 };
 const routes={root_url:'/',all_products_collection_url:'/collections/all',cart_url:'/cart',cart_add_url:'/cart/add',cart_change_url:'/cart/change',cart_update_url:'/cart/update',predictive_search_url:'/search/suggest',search_url:'/search',account_login_url:'/account/login',account_url:'/account'};
-const base={settings,collections,all_products:products,routes,request:{page_type:'index',path:'/',locale:{iso_code:'en'}},shop:{name:'ALMA by Reem Fragrances',url:'http://localhost:9293',customer_accounts_enabled:true,enabled_payment_types:[],policies:[]},cart:{item_count:0,items:[]},localization:{available_countries:[],available_languages:[],country:{iso_code:'AE',currency:{iso_code:'AED'}},language:{iso_code:'en'}},linklists:{},page_title:'ALMA by Reem Fragrances',canonical_url:'http://localhost:9293',powered_by_link:'',form:{},content_for_header:''};
+const base={settings,collections,all_products:products,routes,request:{page_type:'index',path:'/',locale:{iso_code:'en'}},shop:{name:'ALMA by Reem Fragrances',url:previewOrigin,customer_accounts_enabled:true,enabled_payment_types:[],policies:[]},cart:{item_count:0,items:[]},localization:{available_countries:[],available_languages:[],country:{iso_code:'AE',currency:{iso_code:'AED'}},language:{iso_code:'en'}},linklists:{},page_title:'ALMA by Reem Fragrances',canonical_url:previewOrigin,powered_by_link:'',form:{},content_for_header:''};
 async function render(empty) {
  const context={...base,collections:empty?{all:{products:[]}}:collections};
  engine.options.globals=context;
@@ -95,7 +97,14 @@ async function render(empty) {
  return (await engine.renderFile('theme',context)).replaceAll('shopify://collections/','/collections/').replace('<head>','<head><script>window.Shopify={designMode:false};</script>');
 }
 const mime={'.css':'text/css','.js':'text/javascript','.png':'image/png','.jpg':'image/jpeg','.svg':'image/svg+xml'};
-http.createServer(async(req,res)=>{
+if(buildOnly) {
+ const output=path.join(root,'dist');
+ if(fs.existsSync(output)) fs.rmSync(output,{recursive:true,force:true});
+ fs.mkdirSync(output,{recursive:true});
+ fs.writeFileSync(path.join(output,'index.html'),await render(false));
+ fs.cpSync(path.join(root,'assets'),path.join(output,'assets'),{recursive:true});
+ console.log(`Shareable visual preview built at ${output}. Shopify remains authoritative for commerce.`);
+} else http.createServer(async(req,res)=>{
  try {
   const url=new URL(req.url,'http://localhost');
   if(url.pathname==='/') {res.setHeader('Content-Type','text/html');res.end(await render(url.searchParams.has('empty')));return;}

@@ -3,3 +3,5 @@ node_modules/
 .preview/
 theme-check.json
 .playwright-mcp/
+.vercel/
+dist/
