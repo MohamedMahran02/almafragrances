@@ -1,6 +1,23 @@
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'alma-favourites.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'alma-scroll-gallery.js' | asset_url }}" defer="defer"></script>
+{%- liquid
+  assign has_products = false
+  for block in section.blocks
+    assign available_products = block.settings.products
+    if available_products == blank
+      assign available_products = block.settings.collection.products
+    endif
+    if available_products == blank and forloop.first
+      assign available_products = collections.all.products
+    endif
+    if available_products != blank
+      assign has_products = true
+      break
+    endif
+  endfor
+-%}
+{%- if has_products -%}
 <alma-favourites class="alma-favourites page-width">
   <h2 id="AlmaFavourites-{{ section.id }}">{{ section.settings.title | escape }}</h2>
   <div class="alma-favourites__tabs" aria-labelledby="AlmaFavourites-{{ section.id }}">
@@ -37,16 +54,6 @@
             {% render 'price', product: product %}
             <a class="alma-text-link" href="{{ product.url }}">{{ section.settings.product_link_label | escape }}<span class="visually-hidden"> — {{ product.title | escape }}</span></a>
           </article>
-        {%- else -%}
-          {% comment %}Editorial fallback for an empty test store: no invented price, variant, stock, or purchase form.{% endcomment %}
-          <article class="alma-product">
-            <img class="alma-product__image" src="{{ 'alma-perfume-reference.jpg' | asset_url }}" width="3024" height="4032" loading="lazy" alt="ALMA spray perfume">
-            <h3>Spray perfumes</h3><a class="alma-text-link" href="{{ routes.all_products_collection_url }}">Discover ALMA</a>
-          </article>
-          <article class="alma-product">
-            <img class="alma-product__image" src="{{ 'alma-solid-reference.png' | asset_url }}" width="820" height="619" loading="lazy" alt="ALMA solid perfume">
-            <h3>Solid perfumes</h3><a class="alma-text-link" href="{{ routes.all_products_collection_url }}">Discover ALMA</a>
-          </article>
         {%- endfor -%}
       </div>
       {% render 'alma-scroll-controls', track_id: product_track_id, label: 'Product carousel controls', item_name: 'products' %}
@@ -55,6 +62,7 @@
     {%- endif -%}
   {%- endfor -%}
 </alma-favourites>
+{%- endif -%}
 {% schema %}
 {
   "name":"ALMA product collection",

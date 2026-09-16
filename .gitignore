@@ -5,3 +5,4 @@ theme-check.json
 .playwright-mcp/
 .vercel/
 dist/
+.playwright-cli/

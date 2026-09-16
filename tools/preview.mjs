@@ -101,9 +101,9 @@ if(buildOnly) {
  const output=path.join(root,'dist');
  if(fs.existsSync(output)) fs.rmSync(output,{recursive:true,force:true});
  fs.mkdirSync(output,{recursive:true});
- fs.writeFileSync(path.join(output,'index.html'),await render(false));
+ fs.writeFileSync(path.join(output,'index.html'),await render(true));
  fs.cpSync(path.join(root,'assets'),path.join(output,'assets'),{recursive:true});
- console.log(`Shareable visual preview built at ${output}. Shopify remains authoritative for commerce.`);
+ console.log(`Shareable visual preview built at ${output} without catalog fixtures. Shopify remains authoritative for commerce.`);
 } else http.createServer(async(req,res)=>{
  try {
   const url=new URL(req.url,'http://localhost');
