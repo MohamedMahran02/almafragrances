@@ -9,7 +9,7 @@ const buildOnly = process.argv.includes('--build');
 const previewOrigin = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:9293';
 fs.mkdirSync(preview, {recursive:true});
 const read = p => fs.readFileSync(p, 'utf8');
-const json = p => JSON.parse(read(p));
+const json = p => JSON.parse(read(p).replace(/^\s*\/\*[\s\S]*?\*\/\s*/, ''));
 const clean = text => text
   .replace(/{{\s*([\w.]+)\.(red|green|blue)\s*}}/g, "{{ $1 | color_extract: '$2' }}")
   .replace(/{%-?\s*schema\s*-?%}[\s\S]*?{%-?\s*endschema\s*-?%}/g, '')
