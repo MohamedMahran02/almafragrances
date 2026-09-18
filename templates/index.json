@@ -38,11 +38,6 @@
     },
     "featured_collection": {
       "type": "alma-favourites",
-      "settings": {
-        "title": "The ALMA fragrance collection",
-        "products_to_show": 24,
-        "product_link_label": "Choose options"
-      },
       "blocks": {
         "all": {
           "type": "collection",
@@ -72,14 +67,16 @@
           "type": "collection",
           "settings": {
             "label": "Spray Perfumes",
-            "collection": "alma-perfumes"
+            "collection": "alma-perfumes",
+            "products": []
           }
         },
         "solid": {
           "type": "collection",
           "settings": {
             "label": "Solid Perfumes",
-            "collection": "alma-solids-مخمريات"
+            "collection": "alma-solids-مخمريات",
+            "products": []
           }
         }
       },
@@ -87,7 +84,12 @@
         "all",
         "spray",
         "solid"
-      ]
+      ],
+      "settings": {
+        "title": "The ALMA fragrance collection",
+        "products_to_show": 24,
+        "product_link_label": "Choose options"
+      }
     },
     "scent_finder": {
       "type": "alma-scent-finder",
@@ -103,17 +105,40 @@
     "layering_story": {
       "type": "alma-editorial-feature",
       "blocks": {
-        "lotion": {"type":"product","settings":{"product":"alma-arabia-hand-and-body-lotion","label":"Lotion"}},
-        "solid": {"type":"product","settings":{"product":"alma-arabia","label":"Solid Perfume"}},
-        "spray": {"type":"product","settings":{"product":"alma-hair-and-body-perfume","label":"Spray Perfume"}}
+        "lotion": {
+          "type": "product",
+          "settings": {
+            "product": "alma-arabia-hand-and-body-lotion",
+            "label": "Lotion"
+          }
+        },
+        "solid": {
+          "type": "product",
+          "settings": {
+            "product": "alma-arabia",
+            "label": "Solid Perfume"
+          }
+        },
+        "spray": {
+          "type": "product",
+          "settings": {
+            "product": "alma-hair-and-body-perfume",
+            "label": "Spray Perfume"
+          }
+        }
       },
-      "block_order": ["lotion", "solid", "spray"],
+      "block_order": [
+        "lotion",
+        "solid",
+        "spray"
+      ],
       "settings": {
         "eyebrow": "The ALMA ritual",
         "heading": "Layer it your way",
         "text": "<p>Begin with lotion, deepen the scent with solid perfume, then finish with spray perfume. Three textures, one scent story that belongs to you.</p>",
         "product": "alma-layering-box",
-        "link_label": "Explore layering",
+        "use_dukhon_campaign": false,
+        "link_label": "Explore layeringjj",
         "link": "shopify://collections/layering-kits",
         "steps_label": "Lotion, solid perfume and spray perfume",
         "layout": "split",
@@ -128,10 +153,11 @@
         "heading": "A deeper atmosphere",
         "text": "<p>ALMA Dukhoon brings the ritual into your home with a warm, enveloping presence.</p>",
         "product": "alma-dokhon",
+        "use_dukhon_campaign": true,
         "link_label": "Discover Dukhoon",
         "link": "shopify://collections/alma-dokhon",
+        "steps_label": "Complete the ritual",
         "layout": "immersive",
-        "use_dukhon_campaign": true,
         "media_position": "right",
         "tone": "ivory"
       }
@@ -143,11 +169,19 @@
           "type": "collection",
           "settings": {
             "label": "Gifts & rituals",
-            "products": ["alma-fragrances-gift-card", "alma-layering-box", "alma-box-of-minis", "alma-charm-collection"]
+            "collection": "",
+            "products": [
+              "alma-fragrances-gift-card",
+              "alma-layering-box",
+              "alma-box-of-minis",
+              "alma-charm-collection"
+            ]
           }
         }
       },
-      "block_order": ["gifts"],
+      "block_order": [
+        "gifts"
+      ],
       "settings": {
         "title": "Gifting by ALMA",
         "products_to_show": 4,
@@ -157,25 +191,101 @@
     "wardrobe": {
       "type": "alma-wardrobe",
       "blocks": {
-        "spray": {"type":"collection","settings":{"collection":"alma-perfumes","label":"Spray Perfumes"}},
-        "solid": {"type":"collection","settings":{"collection":"alma-solids-مخمريات","label":"Solid Perfumes"}},
-        "lotions": {"type":"collection","settings":{"collection":"alma-lotions","label":"Lotions"}},
-        "dukhon": {"type":"collection","settings":{"collection":"alma-dokhon","label":"Dukhoon"}},
-        "charms": {"type":"collection","settings":{"collection":"alma-solid-charms","label":"Solid Charms"}},
-        "layering": {"type":"collection","settings":{"collection":"layering-kits","label":"Layering & Kits"}}
+        "spray": {
+          "type": "collection",
+          "settings": {
+            "collection": "alma-perfumes",
+            "label": "Spray Perfumes"
+          }
+        },
+        "solid": {
+          "type": "collection",
+          "settings": {
+            "collection": "alma-solids-مخمريات",
+            "label": "Solid Perfumes"
+          }
+        },
+        "lotions": {
+          "type": "collection",
+          "settings": {
+            "collection": "alma-lotions",
+            "label": "Lotions"
+          }
+        },
+        "dukhon": {
+          "type": "collection",
+          "settings": {
+            "collection": "alma-dokhon",
+            "label": "Dukhoon"
+          }
+        },
+        "charms": {
+          "type": "collection",
+          "settings": {
+            "collection": "alma-solid-charms",
+            "label": "Solid Charms"
+          }
+        },
+        "layering": {
+          "type": "collection",
+          "settings": {
+            "collection": "layering-kits",
+            "label": "Layering & Kits"
+          }
+        }
       },
-      "block_order": ["spray", "solid", "lotions", "dukhon", "charms", "layering"],
-      "settings": {"heading":"Explore the ALMA wardrobe","text":"<p>Perfume for skin, space and every part of your ritual.</p>"}
+      "block_order": [
+        "spray",
+        "solid",
+        "lotions",
+        "dukhon",
+        "charms",
+        "layering"
+      ],
+      "settings": {
+        "heading": "Explore the ALMA wardrobe",
+        "text": "<p>Perfume for skin, space and every part of your ritual.</p>"
+      }
     },
     "services": {
       "type": "alma-service-band",
       "blocks": {
-        "gifting": {"type":"service","settings":{"heading":"Personal gifting","text":"<p>Gift cards in six values for a present chosen their way.</p>","link_label":"Explore gifting","link":"shopify://products/alma-fragrances-gift-card"}},
-        "ritual": {"type":"service","settings":{"heading":"A three-step ritual","text":"<p>Lotion, solid perfume and spray perfume build a scent with depth.</p>","link_label":"Discover layering","link":"shopify://collections/layering-kits"}},
-        "wardrobe": {"type":"service","settings":{"heading":"The complete wardrobe","text":"<p>Perfumes, solids, lotions, Dukhoon, charms and ready-made kits.</p>","link_label":"Shop all","link":"shopify://collections/all"}}
+        "gifting": {
+          "type": "service",
+          "settings": {
+            "heading": "Personal gifting",
+            "text": "<p>Gift cards in six values for a present chosen their way.</p>",
+            "link_label": "Explore gifting",
+            "link": "shopify://products/alma-fragrances-gift-card"
+          }
+        },
+        "ritual": {
+          "type": "service",
+          "settings": {
+            "heading": "A three-step ritual",
+            "text": "<p>Lotion, solid perfume and spray perfume build a scent with depth.</p>",
+            "link_label": "Discover layering",
+            "link": "shopify://collections/layering-kits"
+          }
+        },
+        "wardrobe": {
+          "type": "service",
+          "settings": {
+            "heading": "The complete wardrobe",
+            "text": "<p>Perfumes, solids, lotions, Dukhoon, charms and ready-made kits.</p>",
+            "link_label": "Shop all",
+            "link": "shopify://collections/all"
+          }
+        }
       },
-      "block_order": ["gifting", "ritual", "wardrobe"],
-      "settings": {"heading":"The ALMA experience"}
+      "block_order": [
+        "gifting",
+        "ritual",
+        "wardrobe"
+      ],
+      "settings": {
+        "heading": "The ALMA experience"
+      }
     }
   },
   "order": [
