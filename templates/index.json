@@ -254,9 +254,9 @@
           "type": "service",
           "settings": {
             "heading": "Personal gifting",
-            "text": "<p>Gift cards in six values for a present chosen their way.</p>",
+            "text": "<p>Curated sets and ritual pieces for a present chosen their way.</p>",
             "link_label": "Explore gifting",
-            "link": "/products/alma-fragrances-gift-card"
+            "link": "/#shopify-section-gifting_story"
           }
         },
         "ritual": {

@@ -4,7 +4,7 @@
     assign link_class = 'menu-drawer__menu-item list-menu__item link link--text focus-inset'
   endif
 
-  assign gifting_url = settings.alma_gifting_link | default: '/products/alma-fragrances-gift-card'
+  assign gifting_url = settings.alma_gifting_link | default: '/#shopify-section-gifting_story'
   assign contact_url = pages.contact.url | default: '/pages/contact'
 -%}
 <li><a class="{{ link_class }}" href="{{ routes.all_products_collection_url }}"{% if request.path == routes.all_products_collection_url %} aria-current="page"{% endif %}>Products</a></li>
