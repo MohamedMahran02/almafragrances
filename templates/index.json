@@ -82,21 +82,6 @@
     },
     "scent_finder": {
       "type": "alma-scent-finder",
-      "blocks": {
-        "vanilla": {"type":"note","settings":{"label":"Vanilla","value":"vanilla"}},
-        "oud": {"type":"note","settings":{"label":"Oud","value":"oud"}},
-        "musk": {"type":"note","settings":{"label":"Musk","value":"musk"}},
-        "amber": {"type":"note","settings":{"label":"Amber","value":"amber"}},
-        "rose": {"type":"note","settings":{"label":"Rose","value":"rose"}},
-        "floral": {"type":"note","settings":{"label":"Floral","value":"floral"}},
-        "citrus": {"type":"note","settings":{"label":"Citrus","value":"citrus"}},
-        "coconut": {"type":"note","settings":{"label":"Coconut","value":"coconut"}},
-        "sandalwood": {"type":"note","settings":{"label":"Sandalwood","value":"sandalwood"}},
-        "leather": {"type":"note","settings":{"label":"Leather","value":"leather"}},
-        "pear": {"type":"note","settings":{"label":"Pear","value":"pear"}},
-        "powder": {"type":"note","settings":{"label":"Powdery","value":"powder"}}
-      },
-      "block_order": ["vanilla","oud","musk","amber","rose","floral","citrus","coconut","sandalwood","leather","pear","powder"],
       "settings": {
         "heading": "Find Your Aura",
         "text": "<p>Choose the notes you love. We’ll reveal the ALMA fragrances that share your scent.</p>",
