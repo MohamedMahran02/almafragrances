@@ -12,7 +12,7 @@ html { overflow-x: hidden; }
 .alma-scent-finder__note-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: .9rem; }
 .alma-scent-finder__note { position: relative; min-width: 0; }
 .alma-scent-finder__note input { position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0; }
-.alma-scent-finder__note span { display: flex; align-items: center; justify-content: center; gap: .8rem; min-height: 4.4rem; padding: .8rem 1.8rem; border: 1px solid #aaa7a1; border-radius: 99rem; background: #fff; color: var(--alma-ink); font-family: var(--font-body-family); font-size: 1.25rem; letter-spacing: .035em; line-height: 1.2; text-align: center; cursor: pointer; transition: background-color .18s ease, border-color .18s ease, color .18s ease; }
+.alma-scent-finder__note span { display: flex; align-items: center; justify-content: center; gap: .8rem; min-height: 4.4rem; padding: .8rem 1.8rem; border: 1px solid #aaa7a1; border-radius: 99rem; background: transparent; color: var(--alma-ink); font-family: var(--font-body-family); font-size: 1.25rem; letter-spacing: .035em; line-height: 1.2; text-align: center; cursor: pointer; transition: background-color .18s ease, border-color .18s ease, color .18s ease; }
 .alma-scent-finder__note span::before { content: '+'; display: grid; place-items: center; width: 1.6rem; height: 1.6rem; border: 1px solid currentColor; border-radius: 50%; font-size: 1.2rem; line-height: 1; }
 .alma-scent-finder__note input:checked + span { background: var(--alma-ink); color: #fff; }
 .alma-scent-finder__note input:checked + span::before { content: '✓'; }

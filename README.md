@@ -542,6 +542,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `assets/alma-theme.css`, `config/settings_data.json`, and this README. Layout, content, products, routes, section order and every block-order array are unchanged.
 - Review state: option 1 is a temporary comparison candidate pending the user's “choose this” or “next” decision. Theme Check passes with 0 errors and the same 9 inherited Dawn warnings; static preview build, JSON parsing and Git whitespace validation pass. The connected Shopify theme reported “Last saved: Just now”; the storefront loaded `Bodoni Moda, serif` for the ritual heading and `Manrope, sans-serif` for the page body, and both webfonts reported ready.
 
+### 2026-09-18 — Blend fragrance-note chips into the finder surface
+
+- Request: remove the white fill from the fragrance-note buttons so their resting background matches the surrounding “Find Your Aura” section.
+- Changed: unselected note chips now use a transparent fill over the section's existing soft-neutral `#F7F5F1` background. Their outline, plus icon, spacing, typography and accessibility semantics are unchanged; selected notes still switch to logo-wine `#1D0004` with white text and a check mark.
+- Files: `assets/alma-theme.css` and this README. Finder data, matching behavior, products, layout, homepage order and every block-order array are unchanged.
+- Checks: Theme Check, static preview build, Git whitespace and connected Shopify desktop/mobile rendering are verified before handoff. The target interaction is an unselected chip matching its section background, then switching to the existing logo-wine selected state when activated.
+
 ## Continuation prompt
 
 ```text
