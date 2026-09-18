@@ -182,11 +182,11 @@ html { overflow-x: hidden; }
 .alma-editorial__media { position: relative; min-height: 72rem; overflow: hidden; isolation: isolate; }
 .alma-editorial__picture { display: block; width: 100%; height: 100%; }
 .alma-editorial__image { display: block; width: 100%; height: 100%; min-height: 72rem; object-fit: cover; }
-.alma-editorial__media::after { content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(0deg, rgba(29, 0, 4, .72) 0%, rgba(29, 0, 4, .34) 24%, rgba(29, 0, 4, 0) 54%); }
-.alma-editorial__media-copy { position: absolute; inset: auto clamp(3rem, 4vw, 6.4rem) clamp(3.6rem, 5vw, 7rem); z-index: 2; max-width: min(44rem, calc(100% - 6rem)); color: #fff; text-align: left; text-shadow: 0 .1rem 1.8rem rgba(29, 0, 4, .36); }
+.alma-editorial__media::after { content: ''; display: none; position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+.alma-editorial__media-copy { display: none; }
 .alma-editorial__content { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 7rem clamp(4rem, 8vw, 13rem); text-align: center; }
-.alma-editorial__eyebrow { margin: 0 0 1.2rem; font-family: var(--font-body-family); font-size: 1.1rem; font-weight: 500; letter-spacing: .18em; line-height: 1.4; text-transform: uppercase; }
-.alma-editorial .alma-editorial__media-copy h2 { max-width: 12ch; margin: 0; color: inherit; font-size: clamp(3.8rem, 4.5vw, 6.2rem); line-height: .98; text-wrap: balance; }
+.alma-editorial__eyebrow { margin: 0 0 1.4rem; font-size: 1.2rem; letter-spacing: .04em; }
+.alma-editorial h2 { max-width: 18ch; }
 .alma-editorial--dark h2, .alma-editorial--dark .price, .alma-editorial--dark .price-item { color: inherit; }
 .alma-editorial__text { max-width: 52rem; }
 .alma-editorial__product-line { display: flex; align-items: baseline; justify-content: center; gap: 1.2rem; width: auto; max-width: 52rem; margin: 2.4rem 0 0; padding: 0; border: 0; font-family: var(--font-heading-family); font-size: 1.4rem; }
@@ -198,15 +198,10 @@ html { overflow-x: hidden; }
 .alma-editorial__step-number { font-size: 1rem; letter-spacing: .12em; }
 .alma-editorial__step-image { display: none; }
 .alma-editorial__step-label { font-family: var(--font-heading-family); font-size: 1.25rem; }
-.alma-editorial--split { height: clamp(72rem, 56.25vw, 80.2rem); min-height: 72rem; }
-.alma-editorial--split .alma-editorial__media { height: 100%; min-height: 0; }
-.alma-editorial--split .alma-editorial__image { height: 100%; min-height: 0; }
 .alma-editorial--immersive { display: flex; flex-direction: column; min-height: 0; }
 .alma-editorial--immersive .alma-editorial__media { order: 1; width: 100%; min-height: 0; }
 .alma-editorial--immersive .alma-editorial__image { width: 100%; height: min(56.25vw, 80.2rem); min-height: 56rem; object-fit: cover; }
-.alma-editorial--immersive .alma-editorial__media::after { background: linear-gradient(110deg, rgba(29, 0, 4, .64) 0%, rgba(29, 0, 4, .3) 25%, rgba(29, 0, 4, 0) 56%); }
-.alma-editorial--immersive .alma-editorial__media-copy { inset: clamp(4rem, 6vw, 8rem) auto auto clamp(3rem, 5vw, 8rem); max-width: min(58rem, 44vw); }
-.alma-editorial--immersive .alma-editorial__content { order: 2; min-height: 30rem; padding: 5rem 2rem; }
+.alma-editorial--immersive .alma-editorial__content { order: 2; min-height: 36.7rem; padding: 6rem 2rem; }
 .alma-editorial--immersive .alma-editorial__product-line { margin-top: 1.6rem; }
 
 .alma-wardrobe { max-width: none; padding: 10rem 3.2rem 8rem; background: #fff; overflow: hidden; }
@@ -363,7 +358,6 @@ html { overflow-x: hidden; }
   .alma-product { scroll-snap-align: center; }
   .alma-product__image { height: 36rem; }
   .alma-editorial, .alma-editorial--right { display: flex; flex-direction: column; min-height: 0; }
-  .alma-editorial--split { height: auto; }
   .alma-editorial--split .alma-editorial__media { height: 50rem; }
   .alma-editorial--split .alma-editorial__image { height: 100%; }
   .alma-editorial--right .alma-editorial__media { order: 1; }
@@ -371,9 +365,11 @@ html { overflow-x: hidden; }
   .alma-editorial__media { order: 1; min-height: 0; }
   .alma-editorial__image { height: 50rem; min-height: 0; }
   .alma-editorial__content { order: 2; min-height: 0; padding: 4.8rem 2.8rem 5.5rem; }
-  .alma-editorial__media-copy { inset: auto 2.4rem 3.2rem; max-width: calc(100% - 4.8rem); }
-  .alma-editorial__eyebrow { margin-bottom: .9rem; font-size: 1rem; letter-spacing: .16em; }
-  .alma-editorial .alma-editorial__media-copy h2 { max-width: 10ch; font-size: clamp(3.4rem, 11vw, 4.6rem); line-height: 1; }
+  .alma-editorial__content-heading { display: none; }
+  .alma-editorial__media::after { display: block; background: linear-gradient(0deg, rgba(29, 0, 4, .72) 0%, rgba(29, 0, 4, .34) 24%, rgba(29, 0, 4, 0) 54%); }
+  .alma-editorial__media-copy { display: block; position: absolute; inset: auto 2.4rem 3.2rem; z-index: 2; max-width: calc(100% - 4.8rem); color: #fff; text-align: left; text-shadow: 0 .1rem 1.8rem rgba(29, 0, 4, .36); }
+  .alma-editorial__media-copy .alma-editorial__eyebrow { margin-bottom: .9rem; font-family: var(--font-body-family); font-size: 1rem; font-weight: 500; letter-spacing: .16em; line-height: 1.4; text-transform: uppercase; }
+  .alma-editorial .alma-editorial__media-copy h2 { max-width: 10ch; margin: 0; color: inherit; font-size: clamp(3.4rem, 11vw, 4.6rem); line-height: 1; text-wrap: balance; }
   .alma-editorial__text { max-width: 31rem; font-size: 1.5rem; line-height: 1.55; }
   .alma-editorial__text p { margin-top: 0; margin-bottom: 0; }
   .alma-editorial__product-line { flex-direction: column; align-items: center; gap: .6rem; width: min(100%, 28rem); margin-top: 2.8rem; padding-top: 1.8rem; border-top: 1px solid var(--alma-line); font-size: 1.45rem; line-height: 1.35; }
@@ -386,7 +382,7 @@ html { overflow-x: hidden; }
   .alma-editorial__step-label { font-size: 1.1rem; line-height: 1.35; }
   .alma-editorial--immersive .alma-editorial__image { height: 50rem; min-height: 0; }
   .alma-editorial--immersive .alma-editorial__media::after { background: linear-gradient(180deg, rgba(29, 0, 4, .62) 0%, rgba(29, 0, 4, .2) 34%, rgba(29, 0, 4, 0) 62%); }
-  .alma-editorial--immersive .alma-editorial__media-copy { inset: 8.8rem 2.4rem auto; max-width: calc(100% - 4.8rem); }
+  .alma-editorial--immersive .alma-editorial__media-copy { inset: 8rem 2.4rem auto; max-width: calc(100% - 4.8rem); }
   .alma-editorial--immersive .alma-editorial__media-copy h2 { font-size: 3.8rem; }
   .alma-editorial--immersive .alma-editorial__content { min-height: 0; padding: 4.4rem 2.8rem 5.2rem; }
   .alma-wardrobe { padding: 1.2rem 2rem 6rem; overflow: visible; }

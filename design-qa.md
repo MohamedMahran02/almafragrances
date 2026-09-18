@@ -35,8 +35,8 @@
 | Closing structure | Generic heading-over-cards and three-column footer | Desktop editorial split plus two-row footer; mobile newsletter → open two-column navigation → signature sequence | Pass |
 | Scent finder | New interactive discovery surface within the approved Diptyque/ALMA direction | Centered editorial introduction with compact wrapping scent chips on all viewports and touch-swipe results on mobile | Pass |
 | Finder data | Recommendations must follow Shopify catalog changes without spelling-sensitive repeated entry | Reusable `custom.fragrance_note_refs` metaobject selections are scored first; product title, description, tags and legacy `custom.fragrance_notes` remain compatibility fallbacks. No product IDs or result list are hard-coded | Pass |
-| Editorial title placement | Both requested titles belong on their photographs without hiding the product | Layering uses a bottom-left localized scrim; Dukhoon uses the quiet upper-left wall area. Both remain code-native, editable and contained by the media frame | Pass |
-| Editorial mobile crop | Sticky header, title and product must not collide | Dukhoon begins its mobile overlay 88 px inside the photograph, clearing the 78 px sticky header; both media frames remain 500 px high and horizontally contained | Pass |
+| Editorial title placement | Keep the approved image overlays on mobile, but restore the previous PC presentation | Below 750 px, layering uses a bottom-left localized scrim and Dukhoon uses the quiet upper-left wall area. Desktop hides both overlays/gradients and restores the original titles to their clean content panels | Pass |
+| Editorial mobile crop | Move the Dukhoon title slightly farther from its lid without letting the sticky header cover it | Dukhoon begins its mobile overlay 80 px inside the photograph, 8 px above the preceding placement and immediately below the 78 px sticky header; both media frames remain 500 px high and horizontally contained | Pass |
 
 **Measured browser results**
 
@@ -48,7 +48,7 @@
 - Both 1280 × 720 and 390 × 844 viewports report zero page-level horizontal overflow and no theme error surface.
 - At 390 px, the Experience section is 430.19 px high with three 319.8 × 250 px snap cards; the footer is 677.81 px high. At 1280 px, the Experience uses three equal 400.33 px columns and the footer remains a compact 304.88 px close.
 - At 1280 × 720, the finder uses a large left title column and a four-column note matrix/results region. At 390 × 844, the note matrix is three columns, the visible result card is 78 vw and centered with equal 11 vw rail padding, and the section itself remains within the viewport.
-- At 1280 × 720, the split layering feature is exactly 720 px high with a 632.5 px media column; both overlay blocks remain fully inside their media frames and compute to the active Cormorant family in white. At 390 × 844, both editorial media frames are 500 px high, headings remain contained and the Dukhoon overlay clears the sticky header.
+- At 1280 × 720, both media overlays and their gradients compute to `display: none`, while both content headings compute visible; the restored layering media returns to its original image-led height and Dukhoon restores its 367 px story panel. At 390 × 844, both editorial media frames are 500 px high, content headings are hidden, photo overlays are visible and the Dukhoon overlay starts exactly 80 px from the media top.
 
 **Visual review**
 
@@ -60,7 +60,7 @@
 - The deep-wine footer preserves the original four navigation groups, newsletter form, market, copyright and exact logo artwork. Navigation is semantic and always visible: four columns on desktop and a two-column grid on mobile, with no disclosure arrows or hidden links.
 - Browser-computed grid areas confirm `newsletter newsletter / brand nav` on desktop; mobile flex order confirms newsletter `1`, navigation `2`, and brand `3`.
 - Finder interaction checks: Vanilla + Musk yields four ranked recommendations, Oud yields two matching perfumes in the fixture, Clear selection restores the initial state, and the no-result message replaces the result rail when no product matches.
-- Editorial interaction checks: both existing CTAs receive keyboard focus, preserve their original destinations and remain separate from the overlaid headings. Desktop/mobile screenshots confirm readable contrast, intentional crops, loaded imagery and no product-title duplication in the supporting panels.
+- Editorial interaction checks: both existing CTAs receive keyboard focus and preserve their original destinations. Desktop screenshots confirm the titles are restored to the content panels with unshaded imagery; mobile screenshots confirm readable overlays, intentional crops and the increased Dukhoon lid clearance.
 
 **Validation checklist**
 
