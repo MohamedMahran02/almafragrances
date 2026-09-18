@@ -15,6 +15,7 @@
 - The former mix of shadowed, filled, plain-underlined and mobile-only category treatments has been replaced by the two supplied reference patterns.
 - The rejected mobile editorial layout's split title/price columns and oversized boxed action have been removed. Product title and price now form one centered, ruled group and the mobile action uses the lighter dotted-underlined reference treatment.
 - The closing sequence is now cohesive: a numbered editorial service grid closes the white content field, followed by a black-and-ivory footer using the same content, newsletter and disclosure behavior.
+- The final structural pass moves beyond recoloring: desktop Experience uses a dedicated 222.53 px title column beside the service grid, while the footer uses a full-width newsletter row above the brand/navigation row. Mobile explicitly reorders the closing content to newsletter, navigation, then brand signature.
 - Operational controls remain intentionally distinct: icon-only header controls, carousel arrows, quantity controls, filter-removal actions, tabs, disclosures and the newsletter arrow do not receive decorative dot marks.
 - P3: ALMA uses Georgia instead of Diptyque's proprietary serif. The measured size, line height, border, underline and dot geometry are preserved with the available brand-safe theme family.
 
@@ -30,6 +31,7 @@
 | Mobile editorial rhythm | Rejected screens showed awkward side-by-side product/price wrapping and a heavy button | Centered stacked product group, restrained rule, 22 px text action, balanced 48/55 px content padding | Pass |
 | ALMA Experience | Long stacked mobile list and decorative star marks | Numbered three-card editorial grid on desktop; 82 vw native-swipe rail with a visible next-card edge on mobile | Pass |
 | Footer | Low-contrast soft-gray close with weak hierarchy | Black brand field, white identity, muted navigation, outlined newsletter and compact mobile disclosures | Pass |
+| Closing structure | Generic heading-over-cards and three-column footer | Desktop editorial split plus two-row footer; mobile newsletter → disclosures → signature sequence | Pass |
 
 **Measured browser results**
 
@@ -49,6 +51,7 @@
 - Layering and Dukhoon mobile stories now use centered product/pricing groups and lightweight text actions; the layering steps remain a clearly separated three-column ritual row.
 - Footer navigation and newsletter utility remain visually quiet and functional.
 - The black footer preserves the original four navigation groups, newsletter form, market, copyright and exact logo artwork; mobile disclosures remain closed by default and keyboard operable.
+- Browser-computed grid areas confirm `newsletter newsletter / brand nav` on desktop; mobile flex order confirms newsletter `1`, navigation `2`, and brand `3`.
 
 **Validation checklist**
 

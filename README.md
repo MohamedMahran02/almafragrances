@@ -478,6 +478,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `sections/alma-service-band.liquid`, `assets/alma-theme.css`, `design-qa.md`, and this README. Footer data, links, newsletter form, homepage section order and every block-order array remain unchanged.
 - Checks: at 390 × 844 the Experience is 430.19 px high with three 319.8 × 250 px snap cards and the footer is 677.81 px high; at 1280 × 720 the Experience uses three 400.33 px columns and the footer is 304.88 px high. Both viewports have zero page overflow, no theme error surface and no console warnings/errors. Theme Check, static preview build and Git whitespace validation pass before push.
 
+### 2026-09-18 — Recompose the closing structure
+
+- Clarification: the user wanted the structure and presentation changed as well, not only the Experience card styling and footer colors.
+- Changed: wrapped the Experience in a true editorial split. Desktop now places the large section title in its own left column and the three numbered services in the right grid; mobile retains the compact heading-over-swipe-rail composition. Rebuilt the footer grid into two deliberate desktop rows: a full-width newsletter introduction/form row, then a brand-signature column beside the four navigation groups. Mobile now deliberately orders newsletter first, closed navigation disclosures second and the centered brand signature/copyright last.
+- Files: `sections/alma-service-band.liquid`, `assets/alma-theme.css`, `design-qa.md`, and this README. All service copy, footer links, newsletter form, Theme Editor settings, homepage order and block-order arrays remain unchanged.
+- Checks: at 1280 × 720 the Experience computes as a 222.53 px title column plus a 927.28 px service region, and the footer grid reports `newsletter newsletter / brand nav`. At 390 × 844, computed flex order is newsletter `1`, navigation `2`, brand `3`; disclosures remain closed, the service rail remains swipeable, page overflow is zero and browser logs are clear. Theme Check, static preview build and Git whitespace validation pass before push.
+
 ## Continuation prompt
 
 ```text
