@@ -40,6 +40,7 @@
       <div class="alma-scent-finder__results" role="region" aria-label="Recommended perfumes" tabindex="0">
         {%- for product in finder_collection.products limit: 50 -%}
           {%- liquid
+            assign note_references = product.metafields.custom.fragrance_note_refs.value
             assign note_metafield = product.metafields.custom.fragrance_notes.value
             capture note_source
               echo product.title
@@ -48,6 +49,11 @@
               echo ' '
               echo product.description | strip_html
               echo ' '
+              for note_reference in note_references
+                assign reference_name = note_reference.name.value | default: note_reference.name
+                echo reference_name
+                echo ' '
+              endfor
               echo note_metafield | join: ' '
             endcapture
           -%}
@@ -84,7 +90,7 @@
     {"type": "richtext", "id": "text", "label": "Text", "default": "<p>Choose the notes you love. We’ll reveal the ALMA fragrances that share your scent.</p>"},
     {"type": "text", "id": "prompt", "label": "Selection prompt", "default": "Which notes draw you in?"},
     {"type": "text", "id": "initial_message", "label": "Initial message", "default": "Select one or more notes to begin."},
-    {"type": "collection", "id": "collection", "label": "Perfume collection", "info": "Products and prices stay connected to Shopify. Add note:vanilla style tags, note words in descriptions, or the custom.fragrance_notes metafield for matching."},
+    {"type": "collection", "id": "collection", "label": "Perfume collection", "info": "Products and prices stay connected to Shopify. Select reusable entries in custom.fragrance_note_refs. Tags, descriptions and the legacy custom.fragrance_notes field remain matching fallbacks."},
     {"type": "range", "id": "results_limit", "label": "Maximum recommendations", "min": 2, "max": 8, "step": 1, "default": 4}
   ],
   "blocks": [

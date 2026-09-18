@@ -34,7 +34,7 @@
 | Footer | Low-contrast soft-gray close with weak hierarchy | Black brand field, white identity, muted always-visible navigation and outlined newsletter | Pass |
 | Closing structure | Generic heading-over-cards and three-column footer | Desktop editorial split plus two-row footer; mobile newsletter → open two-column navigation → signature sequence | Pass |
 | Scent finder | New interactive discovery surface within the approved Diptyque/ALMA direction | Split editorial heading and square note matrix on desktop; centered heading, three-column controls and touch-swipe results on mobile | Pass |
-| Finder data | Recommendations must follow Shopify catalog changes | Product title, description, tags and `custom.fragrance_notes` are scored from the configured live collection; no product IDs or result list are hard-coded | Pass |
+| Finder data | Recommendations must follow Shopify catalog changes without spelling-sensitive repeated entry | Reusable `custom.fragrance_note_refs` metaobject selections are scored first; product title, description, tags and legacy `custom.fragrance_notes` remain compatibility fallbacks. No product IDs or result list are hard-coded | Pass |
 
 **Measured browser results**
 
