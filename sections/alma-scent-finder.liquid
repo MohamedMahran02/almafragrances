@@ -9,6 +9,7 @@
   assign finder_notes = metaobjects.fragrance_note.values
 -%}
 
+<div id="AlmaScentFinder" class="alma-scent-finder-anchor">
 {%- if finder_collection.products != blank and finder_notes != blank -%}
   <alma-scent-finder class="alma-scent-finder" data-result-limit="{{ section.settings.results_limit }}">
     <div class="alma-scent-finder__intro page-width">
@@ -82,6 +83,7 @@
     </div>
   </alma-scent-finder>
 {%- endif -%}
+</div>
 
 {% schema %}
 {

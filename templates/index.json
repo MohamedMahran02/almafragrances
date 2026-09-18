@@ -21,8 +21,8 @@
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Discover the selection",
-            "button_link_1": "shopify://collections/all"
+            "button_label_1": "Find Your Aura",
+            "button_link_1": "#AlmaScentFinder"
           }
         }
       },

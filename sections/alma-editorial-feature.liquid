@@ -37,7 +37,15 @@
     {%- endif -%}
     {%- assign feature_link = section.settings.link -%}
     {%- if feature_link == blank and feature_product != blank -%}{%- assign feature_link = feature_product.url -%}{%- endif -%}
-    {%- if section.settings.link_label != blank and feature_link != blank -%}<a class="alma-button" href="{{ feature_link }}">{{ section.settings.link_label | escape }}</a>{%- endif -%}
+    {%- if section.settings.link_label != blank and feature_link != blank -%}
+      <a class="alma-button" href="{{ feature_link }}">
+        <span class="alma-cta-label">
+          <img class="alma-cta-label__dot" src="{{ 'alma-cta-dot.svg' | asset_url }}" width="17" height="16" alt="" aria-hidden="true">
+          <span class="alma-cta-label__text">{{ section.settings.link_label | escape }}</span>
+          <img class="alma-cta-label__dot" src="{{ 'alma-cta-dot.svg' | asset_url }}" width="17" height="16" alt="" aria-hidden="true">
+        </span>
+      </a>
+    {%- endif -%}
     {%- if section.blocks.size > 0 -%}
       <div class="alma-editorial__steps" aria-label="{{ section.settings.steps_label | escape }}">
         {%- for block in section.blocks -%}

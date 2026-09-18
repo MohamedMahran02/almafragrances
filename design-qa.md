@@ -24,7 +24,7 @@
 
 | Surface | Reference pattern | Final ALMA implementation | Result |
 | --- | --- | --- | --- |
-| Boxed CTA | 48 px white rectangle, 1 px dark border, square corners, no shadow, 17 × 16 marks with 4 px label gaps | Campaign, editorial, native commerce, account and form conversion actions use the same geometry with the logo-wine ink | Pass |
+| Boxed CTA | 48 px white rectangle, 1 px dark border, square corners, no shadow, 17 × 16 marks with 4 px label gaps | Campaign, editorial, native commerce, account and form conversion actions use the same geometry with the logo-wine ink; campaign and editorial CTAs share the wine/white hover reversal | Pass |
 | Text CTA | Transparent serif link, 1 px underline beneath the label, 17 × 16 marks on both sides | Ritual, product-card, wardrobe, service and applicable Dawn underlined actions share the same treatment with the label centered between vertically centered marks | Pass |
 | Responsive behavior | Content-sized controls without clipped marks | Desktop and 390 px mobile retain complete marks, labels and borders with zero page overflow | Pass |
 | Interaction hierarchy | Decorative styling only on customer actions | Tabs, arrows, icon controls and utility actions preserve their existing interaction-specific treatments | Pass |
@@ -46,6 +46,8 @@
 - Editorial link labels use an inline-flex centering layout; label and control midpoints align on both desktop and mobile, correcting the top-aligned state shown in the user's follow-up screenshot.
 - Product text CTA: 158.72 × 22 px, 21 px side inset, 16/18 px Georgia and a 1 px underline.
 - Every dotted text action computes both 17 × 16 px ornaments to the vertical center (`0% 50%, 100% 50%`) with centered text; the campaign's explicit inline marks retain the same symmetric geometry.
+- At 1280 × 720 and 390 × 844, the opening, layering and Dukhoon boxed CTAs all compute `rgb(29, 0, 4)` backgrounds, white text and `invert(1)` dot marks on hover.
+- The opening CTA renders “Find Your Aura” with `href="#AlmaScentFinder"`; activating it updates the location hash and resolves to the permanent finder anchor, whose scroll margin follows the current `--header-height` value plus 10 px.
 - Wardrobe text CTA: 162.08 × 22 px on desktop; responsive labels remain complete within the two-column mobile grid.
 - Mobile wardrobe labels use symmetric 17 px dot columns around a centered text column, so the complete dot-label-dot unit remains centered and multiline labels no longer leave both dots aligned to the first line.
 - Both 1280 × 720 and 390 × 844 viewports report zero page-level horizontal overflow and no theme error surface.
