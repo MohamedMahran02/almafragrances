@@ -21,10 +21,12 @@
     {%- else -%}
       {{ 'lifestyle-1' | placeholder_svg_tag: 'alma-editorial__image placeholder-svg' }}
     {%- endif -%}
+    <div class="alma-editorial__media-copy">
+      {%- if section.settings.eyebrow != blank -%}<p class="alma-editorial__eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+      <h2 id="AlmaEditorial-{{ section.id }}">{{ section.settings.heading | escape }}</h2>
+    </div>
   </div>
   <div class="alma-editorial__content">
-    {%- if section.settings.eyebrow != blank -%}<p class="alma-editorial__eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
-    <h2 id="AlmaEditorial-{{ section.id }}">{{ section.settings.heading | escape }}</h2>
     {%- if section.settings.text != blank -%}<div class="alma-editorial__text rte">{{ section.settings.text }}</div>{%- endif -%}
     {%- if feature_product != blank -%}
       <div class="alma-editorial__product-line"><span>{{ feature_product.title | escape }}</span>{% render 'price', product: feature_product %}</div>

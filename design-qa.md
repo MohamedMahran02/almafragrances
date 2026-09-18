@@ -18,7 +18,7 @@
 - “Find Your Aura” extends the approved restrained editorial system with a functional note-selection grid and live Shopify-backed recommendations instead of a disconnected app-like card.
 - The final structural pass moves beyond recoloring: desktop Experience uses a dedicated 222.53 px title column beside the service grid, while the footer uses a full-width newsletter row above the brand/navigation row. Mobile explicitly reorders the closing content to newsletter, navigation, then brand signature.
 - Operational controls remain intentionally distinct: icon-only header controls, carousel arrows, quantity controls, filter-removal actions, tabs and the newsletter arrow do not receive decorative dot marks.
-- P3: ALMA uses Georgia instead of Diptyque's proprietary serif. The measured size, line height, border, underline and dot geometry are preserved with the available brand-safe theme family.
+- ALMA uses the active self-hosted Cormorant Garamond/Jost option rather than Diptyque's proprietary type. The measured hierarchy and control geometry remain brand-safe and independent of third-party font delivery.
 
 **Required fidelity surfaces**
 
@@ -35,6 +35,8 @@
 | Closing structure | Generic heading-over-cards and three-column footer | Desktop editorial split plus two-row footer; mobile newsletter → open two-column navigation → signature sequence | Pass |
 | Scent finder | New interactive discovery surface within the approved Diptyque/ALMA direction | Centered editorial introduction with compact wrapping scent chips on all viewports and touch-swipe results on mobile | Pass |
 | Finder data | Recommendations must follow Shopify catalog changes without spelling-sensitive repeated entry | Reusable `custom.fragrance_note_refs` metaobject selections are scored first; product title, description, tags and legacy `custom.fragrance_notes` remain compatibility fallbacks. No product IDs or result list are hard-coded | Pass |
+| Editorial title placement | Both requested titles belong on their photographs without hiding the product | Layering uses a bottom-left localized scrim; Dukhoon uses the quiet upper-left wall area. Both remain code-native, editable and contained by the media frame | Pass |
+| Editorial mobile crop | Sticky header, title and product must not collide | Dukhoon begins its mobile overlay 88 px inside the photograph, clearing the 78 px sticky header; both media frames remain 500 px high and horizontally contained | Pass |
 
 **Measured browser results**
 
@@ -46,6 +48,7 @@
 - Both 1280 × 720 and 390 × 844 viewports report zero page-level horizontal overflow and no theme error surface.
 - At 390 px, the Experience section is 430.19 px high with three 319.8 × 250 px snap cards; the footer is 677.81 px high. At 1280 px, the Experience uses three equal 400.33 px columns and the footer remains a compact 304.88 px close.
 - At 1280 × 720, the finder uses a large left title column and a four-column note matrix/results region. At 390 × 844, the note matrix is three columns, the visible result card is 78 vw and centered with equal 11 vw rail padding, and the section itself remains within the viewport.
+- At 1280 × 720, the split layering feature is exactly 720 px high with a 632.5 px media column; both overlay blocks remain fully inside their media frames and compute to the active Cormorant family in white. At 390 × 844, both editorial media frames are 500 px high, headings remain contained and the Dukhoon overlay clears the sticky header.
 
 **Visual review**
 
@@ -57,6 +60,7 @@
 - The deep-wine footer preserves the original four navigation groups, newsletter form, market, copyright and exact logo artwork. Navigation is semantic and always visible: four columns on desktop and a two-column grid on mobile, with no disclosure arrows or hidden links.
 - Browser-computed grid areas confirm `newsletter newsletter / brand nav` on desktop; mobile flex order confirms newsletter `1`, navigation `2`, and brand `3`.
 - Finder interaction checks: Vanilla + Musk yields four ranked recommendations, Oud yields two matching perfumes in the fixture, Clear selection restores the initial state, and the no-result message replaces the result rail when no product matches.
+- Editorial interaction checks: both existing CTAs receive keyboard focus, preserve their original destinations and remain separate from the overlaid headings. Desktop/mobile screenshots confirm readable contrast, intentional crops, loaded imagery and no product-title duplication in the supporting panels.
 
 **Validation checklist**
 
