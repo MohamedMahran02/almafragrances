@@ -41,6 +41,8 @@
 | Launch navigation | Keep only useful destinations and prevent controls from colliding at compact desktop widths | Products, Sale, Find Your Aura, Gifting and Contact share verified routes; desktop market text is compacted to `AED` and 990–1099 px spacing preserves separation from utilities | Pass |
 | Link integrity | Customer-facing actions must not use empty, placeholder, unresolved resource or missing-anchor destinations | 148 rendered homepage links resolve to explicit routes or existing anchors; Products and all three ALMA Experience actions use explicit storefront paths | Pass |
 | Price currency presentation | Remove the redundant `Dhs.` prefix without changing amounts or losing currency clarity | Core prices use number + active ISO code; a dynamic text safeguard removes only `Dhs.` immediately before numeric prices and preserves trailing `AED` | Pass |
+| Product detail composition | Replace the cramped default Dawn information stack without changing native commerce behavior | Desktop uses a 56/44 image-information composition with editorial spacing; mobile stacks the image before a padded information column, with no page overflow | Pass |
+| Product purchase controls | Remove inappropriate decorative dots and provide obvious hover feedback | Add to cart is wine/white and reverses on hover; Buy it now is white/wine and reverses on hover. Both are 56 px square-corner controls with the native product form intact | Pass |
 
 **Measured browser results**
 
@@ -74,6 +76,7 @@
 - Launch navigation checks: with a live-like `AED` selector, the centered navigation leaves 113 px before utilities at 1280 px and 20.5 px at 1024 px. The mobile drawer exposes the same five destinations at 390 px.
 - Homepage interaction audit: 148 links and 19–20 controls per viewport contain no blank or placeholder hrefs, missing local anchors, unresolved `shopify://` links or unlabeled controls. Search, mobile menu, finder jump, tabs and carousel movement all produce their expected visible state without console warnings/errors.
 - Currency presentation checks: at desktop and mobile widths, both initial `Dhs. 125.00 AED` and later DOM updates such as `Dhs 360.00 AED` normalize to amount + `AED`; form values and embedded JSON are intentionally unchanged, and no rendered numeric price retains the prefix.
+- Product detail checks at 1280 × 900 and 390 × 844: both purchase controls are 56 px high, use no background ornaments, retain square corners and Cormorant display type, and compute the expected wine/white inverse states on hover. Quantity increases from 1 to 2 through Dawn's native quantity control; the mobile information column is fully contained with no page overflow.
 
 **Validation checklist**
 
@@ -83,6 +86,7 @@
 - [x] Verify desktop and mobile geometry visually and through computed styles.
 - [x] Verify zero page overflow and no framework/theme error overlay.
 - [x] Run Theme Check and repository validation before handoff.
+- [x] Verify product-detail purchase controls at desktop and mobile widths, including hover and quantity behavior.
 
 **Follow-up polish**
 
