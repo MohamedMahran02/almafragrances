@@ -31,8 +31,8 @@
 | Asset quality | Crisp small dot ornaments | Existing `assets/alma-cta-dot.svg` is reused directly; no raster recreation or duplicated artwork | Pass |
 | Mobile editorial rhythm | Rejected screens showed awkward side-by-side product/price wrapping and a heavy button | Centered stacked product group, restrained rule, 22 px text action, balanced 48/55 px content padding | Pass |
 | ALMA Experience | Long stacked mobile list and decorative star marks | Numbered three-card editorial grid on desktop; 82 vw native-swipe rail with a visible next-card edge on mobile | Pass |
-| Footer | Low-contrast soft-gray close with weak hierarchy | Logo-wine `#1D0004` brand field, white identity, muted always-visible navigation and outlined newsletter | Pass |
-| Closing structure | Generic heading-over-cards and three-column footer | Desktop editorial split plus two-row footer; mobile newsletter → open two-column navigation → signature sequence | Pass |
+| Footer | Low-contrast soft-gray close with weak hierarchy | Logo-wine `#1D0004` brand field, white identity, concise eight-link navigation in three essential groups and outlined newsletter | Pass |
+| Closing structure | Generic heading-over-cards and dense four-group footer | Desktop editorial split plus two-row footer; mobile newsletter → open three-column essential navigation → signature sequence | Pass |
 | Scent finder | New interactive discovery surface within the approved Diptyque/ALMA direction | Centered editorial introduction with compact wrapping scent chips on all viewports and touch-swipe results on mobile | Pass |
 | Finder data | Recommendations must follow Shopify catalog changes without spelling-sensitive repeated entry | Reusable `custom.fragrance_note_refs` metaobject selections are scored first; product title, description, tags and legacy `custom.fragrance_notes` remain compatibility fallbacks. No product IDs or result list are hard-coded | Pass |
 | Editorial title placement | Keep the approved image overlays on mobile, but restore the previous PC presentation | Below 750 px, layering uses a bottom-left localized scrim and Dukhoon uses the quiet upper-left wall area. Desktop hides both overlays/gradients and restores the original titles to their clean content panels | Pass |
@@ -48,7 +48,7 @@
 - Wardrobe text CTA: 162.08 × 22 px on desktop; responsive labels remain complete within the two-column mobile grid.
 - Mobile wardrobe labels use symmetric 17 px dot columns around a centered text column, so the complete dot-label-dot unit remains centered and multiline labels no longer leave both dots aligned to the first line.
 - Both 1280 × 720 and 390 × 844 viewports report zero page-level horizontal overflow and no theme error surface.
-- At 390 px, the Experience section is 430.19 px high with three 319.8 × 250 px snap cards; the footer is 677.81 px high. At 1280 px, the Experience uses three equal 400.33 px columns and the footer remains a compact 304.88 px close.
+- At 390 px, the simplified footer is 664.63 px high with three equal 106 px navigation columns and eight links. At 1280 px it is 448.52 px high with three equal 271 px navigation columns; both retain the newsletter, identity and legal essentials without overflow.
 - At 1280 × 720, the finder uses a large left title column and a four-column note matrix/results region. At 390 × 844, the note matrix is three columns, the visible result card is 78 vw and centered with equal 11 vw rail padding, and the section itself remains within the viewport.
 - At 1280 × 720, both media overlays and their gradients compute to `display: none`, while both content headings compute visible; the restored layering media returns to its original image-led height and Dukhoon restores its 367 px story panel. At 390 × 844, both editorial media frames are 500 px high, content headings are hidden, photo overlays are visible and the Dukhoon overlay starts exactly 80 px from the media top.
 
@@ -60,7 +60,7 @@
 - Mobile wardrobe dots align with the full label block rather than the first text line, keeping Spray Perfumes, Solid Perfumes and the shorter labels optically centered.
 - Layering and Dukhoon mobile stories now use centered product/pricing groups and lightweight text actions; the layering steps remain a clearly separated three-column ritual row.
 - Footer navigation and newsletter utility remain visually quiet and functional.
-- The deep-wine footer preserves the original four navigation groups, newsletter form, market, copyright and exact logo artwork. Navigation is semantic and always visible: four columns on desktop and a two-column grid on mobile, with no disclosure arrows or hidden links.
+- The deep-wine footer preserves the newsletter form, market, copyright and exact logo artwork while reducing navigation from 15 links/four groups to eight essential links across Shop, Help and Legal. Navigation stays semantic and always visible in three columns on both desktop and mobile.
 - Browser-computed grid areas confirm `newsletter newsletter / brand nav` on desktop; mobile flex order confirms newsletter `1`, navigation `2`, and brand `3`.
 - Finder interaction checks: Vanilla + Musk yields four ranked recommendations, Oud yields two matching perfumes in the fixture, Clear selection restores the initial state, and the no-result message replaces the result rail when no product matches.
 - Editorial interaction checks: both existing CTAs receive keyboard focus and preserve their original destinations. Desktop screenshots confirm the titles are restored to the content panels with unshaded imagery; mobile screenshots confirm readable overlays, intentional crops and the increased Dukhoon lid clearance.

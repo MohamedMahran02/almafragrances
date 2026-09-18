@@ -44,7 +44,6 @@
       <a class="alma-footer__logo" href="{{ routes.root_url }}" aria-label="ALMA by Reem Fragrances home">
         <img src="{{ 'alma-logo-icon.png' | asset_url }}" width="1055" height="1491" loading="lazy" alt="ALMA by Reem Fragrances">
       </a>
-      <p>Fragrances by Reem</p>
       <p class="alma-footer__market">United Arab Emirates <span aria-hidden="true">·</span> English</p>
       <small class="alma-footer__copyright-inline">&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url }}</small>
       {%- if section.settings.show_social and has_social_icons -%}
@@ -57,18 +56,8 @@
       <h3>Shop</h3>
       <ul class="list-unstyled" role="list">
         <li><a href="{{ routes.all_products_collection_url }}">All products</a></li>
-        <li><a href="{{ alma_collections_url }}/alma-perfumes">Spray Perfumes</a></li>
-        <li><a href="{{ alma_collections_url }}/alma-solids-%D9%85%D8%AE%D9%85%D8%B1%D9%8A%D8%A7%D8%AA">Solid Perfumes</a></li>
-        <li><a href="{{ alma_collections_url }}/alma-lotions">Lotions</a></li>
-      </ul>
-    </div>
-
-    <div class="alma-footer-nav__group">
-      <h3>Explore ALMA</h3>
-      <ul class="list-unstyled" role="list">
+        <li><a href="{{ alma_collections_url }}/alma-perfumes">Perfumes</a></li>
         <li><a href="{{ alma_collections_url }}/alma-dokhon">Dukhoon</a></li>
-        <li><a href="{{ alma_collections_url }}/alma-solid-charms">Solid Charms</a></li>
-        <li><a href="{{ alma_collections_url }}/layering-kits">Layering &amp; Kits</a></li>
         <li><a href="/products/alma-fragrances-gift-card">Gift Cards</a></li>
       </ul>
     </div>
@@ -77,9 +66,7 @@
       <h3>Help</h3>
       <ul class="list-unstyled" role="list">
         <li><a href="{{ alma_help_url }}">Contact us</a></li>
-        <li><a href="{{ routes.search_url }}">Search</a></li>
         <li><a href="{{ routes.account_url }}">My account</a></li>
-        <li><a href="{{ routes.cart_url }}">Shopping bag</a></li>
       </ul>
     </div>
 
@@ -88,7 +75,6 @@
       <ul class="list-unstyled" role="list">
         <li><a href="/policies/privacy-policy">Privacy policy</a></li>
         <li><a href="/policies/terms-of-service">Terms of service</a></li>
-        <li><a href="/policies/refund-policy">Refund policy</a></li>
       </ul>
     </div>
     </nav>
@@ -254,25 +240,7 @@
       "type": "richtext",
       "id": "newsletter_text",
       "label": "Newsletter text",
-      "default": "<p>Discover new creations, layering rituals and thoughtful gifting from ALMA.</p>"
-    },
-    {
-      "type": "text",
-      "id": "help_heading",
-      "label": "Help heading",
-      "default": "Need help?"
-    },
-    {
-      "type": "richtext",
-      "id": "help_text",
-      "label": "Help text",
-      "default": "<p>Our team is here to help you find your fragrance and build your ritual.</p>"
-    },
-    {
-      "type": "text",
-      "id": "help_link_label",
-      "label": "Help link label",
-      "default": "Contact us"
+      "default": "<p>New fragrances, rituals and gifts—sent occasionally.</p>"
     },
     {
       "type": "url",
