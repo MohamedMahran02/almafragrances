@@ -16,6 +16,7 @@ Fresh handoff started at the user's request on 2026-09-11. Previous README updat
 - Current catalog-free visual review URL: `https://alma-fragrances-preview-9ilk2929v-omarashraafs-projects.vercel.app`. Vercel Authentication and password protection are disabled for this project, so the site is accessible without a Vercel account. The URL is a visual homepage preview, not a Shopify commerce deployment. Its static build intentionally receives an empty catalog and never publishes saved product names, images or prices; live products remain Shopify-only. The older stable production alias is not treated as current until the user explicitly requests a production deployment.
 - The test store now contains the current public ALMA catalog: 23 active products, 189 variants, 42 product images and six requested category collections. Twenty-two standard products were imported from the generated CSV; the gift card was created through Shopify's gift-card product flow.
 - English is the only customer-facing language in the current theme. Arabic source copy remains in the existing Shopify catalog for a later dedicated Arabic locale, but the English storefront filters it from product and collection descriptions. The Shopify store currency is now United Arab Emirates Dirham (AED), and theme currency-code display is enabled.
+- Active typography comparison: **option 2**, using Cormorant Garamond for headings/display actions and Jost for body/interface text through Dawn's native Shopify font pickers. This is a temporary preview pending the user's final selection.
 
 ## Approved visual target
 
@@ -549,6 +550,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `assets/alma-theme.css` and this README. Finder data, matching behavior, products, layout, homepage order and every block-order array are unchanged.
 - Checks: Theme Check passes with 0 errors and the same 9 inherited Dawn warnings; static preview build and Git whitespace validation pass. On the connected Shopify mobile viewport, the section computes to `rgb(247, 245, 241)` and an unselected chip to a transparent fill, so the two surfaces visually match. Selecting Vanilla settles to `rgb(29, 0, 4)` with white text and returns three live recommendations. The page contains meaningful content, no framework error overlay and no console warnings/errors.
 
+### 2026-09-18 — Typography comparison: option 2
+
+- Request: try the second proposed typography direction after reviewing option 1.
+- Preview applied: option 2 uses **Cormorant Garamond** for headings and display/action typography with **Jost** for body and interface text. Both the active theme settings and Dawn preset use Shopify font-library handles, so Dawn continues to emit and preload the font files through Shopify's CDN without a third-party embed.
+- Files: `config/settings_data.json` and this README. The shared heading routing added for option 1 remains in place; layout, content, products, routes, homepage section order and every block-order array are unchanged.
+- Review state: option 2 is the active temporary comparison candidate pending the user's “choose this” or “next” decision. Theme Check passes with 0 errors and the same 9 inherited Dawn warnings; settings JSON parsing, the catalog-free static preview build and Git whitespace validation pass. Connected Shopify synchronization, rendered font families and publication remain separate external states unless explicitly verified.
+
 ## Continuation prompt
 
 ```text
@@ -559,5 +567,5 @@ The user selected research/design/previews/diptyque-direction-1.png and later cl
 The current storefront locale is English-only; preserve Arabic source copy for a future separate Arabic locale. Currency-code display is enabled and the authenticated Shopify store currency was changed from EGP to AED on 2026-09-13. Numeric product prices and shipping rates were not converted automatically and must be reviewed before production.
 The opening campaign uses the restored original wide artwork height rather than a viewport-height image crop. On desktop and compact mobile screens, the CTA is visible immediately, stays near the bottom of the viewport while the campaign scrolls, and releases with a responsive inset before the ritual and existing later sections continue normally. Preserve this interaction unless the user requests another landing behavior.
 Use Context7 before external API/package-dependent implementation. Pull before edits. Update README in every change commit, documenting current structure/order, implementation, checks, limitations and next steps. Push and verify remote main; verify Shopify connection, synchronization and publication separately.
-Next requested work: [describe the next change].
+Next requested work: review typography option 2 (Cormorant Garamond + Jost), then either select it or continue to option 3 (Instrument Serif + Inter).
 ```
