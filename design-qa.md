@@ -37,6 +37,7 @@
 | Finder data | Recommendations must follow Shopify catalog changes without spelling-sensitive repeated entry | Reusable `custom.fragrance_note_refs` metaobject selections are scored first; product title, description, tags and legacy `custom.fragrance_notes` remain compatibility fallbacks. No product IDs or result list are hard-coded | Pass |
 | Editorial title placement | Keep the approved image overlays on mobile, but restore the previous PC presentation | Below 750 px, layering uses a bottom-left localized scrim and Dukhoon uses the quiet upper-left wall area. Desktop hides both overlays/gradients and restores the original titles to their clean content panels | Pass |
 | Editorial mobile crop | Move the Dukhoon title slightly farther from its lid without letting the sticky header cover it | Dukhoon begins its mobile overlay 80 px inside the photograph, 8 px above the preceding placement and immediately below the 78 px sticky header; both media frames remain 500 px high and horizontally contained | Pass |
+| Mobile wardrobe labels | Multiline category text must remain centered between its decorative dots | Below 750 px, each label uses equal 17 px ornament columns and a centered text column; both dots align to the vertical midpoint of one- or two-line labels | Pass |
 
 **Measured browser results**
 
@@ -45,6 +46,7 @@
 - Editorial link labels use an inline-flex centering layout; label and control midpoints align on both desktop and mobile, correcting the top-aligned state shown in the user's follow-up screenshot.
 - Product text CTA: 158.72 × 22 px, 21 px side inset, 16/18 px Georgia and a 1 px underline.
 - Wardrobe text CTA: 162.08 × 22 px on desktop; responsive labels remain complete within the two-column mobile grid.
+- Mobile wardrobe labels use symmetric 17 px dot columns around a centered text column, so the complete dot-label-dot unit remains centered and multiline labels no longer leave both dots aligned to the first line.
 - Both 1280 × 720 and 390 × 844 viewports report zero page-level horizontal overflow and no theme error surface.
 - At 390 px, the Experience section is 430.19 px high with three 319.8 × 250 px snap cards; the footer is 677.81 px high. At 1280 px, the Experience uses three equal 400.33 px columns and the footer remains a compact 304.88 px close.
 - At 1280 × 720, the finder uses a large left title column and a four-column note matrix/results region. At 390 × 844, the note matrix is three columns, the visible result card is 78 vw and centered with equal 11 vw rail padding, and the section itself remains within the viewport.
@@ -55,6 +57,7 @@
 - Product links visibly match the supplied dotted-underlined reference across the four-card desktop rail.
 - Editorial actions visibly match the supplied white bordered reference instead of the previous filled black control.
 - Wardrobe and ALMA experience actions use the same text-link grammar while retaining the established section layouts.
+- Mobile wardrobe dots align with the full label block rather than the first text line, keeping Spray Perfumes, Solid Perfumes and the shorter labels optically centered.
 - Layering and Dukhoon mobile stories now use centered product/pricing groups and lightweight text actions; the layering steps remain a clearly separated three-column ritual row.
 - Footer navigation and newsletter utility remain visually quiet and functional.
 - The deep-wine footer preserves the original four navigation groups, newsletter form, market, copyright and exact logo artwork. Navigation is semantic and always visible: four columns on desktop and a two-column grid on mobile, with no disclosure arrows or hidden links.

@@ -394,7 +394,9 @@ html { overflow-x: hidden; }
   .alma-wardrobe__card, .alma-wardrobe__card:first-child, .alma-wardrobe__card:nth-child(5) { align-content: start; gap: 1.8rem; scroll-snap-align: none; }
   .alma-wardrobe__media { aspect-ratio: 1; }
   .alma-wardrobe__image, .alma-wardrobe__card:first-child .alma-wardrobe__image, .alma-wardrobe__card:nth-child(5) .alma-wardrobe__image { padding: .8rem; }
-  .alma-wardrobe__label { justify-self: center; max-width: 16ch; padding: 0 2.1rem .4rem; border-bottom: 0; font-size: 1.55rem; line-height: 1.8rem; }
+  .alma-wardrobe__label { justify-self: center; display: inline-grid; grid-template-columns: 1.7rem minmax(0, auto) 1.7rem; align-items: center; column-gap: .4rem; max-width: 100%; padding: 0 0 .4rem; border-bottom: 0; background-image: none; font-size: 1.55rem; line-height: 1.8rem; text-decoration: none; }
+  .alma-wardrobe__label::before, .alma-wardrobe__label::after { content: ''; width: 1.7rem; height: 1.6rem; background-image: var(--alma-cta-dot); background-position: center; background-repeat: no-repeat; background-size: 1.7rem 1.6rem; }
+  .alma-wardrobe__label-text { max-width: 10ch; text-align: center; text-decoration-line: underline; text-decoration-thickness: 1px; text-underline-offset: .4rem; }
   .alma-wardrobe .alma-scroll-gallery__footer { display: none; }
   .alma-service-band { padding: 4.8rem 0 5.5rem; text-align: left; }
   .alma-service-band__inner { display: block; max-width: none; }

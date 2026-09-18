@@ -29,7 +29,7 @@
             {{ wardrobe_image | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '320, 480, 720, 960, 1200', sizes: '(min-width: 990px) 33vw, 50vw', class: 'alma-wardrobe__image', alt: wardrobe_alt }}
           {%- else -%}{{ 'collection-1' | placeholder_svg_tag: 'alma-wardrobe__image placeholder-svg' }}{%- endif -%}
         </span>
-        <span class="alma-wardrobe__label">{{ block.settings.label | default: wardrobe_collection.title | escape }}</span>
+        <span class="alma-wardrobe__label"><span class="alma-wardrobe__label-text">{{ block.settings.label | default: wardrobe_collection.title | escape }}</span></span>
       </a>
     {%- endfor -%}
   </div>
