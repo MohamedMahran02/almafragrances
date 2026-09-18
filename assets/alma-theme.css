@@ -195,7 +195,7 @@ html { overflow-x: hidden; }
   .alma-favourites h2 { margin-bottom: 2.2rem; }
   .alma-favourites__tabs { gap: .6rem 2rem; margin-bottom: 2.5rem; }
   .alma-favourites__grid { grid-auto-columns: 82vw; gap: 1.5rem; }
-  .alma-scroll-gallery__controls { right: .8rem; left: .8rem; }
+  .alma-favourites .alma-scroll-gallery__controls { display: none; }
   .alma-product { scroll-snap-align: start; }
   .alma-product__image { height: 36rem; }
   .alma-editorial, .alma-editorial--right { display: flex; flex-direction: column; min-height: 0; }
