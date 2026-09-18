@@ -1,4 +1,4 @@
-# Frontend QA — CTA system and mobile editorial stories
+# Frontend QA — CTA, editorial and closing experience system
 
 **Comparison target**
 
@@ -6,6 +6,7 @@
 - Text control: `C:\Users\TYARA12\AppData\Local\Temp\codex-clipboard-34f4f645-1880-4023-807e-6411ea531659.png`.
 - Full composition reference: `C:\Users\TYARA12\AppData\Local\Temp\codex-clipboard-b4537cd8-2145-4e43-9c26-0c308cd03154.png`.
 - Rejected mobile editorial states: `C:\Users\TYARA12\AppData\Local\Temp\codex-clipboard-46b2f019-2eab-45f1-9efa-24a02e850f9c.png` and `C:\Users\TYARA12\AppData\Local\Temp\codex-clipboard-d2dbccd2-42eb-4cbe-9226-df012fd960e0.png`.
+- Footer direction supplied earlier in the project: `C:\Users\TYARA12\AppData\Local\Temp\codex-clipboard-fcb8807b-2797-441b-9d80-0f46d9daaac3.png` and `C:\Users\TYARA12\AppData\Local\Temp\codex-clipboard-820c4588-d5a7-4262-905f-9d8d28905b71.png`.
 - Final rendered surface: `http://127.0.0.1:9293/` at 1280 × 720 and 390 × 844 CSS-pixel viewports.
 
 **Findings**
@@ -13,6 +14,7 @@
 - No actionable P0/P1/P2 mismatch remains in the CTA system.
 - The former mix of shadowed, filled, plain-underlined and mobile-only category treatments has been replaced by the two supplied reference patterns.
 - The rejected mobile editorial layout's split title/price columns and oversized boxed action have been removed. Product title and price now form one centered, ruled group and the mobile action uses the lighter dotted-underlined reference treatment.
+- The closing sequence is now cohesive: a numbered editorial service grid closes the white content field, followed by a black-and-ivory footer using the same content, newsletter and disclosure behavior.
 - Operational controls remain intentionally distinct: icon-only header controls, carousel arrows, quantity controls, filter-removal actions, tabs, disclosures and the newsletter arrow do not receive decorative dot marks.
 - P3: ALMA uses Georgia instead of Diptyque's proprietary serif. The measured size, line height, border, underline and dot geometry are preserved with the available brand-safe theme family.
 
@@ -26,6 +28,8 @@
 | Interaction hierarchy | Decorative styling only on customer actions | Tabs, arrows, icon controls and utility actions preserve their existing interaction-specific treatments | Pass |
 | Asset quality | Crisp small dot ornaments | Existing `assets/alma-cta-dot.svg` is reused directly; no raster recreation or duplicated artwork | Pass |
 | Mobile editorial rhythm | Rejected screens showed awkward side-by-side product/price wrapping and a heavy button | Centered stacked product group, restrained rule, 22 px text action, balanced 48/55 px content padding | Pass |
+| ALMA Experience | Long stacked mobile list and decorative star marks | Numbered three-card editorial grid on desktop; 82 vw native-swipe rail with a visible next-card edge on mobile | Pass |
+| Footer | Low-contrast soft-gray close with weak hierarchy | Black brand field, white identity, muted navigation, outlined newsletter and compact mobile disclosures | Pass |
 
 **Measured browser results**
 
@@ -35,6 +39,7 @@
 - Product text CTA: 158.72 × 22 px, 21 px side inset, 16/18 px Georgia and a 1 px underline.
 - Wardrobe text CTA: 162.08 × 22 px on desktop; responsive labels remain complete within the two-column mobile grid.
 - Both 1280 × 720 and 390 × 844 viewports report zero page-level horizontal overflow and no theme error surface.
+- At 390 px, the Experience section is 430.19 px high with three 319.8 × 250 px snap cards; the footer is 677.81 px high. At 1280 px, the Experience uses three equal 400.33 px columns and the footer remains a compact 304.88 px close.
 
 **Visual review**
 
@@ -43,6 +48,7 @@
 - Wardrobe and ALMA experience actions use the same text-link grammar while retaining the established section layouts.
 - Layering and Dukhoon mobile stories now use centered product/pricing groups and lightweight text actions; the layering steps remain a clearly separated three-column ritual row.
 - Footer navigation and newsletter utility remain visually quiet and functional.
+- The black footer preserves the original four navigation groups, newsletter form, market, copyright and exact logo artwork; mobile disclosures remain closed by default and keyboard operable.
 
 **Validation checklist**
 

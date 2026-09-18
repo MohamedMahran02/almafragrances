@@ -471,6 +471,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `assets/alma-theme.css`, `design-qa.md`, and this README. Products, prices, links, Theme Editor controls, homepage section order and every block-order array remain unchanged.
 - Checks: mobile browser review at 390 × 844 shows a 494.36 px layering content block and 393.17 px Dukhoon content block, 280 px centered product groups, 22 px actions, zero page overflow, no theme error surface and no console warnings/errors. Desktop checks confirm both editorial buttons remain 48 px bordered controls. Theme Check, static preview build and Git whitespace validation pass before push.
 
+### 2026-09-18 — Redesign the ALMA Experience and footer
+
+- Request: replace the disliked closing sequence beginning with “The ALMA experience” and continuing through the footer.
+- Changed: rebuilt the Experience as a numbered editorial service system. Desktop uses three equal ruled columns; mobile uses a compact 82 vw native-swipe rail with the next card visibly peeking in, eliminating the long stacked list without adding arrows. Reworked the footer into a black-and-ivory brand close based on the previously supplied dark footer direction: exact logo artwork rendered in white, original four navigation groups, newsletter, market and copyright retained, stronger contrast, outlined email field and white submit control. Mobile keeps the existing accessible disclosure behavior in a tighter dark layout.
+- Files: `sections/alma-service-band.liquid`, `assets/alma-theme.css`, `design-qa.md`, and this README. Footer data, links, newsletter form, homepage section order and every block-order array remain unchanged.
+- Checks: at 390 × 844 the Experience is 430.19 px high with three 319.8 × 250 px snap cards and the footer is 677.81 px high; at 1280 × 720 the Experience uses three 400.33 px columns and the footer is 304.88 px high. Both viewports have zero page overflow, no theme error surface and no console warnings/errors. Theme Check, static preview build and Git whitespace validation pass before push.
+
 ## Continuation prompt
 
 ```text

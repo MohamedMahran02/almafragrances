@@ -7,7 +7,7 @@
   <div class="alma-service-band__grid">
     {%- for block in section.blocks -%}
       <div class="alma-service-band__item" {{ block.shopify_attributes }}>
-        <span class="alma-service-band__mark" aria-hidden="true">✦</span>
+        <span class="alma-service-band__mark" aria-hidden="true">0{{ forloop.index }}</span>
         <h3>{{ block.settings.heading | escape }}</h3>
         {%- if block.settings.text != blank -%}<div class="rte">{{ block.settings.text }}</div>{%- endif -%}
         {%- if block.settings.link_label != blank and block.settings.link != blank -%}<a class="alma-text-link" href="{{ block.settings.link }}">{{ block.settings.link_label | escape }}</a>{%- endif -%}
