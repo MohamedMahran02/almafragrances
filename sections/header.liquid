@@ -239,7 +239,7 @@
             {%- form 'localization', id: 'HeaderCountryForm', class: 'localization-form' -%}
               <div>
                 <h2 class="visually-hidden" id="HeaderCountryLabel">{{ 'localization.country_label' | t }}</h2>
-                {%- render 'country-localization', localPosition: 'HeaderCountry' -%}
+                {%- render 'country-localization', localPosition: 'HeaderCountry', compact: true -%}
               </div>
             {%- endform -%}
           </localization-form>

@@ -1,13 +1,14 @@
 {%- liquid
-  assign handles = 'alma-perfumes,alma-solids-مخمريات,alma-lotions,alma-dokhon,alma-solid-charms,layering-kits' | split: ','
-  assign labels = 'Spray Perfumes,Solid Perfumes,Lotions,Dukhoon,Solid Charms,Layering & Kits' | split: ','
   assign link_class = 'header__menu-item list-menu__item link link--text focus-inset'
   if mobile
     assign link_class = 'menu-drawer__menu-item list-menu__item link link--text focus-inset'
   endif
+
+  assign gifting_url = settings.alma_gifting_link | default: '/products/alma-fragrances-gift-card'
+  assign contact_url = pages.contact.url | default: '/pages/contact'
 -%}
-{%- for handle in handles -%}
-  <li><a class="{{ link_class }}" href="{{ collections[handle].url | default: routes.all_products_collection_url }}"{% if collections[handle].url == request.path %} aria-current="page"{% endif %}>{{ labels[forloop.index0] | escape }}</a></li>
-{%- endfor -%}
-{%- if settings.alma_gifting_link != blank -%}<li><a class="{{ link_class }}" href="{{ settings.alma_gifting_link }}">Gifting</a></li>{%- endif -%}
-{%- if settings.alma_about_link != blank -%}<li><a class="{{ link_class }}" href="{{ settings.alma_about_link }}">About</a></li>{%- endif -%}
+<li><a class="{{ link_class }}" href="{{ routes.all_products_collection_url }}"{% if request.path == routes.all_products_collection_url %} aria-current="page"{% endif %}>Products</a></li>
+<li><a class="{{ link_class }}" href="/products/alma-layering-box"{% if request.path == '/products/alma-layering-box' %} aria-current="page"{% endif %}>Sale</a></li>
+<li><a class="{{ link_class }}" href="{{ routes.root_url }}#AlmaScentFinder">Find Your Aura</a></li>
+<li><a class="{{ link_class }}" href="{{ gifting_url }}"{% if request.path == gifting_url %} aria-current="page"{% endif %}>Gifting</a></li>
+<li><a class="{{ link_class }}" href="{{ contact_url }}"{% if request.path == contact_url %} aria-current="page"{% endif %}>Contact</a></li>

@@ -25,9 +25,9 @@
       {
         "type": "checkbox",
         "id": "alma_navigation",
-        "label": "Use ALMA category navigation",
+        "label": "Use ALMA launch navigation",
         "default": true,
-        "info": "Uses existing ALMA collections, or All products when a collection is missing. Disable to use the selected Shopify menu."
+        "info": "Shows Products, Sale, Find Your Aura, Gifting and Contact. Disable to use the selected Shopify menu."
       },
       {
         "type": "url",

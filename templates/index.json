@@ -33,7 +33,7 @@
       "settings": {
         "text": "<p>Lotion, solid perfume and spray perfume come together on the skin. Layer each texture, one after another, to create a lasting fragrance ritual that feels entirely your own.</p>",
         "link_label": "Discover all fragrances",
-        "link": "#AlmaFavourites-featured_collection"
+        "link": "/collections/all"
       }
     },
     "featured_collection": {
@@ -256,7 +256,7 @@
             "heading": "Personal gifting",
             "text": "<p>Gift cards in six values for a present chosen their way.</p>",
             "link_label": "Explore gifting",
-            "link": "shopify://products/alma-fragrances-gift-card"
+            "link": "/products/alma-fragrances-gift-card"
           }
         },
         "ritual": {
@@ -265,7 +265,7 @@
             "heading": "A three-step ritual",
             "text": "<p>Lotion, solid perfume and spray perfume build a scent with depth.</p>",
             "link_label": "Discover layering",
-            "link": "shopify://collections/layering-kits"
+            "link": "/collections/layering-kits"
           }
         },
         "wardrobe": {
@@ -274,7 +274,7 @@
             "heading": "The complete wardrobe",
             "text": "<p>Perfumes, solids, lotions, Dukhoon, charms and ready-made kits.</p>",
             "link_label": "Shop all",
-            "link": "shopify://collections/all"
+            "link": "/collections/all"
           }
         }
       },

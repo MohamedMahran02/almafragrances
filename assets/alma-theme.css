@@ -100,6 +100,7 @@ html { overflow-x: hidden; }
 .alma-theme .header__inline-menu { margin-top: 0; }
 .alma-theme .header__menu-item { padding: .8rem 1.35rem; color: var(--alma-ink); font-size: 1.35rem; }
 .alma-theme .header__icons { gap: .2rem; }
+.alma-theme .desktop-localization-wrapper .localization-form__select { min-width: 6.2rem; padding-right: 2.4rem; padding-left: .8rem; }
 .alma-theme .header-wrapper--border-bottom { border-color: var(--alma-line); }
 .alma-theme .section-header.shopify-section-header-sticky { z-index: 10; }
 .alma-logo { position: relative; display: block; width: 7rem; aspect-ratio: 891 / 943; overflow: hidden; }
@@ -111,7 +112,7 @@ html { overflow-x: hidden; }
   .alma-theme .header--middle-left { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); column-gap: 3rem; }
   .alma-theme .header--middle-left .header__heading { justify-self: start; }
   .alma-theme .header--middle-left .header__inline-menu { justify-self: center; }
-  .alma-theme .header--middle-left .header__inline-menu > .list-menu--inline { justify-content: center; }
+  .alma-theme .header--middle-left .header__inline-menu > .list-menu--inline { justify-content: center; gap: .8rem; }
   .alma-theme .alma-header--home { position: relative; grid-template-areas: 'compact wordmark icons' 'nav nav nav'; grid-template-rows: var(--alma-brand-row-height, 7.1rem) auto; row-gap: var(--alma-header-row-gap, .6rem); padding-top: var(--alma-header-padding-top, 1rem); padding-bottom: var(--alma-header-padding-bottom, 1.2rem); }
   .alma-theme .alma-header--home .header__heading { position: absolute; z-index: 2; top: var(--alma-icon-top, .75rem); left: 5rem; display: block; margin: 0; opacity: var(--alma-icon-opacity, 0); pointer-events: none; }
   .alma-theme .alma-header--home .header__heading .alma-logo { width: 5rem; }
@@ -119,6 +120,11 @@ html { overflow-x: hidden; }
   .alma-theme .alma-header--home .alma-header-wordmark img { position: absolute; top: -11.82rem; left: -2.41rem; display: block; width: 20.69rem; max-width: none; height: auto; }
   .alma-theme .alma-header--home .header__inline-menu { grid-area: nav; }
   .alma-theme .alma-header--home .header__icons { position: absolute; z-index: 2; top: var(--alma-icons-top, 2.35rem); right: 5rem; }
+}
+
+@media (min-width: 990px) and (max-width: 1099px) {
+  .alma-theme .header__menu-item { padding-right: .8rem; padding-left: .8rem; }
+  .alma-theme .header--middle-left .header__inline-menu > .list-menu--inline { gap: .4rem; }
 }
 
 .alma-campaign { color: var(--alma-ink); background: #fff; }
