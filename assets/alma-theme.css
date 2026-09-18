@@ -5,6 +5,7 @@ html { overflow-x: hidden; }
   --alma-muted: #66635f;
   --alma-line: #d8d7d4;
   --alma-soft: #f6f6f5;
+  --alma-cta-dot: url('alma-cta-dot.svg');
   --font-heading-family: Georgia, 'Times New Roman', serif;
   --font-heading-weight: 400;
   --font-heading-style: normal;
@@ -62,9 +63,10 @@ html { overflow-x: hidden; }
 .alma-ritual__text, .alma-editorial__text { max-width: 66rem; font-size: 1.5rem; line-height: 1.55; letter-spacing: 0; }
 .alma-ritual__text { max-width: none; padding: .8rem 0; font-size: 1.6rem; font-weight: 300; line-height: 2.2rem; }
 .alma-ritual__text p { margin: 0; }
-.alma-text-link { display: inline-block; padding: .5rem 0; color: inherit; font-family: Georgia, 'Times New Roman', serif; font-size: 1.4rem; text-decoration-thickness: 1px; text-underline-offset: .55rem; }
-.alma-text-link:hover { text-decoration-thickness: 2px; }
+.alma-text-link { display: inline-block; padding: 0 2.1rem .4rem; color: inherit; background-image: var(--alma-cta-dot), var(--alma-cta-dot); background-position: left top, right top; background-repeat: no-repeat; background-size: 1.7rem 1.6rem; font-family: Georgia, 'Times New Roman', serif; font-size: 1.6rem; line-height: 1.8rem; text-decoration-line: underline; text-decoration-thickness: 1px; text-underline-offset: .4rem; }
+.alma-text-link:hover { text-decoration-thickness: 1px; }
 .alma-cta--text { padding: 0; font-size: 1.6rem; text-decoration: none; }
+.alma-cta--text { background-image: none; }
 .alma-cta--text .alma-cta-label { align-items: flex-start; }
 .alma-cta--text .alma-cta-label__text { padding-bottom: .4rem; }
 .alma-cta--text .alma-cta-label__text::after { position: absolute; right: 0; bottom: 0; left: 0; height: 1px; background: currentColor; content: ''; }
@@ -109,8 +111,8 @@ html { overflow-x: hidden; }
 .alma-editorial__text { max-width: 52rem; }
 .alma-editorial__product-line { display: flex; align-items: baseline; justify-content: center; gap: 1.2rem; width: auto; max-width: 52rem; margin: 2.4rem 0 0; padding: 0; border: 0; font-family: Georgia, 'Times New Roman', serif; font-size: 1.4rem; }
 .alma-editorial__product-line .price { font-size: 1.3rem; }
-.alma-editorial .alma-button { align-self: center; margin-top: 2rem; background: var(--alma-ink); color: #fff; }
-.alma-editorial .alma-button:hover { background: #fff; color: var(--alma-ink); }
+.alma-editorial .alma-button { align-self: center; margin-top: 2rem; padding: 0 4.5rem; background-color: #fff; background-image: var(--alma-cta-dot), var(--alma-cta-dot); background-position: left 2.4rem center, right 2.4rem center; background-repeat: no-repeat; background-size: 1.7rem 1.6rem; color: var(--alma-ink); box-shadow: none; font-size: 1.6rem; line-height: 1.8rem; }
+.alma-editorial .alma-button:hover { background-color: #fff; color: var(--alma-ink); }
 .alma-editorial__steps { display: flex; justify-content: center; gap: 2.4rem; width: 100%; max-width: 52rem; margin-top: 3.2rem; padding-top: 2rem; border-top: 1px solid var(--alma-line); }
 .alma-editorial__step { flex: 1; display: grid; gap: .6rem; color: inherit; text-decoration: none; }
 .alma-editorial__step-number { font-size: 1rem; letter-spacing: .12em; }
@@ -131,7 +133,7 @@ html { overflow-x: hidden; }
 .alma-wardrobe__media { display: block; aspect-ratio: 4 / 5; overflow: hidden; background: #f4f2ed; }
 .alma-wardrobe__image, .alma-wardrobe__card:first-child .alma-wardrobe__image, .alma-wardrobe__card:nth-child(5) .alma-wardrobe__image { box-sizing: border-box; display: block; width: 100%; height: 100%; padding: 2.4rem; object-fit: contain; transition: transform .5s ease; }
 .alma-wardrobe__card:hover .alma-wardrobe__image { transform: scale(1.015); }
-.alma-wardrobe__label { font-family: Georgia, 'Times New Roman', serif; font-size: 1.5rem; }
+.alma-wardrobe__label { justify-self: center; padding: 0 2.1rem .4rem; background-image: var(--alma-cta-dot), var(--alma-cta-dot); background-position: left top, right top; background-repeat: no-repeat; background-size: 1.7rem 1.6rem; font-family: Georgia, 'Times New Roman', serif; font-size: 1.6rem; line-height: 1.8rem; text-decoration-line: underline; text-decoration-thickness: 1px; text-underline-offset: .4rem; }
 
 .alma-service-band { max-width: none; overflow: hidden; padding: 4rem 3.2rem 4.4rem; border-top: 1px solid var(--alma-line); background: var(--alma-soft); text-align: center; }
 .alma-service-band h2 { margin-bottom: 3rem; font-size: 2.2rem; }
@@ -175,6 +177,65 @@ html { overflow-x: hidden; }
 .alma-theme .alma-footer__newsletter .field__label { color: var(--alma-muted); }
 .alma-theme .alma-footer__newsletter .newsletter-form__button { width: 5rem; background: var(--alma-ink) !important; color: #fff; }
 .alma-theme .alma-footer__newsletter .newsletter-form__button:hover { background: #2b2926 !important; }
+
+/* Reference CTA system: boxed conversion actions and dotted, underlined text actions. */
+.alma-theme .button:not(.button--tertiary):not(.alma-campaign__button):not(.product__xr-button):not(.skip-to-content-link),
+.alma-theme input.button,
+.alma-theme .shopify-challenge__button,
+.alma-theme .customer button,
+.alma-theme .shopify-payment-button__button--unbranded {
+  min-height: 4.8rem;
+  padding: 0 4.5rem;
+  border-radius: 0;
+  background-color: #fff;
+  background-image: var(--alma-cta-dot), var(--alma-cta-dot);
+  background-position: left 2.4rem center, right 2.4rem center;
+  background-repeat: no-repeat;
+  background-size: 1.7rem 1.6rem;
+  color: var(--alma-ink);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.8rem;
+  text-transform: none;
+  box-shadow: none;
+  --color-button: 255, 255, 255;
+  --color-button-text: 17, 16, 15;
+  --alpha-button-background: 1;
+  --border-offset: 0;
+}
+.alma-theme .button:not(.button--tertiary):not(.alma-campaign__button):not(.product__xr-button):not(.skip-to-content-link)::before,
+.alma-theme .shopify-challenge__button::before,
+.alma-theme .customer button::before,
+.alma-theme .shopify-payment-button__button--unbranded::before { border-radius: 0; box-shadow: none; }
+.alma-theme .button:not(.button--tertiary):not(.alma-campaign__button):not(.product__xr-button):not(.skip-to-content-link)::after,
+.alma-theme .shopify-challenge__button::after,
+.alma-theme .customer button::after,
+.alma-theme .shopify-payment-button__button--unbranded::after { border-radius: 0; box-shadow: 0 0 0 1px var(--alma-ink); }
+.alma-theme .button:not(.button--tertiary):not(.alma-campaign__button):not(.product__xr-button):not(.skip-to-content-link):hover,
+.alma-theme input.button:hover,
+.alma-theme .shopify-challenge__button:hover,
+.alma-theme .customer button:hover,
+.alma-theme .shopify-payment-button__button--unbranded:hover:not([disabled]) { background-color: #fff; color: var(--alma-ink); }
+
+.alma-theme .underlined-link:not(.active-facets__button-remove):not(.facets__reset):not(.mobile-facets__clear):not(.password-link),
+.alma-theme .button-show-more.underlined-link,
+.alma-theme .product__view-details {
+  display: inline-block;
+  padding: 0 2.1rem .4rem;
+  background-image: var(--alma-cta-dot), var(--alma-cta-dot);
+  background-position: left top, right top;
+  background-repeat: no-repeat;
+  background-size: 1.7rem 1.6rem;
+  color: inherit;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .4rem;
+}
 
 @media (prefers-reduced-motion: reduce) { .alma-wardrobe__image { transition: none; } }
 @media (max-width: 989px) {
@@ -232,7 +293,7 @@ html { overflow-x: hidden; }
   .alma-wardrobe__card, .alma-wardrobe__card:first-child, .alma-wardrobe__card:nth-child(5) { align-content: start; gap: 1.8rem; scroll-snap-align: none; }
   .alma-wardrobe__media { aspect-ratio: 1; }
   .alma-wardrobe__image, .alma-wardrobe__card:first-child .alma-wardrobe__image, .alma-wardrobe__card:nth-child(5) .alma-wardrobe__image { padding: .8rem; }
-  .alma-wardrobe__label { justify-self: center; max-width: 12ch; padding: 0 .2rem .5rem; border-bottom: 1px solid currentColor; font-size: 1.55rem; line-height: 1.15; }
+  .alma-wardrobe__label { justify-self: center; max-width: 16ch; padding: 0 2.1rem .4rem; border-bottom: 0; font-size: 1.55rem; line-height: 1.8rem; }
   .alma-wardrobe .alma-scroll-gallery__footer { display: none; }
   .alma-service-band { padding: 4.5rem 2rem; }
   .alma-service-band__grid { grid-template-columns: 1fr; }

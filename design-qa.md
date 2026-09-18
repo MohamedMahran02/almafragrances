@@ -1,56 +1,56 @@
-# Frontend QA — reference-proportioned ritual introduction
+# Frontend QA — unified Diptyque-referenced CTA system
 
 **Comparison target**
 
-- Source visual truth: `C:\Users\TYARA12\AppData\Local\Temp\codex-clipboard-b4537cd8-2145-4e43-9c26-0c308cd03154.png` (302 × 347 px supplied Diptyque crop), supported by live measurements from `https://diptyqueparis.com/fr-fr`.
-- Earlier ALMA evidence: `C:\Users\TYARA12\AppData\Local\Temp\codex-clipboard-2574bdbe-da7b-4fcc-833b-87e25143b1fd.png` (311 × 235 px), which documents the short, dense state rejected by the user.
-- Final rendered evidence: `C:\Users\TYARA12\AppData\Local\Temp\alma-ritual-implementation-mobile.png` (302 × 347 px normalized crop) from `http://127.0.0.1:9293/`.
-- Combined comparison: `C:\Users\TYARA12\AppData\Local\Temp\alma-ritual-reference-vs-implementation-2.png` (628 × 347 px; reference left, implementation right).
-- Viewports: mobile 319 × 478 CSS px at device scale 1, with the 304 px content width normalized to the supplied 302 × 347 crop; desktop 1280 × 720 CSS px with a 1265 px content width.
-- State: homepage ritual introduction after the campaign, with the sticky header clear of the comparison crop.
+- Boxed control: `C:\Users\TYARA12\AppData\Local\Temp\codex-clipboard-59107cee-e472-43a9-8946-e64d3daa83cc.png`.
+- Text control: `C:\Users\TYARA12\AppData\Local\Temp\codex-clipboard-34f4f645-1880-4023-807e-6411ea531659.png`.
+- Full composition reference: `C:\Users\TYARA12\AppData\Local\Temp\codex-clipboard-b4537cd8-2145-4e43-9c26-0c308cd03154.png`.
+- Final rendered surface: `http://127.0.0.1:9293/` at 1280 × 720 and 390 × 844 CSS-pixel viewports.
 
 **Findings**
 
-- No actionable P0/P1/P2 mismatch remains. The final mobile and desktop structures reproduce the reference's responsive measures and rhythm while retaining ALMA's English copy and approved type families.
-- P3: Georgia and Arial replace Diptyque's proprietary Saint Germain and Apercu Pro families. Font size, line height, wrapping, weight and hierarchy are matched; using ALMA's available theme families is an intentional brand-safe constraint.
+- No actionable P0/P1/P2 mismatch remains in the CTA system.
+- The former mix of shadowed, filled, plain-underlined and mobile-only category treatments has been replaced by the two supplied reference patterns.
+- Operational controls remain intentionally distinct: icon-only header controls, carousel arrows, quantity controls, filter-removal actions, tabs, disclosures and the newsletter arrow do not receive decorative dot marks.
+- P3: ALMA uses Georgia instead of Diptyque's proprietary serif. The measured size, line height, border, underline and dot geometry are preserved with the available brand-safe theme family.
 
 **Required fidelity surfaces**
 
-| Surface | Reference | Final ALMA implementation | Result |
+| Surface | Reference pattern | Final ALMA implementation | Result |
 | --- | --- | --- | --- |
-| Typography | Mobile 28/34 two-line serif heading and 16/22 light body; desktop 32/38 single-line heading and 16/22 body | Same responsive sizes, line heights and wraps using Georgia/Arial | Pass |
-| Layout rhythm | Mobile 358 px section, 40 × 32 px padding, 240 × 278 px inner grid, 8 px grid rhythm; desktop 272 px section, 56 × 120 px padding, 653 × 160 px inner grid | Exact measured dimensions at both viewports | Pass |
-| Copy density | Six body lines on mobile and two on desktop | Six mobile lines and two desktop lines with ALMA-specific English ritual copy | Pass |
-| CTA placement | 22 px inline link with 24 px top margin inside its 46 px row | Same 22 px link, 24 px margin, dotted marks and underline treatment | Pass |
-| Colors/tokens | White field with black text/rule | Existing ALMA white and ink tokens | Pass |
-| Image quality/assets | No raster imagery in this section; supplied dot geometry remains sharp | Existing 17 × 16 theme dot assets load at intrinsic size | Pass |
+| Boxed CTA | 48 px white rectangle, 1 px black border, square corners, no shadow, 17 × 16 marks with 4 px label gaps | Campaign, editorial, native commerce, account and form conversion actions use the same geometry | Pass |
+| Text CTA | Transparent serif link, 1 px underline beneath the label, 17 × 16 marks on both sides | Ritual, product-card, wardrobe, service and applicable Dawn underlined actions share the same treatment | Pass |
+| Responsive behavior | Content-sized controls without clipped marks | Desktop and 390 px mobile retain complete marks, labels and borders with zero page overflow | Pass |
+| Interaction hierarchy | Decorative styling only on customer actions | Tabs, arrows, icon controls and utility actions preserve their existing interaction-specific treatments | Pass |
+| Asset quality | Crisp small dot ornaments | Existing `assets/alma-cta-dot.svg` is reused directly; no raster recreation or duplicated artwork | Pass |
 
-**Comparison history**
+**Measured browser results**
 
-1. P1 initial state: ALMA was 235–240 px tall with a one-line heading, two-line copy and compressed gaps, while the supplied reference was 347 px tall with a two-line heading, six-line copy and much larger vertical rhythm.
-2. Fix: introduced a measured inner grid, responsive section height/padding/measure, 28/34 mobile and 32/38 desktop headings, 16/22 body copy and six-line mobile copy.
-3. P2 first comparison: the CTA label sat about 12 px too high because ALMA used symmetric vertical padding. Live inspection showed the reference uses a 22 px inline link with a 24 px top margin. Replacing the padding with that geometry aligned the link row.
-4. P2 focused comparison: mobile body and link glyphs still sat 13–16 px above the supplied crop despite matching live box geometry. Mobile-only optical offsets aligned those visible baselines without altering desktop geometry or section height.
-5. Post-fix combined comparison: heading, six-line body, link and overall section rhythm align. No actionable P0/P1/P2 difference remains.
+- Desktop boxed hero: 246.52 × 48 px, 24 px outer padding because its marks are real inline images.
+- Desktop boxed editorial: 208.13 × 48 px, 45 px text inset, two loaded SVG backgrounds at 17 × 16 px and no shadow.
+- Product text CTA: 158.72 × 22 px, 21 px side inset, 16/18 px Georgia and a 1 px underline.
+- Wardrobe text CTA: 162.08 × 22 px on desktop; responsive labels remain complete within the two-column mobile grid.
+- Both 1280 × 720 and 390 × 844 viewports report zero page-level horizontal overflow and no theme error surface.
 
-**Browser and interaction checks**
+**Visual review**
 
-- Mobile: 358 px section, 240 px inner measure, no page-level horizontal overflow, all CTA assets loaded.
-- Desktop: 272 px section, 653 px inner measure, 160 px content group and no page-level horizontal overflow.
-- The link remains keyboard-accessible and targets `#AlmaFavourites-featured_collection`.
-- Page identity and meaningful content pass; no framework overlay and zero browser warnings/errors.
+- Product links visibly match the supplied dotted-underlined reference across the four-card desktop rail.
+- Editorial actions visibly match the supplied white bordered reference instead of the previous filled black control.
+- Wardrobe and ALMA experience actions use the same text-link grammar while retaining the established section layouts.
+- Footer navigation and newsletter utility remain visually quiet and functional.
 
-**Implementation checklist**
+**Validation checklist**
 
-- [x] Match the responsive section frame and inner measure.
-- [x] Match heading/body scale, wrapping and line height.
-- [x] Match CTA row geometry and visible vertical placement.
-- [x] Preserve English ALMA copy, live destination, section order and block order.
-- [x] Run static theme checks and browser QA.
+- [x] Preserve Shopify's native buttons, forms and destinations.
+- [x] Preserve homepage section order and every JSON block-order array.
+- [x] Reuse the exact existing dot asset.
+- [x] Verify desktop and mobile geometry visually and through computed styles.
+- [x] Verify zero page overflow and no framework/theme error overlay.
+- [x] Run Theme Check and repository validation before handoff.
 
 **Follow-up polish**
 
-- Physical iOS/Android font rasterization remains a device-level check; it is not expected to change the measured layout.
+- Physical iOS/Android touch and font rasterization remain device-level checks.
 - Shopify synchronization and the connected theme preview are external states verified after push when available.
 
 final result: passed
