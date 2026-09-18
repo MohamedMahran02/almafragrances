@@ -501,6 +501,14 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `sections/alma-scent-finder.liquid`, `assets/alma-scent-finder.js`, `assets/alma-theme.css`, `templates/index.json`, `design-qa.md`, and this README. Existing homepage sections retain their relative order; only `scent_finder` was inserted between `featured_collection` and `layering_story`.
 - Checks: browser-tested at 1280 × 720 and 390 × 844. Vanilla plus Musk returns four ranked results; Oud returns Alma Oud Intense Perfume and AlmaXEman from the local Shopify snapshot; Clear selection resets all controls and hides results; note controls expose native checkbox semantics; the first mobile result is centered in its snap rail; the new section has no viewport-width escape; and browser console warnings/errors are empty. Theme Check passes with 0 errors and the same 9 inherited Dawn warnings; static preview build and Git whitespace validation pass before push. The catalog-free static build intentionally omits this data-dependent section, while Shopify renders it from the configured live collection.
 
+### 2026-09-18 — Configure Shopify fragrance-note data
+
+- Request: create the product data field used by “Find Your Aura” and provide the exact new-product workflow.
+- Verified store change: in the authenticated `app-test-1111231327` Shopify Admin, created and pinned the product metafield definition **Fragrance notes** with namespace/key `custom.fragrance_notes` and type **List of single line text**. Storefront API access remains enabled. The definition appears on the Lolo Vanilla perfume product metafields screen. No existing product values, product copy, pricing, inventory or publication state were changed.
+- New-product workflow: create and save the product, add it to the `alma-perfumes` collection, open its Product metafields, enter one fragrance note per `Fragrance notes` list item, save, and keep the product active/published to Online Store. If a note is not among the finder’s existing Theme Editor note blocks, add a Fragrance note block to the “Find Your Aura” section with the customer-facing label and lowercase matching word.
+- Files: this README only. This commit records external Shopify configuration; theme code and all section/block order arrays are unchanged.
+- Checks: revisited Settings → Metafields and metaobjects → Products and confirmed the definition name, exact key and list text type; opened Lolo Vanilla perfume → Product metafields and confirmed Fragrance notes is present in the pinned group.
+
 ## Continuation prompt
 
 ```text
