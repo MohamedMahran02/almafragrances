@@ -464,6 +464,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `assets/alma-theme.css`, `design-qa.md`, and this README. Homepage section order and every block-order array remain unchanged.
 - Checks: desktop and mobile browser measurements confirm the label midpoint and button midpoint are aligned, both dot backgrounds remain vertically centered, the control stays 48 px high and the page has no horizontal overflow. Theme Check, static preview build and Git whitespace validation pass before push.
 
+### 2026-09-18 — Redesign the mobile editorial story blocks
+
+- Request/root cause: the user rejected the mobile layering and Dukhoon content blocks. Their featured-product title and price were forced into competing columns, creating uneven wrapping, while the large boxed CTA made each compact story feel dense and visually heavy.
+- Changed: below 750 px, both editorial stories now use a calmer centered composition with 48/55 px vertical padding, a constrained heading and body measure, a single stacked product/pricing group separated by a fine top rule, centered sale pricing and the approved 22 px dotted-underlined text action. The layering story keeps its three ritual steps in a separately ruled row. Desktop retains the approved split/immersive layouts and 48 px boxed CTAs.
+- Files: `assets/alma-theme.css`, `design-qa.md`, and this README. Products, prices, links, Theme Editor controls, homepage section order and every block-order array remain unchanged.
+- Checks: mobile browser review at 390 × 844 shows a 494.36 px layering content block and 393.17 px Dukhoon content block, 280 px centered product groups, 22 px actions, zero page overflow, no theme error surface and no console warnings/errors. Desktop checks confirm both editorial buttons remain 48 px bordered controls. Theme Check, static preview build and Git whitespace validation pass before push.
+
 ## Continuation prompt
 
 ```text

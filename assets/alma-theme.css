@@ -279,11 +279,21 @@ html { overflow-x: hidden; }
   .alma-editorial--right .alma-editorial__content { order: 2; }
   .alma-editorial__media { order: 1; min-height: 0; }
   .alma-editorial__image { height: 50rem; min-height: 0; }
-  .alma-editorial__content { order: 2; min-height: 39rem; padding: 5rem 2rem; }
-  .alma-editorial__steps { gap: 1rem; }
-  .alma-editorial__step-label { font-size: 1.1rem; }
+  .alma-editorial__content { order: 2; min-height: 0; padding: 4.8rem 2.8rem 5.5rem; }
+  .alma-editorial__eyebrow { margin-bottom: 1.2rem; font-size: 1.1rem; letter-spacing: .06em; }
+  .alma-editorial h2 { max-width: 24rem; margin-bottom: 2rem; line-height: 1.14; }
+  .alma-editorial__text { max-width: 31rem; font-size: 1.5rem; line-height: 1.55; }
+  .alma-editorial__text p { margin-top: 0; margin-bottom: 0; }
+  .alma-editorial__product-line { flex-direction: column; align-items: center; gap: .6rem; width: min(100%, 28rem); margin-top: 2.8rem; padding-top: 1.8rem; border-top: 1px solid var(--alma-line); font-size: 1.45rem; line-height: 1.35; }
+  .alma-editorial__product-line > span { max-width: 24rem; }
+  .alma-editorial__product-line .price { margin: 0; font-size: 1.3rem; }
+  .alma-editorial__product-line .price__container { display: flex; justify-content: center; flex-wrap: wrap; gap: .3rem .9rem; }
+  .alma-editorial .alma-button { min-height: 2.2rem; margin-top: 2.6rem; padding: 0 2.1rem .4rem; border: 0; background-color: transparent; background-position: left top, right top; color: var(--alma-ink); line-height: 1.8rem; text-decoration-line: underline; text-decoration-thickness: 1px; text-underline-offset: .4rem; }
+  .alma-editorial .alma-button:hover { background-color: transparent; color: var(--alma-ink); text-decoration-thickness: 1px; }
+  .alma-editorial__steps { gap: 1rem; margin-top: 3.6rem; padding-top: 2.2rem; }
+  .alma-editorial__step-label { font-size: 1.1rem; line-height: 1.35; }
   .alma-editorial--immersive .alma-editorial__image { height: 50rem; min-height: 0; }
-  .alma-editorial--immersive .alma-editorial__content { min-height: 34rem; }
+  .alma-editorial--immersive .alma-editorial__content { min-height: 0; padding: 4.8rem 2.8rem 5.5rem; }
   .alma-wardrobe { padding: 1.2rem 2rem 6rem; overflow: visible; }
   .alma-wardrobe__heading { margin-bottom: 4.5rem; }
   .alma-wardrobe__heading h2 { max-width: 24rem; margin-right: auto; margin-left: auto; }

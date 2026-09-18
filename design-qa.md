@@ -1,16 +1,18 @@
-# Frontend QA — unified Diptyque-referenced CTA system
+# Frontend QA — CTA system and mobile editorial stories
 
 **Comparison target**
 
 - Boxed control: `C:\Users\TYARA12\AppData\Local\Temp\codex-clipboard-59107cee-e472-43a9-8946-e64d3daa83cc.png`.
 - Text control: `C:\Users\TYARA12\AppData\Local\Temp\codex-clipboard-34f4f645-1880-4023-807e-6411ea531659.png`.
 - Full composition reference: `C:\Users\TYARA12\AppData\Local\Temp\codex-clipboard-b4537cd8-2145-4e43-9c26-0c308cd03154.png`.
+- Rejected mobile editorial states: `C:\Users\TYARA12\AppData\Local\Temp\codex-clipboard-46b2f019-2eab-45f1-9efa-24a02e850f9c.png` and `C:\Users\TYARA12\AppData\Local\Temp\codex-clipboard-d2dbccd2-42eb-4cbe-9226-df012fd960e0.png`.
 - Final rendered surface: `http://127.0.0.1:9293/` at 1280 × 720 and 390 × 844 CSS-pixel viewports.
 
 **Findings**
 
 - No actionable P0/P1/P2 mismatch remains in the CTA system.
 - The former mix of shadowed, filled, plain-underlined and mobile-only category treatments has been replaced by the two supplied reference patterns.
+- The rejected mobile editorial layout's split title/price columns and oversized boxed action have been removed. Product title and price now form one centered, ruled group and the mobile action uses the lighter dotted-underlined reference treatment.
 - Operational controls remain intentionally distinct: icon-only header controls, carousel arrows, quantity controls, filter-removal actions, tabs, disclosures and the newsletter arrow do not receive decorative dot marks.
 - P3: ALMA uses Georgia instead of Diptyque's proprietary serif. The measured size, line height, border, underline and dot geometry are preserved with the available brand-safe theme family.
 
@@ -23,6 +25,7 @@
 | Responsive behavior | Content-sized controls without clipped marks | Desktop and 390 px mobile retain complete marks, labels and borders with zero page overflow | Pass |
 | Interaction hierarchy | Decorative styling only on customer actions | Tabs, arrows, icon controls and utility actions preserve their existing interaction-specific treatments | Pass |
 | Asset quality | Crisp small dot ornaments | Existing `assets/alma-cta-dot.svg` is reused directly; no raster recreation or duplicated artwork | Pass |
+| Mobile editorial rhythm | Rejected screens showed awkward side-by-side product/price wrapping and a heavy button | Centered stacked product group, restrained rule, 22 px text action, balanced 48/55 px content padding | Pass |
 
 **Measured browser results**
 
@@ -38,6 +41,7 @@
 - Product links visibly match the supplied dotted-underlined reference across the four-card desktop rail.
 - Editorial actions visibly match the supplied white bordered reference instead of the previous filled black control.
 - Wardrobe and ALMA experience actions use the same text-link grammar while retaining the established section layouts.
+- Layering and Dukhoon mobile stories now use centered product/pricing groups and lightweight text actions; the layering steps remain a clearly separated three-column ritual row.
 - Footer navigation and newsletter utility remain visually quiet and functional.
 
 **Validation checklist**
