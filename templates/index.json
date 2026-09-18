@@ -12,7 +12,7 @@
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Discover the collection",
+            "button_label_1": "Discover the selection",
             "button_link_1": "shopify://collections/all"
           }
         }
@@ -23,8 +23,8 @@
       ],
       "settings": {
         "text": "<p>Lotion, solid perfume, spray perfume.<br/>Discover the art of layering with ALMA.</p>",
-        "link_label": "Explore layering",
-        "link": ""
+        "link_label": "Discover all fragrances",
+        "link": "#AlmaFavourites-featured_collection"
       }
     },
     "featured_collection": {

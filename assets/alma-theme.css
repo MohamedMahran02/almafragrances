@@ -47,9 +47,13 @@ html { overflow-x: hidden; }
 .alma-campaign__image { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 52% center; }
 .alma-campaign__actions { position: absolute; z-index: 1; inset: 0 0 5rem; display: flex; justify-content: center; align-items: flex-start; padding-top: calc(100vh - var(--header-height, 9.4rem) - 9.8rem); padding-top: calc(100svh - var(--header-height, 9.4rem) - 9.8rem); pointer-events: none; }
 .alma-campaign__button, .alma-editorial .alma-button { min-height: 4.8rem; padding: 1.25rem 2.8rem; border: 1px solid var(--alma-ink); border-radius: 0; background: #fff; color: var(--alma-ink); font-family: Georgia, 'Times New Roman', serif; font-size: 1.5rem; letter-spacing: 0; text-decoration: none; box-shadow: 0 2px 0 var(--alma-ink); }
-.alma-campaign__button { position: sticky; top: calc(100vh - 9.8rem); top: calc(100svh - 9.8rem); min-width: 25rem; white-space: nowrap; pointer-events: auto; --color-button-text: 17, 16, 15; --color-button: 255, 255, 255; --alpha-button-background: 1; --border-offset: 0; }
+.alma-campaign__button { position: sticky; top: calc(100vh - 9.8rem); top: calc(100svh - 9.8rem); min-width: 0; min-height: 4.8rem; padding: 0 2.4rem; white-space: nowrap; pointer-events: auto; box-shadow: none; font-size: 1.6rem; --color-button-text: 17, 16, 15; --color-button: 255, 255, 255; --alpha-button-background: 1; --border-offset: 0; }
 .alma-campaign__button::before, .alma-campaign__button::after { box-shadow: none; }
 .alma-campaign__button:hover, .alma-editorial .alma-button:hover { background: var(--alma-ink); color: #fff; }
+.alma-campaign__button:hover .alma-cta-label__dot { filter: invert(1); }
+.alma-cta-label { display: flex; align-items: center; justify-content: center; gap: .4rem; }
+.alma-cta-label__dot { display: block; width: 1.7rem; height: 1.6rem; color: currentColor; object-fit: contain; }
+.alma-cta-label__text { position: relative; display: block; line-height: 1.8rem; }
 
 .alma-ritual { min-height: 26rem; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 4.5rem 2rem; text-align: center; }
 .alma-ritual h2, .alma-favourites h2, .alma-editorial h2, .alma-wardrobe h2, .alma-service-band h2 { margin: 0 0 2.2rem; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(2.9rem, 2.25vw, 3.4rem); font-weight: 400; line-height: 1.15; }
@@ -57,6 +61,10 @@ html { overflow-x: hidden; }
 .alma-ritual__text p { margin: 0 0 1.8rem; }
 .alma-text-link { display: inline-block; padding: .5rem 0; color: inherit; font-family: Georgia, 'Times New Roman', serif; font-size: 1.4rem; text-decoration-thickness: 1px; text-underline-offset: .55rem; }
 .alma-text-link:hover { text-decoration-thickness: 2px; }
+.alma-cta--text { padding: 0; font-size: 1.6rem; text-decoration: none; }
+.alma-cta--text .alma-cta-label { align-items: flex-start; }
+.alma-cta--text .alma-cta-label__text { padding-bottom: .4rem; }
+.alma-cta--text .alma-cta-label__text::after { position: absolute; right: 0; bottom: 0; left: 0; height: 1px; background: currentColor; content: ''; }
 
 .alma-favourites { display: block; max-width: none; padding: 7.5rem 3.2rem 8rem; background: var(--alma-soft); text-align: center; }
 .alma-favourites h2 { margin-bottom: 3.2rem; }
@@ -187,7 +195,7 @@ html { overflow-x: hidden; }
   .alma-campaign__media { height: 64rem; min-height: 0; }
   .alma-campaign__image { object-position: center; }
   .alma-campaign__actions { inset: 0 0 3rem; align-items: flex-start; padding-top: min(calc(100vh - var(--header-height, 7.8rem) - 7.8rem), calc(64rem - 7.8rem)); padding-top: min(calc(100svh - var(--header-height, 7.8rem) - 7.8rem), calc(64rem - 7.8rem)); }
-  .alma-campaign__button { position: sticky; top: calc(100vh - 7.8rem); top: calc(100svh - 7.8rem); min-width: 23rem; }
+  .alma-campaign__button { position: sticky; top: calc(100vh - 7.8rem); top: calc(100svh - 7.8rem); min-width: 0; }
   .alma-ritual { min-height: 24rem; padding: 4rem 2rem; }
   .alma-ritual h2, .alma-favourites h2, .alma-editorial h2, .alma-wardrobe h2 { font-size: 2.8rem; }
   .alma-ritual__text { font-size: 1.4rem; }
