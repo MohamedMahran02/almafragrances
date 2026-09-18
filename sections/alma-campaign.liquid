@@ -22,21 +22,23 @@
     </div>
   </div>
   <div class="alma-ritual">
-    {%- for block in section.blocks -%}
-      {%- if block.type == 'heading' -%}
-        <h2 id="AlmaRitual-{{ section.id }}" {{ block.shopify_attributes }}>{{ block.settings.heading | escape }}</h2>
+    <div class="alma-ritual__inner">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'heading' -%}
+          <h2 id="AlmaRitual-{{ section.id }}" {{ block.shopify_attributes }}>{{ block.settings.heading | escape }}</h2>
+        {%- endif -%}
+      {%- endfor -%}
+      <div class="alma-ritual__text rte">{{ section.settings.text }}</div>
+      {%- if section.settings.link_label != blank -%}
+        <a class="alma-text-link alma-cta--text" href="{{ section.settings.link | default: collections['layering-kits'].url | default: routes.all_products_collection_url }}">
+          <span class="alma-cta-label">
+            <img class="alma-cta-label__dot" src="{{ 'alma-cta-dot.svg' | asset_url }}" width="17" height="16" alt="" aria-hidden="true">
+            <span class="alma-cta-label__text">{{ section.settings.link_label | escape }}</span>
+            <img class="alma-cta-label__dot" src="{{ 'alma-cta-dot.svg' | asset_url }}" width="17" height="16" alt="" aria-hidden="true">
+          </span>
+        </a>
       {%- endif -%}
-    {%- endfor -%}
-    <div class="alma-ritual__text rte">{{ section.settings.text }}</div>
-    {%- if section.settings.link_label != blank -%}
-      <a class="alma-text-link alma-cta--text" href="{{ section.settings.link | default: collections['layering-kits'].url | default: routes.all_products_collection_url }}">
-        <span class="alma-cta-label">
-          <img class="alma-cta-label__dot" src="{{ 'alma-cta-dot.svg' | asset_url }}" width="17" height="16" alt="" aria-hidden="true">
-          <span class="alma-cta-label__text">{{ section.settings.link_label | escape }}</span>
-          <img class="alma-cta-label__dot" src="{{ 'alma-cta-dot.svg' | asset_url }}" width="17" height="16" alt="" aria-hidden="true">
-        </span>
-      </a>
-    {%- endif -%}
+    </div>
   </div>
 </section>
 {% schema %}
@@ -46,7 +48,7 @@
   "class": "alma-campaign-section",
   "settings": [
     {"type":"image_picker","id":"image","label":"Campaign image","info":"The approved campaign artwork is used until you select an image. Recommended ratio: 1.8:1; keep products centred for mobile."},
-    {"type":"richtext","id":"text","label":"Ritual introduction","default":"<p>Lotion, solid perfume, spray perfume.<br/>Discover the art of layering with ALMA.</p>"},
+    {"type":"richtext","id":"text","label":"Ritual introduction","default":"<p>Lotion, solid perfume and spray perfume come together on the skin. Layer each texture, one after another, to create a lasting fragrance ritual that feels entirely your own.</p>"},
     {"type":"text","id":"link_label","label":"Ritual link label","default":"Discover all fragrances"},
     {"type":"url","id":"link","label":"Ritual link"}
   ],

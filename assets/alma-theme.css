@@ -55,16 +55,20 @@ html { overflow-x: hidden; }
 .alma-cta-label__dot { display: block; width: 1.7rem; height: 1.6rem; color: currentColor; object-fit: contain; }
 .alma-cta-label__text { position: relative; display: block; line-height: 1.8rem; }
 
-.alma-ritual { min-height: 26rem; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 4.5rem 2rem; text-align: center; }
+.alma-ritual { min-height: 27.2rem; display: grid; place-items: center; padding: 5.6rem 12rem; text-align: center; }
+.alma-ritual__inner { display: grid; width: min(100%, 65.3rem); gap: .8rem; }
 .alma-ritual h2, .alma-favourites h2, .alma-editorial h2, .alma-wardrobe h2, .alma-service-band h2 { margin: 0 0 2.2rem; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(2.9rem, 2.25vw, 3.4rem); font-weight: 400; line-height: 1.15; }
+.alma-ritual h2 { margin: 0; font-size: 3.2rem; line-height: 3.8rem; }
 .alma-ritual__text, .alma-editorial__text { max-width: 66rem; font-size: 1.5rem; line-height: 1.55; letter-spacing: 0; }
-.alma-ritual__text p { margin: 0 0 1.8rem; }
+.alma-ritual__text { max-width: none; padding: .8rem 0; font-size: 1.6rem; font-weight: 300; line-height: 2.2rem; }
+.alma-ritual__text p { margin: 0; }
 .alma-text-link { display: inline-block; padding: .5rem 0; color: inherit; font-family: Georgia, 'Times New Roman', serif; font-size: 1.4rem; text-decoration-thickness: 1px; text-underline-offset: .55rem; }
 .alma-text-link:hover { text-decoration-thickness: 2px; }
 .alma-cta--text { padding: 0; font-size: 1.6rem; text-decoration: none; }
 .alma-cta--text .alma-cta-label { align-items: flex-start; }
 .alma-cta--text .alma-cta-label__text { padding-bottom: .4rem; }
 .alma-cta--text .alma-cta-label__text::after { position: absolute; right: 0; bottom: 0; left: 0; height: 1px; background: currentColor; content: ''; }
+.alma-ritual .alma-cta--text { display: inline-flex; justify-self: center; margin-top: 2.4rem; padding: 0; }
 
 .alma-favourites { display: block; max-width: none; padding: 7.5rem 3.2rem 8rem; background: var(--alma-soft); text-align: center; }
 .alma-favourites h2 { margin-bottom: 3.2rem; }
@@ -196,9 +200,12 @@ html { overflow-x: hidden; }
   .alma-campaign__image { object-position: center; }
   .alma-campaign__actions { inset: 0 0 3rem; align-items: flex-start; padding-top: min(calc(100vh - var(--header-height, 7.8rem) - 7.8rem), calc(64rem - 7.8rem)); padding-top: min(calc(100svh - var(--header-height, 7.8rem) - 7.8rem), calc(64rem - 7.8rem)); }
   .alma-campaign__button { position: sticky; top: calc(100vh - 7.8rem); top: calc(100svh - 7.8rem); min-width: 0; }
-  .alma-ritual { min-height: 24rem; padding: 4rem 2rem; }
+  .alma-ritual { min-height: 35.8rem; padding: 4rem 3.2rem; }
+  .alma-ritual__inner { width: min(100%, 24rem); }
   .alma-ritual h2, .alma-favourites h2, .alma-editorial h2, .alma-wardrobe h2 { font-size: 2.8rem; }
-  .alma-ritual__text { font-size: 1.4rem; }
+  .alma-ritual h2 { line-height: 3.4rem; }
+  .alma-ritual__text { position: relative; top: 1.3rem; font-size: 1.6rem; line-height: 2.2rem; }
+  .alma-ritual .alma-cta--text { position: relative; top: 1.6rem; }
   .alma-favourites { padding: 5.5rem 1.5rem 6rem; }
   .alma-favourites h2 { margin-bottom: 2.2rem; }
   .alma-favourites__tabs { gap: .6rem 2rem; margin-bottom: 2.5rem; }
