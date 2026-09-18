@@ -40,6 +40,7 @@
 | Mobile wardrobe labels | Multiline category text must remain centered between its decorative dots | Below 750 px, each label uses equal 17 px ornament columns and a centered text column; both dots align to the vertical midpoint of one- or two-line labels | Pass |
 | Launch navigation | Keep only useful destinations and prevent controls from colliding at compact desktop widths | Products, Sale, Find Your Aura, Gifting and Contact share verified routes; desktop market text is compacted to `AED` and 990–1099 px spacing preserves separation from utilities | Pass |
 | Link integrity | Customer-facing actions must not use empty, placeholder, unresolved resource or missing-anchor destinations | 148 rendered homepage links resolve to explicit routes or existing anchors; Products and all three ALMA Experience actions use explicit storefront paths | Pass |
+| Price currency presentation | Remove the redundant `Dhs.` prefix without changing amounts or losing currency clarity | Core prices use number + active ISO code; a dynamic text safeguard removes only `Dhs.` immediately before numeric prices and preserves trailing `AED` | Pass |
 
 **Measured browser results**
 
@@ -72,6 +73,7 @@
 - Editorial action checks: “Explore layering” and “Discover Dukhoon” are 48 px bordered white buttons at both 1280 × 720 and 390 × 844, with centered 24 px-inset marks, no underline and intact destinations.
 - Launch navigation checks: with a live-like `AED` selector, the centered navigation leaves 113 px before utilities at 1280 px and 20.5 px at 1024 px. The mobile drawer exposes the same five destinations at 390 px.
 - Homepage interaction audit: 148 links and 19–20 controls per viewport contain no blank or placeholder hrefs, missing local anchors, unresolved `shopify://` links or unlabeled controls. Search, mobile menu, finder jump, tabs and carousel movement all produce their expected visible state without console warnings/errors.
+- Currency presentation checks: at desktop and mobile widths, both initial `Dhs. 125.00 AED` and later DOM updates such as `Dhs 360.00 AED` normalize to amount + `AED`; form values and embedded JSON are intentionally unchanged, and no rendered numeric price retains the prefix.
 
 **Validation checklist**
 
