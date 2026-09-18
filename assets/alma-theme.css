@@ -111,7 +111,7 @@ html { overflow-x: hidden; }
 .alma-editorial__text { max-width: 52rem; }
 .alma-editorial__product-line { display: flex; align-items: baseline; justify-content: center; gap: 1.2rem; width: auto; max-width: 52rem; margin: 2.4rem 0 0; padding: 0; border: 0; font-family: Georgia, 'Times New Roman', serif; font-size: 1.4rem; }
 .alma-editorial__product-line .price { font-size: 1.3rem; }
-.alma-editorial .alma-button { align-self: center; margin-top: 2rem; padding: 0 4.5rem; background-color: #fff; background-image: var(--alma-cta-dot), var(--alma-cta-dot); background-position: left 2.4rem center, right 2.4rem center; background-repeat: no-repeat; background-size: 1.7rem 1.6rem; color: var(--alma-ink); box-shadow: none; font-size: 1.6rem; line-height: 1.8rem; }
+.alma-editorial .alma-button { align-self: center; display: inline-flex; align-items: center; justify-content: center; margin-top: 2rem; padding: 0 4.5rem; background-color: #fff; background-image: var(--alma-cta-dot), var(--alma-cta-dot); background-position: left 2.4rem center, right 2.4rem center; background-repeat: no-repeat; background-size: 1.7rem 1.6rem; color: var(--alma-ink); box-shadow: none; font-size: 1.6rem; line-height: 1.8rem; }
 .alma-editorial .alma-button:hover { background-color: #fff; color: var(--alma-ink); }
 .alma-editorial__steps { display: flex; justify-content: center; gap: 2.4rem; width: 100%; max-width: 52rem; margin-top: 3.2rem; padding-top: 2rem; border-top: 1px solid var(--alma-line); }
 .alma-editorial__step { flex: 1; display: grid; gap: .6rem; color: inherit; text-decoration: none; }

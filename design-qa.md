@@ -28,6 +28,7 @@
 
 - Desktop boxed hero: 246.52 × 48 px, 24 px outer padding because its marks are real inline images.
 - Desktop boxed editorial: 208.13 × 48 px, 45 px text inset, two loaded SVG backgrounds at 17 × 16 px and no shadow.
+- Editorial link labels use an inline-flex centering layout; label and control midpoints align on both desktop and mobile, correcting the top-aligned state shown in the user's follow-up screenshot.
 - Product text CTA: 158.72 × 22 px, 21 px side inset, 16/18 px Georgia and a 1 px underline.
 - Wardrobe text CTA: 162.08 × 22 px on desktop; responsive labels remain complete within the two-column mobile grid.
 - Both 1280 × 720 and 390 × 844 viewports report zero page-level horizontal overflow and no theme error surface.

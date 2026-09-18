@@ -457,6 +457,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `assets/alma-theme.css`, `design-qa.md`, and this README. Section order, block order, destinations, Shopify forms and commerce behavior are unchanged.
 - Checks: browser review at 1280 × 720 and 390 × 844 confirms the exact 48 px boxed and 22 px text-link geometries, loaded SVG marks, no clipped controls, zero page-level horizontal overflow and no theme error surface. Theme Check, JSON parsing and Git whitespace validation pass before push. Shopify synchronization and publication remain external states verified after the push when available.
 
+### 2026-09-18 — Vertically center editorial box labels
+
+- Request/root cause: the supplied screenshot showed “Discover Dukhoon” sitting against the top edge of its otherwise correct 48 px bordered control. The custom editorial link inherited the correct height but did not use a centering layout.
+- Changed: made editorial boxed CTAs inline flex containers with centered alignment on both axes. The existing 48 px frame, 1 px border, white background, dot positions, label spacing, destinations and responsive section layouts are unchanged.
+- Files: `assets/alma-theme.css`, `design-qa.md`, and this README. Homepage section order and every block-order array remain unchanged.
+- Checks: desktop and mobile browser measurements confirm the label midpoint and button midpoint are aligned, both dot backgrounds remain vertically centered, the control stays 48 px high and the page has no horizontal overflow. Theme Check, static preview build and Git whitespace validation pass before push.
+
 ## Continuation prompt
 
 ```text
