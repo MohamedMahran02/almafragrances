@@ -3,7 +3,6 @@
 {{ 'component-newsletter.css' | asset_url | stylesheet_tag }}
 {{ 'component-list-menu.css' | asset_url | stylesheet_tag }}
 {{ 'component-list-social.css' | asset_url | stylesheet_tag }}
-<script src="{{ 'alma-footer.js' | asset_url }}" defer="defer"></script>
 
 {%- style -%}
   .footer {
@@ -53,58 +52,46 @@
       {%- endif -%}
     </div>
 
-    <alma-footer-navigation class="alma-footer-nav" role="navigation" aria-label="Footer navigation">
-    <details class="alma-footer-nav__group" open>
-      <summary>
-        <span>Shop</span>
-        <span class="svg-wrapper">{{- 'icon-caret.svg' | inline_asset_content -}}</span>
-      </summary>
+    <nav class="alma-footer-nav" aria-label="Footer navigation">
+    <div class="alma-footer-nav__group">
+      <h3>Shop</h3>
       <ul class="list-unstyled" role="list">
         <li><a href="{{ routes.all_products_collection_url }}">All products</a></li>
         <li><a href="{{ alma_collections_url }}/alma-perfumes">Spray Perfumes</a></li>
         <li><a href="{{ alma_collections_url }}/alma-solids-%D9%85%D8%AE%D9%85%D8%B1%D9%8A%D8%A7%D8%AA">Solid Perfumes</a></li>
         <li><a href="{{ alma_collections_url }}/alma-lotions">Lotions</a></li>
       </ul>
-    </details>
+    </div>
 
-    <details class="alma-footer-nav__group" open>
-      <summary>
-        <span>Explore ALMA</span>
-        <span class="svg-wrapper">{{- 'icon-caret.svg' | inline_asset_content -}}</span>
-      </summary>
+    <div class="alma-footer-nav__group">
+      <h3>Explore ALMA</h3>
       <ul class="list-unstyled" role="list">
         <li><a href="{{ alma_collections_url }}/alma-dokhon">Dukhoon</a></li>
         <li><a href="{{ alma_collections_url }}/alma-solid-charms">Solid Charms</a></li>
         <li><a href="{{ alma_collections_url }}/layering-kits">Layering &amp; Kits</a></li>
         <li><a href="/products/alma-fragrances-gift-card">Gift Cards</a></li>
       </ul>
-    </details>
+    </div>
 
-    <details class="alma-footer-nav__group" open>
-      <summary>
-        <span>Help</span>
-        <span class="svg-wrapper">{{- 'icon-caret.svg' | inline_asset_content -}}</span>
-      </summary>
+    <div class="alma-footer-nav__group">
+      <h3>Help</h3>
       <ul class="list-unstyled" role="list">
         <li><a href="{{ alma_help_url }}">Contact us</a></li>
         <li><a href="{{ routes.search_url }}">Search</a></li>
         <li><a href="{{ routes.account_url }}">My account</a></li>
         <li><a href="{{ routes.cart_url }}">Shopping bag</a></li>
       </ul>
-    </details>
+    </div>
 
-    <details class="alma-footer-nav__group" open>
-      <summary>
-        <span>Legal</span>
-        <span class="svg-wrapper">{{- 'icon-caret.svg' | inline_asset_content -}}</span>
-      </summary>
+    <div class="alma-footer-nav__group">
+      <h3>Legal</h3>
       <ul class="list-unstyled" role="list">
         <li><a href="/policies/privacy-policy">Privacy policy</a></li>
         <li><a href="/policies/terms-of-service">Terms of service</a></li>
         <li><a href="/policies/refund-policy">Refund policy</a></li>
       </ul>
-    </details>
-    </alma-footer-navigation>
+    </div>
+    </nav>
 
     {%- if section.settings.newsletter_enable -%}
       <div class="alma-footer__newsletter">
