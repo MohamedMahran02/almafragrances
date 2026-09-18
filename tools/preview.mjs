@@ -38,11 +38,7 @@ engine.registerFilter('image_tag', (url,...args)=>`<img src="${url}" ${args.filt
 engine.registerFilter('money',p=>`AED ${(Number(p)/100).toFixed(2)}`);
 engine.registerFilter('money_with_currency',p=>`AED ${(Number(p)/100).toFixed(2)}`);
 engine.registerFilter('font_face',()=> '');
-engine.registerFilter('font_modify',(font,...args)=>{
- const changes=Object.fromEntries(args.filter(Array.isArray));
- if(!font || typeof font!=='object') return font;
- return {...font,weight:changes.weight==='bold'?700:font.weight,style:changes.style==='italic'?'italic':font.style};
-});
+engine.registerFilter('font_modify',f=>f);
 engine.registerFilter('font_url',()=> '');
 engine.registerFilter('color_extract', (color, channel)=>parseInt(color.slice({red:1,green:3,blue:5}[channel],{red:3,green:5,blue:7}[channel]),16));
 engine.registerFilter('color_brightness',()=>240);
@@ -53,24 +49,8 @@ engine.registerFilter('payment_type_svg_tag',()=> '');
 const data=json('config/settings_data.json');
 const settings=data.current;
 settings.color_schemes=Object.entries(settings.color_schemes).map(([id,value])=>({id,...value}));
-const previewFonts={
- assistant_n4:{family:'Assistant',fallback:'sans-serif',query:'Assistant:wght@400;700'},
- bodoni_moda_n4:{family:'Bodoni Moda',fallback:'serif',query:'Bodoni+Moda:wght@400'},
- manrope_n4:{family:'Manrope',fallback:'sans-serif',query:'Manrope:wght@400;700'},
- cormorant_garamond_n4:{family:'Cormorant Garamond',fallback:'serif',query:'Cormorant+Garamond:wght@400'},
- jost_n4:{family:'Jost',fallback:'sans-serif',query:'Jost:wght@400;700'},
- instrument_serif_n4:{family:'Instrument Serif',fallback:'serif',query:'Instrument+Serif:ital@0;1'},
- inter_n4:{family:'Inter',fallback:'sans-serif',query:'Inter:wght@400;700'}
-};
-const resolvePreviewFont=handle=>{
- const definition=previewFonts[handle]??previewFonts.assistant_n4;
- return {...definition,fallback_families:definition.fallback,weight:400,style:'normal',system:true,'system?':true};
-};
-const headerFont=resolvePreviewFont(settings.type_header_font);
-const bodyFont=resolvePreviewFont(settings.type_body_font);
-const previewFontUrl=`https://fonts.googleapis.com/css2?${[headerFont.query,bodyFont.query].filter((query,index,queries)=>queries.indexOf(query)===index).map(query=>`family=${query}`).join('&')}&display=swap`;
-const previewFontMarkup=`<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="${previewFontUrl.replaceAll('&','&amp;')}">`;
-settings.type_header_font=headerFont; settings.type_body_font=bodyFont;
+const font={family:'Arial',fallback_families:'sans-serif',weight:400,style:'normal',system:true};
+settings.type_header_font=font; settings.type_body_font=font;
 const source=json('research/storefront/products.json').products;
 const products=Object.fromEntries(source.map(p=>[p.handle,{...p,url:`/products/${p.handle}`,type:p.product_type,description:p.body_html,price:Math.min(...p.variants.map(v=>Number(v.price)*100)),compare_at_price:Number(p.variants[0].compare_at_price)*100,available:p.variants.some(v=>v.available),featured_image:p.images[0],price_varies:new Set(p.variants.map(v=>v.price)).size>1}]));
 const collections={all:{url:'/collections/all',products:Object.values(products)}};
@@ -114,9 +94,9 @@ async function render(empty) {
  context.preview_header=await renderGroup('sections/header-group.json');
  context.preview_footer=await renderGroup('sections/footer-group.json');
  context.content_for_layout=await renderGroup('templates/index.json');
- return (await engine.renderFile('theme',context)).replaceAll('shopify://collections/','/collections/').replace('<head>',`<head><script>window.Shopify={designMode:false};</script>${previewFontMarkup}`);
+ return (await engine.renderFile('theme',context)).replaceAll('shopify://collections/','/collections/').replace('<head>','<head><script>window.Shopify={designMode:false};</script>');
 }
-const mime={'.css':'text/css','.js':'text/javascript','.png':'image/png','.jpg':'image/jpeg','.svg':'image/svg+xml'};
+const mime={'.css':'text/css','.js':'text/javascript','.png':'image/png','.jpg':'image/jpeg','.svg':'image/svg+xml','.woff2':'font/woff2'};
 if(buildOnly) {
  const output=path.join(root,'dist');
  if(fs.existsSync(output)) fs.rmSync(output,{recursive:true,force:true});

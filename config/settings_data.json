@@ -58,9 +58,9 @@
         }
       }
     },
-    "type_header_font": "cormorant_garamond_n4",
+    "type_header_font": "bodoni_moda_n4",
     "heading_scale": 100,
-    "type_body_font": "jost_n4",
+    "type_body_font": "manrope_n4",
     "body_scale": 100,
     "page_width": 1200,
     "spacing_sections": 0,
@@ -252,9 +252,9 @@
           }
         }
       },
-      "type_header_font": "cormorant_garamond_n4",
+      "type_header_font": "bodoni_moda_n4",
       "heading_scale": 100,
-      "type_body_font": "jost_n4",
+      "type_body_font": "manrope_n4",
       "body_scale": 100,
       "page_width": 1200,
       "spacing_sections": 0,

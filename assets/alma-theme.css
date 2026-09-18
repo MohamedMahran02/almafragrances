@@ -1,4 +1,30 @@
 /* ALMA storefront — Diptyque-referenced proportions with native Dawn commerce intact. */
+@font-face {
+  font-family: 'ALMA Cormorant Garamond';
+  src: url('alma-cormorant-garamond-regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ALMA Jost';
+  src: url('alma-jost-latin.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root {
+  --font-heading-family: 'ALMA Cormorant Garamond', Georgia, serif;
+  --font-heading-style: normal;
+  --font-heading-weight: 400;
+  --font-body-family: 'ALMA Jost', Arial, sans-serif;
+  --font-body-style: normal;
+  --font-body-weight: 400;
+  --font-body-weight-bold: 700;
+}
+
 html { overflow-x: hidden; }
 
 /* Find Your Aura — Shopify-connected fragrance note matcher */
