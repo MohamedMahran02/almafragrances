@@ -540,7 +540,7 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Preview applied: option 1 uses **Bodoni Moda** for headings and display/action typography with **Manrope** for body and interface text. The pair is configured through Dawn's native Shopify font-picker values so font files are emitted and preloaded by the theme rather than added through a third-party runtime embed.
 - Theme integration: removed the ALMA stylesheet's hard-coded Georgia heading override and routed every custom heading, customer-facing CTA, product line and wardrobe/service label through Dawn's `--font-heading-family`. This keeps future font comparisons controlled by the native global typography setting instead of requiring selector-by-selector rewrites.
 - Files: `assets/alma-theme.css`, `config/settings_data.json`, and this README. Layout, content, products, routes, section order and every block-order array are unchanged.
-- Review state: option 1 is a temporary comparison candidate pending the user's “choose this” or “next” decision. Theme Check, static preview build, JSON parsing, Git whitespace and connected Shopify storefront rendering are verified before handoff.
+- Review state: option 1 is a temporary comparison candidate pending the user's “choose this” or “next” decision. Theme Check passes with 0 errors and the same 9 inherited Dawn warnings; static preview build, JSON parsing and Git whitespace validation pass. The connected Shopify theme reported “Last saved: Just now”; the storefront loaded `Bodoni Moda, serif` for the ritual heading and `Manrope, sans-serif` for the page body, and both webfonts reported ready.
 
 ## Continuation prompt
 
