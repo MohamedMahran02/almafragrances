@@ -547,7 +547,7 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Request: remove the white fill from the fragrance-note buttons so their resting background matches the surrounding “Find Your Aura” section.
 - Changed: unselected note chips now use a transparent fill over the section's existing soft-neutral `#F7F5F1` background. Their outline, plus icon, spacing, typography and accessibility semantics are unchanged; selected notes still switch to logo-wine `#1D0004` with white text and a check mark.
 - Files: `assets/alma-theme.css` and this README. Finder data, matching behavior, products, layout, homepage order and every block-order array are unchanged.
-- Checks: Theme Check, static preview build, Git whitespace and connected Shopify desktop/mobile rendering are verified before handoff. The target interaction is an unselected chip matching its section background, then switching to the existing logo-wine selected state when activated.
+- Checks: Theme Check passes with 0 errors and the same 9 inherited Dawn warnings; static preview build and Git whitespace validation pass. On the connected Shopify mobile viewport, the section computes to `rgb(247, 245, 241)` and an unselected chip to a transparent fill, so the two surfaces visually match. Selecting Vanilla settles to `rgb(29, 0, 4)` with white text and returns three live recommendations. The page contains meaningful content, no framework error overlay and no console warnings/errors.
 
 ## Continuation prompt
 
