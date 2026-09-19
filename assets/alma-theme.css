@@ -685,6 +685,13 @@ html { overflow-x: hidden; }
 .alma-theme .alma-product-description__content { max-width: 56rem; padding: 0 0 3.2rem; color: #4b4945; font-family: var(--font-body-family); font-size: 1.4rem; line-height: 1.7; }
 .alma-theme .alma-product-description__content > :first-child { margin-top: 0; }
 .alma-theme .alma-product-description__content > :last-child { margin-bottom: 0; }
+.alma-theme product-info[id^='MainProduct-'] .product__accordion { margin-top: 0; border-bottom: 1px solid var(--alma-line); }
+.alma-theme product-info[id^='MainProduct-'] .product__accordion summary { min-height: 9rem; padding: 0; }
+.alma-theme product-info[id^='MainProduct-'] .product__accordion .accordion__title { color: var(--alma-ink); font-family: var(--font-body-family); font-size: 1.2rem; font-weight: 500; letter-spacing: .45em; }
+.alma-theme product-info[id^='MainProduct-'] .product__accordion .accordion__content { padding: 0 0 3.2rem; color: #4b4945; font-size: 1.4rem; line-height: 1.7; }
+.alma-theme .alma-product-description .alma-product-description__symbol { font-family: Arial, sans-serif; font-size: 2.2rem; }
+.alma-theme .alma-product-description[open] .alma-product-description__symbol { font-size: 0; }
+.alma-theme .alma-product-description[open] .alma-product-description__symbol::after { content: '−'; font-size: 2.2rem; }
 
 @media screen and (min-width: 990px) {
   .alma-theme product-info[id^='MainProduct-'] .product--large:not(.product--no-media) .product__media-wrapper {
