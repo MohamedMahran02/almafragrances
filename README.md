@@ -854,6 +854,12 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `assets/alma-theme.css` and this README.
 - Checks: Git whitespace validation passes; Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
 
+### 2026-09-20 - Center the mobile logo and contain mobile search
+
+- Request: center and slightly reduce the mobile logo, then keep mobile search and its preview within the screen below the navbar.
+- Changed: centered the mobile homepage logo, reduced its size to 4.4rem, and removed the transformed mobile utility container that shifted the fixed search panel. The panel now uses the viewport width with mobile-safe sizing and sits directly below the 7.8rem navbar.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: `git diff --check` passes; Shopify Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
 ## Continuation prompt
 
 ```text
