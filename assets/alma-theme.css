@@ -673,15 +673,20 @@ html { overflow-x: hidden; }
 }
 .alma-theme product-info[id^='MainProduct-'] .product__description {
   margin-top: 3.2rem;
-  padding-top: 2.8rem;
-  border-top: 1px solid var(--alma-line);
-  color: var(--alma-muted);
-  font-size: 1.45rem;
+  padding: 3.2rem clamp(2.4rem, 4vw, 4rem) 3.4rem;
+  border-top: 1px solid var(--alma-ink);
+  border-bottom: 1px solid var(--alma-line);
+  background: var(--alma-product-panel);
+  color: #4b4945;
+  font-size: 1.4rem;
   letter-spacing: .01em;
-  line-height: 1.75;
+  line-height: 1.7;
 }
+.alma-theme product-info[id^='MainProduct-'] .product__description::before { content: 'The story'; display: block; margin-bottom: 1.8rem; color: var(--alma-muted); font-family: var(--font-body-family); font-size: 1rem; font-weight: 700; letter-spacing: .16em; line-height: 1.2; text-transform: uppercase; }
 .alma-theme product-info[id^='MainProduct-'] .product__description > :first-child { margin-top: 0; }
 .alma-theme product-info[id^='MainProduct-'] .product__description > :last-child { margin-bottom: 0; }
+.alma-theme product-info[id^='MainProduct-'] .product__description > p:first-child { max-width: 30ch; color: var(--alma-ink); font-family: var(--font-heading-family); font-size: clamp(2rem, 2.2vw, 2.6rem); font-weight: 400; letter-spacing: -.02em; line-height: 1.16; }
+.alma-theme product-info[id^='MainProduct-'] .product__description p + p { max-width: 52rem; margin-top: 1.6rem; }
 
 @media screen and (min-width: 990px) {
   .alma-theme product-info[id^='MainProduct-'] .product--large:not(.product--no-media) .product__media-wrapper {
