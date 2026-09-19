@@ -866,6 +866,12 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Changed: cleared Dawn modal bottom positioning on the fixed mobile search panel and its content, so the search form has its natural height directly below the navbar. Reduced the centered mobile logo to 4rem.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: `git diff --check` passes; Shopify Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
+### 2026-09-20 - Match Jozee mobile search behavior
+
+- Request: use the same mobile search technique as jozeeboutique.com.
+- Changed: removed Alma-only mobile positioning for the native Shopify search modal. Mobile now follows Dawn's standard header search behavior used by the reference: it opens from the header, shows its built-in overlay, and retains Shopify predictive search.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: `git diff --check` passes; Shopify Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
 ## Continuation prompt
 
 ```text
