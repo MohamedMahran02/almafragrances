@@ -821,7 +821,6 @@ html { overflow-x: hidden; }
 }
 
 /* ALMA ritual 5% customer offer */
-.alma-editorial > .alma-ritual-signup-modal__form { display: contents; }
 .alma-ritual-signup-launcher { position: fixed; z-index: 9; top: 50%; left: 0; display: inline-flex; align-items: center; justify-content: center; min-height: 16rem; padding: 1.8rem 1.2rem; border: 1px solid var(--alma-ink); border-left: 0; background: var(--alma-ink); color: #fff; font-family: var(--font-body-family); font-size: 1.05rem; font-weight: 700; letter-spacing: .14em; line-height: 1.2; text-align: center; text-transform: uppercase; writing-mode: vertical-rl; cursor: pointer; transform: translateY(-50%); transition: background-color .2s ease, color .2s ease, opacity .2s ease, transform .2s ease, visibility .2s ease; }
 .alma-ritual-signup-launcher:hover { background: #fff; color: var(--alma-ink); }
 .alma-ritual-signup-launcher:focus-visible { outline: 2px solid var(--alma-ink); outline-offset: -.5rem; }
