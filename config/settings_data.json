@@ -24,11 +24,11 @@
       },
       "scheme-2": {
         "settings": {
-          "background": "#F3F3F3",
+          "background": "#FFFFFF",
           "background_gradient": "",
           "text": "#1D0004",
           "button": "#1D0004",
-          "button_label": "#F3F3F3",
+          "button_label": "#FFFFFF",
           "secondary_button_label": "#1D0004",
           "shadow": "#1D0004"
         }
@@ -218,11 +218,11 @@
         },
         "scheme-2": {
           "settings": {
-            "background": "#F3F3F3",
+            "background": "#FFFFFF",
             "background_gradient": "",
             "text": "#1D0004",
             "button": "#1D0004",
-            "button_label": "#F3F3F3",
+            "button_label": "#FFFFFF",
             "secondary_button_label": "#1D0004",
             "shadow": "#1D0004"
           }

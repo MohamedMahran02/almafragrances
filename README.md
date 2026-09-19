@@ -707,6 +707,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `templates/index.json` and this README.
 - Checks: homepage JSON parses successfully and Git whitespace validation passes. Theme Check was started but did not return within the local command window; rendered review remains a Shopify preview check after synchronization.
 
+### 2026-09-19 — Set beige and off-white surfaces to white
+
+- Request: replace beige and off-white background colors with white.
+- Changed: changed the ALMA warm-ivory, soft-gray, product-media, campaign-fallback, contact, policy-dialog, scent-finder and product-panel backgrounds to white. The Shopify Theme Editor's second color-scheme background and matching button label are now white as well. Wine and dark background accents remain unchanged.
+- Files: `assets/alma-theme.css`, `config/settings_data.json`, and this README.
+- Checks: targeted search confirms no beige or off-white CSS background declarations remain; settings JSON parses successfully after Shopify's generated-file header; Git whitespace validation passes. Rendered browser review remains a Shopify preview check after synchronization.
+
 ## Continuation prompt
 
 ```text
