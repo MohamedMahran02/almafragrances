@@ -66,6 +66,7 @@
       <h3>Help</h3>
       <ul class="list-unstyled" role="list">
         <li><a href="{{ alma_help_url }}">Contact us</a></li>
+        <li><button type="button" class="alma-footer__policy-trigger" data-alma-shipping-policy-open="AlmaShippingPolicy-{{ section.id }}" aria-haspopup="dialog">Shipping policy</button></li>
         <li><a href="{{ routes.account_url }}">My account</a></li>
       </ul>
     </div>
@@ -109,6 +110,17 @@
     {%- endif -%}
   </div>
 </footer>
+
+<dialog id="AlmaShippingPolicy-{{ section.id }}" class="alma-shipping-policy" aria-labelledby="AlmaShippingPolicyTitle-{{ section.id }}">
+  <div class="alma-shipping-policy__panel">
+    <button type="button" class="alma-shipping-policy__close" data-alma-shipping-policy-close aria-label="Close shipping policy">
+      <span class="svg-wrapper">{{- 'icon-close.svg' | inline_asset_content -}}</span>
+    </button>
+    <p class="alma-shipping-policy__eyebrow">ALMA delivery</p>
+    <h2 id="AlmaShippingPolicyTitle-{{ section.id }}">Shipping policy</h2>
+    <p>Free shipping is available to UAE. For all other GCC countries, a shipping fee of 40 AED applies</p>
+  </div>
+</dialog>
 
 {% schema %}
 {

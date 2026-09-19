@@ -651,6 +651,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `templates/collection.json` and this README.
 - Checks: collection template JSON parsing, Theme Check and Git whitespace validation pass. Theme Check reports 7 pre-existing Dawn warnings across 6 files and no errors. The static preview build succeeds after restoring the lockfile-pinned dependencies; it produces the catalog-free visual artifact under ignored `dist/`. Git is configured to use `MohamedMahran02`, but this machine still needs that account's GitHub credential before the commit can be pushed.
 
+### 2026-09-19 — Add the footer shipping-policy dialog
+
+- Request: add a Shipping policy entry in the footer that opens a smoothly animated popup containing the supplied UAE and GCC shipping message.
+- Changed: added Shipping policy to the Help links and an accessible native dialog with the exact supplied copy: “Free shipping is available to UAE. For all other GCC countries, a shipping fee of 40 AED applies”. It opens with a restrained fade-and-rise treatment, closes by its control, Escape, or clicking the overlay, and respects reduced-motion preferences. The panel uses ALMA wine, warm ivory, Cormorant Garamond display type, Jost supporting type, square edges, and the existing quiet footer-link treatment.
+- Files: `sections/footer.liquid`, `assets/alma-theme.css`, `assets/alma-shipping-policy.js`, `layout/theme.liquid`, and this README.
+- Checks: JavaScript syntax, Theme Check, static preview build and Git whitespace validation pass. Theme Check reports 7 pre-existing Dawn warnings across 6 files and no errors. The generated homepage includes the trigger, dialog, exact message, shipped script and styling. The in-app Browser runtime is unavailable in this session, so rendered desktop/mobile click-through verification remains a Shopify preview check after push.
+
 ## Continuation prompt
 
 ```text
