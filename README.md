@@ -805,6 +805,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `sections/header.liquid`, `assets/alma-header-search.js`, `layout/theme.liquid`, `assets/alma-theme.css`, `sections/alma-favourites.liquid`, `templates/index.json`, and this README.
 - Checks: new header-search and existing tabs JavaScript pass syntax validation; homepage JSON parses successfully; Git whitespace validation passes; Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
 
+### 2026-09-20 - Restore Best Sellers and Alma Solid Perfumes tabs
+
+- Request: make the missing Best Sellers and Alma Solid Perfumes collections appear in the fragrance tabs.
+- Changed: retained the Best Sellers Theme Editor selection and added a Best Sellers collection fallback when no selection is saved. Corrected the featured-section Solid Perfumes collection handle to the published `alma-makhmaria-s-solid-perfume` collection.
+- Files: `sections/alma-favourites.liquid`, `templates/index.json`, and this README.
+- Checks: homepage JSON parsing and Git whitespace validation pass; Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
+
 ## Continuation prompt
 
 ```text

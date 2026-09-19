@@ -4,6 +4,9 @@
 {%- liquid
   assign has_products = false
   assign best_selling_collection = section.settings.best_selling_collection
+  if best_selling_collection == blank
+    assign best_selling_collection = collections['best-sellers']
+  endif
   if best_selling_collection != blank and best_selling_collection.products != blank
     assign has_products = true
   endif
