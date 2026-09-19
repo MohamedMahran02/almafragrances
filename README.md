@@ -840,6 +840,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `snippets/alma-scroll-controls.liquid`, `assets/alma-theme.css`, and this README.
 - Checks: Git whitespace validation passes; Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
 
+### 2026-09-20 - Strengthen mobile search and compact scent-match cards
+
+- Request: fix the mobile search and reduce the selected-scent popup so matching product text is not cropped.
+- Changed: mobile explicitly restores Dawn details-modal search with a dedicated 44 px icon control and modal stacking layer; the desktop expanding search remains hidden. Selected-scent results now compact the dialog heading, notes, image cards, product type, reason and price, and hide the introductory body copy after results appear so all matching product text fits without an inner scrollbar.
+- Files: `assets/alma-theme.css` and this README.
+- Checks: Git whitespace validation passes. Theme Check was started but did not return in the local command window; GitHub push verification is pending.
+
 ## Continuation prompt
 
 ```text

@@ -420,8 +420,11 @@ html { overflow-x: hidden; }
   .alma-theme .alma-header--home { position: relative; }
   .alma-theme .alma-header--home .header__heading { position: absolute; z-index: 2; grid-area: auto; top: .1rem; left: 6.4rem; display: block; margin: 0; opacity: 1; pointer-events: auto; }
   .alma-theme .alma-header--home .header__icons { transform: translateY(-.3rem); }
-  .alma-header-search { display: none; }
-  .alma-theme .header__icons > .header__search { display: inline-flex !important; }
+  .alma-header-search { display: none !important; }
+  .alma-theme .header__icons > details-modal.header__search { display: inline-flex !important; flex: 0 0 4.4rem; width: 4.4rem; height: 4.4rem; }
+  .alma-theme .header__icons > details-modal.header__search > details { display: block; width: 100%; height: 100%; }
+  .alma-theme .header__icons .header__icon--search { display: flex; width: 4.4rem; height: 4.4rem; }
+  .alma-theme .header__icons .search-modal { z-index: 20; }
   .alma-theme .section-header.menu-open { position: fixed; inset: 0 0 auto; width: 100%; }
   .alma-favourites__grid { grid-auto-columns: calc((100% - 1.6rem) / 2); gap: 3rem 1.6rem; }
   .alma-editorial__content { padding-left: 5rem; padding-right: 5rem; }
@@ -797,14 +800,19 @@ html { overflow-x: hidden; }
   .alma-scent-finder-modal[data-has-results] .alma-scent-finder-modal__scroll { height: auto; }
   .alma-scent-finder-modal__scroll { max-height: none; overflow-y: visible; }
   .alma-scent-finder-modal .alma-scent-finder { padding: 5rem 0 2.2rem; }
-  .alma-scent-finder-modal .alma-scent-finder__heading h2 { font-size: 3rem; }
+  .alma-scent-finder-modal .alma-scent-finder__heading h2 { font-size: 2.8rem; }
   .alma-scent-finder-modal .alma-scent-finder__notes { margin-top: 2.2rem; }
-  .alma-scent-finder-modal .alma-scent-finder__results-wrap { padding-top: 2.4rem; }
-  .alma-scent-finder-modal .alma-scent-match { flex: 0 0 46vw; }
-  .alma-scent-finder-modal .alma-scent-match__image-link { margin-bottom: 1rem; }
-  .alma-scent-finder-modal .alma-scent-match h3 { margin-bottom: .3rem; font-size: 1.55rem; }
-  .alma-scent-finder-modal .alma-scent-match__reason { min-height: 0; margin-bottom: .5rem; font-size: .9rem; }
-  .alma-scent-finder-modal .alma-scent-match .price { margin-bottom: .6rem; font-size: 1.1rem; }
+  .alma-scent-finder-modal .alma-scent-finder__results-wrap { padding-top: 2rem; }
+  .alma-scent-finder-modal .alma-scent-match { flex: 0 0 42vw; }
+  .alma-scent-finder-modal .alma-scent-match__image-link { margin-bottom: .7rem; }
+  .alma-scent-finder-modal .alma-scent-match h3 { margin-bottom: .25rem; font-size: 1.4rem; line-height: 1.15; }
+  .alma-scent-finder-modal .alma-scent-match__type { margin-bottom: .3rem; font-size: 1rem; line-height: 1.25; }
+  .alma-scent-finder-modal .alma-scent-match__reason { min-height: 0; margin-bottom: .35rem; font-size: .8rem; line-height: 1.2; }
+  .alma-scent-finder-modal .alma-scent-match .price { margin-bottom: .45rem; font-size: 1rem; }
+  .alma-scent-finder-modal[data-has-results] .alma-scent-finder__text { display: none; }
+  .alma-scent-finder-modal[data-has-results] .alma-scent-finder__heading h2 { font-size: 2.5rem; }
+  .alma-scent-finder-modal[data-has-results] .alma-scent-finder__notes { margin-top: 1.2rem; }
+  .alma-scent-finder-modal[data-has-results] .alma-scent-finder__note span { min-height: 3.5rem; padding: .55rem 1rem; font-size: 1rem; }
   .alma-scent-finder-modal__close { top: .9rem; right: .9rem; }
   .alma-editorial--ritual-motion { height: auto; }
   .alma-editorial--ritual-motion .alma-editorial__media,
