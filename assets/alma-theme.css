@@ -395,6 +395,7 @@ html { overflow-x: hidden; }
   .alma-terms-of-service__panel,
   .alma-terms-of-service[data-closing]::backdrop,
   .alma-terms-of-service[data-closing] .alma-terms-of-service__panel { animation-duration: .01ms; }
+  .alma-editorial--ritual-motion .alma-editorial__step { opacity: 1; transform: none; transition: none; }
 }
 @media (max-width: 989px) {
   .alma-theme .alma-header-wrapper--home { height: 6rem; }
@@ -692,6 +693,10 @@ html { overflow-x: hidden; }
 .alma-theme product-info[id^='MainProduct-'] .product__accordion .accordion__content { padding: 0 0 3.2rem; color: #4b4945; font-size: 1.4rem; line-height: 1.7; }
 .alma-theme .alma-product-description .alma-product-description__symbol { width: 1.2rem; height: .7rem; background: url('icon-caret.svg') center / contain no-repeat; transition: transform .18s ease; }
 .alma-theme .alma-product-description[open] .alma-product-description__symbol { transform: rotate(180deg); }
+.alma-editorial--ritual-motion .alma-editorial__step { opacity: .46; transform: translateY(.6rem); transition: opacity .55s ease, transform .55s ease; }
+.alma-editorial--ritual-motion .alma-editorial__step.is-active { opacity: 1; transform: translateY(0); }
+.alma-editorial--ritual-motion .alma-editorial__step-image { transition: transform .7s ease; }
+.alma-editorial--ritual-motion .alma-editorial__step.is-active .alma-editorial__step-image { transform: scale(1.05); }
 
 @media screen and (min-width: 990px) {
   .alma-theme product-info[id^='MainProduct-'] .product--large:not(.product--no-media) .product__media-wrapper {

@@ -8,7 +8,8 @@
     assign feature_image = feature_product.featured_image
   endif
 -%}
-<section class="alma-editorial alma-editorial--{{ section.settings.tone }} alma-editorial--{{ section.settings.media_position }} alma-editorial--{{ section.settings.layout | default: 'split' }}" aria-labelledby="AlmaEditorial-{{ section.id }}">
+{%- assign alma_ritual_eyebrow = section.settings.eyebrow | downcase -%}
+<section class="alma-editorial alma-editorial--{{ section.settings.tone }} alma-editorial--{{ section.settings.media_position }} alma-editorial--{{ section.settings.layout | default: 'split' }}{% if alma_ritual_eyebrow == 'the alma ritual' %} alma-editorial--ritual-motion{% endif %}" aria-labelledby="AlmaEditorial-{{ section.id }}">
   <div class="alma-editorial__media">
     {%- if use_dukhon_campaign -%}
       <picture class="alma-editorial__picture">
