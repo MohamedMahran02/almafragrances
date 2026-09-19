@@ -228,6 +228,17 @@
     {%- endif -%}
 
     <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
+      {%- if settings.predictive_search_enabled -%}
+        {% render 'alma-header-predictive-search' %}
+      {%- endif -%}
+      {% render 'header-search', input_id: 'Search-In-Modal' %}
+
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when '@app' -%}
+            {% render block %}
+        {%- endcase -%}
+      {%- endfor -%}
       <div class="desktop-localization-wrapper">
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
           <localization-form class="small-hide medium-hide" data-prevent-hide>
@@ -251,17 +262,7 @@
           </localization-form>
         {%- endif -%}
       </div>
-      {%- if settings.predictive_search_enabled -%}
-        {% render 'alma-header-predictive-search' %}
-      {%- endif -%}
-      {% render 'header-search', input_id: 'Search-In-Modal' %}
 
-      {%- for block in section.blocks -%}
-        {%- case block.type -%}
-          {%- when '@app' -%}
-            {% render block %}
-        {%- endcase -%}
-      {%- endfor -%}
 
       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
         {% if cart == empty %}

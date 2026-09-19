@@ -756,6 +756,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `snippets/alma-header-predictive-search.liquid`, `assets/alma-products-menu.js`, `sections/header.liquid`, `layout/theme.liquid`, `assets/alma-theme.css`, and this README.
 - Checks: predictive-search and hover-menu JavaScript pass syntax validation; Git whitespace validation passes; Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification passed for `origin/main`.
 
+### 2026-09-19 - Expand header search and position AED beside cart
+
+- Request: provide more room for the desktop search bar and move AED to the top right beside the cart.
+- Changed: the desktop Shopify predictive-search field now grows from 260 px to 360 px according to viewport width. The currency selector now follows the search field and sits immediately before the cart in the right-side utility group; its mobile visibility remains unchanged.
+- Files: `sections/header.liquid`, `assets/alma-theme.css`, and this README.
+- Checks: Git whitespace validation passes; Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
+
 ## Continuation prompt
 
 ```text

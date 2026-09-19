@@ -100,7 +100,7 @@ html { overflow-x: hidden; }
 .alma-theme .header__heading-link { padding: .2rem; }
 .alma-theme .header__inline-menu { margin-top: 0; }
 .alma-theme .header__menu-item { padding: .8rem 1.35rem; color: var(--alma-ink); font-size: 1.35rem; }
-.alma-theme .header__icons { gap: .2rem; }
+.alma-theme .header__icons { align-items: center; gap: .2rem; }
 .alma-theme .desktop-localization-wrapper .localization-form__select { min-width: 6.2rem; padding-right: 2.4rem; padding-left: .8rem; }
 .alma-theme .header-wrapper--border-bottom { border-color: var(--alma-line); }
 .alma-theme .section-header.shopify-section-header-sticky { z-index: 10; }
@@ -121,11 +121,12 @@ html { overflow-x: hidden; }
   .alma-theme .alma-header--home .header__heading .alma-logo { width: 5rem; }
   .alma-theme .alma-header--home .header__inline-menu { grid-area: nav; }
   .alma-theme .alma-header--home .header__icons { position: absolute; z-index: 2; top: .9rem; right: 5rem; }
-  .alma-header-predictive-search { position: relative !important; display: block; width: 23rem; }
+  .alma-header-predictive-search { position: relative !important; display: block; width: clamp(26rem, 27vw, 36rem); }
   .alma-header-predictive-search .field { margin: 0; }
   .alma-header-predictive-search .field__input { min-height: 4.4rem; padding-right: 4.8rem; border-radius: 0; background: #fff; font-size: 1.25rem; }
   .alma-header-predictive-search .field__label { font-size: 1.15rem; }
   .alma-header-predictive-search .predictive-search { position: absolute; top: calc(100% + .6rem); right: 0; left: auto; width: min(42rem, 76vw); border: 1px solid var(--alma-line); background: #fff; z-index: 12; }
+  .alma-theme .desktop-localization-wrapper { flex: 0 0 auto; }
   .alma-theme .header__icons > .header__search { display: none; }
   .alma-products-menu .header__submenu { min-width: 20rem; background: #fff; }
   .alma-products-menu summary { gap: .45rem; padding-right: 2.8rem; }
