@@ -872,6 +872,12 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Changed: removed Alma-only mobile positioning for the native Shopify search modal. Mobile now follows Dawn's standard header search behavior used by the reference: it opens from the header, shows its built-in overlay, and retains Shopify predictive search.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: `git diff --check` passes; Shopify Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
+### 2026-09-20 - Adjust mobile logo alignment
+
+- Request: move the centered mobile logo slightly downward without changing navbar height.
+- Changed: applied a 0.3rem visual translation to the mobile homepage logo only; the navbar dimensions and document layout stay unchanged.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: `git diff --check` passes; Shopify Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
 ## Continuation prompt
 
 ```text
