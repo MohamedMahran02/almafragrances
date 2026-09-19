@@ -74,7 +74,8 @@
     <div class="alma-footer-nav__group">
       <h3>Legal</h3>
       <ul class="list-unstyled" role="list">
-        <li><a href="/policies/privacy-policy">Privacy policy</a></li>
+        <li><button type="button" class="alma-footer__policy-trigger" data-alma-privacy-open="AlmaPrivacy-{{ section.id }}" aria-haspopup="dialog">Privacy policy</button></li>
+        <li><button type="button" class="alma-footer__policy-trigger" data-alma-refund-open="AlmaRefund-{{ section.id }}" aria-haspopup="dialog">Refund policy</button></li>
         <li><button type="button" class="alma-footer__policy-trigger" data-alma-terms-of-service-open="AlmaTermsOfService-{{ section.id }}" aria-haspopup="dialog">Terms of service</button></li>
       </ul>
     </div>
@@ -123,6 +124,8 @@
 </dialog>
 
 {% render 'alma-terms-of-service', section_id: section.id %}
+<dialog id="AlmaPrivacy-{{ section.id }}" class="alma-shipping-policy" aria-labelledby="AlmaPrivacyTitle-{{ section.id }}"><div class="alma-shipping-policy__panel"><button type="button" class="alma-shipping-policy__close" data-alma-shipping-policy-close aria-label="Close privacy policy"><span class="svg-wrapper">{{- 'icon-close.svg' | inline_asset_content -}}</span></button><p class="alma-shipping-policy__eyebrow">ALMA legal</p><h2 id="AlmaPrivacyTitle-{{ section.id }}">Privacy policy</h2><p>{{ section.settings.privacy_policy_text }}</p></div></dialog>
+<dialog id="AlmaRefund-{{ section.id }}" class="alma-shipping-policy" aria-labelledby="AlmaRefundTitle-{{ section.id }}"><div class="alma-shipping-policy__panel"><button type="button" class="alma-shipping-policy__close" data-alma-shipping-policy-close aria-label="Close refund policy"><span class="svg-wrapper">{{- 'icon-close.svg' | inline_asset_content -}}</span></button><p class="alma-shipping-policy__eyebrow">ALMA legal</p><h2 id="AlmaRefundTitle-{{ section.id }}">Refund policy</h2><p>{{ section.settings.refund_policy_text }}</p></div></dialog>
 
 {% schema %}
 {
@@ -299,6 +302,18 @@
       "default": true,
       "label": "t:sections.footer.settings.show_policy.label",
       "info": "t:sections.footer.settings.show_policy.info"
+    },
+    {
+      "type": "textarea",
+      "id": "privacy_policy_text",
+      "label": "Privacy policy popup text",
+      "default": "By using our website, you (the visitor) agree to allow third parties to process your IP address, in order to determine your location for the purpose of currency conversion. You also agree to have that currency stored in a session cookie in your browser (a temporary cookie which gets automatically removed when you close your browser). We do this in order for the selected currency to remain selected and consistent when browsing our website so that the prices can convert to your (the visitor) local currency."
+    },
+    {
+      "type": "textarea",
+      "id": "refund_policy_text",
+      "label": "Refund policy popup text",
+      "default": "All sales are final and we do not accept returns or offer refunds."
     },
     {
       "type": "header",
