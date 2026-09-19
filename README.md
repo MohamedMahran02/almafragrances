@@ -826,6 +826,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `sections/alma-favourites.liquid`, `assets/alma-favourites.js`, `assets/alma-theme.css`, `templates/index.json`, and this README.
 - Checks: JavaScript syntax, homepage JSON parsing, and Git whitespace validation pass; Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
 
+### 2026-09-20 - Configure separate perfume collections and full-width progress
+
+- Request: ensure Alma perfumes and Alma Solid Perfumes are distinct visible tabs, and make the horizontal rail progress line span the window.
+- Changed: set the ALMA fragrance collection Perfumes tab to `alma-perfumes` and the separate Alma Solid Perfumes tab to `alma-solid-perfumes`. The rail progress track now extends edge to edge across the viewport for this section while retaining the existing scroll position indicator.
+- Files: `templates/index.json`, `assets/alma-theme.css`, and this README.
+- Checks: homepage JSON parsing and Git whitespace validation pass; Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
+
 ## Continuation prompt
 
 ```text

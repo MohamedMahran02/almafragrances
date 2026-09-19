@@ -191,6 +191,8 @@ html { overflow-x: hidden; }
 .alma-product__type { margin: 0 0 .6rem; color: var(--alma-muted); font-size: 1.2rem; }
 .alma-product .price { margin: .8rem 0 1rem; font-size: 1.3rem; }
 .alma-scroll-gallery__footer { display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin-top: 2rem; }
+.alma-favourites .alma-scroll-gallery__footer { display: block; width: 100vw; margin-left: calc(50% - 50vw); }
+.alma-favourites .alma-scroll-gallery__progress { width: 100%; }
 .alma-scroll-gallery__progress { position: relative; display: block; width: min(24rem, 45vw); height: 1px; overflow: hidden; background: var(--alma-line); }
 .alma-scroll-gallery__progress-value { position: absolute; inset: 0; background: var(--alma-ink); transform: scaleX(var(--alma-scroll-progress, .25)); transform-origin: left center; transition: transform .2s ease; }
 .alma-scroll-gallery__controls { position: absolute; z-index: 2; top: 18rem; right: 1.2rem; left: 1.2rem; display: flex; justify-content: space-between; pointer-events: none; }
