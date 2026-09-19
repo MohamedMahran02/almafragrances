@@ -672,6 +672,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `sections/alma-scent-finder.liquid`, `assets/alma-scent-finder-modal.js`, `assets/alma-theme.css`, `layout/theme.liquid`, and this README.
 - Checks: both scent-finder JavaScript assets pass syntax validation; Theme Check passes with 0 errors and the same 7 inherited Dawn warnings; Git whitespace validation passes. The local static preview build was started but did not complete within the available command window, so rendered desktop/mobile interaction remains a Shopify preview check after synchronization.
 
+### 2026-09-19 — Fit the scent finder before recommendations
+
+- Request: remove the empty area at the start of the Find Your Aura popup and fit its length to the content until a scent is selected.
+- Changed: the dialog now takes its natural content height before recommendations are available. Once a matching fragrance result is shown, it expands into the existing capped, scrollable recommendation view. Clearing the selection returns it to the compact introductory height. Mobile follows the same behavior.
+- Files: `assets/alma-scent-finder.js`, `assets/alma-theme.css`, and this README.
+- Checks: both scent-finder JavaScript assets pass syntax validation; Theme Check passes with 0 errors and the same 7 inherited Dawn warnings; Git whitespace validation passes. Rendered browser interaction remains a Shopify preview check after synchronization.
+
 ## Continuation prompt
 
 ```text

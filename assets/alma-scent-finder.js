@@ -58,6 +58,7 @@ if (!customElements.get('alma-scent-finder')) {
         });
         this.resultsWrap.hidden = true;
         this.status.textContent = this.initialMessage;
+        this.closest('[data-alma-scent-finder-modal]')?.removeAttribute('data-has-results');
         return;
       }
 
@@ -82,6 +83,7 @@ if (!customElements.get('alma-scent-finder')) {
 
       const shown = Math.min(ranked.length, this.resultLimit);
       this.resultsWrap.hidden = shown === 0;
+      this.closest('[data-alma-scent-finder-modal]')?.toggleAttribute('data-has-results', shown > 0);
       this.status.textContent = shown
         ? `${shown} ${shown === 1 ? 'fragrance' : 'fragrances'} found for your aura.`
         : 'No exact match yet. Try another note or combination.';
