@@ -885,6 +885,12 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Shopify customization: the ritual editorial section now provides settings for enabling the popup; the offer, success, and launcher copy; fine print; and the code shown after signup. Ensure that its code matches an active Shopify 5% discount.
 - Files: `sections/alma-editorial-feature.liquid`, `assets/alma-ritual-signup.js`, `assets/alma-theme.css`, `layout/theme.liquid`, `README.md`.
 - Checks: `node --check assets/alma-ritual-signup.js` and `git diff --check` pass; Shopify Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
+### 2026-09-20 - Repair the ALMA ritual layout after signup integration
+
+- Request: fix the broken The ALMA ritual section.
+- Changed: made the native Shopify signup form layout-transparent so it no longer becomes a third grid or flex item beside the ritual media and content. The dialog remains available for form submission without affecting the editorial section layout.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: `git diff --check` passes; Shopify Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
 ## Continuation prompt
 
 ```text
