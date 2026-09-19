@@ -136,12 +136,7 @@
       assign localization_forms = true
     endif
   -%}
-  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if request.page_type == 'index' %} alma-header--home{% endif %}{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank or settings.alma_navigation %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
-    {%- if request.page_type == 'index' -%}
-      <a href="{{ routes.root_url }}" class="alma-header-wordmark link focus-inset" aria-label="ALMA by Reem Fragrances home">
-        <img src="{{ 'alma-logo-wordmark.png' | asset_url }}" width="1055" height="1491" alt="ALMA Body Fragrances by Reem">
-      </a>
-    {%- endif -%}
+  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if request.page_type == 'index' %} alma-header--home{% endif %}{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank or settings.alma_navigation %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
     {%- liquid
       if section.settings.menu != blank or settings.alma_navigation
         render 'header-drawer'
@@ -258,35 +253,6 @@
       </div>
       {% render 'header-search', input_id: 'Search-In-Modal' %}
 
-      {%- if shop.customer_accounts_enabled -%}
-        <a
-          href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
-          class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank or settings.alma_navigation %} small-hide{% endif %}"
-          rel="nofollow"
-        >
-          {%- if section.settings.enable_customer_avatar -%}
-            <account-icon>
-              {%- if customer and customer.has_avatar? -%}
-                {{ customer | avatar }}
-              {%- else -%}
-                <span class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span>
-              {%- endif -%}
-            </account-icon>
-          {%- else -%}
-            <span class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span>
-          {%- endif -%}
-          <span class="visually-hidden">
-            {%- liquid
-              if customer
-                echo 'customer.account_fallback' | t
-              else
-                echo 'customer.log_in' | t
-              endif
-            -%}
-          </span>
-        </a>
-      {%- endif -%}
-
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when '@app' -%}
@@ -330,9 +296,6 @@
     connectedCallback() {
       this.header = document.querySelector('.section-header');
       this.almaHomeHeader = this.querySelector('.alma-header--home');
-      this.almaWordmark = this.querySelector('.alma-header-wordmark');
-      this.almaIconHeading = this.querySelector('.header__heading');
-      this.almaIconLink = this.almaIconHeading?.querySelector('a');
       this.headerIsAlwaysSticky =
         this.getAttribute('data-sticky-type') === 'always' ||
         this.getAttribute('data-sticky-type') === 'reduce-logo-size';
@@ -424,58 +387,8 @@
       requestAnimationFrame(this.setHeaderHeight.bind(this));
     }
 
-    updateAlmaHeaderProgress(scrollTop) {
-      if (!this.almaHomeHeader || !this.almaWordmark || !this.almaIconHeading) return 0;
-
-      const desktop = window.matchMedia('(min-width: 990px)').matches;
-      const scrollRange = desktop ? 132 : 96;
-      const progress = Math.min(1, Math.max(0, scrollTop / scrollRange));
-      const easedProgress = progress * progress * (3 - 2 * progress);
-      const wordmarkWidth = this.almaWordmark.offsetWidth;
-      const wordmarkHeight = this.almaWordmark.offsetHeight;
-      const iconWidth = this.almaIconHeading.offsetWidth;
-      const iconHeight = this.almaIconHeading.offsetHeight;
-      const openHeight = desktop ? 132.5 : this.almaHomeHeader.offsetHeight;
-      const closedHeight = desktop ? 72 : openHeight;
-      const startLeft = (this.almaHomeHeader.clientWidth - wordmarkWidth) / 2;
-      const startTop = desktop ? 10 : (openHeight - wordmarkHeight) / 2;
-      const finalScale = Math.min(iconWidth / wordmarkWidth, iconHeight / wordmarkHeight);
-      const endLeft = desktop ? 50 : (this.almaHomeHeader.clientWidth - wordmarkWidth * finalScale) / 2;
-      const endTop = (closedHeight - iconHeight) / 2;
-      const interpolate = (start, end) => start + (end - start) * easedProgress;
-      const wordmarkOpacity = Math.max(0, 1 - progress / 0.82);
-      const iconOpacity = Math.max(0, Math.min(1, (progress - 0.18) / 0.82));
-
-      this.almaHomeHeader.style.setProperty('--alma-header-progress', progress.toFixed(4));
-      this.almaHomeHeader.style.setProperty('--alma-wordmark-left', `${interpolate(startLeft, endLeft)}px`);
-      this.almaHomeHeader.style.setProperty('--alma-wordmark-top', `${interpolate(startTop, endTop)}px`);
-      this.almaHomeHeader.style.setProperty('--alma-wordmark-scale', interpolate(1, finalScale).toFixed(4));
-      this.almaHomeHeader.style.setProperty('--alma-wordmark-opacity', wordmarkOpacity.toFixed(4));
-      this.almaHomeHeader.style.setProperty('--alma-wordmark-fallback-x', '0px');
-      this.almaHomeHeader.style.setProperty('--alma-wordmark-fallback-y', '0px');
-      this.almaHomeHeader.style.setProperty('--alma-icon-opacity', iconOpacity.toFixed(4));
-      this.almaHomeHeader.style.setProperty('--alma-icon-left', `${endLeft}px`);
-      this.almaHomeHeader.style.setProperty('--alma-icon-top', `${endTop}px`);
-
-      if (desktop) {
-        this.almaHomeHeader.style.setProperty('--alma-brand-row-height', `${interpolate(71, 0)}px`);
-        this.almaHomeHeader.style.setProperty('--alma-header-row-gap', `${interpolate(6, 0)}px`);
-        this.almaHomeHeader.style.setProperty('--alma-header-padding-top', `${interpolate(10, 19)}px`);
-        this.almaHomeHeader.style.setProperty('--alma-header-padding-bottom', `${interpolate(12, 19)}px`);
-        this.almaHomeHeader.style.setProperty('--alma-icons-top', `${interpolate(23.5, 14)}px`);
-      }
-
-      this.almaWordmark.style.pointerEvents = progress < 0.65 ? 'auto' : 'none';
-      this.almaIconHeading.style.pointerEvents = progress > 0.35 ? 'auto' : 'none';
-      this.almaWordmark.toggleAttribute('aria-hidden', progress >= 0.5);
-      this.almaWordmark.tabIndex = progress >= 0.5 ? -1 : 0;
-      if (this.almaIconLink) {
-        this.almaIconLink.toggleAttribute('aria-hidden', progress < 0.5);
-        this.almaIconLink.tabIndex = progress < 0.5 ? -1 : 0;
-      }
-      this.almaHomeHeader.dataset.almaScrollProgress = progress.toFixed(4);
-
-      return progress;
+    updateAlmaHeaderProgress() {
+      return 0;
     }
 
     hide() {

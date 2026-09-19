@@ -714,6 +714,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `assets/alma-theme.css`, `config/settings_data.json`, and this README.
 - Checks: targeted search confirms no beige or off-white CSS background declarations remain; settings JSON parses successfully after Shopify's generated-file header; Git whitespace validation passes. Rendered browser review remains a Shopify preview check after synchronization.
 
+### 2026-09-19 — Simplify the navbar branding and navigation
+
+- Request: remove the two-logo homepage animation, retain only the final compact logo and final navbar size, remove the profile icon, raise the remaining utility icons, and remove Sale and Find Your Aura from navigation.
+- Changed: removed the animated homepage wordmark and retained the compact ALMA icon as the sole home link. The desktop homepage header now holds its former 72 px settled height from load. The search/cart utility group moves slightly upward, and the account icon is no longer rendered. Desktop and mobile navigation now list Products, Gifting and Contact.
+- Files: `sections/header.liquid`, `snippets/alma-navigation-links.liquid`, `assets/alma-theme.css`, and this README.
+- Checks: Theme Check passes with 0 errors and the same 7 inherited Dawn warnings; targeted source search confirms the animated wordmark, account icon, Sale and Find Your Aura navigation entries are absent; Git whitespace validation passes. Rendered browser review remains a Shopify preview check after synchronization.
+
 ## Continuation prompt
 
 ```text
