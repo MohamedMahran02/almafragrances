@@ -2,39 +2,39 @@
 <script src="{{ 'alma-favourites.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'alma-scroll-gallery.js' | asset_url }}" defer="defer"></script>
 {%- liquid
-  assign has_products = false
+  assign has_collections = false
   assign best_selling_collection = section.settings.best_selling_collection
   if best_selling_collection == blank
     assign best_selling_collection = collections['best-sellers']
   endif
-  if best_selling_collection != blank and best_selling_collection.products != blank
-    assign has_products = true
+  if best_selling_collection != blank
+    assign has_collections = true
   endif
-  if has_products == false
+  if has_collections == false
     for block in section.blocks
-      if block.settings.collection != blank and block.settings.collection.products != blank
-        assign has_products = true
+      if block.settings.collection != blank
+        assign has_collections = true
         break
       endif
     endfor
   endif
 -%}
-{%- if has_products -%}
+{%- if has_collections -%}
 <alma-favourites class="alma-favourites page-width">
   <h2 id="AlmaFavourites-{{ section.id }}">{{ section.settings.title | escape }}</h2>
   <div class="alma-favourites__tabs" aria-labelledby="AlmaFavourites-{{ section.id }}">
-    {%- if best_selling_collection != blank and best_selling_collection.products != blank -%}
+    {%- if best_selling_collection != blank -%}
       <a class="alma-favourites__tab" href="#AlmaPanel-{{ section.id }}-best-sellers" id="AlmaTab-{{ section.id }}-best-sellers">{{ best_selling_collection.title | escape }}</a>
     {%- endif -%}
     {%- for block in section.blocks -%}
       {%- assign tab_collection = block.settings.collection -%}
-      {%- if tab_collection != blank and tab_collection.products != blank -%}
+      {%- if tab_collection != blank -%}
         <a class="alma-favourites__tab" href="#AlmaPanel-{{ section.id }}-{{ block.id }}" id="AlmaTab-{{ section.id }}-{{ block.id }}" {{ block.shopify_attributes }}>{{ tab_collection.title | escape }}</a>
       {%- endif -%}
     {%- endfor -%}
   </div>
 
-  {%- if best_selling_collection != blank and best_selling_collection.products != blank -%}
+  {%- if best_selling_collection != blank -%}
     {%- assign product_track_id = 'AlmaProducts-' | append: section.id | append: '-best-sellers' -%}
     <div class="alma-favourites__panel" id="AlmaPanel-{{ section.id }}-best-sellers" aria-labelledby="AlmaTab-{{ section.id }}-best-sellers">
       <alma-scroll-gallery class="alma-scroll-gallery">
@@ -59,7 +59,7 @@
 
   {%- for block in section.blocks -%}
     {%- assign chosen_collection = block.settings.collection -%}
-    {%- if chosen_collection != blank and chosen_collection.products != blank -%}
+    {%- if chosen_collection != blank -%}
       {%- assign product_track_id = 'AlmaProducts-' | append: section.id | append: '-' | append: block.id -%}
       <div class="alma-favourites__panel" id="AlmaPanel-{{ section.id }}-{{ block.id }}" aria-labelledby="AlmaTab-{{ section.id }}-{{ block.id }}">
         <alma-scroll-gallery class="alma-scroll-gallery">

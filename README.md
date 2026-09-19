@@ -812,6 +812,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `sections/alma-favourites.liquid`, `templates/index.json`, and this README.
 - Checks: homepage JSON parsing and Git whitespace validation pass; Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
 
+### 2026-09-20 - Always display selected fragrance collections
+
+- Request: make the selected collections visible in The ALMA fragrance collection section.
+- Changed: removed the collection product-presence checks that could suppress a selected tab before its products resolve. The section now renders each selected Best Sellers or collection-block tab and its associated product rail whenever a collection is selected.
+- Files: `sections/alma-favourites.liquid` and this README.
+- Checks: Git whitespace validation passes; Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
+
 ## Continuation prompt
 
 ```text
