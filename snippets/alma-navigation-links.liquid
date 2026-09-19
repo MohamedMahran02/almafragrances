@@ -6,7 +6,29 @@
 
   assign gifting_url = settings.alma_gifting_link | default: '/#shopify-section-gifting_story'
   assign contact_url = pages.contact.url | default: '/pages/contact'
+  assign collections_url = routes.collections_url
 -%}
-<li><a class="{{ link_class }}" href="{{ routes.all_products_collection_url }}"{% if request.path == routes.all_products_collection_url %} aria-current="page"{% endif %}>Products</a></li>
+{%- if mobile -%}
+  <li><a class="{{ link_class }}" href="{{ routes.all_products_collection_url }}"{% if request.path == routes.all_products_collection_url %} aria-current="page"{% endif %}>Products</a></li>
+{%- else -%}
+  <li class="alma-products-menu">
+    <header-menu>
+      <details id="Details-AlmaProductsMenu">
+        <summary id="HeaderMenu-AlmaProducts" class="header__menu-item list-menu__item link focus-inset">
+          <span{% if request.path == routes.all_products_collection_url %} class="header__active-menu-item"{% endif %}>Products</span>
+          {{- 'icon-caret.svg' | inline_asset_content -}}
+        </summary>
+        <ul class="header__submenu list-menu list-menu--disclosure color-{{ section.settings.menu_color_scheme }} gradient caption-large motion-reduce global-settings-popup" role="list" tabindex="-1">
+          <li><a class="header__menu-item list-menu__item link link--text focus-inset caption-large" href="{{ routes.all_products_collection_url }}">Shop all</a></li>
+          <li><a class="header__menu-item list-menu__item link link--text focus-inset caption-large" href="{{ collections_url }}/alma-perfumes">Perfumes</a></li>
+          <li><a class="header__menu-item list-menu__item link link--text focus-inset caption-large" href="{{ collections_url }}/alma-lotions">Lotions</a></li>
+          <li><a class="header__menu-item list-menu__item link link--text focus-inset caption-large" href="{{ collections_url }}/alma-dokhon">Dukhoon</a></li>
+          <li><a class="header__menu-item list-menu__item link link--text focus-inset caption-large" href="{{ collections_url }}/alma-solid-charms">Solid charms</a></li>
+          <li><a class="header__menu-item list-menu__item link link--text focus-inset caption-large" href="{{ collections_url }}/layering-kits">Layering &amp; kits</a></li>
+        </ul>
+      </details>
+    </header-menu>
+  </li>
+{%- endif -%}
 <li><a class="{{ link_class }}" href="{{ gifting_url }}"{% if request.path == gifting_url %} aria-current="page"{% endif %}>Gifting</a></li>
 <li><a class="{{ link_class }}" href="{{ contact_url }}"{% if request.path == contact_url %} aria-current="page"{% endif %}>Contact</a></li>

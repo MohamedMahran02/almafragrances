@@ -742,6 +742,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `assets/alma-scent-finder-modal.js`, `layout/theme.liquid`, `assets/alma-theme.css`, and this README.
 - Checks: both scent-finder JavaScript assets pass syntax validation and Git whitespace validation passes. Theme Check was started but did not return within the local command window; rendered browser review remains a Shopify preview check after synchronization.
 
+### 2026-09-19 — Add predictive product previews and the Products hover menu
+
+- Request: show previews for typed product searches and show collection choices when Products is hovered in the navbar.
+- Changed: Shopify's native predictive-search request now asks for up to six matching products and collections, and its native Theme Editor setting now displays product prices in the preview. The desktop Products navigation entry is an accessible native disclosure menu that reveals Shop all, Perfumes, Lotions, Dukhoon, Solid charms and Layering & kits on hover; mobile retains the direct Products link.
+- Files: `assets/predictive-search.js`, `config/settings_data.json`, `snippets/alma-navigation-links.liquid`, `assets/alma-theme.css`, and this README.
+- Checks: predictive-search JavaScript passes syntax validation; settings JSON parses successfully after Shopify's generated-file header; Git whitespace validation passes. Theme Check was started but did not return within the local command window; rendered search and hover interaction remain a Shopify preview check after synchronization.
+
 ## Continuation prompt
 
 ```text

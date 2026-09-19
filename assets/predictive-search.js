@@ -180,7 +180,14 @@ class PredictiveSearch extends SearchForm {
 
     const searchDeferred = this.dispatchSearchUpdateEvent(searchTerm);
 
-    fetch(`${routes.predictive_search_url}?q=${encodeURIComponent(searchTerm)}&section_id=predictive-search`, {
+    const searchParams = new URLSearchParams({
+      q: searchTerm,
+      'resources[type]': 'product,collection',
+      'resources[limit]': '6',
+      section_id: 'predictive-search',
+    });
+
+    fetch(`${routes.predictive_search_url}?${searchParams.toString()}`, {
       signal: this.abortController.signal,
     })
       .then((response) => {

@@ -118,6 +118,9 @@ html { overflow-x: hidden; }
   .alma-theme .alma-header--home .header__heading .alma-logo { width: 5rem; }
   .alma-theme .alma-header--home .header__inline-menu { grid-area: nav; }
   .alma-theme .alma-header--home .header__icons { position: absolute; z-index: 2; top: .9rem; right: 5rem; }
+  .alma-products-menu .header__submenu { min-width: 20rem; background: #fff; }
+  .alma-products-menu:hover details > .header__submenu { opacity: 1; transform: translateY(0); z-index: 2; }
+  .alma-products-menu:hover details > summary .icon-caret { transform: rotate(180deg); }
 }
 
 @media (min-width: 990px) and (max-width: 1099px) {
