@@ -12,7 +12,7 @@
       const inlineContent = match[2].trim();
       const accordion = document.createElement('details');
       accordion.className = 'product__accordion accordion quick-add-hidden alma-product-description';
-      accordion.innerHTML = '<summary><div class="summary__title"><h2 class="h4 accordion__title inline-richtext"></h2></div><span class="alma-product-description__symbol">+</span></summary><div class="accordion__content rte"></div>';
+      accordion.innerHTML = '<summary><div class="summary__title"><h2 class="h4 accordion__title inline-richtext"></h2></div><span class="alma-product-description__symbol" aria-hidden="true"></span></summary><div class="accordion__content rte"></div>';
       accordion.querySelector('.accordion__title').textContent = name.toUpperCase();
       const target = accordion.querySelector('.accordion__content');
       if (inlineContent) {
