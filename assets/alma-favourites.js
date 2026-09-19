@@ -36,8 +36,18 @@ if (!customElements.get('alma-favourites')) {
         tab.tabIndex = i === index ? 0 : -1;
         this.panels[i].hidden = i !== index;
       });
+      const activePanel = this.panels[index];
+      activePanel.hidden = false;
+      activePanel.classList.remove('alma-favourites__panel--entering');
+      void activePanel.offsetWidth;
+      activePanel.classList.add('alma-favourites__panel--entering');
+      activePanel.addEventListener(
+        'animationend',
+        () => activePanel.classList.remove('alma-favourites__panel--entering'),
+        { once: true }
+      );
       requestAnimationFrame(() => {
-        const gallery = this.panels[index]?.querySelector('alma-scroll-gallery');
+        const gallery = activePanel?.querySelector('alma-scroll-gallery');
         if (typeof gallery?.refresh === 'function') {
           gallery.refresh();
           return;

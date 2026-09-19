@@ -48,7 +48,8 @@
         "solid": {
           "type": "collection",
           "settings": {
-            "collection": "alma-makhmaria-s-solid-perfume"
+            "collection": "alma-makhmaria-s-solid-perfume",
+            "label": "Alma Solid Perfumes"
           }
         },
         "lotions": {
@@ -87,6 +88,7 @@
       "settings": {
         "title": "The ALMA fragrance collection",
         "best_selling_collection": "best-sellers",
+        "best_selling_label": "Best Selling",
         "products_to_show": 24,
         "product_link_label": "Choose options"
       }

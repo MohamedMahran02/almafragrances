@@ -3,16 +3,22 @@
 <script src="{{ 'alma-scroll-gallery.js' | asset_url }}" defer="defer"></script>
 {%- liquid
   assign has_collections = false
-  assign best_selling_collection = section.settings.best_selling_collection
+  assign best_selling_handle = section.settings.best_selling_collection.handle | default: section.settings.best_selling_collection | default: 'best-sellers'
+  assign best_selling_collection = collections[best_selling_handle]
   if best_selling_collection == blank
     assign best_selling_collection = collections['best-sellers']
+  endif
+  if best_selling_collection == blank
+    assign best_selling_collection = collections['best-selling']
   endif
   if best_selling_collection != blank
     assign has_collections = true
   endif
   if has_collections == false
     for block in section.blocks
-      if block.settings.collection != blank
+      assign collection_handle = block.settings.collection.handle | default: block.settings.collection
+      assign selected_collection = collections[collection_handle]
+      if selected_collection != blank
         assign has_collections = true
         break
       endif
@@ -24,12 +30,13 @@
   <h2 id="AlmaFavourites-{{ section.id }}">{{ section.settings.title | escape }}</h2>
   <div class="alma-favourites__tabs" aria-labelledby="AlmaFavourites-{{ section.id }}">
     {%- if best_selling_collection != blank -%}
-      <a class="alma-favourites__tab" href="#AlmaPanel-{{ section.id }}-best-sellers" id="AlmaTab-{{ section.id }}-best-sellers">{{ best_selling_collection.title | escape }}</a>
+      <a class="alma-favourites__tab" href="#AlmaPanel-{{ section.id }}-best-sellers" id="AlmaTab-{{ section.id }}-best-sellers">{{ section.settings.best_selling_label | default: best_selling_collection.title | escape }}</a>
     {%- endif -%}
     {%- for block in section.blocks -%}
-      {%- assign tab_collection = block.settings.collection -%}
+      {%- assign tab_handle = block.settings.collection.handle | default: block.settings.collection -%}
+      {%- assign tab_collection = collections[tab_handle] -%}
       {%- if tab_collection != blank -%}
-        <a class="alma-favourites__tab" href="#AlmaPanel-{{ section.id }}-{{ block.id }}" id="AlmaTab-{{ section.id }}-{{ block.id }}" {{ block.shopify_attributes }}>{{ tab_collection.title | escape }}</a>
+        <a class="alma-favourites__tab" href="#AlmaPanel-{{ section.id }}-{{ block.id }}" id="AlmaTab-{{ section.id }}-{{ block.id }}" {{ block.shopify_attributes }}>{{ block.settings.label | default: tab_collection.title | escape }}</a>
       {%- endif -%}
     {%- endfor -%}
   </div>
@@ -58,7 +65,8 @@
   {%- endif -%}
 
   {%- for block in section.blocks -%}
-    {%- assign chosen_collection = block.settings.collection -%}
+    {%- assign chosen_handle = block.settings.collection.handle | default: block.settings.collection -%}
+    {%- assign chosen_collection = collections[chosen_handle] -%}
     {%- if chosen_collection != blank -%}
       {%- assign product_track_id = 'AlmaProducts-' | append: section.id | append: '-' | append: block.id -%}
       <div class="alma-favourites__panel" id="AlmaPanel-{{ section.id }}-{{ block.id }}" aria-labelledby="AlmaTab-{{ section.id }}-{{ block.id }}">
@@ -90,12 +98,14 @@
   "settings":[
     {"type":"text","id":"title","label":"Heading","default":"The ALMA fragrance collection"},
     {"type":"collection","id":"best_selling_collection","label":"Best selling collection","info":"This collection always appears as the first tab."},
+    {"type":"text","id":"best_selling_label","label":"Best selling tab label","default":"Best Selling"},
     {"type":"range","id":"products_to_show","label":"Products per tab","min":4,"max":24,"step":4,"default":24},
     {"type":"text","id":"product_link_label","label":"Product link label","default":"Choose options"}
   ],
   "max_blocks":12,
   "blocks":[{"type":"collection","name":"Collection tab","settings":[
-    {"type":"collection","id":"collection","label":"Collection"}
+    {"type":"collection","id":"collection","label":"Collection"},
+    {"type":"text","id":"label","label":"Tab label","info":"Leave blank to use the collection title."}
   ]}],
   "presets":[{"name":"ALMA product collection"}]
 }

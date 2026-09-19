@@ -819,6 +819,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `sections/alma-favourites.liquid` and this README.
 - Checks: Git whitespace validation passes; Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
 
+### 2026-09-20 - Resolve configured collection handles and animate tab changes
+
+- Request: show Best Selling first, show Alma Solid Perfumes, and make collection changes smoother.
+- Changed: normalize every collection setting through Shopify collections lookup before rendering its title or products. Best Selling resolves from its selected handle with both common handle fallbacks and is the first tab. The configured solid collection now displays the exact Alma Solid Perfumes tab label. Tab changes animate the incoming product rail with a 420 ms fade-and-rise transition.
+- Files: `sections/alma-favourites.liquid`, `assets/alma-favourites.js`, `assets/alma-theme.css`, `templates/index.json`, and this README.
+- Checks: JavaScript syntax, homepage JSON parsing, and Git whitespace validation pass; Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
+
 ## Continuation prompt
 
 ```text

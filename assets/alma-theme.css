@@ -178,6 +178,8 @@ html { overflow-x: hidden; }
 .alma-favourites__tab { padding: .7rem 0; border-bottom: 1px solid transparent; color: inherit; font-size: 1.3rem; text-decoration: none; }
 .alma-favourites__tab[aria-selected='true'], .alma-favourites__tab:hover { border-color: currentColor; }
 .alma-favourites__panel[hidden] { display: none; }
+.alma-favourites__panel--entering { animation: alma-favourites-panel-in .42s cubic-bezier(.22, .61, .36, 1); }
+@keyframes alma-favourites-panel-in { from { opacity: 0; transform: translateY(1.2rem); } to { opacity: 1; transform: translateY(0); } }
 .alma-scroll-gallery { position: relative; display: block; overflow: hidden; }
 .alma-favourites__grid { display: grid; grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: calc((100% - 4.8rem) / 4); gap: 1.6rem; overflow-x: auto; padding-bottom: 1rem; scroll-snap-type: x mandatory; scrollbar-width: none; }
 .alma-favourites__grid::-webkit-scrollbar { display: none; }
