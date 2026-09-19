@@ -119,7 +119,7 @@ html { overflow-x: hidden; }
   .alma-theme .alma-header--home { position: relative; height: 7.2rem; grid-template-areas: 'compact nav icons'; grid-template-rows: auto; row-gap: 0; padding-top: 1.1rem; padding-bottom: 1.1rem; }
   .alma-theme .alma-header--home .header__heading { position: absolute; z-index: 2; top: 1.1rem; left: 5rem; display: block; margin: 0; opacity: 1; pointer-events: auto; }
   .alma-theme .alma-header--home .header__heading .alma-logo { width: 5rem; }
-  .alma-theme .alma-header--home .header__inline-menu { grid-area: nav; align-self: center; transform: translateY(-.5rem); }
+  .alma-theme .alma-header--home .header__inline-menu { grid-area: nav; align-self: center; }
   .alma-theme .alma-header--home .header__icons { position: absolute; z-index: 2; top: .9rem; right: 5rem; }
   .alma-header-predictive-search { position: relative !important; display: block; width: clamp(24rem, 24vw, 32rem); }
   .alma-header-predictive-search .field { margin: 0; }

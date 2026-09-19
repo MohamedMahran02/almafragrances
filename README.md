@@ -777,6 +777,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `assets/alma-theme.css` and this README.
 - Checks: Git whitespace validation passes; Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
 
+### 2026-09-19 - Align header link centerline to utility controls
+
+- Request: align the horizontal navigation titles with the cart and other header controls.
+- Changed: removed the homepage-only upward translation from the navigation. The links now use the header grid centerline, matching the vertically centered search, AED selector, and cart utility controls.
+- Files: `assets/alma-theme.css` and this README.
+- Checks: Git whitespace validation passes; Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
+
 ## Continuation prompt
 
 ```text
