@@ -194,13 +194,10 @@
                   </p>
                 {%- when 'description' -%}
                   {%- if product.description != blank -%}
-                    <div
-                      class="product__description rte quick-add-hidden"
-                      data-alma-localized-description
-                      {{ block.shopify_attributes }}
-                    >
-                      {{ product.description }}
-                    </div>
+                    <details class="product__description alma-product-description quick-add-hidden" {{ block.shopify_attributes }}>
+                      <summary>DESCRIPTION</summary>
+                      <div class="alma-product-description__content rte" data-alma-localized-description>{{ product.description }}</div>
+                    </details>
                   {%- endif -%}
                 {%- when 'sku' -%}
                   <p
