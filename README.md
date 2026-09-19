@@ -721,6 +721,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `sections/header.liquid`, `snippets/alma-navigation-links.liquid`, `assets/alma-theme.css`, and this README.
 - Checks: Theme Check passes with 0 errors and the same 7 inherited Dawn warnings; targeted source search confirms the animated wordmark, account icon, Sale and Find Your Aura navigation entries are absent; Git whitespace validation passes. Rendered browser review remains a Shopify preview check after synchronization.
 
+### 2026-09-19 — Keep the header divider below the compact logo
+
+- Request: fix the navbar height because its divider line crosses the logo.
+- Changed: set the inner desktop homepage header to the same 72 px settled height as its wrapper. The divider now sits at the bottom edge of the navbar, below the compact logo.
+- Files: `assets/alma-theme.css` and this README.
+- Checks: Theme Check passes with 0 errors and the same 7 inherited Dawn warnings; Git whitespace validation passes. Rendered browser review remains a Shopify preview check after synchronization.
+
 ## Continuation prompt
 
 ```text

@@ -113,7 +113,7 @@ html { overflow-x: hidden; }
   .alma-theme .header--middle-left .header__heading { justify-self: start; }
   .alma-theme .header--middle-left .header__inline-menu { justify-self: center; }
   .alma-theme .header--middle-left .header__inline-menu > .list-menu--inline { justify-content: center; gap: .8rem; }
-  .alma-theme .alma-header--home { position: relative; grid-template-areas: 'compact nav icons'; grid-template-rows: auto; row-gap: 0; padding-top: 1.1rem; padding-bottom: 1.1rem; }
+  .alma-theme .alma-header--home { position: relative; height: 7.2rem; grid-template-areas: 'compact nav icons'; grid-template-rows: auto; row-gap: 0; padding-top: 1.1rem; padding-bottom: 1.1rem; }
   .alma-theme .alma-header--home .header__heading { position: absolute; z-index: 2; top: 1.1rem; left: 5rem; display: block; margin: 0; opacity: 1; pointer-events: auto; }
   .alma-theme .alma-header--home .header__heading .alma-logo { width: 5rem; }
   .alma-theme .alma-header--home .header__inline-menu { grid-area: nav; }
