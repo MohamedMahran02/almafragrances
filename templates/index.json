@@ -21,7 +21,7 @@
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop all",
+            "button_label_1": "Explore Alma Collection",
             "button_link_1": "/collections/all"
           }
         }

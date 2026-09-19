@@ -784,6 +784,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `assets/alma-theme.css` and this README.
 - Checks: Git whitespace validation passes; Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
 
+### 2026-09-20 - Rename the campaign call to action
+
+- Request: change the homepage hero button copy to Explore Alma Collection.
+- Changed: updated the Campaign button block label to Explore Alma Collection while retaining its editable Shopify setting and /collections/all destination.
+- Files: `templates/index.json` and this README.
+- Checks: index template JSON parsing and Git whitespace validation pass; Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
+
 ## Continuation prompt
 
 ```text
