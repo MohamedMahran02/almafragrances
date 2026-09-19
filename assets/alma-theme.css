@@ -121,7 +121,12 @@ html { overflow-x: hidden; }
   .alma-theme .alma-header--home .header__heading .alma-logo { width: 5rem; }
   .alma-theme .alma-header--home .header__inline-menu { grid-area: nav; align-self: center; }
   .alma-theme .alma-header--home .header__icons { position: absolute; z-index: 2; top: .9rem; right: 5rem; }
-  .alma-header-predictive-search { position: relative !important; display: block; width: clamp(24rem, 24vw, 32rem); }
+  .alma-header-search { position: relative; flex: 0 0 auto; width: 4.4rem; height: 4.4rem; transition: width .38s cubic-bezier(.22, .61, .36, 1); }
+  .alma-header-search.is-open { width: clamp(24rem, 24vw, 32rem); }
+  .alma-header-search__toggle { position: absolute; inset: 0; z-index: 2; width: 4.4rem; height: 4.4rem; padding: 0; border: 0; background: transparent; opacity: 1; transition: opacity .18s ease, transform .28s ease; }
+  .alma-header-search.is-open .alma-header-search__toggle { pointer-events: none; opacity: 0; transform: scale(.86); }
+  .alma-header-predictive-search { position: absolute !important; inset: 0; display: block; width: 100%; opacity: 0; pointer-events: none; transform: translateX(1rem); transition: opacity .2s ease .1s, transform .38s cubic-bezier(.22, .61, .36, 1); }
+  .alma-header-search.is-open .alma-header-predictive-search { opacity: 1; pointer-events: auto; transform: translateX(0); }
   .alma-header-predictive-search .field { margin: 0; }
   .alma-header-predictive-search .field__input { min-height: 4.4rem; padding-right: 4.8rem; border-radius: 0; background: #fff; font-size: 1.25rem; }
   .alma-header-predictive-search .field__label { font-size: 1.15rem; }
@@ -415,7 +420,7 @@ html { overflow-x: hidden; }
   .alma-theme .alma-header--home { position: relative; }
   .alma-theme .alma-header--home .header__heading { position: absolute; z-index: 2; grid-area: auto; top: .1rem; left: 6.4rem; display: block; margin: 0; opacity: 1; pointer-events: auto; }
   .alma-theme .alma-header--home .header__icons { transform: translateY(-.3rem); }
-  .alma-header-predictive-search { display: none; }
+  .alma-header-search, .alma-header-predictive-search { display: none; }
   .alma-theme .section-header.menu-open { position: fixed; inset: 0 0 auto; width: 100%; }
   .alma-favourites__grid { grid-auto-columns: calc((100% - 1.6rem) / 2); gap: 3rem 1.6rem; }
   .alma-editorial__content { padding-left: 5rem; padding-right: 5rem; }

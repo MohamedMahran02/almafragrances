@@ -3,62 +3,80 @@
 <script src="{{ 'alma-scroll-gallery.js' | asset_url }}" defer="defer"></script>
 {%- liquid
   assign has_products = false
-  for block in section.blocks
-    assign available_products = block.settings.products
-    if available_products == blank
-      assign available_products = block.settings.collection.products
-    endif
-    if available_products == blank and forloop.first
-      assign available_products = collections.all.products
-    endif
-    if available_products != blank
-      assign has_products = true
-      break
-    endif
-  endfor
+  assign best_selling_collection = section.settings.best_selling_collection
+  if best_selling_collection != blank and best_selling_collection.products != blank
+    assign has_products = true
+  endif
+  if has_products == false
+    for block in section.blocks
+      if block.settings.collection != blank and block.settings.collection.products != blank
+        assign has_products = true
+        break
+      endif
+    endfor
+  endif
 -%}
 {%- if has_products -%}
 <alma-favourites class="alma-favourites page-width">
   <h2 id="AlmaFavourites-{{ section.id }}">{{ section.settings.title | escape }}</h2>
   <div class="alma-favourites__tabs" aria-labelledby="AlmaFavourites-{{ section.id }}">
+    {%- if best_selling_collection != blank and best_selling_collection.products != blank -%}
+      <a class="alma-favourites__tab" href="#AlmaPanel-{{ section.id }}-best-sellers" id="AlmaTab-{{ section.id }}-best-sellers">{{ best_selling_collection.title | escape }}</a>
+    {%- endif -%}
     {%- for block in section.blocks -%}
-      {%- assign tab_products = block.settings.products | default: block.settings.collection.products -%}
-      {%- if forloop.first or tab_products != blank -%}
-      <a class="alma-favourites__tab" href="#AlmaPanel-{{ section.id }}-{{ block.id }}" id="AlmaTab-{{ section.id }}-{{ block.id }}" {{ block.shopify_attributes }}>{{ block.settings.label | escape }}</a>
+      {%- assign tab_collection = block.settings.collection -%}
+      {%- if tab_collection != blank and tab_collection.products != blank -%}
+        <a class="alma-favourites__tab" href="#AlmaPanel-{{ section.id }}-{{ block.id }}" id="AlmaTab-{{ section.id }}-{{ block.id }}" {{ block.shopify_attributes }}>{{ tab_collection.title | escape }}</a>
       {%- endif -%}
     {%- endfor -%}
   </div>
-  {%- for block in section.blocks -%}
-    {%- liquid
-      assign chosen_products = block.settings.products
-      if chosen_products == blank
-        assign chosen_products = block.settings.collection.products
-      endif
-      if chosen_products == blank and forloop.first
-        assign chosen_products = collections.all.products
-      endif
-    -%}
-    {%- if forloop.first or chosen_products != blank -%}
-    <div class="alma-favourites__panel" id="AlmaPanel-{{ section.id }}-{{ block.id }}" aria-labelledby="AlmaTab-{{ section.id }}-{{ block.id }}">
-      {%- assign product_track_id = 'AlmaProducts-' | append: section.id | append: '-' | append: block.id -%}
+
+  {%- if best_selling_collection != blank and best_selling_collection.products != blank -%}
+    {%- assign product_track_id = 'AlmaProducts-' | append: section.id | append: '-best-sellers' -%}
+    <div class="alma-favourites__panel" id="AlmaPanel-{{ section.id }}-best-sellers" aria-labelledby="AlmaTab-{{ section.id }}-best-sellers">
       <alma-scroll-gallery class="alma-scroll-gallery">
-      <div class="alma-favourites__grid" id="{{ product_track_id }}" data-alma-scroll-track role="region" aria-label="{{ block.settings.label | escape }} products" tabindex="0">
-        {%- for product in chosen_products limit: section.settings.products_to_show -%}
-          {%- assign packshot_asset = 'alma-packshot-' | append: product.handle | append: '.webp' -%}
-          <article class="alma-product">
-            <a class="alma-product__image-link" href="{{ product.url }}">
-              <img class="alma-product__image" src="{{ packshot_asset | asset_url }}" width="1000" height="1000" loading="lazy" alt="{{ product.title | escape }} product packshot">
-            </a>
-            <h3><a href="{{ product.url }}">{{ product.title | escape }}</a></h3>
-            {%- if product.type != blank -%}<p class="alma-product__type">{{ product.type | escape }}</p>{%- endif -%}
-            {% render 'price', product: product %}
-            <a class="alma-text-link" href="{{ product.url }}">{{ section.settings.product_link_label | escape }}<span class="visually-hidden"> — {{ product.title | escape }}</span></a>
-          </article>
-        {%- endfor -%}
-      </div>
-      {% render 'alma-scroll-controls', track_id: product_track_id, label: 'Product carousel controls', item_name: 'products' %}
+        <div class="alma-favourites__grid" id="{{ product_track_id }}" data-alma-scroll-track role="region" aria-label="{{ best_selling_collection.title | escape }} products" tabindex="0">
+          {%- for product in best_selling_collection.products limit: section.settings.products_to_show -%}
+            {%- assign packshot_asset = 'alma-packshot-' | append: product.handle | append: '.webp' -%}
+            <article class="alma-product">
+              <a class="alma-product__image-link" href="{{ product.url }}">
+                <img class="alma-product__image" src="{{ packshot_asset | asset_url }}" width="1000" height="1000" loading="lazy" alt="{{ product.title | escape }} product packshot">
+              </a>
+              <h3><a href="{{ product.url }}">{{ product.title | escape }}</a></h3>
+              {%- if product.type != blank -%}<p class="alma-product__type">{{ product.type | escape }}</p>{%- endif -%}
+              {% render 'price', product: product %}
+              <a class="alma-text-link" href="{{ product.url }}">{{ section.settings.product_link_label | escape }}<span class="visually-hidden"> - {{ product.title | escape }}</span></a>
+            </article>
+          {%- endfor -%}
+        </div>
+        {% render 'alma-scroll-controls', track_id: product_track_id, label: 'Product carousel controls', item_name: 'products' %}
       </alma-scroll-gallery>
     </div>
+  {%- endif -%}
+
+  {%- for block in section.blocks -%}
+    {%- assign chosen_collection = block.settings.collection -%}
+    {%- if chosen_collection != blank and chosen_collection.products != blank -%}
+      {%- assign product_track_id = 'AlmaProducts-' | append: section.id | append: '-' | append: block.id -%}
+      <div class="alma-favourites__panel" id="AlmaPanel-{{ section.id }}-{{ block.id }}" aria-labelledby="AlmaTab-{{ section.id }}-{{ block.id }}">
+        <alma-scroll-gallery class="alma-scroll-gallery">
+          <div class="alma-favourites__grid" id="{{ product_track_id }}" data-alma-scroll-track role="region" aria-label="{{ chosen_collection.title | escape }} products" tabindex="0">
+            {%- for product in chosen_collection.products limit: section.settings.products_to_show -%}
+              {%- assign packshot_asset = 'alma-packshot-' | append: product.handle | append: '.webp' -%}
+              <article class="alma-product">
+                <a class="alma-product__image-link" href="{{ product.url }}">
+                  <img class="alma-product__image" src="{{ packshot_asset | asset_url }}" width="1000" height="1000" loading="lazy" alt="{{ product.title | escape }} product packshot">
+                </a>
+                <h3><a href="{{ product.url }}">{{ product.title | escape }}</a></h3>
+                {%- if product.type != blank -%}<p class="alma-product__type">{{ product.type | escape }}</p>{%- endif -%}
+                {% render 'price', product: product %}
+                <a class="alma-text-link" href="{{ product.url }}">{{ section.settings.product_link_label | escape }}<span class="visually-hidden"> - {{ product.title | escape }}</span></a>
+              </article>
+            {%- endfor -%}
+          </div>
+          {% render 'alma-scroll-controls', track_id: product_track_id, label: 'Product carousel controls', item_name: 'products' %}
+        </alma-scroll-gallery>
+      </div>
     {%- endif -%}
   {%- endfor -%}
 </alma-favourites>
@@ -68,15 +86,14 @@
   "name":"ALMA product collection",
   "settings":[
     {"type":"text","id":"title","label":"Heading","default":"The ALMA fragrance collection"},
+    {"type":"collection","id":"best_selling_collection","label":"Best selling collection","info":"This collection always appears as the first tab."},
     {"type":"range","id":"products_to_show","label":"Products per tab","min":4,"max":24,"step":4,"default":24},
     {"type":"text","id":"product_link_label","label":"Product link label","default":"Choose options"}
   ],
-  "max_blocks":6,
-  "blocks":[{"type":"collection","name":"Product tab","settings":[
-    {"type":"text","id":"label","label":"Tab label","default":"All"},
-    {"type":"collection","id":"collection","label":"Collection"},
-    {"type":"product_list","id":"products","label":"Selected products","limit":24,"info":"Optional. Overrides the collection. Product availability and prices come from Shopify."}
+  "max_blocks":12,
+  "blocks":[{"type":"collection","name":"Collection tab","settings":[
+    {"type":"collection","id":"collection","label":"Collection"}
   ]}],
-  "presets":[{"name":"ALMA product collection","blocks":[{"type":"collection","settings":{"label":"All fragrances"}}]}]
+  "presets":[{"name":"ALMA product collection"}]
 }
 {% endschema %}

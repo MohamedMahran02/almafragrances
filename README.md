@@ -798,6 +798,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `templates/index.json` and this README.
 - Checks: index template JSON parsing and Git whitespace validation pass. Theme Check was started twice but did not return in the local command window; GitHub push verification is pending.
 
+### 2026-09-20 - Add animated search and collection-driven fragrance tabs
+
+- Request: return desktop search to an icon that smoothly opens a search field, and replace the All fragrances, Spray Perfumes tabs with configurable Shopify collections led by Best Sellers.
+- Changed: desktop search now starts as an icon, expands into Shopify native predictive search on activation, focuses the input after the motion, and closes with Escape or an outside click. Mobile retains Dawn search. The ALMA fragrance collection now uses the selected Best Sellers collection as its first tab, followed by collection-only Theme Editor blocks. The homepage initially selects Best Sellers, Perfumes, Solid Perfumes, Lotions, Dukhoon, Solid Charms, and Layering & Kits. Each tab derives its label and products from its selected Shopify collection; up to 12 subsequent collection tabs can be added in the Theme Editor.
+- Files: `sections/header.liquid`, `assets/alma-header-search.js`, `layout/theme.liquid`, `assets/alma-theme.css`, `sections/alma-favourites.liquid`, `templates/index.json`, and this README.
+- Checks: new header-search and existing tabs JavaScript pass syntax validation; homepage JSON parses successfully; Git whitespace validation passes; Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
+
 ## Continuation prompt
 
 ```text

@@ -39,54 +39,54 @@
     "featured_collection": {
       "type": "alma-favourites",
       "blocks": {
-        "all": {
+        "perfumes": {
           "type": "collection",
           "settings": {
-            "label": "All fragrances",
-            "collection": "all",
-            "products": [
-              "alma-hair-and-body-perfume",
-              "alma-oud-intense-perfume",
-              "alma-leather-luxe-perfume",
-              "lolo-vanilla-perfume",
-              "luma-perfume",
-              "alma-perfumes-box-of-minis",
-              "alma-oud",
-              "alma-arabia",
-              "alma-vanilla-bloom",
-              "alma-sandalwood",
-              "alma-leather",
-              "lolo-vanilla",
-              "almaxeman",
-              "alma-refill-pouches",
-              "alma-box-of-minis"
-            ]
-          }
-        },
-        "spray": {
-          "type": "collection",
-          "settings": {
-            "label": "Spray Perfumes",
-            "collection": "alma-perfumes",
-            "products": []
+            "collection": "alma-perfumes"
           }
         },
         "solid": {
           "type": "collection",
           "settings": {
-            "label": "Solid Perfumes",
-            "collection": "alma-solids-مخمريات",
-            "products": []
+            "collection": "alma-solids-مخمريات"
+          }
+        },
+        "lotions": {
+          "type": "collection",
+          "settings": {
+            "collection": "alma-lotions"
+          }
+        },
+        "dokhoon": {
+          "type": "collection",
+          "settings": {
+            "collection": "alma-dokhon"
+          }
+        },
+        "charms": {
+          "type": "collection",
+          "settings": {
+            "collection": "alma-solid-charms"
+          }
+        },
+        "layering": {
+          "type": "collection",
+          "settings": {
+            "collection": "layering-kits"
           }
         }
       },
       "block_order": [
-        "all",
-        "spray",
-        "solid"
+        "perfumes",
+        "solid",
+        "lotions",
+        "dokhoon",
+        "charms",
+        "layering"
       ],
       "settings": {
         "title": "The ALMA fragrance collection",
+        "best_selling_collection": "best-sellers",
         "products_to_show": 24,
         "product_link_label": "Choose options"
       }
