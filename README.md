@@ -693,6 +693,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `assets/alma-scent-finder.js` and this README.
 - Checks: scent-finder JavaScript passes syntax validation; Theme Check passes with 0 errors and the same 7 inherited Dawn warnings; Git whitespace validation passes. Rendered browser interaction remains a Shopify preview check after synchronization.
 
+### 2026-09-19 — Remove white image frames
+
+- Request: remove the white borders visible around most images.
+- Changed: removed Dawn's global media border through the native Theme Editor media-border setting and the ALMA override. Wardrobe and scent-finder product imagery now fills its media frame without the earlier internal padding or white background. Image aspect ratios, source images, responsive layouts and product links remain unchanged.
+- Files: `assets/alma-theme.css`, `config/settings_data.json`, and this README.
+- Checks: Theme Check passes with 0 errors and the same 7 inherited Dawn warnings; settings JSON parses successfully after Shopify's generated-file header; Git whitespace validation passes. Rendered browser review remains a Shopify preview check after synchronization.
+
 ## Continuation prompt
 
 ```text

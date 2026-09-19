@@ -51,8 +51,8 @@ html { overflow-x: hidden; }
 .alma-scent-finder__results { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(1.8rem, 2.4vw, 3.2rem); }
 .alma-scent-match { min-width: 0; text-align: center; }
 .alma-scent-match[hidden] { display: none; }
-.alma-scent-match__image-link { display: block; aspect-ratio: 1 / 1; margin-bottom: 2rem; overflow: hidden; background: #fff; }
-.alma-scent-match__image { width: 100%; height: 100%; object-fit: contain; transition: transform .45s ease; }
+.alma-scent-match__image-link { display: block; aspect-ratio: 1 / 1; margin-bottom: 2rem; overflow: hidden; background: #f4f2ed; }
+.alma-scent-match__image { width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
 .alma-scent-match__image-link:hover .alma-scent-match__image { transform: scale(1.025); }
 .alma-scent-match__reason { min-height: 1.6rem; margin: 0 0 .8rem; color: #696762; font-size: 1.1rem; letter-spacing: .08em; line-height: 1.4; text-transform: uppercase; }
 .alma-scent-match h3 { margin: 0 0 .6rem; font-family: var(--font-heading-family); font-size: 1.8rem; font-weight: 400; line-height: 1.25; }
@@ -92,6 +92,7 @@ html { overflow-x: hidden; }
   color: var(--alma-ink);
 }
 .alma-theme h1, .alma-theme h2, .alma-theme h3 { letter-spacing: -.025em; }
+.alma-theme .media { border: 0; }
 .alma-theme .header-wrapper { background: #fff; }
 .alma-theme .alma-header-wrapper--home { height: 13.25rem; overflow: visible; border-bottom: 0; background: transparent; }
 .alma-theme .alma-header-wrapper--home .alma-header--home { background: #fff; box-shadow: 0 1px 0 var(--alma-line); }
@@ -218,7 +219,7 @@ html { overflow-x: hidden; }
 .alma-wardrobe__grid::-webkit-scrollbar { display: none; }
 .alma-wardrobe__card, .alma-wardrobe__card:first-child, .alma-wardrobe__card:nth-child(5) { grid-column: auto; display: grid; gap: 1.5rem; color: inherit; text-align: center; text-decoration: none; scroll-snap-align: start; }
 .alma-wardrobe__media { display: block; aspect-ratio: 4 / 5; overflow: hidden; background: #f4f2ed; }
-.alma-wardrobe__image, .alma-wardrobe__card:first-child .alma-wardrobe__image, .alma-wardrobe__card:nth-child(5) .alma-wardrobe__image { box-sizing: border-box; display: block; width: 100%; height: 100%; padding: 2.4rem; object-fit: contain; transition: transform .5s ease; }
+.alma-wardrobe__image, .alma-wardrobe__card:first-child .alma-wardrobe__image, .alma-wardrobe__card:nth-child(5) .alma-wardrobe__image { box-sizing: border-box; display: block; width: 100%; height: 100%; padding: 0; object-fit: cover; transition: transform .5s ease; }
 .alma-wardrobe__card:hover .alma-wardrobe__image { transform: scale(1.015); }
 .alma-wardrobe__label { justify-self: center; display: inline-grid; grid-template-columns: 1.7rem minmax(0, auto) 1.7rem; align-items: center; column-gap: .4rem; padding: 0 0 .4rem; font-family: var(--font-heading-family); font-size: 1.6rem; line-height: 1.8rem; text-decoration: none; }
 .alma-wardrobe__label::before, .alma-wardrobe__label::after { content: ''; width: 1.7rem; height: 1.6rem; background-image: var(--alma-cta-dot); background-position: center; background-repeat: no-repeat; background-size: 1.7rem 1.6rem; }
@@ -469,7 +470,7 @@ html { overflow-x: hidden; }
   .alma-wardrobe__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-flow: row; grid-auto-columns: auto; gap: 5.5rem .8rem; overflow: visible; padding-bottom: 0; scroll-snap-type: none; }
   .alma-wardrobe__card, .alma-wardrobe__card:first-child, .alma-wardrobe__card:nth-child(5) { align-content: start; gap: 1.8rem; scroll-snap-align: none; }
   .alma-wardrobe__media { aspect-ratio: 1; }
-  .alma-wardrobe__image, .alma-wardrobe__card:first-child .alma-wardrobe__image, .alma-wardrobe__card:nth-child(5) .alma-wardrobe__image { padding: .8rem; }
+  .alma-wardrobe__image, .alma-wardrobe__card:first-child .alma-wardrobe__image, .alma-wardrobe__card:nth-child(5) .alma-wardrobe__image { padding: 0; }
   .alma-wardrobe__label { max-width: 100%; border-bottom: 0; font-size: 1.55rem; }
   .alma-wardrobe__label-text { max-width: 10ch; }
   .alma-wardrobe .alma-scroll-gallery__footer { display: none; }
