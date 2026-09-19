@@ -12,23 +12,24 @@
   };
 
   document.addEventListener('click', (event) => {
-    const opener = event.target.closest('[data-alma-shipping-policy-open]');
+    const opener = event.target.closest('[data-alma-shipping-policy-open], [data-alma-terms-of-service-open]');
     if (opener) {
-      const dialog = document.getElementById(opener.dataset.almaShippingPolicyOpen);
+      const dialogId = opener.dataset.almaShippingPolicyOpen || opener.dataset.almaTermsOfServiceOpen;
+      const dialog = document.getElementById(dialogId);
       if (dialog && !dialog.open) dialog.showModal();
       return;
     }
 
-    const dialog = event.target.closest('.alma-shipping-policy');
+    const dialog = event.target.closest('.alma-shipping-policy, .alma-terms-of-service');
     if (!dialog) return;
 
-    if (event.target.closest('[data-alma-shipping-policy-close]') || event.target === dialog) {
+    if (event.target.closest('[data-alma-shipping-policy-close], [data-alma-terms-of-service-close]') || event.target === dialog) {
       closeDialog(dialog);
     }
   });
 
   document.addEventListener('cancel', (event) => {
-    const dialog = event.target.closest?.('.alma-shipping-policy');
+    const dialog = event.target.closest?.('.alma-shipping-policy, .alma-terms-of-service');
     if (!dialog) return;
 
     event.preventDefault();

@@ -75,7 +75,7 @@
       <h3>Legal</h3>
       <ul class="list-unstyled" role="list">
         <li><a href="/policies/privacy-policy">Privacy policy</a></li>
-        <li><a href="/policies/terms-of-service">Terms of service</a></li>
+        <li><button type="button" class="alma-footer__policy-trigger" data-alma-terms-of-service-open="AlmaTermsOfService-{{ section.id }}" aria-haspopup="dialog">Terms of service</button></li>
       </ul>
     </div>
     </nav>
@@ -121,6 +121,8 @@
     <p>Free shipping is available to UAE. For all other GCC countries, a shipping fee of 40 AED applies</p>
   </div>
 </dialog>
+
+{% render 'alma-terms-of-service', section_id: section.id %}
 
 {% schema %}
 {

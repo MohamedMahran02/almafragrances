@@ -658,6 +658,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `sections/footer.liquid`, `assets/alma-theme.css`, `assets/alma-shipping-policy.js`, `layout/theme.liquid`, and this README.
 - Checks: JavaScript syntax, Theme Check, static preview build and Git whitespace validation pass. Theme Check reports 7 pre-existing Dawn warnings across 6 files and no errors. The generated homepage includes the trigger, dialog, exact message, shipped script and styling. The in-app Browser runtime is unavailable in this session, so rendered desktop/mobile click-through verification remains a Shopify preview check after push.
 
+### 2026-09-19 — Add the expandable Terms of Service dialog
+
+- Request: replace the footer Terms of service destination with a larger popup using collapsible sections for the supplied Terms of Service content.
+- Changed: the Legal footer link now opens a larger, scrollable ALMA dialog. It uses the shared overlay, close, Escape, and outside-click behavior from the Shipping policy dialog, then presents the overview and all 20 numbered terms in native expandable sections. The ALMA wine, ivory, Cormorant Garamond, Jost, and reduced-motion treatments are retained.
+- Files: `sections/footer.liquid`, `snippets/alma-terms-of-service.liquid`, `assets/alma-shipping-policy.js`, `assets/alma-theme.css`, and this README.
+- Checks: JavaScript syntax, Theme Check, static preview build and Git whitespace validation pass. Theme Check reports 7 pre-existing Dawn warnings across 6 files and no errors. The generated homepage contains the Terms trigger, the dialog, and 24 native expandable sections including the overview and all 20 numbered terms. Rendered browser interaction verification remains unavailable in this session.
+
 ## Continuation prompt
 
 ```text

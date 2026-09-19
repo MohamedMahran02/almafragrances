@@ -291,6 +291,27 @@ html { overflow-x: hidden; }
 @keyframes alma-shipping-policy-backdrop-in { from { opacity: 0; } to { opacity: 1; } }
 @keyframes alma-shipping-policy-backdrop-out { from { opacity: 1; } to { opacity: 0; } }
 
+.alma-terms-of-service { width: min(92rem, calc(100% - 3.2rem)); max-width: none; max-height: min(82rem, calc(100dvh - 3.2rem)); margin: auto; padding: 0; border: 0; background: transparent; color: var(--alma-ink); overflow: visible; }
+.alma-terms-of-service::backdrop { background: rgba(29, 0, 4, .62); backdrop-filter: blur(.35rem); animation: alma-shipping-policy-backdrop-in .2s ease-out both; }
+.alma-terms-of-service__panel { position: relative; max-height: inherit; padding: clamp(3.2rem, 6vw, 5.6rem); border: 1px solid var(--alma-ink); background: #f7f5f1; box-shadow: 0 2rem 6rem rgba(0, 0, 0, .22); overflow-y: auto; animation: alma-shipping-policy-in .24s cubic-bezier(.2, .75, .25, 1) both; }
+.alma-terms-of-service__close { position: sticky; z-index: 2; top: 0; float: right; display: grid; width: 3.8rem; height: 3.8rem; margin: -1.8rem -1.8rem 0 1.6rem; padding: 0; border: 1px solid #b5b2ab; border-radius: 50%; background: #f7f5f1; color: var(--alma-ink); place-items: center; cursor: pointer; }
+.alma-terms-of-service__close:hover { border-color: var(--alma-ink); }
+.alma-terms-of-service__close:focus-visible { outline: 2px solid var(--alma-ink); outline-offset: .3rem; }
+.alma-terms-of-service__close svg { width: 1.4rem; height: 1.4rem; }
+.alma-terms-of-service__eyebrow { margin: 0 0 1.4rem; color: #696762; font-family: var(--font-body-family); font-size: 1.05rem; font-weight: 700; letter-spacing: .16em; line-height: 1.3; text-transform: uppercase; }
+.alma-terms-of-service h2 { max-width: 13ch; margin: 0 0 3rem; font-family: var(--font-heading-family); font-size: clamp(4rem, 7vw, 6.4rem); font-weight: 400; letter-spacing: -.04em; line-height: .9; }
+.alma-terms-of-service__sections { border-top: 1px solid #cbc8c0; }
+.alma-terms-of-service details { border-bottom: 1px solid #cbc8c0; }
+.alma-terms-of-service summary { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: 2rem 0; color: var(--alma-ink); font-family: var(--font-heading-family); font-size: clamp(2rem, 3vw, 2.8rem); line-height: 1.05; list-style: none; cursor: pointer; }
+.alma-terms-of-service summary::-webkit-details-marker { display: none; }
+.alma-terms-of-service summary::after { content: '+'; flex: 0 0 auto; font-family: var(--font-body-family); font-size: 2.4rem; font-weight: 300; line-height: 1; }
+.alma-terms-of-service details[open] summary::after { content: '−'; }
+.alma-terms-of-service__content { max-width: 74rem; padding: 0 0 2.6rem; color: #4b4945; font-family: var(--font-body-family); font-size: 1.35rem; line-height: 1.7; }
+.alma-terms-of-service__content p { margin: 0 0 1.6rem; }
+.alma-terms-of-service__content p:last-child { margin-bottom: 0; }
+.alma-terms-of-service[data-closing]::backdrop { animation: alma-shipping-policy-backdrop-out .18s ease-in both; }
+.alma-terms-of-service[data-closing] .alma-terms-of-service__panel { animation: alma-shipping-policy-out .18s ease-in both; }
+
 /* Reference CTA system: boxed conversion actions and dotted, underlined text actions. */
 .alma-theme .button:not(.button--tertiary):not(.alma-campaign__button):not(.product__xr-button):not(.skip-to-content-link),
 .alma-theme input.button,
@@ -358,7 +379,11 @@ html { overflow-x: hidden; }
   .alma-shipping-policy::backdrop,
   .alma-shipping-policy__panel,
   .alma-shipping-policy[data-closing]::backdrop,
-  .alma-shipping-policy[data-closing] .alma-shipping-policy__panel { animation-duration: .01ms; }
+  .alma-shipping-policy[data-closing] .alma-shipping-policy__panel,
+  .alma-terms-of-service::backdrop,
+  .alma-terms-of-service__panel,
+  .alma-terms-of-service[data-closing]::backdrop,
+  .alma-terms-of-service[data-closing] .alma-terms-of-service__panel { animation-duration: .01ms; }
 }
 @media (max-width: 989px) {
   .alma-theme .alma-header-wrapper--home { height: 6rem; }
