@@ -770,6 +770,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `assets/alma-theme.css` and this README.
 - Checks: Git whitespace validation passes; Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
 
+### 2026-09-19 - Align navigation links and widen search previews
+
+- Request: restore the header links to one horizontal navigation row, vertically align them with the search input, and widen only the predictive-search preview panel.
+- Changed: restored the desktop header navigation to Dawn grid flow so Products, Gifting, and Contact remain horizontal. Homepage links now shift 5 px upward to share the search field centerline. The search input remains 240-320 px while the results panel can now expand to 520 px.
+- Files: `assets/alma-theme.css` and this README.
+- Checks: Git whitespace validation passes; Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
+
 ## Continuation prompt
 
 ```text
