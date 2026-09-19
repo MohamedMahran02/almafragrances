@@ -21,7 +21,7 @@
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Explore Alma Collection",
+            "button_label_1": "Shop all",
             "button_link_1": "/collections/all"
           }
         }
@@ -32,7 +32,7 @@
       ],
       "settings": {
         "text": "<p>Lotion, solid perfume and spray perfume come together on the skin. Layer each texture, one after another, to create a lasting fragrance ritual that feels entirely your own.</p>",
-        "link_label": "Discover all fragrances",
+        "link_label": "Explore Alma Collection",
         "link": "/collections/all"
       }
     },

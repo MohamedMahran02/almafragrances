@@ -791,6 +791,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `templates/index.json` and this README.
 - Checks: index template JSON parsing and Git whitespace validation pass; Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
 
+### 2026-09-20 - Rename the campaign text link
+
+- Request: restore the previous hero button copy and apply Explore Alma Collection to the Discover all fragrances text link.
+- Changed: restored the Shopify Campaign button block label to Shop all. Renamed the separate Campaign text link from Discover all fragrances to Explore Alma Collection; both controls continue to point to /collections/all.
+- Files: `templates/index.json` and this README.
+- Checks: index template JSON parsing and Git whitespace validation pass. Theme Check was started twice but did not return in the local command window; GitHub push verification is pending.
+
 ## Continuation prompt
 
 ```text
