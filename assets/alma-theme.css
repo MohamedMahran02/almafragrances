@@ -190,11 +190,7 @@ html { overflow-x: hidden; }
 .alma-product h3 a { color: inherit; text-decoration: none; }
 .alma-product__type { margin: 0 0 .6rem; color: var(--alma-muted); font-size: 1.2rem; }
 .alma-product .price { margin: .8rem 0 1rem; font-size: 1.3rem; }
-.alma-scroll-gallery__footer { display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin-top: 2rem; }
-.alma-favourites .alma-scroll-gallery__footer { display: block; width: 100vw; margin-left: calc(50% - 50vw); }
-.alma-favourites .alma-scroll-gallery__progress { width: 100%; }
-.alma-scroll-gallery__progress { position: relative; display: block; width: min(24rem, 45vw); height: 1px; overflow: hidden; background: var(--alma-line); }
-.alma-scroll-gallery__progress-value { position: absolute; inset: 0; background: var(--alma-ink); transform: scaleX(var(--alma-scroll-progress, .25)); transform-origin: left center; transition: transform .2s ease; }
+.alma-scroll-gallery__footer { display: flex; align-items: center; justify-content: flex-end; gap: 2rem; margin-top: 2rem; }
 .alma-scroll-gallery__controls { position: absolute; z-index: 2; top: 18rem; right: 1.2rem; left: 1.2rem; display: flex; justify-content: space-between; pointer-events: none; }
 .alma-scroll-gallery__button { box-sizing: border-box; display: grid; width: 4rem; height: 4rem; padding: 0; place-items: center; border: 1px solid var(--alma-ink); border-radius: 999px; background: transparent; color: var(--alma-ink); cursor: pointer; pointer-events: auto; transition: transform .18s ease; }
 .alma-scroll-gallery__button svg { display: block; fill: none; stroke: currentColor; stroke-width: 1.35; stroke-linecap: round; stroke-linejoin: round; }
@@ -424,7 +420,8 @@ html { overflow-x: hidden; }
   .alma-theme .alma-header--home { position: relative; }
   .alma-theme .alma-header--home .header__heading { position: absolute; z-index: 2; grid-area: auto; top: .1rem; left: 6.4rem; display: block; margin: 0; opacity: 1; pointer-events: auto; }
   .alma-theme .alma-header--home .header__icons { transform: translateY(-.3rem); }
-  .alma-header-search, .alma-header-predictive-search { display: none; }
+  .alma-header-search { display: none; }
+  .alma-theme .header__icons > .header__search { display: inline-flex !important; }
   .alma-theme .section-header.menu-open { position: fixed; inset: 0 0 auto; width: 100%; }
   .alma-favourites__grid { grid-auto-columns: calc((100% - 1.6rem) / 2); gap: 3rem 1.6rem; }
   .alma-editorial__content { padding-left: 5rem; padding-right: 5rem; }
@@ -446,7 +443,9 @@ html { overflow-x: hidden; }
   .alma-ritual .alma-cta--text { position: relative; top: 1.6rem; }
   .alma-favourites { padding: 5.5rem 1.5rem 6rem; }
   .alma-favourites h2 { margin-bottom: 2.2rem; }
-  .alma-favourites__tabs { gap: .6rem 2rem; margin-bottom: 2.5rem; }
+  .alma-favourites__tabs { justify-content: flex-start; flex-wrap: nowrap; gap: .6rem 2rem; width: calc(100% + 3rem); margin-bottom: 2.5rem; margin-left: -1.5rem; padding: 0 1.5rem .8rem; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x proximity; scrollbar-width: none; }
+  .alma-favourites__tabs::-webkit-scrollbar { display: none; }
+  .alma-favourites__tab { flex: 0 0 auto; white-space: nowrap; scroll-snap-align: start; }
   .alma-favourites__grid { grid-auto-columns: 82vw; gap: 1.5rem; padding-right: calc((100% - 82vw) / 2); padding-left: calc((100% - 82vw) / 2); scroll-padding-inline: calc((100% - 82vw) / 2); }
   .alma-favourites .alma-scroll-gallery__controls { display: none; }
   .alma-product { scroll-snap-align: center; }
@@ -793,9 +792,24 @@ html { overflow-x: hidden; }
 @media (max-width: 749px) {
   .alma-scent-finder-launcher { min-height: 13.5rem; padding: 1.4rem 1rem; font-size: .95rem; }
   .alma-scent-finder-modal { width: calc(100% - 1.6rem); max-height: calc(100dvh - 1.6rem); }
-  .alma-scent-finder-modal[data-has-results] { height: calc(100dvh - 1.6rem); }
-  .alma-scent-finder-modal .alma-scent-finder { padding: 6.8rem 0 5rem; }
+  .alma-scent-finder-modal[data-has-results] { height: auto; max-height: calc(100dvh - 1.6rem); }
+  .alma-scent-finder-modal[data-has-results] .alma-scent-finder-modal__panel,
+  .alma-scent-finder-modal[data-has-results] .alma-scent-finder-modal__scroll { height: auto; }
+  .alma-scent-finder-modal__scroll { max-height: none; overflow-y: visible; }
+  .alma-scent-finder-modal .alma-scent-finder { padding: 5rem 0 2.2rem; }
+  .alma-scent-finder-modal .alma-scent-finder__heading h2 { font-size: 3rem; }
+  .alma-scent-finder-modal .alma-scent-finder__notes { margin-top: 2.2rem; }
+  .alma-scent-finder-modal .alma-scent-finder__results-wrap { padding-top: 2.4rem; }
+  .alma-scent-finder-modal .alma-scent-match { flex: 0 0 46vw; }
+  .alma-scent-finder-modal .alma-scent-match__image-link { margin-bottom: 1rem; }
+  .alma-scent-finder-modal .alma-scent-match h3 { margin-bottom: .3rem; font-size: 1.55rem; }
+  .alma-scent-finder-modal .alma-scent-match__reason { min-height: 0; margin-bottom: .5rem; font-size: .9rem; }
+  .alma-scent-finder-modal .alma-scent-match .price { margin-bottom: .6rem; font-size: 1.1rem; }
   .alma-scent-finder-modal__close { top: .9rem; right: .9rem; }
+  .alma-editorial--ritual-motion { height: auto; }
+  .alma-editorial--ritual-motion .alma-editorial__media,
+  .alma-editorial--ritual-motion .alma-editorial__image { height: 50rem; min-height: 0; }
+  .alma-editorial--ritual-motion .alma-editorial__content { overflow: visible; }
 }
 @media (prefers-reduced-motion: reduce) {
   .alma-scent-finder-modal::backdrop, .alma-scent-finder-modal__panel { animation: none; }

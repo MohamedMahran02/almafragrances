@@ -833,6 +833,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `templates/index.json`, `assets/alma-theme.css`, and this README.
 - Checks: homepage JSON parsing and Git whitespace validation pass; Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
 
+### 2026-09-20 - Repair mobile search, collection tabs, layering, and scent finder
+
+- Request: remove the product-scroll progress line, fix mobile search and mobile collection tabs, repair the mobile Layering section, and fit the Find Your Aura result dialog without an inner scrollbar.
+- Changed: removed custom rail progress markup while retaining desktop carousel buttons. Mobile now explicitly uses Dawn native search, and collection tabs remain in one horizontal scroll row. The mobile ritual-layering layout overrides the desktop fixed-height and inner-scroll rules. The mobile scent finder uses a compact auto-height result dialog, smaller horizontal cards, and no inner scroll container after selecting a scent.
+- Files: `snippets/alma-scroll-controls.liquid`, `assets/alma-theme.css`, and this README.
+- Checks: Git whitespace validation passes; Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
+
 ## Continuation prompt
 
 ```text
