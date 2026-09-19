@@ -4,6 +4,7 @@
     const content = description.querySelector('.alma-product-description__content');
     if (!content || content.dataset.accordionsReady) return;
     content.dataset.accordionsReady = 'true';
+    let insertAfter = description;
     [...content.children].forEach((heading) => {
       const match = heading.textContent.trim().match(/^(notes|size)\s*:?\s*(.*)$/i);
       if (!match || !sectionNames.has(match[1].toLowerCase())) return;
@@ -25,7 +26,9 @@
         target.append(node);
         node = next;
       }
-      heading.replaceWith(accordion);
+      heading.remove();
+      insertAfter.after(accordion);
+      insertAfter = accordion;
     });
   });
 })();
