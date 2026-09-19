@@ -23,18 +23,22 @@ if (!customElements.get('alma-scent-finder')) {
 
       const previousHeight = this.modal.getBoundingClientRect().height;
       this.modal.toggleAttribute('data-has-results', hasResults);
+      const nextHeight = this.modal.getBoundingClientRect().height;
 
       if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      if (Math.abs(nextHeight - previousHeight) < 1) return;
 
+      this.modal.style.height = `${previousHeight}px`;
+      this.heightAnimation?.cancel();
       requestAnimationFrame(() => {
-        const nextHeight = this.modal.getBoundingClientRect().height;
-        if (Math.abs(nextHeight - previousHeight) < 1) return;
-
-        this.heightAnimation?.cancel();
         this.heightAnimation = this.modal.animate(
           [{ height: `${previousHeight}px` }, { height: `${nextHeight}px` }],
           { duration: 460, easing: 'cubic-bezier(.22, .61, .36, 1)' }
         );
+        this.heightAnimation.onfinish = () => {
+          this.modal.style.removeProperty('height');
+          this.heightAnimation = null;
+        };
       });
     }
 

@@ -686,6 +686,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `assets/alma-scent-finder.js`, `assets/alma-scent-finder-modal.js`, and this README.
 - Checks: both scent-finder JavaScript assets pass syntax validation; Theme Check passes with 0 errors and the same 7 inherited Dawn warnings; Git whitespace validation passes. Rendered browser interaction remains a Shopify preview check after synchronization.
 
+### 2026-09-19 — Remove the first-selection jump in the scent finder dialog
+
+- Request: make the popup expansion smoother when a scent is first selected.
+- Changed: the dialog now captures and locks its compact height before the recommendation layout is painted, then animates directly to the measured expanded height. This removes the first-frame jump that occurred before the height transition began.
+- Files: `assets/alma-scent-finder.js` and this README.
+- Checks: scent-finder JavaScript passes syntax validation; Theme Check passes with 0 errors and the same 7 inherited Dawn warnings; Git whitespace validation passes. Rendered browser interaction remains a Shopify preview check after synchronization.
+
 ## Continuation prompt
 
 ```text
