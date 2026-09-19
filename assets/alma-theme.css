@@ -746,6 +746,10 @@ html { overflow-x: hidden; }
 }
 
 /* Find Your Aura opening dialog */
+.alma-scent-finder-launcher { position: fixed; z-index: 9; top: 50%; right: 0; display: inline-flex; align-items: center; justify-content: center; min-height: 16rem; padding: 1.8rem 1.2rem; border: 1px solid var(--alma-ink); border-right: 0; background: var(--alma-ink); color: #fff; font-family: var(--font-body-family); font-size: 1.05rem; font-weight: 700; letter-spacing: .14em; line-height: 1.2; text-decoration: none; text-transform: uppercase; writing-mode: vertical-rl; transform: translateY(-50%); transition: background-color .2s ease, color .2s ease, opacity .2s ease, transform .2s ease, visibility .2s ease; }
+.alma-scent-finder-launcher:hover { background: #fff; color: var(--alma-ink); }
+.alma-scent-finder-launcher:focus-visible { outline: 2px solid var(--alma-ink); outline-offset: -.5rem; }
+.alma-scent-finder-is-open .alma-scent-finder-launcher { visibility: hidden; opacity: 0; transform: translate(100%, -50%); pointer-events: none; }
 .alma-scent-finder-modal { width: min(112rem, calc(100% - 3.2rem)); max-width: none; max-height: calc(100dvh - 3.2rem); margin: auto; padding: 0; border: 0; background: transparent; color: var(--alma-ink); overflow: visible; }
 .alma-scent-finder-modal::backdrop { background: rgba(29, 0, 4, .68); backdrop-filter: blur(.4rem); animation: alma-scent-finder-backdrop-in .35s ease-out both; }
 .alma-scent-finder-modal__panel { position: relative; max-height: calc(100dvh - 3.2rem); border: 1px solid var(--alma-ink); background: #fff; box-shadow: 0 2rem 6rem rgba(0, 0, 0, .25); overflow: hidden; animation: alma-scent-finder-in .4s cubic-bezier(.2, .75, .25, 1) both; }
@@ -764,6 +768,7 @@ html { overflow-x: hidden; }
 @keyframes alma-scent-finder-in { from { opacity: 0; transform: translateY(1.6rem) scale(.985); } to { opacity: 1; transform: translateY(0) scale(1); } }
 @keyframes alma-scent-finder-backdrop-in { from { opacity: 0; } to { opacity: 1; } }
 @media (max-width: 749px) {
+  .alma-scent-finder-launcher { min-height: 13.5rem; padding: 1.4rem 1rem; font-size: .95rem; }
   .alma-scent-finder-modal { width: calc(100% - 1.6rem); max-height: calc(100dvh - 1.6rem); }
   .alma-scent-finder-modal[data-has-results] { height: calc(100dvh - 1.6rem); }
   .alma-scent-finder-modal .alma-scent-finder { padding: 6.8rem 0 5rem; }

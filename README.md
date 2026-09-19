@@ -735,6 +735,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `assets/alma-theme.css` and this README.
 - Checks: Theme Check passes with 0 errors and the same 7 inherited Dawn warnings; Git whitespace validation passes. Rendered browser review remains a Shopify preview check after synchronization.
 
+### 2026-09-19 — Open Find Your Aura once, then use a side tab
+
+- Request: open the finder popup once, then leave a side-screen Find Your Aura button that reopens it; do not reopen the popup after visiting products and returning to the homepage.
+- Changed: the finder now records its first opening for the active browser session. Later page views keep the popup closed and show a fixed branded side tab instead. On the homepage, the tab reopens the dialog. On any other page, it takes the visitor to the homepage finder. The tab hides while the dialog is open and the dialog can still be opened from a direct `#AlmaScentFinder` link.
+- Files: `assets/alma-scent-finder-modal.js`, `layout/theme.liquid`, `assets/alma-theme.css`, and this README.
+- Checks: both scent-finder JavaScript assets pass syntax validation and Git whitespace validation passes. Theme Check was started but did not return within the local command window; rendered browser review remains a Shopify preview check after synchronization.
+
 ## Continuation prompt
 
 ```text
