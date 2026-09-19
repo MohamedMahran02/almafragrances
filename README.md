@@ -860,6 +860,12 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Changed: centered the mobile homepage logo, reduced its size to 4.4rem, and removed the transformed mobile utility container that shifted the fixed search panel. The panel now uses the viewport width with mobile-safe sizing and sits directly below the 7.8rem navbar.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: `git diff --check` passes; Shopify Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
+### 2026-09-20 - Restore the mobile search panel position
+
+- Request: fix the blank, centered mobile search screen and further reduce the mobile logo.
+- Changed: cleared Dawn modal bottom positioning on the fixed mobile search panel and its content, so the search form has its natural height directly below the navbar. Reduced the centered mobile logo to 4rem.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: `git diff --check` passes; Shopify Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
 ## Continuation prompt
 
 ```text
