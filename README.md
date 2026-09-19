@@ -679,6 +679,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `assets/alma-scent-finder.js`, `assets/alma-theme.css`, and this README.
 - Checks: both scent-finder JavaScript assets pass syntax validation; Theme Check passes with 0 errors and the same 7 inherited Dawn warnings; Git whitespace validation passes. Rendered browser interaction remains a Shopify preview check after synchronization.
 
+### 2026-09-19 — Animate the scent finder expansion and reopen on refresh
+
+- Request: make the Find Your Aura popup grow smoothly when recommendations appear and show it again after a website refresh.
+- Changed: recommendation changes now animate the dialog between its compact and expanded heights over 460 ms with the ALMA easing curve, while respecting reduced-motion preferences. The popup now opens on every page load, including a browser refresh, instead of being suppressed after the first browser-session view.
+- Files: `assets/alma-scent-finder.js`, `assets/alma-scent-finder-modal.js`, and this README.
+- Checks: both scent-finder JavaScript assets pass syntax validation; Theme Check passes with 0 errors and the same 7 inherited Dawn warnings; Git whitespace validation passes. Rendered browser interaction remains a Shopify preview check after synchronization.
+
 ## Continuation prompt
 
 ```text

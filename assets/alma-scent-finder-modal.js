@@ -2,7 +2,6 @@
   const modal = document.querySelector('[data-alma-scent-finder-modal]');
   if (!modal || typeof modal.showModal !== 'function') return;
 
-  const seenKey = 'alma-scent-finder-opened';
   const open = () => {
     if (!modal.open) modal.showModal();
   };
@@ -26,17 +25,5 @@
     open();
   });
 
-  if (window.location.hash === '#AlmaScentFinder') {
-    open();
-    return;
-  }
-
-  try {
-    if (!window.sessionStorage.getItem(seenKey)) {
-      window.sessionStorage.setItem(seenKey, 'true');
-      requestAnimationFrame(open);
-    }
-  } catch (error) {
-    requestAnimationFrame(open);
-  }
+  requestAnimationFrame(open);
 })();

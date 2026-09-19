@@ -10,11 +10,32 @@ if (!customElements.get('alma-scent-finder')) {
       this.results = this.querySelector('.alma-scent-finder__results');
       this.status = this.querySelector('.alma-scent-finder__status');
       this.clearButton = this.querySelector('.alma-scent-finder__clear');
+      this.modal = this.closest('[data-alma-scent-finder-modal]');
       this.initialMessage = this.status?.textContent.trim() || 'Select one or more notes to begin.';
       this.resultLimit = Number(this.dataset.resultLimit) || 4;
 
       this.inputs.forEach((input) => input.addEventListener('change', () => this.update()));
       this.clearButton?.addEventListener('click', () => this.clear());
+    }
+
+    setResultsState(hasResults) {
+      if (!this.modal) return;
+
+      const previousHeight = this.modal.getBoundingClientRect().height;
+      this.modal.toggleAttribute('data-has-results', hasResults);
+
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      requestAnimationFrame(() => {
+        const nextHeight = this.modal.getBoundingClientRect().height;
+        if (Math.abs(nextHeight - previousHeight) < 1) return;
+
+        this.heightAnimation?.cancel();
+        this.heightAnimation = this.modal.animate(
+          [{ height: `${previousHeight}px` }, { height: `${nextHeight}px` }],
+          { duration: 460, easing: 'cubic-bezier(.22, .61, .36, 1)' }
+        );
+      });
     }
 
     normalize(value) {
@@ -58,7 +79,7 @@ if (!customElements.get('alma-scent-finder')) {
         });
         this.resultsWrap.hidden = true;
         this.status.textContent = this.initialMessage;
-        this.closest('[data-alma-scent-finder-modal]')?.removeAttribute('data-has-results');
+        this.setResultsState(false);
         return;
       }
 
@@ -83,7 +104,7 @@ if (!customElements.get('alma-scent-finder')) {
 
       const shown = Math.min(ranked.length, this.resultLimit);
       this.resultsWrap.hidden = shown === 0;
-      this.closest('[data-alma-scent-finder-modal]')?.toggleAttribute('data-has-results', shown > 0);
+      this.setResultsState(shown > 0);
       this.status.textContent = shown
         ? `${shown} ${shown === 1 ? 'fragrance' : 'fragrances'} found for your aura.`
         : 'No exact match yet. Try another note or combination.';
