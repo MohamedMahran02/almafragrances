@@ -728,6 +728,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `assets/alma-theme.css` and this README.
 - Checks: Theme Check passes with 0 errors and the same 7 inherited Dawn warnings; Git whitespace validation passes. Rendered browser review remains a Shopify preview check after synchronization.
 
+### 2026-09-19 — Fit the hero image within the first viewport
+
+- Request: fit the hero image to the screen because it extends past the screen length.
+- Changed: capped the desktop hero at the available small-viewport height below the live header and set the mobile hero to the same available viewport height. The image retains its cover crop and responsive positioning, while the hero CTA remains inside that screen-sized frame.
+- Files: `assets/alma-theme.css` and this README.
+- Checks: Theme Check passes with 0 errors and the same 7 inherited Dawn warnings; Git whitespace validation passes. Rendered browser review remains a Shopify preview check after synchronization.
+
 ## Continuation prompt
 
 ```text
