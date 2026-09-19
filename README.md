@@ -847,6 +847,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `assets/alma-theme.css` and this README.
 - Checks: Git whitespace validation passes. Theme Check was started but did not return in the local command window; GitHub push verification is pending.
 
+### 2026-09-20 - Repair mobile search field and preview panel
+
+- Request: fix the mobile search textbox and preview, and add clearance before the first Best Selling collection tab.
+- Changed: mobile search now opens as a fixed full-width layer below the header, with a correctly sized textbox, close control, and viewport-bounded predictive preview panel. Increased the mobile collection-tab horizontal inset from 15 px to 24 px so Best Selling clears the screen edge.
+- Files: `assets/alma-theme.css` and this README.
+- Checks: Git whitespace validation passes; Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
+
 ## Continuation prompt
 
 ```text
