@@ -512,19 +512,20 @@ html { overflow-x: hidden; }
   border-bottom: 1px solid var(--alma-line);
 }
 .alma-theme product-info[id^='MainProduct-'] > .page-width {
-  max-width: 150rem;
-  padding-top: clamp(2.4rem, 4vw, 6rem);
-  padding-bottom: clamp(5rem, 7vw, 9rem);
+  max-width: none;
+  padding: 0 0 clamp(5rem, 7vw, 9rem);
 }
 .alma-theme product-info[id^='MainProduct-'] .product__media-wrapper {
   align-self: start;
 }
 .alma-theme product-info[id^='MainProduct-'] .product__media-list {
-  row-gap: 1.2rem;
+  gap: 0;
+  margin: 0;
 }
 .alma-theme product-info[id^='MainProduct-'] .product__media-item {
   overflow: hidden;
   background: var(--alma-product-panel);
+  padding: 0;
 }
 .alma-theme product-info[id^='MainProduct-'] .product-media-container,
 .alma-theme product-info[id^='MainProduct-'] .product__media {
