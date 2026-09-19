@@ -700,6 +700,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `assets/alma-theme.css`, `config/settings_data.json`, and this README.
 - Checks: Theme Check passes with 0 errors and the same 7 inherited Dawn warnings; settings JSON parses successfully after Shopify's generated-file header; Git whitespace validation passes. Rendered browser review remains a Shopify preview check after synchronization.
 
+### 2026-09-19 — Point the hero CTA to Products
+
+- Request: replace the hero-image button with “Shop all” and send visitors to the products page.
+- Changed: updated the live ALMA campaign button setting to display “Shop all” and use `/collections/all`, Shopify’s all-products collection. The button remains editable through the Campaign button block in the Theme Editor.
+- Files: `templates/index.json` and this README.
+- Checks: homepage JSON parses successfully and Git whitespace validation passes. Theme Check was started but did not return within the local command window; rendered review remains a Shopify preview check after synchronization.
+
 ## Continuation prompt
 
 ```text
