@@ -7,10 +7,8 @@
     cards[0].classList.add('is-active');
     window.setInterval(() => {
       cards[active].classList.remove('is-active');
-      window.setTimeout(() => {
-        active = (active + 1) % cards.length;
-        cards[active].classList.add('is-active');
-      }, 700);
+      active = (active + 1) % cards.length;
+      cards[active].classList.add('is-active');
     }, 5200);
   });
 })();
