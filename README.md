@@ -878,6 +878,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Changed: applied a 0.3rem visual translation to the mobile homepage logo only; the navbar dimensions and document layout stay unchanged.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: `git diff --check` passes; Shopify Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
+### 2026-09-20 - Add the ALMA ritual 5% signup offer
+
+- Request: show a branded popup for name and email when visitors reach The ALMA ritual, then provide a corner launcher after dismissal like Find Your Aura.
+- Changed: added an IntersectionObserver-driven ritual popup with an ALMA-styled dialog, left-edge launcher, and motion-reduced fallback. The native Shopify customer form stores first name and email and applies the `newsletter` and `alma-ritual-5-percent-off` tags. Successful signups receive the configured code in the popup.
+- Shopify customization: the ritual editorial section now provides settings for enabling the popup; the offer, success, and launcher copy; fine print; and the code shown after signup. Ensure that its code matches an active Shopify 5% discount.
+- Files: `sections/alma-editorial-feature.liquid`, `assets/alma-ritual-signup.js`, `assets/alma-theme.css`, `layout/theme.liquid`, `README.md`.
+- Checks: `node --check assets/alma-ritual-signup.js` and `git diff --check` pass; Shopify Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
 ## Continuation prompt
 
 ```text
