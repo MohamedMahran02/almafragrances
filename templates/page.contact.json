@@ -10,9 +10,10 @@
     "form": {
       "type": "contact-form",
       "settings": {
-        "heading": "",
+        "heading": "Start a conversation",
         "heading_size": "h1",
         "color_scheme": "scheme-1",
+        "intro": "<p>Tell us how we can help. Our team will be in touch soon.</p>",
         "padding_top": 36,
         "padding_bottom": 36
       }

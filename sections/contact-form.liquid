@@ -16,6 +16,7 @@
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
   <div class="contact page-width page-width--narrow section-{{ section.id }}-padding">
+    <p class="alma-contact__eyebrow">ALMA concierge</p>
     {%- if section.settings.heading != blank -%}
       <h2 class="title title-wrapper--no-top-margin inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         {{ section.settings.heading }}
@@ -23,6 +24,7 @@
     {%- else -%}
       <h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2>
     {%- endif -%}
+    {%- if section.settings.intro != blank -%}<div class="alma-contact__intro rte">{{ section.settings.intro }}</div>{%- endif -%}
     {%- liquid
       assign contact_form_class = 'isolate'
       if settings.animations_reveal_on_scroll
@@ -149,6 +151,12 @@
       "id": "heading",
       "default": "t:sections.contact-form.settings.title.default",
       "label": "t:sections.contact-form.settings.title.label"
+    },
+    {
+      "type": "richtext",
+      "id": "intro",
+      "label": "Introductory text",
+      "default": "<p>Tell us how we can help. Our team will be in touch soon.</p>"
     },
     {
       "type": "select",
