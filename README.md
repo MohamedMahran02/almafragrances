@@ -665,6 +665,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `sections/footer.liquid`, `snippets/alma-terms-of-service.liquid`, `assets/alma-shipping-policy.js`, `assets/alma-theme.css`, and this README.
 - Checks: JavaScript syntax, Theme Check, static preview build and Git whitespace validation pass. Theme Check reports 7 pre-existing Dawn warnings across 6 files and no errors. The generated homepage contains the Terms trigger, the dialog, and 24 native expandable sections including the overview and all 20 numbered terms. Rendered browser interaction verification remains unavailable in this session.
 
+### 2026-09-19 — Present Find Your Aura as the opening dialog
+
+- Request: show Find Your Aura as a popup when the website first opens instead of as an inline homepage section.
+- Changed: kept the existing Shopify-managed ALMA scent finder section and its fragrance-note, collection, recommendation-limit, heading, prompt and supporting-copy settings, then placed it in a branded native dialog. It opens once per browser session on the visitor’s first site view, can be reopened from any existing `#AlmaScentFinder` link, and closes through its close control, Escape or the overlay. The dialog uses the existing ALMA wine, warm ivory, Cormorant Garamond and Jost styling, with mobile sizing and reduced-motion support. The homepage template order and all block-order arrays remain unchanged.
+- Files: `sections/alma-scent-finder.liquid`, `assets/alma-scent-finder-modal.js`, `assets/alma-theme.css`, `layout/theme.liquid`, and this README.
+- Checks: both scent-finder JavaScript assets pass syntax validation; Theme Check passes with 0 errors and the same 7 inherited Dawn warnings; Git whitespace validation passes. The local static preview build was started but did not complete within the available command window, so rendered desktop/mobile interaction remains a Shopify preview check after synchronization.
+
 ## Continuation prompt
 
 ```text
