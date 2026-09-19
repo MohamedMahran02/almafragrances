@@ -763,6 +763,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `sections/header.liquid`, `assets/alma-theme.css`, and this README.
 - Checks: Git whitespace validation passes; Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
 
+### 2026-09-19 - Center header navigation and refine search width
+
+- Request: move the header titles to the middle of the screen and reduce the search-bar size slightly.
+- Changed: desktop navigation is now anchored to the exact horizontal center of the viewport on home, product, collection, and other pages. The search field now ranges from 240 px to 320 px, preserving space for the centered navigation and top-right AED/cart controls.
+- Files: `assets/alma-theme.css` and this README.
+- Checks: Git whitespace validation passes; Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
+
 ## Continuation prompt
 
 ```text
