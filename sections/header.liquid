@@ -251,6 +251,9 @@
           </localization-form>
         {%- endif -%}
       </div>
+      {%- if settings.predictive_search_enabled -%}
+        {% render 'alma-header-predictive-search' %}
+      {%- endif -%}
       {% render 'header-search', input_id: 'Search-In-Modal' %}
 
       {%- for block in section.blocks -%}

@@ -110,6 +110,9 @@ html { overflow-x: hidden; }
 
 @media (min-width: 990px) {
   .alma-theme .header--middle-left { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); column-gap: 3rem; }
+  .alma-theme .header-wrapper:not(.alma-header-wrapper--home) { height: 7.2rem; }
+  .alma-theme .header:not(.alma-header--home) { height: 7.2rem; padding-top: .8rem; padding-bottom: .8rem; }
+  .alma-theme .header:not(.alma-header--home) .alma-logo { width: 5rem; }
   .alma-theme .header--middle-left .header__heading { justify-self: start; }
   .alma-theme .header--middle-left .header__inline-menu { justify-self: center; }
   .alma-theme .header--middle-left .header__inline-menu > .list-menu--inline { justify-content: center; gap: .8rem; }
@@ -118,9 +121,15 @@ html { overflow-x: hidden; }
   .alma-theme .alma-header--home .header__heading .alma-logo { width: 5rem; }
   .alma-theme .alma-header--home .header__inline-menu { grid-area: nav; }
   .alma-theme .alma-header--home .header__icons { position: absolute; z-index: 2; top: .9rem; right: 5rem; }
+  .alma-header-predictive-search { position: relative !important; display: block; width: 23rem; }
+  .alma-header-predictive-search .field { margin: 0; }
+  .alma-header-predictive-search .field__input { min-height: 4.4rem; padding-right: 4.8rem; border-radius: 0; background: #fff; font-size: 1.25rem; }
+  .alma-header-predictive-search .field__label { font-size: 1.15rem; }
+  .alma-header-predictive-search .predictive-search { position: absolute; top: calc(100% + .6rem); right: 0; left: auto; width: min(42rem, 76vw); border: 1px solid var(--alma-line); background: #fff; z-index: 12; }
+  .alma-theme .header__icons > .header__search { display: none; }
   .alma-products-menu .header__submenu { min-width: 20rem; background: #fff; }
-  .alma-products-menu:hover details > .header__submenu { opacity: 1; transform: translateY(0); z-index: 2; }
-  .alma-products-menu:hover details > summary .icon-caret { transform: rotate(180deg); }
+  .alma-products-menu summary { gap: .45rem; padding-right: 2.8rem; }
+  .alma-products-menu summary .icon-caret { position: static; margin-left: 0; }
 }
 
 @media (min-width: 990px) and (max-width: 1099px) {
@@ -405,6 +414,7 @@ html { overflow-x: hidden; }
   .alma-theme .alma-header--home { position: relative; }
   .alma-theme .alma-header--home .header__heading { position: absolute; z-index: 2; grid-area: auto; top: .1rem; left: 6.4rem; display: block; margin: 0; opacity: 1; pointer-events: auto; }
   .alma-theme .alma-header--home .header__icons { transform: translateY(-.3rem); }
+  .alma-header-predictive-search { display: none; }
   .alma-theme .section-header.menu-open { position: fixed; inset: 0 0 auto; width: 100%; }
   .alma-favourites__grid { grid-auto-columns: calc((100% - 1.6rem) / 2); gap: 3rem 1.6rem; }
   .alma-editorial__content { padding-left: 5rem; padding-right: 5rem; }
