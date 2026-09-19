@@ -644,6 +644,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `templates/index.json`, `snippets/alma-navigation-links.liquid`, `sections/footer.liquid`, `design-qa.md`, and this README.
 - Checks: the generated homepage contains the exact gifting anchor once and four repaired links (desktop/mobile header, service and footer), with the updated service copy and no rendered link to the unavailable gift-card route. Theme Check passes with 0 errors and the same 9 inherited Dawn warnings; homepage JSON parsing, the static build and Git whitespace validation pass. The targeted upload to live Shopify theme `almafragrances/main` (`#167361839354`) completed successfully. Pull-back verification confirms both Liquid files are normalized-text-identical, the homepage template is semantically identical, and its live saved values contain the repaired anchor and updated copy.
 
+### 2026-09-19 — Normalize collection product-card media
+
+- Request: make every product card on the products/collection page the same size.
+- Changed: changed the collection grid's saved image ratio from `adapt` to `square`. Every product card now reserves the same square media frame at desktop and mobile breakpoints, while the existing native Dawn image treatment continues to crop and center each product image consistently. Product records, images, prices, collection order, filters, sorting, pagination and card behavior are unchanged.
+- Files: `templates/collection.json` and this README.
+- Checks: collection template JSON parsing, Theme Check and Git whitespace validation pass. Theme Check reports 7 pre-existing Dawn warnings across 6 files and no errors. The static preview build succeeds after restoring the lockfile-pinned dependencies; it produces the catalog-free visual artifact under ignored `dist/`. Git is configured to use `MohamedMahran02`, but this machine still needs that account's GitHub credential before the commit can be pushed.
+
 ## Continuation prompt
 
 ```text
