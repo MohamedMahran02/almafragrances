@@ -23,7 +23,7 @@
       {{ 'lifestyle-1' | placeholder_svg_tag: 'alma-editorial__image placeholder-svg' }}
     {%- endif -%}
     {%- if alma_ritual_eyebrow == 'the alma ritual' -%}
-      {%- for block in section.blocks -%}{%- assign ritual_product = block.settings.product -%}{%- if ritual_product.featured_image != blank -%}{{ ritual_product.featured_image | image_url: width: 1800 | image_tag: loading: 'lazy', widths: '480, 720, 960, 1200, 1600, 1800', sizes: '(min-width: 990px) 55vw, 100vw', class: 'alma-editorial__image alma-editorial__ritual-slide{% if forloop.first %} is-active{% endif %}', alt: ritual_product.title }}{%- endif -%}{%- endfor -%}
+      {%- for block in section.blocks -%}{%- assign ritual_product = block.settings.product -%}{%- if ritual_product.featured_image != blank -%}{{ ritual_product.featured_image | image_url: width: 1800 | image_tag: loading: 'lazy', widths: '480, 720, 960, 1200, 1600, 1800', sizes: '(min-width: 990px) 55vw, 100vw', class: 'alma-editorial__image alma-editorial__ritual-slide', alt: ritual_product.title }}{%- endif -%}{%- endfor -%}
     {%- endif -%}
     <div class="alma-editorial__media-copy" aria-hidden="true">
       {%- if section.settings.eyebrow != blank -%}<p class="alma-editorial__eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}

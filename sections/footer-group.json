@@ -24,8 +24,6 @@
         "enable_country_selector": true,
         "enable_language_selector": true,
         "show_policy": true,
-        "privacy_policy_text": "By using our website, you (the visitor) agree to allow third parties to process your IP address, in order to determine your location for the purpose of currency conversion. You also agree to have that currency stored in a session cookie in your browser (a temporary cookie which gets automatically removed when you close your browser). We do this in order for the selected currency to remain selected and consistent when browsing our website so that the prices can convert to your (the visitor) local currency.",
-        "refund_policy_text": "All sales are final and we do not accept returns or offer refunds.",
         "margin_top": 0,
         "padding_top": 0,
         "padding_bottom": 0
