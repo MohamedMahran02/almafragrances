@@ -1008,6 +1008,134 @@
         "number_items": {
           "one": "%{count} بند",
           "other": "%{count} بند"
+        },
+        "total_due_today_label": "الإجمالي المستحق اليوم",
+        "total_due_later_label": "الإجمالي المستحق لاحقًا",
+        "partial_total_label": "الإجمالي",
+        "free_total_label": "مجاني",
+        "free_shipping_total_label": "مجاني",
+        "paid_label": "مدفوع",
+        "payment_due_label": "الدفع مستحق",
+        "vat_label_html": "بما في ذلك %{amount} كضرائب",
+        "duties_included_label": "يشمل الإجمالي الضرائب والرسوم الجمركية. لا توجد رسوم إضافية عند التسليم.",
+        "discount_and_gift_card_savings_notice": "بعد خصم %{discount_amount} و %{gift_card_amount} من رصيد بطاقات الهدايا",
+        "discount_savings_notice": "بعد خصم %{discount_amount}",
+        "gift_card_savings_notice": "بعد بطاقات هدايا بقيمة %{gift_card_amount}",
+        "cost_table_title": "ملخص التكلفة",
+        "cost_table_item_column_header": "بند",
+        "cost_table_value_column_header": "قيمة",
+        "description_label": "الوصف",
+        "price_label": "السعر",
+        "price_per_item": {
+          "accessibility_label": "%{price} لكل قطعة",
+          "label": "%{price}/الوحدة"
+        },
+        "quantity_label": "الكمية",
+        "product_change_label": "تغيير",
+        "product_image_label": "صورة المنتج",
+        "product_image_quantity_label": "الكمية",
+        "scroll_order_summary": "مرر للمزيد من العناصر",
+        "expand_order_summary_short": "عرض",
+        "collapse_order_summary_short": "إخفاء",
+        "original_price": "السعر الأصلي",
+        "sale_price": "سعر البيع",
+        "compare_at_sale": "المبيعات (%{sale_amount})",
+        "total_updated_label": "إجمالي السعر المحدّث:",
+        "order_total_updated_label": "المجموع الكلي المحدّث",
+        "total_already_paid_label": "مدفوع",
+        "unit_price": {
+          "accessible_separator": "لكل",
+          "content_html": "%{price}%{accessible_separator}٪ لكل %{per_unit}",
+          "per_item": {
+            "single": "%{price} للقطعة",
+            "one": "%{price} لكل %{count} قطعة",
+            "other": "%{price} لكل %{count} قطعة"
+          },
+          "per_unit": {
+            "single": "%{price}/%{unit}",
+            "plural": "%{price}/%{count}%{unit}"
+          }
+        },
+        "gift_card_ending": "بطاقة هدية تنتهي بـ %{last_characters}",
+        "estimated_tax_label": "ضريبة تقديرية",
+        "multiple_shipping_lines_label": "إجمالي الشحن",
+        "recurring_subtotal_label": "المجموع الفرعي المتكرر",
+        "recurring_total_label": "الإجمالي المتكرر",
+        "recurring_total_tooltip": "لا يشمل الشحن أو الضرائب أو الرسوم الجمركية أو أي خصومات مطبقة",
+        "confirmation_number_label": "رقم التأكيد #%{confirmation_number}",
+        "higher_value_discount_applied": "<strong style=\"text-transform:uppercase\">%{code}</strong> لا يمكن استخدامه مع خصوماتك الحالية.",
+        "percent_off_shipping": "خصم %{percent} على الشحن",
+        "amount_off_shipping": "خصم ‏%{amount} على الشحن",
+        "deferred_payment_info": {
+          "title": "الدفع المستحق بقيمة %{amount_due} في موعد أقصاه %{due_at}",
+          "description_html": "للأسئلة المتعلقة بطلبك، %{contact_us}.",
+          "paid_today": "إجمالي المدفوعات اليوم",
+          "paid_today_next": "تم الدفع اليوم",
+          "due_on_fulfillment_title": "يجب دفع %{amount_due} عند الاستيفاء",
+          "due_on_receipt_title": "دفعة قدرها %{amount_due} مستحقة عند الاستلام"
+        },
+        "deferred_balance_info": {
+          "title": "مبلغ {{amount_due}} مستحق في {{due_at}}",
+          "due_on_fulfillment_title": "رصيد {{amount_due}} مستحق عند التنفيذ"
+        },
+        "payment_terms_totals": {
+          "due_today": "الإجمالي المستحق اليوم",
+          "due_today_next": "مستحق اليوم",
+          "due_later": "إجمالي المستحق %{due_at}",
+          "due_on_fulfillment": "المبلغ الإجمالي المستحق عند الوفاء بالطلب",
+          "due_on_fulfillment_next": "مستحق عند الاستيفاء",
+          "due_on_receipt": "إجمالي المستحق عند الاستلام",
+          "due_later_checkout_to_draft": "الإجمالي المستحق لاحقًا",
+          "total_paid": "إجمالي المدفوع"
+        },
+        "maximum_discount_code_limit_reached": "لقد بلغت الحد الأقصى لعدد رموز الخصم. قم بإزالة رمز حالي لاستخدام <strong style=\"text-transform:uppercase\">%{code}</strong>.",
+        "discount_code_application_failed": "<strong style=\"text-transform:uppercase\">%{code}</strong> لا يعمل حاليًا. اتصل بنا للمساعدة.",
+        "due_on_fulfillment": "مستحق عند الاستيفاء",
+        "gift_card_masked": "•••• %{last_characters}",
+        "subscriptions": "الاشتراكات",
+        "duties_label": "الواجبات",
+        "duty_label": "الواجب",
+        "duties_and_taxes_label": "الرسوم والضرائب",
+        "error_duties_tooltip": "يتم شحن هذا الطلب من بلد آخر، لذا قد تُفرض رسوم وضرائب عند التسليم.",
+        "may_be_charged_on_delivery": "قد تُفرض رسوم عند التسليم",
+        "total_updated_label_with_price": "إجمالي السعر المحدّث: %{totalPrice}",
+        "updated_shipping_method": "طريقة الشحن المحدّثة: %{shipping_method}",
+        "recurring_payments": "المدفوعات المتكررة",
+        "recurring_total_multiple_label": "يشتمل هذا الطلب على رسوم متكررة لعدة عناصر",
+        "deferred_total_due_date_label": "إجمالي المبلغ المستحق {{date}}",
+        "deferred_total_due_date_label_next": "تستحق في %{date}",
+        "full_price": "السعر كاملاً: %{price}",
+        "custom_discount": "خصم خاص",
+        "expand_component_information": {
+          "one": "إظهار %{count} عنصر",
+          "other": "عرض %{count} من العناصر"
+        },
+        "collapse_component_information": {
+          "one": "إخفاء %{count} عنصر",
+          "other": "إخفاء %{count} عنصر"
+        },
+        "component_quantity_title": "%{quantity} × %{product_title}",
+        "discount_discovery": {
+          "add_code": "إضافة خصم",
+          "back_to_finalize_order": "العودة لإنهاء الطلب",
+          "merchandise_quantity_label": {
+            "one": "%{count} بند",
+            "other": "%{count} بند"
+          }
+        },
+        "alternative_payment_currency_total": "المبلغ المستحق %{amount_due}",
+        "alternative_payment_currency_chinese_yuan": "تأكد من المبلغ الإجمالي باليوان الصيني في تطبيق %{wallet}.",
+        "lpm": {
+          "wechat_pay": {
+            "checkout_disclosure": "تأكيد المبلغ الإجمالي باليوان الصيني في تطبيق وي تشات",
+            "checkout_disclosure_with_alternative_payment_currency": "سيُعالِج %{shop_name} هذه الدفعة بقيمة %{amount_due} %{processing_currency}، والتي سيحولها WeChat إلى اليوان الصيني",
+            "checkout_disclosure_charged_in_cny": "سيعالج %{shop_name} هذه الدفعة كـ %{amount_due} %{processing_currency}",
+            "post_purchase_disclosure": "عرض إجمالي اليوان الصيني في وي تشات"
+          },
+          "alipay": {
+            "checkout_disclosure": "الرجاء تأكيد المبلغ الإجمالي باليوان الصيني في تطبيق Alipay",
+            "checkout_disclosure_with_alternative_payment_currency": "سيقوم %{shop_name} بمعالجة هذه الدفعة كـ %{amount_due} %{processing_currency}، وسيقوم Alipay بتحويلها إلى يوان صيني"
+          }
         }
       },
       "wallets": {
@@ -1762,7 +1890,48 @@
       "adjusted_total": "المجموع المعدّل",
       "due_on_date": "تاريخ الاستحقاق {{date}}",
       "due_on_fulfillment": "مستحق عند الاستيفاء",
-      "due_on_receipt": "تستحق الدفع فور الاستلام"
+      "due_on_receipt": "تستحق الدفع فور الاستلام",
+      "shipment_timeline": {
+        "expand_events_label": "عرض التفاصيل",
+        "expand_events_accessibility_label": "عرض تفاصيل شحن الطلب",
+        "hide_events_label": "إخفاء التفاصيل",
+        "hide_events_accessibility_label": "إخفاء تفاصيل شحن الطلب"
+      },
+      "addresses_section_title": "الفواتير والشحن",
+      "order_details": "تفاصيل الطلب",
+      "order_details_skeleton_accessibility_label": "سجل الدخول لعرض كافة تفاصيل الطلب.",
+      "billing_address": "عنوان الفواتير",
+      "card_ending_with": "تنتهي بـ {{lastDigits}}",
+      "contact": "جهات الاتصال",
+      "company": "شركة",
+      "fully_refunded_label": "تم رد الأموال",
+      "fulfillment_images": {
+        "one_products_accessibility_label": "يشمل الوفاء {{lineItemName1}} الكمية {{lineItemQuantity1}}",
+        "two_products_accessibility_label": "يشمل الوفاء {{lineItemName1}} كمية {{lineItemQuantity1}}، {{lineItemName2}} كمية {{lineItemQuantity2}}",
+        "three_products_accessibility_label": "يشمل التنفيذ {{lineItemName1}} الكمية {{lineItemQuantity1}}، {{lineItemName2}} الكمية {{lineItemQuantity2}}، {{lineItemName3}} الكمية {{lineItemQuantity3}}",
+        "four_products_accessibility_label": "يشمل الوفاء {{lineItemName1}} كمية {{lineItemQuantity1}}، و{{lineItemName2}} كمية {{lineItemQuantity2}}، و{{lineItemName3}} كمية {{lineItemQuantity3}}، و{{lineItemName4}} كمية {{lineItemQuantity4}}",
+        "five_products_accessibility_label": "يتضمن الإنجاز {{lineItemName1}} كمية {{lineItemQuantity1}}، {{lineItemName2}} كمية {{lineItemQuantity2}}، {{lineItemName3}} كمية {{lineItemQuantity3}}، {{lineItemName4}} كمية {{lineItemQuantity4}}، {{lineItemName5}} كمية {{lineItemQuantity5}}",
+        "six_products_accessibility_label": "يتضمن الإنجاز {{lineItemName1}} كمية {{lineItemQuantity1}}، {{lineItemName2}} كمية {{lineItemQuantity2}}، {{lineItemName3}} كمية {{lineItemQuantity3}}، {{lineItemName4}} كمية {{lineItemQuantity4}}، {{lineItemName5}} كمية {{lineItemQuantity5}}، {{lineItemName6}} كمية {{lineItemQuantity6}}",
+        "six_and_more_products_accessibility_label": "يتضمن الإنجاز {{lineItemName1}} كمية {{lineItemQuantity1}}، {{lineItemName2}} كمية {{lineItemQuantity2}}، {{lineItemName3}} كمية {{lineItemQuantity3}}، {{lineItemName4}} كمية {{lineItemQuantity4}}، {{lineItemName5}} كمية {{lineItemQuantity5}}، {{lineItemName6}} كمية {{lineItemQuantity6}} والمزيد"
+      },
+      "group_title_label": "جزء من: {{groupTitle}}",
+      "group_title_label_with_parent": "لـ: {{groupTitle}}",
+      "view_controls": {
+        "gallery": "معرض الصور",
+        "list": "قائمة"
+      },
+      "grouped_view_components": {
+        "expand_line_items": "عرض {{count}} عنصر",
+        "collapse_line_items": "إخفاء {{count}} عناصر",
+        "line_item_summary_list_accessibility_label": "العناصر في حزمة {{productTitle}}"
+      },
+      "discount": "خصم",
+      "discount_order_stacking": {
+        "one": "خصم على الطلب",
+        "other": "خصومات الطلبات"
+      },
+      "price_before_discount_accessibility_label": "السعر الأصلي",
+      "price_after_discount_accessibility_label": "سعر مخفَّض"
     },
     "addresses": {
       "add_button": "أضف العنوان",
@@ -1830,6 +1999,93 @@
       "save_accessibility_label": "حفظ العنوان {{address}}",
       "section_title_accessibility_label": "أضف العنوان",
       "update_success_notification": "تم تحديث العنوان"
+    },
+    "orders": {
+      "order_status": {
+        "delivery_promise_v2": {
+          "details_modal": {
+            "expired_shop_promise_guarantee_description": "انتهت صلاحية ضمان \"وعد المتجر\" لهذا الطلب.",
+            "expired_badge_label": "انتهت صلاحيته",
+            "order_includes_guarantees_label": "يشمل طلبك {{deliveryAgreementsCount}} ضمانات",
+            "order_includes_guarantees_description": "Shop Promise يضمن لك توصيل سريع وموثوق. اطالب باستعادة أموالك إذا وصل طلبك بعد {{date}}.",
+            "delivered_after_label": "تم التسليم بعد {{date}}",
+            "delivered_after_description": "نظرًا لتأخر وصول طلبك، فأنت مؤهل للمطالبة بـ {{amount}} رصيد تسوق.",
+            "claimed_shop_cash_description": "لأن هذا الطلب وصل متأخراً، طالبت بـ {{amount}} رصيد تسوق.",
+            "eligible_to_claim_shop_cash_description": "نظرًا لتأخر وصول طلبك، فأنت مؤهل للمطالبة بـ {{amount}} رصيد تسوق.",
+            "learn_more_button_label": "تعرف على المزيد",
+            "claim_shop_cash_button_label": "اطلب نقود المتجر",
+            "view_balance_in_shop_button_label": "عرض الرصيد في المتجر",
+            "scan_to_claim_shop_cash_label": "امسح ضوئيًا للمطالبة بـ {{amount}} من رصيد Shop Cash"
+          }
+        },
+        "delivery_promise": {
+          "promise_line": {
+            "single_brand_label": "التسليم مدعوم بـ",
+            "mixed_brands_label": "توصيل مضمون",
+            "not_delivered_by_label": "لم يتم تسليمها بحلول {{date}}",
+            "modal_accessibility_button_label": "تفاصيل وعود التسليم"
+          },
+          "claim_shop_cash_cta": {
+            "has_shop_app_label": "احصل على رصيد المتجر الخاص بك",
+            "no_shop_app_label": "{{appDownloadLink}} للمطالبة بـ Shop Cash",
+            "download_shop_app_label": "تنزيل المتجر"
+          },
+          "details_modal": {
+            "title": "التسليم مدعوم بـ",
+            "modal_accessiblity_label": "تفاصيل وعود التسليم",
+            "delivery_guarantee_label": "ضمان التوصيل",
+            "delivery_by_label": "التسليم بحلول {{date}}",
+            "delivery_guaranteed_by_label": "ضمان التسليم بحلول {{date}}",
+            "shop_cash_claim": {
+              "may_be_eligible_label": "تضمن \"Shop Promise\" التوصيل السريع والموثوق. طالب باسترداد نقود \"Shop Cash\" إذا وصل طلبك متأخرًا.",
+              "may_be_eligible_not_authorized_label": "قد تكون مؤهلاً للمطالبة بمبلغ نقدي من المتجر لأن هذا الطلب وصل متأخرًا. سجّل الدخول لعرض التفاصيل.",
+              "redeemed_label": "لقد استرددت مبلغ Shop Cash بالفعل لأن هذا الطلب وصل متأخراً.",
+              "no_shop_cash_label": "هذا الطلب غير مؤهل للمطالبة بالتسليم المتأخر لأنه لم يتم دفعه باستخدام Shop Pay.",
+              "no_longer_guaranteed_label": "لم تعد هذه الأصناف مشمولة بضمان التسليم.",
+              "claim_shop_cash_title": "امسح للمطالبة بـ {{amount}} من رصيد Shop Cash",
+              "claim_shop_cash_description": "يمكنك استخدام رصيد Shop Cash الخاص بك في عمليات الشراء المستقبلية داخل تطبيق Shop."
+            }
+          }
+        },
+        "arrives": "تصل {{date}}",
+        "arrives_tomorrow": "يصل غدًا",
+        "delivery_estimate_backed_by": "بدعم من",
+        "delivery_estimate_delayed_description": "خدمات التوصيل إلى منطقتك أبطأ من المعتاد. قد يصل طلبك متأخرًا.",
+        "delivery_estimate_delayed_title": "متأخر",
+        "delivery_estimate_early_description": "عمليات التسليم إلى منطقتك أسرع من المعتاد. قد يصل هذا الطلب مبكرًا.",
+        "delivery_exception_action_required": "الإجراء المطلوب",
+        "delivery_exception_attempted_action": "جدولة توصيل جديد",
+        "delivery_exception_attempted_description": "{{link}} مع {{carrier}} أو تحقق من إشعار التسليم",
+        "delivery_exception_attempted_description_unknown": "{{link}} أو التحقق من إشعار التسليم",
+        "delivery_exception_attempted_title": "تمت محاولة التسليم",
+        "delivery_exception_delivery_failed": "فشل التسليم",
+        "delivery_exception_failed_action": "تحقق مع {{carrier}}",
+        "delivery_exception_failed_description": "{{link}} أو اتصل بنا للمزيد من المعلومات",
+        "delivery_exception_failed_description_unknown": "تواصل مع شركة الشحن للحصول على مزيد من المعلومات",
+        "delivery_exception_failed_title": "لم يتم التسليم",
+        "delivery_exception_on_hold_action": "تحديث تفاصيل التسليم",
+        "delivery_exception_on_hold_description": "{{link}} مع {{carrier}} لإعادة طلبك إلى المسار الصحيح",
+        "delivery_exception_on_hold_description_unknown": "{{link}} لإعادة تنشيط طلبك",
+        "delivery_exception_on_hold_title": "قيد الانتظار",
+        "delivery_exception_returning_to_sender_action": "اتصل بـ {{carrier}}",
+        "delivery_exception_returning_to_sender_description": "{{link}} للمزيد من المعلومات",
+        "delivery_exception_returning_to_sender_description_unknown": "تواصل مع شركة الشحن للحصول على مزيد من المعلومات",
+        "delivery_exception_returning_to_sender_title": "لم يتم التسليم",
+        "delivery_exception_shop_promise_delivered_late_description": "طلبك مدعوم بـ Shop Promise. نظرًا لأنه وصل متأخرًا، يمكنك المطالبة بـ {{amount}} من رصيد Shop Cash.",
+        "delivery_exception_shop_promise_delivered_late_title": "تم التسليم متأخرًا",
+        "pickup_address_map_link_accessibility_label": "عرض موقع الاستلام في {{address}} على الخريطة (يفتح نافذة جديدة)",
+        "pickup_location_label": "موقع الاستلام:",
+        "pickup_qr_code_accessibility_label": "رمز QR للمسح الضوئي في المتجر عند استلام طلبك",
+        "predicted_by_shop": "توقعه شوب"
+      },
+      "status_mark_as_delivered": "تم التسليم",
+      "fulfillment_status_title": "حالة التنفيذ: {{status}}",
+      "buy_again": "اشترِ مرة أخرى",
+      "buy_again_accessibility_label": "اشترِ مرة أخرى للطلب {{orderId}}",
+      "manage": "إدارة",
+      "manage_accessiblity_label": "إدارة الطلب {{orderId}}",
+      "group_title_label": "جزء من: {{groupTitle}}",
+      "group_title_label_with_parent": "لـ: {{groupTitle}}"
     }
   }
 }
