@@ -941,7 +941,7 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Request: the supplied narrow mobile screenshot shows the ALMA icon sitting above the menu, search, and cart icon row.
 - Changed: moved the mobile logo artwork down by 8 px, from a 0.6rem to a 1.4rem visual translation, without changing the 78 px header height, logo size, horizontal centering, or icon positions. The correction applies to homepage and other mobile headers; desktop styling and section/block sequences remain unchanged.
 - Files: `assets/alma-theme.css` and this README.
-- Checks: Git whitespace validation passes; Shopify Theme Check passes with 0 errors and the same 9 inherited Dawn warnings. Rendered mobile verification and live Shopify pull-back remain pending.
+- Checks: Git whitespace validation passes; Shopify Theme Check passes with 0 errors and the same 9 inherited Dawn warnings. The connected Shopify mobile preview was visually inspected at its narrow 326 px viewport after a reload, both over the hero and farther down the homepage: the visible logo is now centered on the menu/search/bag icon row, without clipping or changing the header height. The mobile menu opens and closes normally. A targeted authenticated pull from theme `almafragrances/main` (`#167361839354`) confirms `assets/alma-theme.css` is normalized-text identical to the repository. Desktop rendering is unchanged by the mobile-only media query; other physical-device widths remain for owner review.
 
 ## Continuation prompt
 
