@@ -897,6 +897,12 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Changed: moved the signup form and dialog outside the editorial section entirely. They remain connected to the ritual through the section identifier and observer, but can no longer affect its desktop grid or mobile flex layout.
 - Files: `sections/alma-editorial-feature.liquid`, `assets/alma-theme.css`, `README.md`.
 - Checks: `node --check assets/alma-ritual-signup.js` and `git diff --check` pass; Shopify Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
+### 2026-09-20 - Align mobile header logo and collection tabs
+
+- Request: move the mobile navbar logo down to align with the icons without changing header height, and add mobile edge spacing to the ALMA fragrance collection labels.
+- Changed: applied a 0.3rem visual translation to every mobile header logo while retaining the centered homepage position. Increased mobile collection-tab inset and scroll padding so Best Selling and every collection label clear the screen edge.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: `git diff --check` passes; Shopify Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
 ## Continuation prompt
 
 ```text

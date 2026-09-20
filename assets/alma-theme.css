@@ -428,6 +428,7 @@ html { overflow-x: hidden; }
 @media (max-width: 749px) {
   .alma-theme .alma-header-wrapper--home { height: 7.8rem; }
   .alma-theme .header { min-height: 7.8rem; padding-left: 1.5rem; padding-right: 1.5rem; }
+  .alma-theme .header__heading { transform: translateY(.3rem); }
   .alma-theme .alma-header--home .header__heading { transform: translate(-50%, .3rem); }
   .alma-theme .alma-header--home .header__heading .alma-logo { width: 4rem; }
   .alma-theme .scrolled-past-header .alma-logo { width: 4rem; }
@@ -443,7 +444,7 @@ html { overflow-x: hidden; }
   .alma-ritual .alma-cta--text { position: relative; top: 1.6rem; }
   .alma-favourites { padding: 5.5rem 1.5rem 6rem; }
   .alma-favourites h2 { margin-bottom: 2.2rem; }
-  .alma-favourites__tabs { justify-content: flex-start; flex-wrap: nowrap; gap: .6rem 2rem; width: calc(100% + 3rem); margin-bottom: 2.5rem; margin-left: -1.5rem; padding: 0 2.4rem .8rem; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x proximity; scrollbar-width: none; }
+  .alma-favourites__tabs { justify-content: flex-start; flex-wrap: nowrap; gap: .6rem 2rem; width: calc(100% + 3rem); box-sizing: border-box; margin-bottom: 2.5rem; margin-left: -1.5rem; padding: 0 3rem .8rem; overflow-x: auto; overscroll-behavior-x: contain; scroll-padding-inline: 3rem; scroll-snap-type: x proximity; scrollbar-width: none; }
   .alma-favourites__tabs::-webkit-scrollbar { display: none; }
   .alma-favourites__tab { flex: 0 0 auto; white-space: nowrap; scroll-snap-align: start; }
   .alma-favourites__grid { grid-auto-columns: 82vw; gap: 1.5rem; padding-right: calc((100% - 82vw) / 2); padding-left: calc((100% - 82vw) / 2); scroll-padding-inline: calc((100% - 82vw) / 2); }
