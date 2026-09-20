@@ -1,0 +1,7 @@
+Use case: photorealistic-natural.
+Asset type: 16:9 landscape background plate for an ALMA Dukhoon website editorial panel.
+Input image: research/design/references/alma-dokhon.jpg, used only as a reference for room materials, color, light, and atmosphere.
+Generate the matching environmental scene alone, with NO product, NO jar, NO lid, NO container, NO stones, NO logo, NO lettering, and no other merchandise anywhere.
+Wide dark brown and near-black textured interior wall above a warmly lit natural linen-covered tabletop, low-key amber side lighting, faint atmospheric smoke wisps that do not suggest a specific product.
+The center must remain a clean, believable background where the original portrait Shopify photograph can be layered separately.
+Seamless photographic detail, restrained luxury fragrance campaign mood. Entire image 16:9 landscape, no text or watermark.

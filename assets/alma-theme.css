@@ -226,6 +226,8 @@ html { overflow-x: hidden; }
 .alma-editorial--immersive .alma-editorial__image { width: 100%; height: 100%; min-height: 0; object-fit: contain; }
 .alma-editorial--immersive .alma-editorial__content { order: 2; min-height: 30rem; padding: 5rem 2rem; }
 .alma-editorial--immersive .alma-editorial__product-line { margin-top: 1.6rem; }
+.alma-editorial--dukhon-wide .alma-editorial__media { background-image: url('alma-dukhon-wide-background.png'); background-position: center; background-size: cover; }
+.alma-editorial--dukhon-wide .alma-editorial__image { width: auto; max-width: 100%; margin-inline: auto; -webkit-mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent); mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent); }
 
 .alma-wardrobe { max-width: none; padding: 6rem 3.2rem 5.5rem; background: #fff; overflow: hidden; }
 .alma-wardrobe__heading { display: block; margin-bottom: 4rem; text-align: center; }
@@ -476,6 +478,8 @@ html { overflow-x: hidden; }
   .alma-editorial__step-label { font-size: 1.1rem; line-height: 1.35; }
   .alma-editorial--immersive .alma-editorial__media { height: 50rem; min-height: 0; background: #fff; }
   .alma-editorial--immersive .alma-editorial__image { height: 50rem; min-height: 0; object-fit: cover; }
+  .alma-editorial--dukhon-wide .alma-editorial__media { background-image: none; }
+  .alma-editorial--dukhon-wide .alma-editorial__image { width: 100%; margin: 0; -webkit-mask-image: none; mask-image: none; }
   .alma-editorial--immersive .alma-editorial__media::after { background: linear-gradient(180deg, rgba(29, 0, 4, .62) 0%, rgba(29, 0, 4, .2) 34%, rgba(29, 0, 4, 0) 62%); }
   .alma-editorial--immersive .alma-editorial__media-copy { inset: 8rem 2.4rem auto; max-width: calc(100% - 4.8rem); }
   .alma-editorial--immersive .alma-editorial__media-copy h2 { font-size: 3.8rem; }

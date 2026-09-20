@@ -6,7 +6,7 @@
   endif
 -%}
 {%- assign alma_ritual_eyebrow = section.settings.eyebrow | downcase -%}
-<section class="alma-editorial alma-editorial--{{ section.settings.tone }} alma-editorial--{{ section.settings.media_position }} alma-editorial--{{ section.settings.layout | default: 'split' }}{% if alma_ritual_eyebrow == 'the alma ritual' %} alma-editorial--ritual-motion{% endif %}" aria-labelledby="AlmaEditorial-{{ section.id }}">
+<section class="alma-editorial alma-editorial--{{ section.settings.tone }} alma-editorial--{{ section.settings.media_position }} alma-editorial--{{ section.settings.layout | default: 'split' }}{% if alma_ritual_eyebrow == 'the alma ritual' %} alma-editorial--ritual-motion{% endif %}{% if section.settings.layout == 'immersive' and feature_product.handle == 'alma-dokhon' and section.settings.image == blank %} alma-editorial--dukhon-wide{% endif %}" aria-labelledby="AlmaEditorial-{{ section.id }}">
   <div class="alma-editorial__media">
     {%- if feature_image != blank -%}
       {%- assign feature_alt = feature_image.alt | default: section.settings.heading -%}
