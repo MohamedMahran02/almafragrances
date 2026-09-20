@@ -2981,7 +2981,16 @@
         "page_title": "أدخل الرمز - %{shop_name}",
         "heading": "أدخل الرمز",
         "subheading": "أُرسلت إلى %{email}",
-        "change_email": "تغيير"
+        "change_email": "تغيير",
+        "restart_link": "تسجيل الدخول باستخدام بريد إلكتروني مختلف",
+        "input_field_label": "رمز مكون من 6 أرقام",
+        "button": "إرسال"
+      },
+      "error": {
+        "invalid": {
+          "invalid_email": "أدخل عنوان بريد إلكتروني صالحًا",
+          "invalid_code": "أدخل الرمز الصحيح المكون من 6 أرقام"
+        }
       }
     },
     "navigation_and_structure": {
