@@ -689,6 +689,7 @@
       },
       "gifting_story": {
         "title": "Gifting by ALMA",
+        "best_selling_label": "Best Selling",
         "product_link_label": "Discover",
         "gifts": {
           "label": "Gifts & rituals"

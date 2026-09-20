@@ -132,7 +132,7 @@
       assign social_links = true
     endif
 
-    if localization.available_countries.size > 1 and section.settings.enable_country_selector or section.settings.enable_language_selector and localization.available_languages.size > 1
+    if localization.available_countries.size > 1 and section.settings.enable_country_selector or section.settings.enable_language_selector
       assign localization_forms = true
     endif
   -%}
@@ -257,13 +257,28 @@
         {% endif %}
 
       </div>
-      {%- if localization.available_languages.size > 1 -%}
+      {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
         <localization-form class="alma-header-language" data-prevent-hide>
           {%- form 'localization', id: 'HeaderLanguageForm', class: 'localization-form' -%}
             <h2 class="visually-hidden" id="HeaderLanguageLabel">{{ 'localization.language_label' | t }}</h2>
             {%- render 'language-localization', localPosition: 'HeaderLanguage' -%}
           {%- endform -%}
         </localization-form>
+      {%- elsif section.settings.enable_language_selector -%}
+        {%- liquid
+          if request.locale.iso_code == 'ar'
+            assign language_switch_url = request.path | remove_first: '/ar' | default: '/'
+            assign language_switch_label = 'التبديل إلى الإنجليزية'
+          else
+            assign language_switch_url = '/ar' | append: request.path
+            assign language_switch_label = 'Switch to Arabic'
+          endif
+        -%}
+        <div class="alma-header-language">
+          <a class="localization-form__select link link--text focus-inset" href="{{ language_switch_url }}" aria-label="{{ language_switch_label }}" hreflang="{% if request.locale.iso_code == 'ar' %}en{% else %}ar{% endif %}">
+            <svg class="alma-language-icon" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.4 2.5 3.6 5.5 3.6 9s-1.2 6.5-3.6 9c-2.4-2.5-3.6-5.5-3.6-9S9.6 5.5 12 3Z"/></svg>
+          </a>
+        </div>
       {%- endif -%}
 
 

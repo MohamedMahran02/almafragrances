@@ -648,6 +648,7 @@
       },
       "gifting_story": {
         "title": "هدايا من ألما",
+        "best_selling_label": "الأكثر مبيعًا",
         "product_link_label": "اكتشف",
         "gifts": {
           "label": "هدايا وطقوس عطرية"

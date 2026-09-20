@@ -106,7 +106,11 @@
                     class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
                     {{ block.shopify_attributes }}
                   >
-                    {{- block.settings.text -}}
+                    {%- if request.locale.iso_code == 'ar' and block.settings.text == product.vendor -%}
+                      {{- 'alma.brand' | t -}}
+                    {%- else -%}
+                      {{- block.settings.text -}}
+                    {%- endif -%}
                   </p>
                 {%- when 'title' -%}
                   <h2 class="product__title {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>

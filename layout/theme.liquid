@@ -336,7 +336,7 @@
       {{ 'accessibility.skip_to_text' | t }}
     </a>
     <a class="alma-scent-finder-launcher" href="{{ routes.root_url }}#AlmaScentFinder" data-alma-scent-finder-launcher>
-      Find Your Aura
+      {% if request.locale.iso_code == 'ar' %}{{ 'alma.home.scent_finder.heading' | t }}{% else %}Find Your Aura{% endif %}
     </a>
 
     {%- if settings.cart_type == 'drawer' -%}
