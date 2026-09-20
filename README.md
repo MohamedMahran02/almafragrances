@@ -996,6 +996,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `assets/alma-theme.css`, `assets/alma-scroll-gallery.js`, `README.md`.
 - Checks: `node --check assets/alma-scroll-gallery.js` and `git diff --check` pass. Shopify Theme Check continues to report the pre-existing 970 matching-translation errors in `locales/ar.json` and 7 warnings across 7 files; no RTL-specific errors were reported.
 
+### 2026-09-20 - Force Arabic product-copy alignment
+
+- Request: fix remaining left-aligned Arabic text on the products page.
+- Changed: explicitly override Dawn's configured left card alignment and apply right alignment to the product information wrapper, product details, collection cards, collection heading, filters and product search results whenever the storefront is Arabic.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: `git diff --check` passes. Shopify Theme Check reports the same pre-existing 970 matching-translation errors in `locales/ar.json` and 7 warnings across 7 files; no alignment-specific errors were reported.
+
 ## Continuation prompt
 
 ```text

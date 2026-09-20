@@ -937,3 +937,9 @@ html[dir="rtl"] .alma-theme :is(.alma-terms-of-service__panel, .alma-scent-finde
   html[dir="rtl"] .alma-theme :is(.alma-scent-finder-modal__close, .alma-ritual-signup-modal__close) { right: auto; left: .9rem; }
   html[dir="rtl"] .alma-theme .alma-service-band__item:last-child { border-left: 1px solid var(--alma-line); }
 }
+
+
+/* Arabic product and collection copy must override Dawn's configured left alignment. */
+html[dir="rtl"] .alma-theme :is(.product__info-wrapper, .product__info-container, .product__title, .product__text, .product__description, .product__accordion, .product-form, .card__content, .card__information, .card-information, .collection-hero, .collection-hero__title, .collection-hero__description, .facets-container, .facet-filters, .mobile-facets, .main-page-title) { text-align: right; }
+html[dir="rtl"] .alma-theme .card-information { --text-alignment: right; }
+html[dir="rtl"] .alma-theme .card-information :is(.price, .caption, .rating) { text-align: right; }
