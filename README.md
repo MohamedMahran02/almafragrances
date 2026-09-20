@@ -903,6 +903,12 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Changed: applied a 0.3rem visual translation to every mobile header logo while retaining the centered homepage position. Increased mobile collection-tab inset and scroll padding so Best Selling and every collection label clear the screen edge.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: `git diff --check` passes; Shopify Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
+### 2026-09-20 - Further adjust the mobile logo alignment
+
+- Request: move the mobile logo farther down without changing the navbar length.
+- Changed: increased the mobile logo visual translation from 0.3rem to 0.6rem across the centered homepage header and other mobile headers. Header dimensions are unchanged.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: `git diff --check` passes; Shopify Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
 ## Continuation prompt
 
 ```text
