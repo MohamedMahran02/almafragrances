@@ -970,6 +970,12 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Publication blocker: Settings > Languages still shows Arabic as `Not published`, assigned to one domain. Its More actions menu offers Preview, Assign to domain, disabled Set as domain default and Remove language, but no Publish. Shopify documents Publish in that menu for eligible stores. The plan page shows Basic — Development store; whether that is the specific restriction has not been confirmed. Do not change the store plan or billing to resolve this without the owner. The store itself remains password protected.
 - Next: verify theme sync and the fixed English-to-Arabic globe link; resolve Shopify's missing Publish action, then test a visitor session, mobile layouts, checkout, customer account and notifications. Review legal text and current catalog inventory before production.
 
+### 2026-09-20 - Place the language switch after the cart
+
+- Request: move the header language globe to the right of the cart and align it with the cart icon.
+- Changed: reordered the existing Shopify language localization control after the cart in the header icon row. The existing centered flex alignment and language-switch behavior remain in place.
+- Files: `sections/header.liquid`, `README.md`.
+- Checks: `git diff --check` passes. Shopify Theme Check reports 970 matching-translation errors in the pulled `locales/ar.json` plus 7 existing warnings across 7 files; those locale errors predate this header-only change and need separate correction. GitHub push verification is pending.
 ## Continuation prompt
 
 ```text
