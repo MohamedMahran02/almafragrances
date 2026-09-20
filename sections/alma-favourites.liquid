@@ -47,10 +47,11 @@
       <alma-scroll-gallery class="alma-scroll-gallery">
         <div class="alma-favourites__grid" id="{{ product_track_id }}" data-alma-scroll-track role="region" aria-label="{{ best_selling_collection.title | escape }} products" tabindex="0">
           {%- for product in best_selling_collection.products limit: section.settings.products_to_show -%}
-            {%- assign packshot_asset = 'alma-packshot-' | append: product.handle | append: '.webp' -%}
             <article class="alma-product">
               <a class="alma-product__image-link" href="{{ product.url }}">
-                <img class="alma-product__image" src="{{ packshot_asset | asset_url }}" width="1000" height="1000" loading="lazy" alt="{{ product.title | escape }} product packshot">
+                {%- if product.featured_image != blank -%}
+                  {{ product.featured_image | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '320, 480, 720, 960, 1200', sizes: '(min-width: 990px) 25vw, 82vw', class: 'alma-product__image', alt: product.featured_image.alt | default: product.title }}
+                {%- endif -%}
               </a>
               <h3><a href="{{ product.url }}">{{ product.title | escape }}</a></h3>
               {%- if product.type != blank -%}<p class="alma-product__type">{{ product.type | escape }}</p>{%- endif -%}
@@ -73,10 +74,11 @@
         <alma-scroll-gallery class="alma-scroll-gallery">
           <div class="alma-favourites__grid" id="{{ product_track_id }}" data-alma-scroll-track role="region" aria-label="{{ chosen_collection.title | escape }} products" tabindex="0">
             {%- for product in chosen_collection.products limit: section.settings.products_to_show -%}
-              {%- assign packshot_asset = 'alma-packshot-' | append: product.handle | append: '.webp' -%}
               <article class="alma-product">
                 <a class="alma-product__image-link" href="{{ product.url }}">
-                  <img class="alma-product__image" src="{{ packshot_asset | asset_url }}" width="1000" height="1000" loading="lazy" alt="{{ product.title | escape }} product packshot">
+                  {%- if product.featured_image != blank -%}
+                    {{ product.featured_image | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '320, 480, 720, 960, 1200', sizes: '(min-width: 990px) 25vw, 82vw', class: 'alma-product__image', alt: product.featured_image.alt | default: product.title }}
+                  {%- endif -%}
                 </a>
                 <h3><a href="{{ product.url }}">{{ product.title | escape }}</a></h3>
                 {%- if product.type != blank -%}<p class="alma-product__type">{{ product.type | escape }}</p>{%- endif -%}

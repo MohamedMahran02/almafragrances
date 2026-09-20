@@ -909,6 +909,12 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Changed: increased the mobile logo visual translation from 0.3rem to 0.6rem across the centered homepage header and other mobile headers. Header dimensions are unchanged.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: `git diff --check` passes; Shopify Theme Check completes with 7 existing warnings across 6 unchanged Dawn files and no errors. GitHub push verification is pending.
+### 2026-09-20 - Use Shopify product media throughout the storefront
+
+- Request: remove hardcoded product image fallbacks so product imagery comes only from Shopify.
+- Changed: collection cards now render each product's Shopify featured image; wardrobe cards use their Shopify image picker, collection image, or first product image; and editorial product features use their selected Shopify image or product image. Removed the generated packshot and Dukhoon editorial product-image assets that previously backed those fallbacks.
+- Files: `sections/alma-favourites.liquid`, `sections/alma-wardrobe.liquid`, `sections/alma-editorial-feature.liquid`, `templates/index.json`, removed `assets/alma-packshot-*.webp`, `assets/alma-dukhon-editorial-*.jpg`, `assets/alma-solid-reference.png`, `assets/alma-perfume-reference.jpg`, and `README.md`.
+- Checks: `git diff --check` passes; direct source assertions confirm there are no generated packshot, Dukhoon editorial fallback, or removed setting references in storefront code. Shopify Theme Check did not return a result in two local attempts and its stale process was stopped; this change remains unverified by that command. GitHub push verification is pending.
 ## Continuation prompt
 
 ```text
