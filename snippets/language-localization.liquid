@@ -13,8 +13,7 @@
     aria-controls="{{ localPosition }}List"
     aria-describedby="{{ localPosition }}Label"
   >
-    <svg class="alma-language-icon" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.4 2.5 3.6 5.5 3.6 9s-1.2 6.5-3.6 9c-2.4-2.5-3.6-5.5-3.6-9S9.6 5.5 12 3Z"/></svg>
-    <span>{% if localization.language.iso_code == 'ar' %}العربية{% else %}EN{% endif %}</span>
+    <span>{{ localization.language.endonym_name | capitalize }}</span>
     {{ 'icon-caret.svg' | inline_asset_content }}
   </button>
   <div class="disclosure__list-wrapper language-selector" hidden>
@@ -39,7 +38,7 @@
               {{- 'icon-checkmark.svg' | inline_asset_content -}}
             </span>
             <span>
-              {% if language.iso_code == 'ar' %}العربية{% elsif language.iso_code == 'en' %}EN{% else %}{{ language.endonym_name | capitalize }}{% endif %}
+              {{- language.endonym_name | capitalize -}}
             </span>
           </a>
         </li>

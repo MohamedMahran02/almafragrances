@@ -115,9 +115,7 @@ html[dir="rtl"] .alma-theme .alma-header-predictive-search .predictive-search { 
 .alma-header-language { position: relative; flex: 0 0 auto; }
 .alma-header-language .localization-form { padding: 0; }
 .alma-header-language .localization-form__select { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; min-width: 5.8rem; min-height: 4.4rem; padding: 0 .5rem; font-size: 1.1rem; }
-.alma-header-language .localization-form__select .icon-caret { display: none; }
 .alma-header-language .language-selector { min-width: 12rem; right: 0; left: auto; }
-.alma-language-icon { display: block; flex: none; width: 2.4rem; height: 2.4rem; }
 .alma-header-language .disclosure__link { display: flex; align-items: center; gap: .3rem; }
 .alma-theme .header-wrapper--border-bottom { border-color: var(--alma-line); }
 .alma-theme .section-header.shopify-section-header-sticky { z-index: 10; }
@@ -445,8 +443,6 @@ html[dir="rtl"] .alma-theme .alma-header-predictive-search .predictive-search { 
   .alma-editorial__content { padding-left: 5rem; padding-right: 5rem; }
 }
 @media (max-width: 749px) {
-  .alma-header-language .localization-form__select { min-width: 4.4rem; width: 4.4rem; padding: 0; }
-  .alma-header-language .localization-form__select > span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
   .alma-theme .alma-header-wrapper--home { height: 7.8rem; }
   .alma-theme .header { min-height: 7.8rem; padding-left: 1.5rem; padding-right: 1.5rem; }
   .alma-theme .header__heading { transform: translateY(1.4rem); }
