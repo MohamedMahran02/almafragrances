@@ -430,8 +430,8 @@ html { overflow-x: hidden; }
 @media (max-width: 749px) {
   .alma-theme .alma-header-wrapper--home { height: 7.8rem; }
   .alma-theme .header { min-height: 7.8rem; padding-left: 1.5rem; padding-right: 1.5rem; }
-  .alma-theme .header__heading { transform: translateY(.6rem); }
-  .alma-theme .alma-header--home .header__heading { transform: translate(-50%, .6rem); }
+  .alma-theme .header__heading { transform: translateY(1.4rem); }
+  .alma-theme .alma-header--home .header__heading { transform: translate(-50%, 1.4rem); }
   .alma-theme .alma-header--home .header__heading .alma-logo { width: 4rem; }
   .alma-theme .scrolled-past-header .alma-logo { width: 4rem; }
   .alma-campaign__media { height: calc(100svh - var(--header-height, 7.8rem)); min-height: 0; }

@@ -936,6 +936,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: assets/alma-dukhon-wide-background.png, assets/alma-theme.css, sections/alma-editorial-feature.liquid, research/design/dukhon-wide-background-prompt.txt, and this README.
 - Checks: generated background visually inspected for no product or lettering; asset measures 1672 × 941 and 1,846,987 bytes. The authentic source photo matches research/design/references/alma-dokhon.jpg by SHA-256. Theme Check passes with 0 errors and 9 existing warnings; Git whitespace check passes. Context7 was not available in the tool inventory; the Liquid change follows the theme's existing conditional-class pattern. A targeted authenticated pull from connected theme almafragrances/main (#167361839354) after the GitHub push confirms the generated PNG is byte-identical and the CSS and Liquid are normalized-text identical to the repository. Rendered PC/mobile inspection remains pending; publication status is unverified.
 - Next: verify the composite on the connected Shopify PC preview and the unchanged mobile presentation.
+### 2026-09-20 - Align the mobile logo with header icons
+
+- Request: the supplied narrow mobile screenshot shows the ALMA icon sitting above the menu, search, and cart icon row.
+- Changed: moved the mobile logo artwork down by 8 px, from a 0.6rem to a 1.4rem visual translation, without changing the 78 px header height, logo size, horizontal centering, or icon positions. The correction applies to homepage and other mobile headers; desktop styling and section/block sequences remain unchanged.
+- Files: `assets/alma-theme.css` and this README.
+- Checks: Git whitespace validation passes; Shopify Theme Check passes with 0 errors and the same 9 inherited Dawn warnings. Rendered mobile verification and live Shopify pull-back remain pending.
+
 ## Continuation prompt
 
 ```text
