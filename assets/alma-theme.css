@@ -29,7 +29,7 @@ html { overflow-x: hidden; }
 
 /* Find Your Aura — Shopify-connected fragrance note matcher */
 .alma-scent-finder-anchor { display: block; scroll-margin-top: calc(var(--header-height, 9.4rem) + 1rem); }
-.alma-scent-finder { display: block; padding: clamp(6rem, 7vw, 9rem) 0; background: #fff; border-top: 1px solid #deddda; border-bottom: 1px solid #deddda; }
+.alma-scent-finder { display: block; padding: clamp(4.5rem, 5vw, 6.5rem) 0; background: #fff; border-top: 1px solid #deddda; border-bottom: 1px solid #deddda; }
 .alma-scent-finder__intro { max-width: 96rem; text-align: center; }
 .alma-scent-finder__heading h2 { margin: 0 0 1.6rem; font-family: var(--font-heading-family); font-size: clamp(3.8rem, 4.2vw, 5.6rem); font-weight: 400; letter-spacing: -.035em; line-height: 1; }
 .alma-scent-finder__text { max-width: 52rem; margin: 0 auto; color: #3d3c39; font-size: 1.5rem; line-height: 1.6; }
@@ -65,7 +65,7 @@ html { overflow-x: hidden; }
 }
 
 @media (max-width: 749px) {
-  .alma-scent-finder { padding: 6rem 0; }
+  .alma-scent-finder { padding: 4.5rem 0; }
   .alma-scent-finder__heading { text-align: center; }
   .alma-scent-finder__heading h2 { font-size: 3.8rem; }
   .alma-scent-finder__text { max-width: 31rem; font-size: 1.4rem; }
@@ -157,7 +157,7 @@ html { overflow-x: hidden; }
 .alma-cta-label__dot { display: block; width: 1.7rem; height: 1.6rem; color: currentColor; object-fit: contain; }
 .alma-cta-label__text { position: relative; display: block; line-height: 1.8rem; }
 
-.alma-ritual { min-height: 27.2rem; display: grid; place-items: center; padding: 5.6rem 12rem; text-align: center; }
+.alma-ritual { min-height: 23rem; display: grid; place-items: center; padding: 4.2rem 12rem; text-align: center; }
 .alma-ritual__inner { display: grid; width: min(100%, 65.3rem); gap: .8rem; }
 .alma-ritual h2, .alma-favourites h2, .alma-editorial h2, .alma-wardrobe h2, .alma-service-band h2 { margin: 0 0 2.2rem; font-family: var(--font-heading-family); font-size: clamp(2.9rem, 2.25vw, 3.4rem); font-weight: 400; line-height: 1.15; }
 .alma-ritual h2 { margin: 0; font-size: 3.2rem; line-height: 3.8rem; }
@@ -172,7 +172,7 @@ html { overflow-x: hidden; }
 .alma-cta--text .alma-cta-label__text::after { position: absolute; right: 0; bottom: 0; left: 0; height: 1px; background: currentColor; content: ''; }
 .alma-ritual .alma-cta--text { display: inline-flex; justify-self: center; margin-top: 2.4rem; padding: 0; }
 
-.alma-favourites { display: block; max-width: none; padding: 7.5rem 3.2rem 8rem; background: var(--alma-soft); text-align: center; }
+.alma-favourites { display: block; max-width: none; padding: 5.5rem 3.2rem 6rem; background: var(--alma-soft); text-align: center; }
 .alma-favourites h2 { margin-bottom: 3.2rem; }
 .alma-favourites__tabs { display: flex; justify-content: center; flex-wrap: wrap; gap: .8rem 3rem; margin-bottom: 3.5rem; }
 .alma-favourites__tab { padding: .7rem 0; border-bottom: 1px solid transparent; color: inherit; font-size: 1.3rem; text-decoration: none; }
@@ -197,16 +197,16 @@ html { overflow-x: hidden; }
 .alma-scroll-gallery__button:hover:not(:disabled), .alma-scroll-gallery__button:focus-visible { transform: scale(1.06); }
 .alma-scroll-gallery__button:disabled { pointer-events: none; opacity: 0; }
 
-.alma-editorial { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); min-height: 72rem; background: #fff; color: var(--alma-ink); }
+.alma-editorial { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); min-height: 62rem; background: #fff; color: var(--alma-ink); }
 .alma-editorial--right .alma-editorial__media { order: 2; }
 .alma-editorial--right .alma-editorial__content { order: 1; }
 .alma-editorial--blush, .alma-editorial--dark { background: #fff; color: var(--alma-ink); }
-.alma-editorial__media { position: relative; min-height: 72rem; overflow: hidden; isolation: isolate; }
+.alma-editorial__media { position: relative; min-height: 62rem; overflow: hidden; isolation: isolate; }
 .alma-editorial__picture { display: block; width: 100%; height: 100%; }
-.alma-editorial__image { display: block; width: 100%; height: 100%; min-height: 72rem; object-fit: cover; }
+.alma-editorial__image { display: block; width: 100%; height: 100%; min-height: 62rem; object-fit: cover; }
 .alma-editorial__media::after { content: ''; display: none; position: absolute; inset: 0; z-index: 1; pointer-events: none; }
 .alma-editorial__media-copy { display: none; }
-.alma-editorial__content { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 7rem clamp(4rem, 8vw, 13rem); text-align: center; }
+.alma-editorial__content { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 5rem clamp(4rem, 8vw, 13rem); text-align: center; }
 .alma-editorial__eyebrow { margin: 0 0 1.4rem; font-size: 1.2rem; letter-spacing: .04em; }
 .alma-editorial h2 { max-width: 18ch; }
 .alma-editorial--dark h2, .alma-editorial--dark .price, .alma-editorial--dark .price-item { color: inherit; }
@@ -221,14 +221,14 @@ html { overflow-x: hidden; }
 .alma-editorial__step-number { font-size: 1rem; letter-spacing: .12em; }
 .alma-editorial__step-image { display: none; }
 .alma-editorial__step-label { font-family: var(--font-heading-family); font-size: 1.25rem; }
-.alma-editorial--immersive { display: flex; flex-direction: column; min-height: 0; }
-.alma-editorial--immersive .alma-editorial__media { order: 1; width: 100%; min-height: 0; }
-.alma-editorial--immersive .alma-editorial__image { width: 100%; height: min(56.25vw, 80.2rem); min-height: 56rem; object-fit: cover; }
-.alma-editorial--immersive .alma-editorial__content { order: 2; min-height: 36.7rem; padding: 6rem 2rem; }
+.alma-editorial--immersive { min-height: 0; }
+.alma-editorial--immersive .alma-editorial__media { order: 1; width: 100%; height: clamp(50rem, 53vw, 68rem); min-height: 0; background: #1a110e; }
+.alma-editorial--immersive .alma-editorial__image { width: 100%; height: 100%; min-height: 0; object-fit: contain; }
+.alma-editorial--immersive .alma-editorial__content { order: 2; min-height: 0; padding: 5rem clamp(4rem, 8vw, 13rem); }
 .alma-editorial--immersive .alma-editorial__product-line { margin-top: 1.6rem; }
 
-.alma-wardrobe { max-width: none; padding: 10rem 3.2rem 8rem; background: #fff; overflow: hidden; }
-.alma-wardrobe__heading { display: block; margin-bottom: 5.5rem; text-align: center; }
+.alma-wardrobe { max-width: none; padding: 6rem 3.2rem 5.5rem; background: #fff; overflow: hidden; }
+.alma-wardrobe__heading { display: block; margin-bottom: 4rem; text-align: center; }
 .alma-wardrobe__heading .rte { max-width: 56rem; margin: 0 auto; font-size: 1.4rem; }
 .alma-wardrobe__grid { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 4.8rem) / 4); gap: 1.6rem; overflow-x: auto; padding-bottom: 1.5rem; scroll-snap-type: x mandatory; scrollbar-width: none; }
 .alma-wardrobe__grid::-webkit-scrollbar { display: none; }
@@ -240,7 +240,7 @@ html { overflow-x: hidden; }
 .alma-wardrobe__label::before, .alma-wardrobe__label::after { content: ''; width: 1.7rem; height: 1.6rem; background-image: var(--alma-cta-dot); background-position: center; background-repeat: no-repeat; background-size: 1.7rem 1.6rem; }
 .alma-wardrobe__label-text { text-align: center; text-decoration-line: underline; text-decoration-thickness: 1px; text-underline-offset: .4rem; }
 
-.alma-service-band { max-width: none; overflow: hidden; padding: 6.5rem 3.2rem 7rem; border-top: 1px solid var(--alma-line); background: #fff; }
+.alma-service-band { max-width: none; overflow: hidden; padding: 4.5rem 3.2rem 5rem; border-top: 1px solid var(--alma-line); background: #fff; }
 .alma-service-band__inner { display: grid; grid-template-columns: minmax(18rem, .72fr) minmax(0, 3fr); gap: clamp(3rem, 4vw, 6.5rem); max-width: 128rem; margin: 0 auto; }
 .alma-service-band h2 { align-self: start; max-width: 9ch; margin: 3.2rem 0 0; font-size: 3.2rem; line-height: 1.1; text-align: left; }
 .alma-service-band__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0; border-top: 1px solid var(--alma-line); border-bottom: 1px solid var(--alma-line); }
@@ -436,13 +436,13 @@ html { overflow-x: hidden; }
   .alma-campaign__image { object-position: center; }
   .alma-campaign__actions { inset: 0 0 3rem; align-items: flex-start; padding-top: calc(100svh - var(--header-height, 7.8rem) - 7.8rem); }
   .alma-campaign__button { position: sticky; top: calc(100vh - 7.8rem); top: calc(100svh - 7.8rem); min-width: 0; }
-  .alma-ritual { min-height: 35.8rem; padding: 4rem 3.2rem; }
+  .alma-ritual { min-height: 31.5rem; padding: 3.2rem; }
   .alma-ritual__inner { width: min(100%, 24rem); }
   .alma-ritual h2, .alma-favourites h2, .alma-editorial h2, .alma-wardrobe h2 { font-size: 2.8rem; }
   .alma-ritual h2 { line-height: 3.4rem; }
   .alma-ritual__text { position: relative; top: 1.3rem; font-size: 1.6rem; line-height: 2.2rem; }
   .alma-ritual .alma-cta--text { position: relative; top: 1.6rem; }
-  .alma-favourites { padding: 5.5rem 1.5rem 6rem; }
+  .alma-favourites { padding: 4rem 1.5rem 4.5rem; }
   .alma-favourites h2 { margin-bottom: 2.2rem; }
   .alma-favourites__tabs { justify-content: flex-start; flex-wrap: nowrap; gap: .6rem 2rem; width: calc(100% + 3rem); box-sizing: border-box; margin-bottom: 2.5rem; margin-left: -1.5rem; padding: 0 3rem .8rem; overflow-x: auto; overscroll-behavior-x: contain; scroll-padding-inline: 3rem; scroll-snap-type: x proximity; scrollbar-width: none; }
   .alma-favourites__tabs::-webkit-scrollbar { display: none; }
@@ -458,7 +458,7 @@ html { overflow-x: hidden; }
   .alma-editorial--right .alma-editorial__content { order: 2; }
   .alma-editorial__media { order: 1; min-height: 0; }
   .alma-editorial__image { height: 50rem; min-height: 0; }
-  .alma-editorial__content { order: 2; min-height: 0; padding: 4.8rem 2.8rem 5.5rem; }
+  .alma-editorial__content { order: 2; min-height: 0; padding: 3.6rem 2.8rem 4.5rem; }
   .alma-editorial__content-heading { display: none; }
   .alma-editorial__media::after { display: block; background: linear-gradient(0deg, rgba(29, 0, 4, .72) 0%, rgba(29, 0, 4, .34) 24%, rgba(29, 0, 4, 0) 54%); }
   .alma-editorial__media-copy { display: block; position: absolute; inset: auto 2.4rem 3.2rem; z-index: 2; max-width: calc(100% - 4.8rem); color: #fff; text-align: left; text-shadow: 0 .1rem 1.8rem rgba(29, 0, 4, .36); }
@@ -474,13 +474,14 @@ html { overflow-x: hidden; }
   .alma-editorial .alma-button:hover { background-color: var(--alma-ink); color: #fff; text-decoration: none; }
   .alma-editorial__steps { gap: 1rem; margin-top: 3.6rem; padding-top: 2.2rem; }
   .alma-editorial__step-label { font-size: 1.1rem; line-height: 1.35; }
-  .alma-editorial--immersive .alma-editorial__image { height: 50rem; min-height: 0; }
+  .alma-editorial--immersive .alma-editorial__media { height: 50rem; background: #fff; }
+  .alma-editorial--immersive .alma-editorial__image { height: 50rem; min-height: 0; object-fit: cover; }
   .alma-editorial--immersive .alma-editorial__media::after { background: linear-gradient(180deg, rgba(29, 0, 4, .62) 0%, rgba(29, 0, 4, .2) 34%, rgba(29, 0, 4, 0) 62%); }
   .alma-editorial--immersive .alma-editorial__media-copy { inset: 8rem 2.4rem auto; max-width: calc(100% - 4.8rem); }
   .alma-editorial--immersive .alma-editorial__media-copy h2 { font-size: 3.8rem; }
-  .alma-editorial--immersive .alma-editorial__content { min-height: 0; padding: 4.4rem 2.8rem 5.2rem; }
-  .alma-wardrobe { padding: 1.2rem 2rem 6rem; overflow: visible; }
-  .alma-wardrobe__heading { margin-bottom: 4.5rem; }
+  .alma-editorial--immersive .alma-editorial__content { min-height: 0; padding: 3.6rem 2.8rem 4.5rem; }
+  .alma-wardrobe { padding: 1.2rem 2rem 4.5rem; overflow: visible; }
+  .alma-wardrobe__heading { margin-bottom: 3.5rem; }
   .alma-wardrobe__heading h2 { max-width: 24rem; margin-right: auto; margin-left: auto; }
   .alma-wardrobe__heading .rte { display: none; }
   .alma-wardrobe .alma-scroll-gallery { overflow: visible; }
@@ -491,7 +492,7 @@ html { overflow-x: hidden; }
   .alma-wardrobe__label { max-width: 100%; border-bottom: 0; font-size: 1.55rem; }
   .alma-wardrobe__label-text { max-width: 10ch; }
   .alma-wardrobe .alma-scroll-gallery__footer { display: none; }
-  .alma-service-band { padding: 4.8rem 0 5.5rem; text-align: left; }
+  .alma-service-band { padding: 3.5rem 0 4rem; text-align: left; }
   .alma-service-band__inner { display: block; max-width: none; }
   .alma-service-band h2 { max-width: none; margin: 0 2rem 3.2rem; font-size: 2.8rem; text-align: center; }
   .alma-service-band__grid { display: flex; grid-template-columns: none; gap: 1.2rem; max-width: none; overflow-x: auto; margin: 0; padding: 0 2rem 1.2rem; border: 0; scroll-padding-inline: 2rem; scroll-snap-type: x mandatory; scrollbar-width: none; }
