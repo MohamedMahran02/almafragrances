@@ -221,10 +221,10 @@ html { overflow-x: hidden; }
 .alma-editorial__step-number { font-size: 1rem; letter-spacing: .12em; }
 .alma-editorial__step-image { display: none; }
 .alma-editorial__step-label { font-family: var(--font-heading-family); font-size: 1.25rem; }
-.alma-editorial--immersive { min-height: 0; }
-.alma-editorial--immersive .alma-editorial__media { order: 1; width: 100%; height: clamp(50rem, 53vw, 68rem); min-height: 0; background: #1a110e; }
+.alma-editorial--immersive { display: flex; flex-direction: column; min-height: 0; }
+.alma-editorial--immersive .alma-editorial__media { order: 1; width: 100%; height: min(56.25vw, 80.2rem); min-height: 56rem; background: #1a110e; }
 .alma-editorial--immersive .alma-editorial__image { width: 100%; height: 100%; min-height: 0; object-fit: contain; }
-.alma-editorial--immersive .alma-editorial__content { order: 2; min-height: 0; padding: 5rem clamp(4rem, 8vw, 13rem); }
+.alma-editorial--immersive .alma-editorial__content { order: 2; min-height: 30rem; padding: 5rem 2rem; }
 .alma-editorial--immersive .alma-editorial__product-line { margin-top: 1.6rem; }
 
 .alma-wardrobe { max-width: none; padding: 6rem 3.2rem 5.5rem; background: #fff; overflow: hidden; }
@@ -474,7 +474,7 @@ html { overflow-x: hidden; }
   .alma-editorial .alma-button:hover { background-color: var(--alma-ink); color: #fff; text-decoration: none; }
   .alma-editorial__steps { gap: 1rem; margin-top: 3.6rem; padding-top: 2.2rem; }
   .alma-editorial__step-label { font-size: 1.1rem; line-height: 1.35; }
-  .alma-editorial--immersive .alma-editorial__media { height: 50rem; background: #fff; }
+  .alma-editorial--immersive .alma-editorial__media { height: 50rem; min-height: 0; background: #fff; }
   .alma-editorial--immersive .alma-editorial__image { height: 50rem; min-height: 0; object-fit: cover; }
   .alma-editorial--immersive .alma-editorial__media::after { background: linear-gradient(180deg, rgba(29, 0, 4, .62) 0%, rgba(29, 0, 4, .2) 34%, rgba(29, 0, 4, 0) 62%); }
   .alma-editorial--immersive .alma-editorial__media-copy { inset: 8rem 2.4rem auto; max-width: calc(100% - 4.8rem); }
