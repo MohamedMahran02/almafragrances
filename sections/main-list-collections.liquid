@@ -3,7 +3,7 @@
 
 <div class="page-width">
   <h1 class="title title--primary inline-richtext{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-    {{ section.settings.title }}
+    {% if request.locale.iso_code == 'ar' %}{{ 'alma.collections_title' | t }}{% else %}{{ section.settings.title }}{% endif %}
   </h1>
   {%- liquid
     case section.settings.sort

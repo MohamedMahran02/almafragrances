@@ -1,0 +1,21 @@
+{%- if request.locale.iso_code == 'ar' -%}
+  {%- assign note_key = name | downcase | strip -%}
+  {%- case note_key -%}
+    {%- when 'amber' -%}عنبر
+    {%- when 'citrus' -%}حمضيات
+    {%- when 'coconut' -%}جوز الهند
+    {%- when 'floral' -%}زهور
+    {%- when 'jasmine' -%}ياسمين
+    {%- when 'leather' -%}جلد
+    {%- when 'musk' -%}مسك
+    {%- when 'oud' -%}عود
+    {%- when 'pear' -%}كمثرى
+    {%- when 'powder' -%}بودرة
+    {%- when 'rose' -%}ورد
+    {%- when 'sandalwood' -%}خشب الصندل
+    {%- when 'vanilla' -%}فانيليا
+    {%- else -%}{{- name | escape -}}
+  {%- endcase -%}
+{%- else -%}
+  {{- name | escape -}}
+{%- endif -%}

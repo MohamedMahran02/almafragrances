@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="js" lang="{{ request.locale.iso_code }}">
+<html class="js" lang="{{ request.locale.iso_code }}" dir="{{ request.locale.direction }}">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,9 +17,9 @@
 
     <title>
       {{ page_title }}
-      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
-      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+      {%- if current_tags %} &ndash; {{ 'alma.meta.tagged' | t }} "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} &ndash; {{ 'alma.meta.page' | t }} {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} &ndash; {% if request.locale.iso_code == 'ar' %}{{ 'alma.brand' | t }}{% else %}{{ shop.name }}{% endif %}{% endunless -%}
     </title>
 
     {% if page_description %}

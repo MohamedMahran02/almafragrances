@@ -11,7 +11,7 @@ if (!customElements.get('alma-scent-finder')) {
       this.status = this.querySelector('.alma-scent-finder__status');
       this.clearButton = this.querySelector('.alma-scent-finder__clear');
       this.modal = this.closest('[data-alma-scent-finder-modal]');
-      this.initialMessage = this.status?.textContent.trim() || 'Select one or more notes to begin.';
+      this.initialMessage = this.status?.textContent.trim() || '';
       this.resultLimit = Number(this.dataset.resultLimit) || 4;
 
       this.inputs.forEach((input) => input.addEventListener('change', () => this.update()));
@@ -103,15 +103,15 @@ if (!customElements.get('alma-scent-finder')) {
         item.card.hidden = false;
         item.card.style.order = order;
         const reason = item.card.querySelector('.alma-scent-match__reason');
-        if (reason) reason.textContent = `Matches ${item.matches.map((note) => note.label).join(' · ')}`;
+        if (reason) reason.textContent = `${this.dataset.matchLabel} ${item.matches.map((note) => note.label).join(' · ')}`;
       });
 
       const shown = Math.min(ranked.length, this.resultLimit);
       this.resultsWrap.hidden = shown === 0;
       this.setResultsState(shown > 0);
       this.status.textContent = shown
-        ? `${shown} ${shown === 1 ? 'fragrance' : 'fragrances'} found for your aura.`
-        : 'No exact match yet. Try another note or combination.';
+        ? `${shown} ${shown === 1 ? this.dataset.foundOne : this.dataset.foundMany}`
+        : this.dataset.noMatch;
 
       if (shown) this.results.scrollTo({ left: 0, behavior: 'smooth' });
     }

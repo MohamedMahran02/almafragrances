@@ -41,42 +41,42 @@
 
   <div class="alma-footer__main page-width">
     <div class="alma-footer__brand">
-      <a class="alma-footer__logo" href="{{ routes.root_url }}" aria-label="ALMA by Reem Fragrances home">
-        <img src="{{ 'alma-logo-icon.png' | asset_url }}" width="1055" height="1491" loading="lazy" alt="ALMA by Reem Fragrances">
+      <a class="alma-footer__logo" href="{{ routes.root_url }}" aria-label="{{ 'alma.footer.home' | t }}">
+        <img src="{{ 'alma-logo-icon.png' | asset_url }}" width="1055" height="1491" loading="lazy" alt="{{ 'alma.brand' | t }}">
       </a>
-      <p class="alma-footer__market">United Arab Emirates <span aria-hidden="true">·</span> English</p>
-      <small class="alma-footer__copyright-inline">&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url }}</small>
+      <p class="alma-footer__market">{{ 'alma.footer.market' | t }} <span aria-hidden="true">·</span> {{ localization.language.endonym_name }}</p>
+      <small class="alma-footer__copyright-inline">&copy; {{ 'now' | date: '%Y' }}, <a href="{{ routes.root_url }}">{{ 'alma.brand' | t }}</a></small>
       {%- if section.settings.show_social and has_social_icons -%}
         {%- render 'social-icons', class: 'footer__list-social' -%}
       {%- endif -%}
     </div>
 
-    <nav class="alma-footer-nav" aria-label="Footer navigation">
+    <nav class="alma-footer-nav" aria-label="{{ 'alma.footer.navigation' | t }}">
     <div class="alma-footer-nav__group">
-      <h3>Shop</h3>
+      <h3>{{ 'alma.footer.shop' | t }}</h3>
       <ul class="list-unstyled" role="list">
-        <li><a href="{{ routes.all_products_collection_url }}">All products</a></li>
-        <li><a href="{{ alma_collections_url }}/alma-perfumes">Perfumes</a></li>
-        <li><a href="{{ alma_collections_url }}/alma-dokhon">Dukhoon</a></li>
-        <li><a href="/#shopify-section-gifting_story">Gifting</a></li>
+        <li><a href="{{ routes.all_products_collection_url }}">{{ 'alma.nav.shop_all' | t }}</a></li>
+        <li><a href="{{ alma_collections_url }}/alma-perfumes">{{ 'alma.nav.perfumes' | t }}</a></li>
+        <li><a href="{{ alma_collections_url }}/alma-dokhon">{{ 'alma.nav.dukhon' | t }}</a></li>
+        <li><a href="/#shopify-section-gifting_story">{{ 'alma.nav.gifting' | t }}</a></li>
       </ul>
     </div>
 
     <div class="alma-footer-nav__group">
-      <h3>Help</h3>
+      <h3>{{ 'alma.footer.help' | t }}</h3>
       <ul class="list-unstyled" role="list">
-        <li><a href="{{ alma_help_url }}">Contact us</a></li>
-        <li><button type="button" class="alma-footer__policy-trigger" data-alma-shipping-policy-open="AlmaShippingPolicy-{{ section.id }}" aria-haspopup="dialog">Shipping policy</button></li>
-        <li><a href="{{ routes.account_url }}">My account</a></li>
+        <li><a href="{{ alma_help_url }}">{{ 'alma.footer.contact' | t }}</a></li>
+        <li><button type="button" class="alma-footer__policy-trigger" data-alma-shipping-policy-open="AlmaShippingPolicy-{{ section.id }}" aria-haspopup="dialog">{{ 'alma.footer.shipping' | t }}</button></li>
+        <li><a href="{{ routes.account_url }}">{{ 'alma.footer.account' | t }}</a></li>
       </ul>
     </div>
 
     <div class="alma-footer-nav__group">
-      <h3>Legal</h3>
+      <h3>{{ 'alma.footer.legal' | t }}</h3>
       <ul class="list-unstyled" role="list">
-        <li><button type="button" class="alma-footer__policy-trigger" data-alma-privacy-open="AlmaPrivacy-{{ section.id }}" aria-haspopup="dialog">Privacy policy</button></li>
-        <li><button type="button" class="alma-footer__policy-trigger" data-alma-refund-open="AlmaRefund-{{ section.id }}" aria-haspopup="dialog">Refund policy</button></li>
-        <li><button type="button" class="alma-footer__policy-trigger" data-alma-terms-of-service-open="AlmaTermsOfService-{{ section.id }}" aria-haspopup="dialog">Terms of service</button></li>
+        <li><button type="button" class="alma-footer__policy-trigger" data-alma-privacy-open="AlmaPrivacy-{{ section.id }}" aria-haspopup="dialog">{{ 'alma.footer.privacy' | t }}</button></li>
+        <li><button type="button" class="alma-footer__policy-trigger" data-alma-refund-open="AlmaRefund-{{ section.id }}" aria-haspopup="dialog">{{ 'alma.footer.refunds' | t }}</button></li>
+        <li><button type="button" class="alma-footer__policy-trigger" data-alma-terms-of-service-open="AlmaTermsOfService-{{ section.id }}" aria-haspopup="dialog">{{ 'alma.footer.terms' | t }}</button></li>
       </ul>
     </div>
     </nav>
@@ -84,10 +84,10 @@
     {%- if section.settings.newsletter_enable -%}
       <div class="alma-footer__newsletter">
         {%- if section.settings.newsletter_heading != blank -%}
-          <h2>{{ section.settings.newsletter_heading }}</h2>
+          <h2>{% render 'alma-localized-copy', scope: 'footer', field: 'newsletter_heading', value: section.settings.newsletter_heading %}</h2>
         {%- endif -%}
         {%- if section.settings.newsletter_text != blank -%}
-          <div class="alma-footer__newsletter-text rte">{{ section.settings.newsletter_text }}</div>
+          <div class="alma-footer__newsletter-text rte">{% render 'alma-localized-copy', scope: 'footer', field: 'newsletter_text_html', value: section.settings.newsletter_text, richtext: true %}</div>
         {%- endif -%}
         {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
           <input type="hidden" name="contact[tags]" value="newsletter">
@@ -114,18 +114,18 @@
 
 <dialog id="AlmaShippingPolicy-{{ section.id }}" class="alma-shipping-policy" aria-labelledby="AlmaShippingPolicyTitle-{{ section.id }}">
   <div class="alma-shipping-policy__panel">
-    <button type="button" class="alma-shipping-policy__close" data-alma-shipping-policy-close aria-label="Close shipping policy">
+    <button type="button" class="alma-shipping-policy__close" data-alma-shipping-policy-close aria-label="{{ 'accessibility.close' | t }}">
       <span class="svg-wrapper">{{- 'icon-close.svg' | inline_asset_content -}}</span>
     </button>
-    <p class="alma-shipping-policy__eyebrow">ALMA delivery</p>
-    <h2 id="AlmaShippingPolicyTitle-{{ section.id }}">Shipping policy</h2>
-    <p>Free shipping is available to UAE. For all other GCC countries, a shipping fee of 40 AED applies</p>
+    <p class="alma-shipping-policy__eyebrow">{{ 'alma.footer.delivery' | t }}</p>
+    <h2 id="AlmaShippingPolicyTitle-{{ section.id }}">{{ 'alma.footer.shipping' | t }}</h2>
+    <p>{{ 'alma.footer.shipping_text' | t }}</p>
   </div>
 </dialog>
 
 {% render 'alma-terms-of-service', section_id: section.id %}
-<dialog id="AlmaPrivacy-{{ section.id }}" class="alma-shipping-policy" aria-labelledby="AlmaPrivacyTitle-{{ section.id }}"><div class="alma-shipping-policy__panel"><button type="button" class="alma-shipping-policy__close" data-alma-shipping-policy-close aria-label="Close privacy policy"><span class="svg-wrapper">{{- 'icon-close.svg' | inline_asset_content -}}</span></button><p class="alma-shipping-policy__eyebrow">ALMA legal</p><h2 id="AlmaPrivacyTitle-{{ section.id }}">Privacy policy</h2><p>{{ section.settings.privacy_policy_text }}</p></div></dialog>
-<dialog id="AlmaRefund-{{ section.id }}" class="alma-shipping-policy" aria-labelledby="AlmaRefundTitle-{{ section.id }}"><div class="alma-shipping-policy__panel"><button type="button" class="alma-shipping-policy__close" data-alma-shipping-policy-close aria-label="Close refund policy"><span class="svg-wrapper">{{- 'icon-close.svg' | inline_asset_content -}}</span></button><p class="alma-shipping-policy__eyebrow">ALMA legal</p><h2 id="AlmaRefundTitle-{{ section.id }}">Refund policy</h2><p>{{ section.settings.refund_policy_text }}</p></div></dialog>
+<dialog id="AlmaPrivacy-{{ section.id }}" class="alma-shipping-policy" aria-labelledby="AlmaPrivacyTitle-{{ section.id }}"><div class="alma-shipping-policy__panel"><button type="button" class="alma-shipping-policy__close" data-alma-shipping-policy-close aria-label="{{ 'accessibility.close' | t }}"><span class="svg-wrapper">{{- 'icon-close.svg' | inline_asset_content -}}</span></button><p class="alma-shipping-policy__eyebrow">{{ 'alma.footer.legal' | t }}</p><h2 id="AlmaPrivacyTitle-{{ section.id }}">{{ 'alma.footer.privacy' | t }}</h2><p>{% render 'alma-localized-copy', scope: 'footer', field: 'privacy_text', value: section.settings.privacy_policy_text %}</p></div></dialog>
+<dialog id="AlmaRefund-{{ section.id }}" class="alma-shipping-policy" aria-labelledby="AlmaRefundTitle-{{ section.id }}"><div class="alma-shipping-policy__panel"><button type="button" class="alma-shipping-policy__close" data-alma-shipping-policy-close aria-label="{{ 'accessibility.close' | t }}"><span class="svg-wrapper">{{- 'icon-close.svg' | inline_asset_content -}}</span></button><p class="alma-shipping-policy__eyebrow">{{ 'alma.footer.legal' | t }}</p><h2 id="AlmaRefundTitle-{{ section.id }}">{{ 'alma.footer.refunds' | t }}</h2><p>{% render 'alma-localized-copy', scope: 'footer', field: 'refund_text', value: section.settings.refund_policy_text %}</p></div></dialog>
 
 {% schema %}
 {

@@ -1,9 +1,9 @@
 <div class="alma-scroll-gallery__footer">
-  <div class="alma-scroll-gallery__controls" aria-label="{{ label | escape }}">
-    <button class="alma-scroll-gallery__button" type="button" data-alma-scroll-previous aria-controls="{{ track_id }}" aria-label="Previous {{ item_name | escape }}" disabled>
+  <div class="alma-scroll-gallery__controls" aria-label="{% if request.locale.iso_code == 'ar' %}{{ 'alma.carousel.controls' | t }}{% else %}{{ label | escape }}{% endif %}">
+    <button class="alma-scroll-gallery__button" type="button" data-alma-scroll-previous aria-controls="{{ track_id }}" aria-label="{{ 'alma.carousel.previous' | t }}" disabled>
       <svg aria-hidden="true" viewBox="0 0 20 20" width="20" height="20"><path d="M13.15 4.65c-1.9 1.82-3.73 3.59-5.78 5.35 2.05 1.76 3.88 3.53 5.78 5.35"/></svg>
     </button>
-    <button class="alma-scroll-gallery__button" type="button" data-alma-scroll-next aria-controls="{{ track_id }}" aria-label="Next {{ item_name | escape }}" disabled>
+    <button class="alma-scroll-gallery__button" type="button" data-alma-scroll-next aria-controls="{{ track_id }}" aria-label="{{ 'alma.carousel.next' | t }}" disabled>
       <svg aria-hidden="true" viewBox="0 0 20 20" width="20" height="20"><path d="M6.85 4.65c1.9 1.82 3.73 3.59 5.78 5.35-2.05 1.76-3.88 3.53-5.78 5.35"/></svg>
     </button>
   </div>

@@ -12,40 +12,41 @@
 {%- if finder_collection.products != blank and finder_notes != blank -%}
   <dialog id="AlmaScentFinder" class="alma-scent-finder-modal" aria-labelledby="AlmaScentFinder-{{ section.id }}" data-alma-scent-finder-modal>
     <div class="alma-scent-finder-modal__panel">
-      <button class="alma-scent-finder-modal__close" type="button" aria-label="Close Find Your Aura" data-alma-scent-finder-close>
+      <button class="alma-scent-finder-modal__close" type="button" aria-label="{{ 'accessibility.close' | t }}" data-alma-scent-finder-close>
         <span class="svg-wrapper">{{- 'icon-close.svg' | inline_asset_content -}}</span>
       </button>
       <div class="alma-scent-finder-modal__scroll">
-  <alma-scent-finder class="alma-scent-finder" data-result-limit="{{ section.settings.results_limit }}">
+  <alma-scent-finder class="alma-scent-finder" data-result-limit="{{ section.settings.results_limit }}" data-match-label="{{ 'alma.finder.matches' | t }}" data-found-one="{{ 'alma.finder.found_one' | t }}" data-found-many="{{ 'alma.finder.found_many' | t }}" data-no-match="{{ 'alma.finder.no_match' | t }}">
     <div class="alma-scent-finder__intro page-width">
       <div class="alma-scent-finder__heading">
-        <p class="alma-scent-finder__eyebrow">ALMA Fragrances</p>
-        <h2 id="AlmaScentFinder-{{ section.id }}">{{ section.settings.heading | escape }}</h2>
-        <div class="alma-scent-finder__text rte">{{ section.settings.text }}</div>
+        <p class="alma-scent-finder__eyebrow">{{ 'alma.brand' | t }}</p>
+        <h2 id="AlmaScentFinder-{{ section.id }}">{% render 'alma-localized-copy', scope: 'home', section_id: section.id, field: 'heading', value: section.settings.heading %}</h2>
+        <div class="alma-scent-finder__text rte">{% render 'alma-localized-copy', scope: 'home', section_id: section.id, field: 'text_html', value: section.settings.text, richtext: true %}</div>
       </div>
 
       <fieldset class="alma-scent-finder__notes" aria-describedby="AlmaScentFinderHelp-{{ section.id }}">
-        <legend>{{ section.settings.prompt | escape }}</legend>
-        <p id="AlmaScentFinderHelp-{{ section.id }}" class="visually-hidden">Select one or more fragrance notes to see matching perfumes.</p>
+        <legend>{% render 'alma-localized-copy', scope: 'home', section_id: section.id, field: 'prompt', value: section.settings.prompt %}</legend>
+        <p id="AlmaScentFinderHelp-{{ section.id }}" class="visually-hidden">{{ 'alma.finder.help' | t }}</p>
         <div class="alma-scent-finder__note-grid">
           {%- for note in finder_notes -%}
             {%- assign note_label = note.name.value | default: note.name -%}
             <label class="alma-scent-finder__note">
-              <input type="checkbox" value="{{ note_label | downcase | escape }}" data-note-label="{{ note_label | escape }}">
-              <span>{{ note_label | escape }}</span>
+              {%- capture localized_note -%}{% render 'alma-note-name', name: note_label %}{%- endcapture -%}
+              <input type="checkbox" value="{{ note_label | downcase | escape }}" data-note-label="{{ localized_note | escape }}">
+              <span>{{ localized_note }}</span>
             </label>
           {%- endfor -%}
         </div>
       </fieldset>
 
       <div class="alma-scent-finder__actions">
-        <p class="alma-scent-finder__status" role="status" aria-live="polite">{{ section.settings.initial_message | escape }}</p>
-        <button class="alma-scent-finder__clear" type="button" hidden>Clear selection</button>
+        <p class="alma-scent-finder__status" role="status" aria-live="polite">{% render 'alma-localized-copy', scope: 'home', section_id: section.id, field: 'initial_message', value: section.settings.initial_message %}</p>
+        <button class="alma-scent-finder__clear" type="button" hidden>{{ 'alma.finder.clear' | t }}</button>
       </div>
     </div>
 
     <div class="alma-scent-finder__results-wrap page-width" hidden>
-      <div class="alma-scent-finder__results" role="region" aria-label="Recommended perfumes" tabindex="0">
+      <div class="alma-scent-finder__results" role="region" aria-label="{{ 'alma.finder.recommended' | t }}" tabindex="0">
         {%- for product in finder_collection.products limit: 50 -%}
           {%- liquid
             assign note_references = product.metafields.custom.fragrance_note_refs.value
@@ -82,7 +83,7 @@
             <h3><a href="{{ product.url }}">{{ product.title | escape }}</a></h3>
             {%- if product.type != blank -%}<p class="alma-scent-match__type">{{ product.type | escape }}</p>{%- endif -%}
             {% render 'price', product: product %}
-            <a class="alma-text-link" href="{{ product.url }}">Discover<span class="visually-hidden"> — {{ product.title | escape }}</span></a>
+            <a class="alma-text-link" href="{{ product.url }}">{{ 'alma.discover' | t }}<span class="visually-hidden"> — {{ product.title | escape }}</span></a>
           </article>
         {%- endfor -%}
       </div>

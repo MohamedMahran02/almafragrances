@@ -27,16 +27,16 @@
 -%}
 {%- if has_collections -%}
 <alma-favourites class="alma-favourites page-width">
-  <h2 id="AlmaFavourites-{{ section.id }}">{{ section.settings.title | escape }}</h2>
+  <h2 id="AlmaFavourites-{{ section.id }}">{% render 'alma-localized-copy', scope: 'home', section_id: section.id, field: 'title', value: section.settings.title %}</h2>
   <div class="alma-favourites__tabs" aria-labelledby="AlmaFavourites-{{ section.id }}">
     {%- if best_selling_collection != blank -%}
-      <a class="alma-favourites__tab" href="#AlmaPanel-{{ section.id }}-best-sellers" id="AlmaTab-{{ section.id }}-best-sellers">{{ section.settings.best_selling_label | default: best_selling_collection.title | escape }}</a>
+      <a class="alma-favourites__tab" href="#AlmaPanel-{{ section.id }}-best-sellers" id="AlmaTab-{{ section.id }}-best-sellers">{% render 'alma-localized-copy', scope: 'home', section_id: section.id, field: 'best_selling_label', value: section.settings.best_selling_label %}</a>
     {%- endif -%}
     {%- for block in section.blocks -%}
       {%- assign tab_handle = block.settings.collection.handle | default: block.settings.collection -%}
       {%- assign tab_collection = collections[tab_handle] -%}
       {%- if tab_collection != blank -%}
-        <a class="alma-favourites__tab" href="#AlmaPanel-{{ section.id }}-{{ block.id }}" id="AlmaTab-{{ section.id }}-{{ block.id }}" {{ block.shopify_attributes }}>{{ block.settings.label | default: tab_collection.title | escape }}</a>
+        <a class="alma-favourites__tab" href="#AlmaPanel-{{ section.id }}-{{ block.id }}" id="AlmaTab-{{ section.id }}-{{ block.id }}" {{ block.shopify_attributes }}>{% if block.settings.label != blank %}{% render 'alma-localized-copy', scope: 'home', section_id: section.id, block_id: block.id, field: 'label', value: block.settings.label %}{% else %}{{ tab_collection.title | escape }}{% endif %}</a>
       {%- endif -%}
     {%- endfor -%}
   </div>
@@ -56,7 +56,7 @@
               <h3><a href="{{ product.url }}">{{ product.title | escape }}</a></h3>
               {%- if product.type != blank -%}<p class="alma-product__type">{{ product.type | escape }}</p>{%- endif -%}
               {% render 'price', product: product %}
-              <a class="alma-text-link" href="{{ product.url }}">{{ section.settings.product_link_label | escape }}<span class="visually-hidden"> - {{ product.title | escape }}</span></a>
+              <a class="alma-text-link" href="{{ product.url }}">{% render 'alma-localized-copy', scope: 'home', section_id: section.id, field: 'product_link_label', value: section.settings.product_link_label %}<span class="visually-hidden"> - {{ product.title | escape }}</span></a>
             </article>
           {%- endfor -%}
         </div>
@@ -83,7 +83,7 @@
                 <h3><a href="{{ product.url }}">{{ product.title | escape }}</a></h3>
                 {%- if product.type != blank -%}<p class="alma-product__type">{{ product.type | escape }}</p>{%- endif -%}
                 {% render 'price', product: product %}
-                <a class="alma-text-link" href="{{ product.url }}">{{ section.settings.product_link_label | escape }}<span class="visually-hidden"> - {{ product.title | escape }}</span></a>
+                <a class="alma-text-link" href="{{ product.url }}">{% render 'alma-localized-copy', scope: 'home', section_id: section.id, field: 'product_link_label', value: section.settings.product_link_label %}<span class="visually-hidden"> - {{ product.title | escape }}</span></a>
               </article>
             {%- endfor -%}
           </div>

@@ -1,10 +1,12 @@
 (() => {
   const dirhamPrefix = /\bDhs\.?\s*(?=\d)/gi;
+  const arabicStorefront = document.documentElement.lang.toLowerCase().startsWith('ar');
   const skippedElements = 'script, style, noscript, textarea, input, select, option, [data-alma-keep-dhs]';
 
   const normalizeText = (textNode) => {
     if (!textNode?.nodeValue || textNode.parentElement?.closest(skippedElements)) return;
-    const normalized = textNode.nodeValue.replace(dirhamPrefix, '');
+    let normalized = textNode.nodeValue.replace(dirhamPrefix, '');
+    if (arabicStorefront) normalized = normalized.replace(/\bAED\b/g, 'د.إ');
     if (normalized !== textNode.nodeValue) textNode.nodeValue = normalized;
   };
 

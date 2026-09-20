@@ -1,0 +1,18 @@
+{%- liquid
+  assign alma_copy_key = 'alma.' | append: scope | append: '.' | append: field
+  if section_id != blank
+    assign alma_section_name = section_id | split: '__' | last
+    assign alma_copy_key = 'alma.' | append: scope | append: '.' | append: alma_section_name
+    if block_id != blank
+      assign alma_copy_key = alma_copy_key | append: '.' | append: block_id
+    endif
+    assign alma_copy_key = alma_copy_key | append: '.' | append: field
+  endif
+-%}
+{%- if request.locale.iso_code == 'ar' -%}
+  {{- alma_copy_key | t -}}
+{%- elsif richtext -%}
+  {{- value -}}
+{%- else -%}
+  {{- value | escape -}}
+{%- endif -%}

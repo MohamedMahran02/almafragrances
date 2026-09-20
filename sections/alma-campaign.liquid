@@ -4,7 +4,7 @@
       {%- if section.settings.image != blank -%}
         {{ section.settings.image | image_url: width: 2400 | image_tag: widths: '480, 750, 1100, 1500, 2000, 2400', sizes: '100vw', loading: 'eager', fetchpriority: 'high', class: 'alma-campaign__image' }}
       {%- else -%}
-        <img class="alma-campaign__image" src="{{ 'alma-campaign-hero.png' | asset_url }}" width="1683" height="934" alt="ALMA spray and solid perfume in warm evening light" loading="eager" fetchpriority="high">
+        <img class="alma-campaign__image" src="{{ 'alma-campaign-hero.png' | asset_url }}" width="1683" height="934" alt="{{ 'alma.campaign_image_alt' | t }}" loading="eager" fetchpriority="high">
       {%- endif -%}
     </div>
     <div class="alma-campaign__actions">
@@ -13,7 +13,7 @@
           <a class="alma-campaign__button button button--secondary" href="{{ block.settings.button_link_1 | default: routes.all_products_collection_url }}" {{ block.shopify_attributes }}>
             <span class="alma-cta-label">
               <img class="alma-cta-label__dot" src="{{ 'alma-cta-dot.svg' | asset_url }}" width="17" height="16" alt="" aria-hidden="true">
-              <span class="alma-cta-label__text">{{ block.settings.button_label_1 | escape }}</span>
+              <span class="alma-cta-label__text">{% render 'alma-localized-copy', scope: 'home', section_id: section.id, block_id: block.id, field: 'button_label_1', value: block.settings.button_label_1 %}</span>
               <img class="alma-cta-label__dot" src="{{ 'alma-cta-dot.svg' | asset_url }}" width="17" height="16" alt="" aria-hidden="true">
             </span>
           </a>
@@ -25,15 +25,15 @@
     <div class="alma-ritual__inner">
       {%- for block in section.blocks -%}
         {%- if block.type == 'heading' -%}
-          <h2 id="AlmaRitual-{{ section.id }}" {{ block.shopify_attributes }}>{{ block.settings.heading | escape }}</h2>
+          <h2 id="AlmaRitual-{{ section.id }}" {{ block.shopify_attributes }}>{% render 'alma-localized-copy', scope: 'home', section_id: section.id, block_id: block.id, field: 'heading', value: block.settings.heading %}</h2>
         {%- endif -%}
       {%- endfor -%}
-      <div class="alma-ritual__text rte">{{ section.settings.text }}</div>
+      <div class="alma-ritual__text rte">{% render 'alma-localized-copy', scope: 'home', section_id: section.id, field: 'text_html', value: section.settings.text, richtext: true %}</div>
       {%- if section.settings.link_label != blank -%}
         <a class="alma-text-link alma-cta--text" href="{{ section.settings.link | default: collections['layering-kits'].url | default: routes.all_products_collection_url }}">
           <span class="alma-cta-label">
             <img class="alma-cta-label__dot" src="{{ 'alma-cta-dot.svg' | asset_url }}" width="17" height="16" alt="" aria-hidden="true">
-            <span class="alma-cta-label__text">{{ section.settings.link_label | escape }}</span>
+            <span class="alma-cta-label__text">{% render 'alma-localized-copy', scope: 'home', section_id: section.id, field: 'link_label', value: section.settings.link_label %}</span>
             <img class="alma-cta-label__dot" src="{{ 'alma-cta-dot.svg' | asset_url }}" width="17" height="16" alt="" aria-hidden="true">
           </span>
         </a>

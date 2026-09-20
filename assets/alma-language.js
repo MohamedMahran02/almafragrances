@@ -14,12 +14,27 @@
     }
   };
 
+  const showArabicDescription = (description) => {
+    const blocks = [...description.children];
+    if (!blocks.some((block) => arabicText.test(block.textContent))) return;
+    for (const block of blocks) {
+      if (!arabicText.test(block.textContent)) block.hidden = true;
+    }
+  };
+
   const localizeDescriptions = (root = document) => {
-    if (!document.documentElement.lang.toLowerCase().startsWith('en')) return;
-    root.querySelectorAll('[data-alma-localized-description]').forEach(showEnglishDescription);
-    root.querySelectorAll('[data-alma-hide-if-arabic]').forEach((element) => {
-      if (arabicText.test(element.textContent)) element.hidden = true;
-    });
+    const language = document.documentElement.lang.toLowerCase();
+    if (language.startsWith('en')) {
+      root.querySelectorAll('[data-alma-localized-description]').forEach(showEnglishDescription);
+      root.querySelectorAll('[data-alma-hide-if-arabic]').forEach((element) => {
+        if (arabicText.test(element.textContent)) element.hidden = true;
+      });
+    } else if (language.startsWith('ar')) {
+      root.querySelectorAll('[data-alma-localized-description]').forEach(showArabicDescription);
+      root.querySelectorAll('[data-alma-hide-if-arabic]').forEach((element) => {
+        if (/[A-Za-z]/.test(element.textContent)) element.hidden = true;
+      });
+    }
   };
 
   localizeDescriptions();

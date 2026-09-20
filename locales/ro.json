@@ -540,5 +540,179 @@
       "expanded": "Formularul pentru destinatarul cardului cadou este extins",
       "collapsed": "Formularul pentru destinatarul cardului cadou este restrâns"
     }
+  },
+  "alma": {
+    "brand": "ALMA Fragrances",
+    "campaign_image_alt": "ALMA spray and solid perfume in warm evening light",
+    "discover": "Discover",
+    "search_products": "Search products",
+    "categories": "ALMA fragrance categories",
+    "collections_title": "Collections",
+    "related_products": "You may also like",
+    "password": {
+      "heading": "Opening soon",
+      "text_html": "<p>Be the first to know when we launch.</p>"
+    },
+    "carousel": {
+      "controls": "Carousel controls",
+      "previous": "Previous items",
+      "next": "Next items"
+    },
+    "contact": {
+      "eyebrow": "ALMA concierge",
+      "heading": "Start a conversation",
+      "intro_html": "<p>Tell us how we can help. Our team will be in touch soon.</p>"
+    },
+    "meta": {
+      "tagged": "tagged",
+      "page": "Page"
+    },
+    "nav": {
+      "products": "Products",
+      "shop_all": "Shop all",
+      "perfumes": "Perfumes",
+      "lotions": "Lotions",
+      "dukhon": "Dukhoon",
+      "charms": "Solid charms",
+      "layering": "Layering & kits",
+      "gifting": "Gifting",
+      "contact": "Contact"
+    },
+    "finder": {
+      "matches": "Matches",
+      "found_one": "fragrance found for your aura.",
+      "found_many": "fragrances found for your aura.",
+      "no_match": "No exact match yet. Try another note or combination.",
+      "help": "Select one or more fragrance notes to see matching perfumes.",
+      "clear": "Clear selection",
+      "recommended": "Recommended perfumes"
+    },
+    "signup": {
+      "code": "Your code"
+    },
+    "footer": {
+      "home": "ALMA Fragrances home",
+      "market": "United Arab Emirates",
+      "navigation": "Footer navigation",
+      "shop": "Shop",
+      "help": "Help",
+      "contact": "Contact us",
+      "shipping": "Shipping policy",
+      "account": "My account",
+      "legal": "Legal",
+      "privacy": "Privacy policy",
+      "refunds": "Refund policy",
+      "terms": "Terms of service",
+      "delivery": "ALMA delivery",
+      "shipping_text": "Free shipping is available to UAE. For all other GCC countries, a shipping fee of 40 AED applies",
+      "newsletter_heading": "Stay in the world of ALMA",
+      "newsletter_text_html": "<p>New fragrances, rituals and gifts—sent occasionally.</p>",
+      "privacy_text": "By using our website, you agree to allow third parties to process your IP address to determine your location for currency conversion. You also agree to store that currency in a temporary browser cookie, so it remains selected while you browse.",
+      "refund_text": "All sales are final and we do not accept returns or offer refunds."
+    },
+    "home": {
+      "image_banner": {
+        "text_html": "<p>Lotion, solid perfume and spray perfume come together on the skin. Layer each texture, one after another, to create a lasting fragrance ritual that feels entirely your own.</p>",
+        "link_label": "Explore Alma Collection",
+        "heading": {
+          "heading": "A ritual, entirely yours"
+        },
+        "button": {
+          "button_label_1": "Shop all"
+        }
+      },
+      "featured_collection": {
+        "title": "The ALMA fragrance collection",
+        "best_selling_label": "Best Selling",
+        "product_link_label": "Choose options",
+        "solid": {
+          "label": "Alma Solid Perfumes"
+        }
+      },
+      "scent_finder": {
+        "heading": "Find Your Aura",
+        "text_html": "<p>Choose the notes you love. We’ll reveal the ALMA fragrances that share your scent.</p>",
+        "prompt": "Which notes draw you in?",
+        "initial_message": "Select one or more notes to begin."
+      },
+      "layering_story": {
+        "eyebrow": "The ALMA ritual",
+        "heading": "Layer it your way",
+        "text_html": "<p>Begin with lotion, deepen the scent with solid perfume, then finish with spray perfume. Three textures, one scent story that belongs to you.</p>",
+        "link_label": "Explore layering",
+        "steps_label": "Lotion, solid perfume and spray perfume",
+        "lotion": {
+          "label": "Lotion"
+        },
+        "solid": {
+          "label": "Solid Perfume"
+        },
+        "spray": {
+          "label": "Spray Perfume"
+        },
+        "signup_eyebrow": "A gift for your ritual",
+        "signup_heading": "Take 5% off your first ALMA ritual",
+        "signup_text_html": "<p>Share your details for a private welcome offer and first access to new ALMA stories.</p>",
+        "signup_button_label": "Unlock my 5% off",
+        "signup_fine_print": "By joining, you agree to receive ALMA news and offers.",
+        "signup_success_heading": "Your welcome offer is ready",
+        "signup_success_text_html": "<p>Thank you for joining ALMA. Use your code at checkout and enjoy 5% off your first ritual.</p>",
+        "signup_launcher_label": "5% off your ritual"
+      },
+      "dukhon_story": {
+        "eyebrow": "For the space around you",
+        "heading": "A deeper atmosphere",
+        "text_html": "<p>ALMA Dukhoon brings the ritual into your home with a warm, enveloping presence.</p>",
+        "link_label": "Discover Dukhoon",
+        "steps_label": "Complete the ritual"
+      },
+      "gifting_story": {
+        "title": "Gifting by ALMA",
+        "product_link_label": "Discover",
+        "gifts": {
+          "label": "Gifts & rituals"
+        }
+      },
+      "wardrobe": {
+        "heading": "Explore the ALMA wardrobe",
+        "text_html": "<p>Perfume for skin, space and every part of your ritual.</p>",
+        "spray": {
+          "label": "Spray Perfumes"
+        },
+        "solid": {
+          "label": "Solid Perfumes"
+        },
+        "lotions": {
+          "label": "Lotions"
+        },
+        "dukhon": {
+          "label": "Dukhoon"
+        },
+        "charms": {
+          "label": "Solid Charms"
+        },
+        "layering": {
+          "label": "Layering & Kits"
+        }
+      },
+      "services": {
+        "heading": "The ALMA experience",
+        "gifting": {
+          "heading": "Personal gifting",
+          "text_html": "<p>Curated sets and ritual pieces for a present chosen their way.</p>",
+          "link_label": "Explore gifting"
+        },
+        "ritual": {
+          "heading": "A three-step ritual",
+          "text_html": "<p>Lotion, solid perfume and spray perfume build a scent with depth.</p>",
+          "link_label": "Discover layering"
+        },
+        "wardrobe": {
+          "heading": "The complete wardrobe",
+          "text_html": "<p>Perfumes, solids, lotions, Dukhoon, charms and ready-made kits.</p>",
+          "link_label": "Shop all"
+        }
+      }
+    }
   }
 }

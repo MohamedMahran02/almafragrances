@@ -1,3 +1,6 @@
+{%- if request.locale.iso_code == 'ar' -%}
+  {%- render 'alma-terms-of-service-ar', section_id: section_id -%}
+{%- else -%}
 <dialog id="AlmaTermsOfService-{{ section_id }}" class="alma-terms-of-service" aria-labelledby="AlmaTermsOfServiceTitle-{{ section_id }}">
   <div class="alma-terms-of-service__panel">
     <button type="button" class="alma-terms-of-service__close" data-alma-terms-of-service-close aria-label="Close terms of service"><span class="svg-wrapper">{{- 'icon-close.svg' | inline_asset_content -}}</span></button>
@@ -28,3 +31,4 @@
     </div>
   </div>
 </dialog>
+{%- endif -%}

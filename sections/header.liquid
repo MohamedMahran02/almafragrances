@@ -256,17 +256,15 @@
           </localization-form>
         {% endif %}
 
-        {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
-          <localization-form class="small-hide medium-hide" data-prevent-hide>
-            {%- form 'localization', id: 'HeaderLanguageForm', class: 'localization-form' -%}
-              <div>
-                <h2 class="visually-hidden" id="HeaderLanguageLabel">{{ 'localization.language_label' | t }}</h2>
-                {%- render 'language-localization', localPosition: 'HeaderLanguage' -%}
-              </div>
-            {%- endform -%}
-          </localization-form>
-        {%- endif -%}
       </div>
+      {%- if localization.available_languages.size > 1 -%}
+        <localization-form class="alma-header-language" data-prevent-hide>
+          {%- form 'localization', id: 'HeaderLanguageForm', class: 'localization-form' -%}
+            <h2 class="visually-hidden" id="HeaderLanguageLabel">{{ 'localization.language_label' | t }}</h2>
+            {%- render 'language-localization', localPosition: 'HeaderLanguage' -%}
+          {%- endform -%}
+        </localization-form>
+      {%- endif -%}
 
 
       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">

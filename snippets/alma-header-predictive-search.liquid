@@ -6,7 +6,7 @@
         id="AlmaHeaderPredictiveSearch"
         type="search"
         name="q"
-        placeholder="Search products"
+        placeholder="{{ 'alma.search_products' | t }}"
         role="combobox"
         aria-expanded="false"
         aria-owns="predictive-search-results"
@@ -18,7 +18,7 @@
         autocapitalize="off"
         spellcheck="false"
       >
-      <label class="field__label" for="AlmaHeaderPredictiveSearch">Search products</label>
+      <label class="field__label" for="AlmaHeaderPredictiveSearch">{{ 'alma.search_products' | t }}</label>
       <input type="hidden" name="options[prefix]" value="last">
       <button type="reset" class="reset__button field__button hidden" aria-label="{{ 'general.search.reset' | t }}">
         <span class="svg-wrapper">{{- 'icon-reset.svg' | inline_asset_content -}}</span>
