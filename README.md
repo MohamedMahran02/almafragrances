@@ -976,6 +976,12 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Changed: reordered the existing Shopify language localization control after the cart in the header icon row. The existing centered flex alignment and language-switch behavior remain in place.
 - Files: `sections/header.liquid`, `README.md`.
 - Checks: `git diff --check` passes. Shopify Theme Check reports 970 matching-translation errors in the pulled `locales/ar.json` plus 7 existing warnings across 7 files; those locale errors predate this header-only change and need separate correction. GitHub push verification is pending.
+### 2026-09-20 - Align the header language globe
+
+- Request: enlarge the language globe and align it with the remaining header icons.
+- Changed: set the existing language globe artwork to 24px inside its unchanged 44px header control, retaining the shared centered flex alignment, cart placement and touch target.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: `git diff --check` passes. Shopify Theme Check continues to report the pre-existing 970 matching-translation errors in `locales/ar.json` and 7 warnings across 7 files; no icon-specific errors were reported.
 ## Continuation prompt
 
 ```text

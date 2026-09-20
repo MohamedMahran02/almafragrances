@@ -117,7 +117,7 @@ html[dir="rtl"] .alma-theme .alma-header-predictive-search .predictive-search { 
 .alma-header-language .localization-form__select { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; min-width: 5.8rem; min-height: 4.4rem; padding: 0 .5rem; font-size: 1.1rem; }
 .alma-header-language .localization-form__select .icon-caret { display: none; }
 .alma-header-language .language-selector { min-width: 12rem; right: 0; left: auto; }
-.alma-language-icon { display: block; flex: none; }
+.alma-language-icon { display: block; flex: none; width: 2.4rem; height: 2.4rem; }
 .alma-header-language .disclosure__link { display: flex; align-items: center; gap: .3rem; }
 .alma-theme .header-wrapper--border-bottom { border-color: var(--alma-line); }
 .alma-theme .section-header.shopify-section-header-sticky { z-index: 10; }
