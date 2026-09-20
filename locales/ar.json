@@ -838,113 +838,7 @@
         "thank_you_confirmed_order_with_phone": "ستتلقى رسالة نصية لتأكيد الطلب مع رقم طلبك بعد قليل.",
         "thank_you_confirmed_order_with_email_and_phone": "سوف تتلقى رسالة تأكيد بالبريد الإلكتروني تحتوي على رقم طلبك قريبًا.",
         "thank_you_confirmed_orders_with_email": "ستصلك رسائل تأكيد منفصلة عبر البريد الإلكتروني تتضمن أرقام طلباتك قريبًا",
-        "thank_you_confirmed_orders_with_phone": "ستصلك قريبًا رسائل تأكيد منفصلة تتضمن أرقام طلباتك",
-        "thank_you_confirmed_orders_with_email_and_phone": "ستصلك رسائل تأكيد منفصلة عبر البريد الإلكتروني تتضمن أرقام طلباتك قريبًا",
-        "thank_you_confirmed_order_with_email_payment": "لقد سددت دفعة لطلبك بتاريخ %{date}.",
-        "thank_you_confirmed_order_with_phone_payment": "لقد سددت دفعة لطلبك بتاريخ %{date}.",
-        "thank_you_confirmed_order_with_email_and_phone_payment": "لقد سددت دفعة لطلبك بتاريخ %{date}.",
-        "thank_you_confirmed_order_with_email_pick_up": "سوف تتلقى رسالة بريد إلكتروني عندما يكون طلبك جاهزًا للاستلام.",
-        "thank_you_confirmed_order_with_phone_pick_up": "سوف تتلقى رسالة نصية عندما يصبح طلبك جاهزًا للاستلام.",
-        "thank_you_confirmed_order_with_email_and_phone_pick_up": "سوف تتلقى رسالة بريد إلكتروني عندما يكون طلبك جاهزًا للاستلام.",
-        "thank_you_confirmed_order_with_missing": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
-        "thank_you_confirmed_order_with_missing_payment": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
-        "thank_you_confirmed_order_with_missing_pick_up": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
-        "thank_you_confirmed_order_with_draft": "سنخبرك إذا احتجنا إلى المزيد من المعلومات أو عند تأكيد طلبك.",
-        "thank_you_confirmed_order_with_draft_payment": "سنخبرك إذا احتجنا إلى المزيد من المعلومات أو عند تأكيد طلبك.",
-        "thank_you_confirmed_order_with_draft_pick_up": "سنخبرك إذا احتجنا إلى المزيد من المعلومات أو عند تأكيد طلبك.",
-        "thank_you_unconfirmed_items_heading": {
-          "one": "لم يتم تأكيد عنصر واحد",
-          "other": "لم يتم تأكيد بعض العناصر"
-        },
-        "thank_you_unconfirmed_items_description": {
-          "one": "لم يتم تحصيل أي رسوم منك مقابل هذا",
-          "other": "لم تتم محاسبتك على هذه."
-        },
-        "thank_you_item_label": {
-          "one": "%{count} بند",
-          "other": "%{count} بند"
-        },
-        "thank_you_from_shop": "من %{shop_name}",
-        "thank_you_from_other_store": "من متجر آخر",
-        "thank_you_payments_app_failed_pending_payment": "لم يتم محاسبتك على طلبك. ارجع إلى سلة التسوق الخاصة بك لمراجعة طلبك وإعادة الدفع.",
-        "thank_you_payments_app_failed_pending_payment_payment": "لم يتم محاسبتك على طلبك. ارجع إلى سلة التسوق الخاصة بك لمراجعة طلبك وإعادة الدفع.",
-        "thank_you_payments_app_failed_pending_payment_pick_up": "لم يتم محاسبتك على طلبك. ارجع إلى سلة التسوق الخاصة بك لمراجعة طلبك وإعادة الدفع.",
-        "thank_you_payments_app_pending_payment_description_default_with_missing": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
-        "thank_you_payments_app_pending_payment_description_default_with_missing_payment": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
-        "thank_you_payments_app_pending_payment_description_default_with_missing_pick_up": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
-        "thank_you_payments_app_pending_payment_description_default_with_email_and_phone": "سوف تتلقى رسالة تأكيد بالبريد الإلكتروني تحتوي على رقم طلبك قريبًا.",
-        "thank_you_payments_app_pending_payment_description_default_with_email_and_phone_payment": "سوف تتلقى رسالة تأكيد بالبريد الإلكتروني تحتوي على رقم طلبك قريبًا.",
-        "thank_you_payments_app_pending_payment_description_default_with_email_and_phone_pick_up": "سوف تتلقى رسالة تأكيد بالبريد الإلكتروني تحتوي على رقم طلبك قريبًا.",
-        "thank_you_payments_app_pending_payment_description_default_with_email": "سوف تتلقى رسالة تأكيد بالبريد الإلكتروني تحتوي على رقم طلبك قريبًا.",
-        "thank_you_payments_app_pending_payment_description_default_with_email_payment": "سوف تتلقى رسالة تأكيد بالبريد الإلكتروني تحتوي على رقم طلبك قريبًا.",
-        "thank_you_payments_app_pending_payment_description_default_with_email_pick_up": "سوف تتلقى رسالة تأكيد بالبريد الإلكتروني تحتوي على رقم طلبك قريبًا.",
-        "thank_you_payments_app_pending_payment_description_default_with_phone": "ستتلقى رسالة نصية لتأكيد الطلب مع رقم طلبك بعد قليل.",
-        "thank_you_payments_app_pending_payment_description_default_with_phone_payment": "ستتلقى رسالة نصية لتأكيد الطلب مع رقم طلبك بعد قليل.",
-        "thank_you_payments_app_pending_payment_description_default_with_phone_pick_up": "ستتلقى رسالة نصية لتأكيد الطلب مع رقم طلبك بعد قليل.",
-        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_missing": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
-        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_missing_payment": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
-        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_missing_pick_up": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
-        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني تتضمن رقم طلبك.",
-        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone_payment": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني تتضمن رقم طلبك.",
-        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone_pick_up": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني تتضمن رقم طلبك.",
-        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني تتضمن رقم طلبك.",
-        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email_payment": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني تتضمن رقم طلبك.",
-        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email_pick_up": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني تتضمن رقم طلبك.",
-        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_phone": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد نصية تحتوي على رقم طلبك.",
-        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_phone_payment": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد نصية تحتوي على رقم طلبك.",
-        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_phone_pick_up": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد نصية تحتوي على رقم طلبك.",
-        "thank_you_payments_app_pending_payment_description_provider_action_required_default": "ستتلقى رسالة بريد إلكتروني عند تأكيد دفعتك.",
-        "track_your_order_link_text": "تتبع طلبك",
-        "checkout_again": "تسجيل الخروج مرة أخرى",
-        "checkout_on_remote_shop_link_text": "تحقق من %{remoteShopName}",
-        "checkout_on_another_store": "اطلع على متجر آخر",
-        "order_status_confirmed_order_with_email": "ستتلقى بريدًا إلكترونيًا عندما يكون طلبك جاهزًا.",
-        "order_status_confirmed_order_with_phone": "قد تتلقى رسالة نصية عندما يكون طلبك جاهزًا.",
-        "order_status_confirmed_order_with_email_and_phone": "ستتلقى بريدًا إلكترونيًا عندما يكون طلبك جاهزًا.",
-        "order_status_confirmed_order_with_email_payment": "لقد سددت دفعة لطلبك بتاريخ %{date}.",
-        "order_status_confirmed_order_with_phone_payment": "لقد سددت دفعة لطلبك بتاريخ %{date}.",
-        "order_status_confirmed_order_with_email_and_phone_payment": "لقد سددت دفعة لطلبك بتاريخ %{date}.",
-        "order_status_confirmed_order_with_email_pick_up": "سوف تتلقى رسالة بريد إلكتروني عندما يكون طلبك جاهزًا للاستلام.",
-        "order_status_confirmed_order_with_phone_pick_up": "سوف تتلقى رسالة نصية عندما يصبح طلبك جاهزًا للاستلام.",
-        "order_status_confirmed_order_with_email_and_phone_pick_up": "ستتلقى رسالة بريد إلكتروني ورسالة نصية عندما يصبح طلبك جاهزاً للاستلام.",
-        "order_status_payments_app_pending_payment_description_default_with_missing": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
-        "order_status_payments_app_pending_payment_description_default_with_missing_payment": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
-        "order_status_payments_app_pending_payment_description_default_with_missing_pick_up": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
-        "order_status_payments_app_pending_payment_description_default_with_email_and_phone": "ستتلقى رسالة تأكيد عبر البريد الإلكتروني قريبًا. تتبّع طلبك باستخدام تطبيق Shop.",
-        "order_status_payments_app_pending_payment_description_default_with_email_and_phone_payment": "ستتلقى رسالة تأكيد عبر البريد الإلكتروني قريبًا. تتبّع طلبك باستخدام تطبيق Shop.",
-        "order_status_payments_app_pending_payment_description_default_with_email_and_phone_pick_up": "ستتلقى رسالة تأكيد عبر البريد الإلكتروني قريبًا. تتبّع طلبك باستخدام تطبيق Shop.",
-        "order_status_payments_app_pending_payment_description_default_with_email": "ستتلقى رسالة تأكيد عبر البريد الإلكتروني قريبًا. تتبّع طلبك باستخدام تطبيق Shop.",
-        "order_status_payments_app_pending_payment_description_default_with_email_payment": "ستتلقى رسالة تأكيد عبر البريد الإلكتروني قريبًا. تتبّع طلبك باستخدام تطبيق Shop.",
-        "order_status_payments_app_pending_payment_description_default_with_email_pick_up": "ستتلقى رسالة تأكيد عبر البريد الإلكتروني قريبًا. تتبّع طلبك باستخدام تطبيق Shop.",
-        "order_status_payments_app_pending_payment_description_default_with_phone": "ستتلقى رسالة تأكيد نصية قريبًا. تتبع طلبك باستخدام تطبيق Shop.",
-        "order_status_payments_app_pending_payment_description_default_with_phone_payment": "ستتلقى رسالة تأكيد نصية قريبًا. تتبع طلبك باستخدام تطبيق Shop.",
-        "order_status_payments_app_pending_payment_description_default_with_phone_pick_up": "ستتلقى رسالة تأكيد نصية قريبًا. تتبع طلبك باستخدام تطبيق Shop.",
-        "order_status_payments_app_pending_payment_description_buyer_action_required_with_missing": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
-        "order_status_payments_app_pending_payment_description_buyer_action_required_with_missing_payment": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
-        "order_status_payments_app_pending_payment_description_buyer_action_required_with_missing_pick_up": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
-        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني. تتبع طلبك باستخدام تطبيق Shop.",
-        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone_payment": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني. تتبع طلبك باستخدام تطبيق Shop.",
-        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone_pick_up": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني. تتبع طلبك باستخدام تطبيق Shop.",
-        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني. تتبع طلبك باستخدام تطبيق Shop.",
-        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_payment": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني. تتبع طلبك باستخدام تطبيق Shop.",
-        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_pick_up": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني. تتبع طلبك باستخدام تطبيق Shop.",
-        "order_status_payments_app_pending_payment_description_buyer_action_required_with_phone": "بعد إتمام عملية الدفع، ستصلك رسالة تأكيد نصية. تتبع طلبك باستخدام تطبيق Shop.",
-        "order_status_payments_app_pending_payment_description_buyer_action_required_with_phone_payment": "بعد إتمام عملية الدفع، ستصلك رسالة تأكيد نصية. تتبع طلبك باستخدام تطبيق Shop.",
-        "order_status_payments_app_pending_payment_description_buyer_action_required_with_phone_pick_up": "بعد إتمام عملية الدفع، ستصلك رسالة تأكيد نصية. تتبع طلبك باستخدام تطبيق Shop.",
-        "order_status_payments_app_failed_pending_payment": "لم يتم محاسبتك على طلبك. ارجع إلى سلة التسوق الخاصة بك لمراجعة طلبك وإعادة الدفع.",
-        "order_status_payments_app_failed_pending_payment_payment": "لم يتم محاسبتك على طلبك. ارجع إلى سلة التسوق الخاصة بك لمراجعة طلبك وإعادة الدفع.",
-        "order_status_payments_app_failed_pending_payment_pick_up": "لم يتم محاسبتك على طلبك. ارجع إلى سلة التسوق الخاصة بك لمراجعة طلبك وإعادة الدفع.",
-        "order_status_confirmed_order_local": "نحن نجهز طلبك للتسليم.",
-        "order_status_confirmed_order_local_pick_up": "نحن نجهز طلبك.",
-        "order_status_confirmed_order_local_payment": "نحن نُجهز طلبك.",
-        "order_status_updates_with_email": "ستتلقى تحديثات الشحن والتسليم عبر البريد الإلكتروني.",
-        "order_status_updates_with_phone": "يمكنك الحصول على تحديثات الشحن والتسليم عبر الرسائل النصية.",
-        "order_status_updates_with_email_and_phone": "ستتلقى تحديثات الشحن والتسليم عبر البريد الإلكتروني.",
-        "order_status_updates_with_missing": "اختر الطريقة التي تريد تلقي تحديثات الشحن بها.",
-        "order_status_confirmed_with_installments_payment_return": "أعد انتباهك إلى موظف المبيعات.",
-        "order_status_confirmed_with_installments_payment_confirm": "ستتلقى رسالة تأكيد عبر البريد الإلكتروني تحتوي على رقم طلبك وتفاصيل جدول أقساطك قريبًا.",
-        "confirmed_title": "تم تأكيد طلبك",
-        "confirmed_description": "لقد قبلنا طلبك، ونحن نعمل على تجهيزه. يُرجى العودة إلى هذه الصفحة للحصول على تحديثات حول حالة شحنتك."
+        "thank_you_confirmed_orders_with_phone": "ستصلك قريبًا رسائل تأكيد منفصلة تتضمن أرقام طلباتك"
       },
       "customer_account": {
         "saved_address_option_link": "استخدام عنوان محفوظ",
@@ -1240,9 +1134,13 @@
           },
           "alipay": {
             "checkout_disclosure": "الرجاء تأكيد المبلغ الإجمالي باليوان الصيني في تطبيق Alipay",
-            "checkout_disclosure_with_alternative_payment_currency": "سيقوم %{shop_name} بمعالجة هذه الدفعة كـ %{amount_due} %{processing_currency}، وسيقوم Alipay بتحويلها إلى يوان صيني"
+            "checkout_disclosure_with_alternative_payment_currency": "سيقوم %{shop_name} بمعالجة هذه الدفعة كـ %{amount_due} %{processing_currency}، وسيقوم Alipay بتحويلها إلى يوان صيني",
+            "checkout_disclosure_charged_in_cny": "سيعالج %{shop_name} هذه الدفعة كـ %{amount_due} %{processing_currency}",
+            "post_purchase_disclosure": "عرض إجمالي الرنمينبي في Alipay"
           }
-        }
+        },
+        "pay_merchant_label": "دفع إلى %{merchant_name}",
+        "discount_applies_to_subscription_items_only": "هذا الخصم ينطبق فقط على عناصر الاشتراك"
       },
       "wallets": {
         "errors": {
@@ -1788,6 +1686,274 @@
         },
         "cancelled": {
           "title": "تم إلغاء التحديد"
+        }
+      },
+      "shipping": {
+        "title": "الشحن",
+        "delivery_title": "توصيل",
+        "shipping_method_title": "طريقة الشحن",
+        "shipping_method_rollup_accessibility_label": "خيارات طريقة الشحن",
+        "shipping_method_one_time_purchase_group_title": "شراء لمرة واحدة",
+        "shipping_method_first_shipment_group_title": {
+          "one": "الشحنة الأولى",
+          "other": "الشحنات الأولى"
+        },
+        "shipping_method_subscription_group_title": "اشتراك",
+        "shipping_method_recurring_shipments_group_title": {
+          "one": "شحنة متكررة",
+          "other": "شحنات متكررة"
+        },
+        "subscription_shipping": "شحن الاشتراك",
+        "subscription_local_delivery": "الاشتراك والتوصيل المحلي",
+        "subscription_pickup": "استلام الاشتراك",
+        "waiting_on_rate_notice": "جاري الحصول على أسعار الشحن المتاحة…",
+        "waiting_on_pickup_location_notice": "جاري الحصول على مواقع الاستلام المتاحة…",
+        "no_rates_for_cart_or_destination_notice": "لا تتوفر طرق شحن لعربة التسوق الخاصة بك أو عنوانك",
+        "no_pickup_location_notice": "أحد منتجاتك على الأقل غير متاح للاستلام",
+        "no_rates_for_country_notice": "لم يتم العثور على أسعار شحن لهذا العنوان.",
+        "no_rates_contact_notice": "للمزيد من المعلومات، يرجى الاتصال بنا.",
+        "free_rate_label": "مجاني",
+        "cheapest_rate_label": "الأرخص",
+        "estimated_delivery_date": {
+          "one": "%{count} يوم عمل",
+          "other": "%{count} أيام عمل"
+        },
+        "estimated_delivery_date_range": "من %{minimum} إلى %{maximum} أيام عمل",
+        "delivery_date_range": "%{min_time}–%{max_time}",
+        "estimated_delivery_time": "وقت التسليم المقدر: %{time}",
+        "estimated_delivery_time_range": "تاريخ التسليم المتوقع %{min_time}–%{max_time}",
+        "delivery_today": "توصيل في نفس اليوم %{time}",
+        "delivery_tomorrow": "التوصيل في اليوم التالي %{time}",
+        "two_day_delivery": "توصيل خلال يومين %{time}",
+        "delivery": "التوصيل %{time}",
+        "delivery_to": "التسليم إلى",
+        "arrives_time": "يصل في %{time}",
+        "arrives_time_range": "يصل %{min_time}–%{max_time}",
+        "estimated_time": "الوقت المقدر %{time}",
+        "estimated_time_range": "تقديريًا: %{min_time}–%{max_time}",
+        "default_description": "يُشحن في يوم عمل واحد",
+        "unbranded_default_description": "جاهز للشحن",
+        "unbranded_description_same_day": "الشحن في نفس يوم العمل",
+        "unbranded_description_with_fulfillment_days": {
+          "one": "تشحن في يوم العمل التالي",
+          "other": "يشحن خلال %{count} أيام عمل"
+        },
+        "unbranded_description_with_fulfillment_weeks": {
+          "one": "يشحن خلال أسبوع",
+          "other": "تشحن في غضون %{count} أسابيع"
+        },
+        "shipping_line_phone_label": "رقم الهاتف المحمول (مطلوب)",
+        "shipping_line_phone": "قد يستخدم سعاة البريد هذا الرقم للاتصال بك.",
+        "shipping_line_delivery_phone_label": "رقم الهاتف المحمول",
+        "shipping_line_delivery_phone": "قد يتم التواصل معك بخصوص مستجدات تسليم طلبك.",
+        "optional_shipping_line_delivery_instructions_label": "تعليمات التسليم (اختياري)",
+        "shipping_line_delivery_instructions": "أدخل المعلومات الضرورية مثل رموز الدخول أو تعليمات التسليم.",
+        "other_method": {
+          "zero": "لا توجد طرق أخرى متاحة",
+          "one": "طرق أخرى متاحة عند %{count}",
+          "other": "يتوفر %{count} طريقة أخرى تبدأ من"
+        },
+        "shipping_rate_discounted_amount": "كان: %{original_amount}. الآن: %{amount}",
+        "local_delivery": "توصيل محلي",
+        "prime_not_available": {
+          "default": "لا يتوفر التوصيل بـ \"برايم\" لطلبك. تم تحديث خيارات الشحن الخاصة بك."
+        },
+        "subscription_delivery_description": {
+          "free_shipping_cycles": {
+            "one": "شحن مجاني لـ %{count} عملية توصيل إضافية",
+            "other": "شحن مجاني لـ %{count} عملية توصيل إضافية"
+          },
+          "free_shipping_cycles_delivery_not_included": {
+            "one": "شحن مجاني عند %{count} تسليم",
+            "other": "شحن مجاني لـ %{count} من الطلبات"
+          },
+          "first_n_order_free_with_cycle": {
+            "one": "شحن مجاني لـ %{count} عملية توصيل أخرى، ثم %{recurring_order_shipping_price}",
+            "other": "شحن مجاني لـ %{count} عملية توصيل أخرى، ثم %{recurring_order_shipping_price}"
+          },
+          "first_n_order_free_with_cycle_delivery_not_included": {
+            "one": "شحن مجاني لـ %{count} عملية توصيل، ثم %{recurring_order_shipping_price}",
+            "other": "شحن مجاني لـ %{count} من عمليات التسليم، ثم %{recurring_order_shipping_price}"
+          },
+          "max_cycles_base_shipping": {
+            "one": "%{count} عملية توصيل إضافية مقابل %{shipping_price}",
+            "other": "%{count} عمليات توصيل إضافية بسعر %{shipping_price} لكل واحدة"
+          },
+          "max_cycles_base_shipping_delivery_not_included": {
+            "one": "%{count} توصيل مقابل %{shipping_price}",
+            "other": "%{count} عمليات توصيل إضافية بسعر %{shipping_price} لكل واحدة"
+          },
+          "prepaid_free_shipping_with_cycles": {
+            "one": "شحن مجاني لأول %{cycle}، يليه %{recurring_order_shipping_price}",
+            "other": "شحن مجاني لأول %{cycle}، يليه %{recurring_order_shipping_price}"
+          },
+          "prepaid_order_one_cycle": {
+            "one": "%{shipping_price} لـ %{count} عملية توصيل إضافية",
+            "other": "%{shipping_price} مقابل %{count} عملية توصيل أخرى (%{per_delivery_cost})"
+          },
+          "prepaid_order_one_cycle_delivery_not_included": {
+            "one": "%{shipping_price} مقابل %{count} توصيل",
+            "other": "%{shipping_price} لـ %{count} عملية توصيل (%{per_delivery_cost} لكل عملية توصيل)"
+          },
+          "prepaid_order_no_cycle": {
+            "one": "%{shipping_price} لشحن %{count} إضافية، يتبعها %{recurring_order_shipping_price}",
+            "other": "%{shipping_price} لـ %{count} عملية توصيل أخرى (%{per_delivery_cost})، ثم %{recurring_order_shipping_price}"
+          },
+          "prepaid_order_no_cycle_delivery_not_included": {
+            "one": "%{shipping_price} لعدد %{count} من عمليات التسليم، يليها %{recurring_order_shipping_price}",
+            "other": "%{shipping_price} لـ %{count} من عمليات التسليم (%{per_delivery_cost})، متبوعًا بـ %{recurring_order_shipping_price}"
+          },
+          "subscription_free_with_frequency_label": "شحن مجاني %{delivery_frequency}",
+          "prepaid_delivery_frequency": {
+            "one": "لتوصيل %{count}",
+            "other": "لـ %{count} عملية تسليم"
+          },
+          "subscription_delivery_frequency": {
+            "day": {
+              "one": "كل يوم",
+              "other": "كل %{count} أيام"
+            },
+            "week": {
+              "one": "كل أسبوع",
+              "other": "كل %{count} أسابيع"
+            },
+            "month": {
+              "one": "كل شهر",
+              "other": "كل %{count} أشهر"
+            },
+            "year": {
+              "one": "كل عام",
+              "other": "كل %{count} سنوات"
+            }
+          },
+          "multiple_subscriptions_shipping_price_label": "%{shipping_price} لكل عملية تسليم",
+          "prepaid_shipping_price_label": "%{shipping_price} لكل عملية توصيل × %{delivery_interval_count}",
+          "initial_order_discounted": "أول تكلفة شحن %{discounted_shipping_cost}، ثم %{frequency_description}",
+          "prepaid_initial_order_discounted": "تكلفة الشحن الأولى %{discounted_shipping_price} %{prepaid_delivery_frequency}",
+          "prepaid_initial_order_discounted_with_per_delivery_price": "رسوم الشحن الأولى %{discounted_shipping_price} %{prepaid_delivery_frequency} (%{discounted_cost_per_delivery})",
+          "prepaid_initial_order_discounted_with_renewal": "تكلفة الشحن الأولى %{discounted_shipping_price} %{prepaid_delivery_frequency}، ثم %{shipping_price} %{billing_cycle}",
+          "prepaid_initial_order_discounted_with_per_delivery_price_and_renewal": "تكلفة الشحن الأولى %{discounted_shipping_price} %{prepaid_delivery_frequency} (%{discounted_cost_per_delivery})، ثم %{shipping_price} %{billing_cycle}",
+          "shipping_price_included": "مضمّن",
+          "recurring_order_shipping_price": "تليها %{recurring_order_shipping_price}",
+          "first_order_shipping_price_included": "الطلب الأول مشمول، يليه %{recurring_order_shipping_price}",
+          "first_order_different_shipping_price": "%{first_order_shipping_price} (%{per_delivery_price} لكل عملية تسليم)، يتبعها %{recurring_order_shipping_price}",
+          "first_n_order_free": {
+            "one": "الطلب الأول مجاني",
+            "other": "أول %{count} طلبات مجانية"
+          },
+          "free_for_first_n_order": {
+            "one": "للرتبة الأولى",
+            "other": "لأول %{count} طلبات"
+          }
+        },
+        "one_time_purchase_shipping": "شحن لمرة واحدة",
+        "duties_and_taxes_title": "الرسوم والضرائب",
+        "shipping_information_required_notice": "معلومات الشحن مطلوبة. {{link}}.",
+        "shipping_information_redirect_link": "أدخل معلوماتك هنا",
+        "loading_progressive_rates": "البحث عن المزيد من الأسعار...",
+        "no_other_methods_available": "لا توجد طرق أخرى متاحة",
+        "duties_and_taxes_options": {
+          "ddu_title": "الدفع عند الاستلام",
+          "ddu_caption": "قد تُطبق رسوم إضافية",
+          "ddp_title": "ادفع الآن",
+          "ddp_caption": "لا توجد رسوم إضافية عند التسليم"
+        },
+        "shipping_method_combinations": {
+          "without_separator": "%{firstMethod}, %{secondMethod}",
+          "with_separator": "%{rest}, %{current},",
+          "combination": "%{rest} و %{current}"
+        },
+        "shipping_used_as_billing_notice": "سيتم استخدام هذا أيضًا كعنوان للفوترة لطلبك هذا.",
+        "address_update": "تحديث العنوان",
+        "shipping_address_title": "شحن إلى",
+        "shipping_address_rollup_accessibility_label": "خيارات عنوان الشحن",
+        "third_party_address_timeout": "تعذّر تحميل العناوين. أعد المحاولة أو استخدم عنوانًا آخر.",
+        "third_party_address_error": "حدث خطأ أثناء تحميل تحديد العنوان. أدخل عنوانك يدويًا بالأسفل.",
+        "third_party_payment_timeout": "تعذر تحميل طرق الدفع. أعد المحاولة أو استخدم طريقة دفع مختلفة.",
+        "third_party_payment_error": "حدث خطأ أثناء تحميل اختيار الدفع. الرجاء استخدام طريقة دفع مختلفة.",
+        "add_address": "استخدم عنواناً مختلفاً",
+        "add_delivery_instructions": "أضف تعليمات التسليم",
+        "edit": "تعديل",
+        "delete": "حذف",
+        "back": "الظهر",
+        "address_more": "إجراءات أخرى لهذا العنوان",
+        "address_edit": "تعديل العنوان",
+        "address_delete": "حذف العنوان",
+        "address_confirm": "هل أنت متأكد أنك تريد حذف هذا العنوان من حسابك؟",
+        "address_default": "تعيين كإعداد افتراضي",
+        "address_form": {
+          "add_address": "أضف العنوان",
+          "save": "حفظ",
+          "cancel": "إلغاء",
+          "edit": "تعديل العنوان",
+          "update": "حفظ التغييرات",
+          "generic_error": "حدثت مشكلة أثناء حفظ عنوانك. حاول مرة أخرى.",
+          "one_time_address_subtitle": "استخدم عنوانًا لمرة واحدة لهذا الطلب"
+        },
+        "different_shipping_method_summary": "أدخل عنوان شحن مختلفًا لعرض طرق الشحن المتاحة",
+        "invalid_shipping_method_summary": "أدخل عنوان شحن صالحًا لعرض طرق الشحن المتاحة",
+        "invalid_shipping_method_summary_selected": "اختر عنوان شحن مختلفًا لعرض طرق الشحن المتاحة",
+        "method_summary": {
+          "incomplete_address_entered": "أدخل عنوان شحن كاملاً لعرض طرق الشحن المتاحة",
+          "incomplete_address_selected": "حدد عنوان شحن كاملاً لعرض طرق الشحن المتاحة"
+        },
+        "local_pickup": {
+          "search_address": "ابحث عن عنوان",
+          "rollup_title": "موقع الالتقاء",
+          "rollup_accessibility_label": "خيارات موقع الاستلام"
+        },
+        "missing_shipping_address": "عنوان الشحن مفقود",
+        "split_shipping_merchandise_quantity_label_standard": "%{quantity} عناصر",
+        "split_shipping_merchandise_quantity_label_additional": "+%{quantity} أخرى",
+        "split_shipping_merchandise_shipment_number": "الشحنة %{number} من %{total}",
+        "pre_order_ships_now": "السفن الآن",
+        "pre_order_ships_later": "تشحن لاحقًا",
+        "pre_order_ships_date": "سفن في %{date}",
+        "split_shipping_shipped_by_shop": "تم الشحن بواسطة %{shop_name}",
+        "split_shipping_multiple_shipment_label": "شحنات متعددة",
+        "split_shipping_shipping_label": "الأسلوب",
+        "split_shipping_shipment_notice": "سوف يصل طلبك في %{quantity_shipments}",
+        "split_shipping_first_shipment_notice": "سوف يصل طلبك الأول في %{quantity_shipments}",
+        "split_shipping_multiple_shipment_quantity_label": "%{quantity} شحنة",
+        "split_shipping_multiple_shipment_notice": "سيصل طلبك في شحنات متعددة",
+        "split_shipping_multiple_shipment_notice_one_time_purchase": "سيصل طلبك في %{quantity} شحنات.",
+        "split_shipping_shipment_count_notice_one_time_purchase": {
+          "one": "سيصل طلبك في شحنة واحدة",
+          "other": "سيصل طلبك في %{count} شحنة"
+        },
+        "split_shipping_more_shipping_options": "المزيد من خيارات الشحن",
+        "split_shipping_shipment_number": "الشحنة رقم %{number}",
+        "split_shipping_option_free": "شحن مجاني",
+        "split_shipping_option_lowest_price": "أقل سعر",
+        "split_shipping_option_fastest": "الأسرع",
+        "split_shipping_option_recommended": "موصى به",
+        "split_shipping_option_custom": "مخصص",
+        "add_shipping_address": "أضف عنوان الشحن",
+        "add_new_delivery_address": "إضافة عنوان توصيل جديد",
+        "choose_new_address": "اختر عنوانًا جديدًا"
+      },
+      "localized_fields": {
+        "additional_information": {
+          "title": "معلومات إضافية",
+          "tax_credential_br": "CPF/CNPJ",
+          "shipping_credential_br": "CPF/CNPJ",
+          "shipping_credential_kr": "الرمز الجمركي الشخصي",
+          "shipping_credential_cn": "رقم هوية المقيم",
+          "tax_credential_it": "الرقم الضريبي (اختياري)",
+          "tax_email_it": "PEC (اختياري)",
+          "tax_credential_cl": "روث",
+          "shipping_credential_cl": "روث",
+          "tax_credential_co": "رقم الهوية/الرقم الضريبي",
+          "tax_credential_type_co": "نوع الهوية",
+          "shipping_credential_co": "رقم الهوية/الرقم الضريبي",
+          "shipping_credential_type_co": "نوع الهوية",
+          "tax_credential_cr": "رقم الهوية/RUT",
+          "shipping_credential_cr": "رقم الهوية/RUT",
+          "tax_credential_ec": "مدير/وحدة تنظيمية/ضريبة القيمة المضافة",
+          "shipping_credential_ec": "مدير/وحدة تنظيمية/ضريبة القيمة المضافة",
+          "tax_credential_gt": "رقم التعريف الضريبي/رقم ضريبة القيمة المضافة",
+          "shipping_credential_gt": "رقم التعريف الضريبي/رقم ضريبة القيمة المضافة",
+          "tax_credential_id": "NPWP"
         }
       }
     },
