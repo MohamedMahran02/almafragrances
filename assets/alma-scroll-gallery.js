@@ -37,10 +37,28 @@ if (!customElements.get('alma-scroll-gallery')) {
       const styles = getComputedStyle(this.track);
       const gap = parseFloat(styles.columnGap || styles.gap) || 0;
       const distance = firstItem.getBoundingClientRect().width + gap;
-      this.track.scrollBy({
-        left: direction * distance,
+      const nextPosition = this.getScrollPosition() + direction * distance;
+      this.track.scrollTo({
+        left: this.getNativeScrollPosition(nextPosition),
         behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
       });
+    }
+
+    isRtl() {
+      return getComputedStyle(this.track).direction === 'rtl';
+    }
+
+    getScrollPosition() {
+      const maximum = Math.max(0, this.track.scrollWidth - this.track.clientWidth);
+      if (!this.isRtl()) return this.track.scrollLeft;
+      return this.track.scrollLeft < 0 ? -this.track.scrollLeft : maximum - this.track.scrollLeft;
+    }
+
+    getNativeScrollPosition(position) {
+      const maximum = Math.max(0, this.track.scrollWidth - this.track.clientWidth);
+      const clamped = Math.max(0, Math.min(maximum, position));
+      if (!this.isRtl()) return clamped;
+      return this.track.scrollLeft < 0 ? -clamped : maximum - clamped;
     }
 
     queueRefresh() {
@@ -50,7 +68,7 @@ if (!customElements.get('alma-scroll-gallery')) {
 
     refresh() {
       const maximum = Math.max(0, this.track.scrollWidth - this.track.clientWidth);
-      const position = Math.max(0, Math.min(maximum, this.track.scrollLeft));
+      const position = Math.max(0, Math.min(maximum, this.getScrollPosition()));
       const hasOverflow = maximum > 2;
       this.previousButton.disabled = !hasOverflow || position <= 2;
       this.nextButton.disabled = !hasOverflow || position >= maximum - 2;

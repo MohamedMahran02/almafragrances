@@ -883,3 +883,57 @@ html[dir="rtl"] .alma-theme .alma-header-predictive-search .predictive-search { 
 @media (prefers-reduced-motion: reduce) {
   .alma-ritual-signup-modal::backdrop, .alma-ritual-signup-modal__panel { animation: none; }
 }
+
+
+/* Arabic storefront direction and component alignment */
+html[dir="rtl"] .alma-theme { direction: rtl; }
+html[dir="rtl"] .alma-theme :is(input, textarea) { direction: rtl; text-align: right; }
+html[dir="rtl"] .alma-theme .field__label { right: 1.5rem; left: auto; }
+html[dir="rtl"] .alma-theme .field__button { right: auto; left: 0; }
+html[dir="rtl"] .alma-theme .alma-header-language .language-selector { right: auto; left: 0; }
+html[dir="rtl"] .alma-theme .alma-header-predictive-search .field__input { padding-right: 1.5rem; padding-left: 4.8rem; }
+html[dir="rtl"] .alma-theme .alma-products-menu summary { padding-right: 1.35rem; padding-left: 2.8rem; }
+html[dir="rtl"] .alma-theme .alma-products-menu summary .icon-caret { transform: scaleX(-1); }
+
+html[dir="rtl"] .alma-theme product-info[id^='MainProduct-'] .product__info-container,
+html[dir="rtl"] .alma-theme product-info[id^='MainProduct-'] .product__description,
+html[dir="rtl"] .alma-theme product-info[id^='MainProduct-'] .product__accordion .accordion__content { text-align: right; }
+html[dir="rtl"] .alma-theme product-info[id^='MainProduct-'] :is(.product__text.caption-with-letter-spacing, .product-form__input .form__label, .quantity__label, .alma-product-description summary, .product__accordion .accordion__title) { letter-spacing: 0; }
+html[dir="rtl"] .alma-theme product-info[id^='MainProduct-'] .product-form__input .svg-wrapper { right: auto; left: 1.5rem; }
+html[dir="rtl"] .alma-theme product-info[id^='MainProduct-'] .product-form__error-message-wrapper .svg-wrapper { margin-right: 0; margin-left: .7rem; }
+
+html[dir="rtl"] .predictive-search__item { text-align: right; }
+html[dir="rtl"] .predictive-search__item--link-with-thumbnail { grid-template-areas: 'product-content product-image'; }
+html[dir="rtl"] .predictive-search__item--term .icon-arrow { margin-right: calc(var(--font-heading-scale) * 2rem); margin-left: 0; transform: scaleX(-1); }
+
+html[dir="rtl"] .drawer { justify-content: flex-start; }
+html[dir="rtl"] .drawer__inner { border-right: .1rem solid rgba(var(--color-foreground), 0.2); border-left: 0; transform: translateX(-100%); }
+html[dir="rtl"] .drawer.active .drawer__inner { transform: translateX(0); }
+html[dir="rtl"] .drawer__close { right: auto; left: -10px; }
+html[dir="rtl"] .cart-drawer__warnings .drawer__close { right: auto; left: 5px; }
+html[dir="rtl"] .drawer__footer summary { padding-right: 0; padding-left: 2.8rem; }
+html[dir="rtl"] .cart-drawer .cart-item > td + td { padding-left: 0; padding-right: 1rem; }
+html[dir="rtl"] .cart-drawer .tax-note { margin: 1.2rem 0 2rem 0; text-align: right; }
+
+html[dir="rtl"] .alma-theme :is(.alma-service-band h2, .alma-service-band__item, .alma-footer__policy-trigger, .alma-editorial__media-copy) { text-align: right; }
+html[dir="rtl"] .alma-theme .alma-scroll-gallery__controls { direction: rtl; }
+html[dir="rtl"] .alma-theme .alma-scroll-gallery__button svg { transform: scaleX(-1); }
+html[dir="rtl"] .alma-theme .alma-service-band__item { border-right: 0; border-left: 1px solid var(--alma-line); }
+html[dir="rtl"] .alma-theme .alma-service-band__item:last-child { border-left: 0; }
+html[dir="rtl"] .alma-theme .alma-scent-finder-launcher { right: auto; left: 0; border-right: 1px solid var(--alma-ink); border-left: 0; }
+html[dir="rtl"] .alma-scent-finder-is-open .alma-scent-finder-launcher { transform: translate(-100%, -50%); }
+html[dir="rtl"] .alma-theme .alma-ritual-signup-launcher { right: 0; left: auto; border-right: 0; border-left: 1px solid var(--alma-ink); }
+html[dir="rtl"] .alma-ritual-signup-is-open .alma-ritual-signup-launcher { transform: translate(100%, -50%); }
+html[dir="rtl"] .alma-theme :is(.alma-shipping-policy__close, .alma-scent-finder-modal__close, .alma-ritual-signup-modal__close) { right: auto; left: 1.4rem; }
+html[dir="rtl"] .alma-theme .alma-terms-of-service__close { float: left; margin: -1.8rem 1.6rem 0 -1.8rem; }
+html[dir="rtl"] .alma-theme :is(.alma-terms-of-service__panel, .alma-scent-finder-modal__panel, .alma-ritual-signup-modal__panel) { text-align: right; }
+
+@media screen and (min-width: 990px) {
+  html[dir="rtl"] .alma-theme .alma-header--home .header__heading { right: 5rem; left: auto; }
+  html[dir="rtl"] .alma-theme .alma-header--home .header__icons { right: auto; left: 5rem; }
+}
+
+@media screen and (max-width: 749px) {
+  html[dir="rtl"] .alma-theme :is(.alma-scent-finder-modal__close, .alma-ritual-signup-modal__close) { right: auto; left: .9rem; }
+  html[dir="rtl"] .alma-theme .alma-service-band__item:last-child { border-left: 1px solid var(--alma-line); }
+}

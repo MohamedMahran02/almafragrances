@@ -989,6 +989,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `sections/header.liquid`, `snippets/language-localization.liquid`, `assets/alma-theme.css`, `README.md`.
 - Checks: `git diff --check` passes. Shopify Theme Check continues to report the pre-existing 970 matching-translation errors in `locales/ar.json` and 7 warnings across 7 files; no selector-specific errors were reported.
 
+### 2026-09-20 - Complete storefront RTL alignment
+
+- Request: make Arabic render right-to-left correctly on product pages and throughout the storefront.
+- Changed: added scoped RTL positioning and alignment for product information and forms, predictive search, cart drawer, header controls, custom sections, policy dialogs and fixed launchers. Arabic product accordions and labels now use Arabic-friendly spacing. Updated the custom product rails so their controls and disabled state use the correct logical scroll position in RTL browsers.
+- Files: `assets/alma-theme.css`, `assets/alma-scroll-gallery.js`, `README.md`.
+- Checks: `node --check assets/alma-scroll-gallery.js` and `git diff --check` pass. Shopify Theme Check continues to report the pre-existing 970 matching-translation errors in `locales/ar.json` and 7 warnings across 7 files; no RTL-specific errors were reported.
+
 ## Continuation prompt
 
 ```text
