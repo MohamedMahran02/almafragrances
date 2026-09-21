@@ -950,3 +950,18 @@ html[dir="rtl"] .alma-theme .card-information :is(.price, .caption, .rating) { t
   .alma-theme .header:not(.alma-header--home) > .header__heading-link { position: absolute; z-index: 2; top: .1rem; left: 50%; display: block; margin: 0; opacity: 1; pointer-events: auto; transform: translate(-50%, 1.4rem); }
   .alma-theme .header:not(.alma-header--home) > .header__heading-link .alma-logo { width: 4rem; }
 }
+
+
+/* Header uses the same burgundy surface as the footer. */
+.alma-theme .header-wrapper,
+.alma-theme .alma-header-wrapper--home,
+.alma-theme .alma-header-wrapper--home .alma-header--home { background: var(--alma-ink); color: #fff; }
+.alma-theme .alma-header-wrapper--home .alma-header--home { box-shadow: 0 1px 0 rgba(255, 255, 255, .26); }
+.alma-theme .header-wrapper--border-bottom { border-color: rgba(255, 255, 255, .26); }
+.alma-theme .header .alma-logo img { filter: brightness(0) invert(1); }
+.alma-theme .header > :is(.header__heading, .header__heading-link, .header__inline-menu, .header__icons, header-drawer) { color: #fff; }
+.alma-theme .header :is(.header__menu-item, .header__icon, .localization-form__select, .alma-header-search__toggle) { color: #fff; }
+.alma-theme .header .header__submenu :is(.header__menu-item, .list-menu__item),
+.alma-theme .header .mega-menu__content :is(.header__menu-item, .list-menu__item) { color: var(--alma-ink); }
+.alma-theme .header .alma-header-predictive-search .field__input,
+.alma-theme .header .alma-header-predictive-search .field__label { color: var(--alma-ink); }

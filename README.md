@@ -1032,6 +1032,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `sections/alma-campaign.liquid`, `README.md`.
 - Checks: `git diff --check` passes. Shopify Theme Check continues to be blocked by the pre-existing 970 matching-translation errors in `locales/ar.json` and 7 warnings across 7 files; no CTA-specific errors were reported.
 
+### 2026-09-21 - Match the navbar to the footer burgundy
+
+- Request: make the navbar the same dark burgundy color as the footer.
+- Changed: applied the footer's existing `--alma-ink` surface to every header state, with white logo artwork, navigation and utility controls. Dropdown and predictive-search panels retain their white surface and dark text.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: `git diff --check` passes. Shopify Theme Check continues to be blocked by the pre-existing 970 matching-translation errors in `locales/ar.json` and 7 warnings across 7 files; no header-color-specific errors were reported.
+
 ## Continuation prompt
 
 ```text
