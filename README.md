@@ -1101,3 +1101,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `sections/alma-collection-banners.liquid`, `templates/page.alma-collections.json`, `assets/alma-theme.css`, `locales/en.default.json`, `locales/ar.json`, `README.md`.
 - Checks: JSON template parsing and `git diff --check` pass. Shopify Theme Check JSON output reports no offenses in the new collection section or template.
 - Shopify setup: create a Shopify Page and assign the `page.alma-collections` template to publish it; collection selection, copy and order remain editable in the Theme Editor.
+
+### 2026-09-21 - Link the branded collections page in navigation
+
+- Request: add a Collections navigation item beside Products that opens the branded collections page.
+- Changed: added a Collections link immediately after Products in the desktop navigation and mobile drawer. It uses the Shopify Page titled/handled `collections` when present, with `/pages/collections` as its page-route fallback. That page uses the ALMA collection-banner template and live collection imagery added in the preceding change.
+- Files: `snippets/alma-navigation-links.liquid`, `README.md`.
+- Checks: `git diff --check` passes. Shopify Theme Check JSON output contains no offenses in `snippets/alma-navigation-links.liquid`.
