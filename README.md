@@ -1025,6 +1025,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: `git diff --check` passes. Shopify Theme Check continues to be blocked by the pre-existing 970 matching-translation errors in `locales/ar.json` and 7 warnings across 7 files; no header-specific errors were reported.
 
+### 2026-09-21 - Remove the homepage hero CTA
+
+- Request: remove the Explore Alma Collection button shown over the hero image.
+- Changed: removed the campaign section's rendered CTA layer. The hero image and homepage section/block ordering remain unchanged.
+- Files: `sections/alma-campaign.liquid`, `README.md`.
+- Checks: `git diff --check` passes. Shopify Theme Check continues to be blocked by the pre-existing 970 matching-translation errors in `locales/ar.json` and 7 warnings across 7 files; no CTA-specific errors were reported.
+
 ## Continuation prompt
 
 ```text

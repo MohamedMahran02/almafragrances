@@ -7,19 +7,6 @@
         <img class="alma-campaign__image" src="{{ 'alma-campaign-hero.png' | asset_url }}" width="1683" height="934" alt="{{ 'alma.campaign_image_alt' | t }}" loading="eager" fetchpriority="high">
       {%- endif -%}
     </div>
-    <div class="alma-campaign__actions">
-      {%- for block in section.blocks -%}
-        {%- if block.type == 'buttons' and block.settings.button_label_1 != blank -%}
-          <a class="alma-campaign__button button button--secondary" href="{{ block.settings.button_link_1 | default: routes.all_products_collection_url }}" {{ block.shopify_attributes }}>
-            <span class="alma-cta-label">
-              <img class="alma-cta-label__dot" src="{{ 'alma-cta-dot.svg' | asset_url }}" width="17" height="16" alt="" aria-hidden="true">
-              <span class="alma-cta-label__text">{% render 'alma-localized-copy', scope: 'home', section_id: section.id, block_id: block.id, field: 'button_label_1', value: block.settings.button_label_1 %}</span>
-              <img class="alma-cta-label__dot" src="{{ 'alma-cta-dot.svg' | asset_url }}" width="17" height="16" alt="" aria-hidden="true">
-            </span>
-          </a>
-        {%- endif -%}
-      {%- endfor -%}
-    </div>
   </div>
   <div class="alma-ritual">
     <div class="alma-ritual__inner">
