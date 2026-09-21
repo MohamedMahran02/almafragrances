@@ -1079,3 +1079,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: kept the mobile navbar free of language controls and replaced the drawer language dropdown with native Shopify AR | EN locale links that match the desktop treatment.
 - Files: `snippets/header-drawer.liquid`, `assets/alma-theme.css`, `README.md`.
 - Checks: git diff --check passes. Shopify Theme Check reports the same pre-existing 970 matching-translation errors in locales/ar.json and 7 warnings across 7 files; no mobile-language-link-specific errors were reported.
+
+### 2026-09-21 - Update Products navigation collections
+
+- Request: replace the generic Perfumes item in the desktop Products dropdown with Spray Perfumes and Solid Perfumes.
+- Changed: the Products dropdown now links to the existing Alma Perfumes collection as Spray Perfumes and the existing Alma Solid Perfumes collection as Solid Perfumes. English and Arabic navigation labels were added for the new entries.
+- Files: `snippets/alma-navigation-links.liquid`, `locales/en.default.json`, `locales/ar.json`, `README.md`.
+- Checks: git diff --check passes. Shopify Theme Check did not finish before the command timeout; its preceding full run reported the pre-existing 970 matching-translation errors in locales/ar.json and 7 warnings across 7 files.

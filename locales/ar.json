@@ -550,7 +550,8 @@
     "nav": {
       "products": "المنتجات",
       "shop_all": "تسوق الكل",
-      "perfumes": "العطور",
+      "spray_perfumes": "عطور رذاذية",
+      "solid_perfumes": "عطور صلبة",
       "lotions": "اللوشن",
       "dukhon": "الدخون",
       "charms": "تعليقات العطر الصلب",
