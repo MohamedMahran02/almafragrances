@@ -975,3 +975,12 @@ html[dir="rtl"] .alma-theme .card-information :is(.price, .caption, .rating) { t
 .alma-theme .alma-header-language .language-selector { background: #fff; border: 1px solid var(--alma-line); color: var(--alma-ink); }
 .alma-theme .alma-header-language .language-selector .disclosure__link { color: var(--alma-ink); }
 html[dir="rtl"] .alma-theme .header__icons .alma-header-language { order: -1; margin-right: .6rem; margin-left: 0; }
+
+/* Header language links: direct AR | EN locale choices. */
+.alma-theme .header__icons .alma-header-language { order: 99; display: flex; align-items: center; gap: .8rem; min-height: 4.4rem; margin-left: .8rem; color: #fff; }
+.alma-theme .alma-header-language__link { color: #fff; font-family: var(--font-body-family); font-size: 1.1rem; font-weight: 500; letter-spacing: .22em; line-height: 1; opacity: .55; text-decoration: none; transition: opacity var(--duration-short) ease; }
+.alma-theme .alma-header-language__link:hover,
+.alma-theme .alma-header-language__link:focus-visible,
+.alma-theme .alma-header-language__link--active { color: #fff; opacity: 1; }
+.alma-theme .alma-header-language__separator { color: rgba(255, 255, 255, .7); font-size: 1.15rem; line-height: 1; }
+html[dir="rtl"] .alma-theme .header__icons .alma-header-language { order: -1; margin-right: .8rem; margin-left: 0; }

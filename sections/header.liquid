@@ -262,12 +262,19 @@
       </a>
 
       {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
-        <localization-form class="alma-header-language small-hide" data-prevent-hide>
-          {%- form 'localization', id: 'HeaderLanguageForm', class: 'localization-form' -%}
-            <h2 class="visually-hidden" id="HeaderLanguageLabel">{{ 'localization.language_label' | t }}</h2>
-            {%- render 'language-localization', localPosition: 'HeaderLanguage', compact: true -%}
-          {%- endform -%}
-        </localization-form>
+        <nav class="alma-header-language small-hide" aria-label="{{ 'localization.language_label' | t }}">
+          {%- assign header_languages = localization.available_languages | sort_natural: 'iso_code' -%}
+          {%- for language in header_languages -%}
+            <a
+              class="alma-header-language__link{% if language.iso_code == localization.language.iso_code %} alma-header-language__link--active{% endif %}"
+              href="{{ language.root_url }}"
+              lang="{{ language.iso_code }}"
+              hreflang="{{ language.iso_code }}"
+              {% if language.iso_code == localization.language.iso_code %}aria-current="true"{% endif %}
+            >{{ language.iso_code | upcase }}</a>
+            {%- unless forloop.last -%}<span class="alma-header-language__separator" aria-hidden="true">|</span>{%- endunless -%}
+          {%- endfor -%}
+        </nav>
       {%- endif -%}
     </div>
   </header>

@@ -1058,3 +1058,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: removed the Shopify-native country/currency localization forms from the desktop header and mobile drawer. The remaining Shopify language form uses compact EN/AR labels in the desktop header, with a bordered burgundy-header style and logical far-edge ordering. The mobile side menu retains its full-name language selector.
 - Files: `sections/header.liquid`, `snippets/header-drawer.liquid`, `snippets/language-localization.liquid`, `assets/alma-theme.css`, `README.md`.
 - Checks: `git diff --check` passes. Shopify Theme Check reports the same pre-existing 970 matching-translation errors in `locales/ar.json` and 7 warnings across 7 files; no localization-control-specific errors were reported.
+
+### 2026-09-21 - Use direct AR and EN header links
+
+- Request: match the supplied `AR | EN` language-control reference using ALMA typography and header styling.
+- Changed: replaced the desktop language dropdown button with native Shopify locale links for every available language, displayed as direct AR | EN ISO labels with a separator. The active language is bright and the alternate language is subdued; the control remains at the header edge. The mobile drawer language selector remains unchanged.
+- Files: `sections/header.liquid`, `assets/alma-theme.css`, `README.md`.
+- Checks: git diff --check passes. Shopify Theme Check reports the same pre-existing 970 matching-translation errors in locales/ar.json and 7 warnings across 7 files; no language-link-specific errors were reported.
