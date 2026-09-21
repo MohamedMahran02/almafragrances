@@ -1018,6 +1018,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `sections/header.liquid`, `README.md`.
 - Checks: `git diff --check` passes. Shopify Theme Check reports the same pre-existing 970 matching-translation errors in `locales/ar.json` and 7 warnings across 7 files; no selector-specific errors were reported.
 
+### 2026-09-21 - Match the homepage mobile header on product pages
+
+- Request: keep the same mobile navbar logo size, orientation and placement on product and collection pages as on the homepage.
+- Changed: applied the homepage's centered, vertically aligned 4rem logo composition to the direct header logo link rendered on non-home pages. Desktop navigation and homepage header behavior are unchanged.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: `git diff --check` passes. Shopify Theme Check continues to be blocked by the pre-existing 970 matching-translation errors in `locales/ar.json` and 7 warnings across 7 files; no header-specific errors were reported.
+
 ## Continuation prompt
 
 ```text

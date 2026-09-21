@@ -943,3 +943,10 @@ html[dir="rtl"] .alma-theme :is(.alma-terms-of-service__panel, .alma-scent-finde
 html[dir="rtl"] .alma-theme :is(.product__info-wrapper, .product__info-container, .product__title, .product__text, .product__description, .product__accordion, .product-form, .card__content, .card__information, .card-information, .collection-hero, .collection-hero__title, .collection-hero__description, .facets-container, .facet-filters, .mobile-facets, .main-page-title) { text-align: right; }
 html[dir="rtl"] .alma-theme .card-information { --text-alignment: right; }
 html[dir="rtl"] .alma-theme .card-information :is(.price, .caption, .rating) { text-align: right; }
+
+
+/* Use the homepage mobile header composition on all storefront pages. */
+@media screen and (max-width: 749px) {
+  .alma-theme .header:not(.alma-header--home) > .header__heading-link { position: absolute; z-index: 2; top: .1rem; left: 50%; display: block; margin: 0; opacity: 1; pointer-events: auto; transform: translate(-50%, 1.4rem); }
+  .alma-theme .header:not(.alma-header--home) > .header__heading-link .alma-logo { width: 4rem; }
+}
