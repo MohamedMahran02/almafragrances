@@ -1065,3 +1065,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: replaced the desktop language dropdown button with native Shopify locale links for every available language, displayed as direct AR | EN ISO labels with a separator. The active language is bright and the alternate language is subdued; the control remains at the header edge. The mobile drawer language selector remains unchanged.
 - Files: `sections/header.liquid`, `assets/alma-theme.css`, `README.md`.
 - Checks: git diff --check passes. Shopify Theme Check reports the same pre-existing 970 matching-translation errors in locales/ar.json and 7 warnings across 7 files; no language-link-specific errors were reported.
+
+### 2026-09-21 - Increase header language-link spacing
+
+- Request: move the AR | EN links farther from the cart toward the header edge.
+- Changed: increased the desktop language-control outer spacing in both text directions without changing the header height.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: `git diff --check` passes.
