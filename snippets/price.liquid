@@ -29,10 +29,14 @@
   assign money_price = price | money
   assign money_price_min = price_min | money
   assign money_price_max = price_max | money
+  assign display_currency = cart.currency.iso_code
+  if request.locale.iso_code == 'ar' and display_currency == 'AED'
+    assign display_currency = 'د.إ'
+  endif
   if settings.currency_code_enabled
-    assign money_price = price | money_without_currency | append: ' ' | append: cart.currency.iso_code
-    assign money_price_min = price_min | money_without_currency | append: ' ' | append: cart.currency.iso_code
-    assign money_price_max = price_max | money_without_currency | append: ' ' | append: cart.currency.iso_code
+    assign money_price = price | money_without_currency | append: ' ' | append: display_currency
+    assign money_price_min = price_min | money_without_currency | append: ' ' | append: display_currency
+    assign money_price_max = price_max | money_without_currency | append: ' ' | append: display_currency
   endif
 
   if target == product and product.price_varies
@@ -68,7 +72,7 @@
               <span>
                 <s class="price-item price-item--regular variant-item__old-price">
                   {% if settings.currency_code_enabled %}
-                    {{ compare_at_price | money_without_currency }} {{ cart.currency.iso_code }}
+                    {{ compare_at_price | money_without_currency }} {{ display_currency }}
                   {% else %}
                     {{ compare_at_price | money }}
                   {% endif %}
@@ -96,7 +100,7 @@
           <span>
             <s class="price-item price-item--regular">
               {% if settings.currency_code_enabled %}
-                {{ compare_at_price | money_without_currency }} {{ cart.currency.iso_code }}
+                {{ compare_at_price | money_without_currency }} {{ display_currency }}
               {% else %}
                 {{ compare_at_price | money }}
               {% endif %}

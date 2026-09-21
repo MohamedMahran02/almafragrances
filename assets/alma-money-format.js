@@ -1,12 +1,21 @@
 (() => {
   const dirhamPrefix = /\bDhs\.?\s*(?=\d)/gi;
+  const arabicCurrencyPrefix = /\b(?:AED|Dhs\.?)\s*(?=\d)/gi;
+  const arabicCurrencySuffix = /(?<=\d)\s*(?:AED|Dhs\.?)\b/gi;
+  const arabicDirham = 'د.إ';
   const arabicStorefront = document.documentElement.lang.toLowerCase().startsWith('ar');
   const skippedElements = 'script, style, noscript, textarea, input, select, option, [data-alma-keep-dhs]';
 
   const normalizeText = (textNode) => {
     if (!textNode?.nodeValue || textNode.parentElement?.closest(skippedElements)) return;
-    let normalized = textNode.nodeValue.replace(dirhamPrefix, '');
-    if (arabicStorefront) normalized = normalized.replace(/\bAED\b/g, 'د.إ');
+    let normalized = textNode.nodeValue;
+    if (arabicStorefront) {
+      normalized = normalized
+        .replace(arabicCurrencyPrefix, `${arabicDirham}\u00a0`)
+        .replace(arabicCurrencySuffix, `\u00a0${arabicDirham}`);
+    } else {
+      normalized = normalized.replace(dirhamPrefix, '');
+    }
     if (normalized !== textNode.nodeValue) textNode.nodeValue = normalized;
   };
 

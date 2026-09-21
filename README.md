@@ -1003,6 +1003,14 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: `git diff --check` passes. Shopify Theme Check reports the same pre-existing 970 matching-translation errors in `locales/ar.json` and 7 warnings across 7 files; no alignment-specific errors were reported.
 
+### 2026-09-21 - Localize Arabic price currency labels
+
+- Request: replace the English price currency in Arabic.
+- Cause: the custom product-price snippet explicitly appended the ISO currency code `AED`, and Shopify's money output in cart and search can also use `AED` or `Dhs.`.
+- Changed: product, collection and featured prices now use the Arabic dirham symbol whenever the active Shopify locale is Arabic and the cart currency is AED. Updated the live price normalizer to convert either prefix or suffix AED/Dhs values in cart and predictive-search updates, while preserving the English storefront format.
+- Files: `snippets/price.liquid`, `assets/alma-money-format.js`, `README.md`.
+- Checks: `node --check assets/alma-money-format.js`, currency-normalizer assertions and `git diff --check` pass. Shopify Theme Check continues to be blocked by the pre-existing 970 matching-translation errors in `locales/ar.json` and 7 warnings across 7 files; no price-format-specific errors were reported.
+
 ## Continuation prompt
 
 ```text
