@@ -1011,6 +1011,13 @@ Use local Git authentication for the configured `MohamedMahran02` origin; the Co
 - Files: `snippets/price.liquid`, `assets/alma-money-format.js`, `README.md`.
 - Checks: `node --check assets/alma-money-format.js`, currency-normalizer assertions and `git diff --check` pass. Shopify Theme Check continues to be blocked by the pre-existing 970 matching-translation errors in `locales/ar.json` and 7 warnings across 7 files; no price-format-specific errors were reported.
 
+### 2026-09-21 - Keep the mobile language selector in the side menu
+
+- Request: show the mobile language switcher only in the side menu rather than both the navbar and menu.
+- Changed: applied Dawn's mobile-only hide utility to the header language selector. The existing Shopify-native language selector in the mobile drawer remains the only mobile control; desktop behavior is unchanged.
+- Files: `sections/header.liquid`, `README.md`.
+- Checks: `git diff --check` passes. Shopify Theme Check reports the same pre-existing 970 matching-translation errors in `locales/ar.json` and 7 warnings across 7 files; no selector-specific errors were reported.
+
 ## Continuation prompt
 
 ```text
