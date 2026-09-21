@@ -32,7 +32,7 @@
       ],
       "settings": {
         "text": "<p>Lotion, solid perfume and spray perfume come together on the skin. Layer each texture, one after another, to create a lasting fragrance ritual that feels entirely your own.</p>",
-        "link_label": "Explore Alma Collection",
+        "link_label": "",
         "link": "/collections/all"
       }
     },
@@ -42,7 +42,8 @@
         "perfumes": {
           "type": "collection",
           "settings": {
-            "collection": "alma-perfumes"
+            "collection": "alma-perfumes",
+            "label": ""
           }
         },
         "solid": {
@@ -55,25 +56,29 @@
         "lotions": {
           "type": "collection",
           "settings": {
-            "collection": "alma-lotions"
+            "collection": "alma-lotions",
+            "label": ""
           }
         },
         "dokhoon": {
           "type": "collection",
           "settings": {
-            "collection": "alma-dokhon"
+            "collection": "alma-dokhon",
+            "label": ""
           }
         },
         "charms": {
           "type": "collection",
           "settings": {
-            "collection": "alma-solid-charms"
+            "collection": "alma-solid-charms",
+            "label": ""
           }
         },
         "layering": {
           "type": "collection",
           "settings": {
-            "collection": "layering-kits"
+            "collection": "layering-kits",
+            "label": ""
           }
         }
       },
@@ -144,7 +149,17 @@
         "steps_label": "Lotion, solid perfume and spray perfume",
         "layout": "split",
         "media_position": "right",
-        "tone": "ivory"
+        "tone": "ivory",
+        "enable_ritual_signup": true,
+        "signup_eyebrow": "A gift for your ritual",
+        "signup_heading": "Take 5% off your first ALMA ritual",
+        "signup_text": "<p>Share your details for a private welcome offer and first access to new ALMA stories.</p>",
+        "signup_button_label": "Unlock my 5% off",
+        "signup_fine_print": "By joining, you agree to receive ALMA news and offers.",
+        "signup_discount_code": "ALMA5",
+        "signup_success_heading": "Your welcome offer is ready",
+        "signup_success_text": "<p>Thank you for joining ALMA. Use your code at checkout and enjoy 5% off your first ritual.</p>",
+        "signup_launcher_label": "5% off your ritual"
       }
     },
     "dukhon_story": {
@@ -159,7 +174,17 @@
         "steps_label": "Complete the ritual",
         "layout": "immersive",
         "media_position": "right",
-        "tone": "ivory"
+        "tone": "ivory",
+        "enable_ritual_signup": true,
+        "signup_eyebrow": "A gift for your ritual",
+        "signup_heading": "Take 5% off your first ALMA ritual",
+        "signup_text": "<p>Share your details for a private welcome offer and first access to new ALMA stories.</p>",
+        "signup_button_label": "Unlock my 5% off",
+        "signup_fine_print": "By joining, you agree to receive ALMA news and offers.",
+        "signup_discount_code": "ALMA5",
+        "signup_success_heading": "Your welcome offer is ready",
+        "signup_success_text": "<p>Thank you for joining ALMA. Use your code at checkout and enjoy 5% off your first ritual.</p>",
+        "signup_launcher_label": "5% off your ritual"
       }
     },
     "gifting_story": {
@@ -168,14 +193,8 @@
         "gifts": {
           "type": "collection",
           "settings": {
-            "label": "Gifts & rituals",
             "collection": "",
-            "products": [
-              "alma-fragrances-gift-card",
-              "alma-layering-box",
-              "alma-box-of-minis",
-              "alma-charm-collection"
-            ]
+            "label": "Gifts & rituals"
           }
         }
       },
@@ -184,6 +203,8 @@
       ],
       "settings": {
         "title": "Gifting by ALMA",
+        "best_selling_collection": "",
+        "best_selling_label": "Best Selling",
         "products_to_show": 4,
         "product_link_label": "Discover"
       }
