@@ -1,0 +1,30 @@
+{%- assign alma_collection_handles = 'alma-dokhon|alma-discovery-collection|alma-solid-charms|layering-kits|best-sellers|alma-lotions|warm-and-bold|alma-perfumes|arabic-and-deep|alma-solids-مخمريات|soft-and-clean' | split: '|' -%}
+<div class="alma-collection-banners page-width">
+  <header class="alma-collection-banners__heading">
+    <p>The ALMA collection</p>
+    <h1>{{ page.title | escape }}</h1>
+  </header>
+  <div class="alma-collection-banners__grid">
+    {%- for collection_handle in alma_collection_handles -%}
+      {%- assign selected_collection = collections[collection_handle] -%}
+      {%- if selected_collection != blank -%}
+        {%- assign banner_image = selected_collection.featured_image -%}
+        {%- if banner_image == blank and selected_collection.products_count > 0 -%}
+          {%- assign banner_image = selected_collection.products.first.featured_image -%}
+        {%- endif -%}
+        <a class="alma-collection-banner" href="{{ selected_collection.url }}">
+          <div class="alma-collection-banner__media">
+            {%- if banner_image != blank -%}
+              {{ banner_image | image_url: width: 1600 | image_tag: loading: 'lazy', widths: '480, 720, 960, 1200, 1600', sizes: '(min-width: 990px) 50vw, 100vw', class: 'alma-collection-banner__image', alt: banner_image.alt | default: selected_collection.title }}
+            {%- endif -%}
+          </div>
+          <div class="alma-collection-banner__overlay">
+            <p>{{ 'alma.nav.products' | t }}</p>
+            <h2>{{ selected_collection.title | escape }}</h2>
+            <span>Discover collection</span>
+          </div>
+        </a>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>

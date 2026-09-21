@@ -1108,3 +1108,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: added a Collections link immediately after Products in the desktop navigation and mobile drawer. It uses the Shopify Page titled/handled `collections` when present, with `/pages/collections` as its page-route fallback. That page uses the ALMA collection-banner template and live collection imagery added in the preceding change.
 - Files: `snippets/alma-navigation-links.liquid`, `README.md`.
 - Checks: `git diff --check` passes. Shopify Theme Check JSON output contains no offenses in `snippets/alma-navigation-links.liquid`.
+
+### 2026-09-21 - Render collection banners through the Default page template
+
+- Request: make the Collections page work when Shopify only offers the Default page and contact templates.
+- Changed: the Default page template now renders the branded ALMA collection banner grid only when the Shopify page handle is `collections`. All other pages retain the standard Dawn page output. The grid uses the mapped live Shopify collection and product images.
+- Files: `sections/main-page.liquid`, `snippets/alma-collections-page-banners.liquid`, `README.md`.
+- Checks: `git diff --check` passes. Shopify Theme Check JSON output contains no offenses in the changed default-page section or collection-banner snippet.
