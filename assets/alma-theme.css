@@ -998,3 +998,25 @@ html[dir="rtl"] .alma-theme .header__icons .alma-header-language { order: -1; ma
 .alma-theme .alma-ritual-signup-modal__submit:hover { background: var(--alma-ink); color: #fff; }
 .alma-theme .alma-ritual-signup-modal__submit:disabled { cursor: wait; opacity: .65; }
 .alma-theme .alma-ritual-signup-modal[data-submitting="true"] .alma-ritual-signup-modal__close { pointer-events: none; opacity: .45; }
+
+
+/* ALMA collections page: Shopify collection imagery with editorial banner treatment. */
+.alma-collection-banners { padding-top: clamp(5rem, 8vw, 10rem); padding-bottom: clamp(6rem, 9vw, 12rem); }
+.alma-collection-banners__heading { max-width: 66rem; margin: 0 auto clamp(4rem, 6vw, 7rem); text-align: center; }
+.alma-collection-banners__heading > p { margin: 0 0 1.3rem; color: #696762; font-family: var(--font-body-family); font-size: 1.05rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.alma-collection-banners__heading h1 { margin: 0; color: var(--alma-ink); font-family: var(--font-heading-family); font-size: clamp(4rem, 6vw, 7.2rem); font-weight: 400; letter-spacing: -.045em; line-height: .94; }
+.alma-collection-banners__heading .rte { max-width: 48rem; margin: 2rem auto 0; color: #4b4945; font-size: 1.45rem; line-height: 1.65; }
+.alma-collection-banners__heading .rte p { margin: 0; }
+.alma-collection-banners__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; }
+.alma-collection-banner { position: relative; display: block; min-height: clamp(31rem, 43vw, 60rem); overflow: hidden; background: var(--alma-ink); color: #fff; text-decoration: none; }
+.alma-collection-banner__media { position: absolute; inset: 0; background: #e7e4de; }
+.alma-collection-banner__media::after { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(29, 0, 4, .03) 24%, rgba(29, 0, 4, .7) 100%); content: ''; transition: background-color .45s ease; }
+.alma-collection-banner__image { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .7s cubic-bezier(.2, .7, .2, 1); }
+.alma-collection-banner__overlay { position: absolute; z-index: 1; right: 0; bottom: 0; left: 0; padding: clamp(2.4rem, 4vw, 4.6rem); color: #fff; }
+.alma-collection-banner__overlay p { margin: 0 0 .8rem; font-family: var(--font-body-family); font-size: 1rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+.alma-collection-banner__overlay h2 { max-width: 42rem; margin: 0; font-family: var(--font-heading-family); font-size: clamp(3rem, 4.2vw, 5.4rem); font-weight: 400; letter-spacing: -.035em; line-height: .94; }
+.alma-collection-banner__overlay span { display: inline-block; margin-top: 2rem; padding-bottom: .4rem; border-bottom: 1px solid currentColor; font-family: var(--font-body-family); font-size: 1.05rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+.alma-collection-banner:hover .alma-collection-banner__image { transform: scale(1.045); }
+.alma-collection-banner:focus-visible { outline: 2px solid var(--alma-ink); outline-offset: .4rem; }
+.alma-collection-banners__empty { margin: 0; padding: 3rem; border: 1px solid var(--alma-line); text-align: center; }
+@media screen and (max-width: 749px) { .alma-collection-banners__grid { grid-template-columns: 1fr; gap: 1.4rem; } .alma-collection-banner { min-height: 42rem; } }

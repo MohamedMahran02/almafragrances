@@ -1093,3 +1093,11 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: added a required Shopify `contact[phone]` field to the native customer form, retained its value after validation errors, and added submission locking so a form cannot be posted twice or dismissed mid-submit. The submit button now has one explicit ALMA style at every viewport size.
 - Files: `sections/alma-editorial-feature.liquid`, `assets/alma-ritual-signup.js`, `assets/alma-theme.css`, `README.md`.
 - Checks: `node --check assets/alma-ritual-signup.js` and `git diff --check` pass. Shopify Theme Check reports 1,001 existing errors and 7 warnings across 38 files; JSON output contains no offenses in the changed signup or navigation files.
+
+### 2026-09-21 - Add a Shopify collection banner page
+
+- Request: map the corrected collection set and create a branded page displaying every collection with its Shopify image.
+- Changed: added the `page.alma-collections` template and an editor-configurable ALMA collection-banner section. The template maps Alma dokhon, Alma Discovery Collection, Alma solid charms, Layering & kits, Best sellers, Alma lotions, Warm and bold, Alma perfumes, Arabic and Deep, Alma Solids-???????, and Soft and clean. Each banner uses its live Shopify collection image, with the first Shopify product image only as a fallback when a collection has no featured image. Restored the existing Perfumes locale key used by the footer.
+- Files: `sections/alma-collection-banners.liquid`, `templates/page.alma-collections.json`, `assets/alma-theme.css`, `locales/en.default.json`, `locales/ar.json`, `README.md`.
+- Checks: JSON template parsing and `git diff --check` pass. Shopify Theme Check JSON output reports no offenses in the new collection section or template.
+- Shopify setup: create a Shopify Page and assign the `page.alma-collections` template to publish it; collection selection, copy and order remain editable in the Theme Editor.

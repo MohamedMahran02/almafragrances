@@ -1,0 +1,97 @@
+{
+  "sections": {
+    "main": {
+      "type": "alma-collection-banners",
+      "blocks": {
+        "collection_1": {
+          "type": "collection",
+          "settings": {
+            "collection": "alma-dokhon"
+          }
+        },
+        "collection_2": {
+          "type": "collection",
+          "settings": {
+            "collection": "alma-discovery-collection"
+          }
+        },
+        "collection_3": {
+          "type": "collection",
+          "settings": {
+            "collection": "alma-solid-charms"
+          }
+        },
+        "collection_4": {
+          "type": "collection",
+          "settings": {
+            "collection": "layering-kits"
+          }
+        },
+        "collection_5": {
+          "type": "collection",
+          "settings": {
+            "collection": "best-sellers"
+          }
+        },
+        "collection_6": {
+          "type": "collection",
+          "settings": {
+            "collection": "alma-lotions"
+          }
+        },
+        "collection_7": {
+          "type": "collection",
+          "settings": {
+            "collection": "warm-and-bold"
+          }
+        },
+        "collection_8": {
+          "type": "collection",
+          "settings": {
+            "collection": "alma-perfumes"
+          }
+        },
+        "collection_9": {
+          "type": "collection",
+          "settings": {
+            "collection": "arabic-and-deep"
+          }
+        },
+        "collection_10": {
+          "type": "collection",
+          "settings": {
+            "collection": "alma-solids-مخمريات"
+          }
+        },
+        "collection_11": {
+          "type": "collection",
+          "settings": {
+            "collection": "soft-and-clean"
+          }
+        }
+      },
+      "block_order": [
+        "collection_1",
+        "collection_2",
+        "collection_3",
+        "collection_4",
+        "collection_5",
+        "collection_6",
+        "collection_7",
+        "collection_8",
+        "collection_9",
+        "collection_10",
+        "collection_11"
+      ],
+      "settings": {
+        "eyebrow": "The ALMA collection",
+        "heading": "Explore ALMA collections",
+        "intro": "<p>Discover fragrance rituals made for every mood, moment and layer.</p>",
+        "link_label": "Discover collection"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
