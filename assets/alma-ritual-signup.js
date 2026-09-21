@@ -48,6 +48,30 @@
     launcher.hidden = false;
   });
 
+  const form = modal.closest('form');
+  const submitButton = form?.querySelector('.alma-ritual-signup-modal__submit');
+  form?.addEventListener('submit', (event) => {
+    if (form.dataset.submitting === 'true') {
+      event.preventDefault();
+      return;
+    }
+    if (!form.checkValidity()) return;
+    form.dataset.submitting = 'true';
+    modal.dataset.submitting = 'true';
+    submitButton?.setAttribute('aria-busy', 'true');
+    if (submitButton) submitButton.disabled = true;
+  });
+
+  modal.addEventListener('cancel', (event) => {
+    if (modal.dataset.submitting === 'true') event.preventDefault();
+  });
+  window.addEventListener('pageshow', () => {
+    form?.removeAttribute('data-submitting');
+    modal.removeAttribute('data-submitting');
+    submitButton?.removeAttribute('aria-busy');
+    if (submitButton) submitButton.disabled = false;
+  });
+
   launcher.addEventListener('click', open);
 
   if (modal.dataset.signupSuccess === 'true' || modal.dataset.signupError === 'true') {

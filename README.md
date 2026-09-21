@@ -1083,6 +1083,13 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 ### 2026-09-21 - Update Products navigation collections
 
 - Request: replace the generic Perfumes item in the desktop Products dropdown with Spray Perfumes and Solid Perfumes.
-- Changed: the Products dropdown now links to the existing Alma Perfumes collection as Spray Perfumes and the existing Alma Solid Perfumes collection as Solid Perfumes. English and Arabic navigation labels were added for the new entries.
+- Changed: the Products dropdown now links to the existing Alma Perfumes collection as Spray Perfumes and the existing Alma Solid Perfumes collection as Solid Perfumes. Existing localized wardrobe labels are used for the new entries.
 - Files: `snippets/alma-navigation-links.liquid`, `locales/en.default.json`, `locales/ar.json`, `README.md`.
 - Checks: git diff --check passes. Shopify Theme Check did not finish before the command timeout; its preceding full run reported the pre-existing 970 matching-translation errors in locales/ar.json and 7 warnings across 7 files.
+
+### 2026-09-21 - Improve the ritual 5% signup form
+
+- Request: add a mobile-number field, remove the signup submission glitch, and match the mobile submit button to desktop.
+- Changed: added a required Shopify `contact[phone]` field to the native customer form, retained its value after validation errors, and added submission locking so a form cannot be posted twice or dismissed mid-submit. The submit button now has one explicit ALMA style at every viewport size.
+- Files: `sections/alma-editorial-feature.liquid`, `assets/alma-ritual-signup.js`, `assets/alma-theme.css`, `README.md`.
+- Checks: `node --check assets/alma-ritual-signup.js` and `git diff --check` pass. Shopify Theme Check reports 1,001 existing errors and 7 warnings across 38 files; JSON output contains no offenses in the changed signup or navigation files.

@@ -98,6 +98,10 @@
                 <input class="field__input" id="AlmaRitualEmail-{{ section.id }}" type="email" name="contact[email]" autocomplete="email" autocorrect="off" autocapitalize="off" placeholder="{{ 'templates.contact.form.email' | t }}" required>
                 <label class="field__label" for="AlmaRitualEmail-{{ section.id }}">{{ 'templates.contact.form.email' | t }}</label>
               </div>
+              <div class="field">
+                <input class="field__input" id="AlmaRitualPhone-{{ section.id }}" type="tel" name="contact[phone]" autocomplete="tel" inputmode="tel" value="{{ form.phone | escape }}" placeholder="{{ 'templates.contact.form.phone' | t }}" required>
+                <label class="field__label" for="AlmaRitualPhone-{{ section.id }}">{{ 'templates.contact.form.phone' | t }}</label>
+              </div>
             </div>
             <button class="alma-button alma-ritual-signup-modal__submit" type="submit">
               <span class="alma-cta-label"><span class="alma-cta-label__text">{% render 'alma-localized-copy', scope: 'home', section_id: section.id, field: 'signup_button_label', value: section.settings.signup_button_label %}</span></span>
