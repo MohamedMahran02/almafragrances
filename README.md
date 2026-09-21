@@ -1115,3 +1115,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: the Default page template now renders the branded ALMA collection banner grid only when the Shopify page handle is `collections`. All other pages retain the standard Dawn page output. The grid uses the mapped live Shopify collection and product images.
 - Files: `sections/main-page.liquid`, `snippets/alma-collections-page-banners.liquid`, `README.md`.
 - Checks: `git diff --check` passes. Shopify Theme Check JSON output contains no offenses in the changed default-page section or collection-banner snippet.
+
+### 2026-09-21 - Restore Find Your Aura popup on the current store
+
+- Request: fix the non-working Find Your Aura popup.
+- Changed: the popup now renders whenever the selected perfume collection has products, even when the current store has no `Fragrance note` metaobjects. It uses Shopify-editable fallback notes and falls back to all Shopify products if the selected collection is empty. Product titles, descriptions and existing fragrance metafields continue to drive matching.
+- Files: `sections/alma-scent-finder.liquid`, `README.md`.
+- Checks: `git diff --check` passes. Shopify Theme Check JSON output contains no offenses in `sections/alma-scent-finder.liquid`.

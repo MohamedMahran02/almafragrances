@@ -3,13 +3,16 @@
 
 {%- liquid
   assign finder_collection = section.settings.collection
-  if finder_collection == blank
+  if finder_collection == blank or finder_collection.products == blank
     assign finder_collection = collections.all
   endif
   assign finder_notes = metaobjects.fragrance_note.values
+  if finder_notes == blank
+    assign finder_notes = section.settings.fallback_notes | split: ','
+  endif
 -%}
 
-{%- if finder_collection.products != blank and finder_notes != blank -%}
+{%- if finder_collection.products != blank -%}
   <dialog id="AlmaScentFinder" class="alma-scent-finder-modal" aria-labelledby="AlmaScentFinder-{{ section.id }}" data-alma-scent-finder-modal>
     <div class="alma-scent-finder-modal__panel">
       <button class="alma-scent-finder-modal__close" type="button" aria-label="{{ 'accessibility.close' | t }}" data-alma-scent-finder-close>
@@ -29,7 +32,7 @@
         <p id="AlmaScentFinderHelp-{{ section.id }}" class="visually-hidden">{{ 'alma.finder.help' | t }}</p>
         <div class="alma-scent-finder__note-grid">
           {%- for note in finder_notes -%}
-            {%- assign note_label = note.name.value | default: note.name -%}
+            {%- assign note_label = note.name.value | default: note.name | strip -%}
             <label class="alma-scent-finder__note">
               {%- capture localized_note -%}{% render 'alma-note-name', name: note_label %}{%- endcapture -%}
               <input type="checkbox" value="{{ note_label | downcase | escape }}" data-note-label="{{ localized_note | escape }}">
@@ -104,6 +107,7 @@
     {"type": "text", "id": "prompt", "label": "Selection prompt", "default": "Which notes draw you in?"},
     {"type": "text", "id": "initial_message", "label": "Initial message", "default": "Select one or more notes to begin."},
     {"type": "collection", "id": "collection", "label": "Perfume collection", "info": "Products and prices stay connected to Shopify. Select reusable entries in custom.fragrance_note_refs. Tags, descriptions and the legacy custom.fragrance_notes field remain matching fallbacks."},
+    {"type": "text", "id": "fallback_notes", "label": "Fallback scent notes", "default": "Oud, Musk, Amber, Saffron, Rose, Vanilla, Sandalwood, Jasmine", "info": "Shown when no Fragrance note metaobjects exist. Separate notes with commas."},
     {"type": "range", "id": "results_limit", "label": "Maximum recommendations", "min": 2, "max": 8, "step": 1, "default": 4}
   ],
   "presets": [
