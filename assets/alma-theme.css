@@ -965,3 +965,13 @@ html[dir="rtl"] .alma-theme .card-information :is(.price, .caption, .rating) { t
 .alma-theme .header .mega-menu__content :is(.header__menu-item, .list-menu__item) { color: var(--alma-ink); }
 .alma-theme .header .alma-header-predictive-search .field__input,
 .alma-theme .header .alma-header-predictive-search .field__label { color: var(--alma-ink); }
+
+
+/* Header language control: compact EN / AR selector at the outer edge. */
+.alma-theme .header__icons .alma-header-language { order: 99; margin-left: .6rem; }
+.alma-theme .alma-header-language .localization-form__select { min-width: 5.2rem; gap: .55rem; padding: 0 .8rem; border: 1px solid rgba(255, 255, 255, .42); color: #fff; font-size: 1.05rem; font-weight: 600; letter-spacing: .13em; }
+.alma-theme .alma-header-language .localization-form__select:hover { border-color: #fff; background: rgba(255, 255, 255, .1); }
+.alma-theme .alma-header-language .localization-form__select .icon-caret { width: .9rem; height: .6rem; }
+.alma-theme .alma-header-language .language-selector { background: #fff; border: 1px solid var(--alma-line); color: var(--alma-ink); }
+.alma-theme .alma-header-language .language-selector .disclosure__link { color: var(--alma-ink); }
+html[dir="rtl"] .alma-theme .header__icons .alma-header-language { order: -1; margin-right: .6rem; margin-left: 0; }

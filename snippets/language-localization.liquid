@@ -3,6 +3,7 @@
 
   Accepts:
     - localPosition: pass in the position in which the form is coming up to create specific IDs
+    - compact: render ISO language labels for a space-constrained header control
 {%- endcomment -%}
 
 <div class="disclosure">
@@ -13,7 +14,7 @@
     aria-controls="{{ localPosition }}List"
     aria-describedby="{{ localPosition }}Label"
   >
-    <span>{{ localization.language.endonym_name | capitalize }}</span>
+    <span>{% if compact %}{% if localization.language.iso_code == 'ar' %}AR{% elsif localization.language.iso_code == 'en' %}EN{% else %}{{ localization.language.iso_code | upcase }}{% endif %}{% else %}{{ localization.language.endonym_name | capitalize }}{% endif %}</span>
     {{ 'icon-caret.svg' | inline_asset_content }}
   </button>
   <div class="disclosure__list-wrapper language-selector" hidden>
@@ -38,7 +39,7 @@
               {{- 'icon-checkmark.svg' | inline_asset_content -}}
             </span>
             <span>
-              {{- language.endonym_name | capitalize -}}
+              {%- if compact -%}{% if language.iso_code == 'ar' %}AR{% elsif language.iso_code == 'en' %}EN{% else %}{{ language.iso_code | upcase }}{% endif %}{%- else -%}{{ language.endonym_name | capitalize }}{%- endif -%}
             </span>
           </a>
         </li>

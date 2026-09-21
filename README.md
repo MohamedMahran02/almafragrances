@@ -1051,3 +1051,10 @@ The opening campaign uses the restored original wide artwork height rather than 
 Use Context7 before external API/package-dependent implementation. Pull before edits. Update README in every change commit, documenting current structure/order, implementation, checks, limitations and next steps. Push and verify remote main; verify Shopify connection, synchronization and publication separately.
 Latest change: Admin translations are saved, the generated Privacy Policy is in Arabic, and the theme's remaining visible English preview strings were corrected locally. Run checks, push and verify theme sync, then test the globe link and repeat the Arabic storefront sweep. Investigate why Settings > Languages omits Publish; confirm whether the Development store plan blocks it before asking the owner to choose a paid plan. Then test visitor access, checkout, customer account, notifications and mobile layouts. Preserve the tightened spacing and wide Dukhoon composite from the previous work. Typography option 2 (Cormorant Garamond + Jost) remains the active temporary English comparison candidate; Arabic uses system Arabic-capable fonts until an approved Arabic font is selected.
 ```
+
+### 2026-09-21 - Simplify header localization controls
+
+- Request: remove the currency selector, restyle the EN/AR selector and place it at the far edge of the navbar.
+- Changed: removed the Shopify-native country/currency localization forms from the desktop header and mobile drawer. The remaining Shopify language form uses compact EN/AR labels in the desktop header, with a bordered burgundy-header style and logical far-edge ordering. The mobile side menu retains its full-name language selector.
+- Files: `sections/header.liquid`, `snippets/header-drawer.liquid`, `snippets/language-localization.liquid`, `assets/alma-theme.css`, `README.md`.
+- Checks: `git diff --check` passes. Shopify Theme Check reports the same pre-existing 970 matching-translation errors in `locales/ar.json` and 7 warnings across 7 files; no localization-control-specific errors were reported.
