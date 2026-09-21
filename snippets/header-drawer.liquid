@@ -172,19 +172,19 @@
             {%- endif -%}
             {%- if localization.available_languages and localization.available_languages.size > 1 -%}
               <div class="menu-drawer__localization header-localization">
-
-                {%- if localization.available_languages and localization.available_languages.size > 1 -%}
-                  <localization-form>
-                    {%- form 'localization', id: 'HeaderLanguageMobileForm', class: 'localization-form' -%}
-                      <div>
-                        <h2 class="visually-hidden" id="HeaderLanguageMobileLabel">
-                          {{ 'localization.language_label' | t }}
-                        </h2>
-                        {%- render 'language-localization', localPosition: 'HeaderLanguageMobile' -%}
-                      </div>
-                    {%- endform -%}
-                  </localization-form>
-                {%- endif -%}
+                <nav class="alma-drawer-language" aria-label="{{ 'localization.language_label' | t }}">
+                  {%- assign drawer_languages = localization.available_languages | sort_natural: 'iso_code' -%}
+                  {%- for language in drawer_languages -%}
+                    <a
+                      class="alma-drawer-language__link{% if language.iso_code == localization.language.iso_code %} alma-drawer-language__link--active{% endif %}"
+                      href="{{ language.root_url }}"
+                      lang="{{ language.iso_code }}"
+                      hreflang="{{ language.iso_code }}"
+                      {% if language.iso_code == localization.language.iso_code %}aria-current="true"{% endif %}
+                    >{{ language.iso_code | upcase }}</a>
+                    {%- unless forloop.last -%}<span class="alma-drawer-language__separator" aria-hidden="true">|</span>{%- endunless -%}
+                  {%- endfor -%}
+                </nav>
               </div>
             {%- endif -%}
             <ul class="list list-social list-unstyled" role="list">

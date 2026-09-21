@@ -1072,3 +1072,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: increased the desktop language-control outer spacing in both text directions without changing the header height.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: `git diff --check` passes.
+
+### 2026-09-21 - Match mobile drawer language links
+
+- Request: apply the AR | EN language-link treatment on mobile while keeping language selection in the side drawer.
+- Changed: kept the mobile navbar free of language controls and replaced the drawer language dropdown with native Shopify AR | EN locale links that match the desktop treatment.
+- Files: `snippets/header-drawer.liquid`, `assets/alma-theme.css`, `README.md`.
+- Checks: git diff --check passes. Shopify Theme Check reports the same pre-existing 970 matching-translation errors in locales/ar.json and 7 warnings across 7 files; no mobile-language-link-specific errors were reported.
