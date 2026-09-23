@@ -1129,3 +1129,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: both side launchers now have accessible close buttons. Dismissing one hides it immediately and remembers the choice in the visitor's browser, including across page loads. The popup itself remains available until dismissed and existing Arabic side placement is preserved.
 - Files: `layout/theme.liquid`, `sections/alma-editorial-feature.liquid`, `assets/alma-scent-finder-modal.js`, `assets/alma-ritual-signup.js`, `assets/alma-theme.css`, `README.md`.
 - Checks: `node --check` passes for both modified scripts and `git diff --check` passes. Shopify Theme Check reports its existing `layout/theme.liquid` finding; no offenses were reported in the modified popup scripts or editorial section.
+
+### 2026-09-23 - Restore side launchers after refresh
+
+- Request: restore the Find Your Aura and 5% offer side launchers when a visitor refreshes after closing them.
+- Changed: dismissing either side launcher now applies only to the current page view. Refreshing the page restores the launcher, while the existing popup display rules remain unchanged.
+- Files: `assets/alma-scent-finder-modal.js`, `assets/alma-ritual-signup.js`, `README.md`.
+- Checks: `node --check` passes for both modified scripts and `git diff --check` passes.
