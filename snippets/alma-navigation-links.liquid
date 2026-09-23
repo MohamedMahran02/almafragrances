@@ -4,7 +4,7 @@
     assign link_class = 'menu-drawer__menu-item list-menu__item link link--text focus-inset'
   endif
 
-  assign gifting_url = settings.alma_gifting_link | default: '/#shopify-section-gifting_story'
+  assign gifting_url = collections['layering-kits'].url | default: '/collections/layering-kits'
   assign contact_url = pages.contact.url | default: '/pages/contact'
   assign collections_url = routes.collections_url
   assign collections_page_url = pages['collections'].url | default: '/pages/collections'

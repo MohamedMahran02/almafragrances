@@ -1230,3 +1230,9 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: removed an extra trailing stylesheet blank line introduced while adding the customer-review section.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: `git diff --check` passes.
+### 2026-09-23 - Link navbar gifting to Layering & kits
+
+- Request: make the navbar Gifting item open the Layering & kits collection, matching the homepage gifting rail.
+- Changed: the desktop navbar and mobile drawer now resolve Gifting directly to the live Shopify `layering-kits` collection URL.
+- Files: `snippets/alma-navigation-links.liquid`, `README.md`.
+- Checks: Liquid destination review and `git diff --check` pass.
