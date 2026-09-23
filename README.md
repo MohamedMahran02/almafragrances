@@ -1136,3 +1136,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: dismissing either side launcher now applies only to the current page view. Refreshing the page restores the launcher, while the existing popup display rules remain unchanged.
 - Files: `assets/alma-scent-finder-modal.js`, `assets/alma-ritual-signup.js`, `README.md`.
 - Checks: `node --check` passes for both modified scripts and `git diff --check` passes.
+
+### 2026-09-23 - Use a single product-media viewer
+
+- Request: replace the stacked product-image catalogue with one image window and arrows for previous and next media.
+- Changed: the main product template now uses an ALMA-styled single-slide gallery. It shows one Shopify-managed product medium at a time, with overlay arrow controls on desktop and mobile. The native hidden thumbnail DOM remains available to preserve variant-media changes and the Shopify media lightbox.
+- Files: `snippets/product-media-gallery.liquid`, `templates/product.json`, `assets/alma-theme.css`, `README.md`.
+- Checks: product-template JSON parsing and `git diff --check` pass.
