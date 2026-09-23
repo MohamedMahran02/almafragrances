@@ -1264,3 +1264,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: converted desktop result cards to compact image-and-details grids, retaining each match's note, title, rating, type and price within the fixed-height Find Your Aura dialog.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: desktop responsive card-layout and overflow review, plus `git diff --check`, pass.
+
+### 2026-09-23 - Restrict Find Your Aura to matching products
+
+- Request: show only the products counted as matches after selecting a scent note, without changing the popup height.
+- Changed: restored the finder cards' `hidden` state at the same specificity as the desktop and mobile card layouts, so a selection such as Oud displays only its matched products and their complete details.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: selector-specificity review, matching-card hidden-state validation and `git diff --check` pass.

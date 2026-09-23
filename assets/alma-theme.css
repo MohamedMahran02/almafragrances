@@ -1373,3 +1373,6 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
   .alma-scent-finder-modal[data-has-results] .alma-scent-match .price { margin: 0; font-size: .95rem; line-height: 1.15; }
   .alma-scent-finder-modal[data-has-results] .alma-scent-match .alma-text-link { display: none; }
 }
+
+/* Layout styles must never reveal products that the finder has not matched. */
+.alma-scent-finder-modal[data-has-results] .alma-scent-match[hidden] { display: none !important; }
