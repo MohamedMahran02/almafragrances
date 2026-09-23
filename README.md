@@ -1150,3 +1150,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: gallery arrows now remain visibly rendered at every viewport size. Every product with more than one Shopify medium now shows a compact horizontal thumbnail strip under the single-image viewer; selecting a preview updates the main medium through Dawn's native gallery behavior.
 - Files: `snippets/product-media-gallery.liquid`, `assets/alma-theme.css`, `README.md`.
 - Checks: product-template JSON parsing and `git diff --check` pass.
+
+### 2026-09-23 - Remove ritual popup phone field
+
+- Request: remove the phone field from the 5% offer popup and retain the existing Shopify-native name-and-email signup flow.
+- Changed: removed the required `contact[phone]` input from the ritual popup. First name, email, newsletter tagging, success state and the existing native customer-form submission remain unchanged.
+- Files: `sections/alma-editorial-feature.liquid`, `README.md`.
+- Checks: confirmed the phone field is absent and `git diff --check` passes.
