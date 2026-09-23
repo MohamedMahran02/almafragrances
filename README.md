@@ -1187,3 +1187,11 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: overrode Dawn's desktop product-media rule that hid every gallery slider button. The ALMA gallery controls now render as visible, clickable previous and next arrows while keeping the existing single-image behavior and thumbnail previews.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: CSS selector review and `git diff --check` pass.
+
+### 2026-09-23 - Add community video section and rating counts
+
+- Request: add a UGC section after The ALMA experience with video placeholders, and show a 20–50 count beside each static product star rating.
+- Changed: added a three-card ALMA community-video section immediately after the services band. Each card uses Shopify's native Files video picker, supports an optional placeholder image and begins with a branded vertical-video placeholder. Static ratings now show a stable per-product count derived from the Shopify product ID, ranging from 20 to 50, beside the five stars.
+- Files: `sections/alma-ugc-videos.liquid`, `templates/index.json`, `snippets/alma-static-rating.liquid`, `snippets/card-product.liquid`, `sections/alma-favourites.liquid`, `sections/alma-scent-finder.liquid`, `sections/main-product.liquid`, `sections/featured-product.liquid`, `assets/alma-theme.css`, `README.md`.
+- Checks: homepage-template and section-schema JSON parsing, UGC order validation, Shopify-video-picker validation, static-count range logic review and `git diff --check` pass.
+- Shopify setup: upload each clip in the Theme Editor's ALMA community videos block picker (or Shopify Content > Files), then select it in the corresponding block. The clips remain editable without code changes.

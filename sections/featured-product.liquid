@@ -120,7 +120,7 @@
                       {{ 'onboarding.product_title' | t }}
                     {%- endunless -%}
                   </h2>
-                  {% render 'alma-static-rating' %}
+                  {% render 'alma-static-rating', product: product %}
                 {%- when 'price' -%}
                   <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                     {%- render 'price',

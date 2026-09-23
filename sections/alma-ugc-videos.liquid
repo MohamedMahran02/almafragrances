@@ -1,0 +1,68 @@
+{%- liquid
+  assign has_ugc_blocks = false
+  for block in section.blocks
+    if block.settings.video != blank or block.settings.poster != blank
+      assign has_ugc_blocks = true
+      break
+    endif
+  endfor
+-%}
+<section class="alma-ugc page-width" aria-labelledby="AlmaUGC-{{ section.id }}">
+  <header class="alma-ugc__heading">
+    <p class="alma-ugc__eyebrow">The ALMA community</p>
+    <h2 id="AlmaUGC-{{ section.id }}">{{ section.settings.heading | escape }}</h2>
+    {%- if section.settings.text != blank -%}<div class="rte">{{ section.settings.text }}</div>{%- endif -%}
+  </header>
+  <div class="alma-ugc__grid{% unless has_ugc_blocks %} alma-ugc__grid--placeholders{% endunless %}">
+    {%- for block in section.blocks -%}
+      <article class="alma-ugc__card" {{ block.shopify_attributes }}>
+        <div class="alma-ugc__media">
+          {%- if block.settings.video != blank -%}
+            {{ block.settings.video | video_tag: image_size: '1200x', controls: true, preload: 'metadata' }}
+          {%- elsif block.settings.poster != blank -%}
+            {{ block.settings.poster | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '400, 600, 900, 1200', sizes: '(min-width: 990px) 31vw, 82vw', alt: block.settings.title }}
+            <span class="alma-ugc__play" aria-hidden="true">&#9658;</span>
+          {%- else -%}
+            <div class="alma-ugc__placeholder" aria-label="Video placeholder">
+              <span class="alma-ugc__placeholder-mark" aria-hidden="true">ALMA</span>
+              <span>Video coming soon</span>
+              <span class="alma-ugc__play" aria-hidden="true">&#9658;</span>
+            </div>
+          {%- endif -%}
+        </div>
+        {%- if block.settings.title != blank -%}<h3>{{ block.settings.title | escape }}</h3>{%- endif -%}
+      </article>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "ALMA community videos",
+  "tag": "section",
+  "class": "alma-ugc-section",
+  "limit": 1,
+  "settings": [
+    {"type":"text","id":"heading","label":"Heading","default":"In the ALMA world"},
+    {"type":"richtext","id":"text","label":"Text","default":"<p>Rituals, layering and quiet moments shared by the ALMA community.</p>"}
+  ],
+  "max_blocks": 6,
+  "blocks": [
+    {
+      "type": "video",
+      "name": "Community video",
+      "settings": [
+        {"type":"video","id":"video","label":"Shopify-hosted video","info":"Upload or select a video from Shopify Files."},
+        {"type":"image_picker","id":"poster","label":"Placeholder image","info":"Shown until a Shopify-hosted video is selected."},
+        {"type":"text","id":"title","label":"Caption","default":"An ALMA ritual"}
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "ALMA community videos",
+      "blocks": [{"type":"video"},{"type":"video"},{"type":"video"}]
+    }
+  ]
+}
+{% endschema %}

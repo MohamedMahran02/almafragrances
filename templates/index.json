@@ -307,6 +307,19 @@
       "settings": {
         "heading": "The ALMA experience"
       }
+    },
+    "ugc_content": {
+      "type": "alma-ugc-videos",
+      "blocks": {
+        "video_1": {"type":"video","settings":{"title":"An ALMA ritual"}},
+        "video_2": {"type":"video","settings":{"title":"Layered your way"}},
+        "video_3": {"type":"video","settings":{"title":"A moment with ALMA"}}
+      },
+      "block_order": ["video_1", "video_2", "video_3"],
+      "settings": {
+        "heading": "In the ALMA world",
+        "text": "<p>Rituals, layering and quiet moments shared by the ALMA community.</p>"
+      }
     }
   },
   "order": [
@@ -317,6 +330,7 @@
     "dukhon_story",
     "gifting_story",
     "wardrobe",
-    "services"
+    "services",
+    "ugc_content"
   ]
 }

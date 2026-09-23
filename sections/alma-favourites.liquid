@@ -54,7 +54,7 @@
                 {%- endif -%}
               </a>
               <h3><a href="{{ product.url }}">{{ product.title | escape }}</a></h3>
-              {% render 'alma-static-rating' %}
+              {% render 'alma-static-rating', product: product %}
               {%- if product.type != blank -%}<p class="alma-product__type">{{ product.type | escape }}</p>{%- endif -%}
               {% render 'price', product: product %}
               <a class="alma-text-link" href="{{ product.url }}">{% render 'alma-localized-copy', scope: 'home', section_id: section.id, field: 'product_link_label', value: section.settings.product_link_label %}<span class="visually-hidden"> - {{ product.title | escape }}</span></a>
@@ -82,7 +82,7 @@
                   {%- endif -%}
                 </a>
                 <h3><a href="{{ product.url }}">{{ product.title | escape }}</a></h3>
-                {% render 'alma-static-rating' %}
+                {% render 'alma-static-rating', product: product %}
                 {%- if product.type != blank -%}<p class="alma-product__type">{{ product.type | escape }}</p>{%- endif -%}
                 {% render 'price', product: product %}
                 <a class="alma-text-link" href="{{ product.url }}">{% render 'alma-localized-copy', scope: 'home', section_id: section.id, field: 'product_link_label', value: section.settings.product_link_label %}<span class="visually-hidden"> - {{ product.title | escape }}</span></a>
