@@ -1239,3 +1239,8 @@ html[dir="rtl"] .alma-theme .alma-static-rating { direction: ltr; }
   .alma-ugc__grid::-webkit-scrollbar { display: none; }
   .alma-ugc__card { flex: 0 0 min(76vw, 31rem); scroll-snap-align: center; }
 }
+
+/* Hide product-gallery controls when Shopify has only one visible medium. */
+.alma-theme product-info[id^='MainProduct-'] .alma-product-media-gallery--single > .alma-product-media-controls {
+  display: none !important;
+}

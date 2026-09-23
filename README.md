@@ -1195,3 +1195,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `sections/alma-ugc-videos.liquid`, `templates/index.json`, `snippets/alma-static-rating.liquid`, `snippets/card-product.liquid`, `sections/alma-favourites.liquid`, `sections/alma-scent-finder.liquid`, `sections/main-product.liquid`, `sections/featured-product.liquid`, `assets/alma-theme.css`, `README.md`.
 - Checks: homepage-template and section-schema JSON parsing, UGC order validation, Shopify-video-picker validation, static-count range logic review and `git diff --check` pass.
 - Shopify setup: upload each clip in the Theme Editor's ALMA community videos block picker (or Shopify Content > Files), then select it in the corresponding block. The clips remain editable without code changes.
+
+### 2026-09-23 - Hide gallery arrows for one-image products
+
+- Request: do not show product-page image arrows when a product has only one image.
+- Changed: restored the ALMA gallery's single-media exception after the visible-arrow override. Products with multiple Shopify media retain their previous and next controls; products with one visible medium show neither control.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: selector precedence review and `git diff --check` pass.
