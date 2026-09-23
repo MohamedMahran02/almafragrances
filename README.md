@@ -1250,3 +1250,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: constrained the dialog and its result state to the dynamic viewport height, removed the modal's vertical scroll container, and condensed the mobile selected-scent layout so the notes and horizontal product recommendations remain visible without a vertical scrollbar.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: responsive selector and viewport-height rule review, plus `git diff --check`, pass.
+
+### 2026-09-23 - Show Find Your Aura product details in full
+
+- Request: prevent product text from being cropped after a scent note is selected.
+- Changed: changed mobile scent-match cards to compact horizontal cards with a smaller image and dedicated text column, keeping the matching note, product title, rating, type and price visible inside the fixed-height dialog.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: responsive card-layout and overflow review, plus `git diff --check`, pass.
