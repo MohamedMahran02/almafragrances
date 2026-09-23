@@ -1224,3 +1224,9 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `assets/alma-theme.css`, `sections/alma-customer-reviews.liquid`, `templates/index.json`, `README.md`.
 - Checks: homepage-template and review-section-schema JSON parsing, service-pillar order validation, review-content completeness validation and `git diff --check` pass.
 - Shopify setup: edit or replace the temporary review text, names and locations in Theme Editor > ALMA customer reviews before publishing them as customer testimonials.
+
+### 2026-09-23 - Normalize customer-review stylesheet formatting
+
+- Changed: removed an extra trailing stylesheet blank line introduced while adding the customer-review section.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: `git diff --check` passes.
