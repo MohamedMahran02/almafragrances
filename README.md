@@ -1166,3 +1166,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Verification: Admin API confirms 21 note entries and 28 products with saved references. Both `www.almafragrances.com` and `4deffe-4.myshopify.com` returned 200 but do not render `AlmaScentFinder` or `alma-theme.css`, so the public current-store theme is not the GitHub theme in this repository. The data is ready; connect/publish the repository theme on this store before claiming the popup is live.
 - Files: `README.md`.
 - Checks: authenticated Admin API scope inspection, post-write metafield count query and storefront HTML checks pass.
+
+### 2026-09-23 - Use Layering & kits for gifting
+
+- Request: use the Shopify **Layering & kits** collection instead of Best sellers in the Gifting by ALMA section.
+- Changed: selected `layering-kits` as the Gifting by ALMA product rail collection and renamed its tab to Layering & kits. The products, imagery, availability and prices remain managed in Shopify.
+- Files: `templates/index.json`, `README.md`.
+- Checks: JSON-template parsing and `git diff --check` pass.
