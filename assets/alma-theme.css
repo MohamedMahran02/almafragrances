@@ -1253,3 +1253,30 @@ html[dir="rtl"] .alma-theme .alma-static-rating { direction: ltr; }
   justify-content: center;
   line-height: 1.2;
 }
+
+
+/* Homepage ratings, ALMA pillars and customer reviews. */
+.alma-favourites .alma-static-rating { justify-content: center; margin-right: auto; margin-left: auto; }
+.alma-customer-reviews { max-width: none; padding: clamp(5rem, 8vw, 9rem) 3.2rem; border-top: 1px solid var(--alma-line); background: #fff; color: var(--alma-ink); }
+.alma-customer-reviews__heading { max-width: 58rem; margin: 0 auto clamp(3.5rem, 5vw, 5.5rem); text-align: center; }
+.alma-customer-reviews__heading > p { margin: 0 0 1rem; color: var(--alma-muted); font-size: 1.05rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.alma-customer-reviews__heading h2 { margin: 0; font-size: clamp(3.4rem, 5vw, 5.6rem); font-weight: 400; line-height: .98; }
+.alma-customer-reviews__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 128rem; margin: 0 auto; border-top: 1px solid var(--alma-line); border-bottom: 1px solid var(--alma-line); }
+.alma-customer-review { display: flex; flex-direction: column; min-height: 28rem; padding: clamp(2.6rem, 4vw, 4.5rem); border-right: 1px solid var(--alma-line); }
+.alma-customer-review:last-child { border-right: 0; }
+.alma-customer-review__stars { color: var(--alma-ink); font-size: 1.35rem; letter-spacing: .14em; line-height: 1; }
+.alma-customer-review blockquote { margin: 2.8rem 0; font-family: var(--font-heading-family); font-size: clamp(2rem, 2.3vw, 2.8rem); font-style: normal; font-weight: 400; letter-spacing: -.015em; line-height: 1.18; }
+.alma-customer-review footer { display: grid; gap: .45rem; margin-top: auto; font-family: var(--font-body-family); font-size: 1.1rem; letter-spacing: .08em; line-height: 1.4; text-transform: uppercase; }
+.alma-customer-review footer strong { font-weight: 700; }
+.alma-customer-review footer span { color: var(--alma-muted); }
+@media screen and (max-width: 749px) {
+  .alma-customer-reviews { padding: 5rem 0; }
+  .alma-customer-reviews__heading { padding: 0 2rem; }
+  .alma-customer-reviews__grid { display: flex; gap: 1.2rem; border: 0; overflow-x: auto; padding: 0 2rem 1rem; scroll-snap-type: x mandatory; scrollbar-width: none; }
+  .alma-customer-reviews__grid::-webkit-scrollbar { display: none; }
+  .alma-customer-review { flex: 0 0 82vw; min-height: 27rem; border: 1px solid var(--alma-line); scroll-snap-align: center; }
+  .alma-customer-review:last-child { border-right: 1px solid var(--alma-line); }
+}
+html[dir="rtl"] .alma-theme .alma-customer-review { border-right: 0; border-left: 1px solid var(--alma-line); text-align: right; }
+html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
+

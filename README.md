@@ -1216,3 +1216,11 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: made the hero action an inline-flex control so its label centers vertically and horizontally within the existing ALMA border, white background, typography and hover styling.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: CSS layout-rule review and `git diff --check` pass.
+
+### 2026-09-23 - Center homepage ratings, add reviews and update ALMA pillars
+
+- Request: center homepage product rating rows, add a customer-review section after UGC, and reframe The ALMA experience around Smelling amazing, Layering and Gifting.
+- Changed: centered the ALMA homepage and gifting card rating rows. Updated the three service blocks in the requested order with new brand copy for fragrance presence, layering and gifting. Added a responsive, Shopify-editable customer-review section immediately after UGC with three clearly temporary Dubai-based placeholder reviews and names: Noura A. (Jumeirah), Mariam S. (Dubai Marina), and Hala R. (Downtown Dubai).
+- Files: `assets/alma-theme.css`, `sections/alma-customer-reviews.liquid`, `templates/index.json`, `README.md`.
+- Checks: homepage-template and review-section-schema JSON parsing, service-pillar order validation, review-content completeness validation and `git diff --check` pass.
+- Shopify setup: edit or replace the temporary review text, names and locations in Theme Editor > ALMA customer reviews before publishing them as customer testimonials.

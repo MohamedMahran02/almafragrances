@@ -275,8 +275,8 @@
         "gifting": {
           "type": "service",
           "settings": {
-            "heading": "Personal gifting",
-            "text": "<p>Curated sets and ritual pieces for a present chosen their way.</p>",
+            "heading": "Gifting",
+            "text": "<p>Thoughtful ALMA pieces and sets chosen for the rituals they will make their own.</p>",
             "link_label": "Explore gifting",
             "link": "/#shopify-section-gifting_story"
           }
@@ -284,8 +284,8 @@
         "ritual": {
           "type": "service",
           "settings": {
-            "heading": "A three-step ritual",
-            "text": "<p>Lotion, solid perfume and spray perfume build a scent with depth.</p>",
+            "heading": "Layering",
+            "text": "<p>Pair lotion, solid perfume and spray to build a scent that lasts in your own way.</p>",
             "link_label": "Discover layering",
             "link": "/collections/layering-kits"
           }
@@ -293,17 +293,17 @@
         "wardrobe": {
           "type": "service",
           "settings": {
-            "heading": "The complete wardrobe",
-            "text": "<p>Perfumes, solids, lotions, Dukhoon, charms and ready-made kits.</p>",
+            "heading": "Smelling amazing",
+            "text": "<p>Fragrance that stays close, evolves beautifully and becomes part of your presence.</p>",
             "link_label": "Shop all",
             "link": "/collections/all"
           }
         }
       },
       "block_order": [
-        "gifting",
+        "wardrobe",
         "ritual",
-        "wardrobe"
+        "gifting"
       ],
       "settings": {
         "heading": "The ALMA experience"
@@ -343,6 +343,16 @@
         "heading": "In the ALMA world",
         "text": "<p>Rituals, layering and quiet moments shared by the ALMA community.</p>"
       }
+    },
+    "customer_reviews": {
+      "type": "alma-customer-reviews",
+      "blocks": {
+        "review_1": {"type":"review","settings":{"quote":"A beautiful, long-lasting scent that feels refined without ever being too much.","name":"Noura A.","location":"Jumeirah, Dubai"}},
+        "review_2": {"type":"review","settings":{"quote":"The layering ritual has become my favourite part of getting ready for a Dubai evening.","name":"Mariam S.","location":"Dubai Marina"}},
+        "review_3": {"type":"review","settings":{"quote":"The presentation is so thoughtful. It made a truly special gift for someone close to me.","name":"Hala R.","location":"Downtown Dubai"}}
+      },
+      "block_order": ["review_1", "review_2", "review_3"],
+      "settings": {"heading":"Kind words from Dubai"}
     }
   },
   "order": [
@@ -354,6 +364,7 @@
     "gifting_story",
     "wardrobe",
     "services",
-    "ugc_content"
+    "ugc_content",
+    "customer_reviews"
   ]
 }
