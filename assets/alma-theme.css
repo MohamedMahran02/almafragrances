@@ -1244,3 +1244,12 @@ html[dir="rtl"] .alma-theme .alma-static-rating { direction: ltr; }
 .alma-theme product-info[id^='MainProduct-'] .alma-product-media-gallery--single > .alma-product-media-controls {
   display: none !important;
 }
+
+/* Keep the hero action label centered inside its ALMA bordered control. */
+.alma-campaign__button {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+}

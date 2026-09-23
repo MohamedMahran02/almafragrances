@@ -1209,3 +1209,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: restored rendering for the existing campaign `buttons` block as a positioned hero action. The Shopify-editable label is set to Shop now and its existing destination remains the full product collection at `/collections/all`.
 - Files: `sections/alma-campaign.liquid`, `templates/index.json`, `README.md`.
 - Checks: campaign block-render and homepage-template JSON validation, plus `git diff --check`, pass.
+
+### 2026-09-23 - Align the hero Shop now button
+
+- Request: correct the broken Shop now button text and restore its original visual treatment.
+- Changed: made the hero action an inline-flex control so its label centers vertically and horizontally within the existing ALMA border, white background, typography and hover styling.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: CSS layout-rule review and `git diff --check` pass.
