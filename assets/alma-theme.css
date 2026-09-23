@@ -1285,3 +1285,28 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
   color: #fff;
   text-decoration-color: currentColor;
 }
+
+/* Keep the Find Your Aura dialog fully within the viewport. */
+.alma-scent-finder-modal { overflow: hidden; }
+.alma-scent-finder-modal[data-has-results] { display: flex; height: min(72rem, calc(100dvh - 3.2rem)); }
+.alma-scent-finder-modal[data-has-results] .alma-scent-finder-modal__panel,
+.alma-scent-finder-modal[data-has-results] .alma-scent-finder-modal__scroll { height: 100%; }
+.alma-scent-finder-modal__scroll { overflow: hidden; }
+.alma-scent-finder-modal[data-has-results] .alma-scent-finder { display: flex; flex-direction: column; height: 100%; min-height: 0; padding: clamp(2.8rem, 4vw, 4.4rem) 0 2rem; }
+.alma-scent-finder-modal[data-has-results] .alma-scent-finder__results-wrap { margin-top: auto; padding-top: clamp(2rem, 3vw, 3.2rem); }
+.alma-scent-finder-modal[data-has-results] .alma-scent-match__image-link { aspect-ratio: 4 / 3; max-height: 20rem; }
+
+@media screen and (max-width: 749px) {
+  .alma-scent-finder-modal[data-has-results] { height: calc(100dvh - 1.6rem); max-height: none; }
+  .alma-scent-finder-modal[data-has-results] .alma-scent-finder { padding: 2.4rem 0 1.1rem; }
+  .alma-scent-finder-modal[data-has-results] .alma-scent-finder__heading h2 { margin-bottom: .5rem; font-size: 2.25rem; }
+  .alma-scent-finder-modal[data-has-results] .alma-scent-finder__notes { margin-top: .8rem; }
+  .alma-scent-finder-modal[data-has-results] .alma-scent-finder__notes legend { margin-bottom: .7rem; font-size: .9rem; }
+  .alma-scent-finder-modal[data-has-results] .alma-scent-finder__note-grid { gap: .45rem; }
+  .alma-scent-finder-modal[data-has-results] .alma-scent-finder__note span { min-height: 3rem; padding: .4rem .8rem; font-size: .9rem; }
+  .alma-scent-finder-modal[data-has-results] .alma-scent-finder__actions { min-height: 2.8rem; padding-top: .7rem; }
+  .alma-scent-finder-modal[data-has-results] .alma-scent-finder__status { font-size: 1rem; }
+  .alma-scent-finder-modal[data-has-results] .alma-scent-finder__results-wrap { padding-top: .8rem; }
+  .alma-scent-finder-modal[data-has-results] .alma-scent-finder__results { padding-bottom: .2rem; }
+  .alma-scent-finder-modal[data-has-results] .alma-scent-match__image-link { aspect-ratio: 4 / 3; max-height: 13rem; }
+}

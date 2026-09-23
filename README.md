@@ -1243,3 +1243,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: set the active desktop Products label and its underline to white so they remain legible on the burgundy header surface.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: CSS selector review and `git diff --check` pass.
+
+### 2026-09-23 - Fit Find Your Aura to the viewport
+
+- Request: remove the vertical scroll from the Find Your Aura pop-up and keep it within the screen.
+- Changed: constrained the dialog and its result state to the dynamic viewport height, removed the modal's vertical scroll container, and condensed the mobile selected-scent layout so the notes and horizontal product recommendations remain visible without a vertical scrollbar.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: responsive selector and viewport-height rule review, plus `git diff --check`, pass.
