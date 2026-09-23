@@ -1020,3 +1020,21 @@ html[dir="rtl"] .alma-theme .header__icons .alma-header-language { order: -1; ma
 .alma-collection-banner:focus-visible { outline: 2px solid var(--alma-ink); outline-offset: .4rem; }
 .alma-collection-banners__empty { margin: 0; padding: 3rem; border: 1px solid var(--alma-line); text-align: center; }
 @media screen and (max-width: 749px) { .alma-collection-banners__grid { grid-template-columns: 1fr; gap: 1.4rem; } .alma-collection-banner { min-height: 42rem; } }
+
+
+/* Dismissible side launchers for the Aura finder and ritual offer. */
+.alma-scent-finder-launcher-wrap, .alma-ritual-signup-launcher-wrap { position: fixed; z-index: 9; top: 50%; transform: translateY(-50%); transition: opacity .2s ease, transform .2s ease, visibility .2s ease; }
+.alma-scent-finder-launcher-wrap { right: 0; }
+.alma-ritual-signup-launcher-wrap { left: 0; }
+.alma-scent-finder-launcher-wrap[hidden], .alma-ritual-signup-launcher-wrap[hidden] { display: none; }
+.alma-scent-finder-launcher, .alma-ritual-signup-launcher { position: static; transform: none; padding-top: 3.6rem; }
+.alma-side-launcher__dismiss { position: absolute; z-index: 1; top: .8rem; left: 50%; display: grid; width: 2.2rem; height: 2.2rem; padding: 0; border: 1px solid rgba(255, 255, 255, .62); border-radius: 50%; background: transparent; color: #fff; font-family: Arial, sans-serif; font-size: 1.7rem; font-weight: 300; line-height: 1; place-items: center; transform: translateX(-50%); cursor: pointer; }
+.alma-side-launcher__dismiss:hover { background: #fff; color: var(--alma-ink); }
+.alma-side-launcher__dismiss:focus-visible { outline: 2px solid #fff; outline-offset: .25rem; }
+.alma-scent-finder-is-open .alma-scent-finder-launcher-wrap { visibility: hidden; opacity: 0; transform: translate(100%, -50%); pointer-events: none; }
+.alma-ritual-signup-is-open .alma-ritual-signup-launcher-wrap { visibility: hidden; opacity: 0; transform: translate(-100%, -50%); pointer-events: none; }
+html[dir="rtl"] .alma-theme .alma-scent-finder-launcher-wrap { right: auto; left: 0; }
+html[dir="rtl"] .alma-theme .alma-ritual-signup-launcher-wrap { right: 0; left: auto; }
+html[dir="rtl"] .alma-scent-finder-is-open .alma-scent-finder-launcher-wrap { transform: translate(-100%, -50%); }
+html[dir="rtl"] .alma-ritual-signup-is-open .alma-ritual-signup-launcher-wrap { transform: translate(100%, -50%); }
+@media (max-width: 749px) { .alma-scent-finder-launcher, .alma-ritual-signup-launcher { padding-top: 3.2rem; } .alma-side-launcher__dismiss { top: .55rem; width: 2rem; height: 2rem; font-size: 1.5rem; } }

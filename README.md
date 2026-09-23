@@ -1122,3 +1122,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: the popup now renders whenever the selected perfume collection has products, even when the current store has no `Fragrance note` metaobjects. It uses Shopify-editable fallback notes and falls back to all Shopify products if the selected collection is empty. Product titles, descriptions and existing fragrance metafields continue to drive matching.
 - Files: `sections/alma-scent-finder.liquid`, `README.md`.
 - Checks: `git diff --check` passes. Shopify Theme Check JSON output contains no offenses in `sections/alma-scent-finder.liquid`.
+
+### 2026-09-23 - Add close controls to side popup launchers
+
+- Request: add an X control to remove the Find Your Aura and 5% offer launchers from the page edges after their popups close.
+- Changed: both side launchers now have accessible close buttons. Dismissing one hides it immediately and remembers the choice in the visitor's browser, including across page loads. The popup itself remains available until dismissed and existing Arabic side placement is preserved.
+- Files: `layout/theme.liquid`, `sections/alma-editorial-feature.liquid`, `assets/alma-scent-finder-modal.js`, `assets/alma-ritual-signup.js`, `assets/alma-theme.css`, `README.md`.
+- Checks: `node --check` passes for both modified scripts and `git diff --check` passes. Shopify Theme Check reports its existing `layout/theme.liquid` finding; no offenses were reported in the modified popup scripts or editorial section.

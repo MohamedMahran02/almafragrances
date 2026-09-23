@@ -335,9 +335,12 @@
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
-    <a class="alma-scent-finder-launcher" href="{{ routes.root_url }}#AlmaScentFinder" data-alma-scent-finder-launcher>
-      {% if request.locale.iso_code == 'ar' %}{{ 'alma.home.scent_finder.heading' | t }}{% else %}Find Your Aura{% endif %}
-    </a>
+    <div class="alma-scent-finder-launcher-wrap" data-alma-scent-finder-launcher-wrap>
+      <a class="alma-scent-finder-launcher" href="{{ routes.root_url }}#AlmaScentFinder" data-alma-scent-finder-launcher>
+        {% if request.locale.iso_code == 'ar' %}{{ 'alma.home.scent_finder.heading' | t }}{% else %}Find Your Aura{% endif %}
+      </a>
+      <button class="alma-side-launcher__dismiss" type="button" aria-label="{{ 'accessibility.close' | t }}" data-alma-scent-finder-dismiss>&times;</button>
+    </div>
 
     {%- if settings.cart_type == 'drawer' -%}
       {%- render 'cart-drawer' -%}

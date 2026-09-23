@@ -1,6 +1,8 @@
 (() => {
   const modal = document.querySelector('[data-alma-ritual-signup-modal]');
   const launcher = document.querySelector('[data-alma-ritual-signup-launcher]');
+  const launcherWrap = document.querySelector('[data-alma-ritual-signup-launcher-wrap]');
+  const dismissControl = document.querySelector('[data-alma-ritual-signup-dismiss]');
   if (!modal || !launcher || typeof modal.showModal !== 'function') return;
 
   const sectionId = modal.dataset.almaRitualSignupSection;
@@ -8,6 +10,14 @@
   if (!ritual) return;
 
   const seenKey = `alma-ritual-signup-seen-${sectionId}`;
+  const dismissedKey = `alma-ritual-signup-dismissed-${sectionId}`;
+  const isDismissed = () => { try { return window.localStorage.getItem(dismissedKey) === 'true'; } catch (error) { return false; } };
+  const hideLauncher = () => { if (launcherWrap) launcherWrap.hidden = true; };
+  dismissControl?.addEventListener('click', () => {
+    try { window.localStorage.setItem(dismissedKey, 'true'); } catch (error) { /* Hide the control even when storage is unavailable. */ }
+    hideLauncher();
+  });
+  if (isDismissed()) hideLauncher();
   const bodyClass = 'alma-ritual-signup-is-open';
   let hasOpened = false;
 
@@ -45,7 +55,7 @@
   modal.addEventListener('close', () => {
     document.body.classList.remove(bodyClass);
     setSeen();
-    launcher.hidden = false;
+    if (!isDismissed()) launcher.hidden = false;
   });
 
   const form = modal.closest('form');
@@ -73,6 +83,8 @@
   });
 
   launcher.addEventListener('click', open);
+
+  if (isDismissed()) return;
 
   if (modal.dataset.signupSuccess === 'true' || modal.dataset.signupError === 'true') {
     requestAnimationFrame(open);

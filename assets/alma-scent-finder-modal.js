@@ -1,5 +1,15 @@
 (() => {
   const modal = document.querySelector('[data-alma-scent-finder-modal]');
+  const launcherWrap = document.querySelector('[data-alma-scent-finder-launcher-wrap]');
+  const dismissControl = document.querySelector('[data-alma-scent-finder-dismiss]');
+  const dismissedKey = 'alma-scent-finder-dismissed';
+  const hideLauncher = () => { if (launcherWrap) launcherWrap.hidden = true; };
+  const wasDismissed = () => { try { return window.localStorage.getItem(dismissedKey) === 'true'; } catch (error) { return false; } };
+  dismissControl?.addEventListener('click', () => {
+    try { window.localStorage.setItem(dismissedKey, 'true'); } catch (error) { /* Hide the control even when storage is unavailable. */ }
+    hideLauncher();
+  });
+  if (wasDismissed()) hideLauncher();
   if (!modal || typeof modal.showModal !== 'function') return;
 
   const seenKey = 'alma-scent-finder-opened';
@@ -37,6 +47,8 @@
     requestAnimationFrame(open);
     return;
   }
+
+  if (wasDismissed()) return;
 
   try {
     if (!window.sessionStorage.getItem(seenKey)) requestAnimationFrame(open);
