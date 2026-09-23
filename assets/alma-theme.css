@@ -1381,3 +1381,13 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
 @media screen and (min-width: 750px) {
   .alma-scent-finder-modal[data-has-results] .alma-scent-finder__results-wrap { margin-top: 0; padding-top: 1.6rem; }
 }
+
+/* Let the mobile dialog shrink or grow to the visible matching products. */
+@media screen and (max-width: 749px) {
+  .alma-scent-finder-modal[data-has-results] { display: block; height: auto; max-height: calc(100dvh - 1.6rem); }
+  .alma-scent-finder-modal[data-has-results] .alma-scent-finder-modal__panel,
+  .alma-scent-finder-modal[data-has-results] .alma-scent-finder-modal__scroll { height: auto; }
+  .alma-scent-finder-modal[data-has-results] .alma-scent-finder { display: block; height: auto; min-height: 0; }
+  .alma-scent-finder-modal[data-has-results] .alma-scent-finder__results { display: grid; grid-template-columns: 1fr; gap: .8rem; overflow: visible; padding: 0 1.6rem .2rem; }
+  .alma-scent-finder-modal[data-has-results] .alma-scent-match { flex-basis: auto; }
+}

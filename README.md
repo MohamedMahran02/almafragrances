@@ -1285,3 +1285,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: removed the mobile result rail's automatic top margin while retaining its compact spacing and horizontal product browsing.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: mobile flex-layout spacing review and `git diff --check` pass.
+
+### 2026-09-23 - Size mobile Find Your Aura to its matches
+
+- Request: show every matching product on mobile and remove the empty area below a short match list.
+- Changed: made the selected-scent mobile dialog size to its visible content and changed the result rail to a compact vertical list. The dialog now grows or shrinks with one to four matches while preserving the viewport limit and avoiding a vertical scroll.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: mobile result-state layout and hidden-card behavior review, plus `git diff --check`, pass.
