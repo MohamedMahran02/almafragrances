@@ -1279,3 +1279,4 @@ html[dir="rtl"] .alma-theme .alma-static-rating { direction: ltr; }
 }
 html[dir="rtl"] .alma-theme .alma-customer-review { border-right: 0; border-left: 1px solid var(--alma-line); text-align: right; }
 html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
+

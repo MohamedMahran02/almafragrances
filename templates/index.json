@@ -272,13 +272,13 @@
     "services": {
       "type": "alma-service-band",
       "blocks": {
-        "gifting": {
+        "wardrobe": {
           "type": "service",
           "settings": {
-            "heading": "Gifting",
-            "text": "<p>Thoughtful ALMA pieces and sets chosen for the rituals they will make their own.</p>",
-            "link_label": "Explore gifting",
-            "link": "/#shopify-section-gifting_story"
+            "heading": "Smelling amazing",
+            "text": "<p>Fragrance that stays close, evolves beautifully and becomes part of your presence.</p>",
+            "link_label": "Shop all",
+            "link": "/collections/all"
           }
         },
         "ritual": {
@@ -290,13 +290,13 @@
             "link": "/collections/layering-kits"
           }
         },
-        "wardrobe": {
+        "gifting": {
           "type": "service",
           "settings": {
-            "heading": "Smelling amazing",
-            "text": "<p>Fragrance that stays close, evolves beautifully and becomes part of your presence.</p>",
-            "link_label": "Shop all",
-            "link": "/collections/all"
+            "heading": "Gifting",
+            "text": "<p>Thoughtful ALMA pieces and sets chosen for the rituals they will make their own.</p>",
+            "link_label": "Explore gifting",
+            "link": "/#shopify-section-gifting_story"
           }
         }
       },
@@ -347,12 +347,39 @@
     "customer_reviews": {
       "type": "alma-customer-reviews",
       "blocks": {
-        "review_1": {"type":"review","settings":{"quote":"A beautiful, long-lasting scent that feels refined without ever being too much.","name":"Noura A.","location":"Jumeirah, Dubai"}},
-        "review_2": {"type":"review","settings":{"quote":"The layering ritual has become my favourite part of getting ready for a Dubai evening.","name":"Mariam S.","location":"Dubai Marina"}},
-        "review_3": {"type":"review","settings":{"quote":"The presentation is so thoughtful. It made a truly special gift for someone close to me.","name":"Hala R.","location":"Downtown Dubai"}}
+        "review_1": {
+          "type": "review",
+          "settings": {
+            "quote": "A beautiful, long-lasting scent that feels refined without ever being too much.",
+            "name": "Noura A.",
+            "location": "Jumeirah, Dubai"
+          }
+        },
+        "review_2": {
+          "type": "review",
+          "settings": {
+            "quote": "The layering ritual has become my favourite part of getting ready for a Dubai evening.",
+            "name": "Mariam S.",
+            "location": "Dubai Marina"
+          }
+        },
+        "review_3": {
+          "type": "review",
+          "settings": {
+            "quote": "The presentation is so thoughtful. It made a truly special gift for someone close to me.",
+            "name": "Hala R.",
+            "location": "Downtown Dubai"
+          }
+        }
       },
-      "block_order": ["review_1", "review_2", "review_3"],
-      "settings": {"heading":"Kind words from Dubai"}
+      "block_order": [
+        "review_1",
+        "review_2",
+        "review_3"
+      ],
+      "settings": {
+        "heading": "ALMA, in their words"
+      }
     }
   },
   "order": [
