@@ -15,9 +15,11 @@
 {%- if finder_collection.products != blank -%}
   <dialog id="AlmaScentFinder" class="alma-scent-finder-modal" aria-labelledby="AlmaScentFinder-{{ section.id }}" data-alma-scent-finder-modal>
     <div class="alma-scent-finder-modal__panel">
-      <button class="alma-scent-finder-modal__close" type="button" aria-label="{{ 'accessibility.close' | t }}" data-alma-scent-finder-close>
-        <span class="svg-wrapper">{{- 'icon-close.svg' | inline_asset_content -}}</span>
-      </button>
+      <form method="dialog">
+        <button class="alma-scent-finder-modal__close" type="submit" aria-label="{{ 'accessibility.close' | t }}" data-alma-scent-finder-close>
+          <span class="svg-wrapper">{{- 'icon-close.svg' | inline_asset_content -}}</span>
+        </button>
+      </form>
       <div class="alma-scent-finder-modal__scroll">
   <alma-scent-finder class="alma-scent-finder" data-result-limit="{{ section.settings.results_limit }}" data-match-label="{{ 'alma.finder.matches' | t }}" data-found-one="{{ 'alma.finder.found_one' | t }}" data-found-many="{{ 'alma.finder.found_many' | t }}" data-no-match="{{ 'alma.finder.no_match' | t }}">
     <div class="alma-scent-finder__intro page-width">
