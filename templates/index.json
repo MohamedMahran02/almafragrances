@@ -106,6 +106,7 @@
         "prompt": "Which notes draw you in?",
         "initial_message": "Select one or more notes to begin.",
         "collection": "alma-perfumes",
+        "fallback_notes": "Oud, Musk, Amber, Saffron, Rose, Vanilla, Sandalwood, Jasmine",
         "results_limit": 4
       }
     },
@@ -311,11 +312,33 @@
     "ugc_content": {
       "type": "alma-ugc-videos",
       "blocks": {
-        "video_1": {"type":"video","settings":{"title":"An ALMA ritual"}},
-        "video_2": {"type":"video","settings":{"title":"Layered your way"}},
-        "video_3": {"type":"video","settings":{"title":"A moment with ALMA"}}
+        "video_1": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/SaveInta.com_AQNFQar9Uq5LpJwPFdIOu-JmO9mRr19wu6huXF1XqbKT2_RkCBqJyGp6mUoxsA4LJOECA3zOGLRqaCRle_YVlDx8P_HrRK8MeVYeLHs.mp4",
+            "title": "An ALMA ritual"
+          }
+        },
+        "video_2": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/SaveInta.com_AQOkmUymTuMItzrQgO8X5mswJW03ePfZnVxkZXRmirfjJIUt4-jaI5BgOAMUoe6ZhwkPcqGWywZpgZS-20DCLUfPf12geGCnS-3861s.mp4",
+            "title": "Layered your way"
+          }
+        },
+        "video_3": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/SaveInta.com_AQOeiKTVdC9r4yHP-JSj7jg6gsIx4irup9N07sRfghkLfNZ5r5elVSLovl6kOd1_hwIqF5g5ylXiPMVMr6M0HYYeKBsJSx57FezXI9g.mp4",
+            "title": "A moment with ALMA"
+          }
+        }
       },
-      "block_order": ["video_1", "video_2", "video_3"],
+      "block_order": [
+        "video_1",
+        "video_2",
+        "video_3"
+      ],
       "settings": {
         "heading": "In the ALMA world",
         "text": "<p>Rituals, layering and quiet moments shared by the ALMA community.</p>"
