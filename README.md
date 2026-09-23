@@ -1180,3 +1180,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: added a reusable, accessible five-star rating below product titles across standard Shopify cards, ALMA homepage, gifting and scent-match cards, plus main and featured product detail layouts. The rating uses the shared `--alma-ink` dark-burgundy brand color and remains readable in RTL.
 - Files: `snippets/alma-static-rating.liquid`, `snippets/card-product.liquid`, `sections/alma-favourites.liquid`, `sections/alma-scent-finder.liquid`, `sections/main-product.liquid`, `sections/featured-product.liquid`, `assets/alma-theme.css`, `README.md`.
 - Checks: Liquid render placement review and `git diff --check` pass.
+
+### 2026-09-23 - Restore product-gallery arrows
+
+- Request: show the previous and next arrows that switch product images on the product page.
+- Changed: overrode Dawn's desktop product-media rule that hid every gallery slider button. The ALMA gallery controls now render as visible, clickable previous and next arrows while keeping the existing single-image behavior and thumbnail previews.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: CSS selector review and `git diff --check` pass.

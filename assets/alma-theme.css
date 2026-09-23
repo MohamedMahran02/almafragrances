@@ -1205,3 +1205,9 @@ html[dir="rtl"] .alma-ritual-signup-is-open .alma-ritual-signup-launcher-wrap { 
   font-size: 1.5rem;
 }
 html[dir="rtl"] .alma-theme .alma-static-rating { direction: ltr; }
+
+/* Keep ALMA product-gallery arrows visible above Dawn's desktop media-button rule. */
+.alma-theme product-info[id^='MainProduct-'] .alma-product-media-gallery > .alma-product-media-controls .slider-button {
+  display: grid !important;
+  place-items: center;
+}
