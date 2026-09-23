@@ -1202,3 +1202,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: restored the ALMA gallery's single-media exception after the visible-arrow override. Products with multiple Shopify media retain their previous and next controls; products with one visible medium show neither control.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: selector precedence review and `git diff --check` pass.
+
+### 2026-09-23 - Restore the hero Shop now button
+
+- Request: restore the missing Shop now button over the homepage hero image.
+- Changed: restored rendering for the existing campaign `buttons` block as a positioned hero action. The Shopify-editable label is set to Shop now and its existing destination remains the full product collection at `/collections/all`.
+- Files: `sections/alma-campaign.liquid`, `templates/index.json`, `README.md`.
+- Checks: campaign block-render and homepage-template JSON validation, plus `git diff --check`, pass.
