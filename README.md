@@ -1157,3 +1157,12 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: removed the required `contact[phone]` input from the ritual popup. First name, email, newsletter tagging, success state and the existing native customer-form submission remain unchanged.
 - Files: `sections/alma-editorial-feature.liquid`, `README.md`.
 - Checks: confirmed the phone field is absent and `git diff --check` passes.
+
+### 2026-09-23 - Populate Find Your Aura product-note data on the current store
+
+- Request: use the installed Alma App to read product descriptions, create Shopify-native fragrance-note data and assign product notes for Find Your Aura.
+- Verified store configuration: authenticated the installed Alma App against `4deffe-4.myshopify.com`. Created the merchant-owned **Fragrance note** metaobject definition (`fragrance_note`) with a public storefront-readable Name field. Created the product metafield definition **Fragrance notes (select)** at `custom.fragrance_note_refs`, as a public storefront-readable list of references to that metaobject.
+- Data applied: created 21 reusable note entries and assigned extracted note references to 28 of 43 products. The import reads explicit note/contains text and product scent names; it did not modify titles, descriptions, images, prices, variants or unidentifiable products.
+- Verification: Admin API confirms 21 note entries and 28 products with saved references. Both `www.almafragrances.com` and `4deffe-4.myshopify.com` returned 200 but do not render `AlmaScentFinder` or `alma-theme.css`, so the public current-store theme is not the GitHub theme in this repository. The data is ready; connect/publish the repository theme on this store before claiming the popup is live.
+- Files: `README.md`.
+- Checks: authenticated Admin API scope inspection, post-write metafield count query and storefront HTML checks pass.
