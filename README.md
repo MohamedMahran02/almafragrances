@@ -1292,3 +1292,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: made the selected-scent mobile dialog size to its visible content and changed the result rail to a compact vertical list. The dialog now grows or shrinks with one to four matches while preserving the viewport limit and avoiding a vertical scroll.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: mobile result-state layout and hidden-card behavior review, plus `git diff --check`, pass.
+
+### 2026-09-23 - Center the mobile Find Your Aura dialog
+
+- Request: center the mobile popup and make its variable-height expansion extend above and below its center.
+- Changed: positioned the mobile dialog at the viewport center with a centered transform, so its content-sized height changes stay balanced rather than attaching the popup to the top edge.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: mobile dialog positioning and dynamic-height interaction review, plus `git diff --check`, pass.
