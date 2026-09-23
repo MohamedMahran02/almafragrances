@@ -1257,3 +1257,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: changed mobile scent-match cards to compact horizontal cards with a smaller image and dedicated text column, keeping the matching note, product title, rating, type and price visible inside the fixed-height dialog.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: responsive card-layout and overflow review, plus `git diff --check`, pass.
+
+### 2026-09-23 - Show full Find Your Aura matches on desktop
+
+- Request: fix cropped selected-scent product text on desktop.
+- Changed: converted desktop result cards to compact image-and-details grids, retaining each match's note, title, rating, type and price within the fixed-height Find Your Aura dialog.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: desktop responsive card-layout and overflow review, plus `git diff --check`, pass.
