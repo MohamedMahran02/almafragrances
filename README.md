@@ -1173,3 +1173,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: selected `layering-kits` as the Gifting by ALMA product rail collection and renamed its tab to Layering & kits. The products, imagery, availability and prices remain managed in Shopify.
 - Files: `templates/index.json`, `README.md`.
 - Checks: JSON-template parsing and `git diff --check` pass.
+
+### 2026-09-23 - Add static ALMA product ratings
+
+- Request: add a static star rating to each product using the dark burgundy from the ALMA navigation and footer.
+- Changed: added a reusable, accessible five-star rating below product titles across standard Shopify cards, ALMA homepage, gifting and scent-match cards, plus main and featured product detail layouts. The rating uses the shared `--alma-ink` dark-burgundy brand color and remains readable in RTL.
+- Files: `snippets/alma-static-rating.liquid`, `snippets/card-product.liquid`, `sections/alma-favourites.liquid`, `sections/alma-scent-finder.liquid`, `sections/main-product.liquid`, `sections/featured-product.liquid`, `assets/alma-theme.css`, `README.md`.
+- Checks: Liquid render placement review and `git diff --check` pass.

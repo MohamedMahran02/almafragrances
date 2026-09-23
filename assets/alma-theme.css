@@ -1187,3 +1187,21 @@ html[dir="rtl"] .alma-ritual-signup-is-open .alma-ritual-signup-launcher-wrap { 
     width: 5.8rem;
   }
 }
+
+
+/* Consistent static product rating across ALMA product cards and product details. */
+.alma-theme .alma-static-rating {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin: .7rem 0 .9rem;
+  color: var(--alma-ink);
+  font-size: 1.25rem;
+  letter-spacing: .13em;
+  line-height: 1;
+}
+.alma-theme .product__info-container > .alma-static-rating {
+  margin: 1.2rem 0 1.8rem;
+  font-size: 1.5rem;
+}
+html[dir="rtl"] .alma-theme .alma-static-rating { direction: ltr; }

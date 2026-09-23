@@ -84,6 +84,7 @@
             </a>
             <p class="alma-scent-match__reason"></p>
             <h3><a href="{{ product.url }}">{{ product.title | escape }}</a></h3>
+            {% render 'alma-static-rating' %}
             {%- if product.type != blank -%}<p class="alma-scent-match__type">{{ product.type | escape }}</p>{%- endif -%}
             {% render 'price', product: product %}
             <a class="alma-text-link" href="{{ product.url }}">{{ 'alma.discover' | t }}<span class="visually-hidden"> — {{ product.title | escape }}</span></a>
