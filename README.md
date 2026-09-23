@@ -1143,3 +1143,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: the main product template now uses an ALMA-styled single-slide gallery. It shows one Shopify-managed product medium at a time, with overlay arrow controls on desktop and mobile. The native hidden thumbnail DOM remains available to preserve variant-media changes and the Shopify media lightbox.
 - Files: `snippets/product-media-gallery.liquid`, `templates/product.json`, `assets/alma-theme.css`, `README.md`.
 - Checks: product-template JSON parsing and `git diff --check` pass.
+
+### 2026-09-23 - Show product gallery controls and previews
+
+- Request: show the missing gallery arrows and add small product-media previews beneath the main product image.
+- Changed: gallery arrows now remain visibly rendered at every viewport size. Every product with more than one Shopify medium now shows a compact horizontal thumbnail strip under the single-image viewer; selecting a preview updates the main medium through Dawn's native gallery behavior.
+- Files: `snippets/product-media-gallery.liquid`, `assets/alma-theme.css`, `README.md`.
+- Checks: product-template JSON parsing and `git diff --check` pass.
