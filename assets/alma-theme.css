@@ -1376,3 +1376,8 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
 
 /* Layout styles must never reveal products that the finder has not matched. */
 .alma-scent-finder-modal[data-has-results] .alma-scent-match[hidden] { display: none !important; }
+
+/* Place desktop matches immediately below the selection status. */
+@media screen and (min-width: 750px) {
+  .alma-scent-finder-modal[data-has-results] .alma-scent-finder__results-wrap { margin-top: 0; padding-top: 1.6rem; }
+}

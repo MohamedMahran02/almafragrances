@@ -1271,3 +1271,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: restored the finder cards' `hidden` state at the same specificity as the desktop and mobile card layouts, so a selection such as Oud displays only its matched products and their complete details.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: selector-specificity review, matching-card hidden-state validation and `git diff --check` pass.
+
+### 2026-09-23 - Close the desktop Find Your Aura results gap
+
+- Request: remove the large desktop gap between the scent-selection status and matched products.
+- Changed: removed the desktop result rail's automatic top margin so matching products follow the selection status with the existing intentional spacing only.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: desktop flex-layout spacing review and `git diff --check` pass.
