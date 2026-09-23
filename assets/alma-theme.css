@@ -1306,7 +1306,7 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
   .alma-scent-finder-modal[data-has-results] .alma-scent-finder__note span { min-height: 3rem; padding: .4rem .8rem; font-size: .9rem; }
   .alma-scent-finder-modal[data-has-results] .alma-scent-finder__actions { min-height: 2.8rem; padding-top: .7rem; }
   .alma-scent-finder-modal[data-has-results] .alma-scent-finder__status { font-size: 1rem; }
-  .alma-scent-finder-modal[data-has-results] .alma-scent-finder__results-wrap { padding-top: .8rem; }
+  .alma-scent-finder-modal[data-has-results] .alma-scent-finder__results-wrap { margin-top: 0; padding-top: .8rem; }
   .alma-scent-finder-modal[data-has-results] .alma-scent-finder__results { padding-bottom: .2rem; }
   .alma-scent-finder-modal[data-has-results] .alma-scent-match__image-link { aspect-ratio: 4 / 3; max-height: 13rem; }
 }

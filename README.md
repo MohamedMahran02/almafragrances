@@ -1278,3 +1278,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: removed the desktop result rail's automatic top margin so matching products follow the selection status with the existing intentional spacing only.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: desktop flex-layout spacing review and `git diff --check` pass.
+
+### 2026-09-23 - Close the mobile Find Your Aura results gap
+
+- Request: remove the large mobile gap between the scent-selection status and matched products.
+- Changed: removed the mobile result rail's automatic top margin while retaining its compact spacing and horizontal product browsing.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: mobile flex-layout spacing review and `git diff --check` pass.
