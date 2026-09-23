@@ -1236,3 +1236,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: the desktop navbar and mobile drawer now resolve Gifting directly to the live Shopify `layering-kits` collection URL.
 - Files: `snippets/alma-navigation-links.liquid`, `README.md`.
 - Checks: Liquid destination review and `git diff --check` pass.
+
+### 2026-09-23 - Keep active Products navigation visible
+
+- Request: keep Products visible in the navbar while viewing the products page.
+- Changed: set the active desktop Products label and its underline to white so they remain legible on the burgundy header surface.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: CSS selector review and `git diff --check` pass.
