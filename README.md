@@ -1327,3 +1327,11 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: added a direct dialog-close action to the X, a document-level capture listener, and cleanup for in-progress dialog height animations before closing. The selected notes remain stored in the open dialog; closing never requires clearing them.
 - Files: `sections/alma-scent-finder.liquid`, `assets/alma-scent-finder-modal.js`, `README.md`.
 - Checks: close-path review for touch, click and declarative dialog actions, `node --check`, and `git diff --check` pass.
+
+### 2026-09-24 - Restore the native Find Your Aura close flow
+
+- Request: identify and remove the blocker that prevents closing the mobile Find Your Aura popup after a product match appears.
+- Cause: the selected-result update had accumulated multiple competing close mechanisms and a custom transformed dialog position. Those changes interfered with the native dialog interaction after its height changed.
+- Changed: restored the native dialog position and one standard button click handler that calls `dialog.close()` directly. The result layout and selected notes are unaffected.
+- Files: `sections/alma-scent-finder.liquid`, `assets/alma-scent-finder-modal.js`, `assets/alma-theme.css`, `README.md`.
+- Checks: complete finder close-flow audit, `node --check`, and `git diff --check` pass.

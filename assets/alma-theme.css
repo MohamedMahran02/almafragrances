@@ -1392,10 +1392,6 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
   .alma-scent-finder-modal[data-has-results] .alma-scent-match { flex-basis: auto; }
 }
 
-/* Keep the variable-height mobile dialog centered as its content changes. */
-@media screen and (max-width: 749px) {
-  .alma-scent-finder-modal { position: fixed; inset: auto; top: 50%; left: 50%; margin: 0; transform: translate(-50%, -50%); }
-}
 
 /* Match the hero action to the established ALMA boxed-button treatment. */
 .alma-campaign__button {

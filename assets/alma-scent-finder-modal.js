@@ -16,21 +16,11 @@
       // The dialog can still open when browser storage is unavailable.
     }
   };
-  const close = (event) => {
-    event?.preventDefault();
-    event?.stopPropagation();
-    modal.getAnimations().forEach((animation) => animation.cancel());
-    modal.style.removeProperty('height');
+  const close = () => {
     if (modal.open) modal.close();
   };
 
-  modal.querySelectorAll('[data-alma-scent-finder-close]').forEach((control) => {
-    control.addEventListener('pointerdown', close, true);
-    control.addEventListener('click', close);
-  });
-  document.addEventListener('pointerdown', (event) => {
-    if (event.target.closest('[data-alma-scent-finder-close]')) close(event);
-  }, true);
+  modal.querySelectorAll('[data-alma-scent-finder-close]').forEach((control) => control.addEventListener('click', close));
   modal.addEventListener('click', (event) => {
     if (event.target === modal) close();
   });
