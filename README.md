@@ -1335,3 +1335,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: restored the native dialog position and one standard button click handler that calls `dialog.close()` directly. The result layout and selected notes are unaffected.
 - Files: `sections/alma-scent-finder.liquid`, `assets/alma-scent-finder-modal.js`, `assets/alma-theme.css`, `README.md`.
 - Checks: complete finder close-flow audit, `node --check`, and `git diff --check` pass.
+
+### 2026-09-24 - Align mobile popup side launchers
+
+- Request: align the X controls and names of the mobile Find Your Aura and 5% ritual popup launchers.
+- Changed: placed both launchers in the same fixed-size mobile frame, giving their dismiss controls identical top positions and their vertical labels identical available height.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: mobile launcher dimension and shared-position review, plus `git diff --check` pass.
