@@ -1410,3 +1410,10 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
   line-height: 1.8rem;
 }
 .alma-campaign__button:hover { background-color: #fff; color: var(--alma-ink); }
+
+/* Keep mobile modal controls above sticky homepage controls. */
+@media screen and (max-width: 749px) {
+  .alma-scent-finder-modal { z-index: 2147483647; }
+  .alma-scent-finder-modal__panel { isolation: isolate; }
+  .alma-scent-finder-modal__close { z-index: 3; pointer-events: auto; touch-action: manipulation; }
+}

@@ -23,10 +23,8 @@
   };
 
   modal.querySelectorAll('[data-alma-scent-finder-close]').forEach((control) => {
+    control.addEventListener('pointerdown', close, true);
     control.addEventListener('click', close);
-    control.addEventListener('pointerup', (event) => {
-      if (event.pointerType === 'touch') close(event);
-    });
   });
   modal.addEventListener('click', (event) => {
     if (event.target === modal) close();
