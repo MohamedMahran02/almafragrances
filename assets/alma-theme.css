@@ -1417,8 +1417,11 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
 /* Give both mobile side launchers one shared alignment frame. */
 @media screen and (max-width: 749px) {
   .alma-scent-finder-launcher-wrap,
-  .alma-ritual-signup-launcher-wrap { width: 4rem; height: 22rem; }
+  .alma-ritual-signup-launcher-wrap { width: 4rem; height: 14rem; }
   .alma-scent-finder-launcher,
-  .alma-ritual-signup-launcher { box-sizing: border-box; width: 100%; height: 100%; min-height: 0; padding: 3.2rem 1rem 1rem; justify-content: flex-start; }
+  .alma-ritual-signup-launcher { box-sizing: border-box; width: 100%; height: 100%; min-height: 0; padding: 2.7rem 1rem .5rem; justify-content: flex-start; }
   .alma-side-launcher__dismiss { top: .55rem; }
 }
+
+/* A closed native dialog must never render as page content. */
+.alma-scent-finder-modal:not([open]) { display: none !important; }

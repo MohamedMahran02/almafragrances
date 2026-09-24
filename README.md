@@ -1349,3 +1349,11 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: aligned the vertical label to the start of its shared launcher frame, immediately after the X clearance, instead of centering it in the full frame height.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: mobile vertical flex alignment review and `git diff --check` pass.
+
+### 2026-09-24 - Prevent closed Aura finder rendering in the homepage
+
+- Request: stop the closed Find Your Aura popup appearing again within the homepage after scrolling, and remove empty space in its side launchers.
+- Cause: the selected-result `display: block` rule overrode the browser's default hidden style after `dialog.close()` removed the `open` attribute.
+- Changed: added an explicit closed-dialog rule so the finder cannot render as page content after closing. Reduced the shared mobile launcher frame to 14rem and tightened its top and bottom padding so the labels sit directly under the X without a long empty tail.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: dialog open-state selector precedence and screenshot-based mobile launcher dimension review, plus `git diff --check`, pass.
