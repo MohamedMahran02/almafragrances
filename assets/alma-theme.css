@@ -1396,3 +1396,17 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
 @media screen and (max-width: 749px) {
   .alma-scent-finder-modal { position: fixed; inset: auto; top: 50%; left: 50%; margin: 0; transform: translate(-50%, -50%); }
 }
+
+/* Match the hero action to the established ALMA boxed-button treatment. */
+.alma-campaign__button {
+  padding: 0 4.5rem;
+  background-image: var(--alma-cta-dot), var(--alma-cta-dot);
+  background-position: left 2.4rem center, right 2.4rem center;
+  background-repeat: no-repeat;
+  background-size: 1.7rem 1.6rem;
+  font-family: var(--font-heading-family);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+}
+.alma-campaign__button:hover { background-color: #fff; color: var(--alma-ink); }

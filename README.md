@@ -1306,3 +1306,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: changed the X control to a native dialog form submitter while keeping the existing JavaScript close handler. The popup can now close through the browser dialog mechanism even when a touch click does not reach the script handler.
 - Files: `sections/alma-scent-finder.liquid`, `README.md`.
 - Checks: dialog markup and close-handler compatibility review, plus `git diff --check`, pass.
+
+### 2026-09-24 - Fix mobile Aura closing and normalize hero CTA
+
+- Request: close the mobile Find Your Aura popup without clearing scent selections, and make the hero Shop now button match other ALMA buttons.
+- Changed: added a direct touch close handler that closes the dialog before the selected-result layout can intercept the interaction, while keeping selections intact. Updated the hero CTA to use the same boxed, dotted ALMA button treatment, typography, padding and hover state used elsewhere.
+- Files: `assets/alma-scent-finder-modal.js`, `assets/alma-theme.css`, `README.md`.
+- Checks: touch and keyboard close-path review, CTA style-token review, and `git diff --check` pass.
