@@ -1342,3 +1342,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: placed both launchers in the same fixed-size mobile frame, giving their dismiss controls identical top positions and their vertical labels identical available height.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: mobile launcher dimension and shared-position review, plus `git diff --check` pass.
+
+### 2026-09-24 - Close the mobile side-launcher label gap
+
+- Request: remove the excessive space between each side-launcher X and vertical label.
+- Changed: aligned the vertical label to the start of its shared launcher frame, immediately after the X clearance, instead of centering it in the full frame height.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: mobile vertical flex alignment review and `git diff --check` pass.
