@@ -1320,3 +1320,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: made the close action run on pointer-down in the capture phase and placed the mobile dialog and its X control above sticky homepage controls such as Shop now and the side launchers. Selected notes remain unchanged when closing.
 - Files: `assets/alma-scent-finder-modal.js`, `assets/alma-theme.css`, `README.md`.
 - Checks: close-event order and mobile stacking-context review, `node --check`, and `git diff --check` pass.
+
+### 2026-09-24 - Harden mobile Find Your Aura closing
+
+- Request: make the mobile Find Your Aura X close action work after choosing a scent.
+- Changed: added a direct dialog-close action to the X, a document-level capture listener, and cleanup for in-progress dialog height animations before closing. The selected notes remain stored in the open dialog; closing never requires clearing them.
+- Files: `sections/alma-scent-finder.liquid`, `assets/alma-scent-finder-modal.js`, `README.md`.
+- Checks: close-path review for touch, click and declarative dialog actions, `node --check`, and `git diff --check` pass.

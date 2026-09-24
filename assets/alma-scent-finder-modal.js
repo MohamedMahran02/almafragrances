@@ -19,6 +19,8 @@
   const close = (event) => {
     event?.preventDefault();
     event?.stopPropagation();
+    modal.getAnimations().forEach((animation) => animation.cancel());
+    modal.style.removeProperty('height');
     if (modal.open) modal.close();
   };
 
@@ -26,6 +28,9 @@
     control.addEventListener('pointerdown', close, true);
     control.addEventListener('click', close);
   });
+  document.addEventListener('pointerdown', (event) => {
+    if (event.target.closest('[data-alma-scent-finder-close]')) close(event);
+  }, true);
   modal.addEventListener('click', (event) => {
     if (event.target === modal) close();
   });

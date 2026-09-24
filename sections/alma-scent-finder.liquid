@@ -16,7 +16,7 @@
   <dialog id="AlmaScentFinder" class="alma-scent-finder-modal" aria-labelledby="AlmaScentFinder-{{ section.id }}" data-alma-scent-finder-modal>
     <div class="alma-scent-finder-modal__panel">
       <form method="dialog">
-        <button class="alma-scent-finder-modal__close" type="submit" aria-label="{{ 'accessibility.close' | t }}" data-alma-scent-finder-close>
+        <button class="alma-scent-finder-modal__close" type="submit" aria-label="{{ 'accessibility.close' | t }}" data-alma-scent-finder-close onclick="this.closest('dialog').close();">
           <span class="svg-wrapper">{{- 'icon-close.svg' | inline_asset_content -}}</span>
         </button>
       </form>
