@@ -1413,8 +1413,3 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
   .alma-scent-finder-modal__panel { isolation: isolate; }
   .alma-scent-finder-modal__close { z-index: 3; pointer-events: auto; touch-action: manipulation; }
 }
-
-/* Center the mobile dialog once selected matches change its height. */
-@media screen and (max-width: 749px) {
-  .alma-scent-finder-modal[data-has-results] { position: fixed; top: 50%; left: 50%; margin: 0; translate: -50% -50%; }
-}
