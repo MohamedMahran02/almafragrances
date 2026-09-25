@@ -1386,3 +1386,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `sections/alma-layering-hub.liquid`, `assets/alma-layering-hub.js`, `assets/alma-theme.css`, `templates/page.alma-layering.json`, `templates/index.json`, `README.md`.
 - Configuration: create or edit the Shopify page with handle `layering`, assign the `page.alma-layering` template, then choose the two collections in the Theme Editor as needed.
 - Checks: Liquid structure, tab accessibility states, JSON validity, and `git diff --check`.
+
+### 2026-09-25 - Simplify the layering page title
+
+- Request: use only ?Layering? as the page title.
+- Changed: updated the layering page and its section default heading to ?Layering?; the two selectable product views remain unchanged.
+- Files: `templates/page.alma-layering.json`, `sections/alma-layering-hub.liquid`, `README.md`.
+- Checks: section schema JSON and template JSON validation, plus `git diff --check`.
