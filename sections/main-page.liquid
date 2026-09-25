@@ -16,6 +16,21 @@
 
 {%- if page.handle == 'collections' -%}
   {% render 'alma-collections-page-banners' %}
+{%- elsif page.handle == 'layering' -%}
+  {{ 'component-card.css' | asset_url | stylesheet_tag }}
+  {{ 'component-price.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'alma-layering-hub.js' | asset_url }}" defer="defer"></script>
+  {% render 'alma-layering-hub-content',
+    hub_id: section.id,
+    eyebrow: 'The ALMA ritual',
+    heading: 'Layering',
+    text: '<p>Choose your ritual, then discover the pieces made to layer together.</p>',
+    layering_label: 'Layering',
+    spray_label: 'Spray Perfumes Layering',
+    layering_collection: collections['layering-kits'],
+    spray_collection: collections['alma-perfumes'],
+    products_to_show: 4
+  %}
 {%- else -%}
 <div class="page-width page-width--narrow section-{{ section.id }}-padding">
   <h1 class="main-page-title page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">

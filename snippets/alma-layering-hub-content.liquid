@@ -1,0 +1,44 @@
+<section class="alma-layering-hub page-width" data-alma-layering-hub aria-labelledby="AlmaLayeringHub-{{ hub_id }}">
+  <header class="alma-layering-hub__heading">
+    {%- if eyebrow != blank -%}<p>{{ eyebrow | escape }}</p>{%- endif -%}
+    <h1 id="AlmaLayeringHub-{{ hub_id }}">{{ heading | escape }}</h1>
+    {%- if text != blank -%}<div class="rte">{{ text }}</div>{%- endif -%}
+  </header>
+
+  <div class="alma-layering-hub__tabs" role="tablist" aria-label="Layering options">
+    <button class="alma-layering-hub__tab is-active" type="button" role="tab" id="AlmaLayeringTab-{{ hub_id }}-1" aria-selected="true" aria-controls="AlmaLayeringPanel-{{ hub_id }}-1" data-alma-layering-tab="1">{{ layering_label | escape }}</button>
+    <button class="alma-layering-hub__tab" type="button" role="tab" id="AlmaLayeringTab-{{ hub_id }}-2" aria-selected="false" aria-controls="AlmaLayeringPanel-{{ hub_id }}-2" data-alma-layering-tab="2" tabindex="-1">{{ spray_label | escape }}</button>
+  </div>
+
+  <div class="alma-layering-hub__panels">
+    {%- for panel in (1..2) -%}
+      {%- liquid
+        if panel == 1
+          assign panel_collection = layering_collection
+          assign panel_title = layering_label
+        else
+          assign panel_collection = spray_collection
+          assign panel_title = spray_label
+        endif
+      -%}
+      <div class="alma-layering-hub__panel{% if panel == 1 %} is-active{% endif %}" id="AlmaLayeringPanel-{{ hub_id }}-{{ panel }}" role="tabpanel" aria-labelledby="AlmaLayeringTab-{{ hub_id }}-{{ panel }}" data-alma-layering-panel="{{ panel }}"{% if panel != 1 %} hidden{% endif %}>
+        {%- if panel_collection != blank and panel_collection.products_count > 0 -%}
+          <ul class="alma-layering-hub__products grid product-grid grid--4-col-desktop grid--2-col-tablet-down" role="list">
+            {%- for product in panel_collection.products limit: products_to_show -%}
+              <li class="grid__item">
+                {% render 'card-product', card_product: product, media_aspect_ratio: 'portrait', show_secondary_image: true, show_vendor: false, show_rating: true, section_id: hub_id, quick_add: 'standard', product_view_context: 'collection' %}
+              </li>
+            {%- endfor -%}
+          </ul>
+          <div class="alma-layering-hub__view-all">
+            <a class="alma-text-link" href="{{ panel_collection.url }}">View all {{ panel_title | escape }}</a>
+          </div>
+        {%- else -%}
+          <div class="alma-layering-hub__empty">
+            <p>Select a collection for {{ panel_title | escape }} in the Theme Editor.</p>
+          </div>
+        {%- endif -%}
+      </div>
+    {%- endfor -%}
+  </div>
+</section>

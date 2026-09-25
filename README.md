@@ -1400,3 +1400,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: added the supplied MP4 files as theme assets and updated the campaign hero to choose the desktop video at 750px and above, and the mobile video below 750px. The autoplaying video is muted, loops, and plays inline; the existing theme image remains as the no-video fallback.
 - Files: `assets/alma-hero-desktop.mp4`, `assets/alma-hero-mobile.mp4`, `sections/alma-campaign.liquid`, `assets/alma-theme.css`, `README.md`.
 - Checks: video asset size review, Liquid schema review, and `git diff --check`.
+
+### 2026-09-25 - Render Layering from the default page template
+
+- Request: fix the Layering page showing only its title.
+- Changed: extracted the two-option hub into shared markup and render it for the `layering` page handle from both the dedicated template and Shopify's Default page template. This prevents the page from falling back to a title-only screen if the default template remains selected.
+- Files: `snippets/alma-layering-hub-content.liquid`, `sections/alma-layering-hub.liquid`, `sections/main-page.liquid`, `README.md`.
+- Checks: shared Liquid markup review, section schema JSON validation, and `git diff --check`.
