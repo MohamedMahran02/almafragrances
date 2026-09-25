@@ -11,11 +11,13 @@
   assign lotions_collection = collections['alma-hands-and-body-lotions-collections']
   assign dokhon_collection = collections['alma-dokhon']
   assign charms_collection = collections['alma-solid-charms']
+  assign kits_collection = collections['layering-kits']
   assign spray_collection_url = spray_collection.url | default: '/collections/alma-perfumes'
   assign solid_collection_url = solid_collection.url | default: '/collections/alma-makhmaria-s-solid-perfume'
   assign lotions_collection_url = lotions_collection.url | default: '/collections/alma-hands-and-body-lotions-collections'
   assign dokhon_collection_url = dokhon_collection.url | default: '/collections/alma-dokhon'
   assign charms_collection_url = charms_collection.url | default: '/collections/alma-solid-charms'
+  assign kits_collection_url = kits_collection.url | default: '/collections/layering-kits'
   assign layering_page_url = pages['layering'].url | default: '/pages/layering'
   assign layering_page_title = pages['layering'].title | default: 'Layering'
 -%}
@@ -36,7 +38,7 @@
           <li><a class="header__menu-item list-menu__item link link--text focus-inset caption-large" href="{{ lotions_collection_url }}">{{ lotions_collection.title | default: 'Alma Lotions' | escape }}</a></li>
           <li><a class="header__menu-item list-menu__item link link--text focus-inset caption-large" href="{{ dokhon_collection_url }}">{{ dokhon_collection.title | default: 'Alma Dukhoon' | escape }}</a></li>
           <li><a class="header__menu-item list-menu__item link link--text focus-inset caption-large" href="{{ charms_collection_url }}">{{ charms_collection.title | default: 'Alma Solid Charms' | escape }}</a></li>
-          <li><a class="header__menu-item list-menu__item link link--text focus-inset caption-large" href="{{ layering_page_url }}">{{ 'alma.nav.layering' | t }}</a></li>
+          <li><a class="header__menu-item list-menu__item link link--text focus-inset caption-large" href="{{ kits_collection_url }}">{{ kits_collection.title | default: 'kits' | escape }}</a></li>
         </ul>
       </details>
     </header-menu>

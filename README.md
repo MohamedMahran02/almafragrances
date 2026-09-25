@@ -1499,3 +1499,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: verified the current public Shopify collection data and replaced obsolete handles for Alma Lotions and Alma Solids Perfumes everywhere those collections are configured in the homepage, all-products hub, collection page, and ALMA collections page. The Products dropdown now reads each listed collection title and URL directly from its live Shopify collection object.
 - Files: `snippets/alma-navigation-links.liquid`, `snippets/alma-collections-page-banners.liquid`, `snippets/card-collection.liquid`, `sections/predictive-search.liquid`, `templates/index.json`, `templates/collection.json`, `templates/page.alma-collections.json`, `README.md`.
 - Checks: live collection endpoint review, configured-handle review, JSON validation, and `git diff --check`.
+
+### 2026-09-25 - Rename the kits collection in theme navigation
+
+- Request: update the renamed Layering & kits collection to its current name, `kits`.
+- Changed: made the Products dropdown use the live `kits` collection title and URL, while preserving the separate Layering page link. Updated the homepage gifting rail and All Products collection-tab label to `kits`.
+- Files: `snippets/alma-navigation-links.liquid`, `templates/index.json`, `templates/collection.json`, `README.md`.
+- Checks: collection URL/title mapping review, JSON validation, and `git diff --check`.
