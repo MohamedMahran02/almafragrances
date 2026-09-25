@@ -1555,3 +1555,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: added a reusable Shopify-native lotion variant card. The homepage Alma Lotions tab, All Products Alma Lotions tab, and direct Alma Lotions collection page now render one card per variant with its assigned image, variant URL, exact price, availability, and native Add to cart form. Inventory and product records remain on the existing Shopify parent products.
 - Files: `snippets/alma-lotion-variant-card.liquid`, `snippets/price.liquid`, `sections/alma-favourites.liquid`, `snippets/alma-all-products-hub.liquid`, `sections/main-collection-product-grid.liquid`, `assets/alma-theme.css`, `README.md`.
 - Checks: variant-specific URL and product-form review, price target review, Liquid loop review, and `git diff --check`.
+
+### 2026-09-25 - Constrain lotion variant media to the shared product-card frame
+
+- Request: fix stretched lotion variant images so they match the other product cards.
+- Changed: made the lotion card media link the fixed 3:4 frame and made each variant image fill it with `object-fit: cover`, removing the mobile fixed-height override that could stretch cards.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: responsive 3:4 media-frame selector review and `git diff --check`.
