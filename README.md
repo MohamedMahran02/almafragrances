@@ -1457,3 +1457,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: replaced the All Products route?s generic heading with editable ALMA FRAGRANCES eyebrow and The ALMA collection title styling; individual collection page headings remain unchanged.
 - Files: `sections/main-collection-banner.liquid`, `templates/collection.json`, `assets/alma-theme.css`, `README.md`.
 - Checks: section schema and collection template JSON validation, plus `git diff --check`.
+
+### 2026-09-25 - Use the new Layering collection on the Layering page
+
+- Request: use the Shopify collection named Layering for the first Layering tab.
+- Changed: updated the first tab to source the `layering` collection in both the dedicated template and Default-page fallback. Spray Perfumes Layering remains the second tab.
+- Files: `templates/page.alma-layering.json`, `sections/main-page.liquid`, `README.md`.
+- Checks: template JSON validation, source handle review, and `git diff --check`.
