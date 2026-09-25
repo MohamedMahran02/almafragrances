@@ -1576,3 +1576,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: enabled the existing Shopify-native quick-add setting for the Gifting by ALMA section. Its kit cards now submit the selected available variant to the native cart and open the cart drawer, using the established ALMA add-to-cart styling.
 - Files: `templates/index.json`, `README.md`.
 - Checks: homepage section setting, native product-form path, and JSON diff review.
+
+### 2026-09-25 - Repair the mobile Layer it your way layout
+
+- Request: fix the homepage layering section on mobile.
+- Changed: removed the mobile-only fixed-height grid and its internal scrolling/cropping from the static Layer it your way editorial. The section now stacks its image and content naturally on mobile, while its desktop viewport-fit presentation remains unchanged.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: mobile selector and cascade review, plus `git diff --check`.
