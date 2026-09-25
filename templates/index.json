@@ -146,7 +146,7 @@
         "text": "<p>Begin with lotion, deepen the scent with solid perfume, then finish with spray perfume. Three textures, one scent story that belongs to you.</p>",
         "product": "alma-layering-box",
         "link_label": "Explore layering",
-        "link": "shopify://collections/layering-kits",
+        "link": "/pages/layering",
         "steps_label": "Lotion, solid perfume and spray perfume",
         "layout": "split",
         "media_position": "right",
@@ -287,7 +287,7 @@
             "heading": "Layering",
             "text": "<p>Pair lotion, solid perfume and spray to build a scent that lasts in your own way.</p>",
             "link_label": "Discover layering",
-            "link": "/collections/layering-kits"
+            "link": "/pages/layering"
           }
         },
         "gifting": {

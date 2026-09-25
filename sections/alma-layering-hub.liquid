@@ -1,0 +1,75 @@
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'alma-layering-hub.js' | asset_url }}" defer="defer"></script>
+
+{%- liquid
+  assign layering_collection = section.settings.layering_collection
+  assign spray_collection = section.settings.spray_collection
+  assign products_to_show = section.settings.products_to_show
+-%}
+
+<section class="alma-layering-hub page-width" data-alma-layering-hub aria-labelledby="AlmaLayeringHub-{{ section.id }}">
+  <header class="alma-layering-hub__heading">
+    {%- if section.settings.eyebrow != blank -%}<p>{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+    <h1 id="AlmaLayeringHub-{{ section.id }}">{{ section.settings.heading | escape }}</h1>
+    {%- if section.settings.text != blank -%}<div class="rte">{{ section.settings.text }}</div>{%- endif -%}
+  </header>
+
+  <div class="alma-layering-hub__tabs" role="tablist" aria-label="Layering options">
+    <button class="alma-layering-hub__tab is-active" type="button" role="tab" id="AlmaLayeringTab-{{ section.id }}-1" aria-selected="true" aria-controls="AlmaLayeringPanel-{{ section.id }}-1" data-alma-layering-tab="1">{{ section.settings.layering_label | escape }}</button>
+    <button class="alma-layering-hub__tab" type="button" role="tab" id="AlmaLayeringTab-{{ section.id }}-2" aria-selected="false" aria-controls="AlmaLayeringPanel-{{ section.id }}-2" data-alma-layering-tab="2" tabindex="-1">{{ section.settings.spray_label | escape }}</button>
+  </div>
+
+  <div class="alma-layering-hub__panels">
+    {%- for panel in (1..2) -%}
+      {%- liquid
+        if panel == 1
+          assign panel_collection = layering_collection
+          assign panel_title = section.settings.layering_label
+        else
+          assign panel_collection = spray_collection
+          assign panel_title = section.settings.spray_label
+        endif
+      -%}
+      <div class="alma-layering-hub__panel{% if panel == 1 %} is-active{% endif %}" id="AlmaLayeringPanel-{{ section.id }}-{{ panel }}" role="tabpanel" aria-labelledby="AlmaLayeringTab-{{ section.id }}-{{ panel }}" data-alma-layering-panel="{{ panel }}"{% if panel != 1 %} hidden{% endif %}>
+        {%- if panel_collection != blank and panel_collection.products_count > 0 -%}
+          <ul class="alma-layering-hub__products grid product-grid grid--4-col-desktop grid--2-col-tablet-down" role="list">
+            {%- for product in panel_collection.products limit: products_to_show -%}
+              <li class="grid__item">
+                {% render 'card-product', card_product: product, media_aspect_ratio: 'portrait', show_secondary_image: true, show_vendor: false, show_rating: true, section_id: section.id, quick_add: 'standard', product_view_context: 'collection' %}
+              </li>
+            {%- endfor -%}
+          </ul>
+          <div class="alma-layering-hub__view-all">
+            <a class="alma-text-link" href="{{ panel_collection.url }}">View all {{ panel_title | escape }}</a>
+          </div>
+        {%- else -%}
+          <div class="alma-layering-hub__empty">
+            <p>Select a collection for {{ panel_title | escape }} in the Theme Editor.</p>
+          </div>
+        {%- endif -%}
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "ALMA layering hub",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "The ALMA ritual" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Layer it your way" },
+    { "type": "richtext", "id": "text", "label": "Intro", "default": "<p>Choose your ritual, then discover the pieces made to layer together.</p>" },
+    { "type": "header", "content": "First option" },
+    { "type": "text", "id": "layering_label", "label": "Label", "default": "Layering" },
+    { "type": "collection", "id": "layering_collection", "label": "Collection" },
+    { "type": "header", "content": "Second option" },
+    { "type": "text", "id": "spray_label", "label": "Label", "default": "Spray Perfumes Layering" },
+    { "type": "collection", "id": "spray_collection", "label": "Collection" },
+    { "type": "range", "id": "products_to_show", "label": "Products to show", "min": 2, "max": 12, "step": 1, "default": 4 }
+  ],
+  "presets": [{ "name": "ALMA layering hub" }]
+}
+{% endschema %}

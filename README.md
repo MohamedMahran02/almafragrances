@@ -1378,3 +1378,11 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: removed the desktop 72rem height cap; the static ritual editorial now uses the full viewport height beneath the header.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: desktop viewport-height rule review and `git diff --check` pass.
+
+### 2026-09-25 - Add the ALMA layering page
+
+- Request: create a branded page reached from Explore Layering, with separate Layering and Spray Perfumes Layering views.
+- Changed: added a Shopify-native two-tab layering hub. Each tab is connected to an independently selectable Shopify collection and renders its collection products. Added the page template with Layering & kits and Alma perfumes selected, and redirected the homepage layering calls to action to `/pages/layering`.
+- Files: `sections/alma-layering-hub.liquid`, `assets/alma-layering-hub.js`, `assets/alma-theme.css`, `templates/page.alma-layering.json`, `templates/index.json`, `README.md`.
+- Configuration: create or edit the Shopify page with handle `layering`, assign the `page.alma-layering` template, then choose the two collections in the Theme Editor as needed.
+- Checks: Liquid structure, tab accessibility states, JSON validity, and `git diff --check`.
