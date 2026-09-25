@@ -42,7 +42,6 @@
         "perfumes": {
           "type": "collection",
           "settings": {
-        "enable_quick_add": true,
             "collection": "alma-perfumes",
             "label": ""
           }
@@ -96,7 +95,8 @@
         "best_selling_collection": "best-sellers",
         "best_selling_label": "Best Selling",
         "products_to_show": 24,
-        "product_link_label": "Choose options"
+        "enable_quick_add": true,
+        "product_link_label": ""
       }
     },
     "scent_finder": {
@@ -117,7 +117,6 @@
         "lotion": {
           "type": "product",
           "settings": {
-        "show_featured_product": false,
             "product": "alma-arabia-hand-and-body-lotion",
             "label": "Lotion"
           }
@@ -147,6 +146,7 @@
         "heading": "Layer it your way",
         "text": "<p>Begin with lotion, deepen the scent with solid perfume, then finish with spray perfume. Three textures, one scent story that belongs to you.</p>",
         "product": "alma-layering-box",
+        "show_featured_product": false,
         "link_label": "Explore layering",
         "link": "/pages/layering",
         "steps_label": "Lotion, solid perfume and spray perfume",
@@ -168,11 +168,11 @@
     "dukhon_story": {
       "type": "alma-editorial-feature",
       "settings": {
-        "show_featured_product": false,
         "eyebrow": "For the space around you",
         "heading": "A deeper atmosphere",
         "text": "<p>ALMA Dukhoon brings the ritual into your home with a warm, enveloping presence.</p>",
         "product": "alma-dokhon",
+        "show_featured_product": false,
         "link_label": "Discover Dukhoon",
         "link": "shopify://collections/alma-dokhon",
         "steps_label": "Complete the ritual",
@@ -210,6 +210,7 @@
         "best_selling_collection": "layering-kits",
         "best_selling_label": "kits",
         "products_to_show": 4,
+        "enable_quick_add": false,
         "product_link_label": "Discover"
       }
     },
