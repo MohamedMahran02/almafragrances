@@ -1436,3 +1436,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: updated the shared desktop and mobile navigation link to use the Shopify Layering page URL and title.
 - Files: `snippets/alma-navigation-links.liquid`, `README.md`.
 - Checks: Liquid link and active-state review, plus `git diff --check`.
+
+### 2026-09-25 - Add spacing around All Products cards
+
+- Request: move products away from the screen corners on the All Products page.
+- Changed: constrained the All Products switcher to a centered desktop content width and increased its responsive horizontal inset, including mobile card spacing.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: responsive spacing selector review and `git diff --check`.
