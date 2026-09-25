@@ -93,6 +93,13 @@
       <div class="alma-favourites__panel" id="AlmaPanel-{{ section.id }}-{{ block.id }}" aria-labelledby="AlmaTab-{{ section.id }}-{{ block.id }}">
         <alma-scroll-gallery class="alma-scroll-gallery">
           <div class="alma-favourites__grid" id="{{ product_track_id }}" data-alma-scroll-track role="region" aria-label="{{ chosen_collection.title | escape }} products" tabindex="0">
+            {%- if chosen_collection.handle == 'alma-hands-and-body-lotions-collections' -%}
+              {%- for product in chosen_collection.products -%}
+                {%- for variant in product.variants -%}
+                  {% render 'alma-lotion-variant-card', product: product, variant: variant, section_id: section.id, card_id: product_track_id, image_sizes: '(min-width: 990px) 25vw, 82vw', lazy_load: true %}
+                {%- endfor -%}
+              {%- endfor -%}
+            {%- else -%}
             {%- for product in chosen_collection.products limit: section.settings.products_to_show -%}
               <article class="alma-product">
                 <a class="alma-product__image-link" href="{{ product.url }}">
@@ -125,6 +132,7 @@
               {%- endif -%}
               </article>
             {%- endfor -%}
+            {%- endif -%}
           </div>
           {% render 'alma-scroll-controls', track_id: product_track_id, label: 'Product carousel controls', item_name: 'products' %}
         </alma-scroll-gallery>

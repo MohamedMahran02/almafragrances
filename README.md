@@ -1548,3 +1548,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: replaced the utility-style quick-add label with the ALMA dotted editorial CTA treatment, using the display typeface, ivory surface, fine dark border, subtle offset, and wine hover state. The Shopify-native add-to-cart behavior remains unchanged.
 - Files: `sections/alma-favourites.liquid`, `assets/alma-theme.css`, `README.md`.
 - Checks: repeated quick-add markup review and `git diff --check`.
+
+### 2026-09-25 - Show lotion variants as individual storefront cards
+
+- Request: show the separate lotion variants from shared Shopify products on the homepage and product browsing pages.
+- Changed: added a reusable Shopify-native lotion variant card. The homepage Alma Lotions tab, All Products Alma Lotions tab, and direct Alma Lotions collection page now render one card per variant with its assigned image, variant URL, exact price, availability, and native Add to cart form. Inventory and product records remain on the existing Shopify parent products.
+- Files: `snippets/alma-lotion-variant-card.liquid`, `snippets/price.liquid`, `sections/alma-favourites.liquid`, `snippets/alma-all-products-hub.liquid`, `sections/main-collection-product-grid.liquid`, `assets/alma-theme.css`, `README.md`.
+- Checks: variant-specific URL and product-form review, price target review, Liquid loop review, and `git diff --check`.

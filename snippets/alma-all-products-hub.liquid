@@ -34,9 +34,17 @@
       {%- if tab_collection != blank -%}
         <div class="alma-products-hub__panel" id="AlmaProductsPanel-{{ section.id }}-{{ block.id }}" role="tabpanel" aria-labelledby="AlmaProductsTab-{{ section.id }}-{{ block.id }}" data-alma-products-panel="{{ block.id }}" hidden>
           <ul class="alma-products-hub__products grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop" role="list">
-            {%- for product in tab_collection.products limit: products_to_show -%}
-              <li class="grid__item">{% render 'card-product', card_product: product, media_aspect_ratio: section.settings.image_ratio, image_shape: section.settings.image_shape, show_secondary_image: section.settings.show_secondary_image, show_vendor: section.settings.show_vendor, show_rating: section.settings.show_rating, lazy_load: true, quick_add: section.settings.quick_add, section_id: section.id, product_view_context: 'collection' %}</li>
-            {%- endfor -%}
+            {%- if tab_collection.handle == 'alma-hands-and-body-lotions-collections' -%}
+              {%- for product in tab_collection.products -%}
+                {%- for variant in product.variants -%}
+                  <li class="grid__item">{% render 'alma-lotion-variant-card', product: product, variant: variant, section_id: section.id, card_id: block.id, image_sizes: '(min-width: 990px) 25vw, 50vw', lazy_load: true %}</li>
+                {%- endfor -%}
+              {%- endfor -%}
+            {%- else -%}
+              {%- for product in tab_collection.products limit: products_to_show -%}
+                <li class="grid__item">{% render 'card-product', card_product: product, media_aspect_ratio: section.settings.image_ratio, image_shape: section.settings.image_shape, show_secondary_image: section.settings.show_secondary_image, show_vendor: section.settings.show_vendor, show_rating: section.settings.show_rating, lazy_load: true, quick_add: section.settings.quick_add, section_id: section.id, product_view_context: 'collection' %}</li>
+              {%- endfor -%}
+            {%- endif -%}
           </ul>
           {%- if tab_collection.products_count > products_to_show -%}<p class="alma-products-hub__view-all"><a class="alma-text-link" href="{{ tab_collection.url }}">View all {{ tab_collection.title | escape }}</a></p>{%- endif -%}
         </div>
