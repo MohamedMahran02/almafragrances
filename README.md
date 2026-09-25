@@ -1590,3 +1590,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: gave mobile lotion variant cards the same centered mandatory scroll-snap target used by standard homepage product cards, including a stop at each card.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: homepage gallery structure and mobile scroll-snap selector review, plus `git diff --check`.
+
+### 2026-09-25 - Restore regular prices and clear active product sale pricing
+
+- Request: use each active variant's Compare-at price as its regular price, then remove the Compare-at price so sales are no longer displayed on the homepage or product cards.
+- Changed: used the Shopify Admin GraphQL API to move Compare-at price to Price and clear Compare-at price on 172 variants across 21 active products. Discount codes were not changed.
+- Files: Shopify product-variant pricing records; `README.md`.
+- Checks: `productVariantsBulkUpdate` responses verified each updated variant, followed by a store-wide active-product scan confirming zero remaining Compare-at prices.
