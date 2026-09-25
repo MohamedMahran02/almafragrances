@@ -10,8 +10,7 @@
   layering_label: section.settings.layering_label,
   spray_label: section.settings.spray_label,
   layering_collection: section.settings.layering_collection,
-  spray_collection: section.settings.spray_collection,
-  products_to_show: section.settings.products_to_show
+  spray_collection: section.settings.spray_collection
 %}
 
 {% schema %}
@@ -28,8 +27,7 @@
     { "type": "collection", "id": "layering_collection", "label": "Collection" },
     { "type": "header", "content": "Second option" },
     { "type": "text", "id": "spray_label", "label": "Label", "default": "Spray Perfumes Layering" },
-    { "type": "collection", "id": "spray_collection", "label": "Collection" },
-    { "type": "range", "id": "products_to_show", "label": "Products to show", "min": 2, "max": 12, "step": 1, "default": 4 }
+    { "type": "collection", "id": "spray_collection", "label": "Collection" }
   ],
   "presets": [{ "name": "ALMA layering hub" }]
 }

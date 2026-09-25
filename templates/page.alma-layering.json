@@ -9,10 +9,11 @@
         "layering_label": "Layering",
         "layering_collection": "layering",
         "spray_label": "Spray Perfumes Layering",
-        "spray_collection": "spray-perfumes-layering",
-        "products_to_show": 4
+        "spray_collection": "spray-perfumes-layering"
       }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main"
+  ]
 }

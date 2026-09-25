@@ -1457,7 +1457,6 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
 .alma-layering-hub__products { margin: 0; }
 .alma-layering-hub__panel { animation: alma-layering-panel-in .32s ease both; }
 .alma-layering-hub__panel[hidden] { display: none; }
-.alma-layering-hub__view-all { margin-top: 4rem; text-align: center; }
 .alma-layering-hub__empty { display: grid; min-height: 28rem; place-items: center; border-top: 1px solid var(--alma-line); border-bottom: 1px solid var(--alma-line); text-align: center; }
 .alma-layering-hub__empty p { max-width: 36rem; margin: 0; font-size: 1.4rem; line-height: 1.5; }
 @keyframes alma-layering-panel-in { from { opacity: 0; transform: translateY(1rem); } to { opacity: 1; transform: translateY(0); } }
@@ -1470,7 +1469,6 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
   .alma-layering-hub__tab { flex: 0 0 auto; padding-right: 1.4rem; padding-left: 1.4rem; font-size: .95rem; white-space: nowrap; }
   .alma-layering-hub__tab:first-child { padding-left: 0; }
   .alma-layering-hub__products { gap: 3rem 1rem; }
-  .alma-layering-hub__view-all { margin-top: 3.5rem; }
 }
 @media (prefers-reduced-motion: reduce) { .alma-layering-hub__panel, .alma-layering-hub__tab::after { animation: none; transition: none; } }
 

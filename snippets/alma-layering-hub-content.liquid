@@ -15,24 +15,19 @@
       {%- liquid
         if panel == 1
           assign panel_collection = layering_collection
-          assign panel_title = layering_label
         else
           assign panel_collection = spray_collection
-          assign panel_title = spray_label
         endif
       -%}
       <div class="alma-layering-hub__panel{% if panel == 1 %} is-active{% endif %}" id="AlmaLayeringPanel-{{ hub_id }}-{{ panel }}" role="tabpanel" aria-labelledby="AlmaLayeringTab-{{ hub_id }}-{{ panel }}" data-alma-layering-panel="{{ panel }}"{% if panel != 1 %} hidden{% endif %}>
         {%- if panel_collection != blank and panel_collection.products_count > 0 -%}
           <ul class="alma-layering-hub__products grid product-grid grid--4-col-desktop grid--2-col-tablet-down" role="list">
-            {%- for product in panel_collection.products limit: products_to_show -%}
+            {%- for product in panel_collection.products -%}
               <li class="grid__item">
                 {% render 'card-product', card_product: product, media_aspect_ratio: 'portrait', show_secondary_image: true, show_vendor: false, show_rating: true, section_id: hub_id, quick_add: 'standard', product_view_context: 'collection' %}
               </li>
             {%- endfor -%}
           </ul>
-          <div class="alma-layering-hub__view-all">
-            <a class="alma-text-link" href="{{ panel_collection.url }}">View all {{ panel_title | escape }}</a>
-          </div>
         {%- else -%}
           <div class="alma-layering-hub__empty">
             <p>Select a collection for {{ panel_title | escape }} in the Theme Editor.</p>

@@ -1464,3 +1464,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: updated the first tab to source the `layering` collection in both the dedicated template and Default-page fallback. Spray Perfumes Layering remains the second tab.
 - Files: `templates/page.alma-layering.json`, `sections/main-page.liquid`, `README.md`.
 - Checks: template JSON validation, source handle review, and `git diff --check`.
+
+### 2026-09-25 - Show every product in the Layering tabs
+
+- Request: remove the Layering View all links and show all products from both Layering collections directly on the page.
+- Changed: removed the product display limit and View all links from the shared Layering hub; each tab now renders its complete Shopify collection.
+- Files: `snippets/alma-layering-hub-content.liquid`, `sections/alma-layering-hub.liquid`, `sections/main-page.liquid`, `templates/page.alma-layering.json`, `assets/alma-theme.css`, `README.md`.
+- Checks: section schema and template JSON validation, Liquid collection-loop review, and `git diff --check`.
