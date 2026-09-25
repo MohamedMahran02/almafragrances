@@ -1591,27 +1591,32 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
 
 
 /* Shopify-native quick add in the main homepage fragrance collection. */
-.alma-product__form { margin-top: 1.7rem; }
+.alma-product__form { margin-top: 2rem; }
 .alma-product__add-button {
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 3.8rem;
-  padding: .8rem 1.4rem;
+  min-height: 4.8rem;
+  padding: 0 2rem;
   border: 1px solid var(--alma-ink);
   border-radius: 0;
-  background: transparent;
+  background: #fff;
+  box-shadow: 0 2px 0 var(--alma-ink);
   color: var(--alma-ink);
   cursor: pointer;
-  font-family: var(--font-body-family);
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: .13em;
-  line-height: 1.2;
-  text-transform: uppercase;
-  transition: background-color .25s ease, color .25s ease;
+  font-family: var(--font-heading-family);
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.8rem;
+  text-decoration: none;
+  transition: background-color .25s ease, border-color .25s ease, box-shadow .25s ease, color .25s ease, transform .25s ease;
 }
-.alma-product__add-button:hover:not([disabled]) { background: var(--alma-wine); border-color: var(--alma-wine); color: #fff; }
+.alma-product__add-button:hover:not([disabled]) { border-color: var(--alma-ink); background: var(--alma-ink); box-shadow: 0 3px 0 var(--alma-ink); color: #fff; transform: translateY(-1px); }
+.alma-product__add-button:hover:not([disabled]) .alma-cta-label__dot { filter: invert(1); }
 .alma-product__add-button[disabled] { cursor: not-allowed; opacity: .55; }
 .alma-product__add-button .loading__spinner { right: .8rem; left: auto; }
+@media screen and (max-width: 749px) {
+  .alma-product__add-button { min-height: 4.6rem; padding: 0 1.7rem; font-size: 1.5rem; }
+}

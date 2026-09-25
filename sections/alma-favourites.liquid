@@ -64,7 +64,11 @@
                   {%- form 'product', product, id: alma_product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                     <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" class="product-variant-id"{% unless product.selected_or_first_available_variant.available %} disabled{% endunless %}>
                     <button type="submit" name="add" class="alma-product__add-button" aria-haspopup="dialog" aria-label="{{ 'products.product.add_to_cart' | t }}: {{ product.title | escape }}" aria-live="polite" data-sold-out-message="true" id="{{ alma_product_form_id }}-submit"{% unless product.selected_or_first_available_variant.available %} disabled{% endunless %}>
-                      <span>{% if product.selected_or_first_available_variant.available %}{{ 'products.product.add_to_cart' | t }}{% else %}{{ 'products.product.sold_out' | t }}{% endif %}</span>
+                      <span class="alma-cta-label">
+                        <img class="alma-cta-label__dot" src="{{ 'alma-cta-dot.svg' | asset_url }}" width="17" height="16" alt="" aria-hidden="true">
+                        <span class="alma-cta-label__text">{% if product.selected_or_first_available_variant.available %}{{ 'products.product.add_to_cart' | t }}{% else %}{{ 'products.product.sold_out' | t }}{% endif %}</span>
+                        <img class="alma-cta-label__dot" src="{{ 'alma-cta-dot.svg' | asset_url }}" width="17" height="16" alt="" aria-hidden="true">
+                      </span>
                       <span class="sold-out-message hidden">{{ 'products.product.sold_out' | t }}</span>
                       {%- render 'loading-spinner' -%}
                     </button>
@@ -106,7 +110,11 @@
                   {%- form 'product', product, id: alma_product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                     <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" class="product-variant-id"{% unless product.selected_or_first_available_variant.available %} disabled{% endunless %}>
                     <button type="submit" name="add" class="alma-product__add-button" aria-haspopup="dialog" aria-label="{{ 'products.product.add_to_cart' | t }}: {{ product.title | escape }}" aria-live="polite" data-sold-out-message="true" id="{{ alma_product_form_id }}-submit"{% unless product.selected_or_first_available_variant.available %} disabled{% endunless %}>
-                      <span>{% if product.selected_or_first_available_variant.available %}{{ 'products.product.add_to_cart' | t }}{% else %}{{ 'products.product.sold_out' | t }}{% endif %}</span>
+                      <span class="alma-cta-label">
+                        <img class="alma-cta-label__dot" src="{{ 'alma-cta-dot.svg' | asset_url }}" width="17" height="16" alt="" aria-hidden="true">
+                        <span class="alma-cta-label__text">{% if product.selected_or_first_available_variant.available %}{{ 'products.product.add_to_cart' | t }}{% else %}{{ 'products.product.sold_out' | t }}{% endif %}</span>
+                        <img class="alma-cta-label__dot" src="{{ 'alma-cta-dot.svg' | asset_url }}" width="17" height="16" alt="" aria-hidden="true">
+                      </span>
                       <span class="sold-out-message hidden">{{ 'products.product.sold_out' | t }}</span>
                       {%- render 'loading-spinner' -%}
                     </button>

@@ -1541,3 +1541,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: added a Theme Editor visibility setting for editorial featured-product lines and disabled it only for the homepage Dukhoon and Layer it your way sections. Added an opt-in, Shopify-native AJAX Add to cart form to the ALMA fragrance collection; it adds each product’s first available variant and uses the existing cart drawer. Gifting retains its existing Discover link.
 - Files: `sections/alma-editorial-feature.liquid`, `sections/alma-favourites.liquid`, `templates/index.json`, `assets/alma-theme.css`, `README.md`.
 - Checks: index JSON and section-schema validation, native product-form structure review, and `git diff --check`.
+
+### 2026-09-25 - Refine homepage Add to cart styling
+
+- Request: style the Add to cart button in The ALMA fragrance collection to match the brand identity.
+- Changed: replaced the utility-style quick-add label with the ALMA dotted editorial CTA treatment, using the display typeface, ivory surface, fine dark border, subtle offset, and wine hover state. The Shopify-native add-to-cart behavior remains unchanged.
+- Files: `sections/alma-favourites.liquid`, `assets/alma-theme.css`, `README.md`.
+- Checks: repeated quick-add markup review and `git diff --check`.
