@@ -1425,3 +1425,17 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
 
 /* A closed native dialog must never render as page content. */
 .alma-scent-finder-modal:not([open]) { display: none !important; }
+
+/* Keep the static Layer it your way editorial within the viewport. */
+.alma-editorial--ritual-static { height: min(72rem, calc(100svh - var(--header-height, 8rem))); min-height: 0; }
+.alma-editorial--ritual-static .alma-editorial__media,
+.alma-editorial--ritual-static .alma-editorial__image { height: 100%; min-height: 0; }
+.alma-editorial--ritual-static .alma-editorial__content { min-height: 0; overflow: hidden; }
+@media screen and (max-width: 749px) {
+  .alma-editorial--ritual-static { display: grid; grid-template-rows: minmax(0, 56%) minmax(0, 44%); height: calc(100svh - var(--header-height, 7.8rem)); overflow: hidden; }
+  .alma-editorial--ritual-static .alma-editorial__media { height: auto; min-height: 0; }
+  .alma-editorial--ritual-static .alma-editorial__image { height: 100%; min-height: 0; }
+  .alma-editorial--ritual-static .alma-editorial__content { height: auto; min-height: 0; padding: 2.2rem 2.8rem; overflow-y: auto; }
+  .alma-editorial--ritual-static .alma-editorial__product-line { margin-top: 1.6rem; padding-top: 1.2rem; }
+  .alma-editorial--ritual-static .alma-editorial__steps { margin-top: 1.8rem; padding-top: 1.2rem; }
+}

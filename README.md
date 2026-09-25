@@ -1364,3 +1364,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: added the supplied image as the static default for The ALMA ritual / Layer it your way editorial section. Removed the product-slide markup and the loaded ritual-motion script. The existing Theme Editor **Override image** picker still lets the store owner replace this default with a Shopify-managed image.
 - Files: `assets/alma-layer-it-your-way.jpg`, `sections/alma-editorial-feature.liquid`, `layout/theme.liquid`, `README.md`.
 - Checks: Liquid fallback and static-image rendering path review, asset existence check, and `git diff --check` pass.
+
+### 2026-09-25 - Fit Layer it your way to the viewport
+
+- Request: reduce the static Layer it your way section so it fits within the screen.
+- Changed: added a dedicated static-ritual class with viewport-based dimensions. Desktop uses the available viewport height; mobile divides that height between the static image and compact content area, retaining access to all Shopify product and CTA content.
+- Files: `sections/alma-editorial-feature.liquid`, `assets/alma-theme.css`, `README.md`.
+- Checks: responsive class targeting and viewport-height selector review, plus `git diff --check` pass.

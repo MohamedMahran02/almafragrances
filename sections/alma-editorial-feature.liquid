@@ -9,7 +9,7 @@
     assign feature_image = feature_product.featured_image
   endif
 -%}
-<section class="alma-editorial alma-editorial--{{ section.settings.tone }} alma-editorial--{{ section.settings.media_position }} alma-editorial--{{ section.settings.layout | default: 'split' }}{% if section.settings.layout == 'immersive' and feature_product.handle == 'alma-dokhon' and section.settings.image == blank %} alma-editorial--dukhon-wide{% endif %}" aria-labelledby="AlmaEditorial-{{ section.id }}">
+<section class="alma-editorial alma-editorial--{{ section.settings.tone }} alma-editorial--{{ section.settings.media_position }} alma-editorial--{{ section.settings.layout | default: 'split' }}{% if alma_ritual_eyebrow == 'the alma ritual' %} alma-editorial--ritual-static{% endif %}{% if section.settings.layout == 'immersive' and feature_product.handle == 'alma-dokhon' and section.settings.image == blank %} alma-editorial--dukhon-wide{% endif %}" aria-labelledby="AlmaEditorial-{{ section.id }}">
   <div class="alma-editorial__media">
     {%- if use_ritual_fallback_image -%}
       <img class="alma-editorial__image" src="{{ 'alma-layer-it-your-way.jpg' | asset_url }}" width="1365" height="2048" loading="lazy" alt="{{ section.settings.heading | escape }}">
