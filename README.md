@@ -1429,3 +1429,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: removed only those five collection-tab blocks from the All Products template.
 - Files: `templates/collection.json`, `README.md`.
 - Checks: collection template JSON validation and `git diff --check`.
+
+### 2026-09-25 - Point the navbar Layering link to the Layering page
+
+- Request: replace Collections in the navbar with Layering and link it to the Layering page.
+- Changed: updated the shared desktop and mobile navigation link to use the Shopify Layering page URL and title.
+- Files: `snippets/alma-navigation-links.liquid`, `README.md`.
+- Checks: Liquid link and active-state review, plus `git diff --check`.
