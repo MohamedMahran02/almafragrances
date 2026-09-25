@@ -1604,3 +1604,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: homepage lotion cards now group variants by the first option (Scent), choose an available representative variant for each scent, and link to that product variant with a `Choose size` action instead of adding a preselected size directly to cart. Other uses of the reusable lotion card preserve native quick add.
 - Files: `sections/alma-favourites.liquid`, `snippets/alma-lotion-variant-card.liquid`, `README.md`.
 - Checks: Liquid grouping, representative-variant, product URL, and quick-add path review; `git diff --check`.
+
+### 2026-09-25 - Create 250 ml lotion variants and attach product media
+
+- Request: create the supplied large lotion variants at 130 AED and attach the matching images; inventory will be entered manually later.
+- Changed: added the `Size` option to Shopify product `Alma Daily Essentials Lotion`, retaining current scent variants as `Small`, and created six `250 ml` variants for Arabia, Leather luxe, Oud, Sandalwood, Vanilla bloom, and Delice vanilla. Each new variant is priced at 130 AED and linked to its supplied product image. Luma remains Small-only because no 250 ml image was supplied.
+- Files: Shopify product options, variants, and product media; `README.md`.
+- Checks: Admin GraphQL query verified all six 250 ml variant titles, 130 AED prices, and image-alt associations. Inventory was intentionally left for manual entry.
