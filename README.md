@@ -1393,3 +1393,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: updated the layering page and its section default heading to ?Layering?; the two selectable product views remain unchanged.
 - Files: `templates/page.alma-layering.json`, `sections/alma-layering-hub.liquid`, `README.md`.
 - Checks: section schema JSON and template JSON validation, plus `git diff --check`.
+
+### 2026-09-25 - Use responsive videos in the homepage hero
+
+- Request: replace the homepage hero with supplied desktop and mobile videos.
+- Changed: added the supplied MP4 files as theme assets and updated the campaign hero to choose the desktop video at 750px and above, and the mobile video below 750px. The autoplaying video is muted, loops, and plays inline; the existing theme image remains as the no-video fallback.
+- Files: `assets/alma-hero-desktop.mp4`, `assets/alma-hero-mobile.mp4`, `sections/alma-campaign.liquid`, `assets/alma-theme.css`, `README.md`.
+- Checks: video asset size review, Liquid schema review, and `git diff --check`.

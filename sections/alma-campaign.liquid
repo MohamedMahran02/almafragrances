@@ -1,11 +1,15 @@
 <section class="alma-campaign" aria-labelledby="AlmaRitual-{{ section.id }}">
   <div class="alma-campaign__media">
     <div class="alma-campaign__frame">
-      {%- if section.settings.image != blank -%}
-        {{ section.settings.image | image_url: width: 2400 | image_tag: widths: '480, 750, 1100, 1500, 2000, 2400', sizes: '100vw', loading: 'eager', fetchpriority: 'high', class: 'alma-campaign__image' }}
-      {%- else -%}
-        <img class="alma-campaign__image" src="{{ 'alma-campaign-hero.png' | asset_url }}" width="1683" height="934" alt="{{ 'alma.campaign_image_alt' | t }}" loading="eager" fetchpriority="high">
-      {%- endif -%}
+      <video class="alma-campaign__video" autoplay muted loop playsinline preload="metadata" aria-label="{{ 'alma.campaign_image_alt' | t }}">
+        <source src="{{ 'alma-hero-desktop.mp4' | asset_url }}" media="(min-width: 750px)" type="video/mp4">
+        <source src="{{ 'alma-hero-mobile.mp4' | asset_url }}" type="video/mp4">
+        {%- if section.settings.image != blank -%}
+          {{ section.settings.image | image_url: width: 2400 | image_tag: widths: '480, 750, 1100, 1500, 2000, 2400', sizes: '100vw', loading: 'eager', fetchpriority: 'high', class: 'alma-campaign__image' }}
+        {%- else -%}
+          <img class="alma-campaign__image" src="{{ 'alma-campaign-hero.png' | asset_url }}" width="1683" height="934" alt="{{ 'alma.campaign_image_alt' | t }}" loading="eager" fetchpriority="high">
+        {%- endif -%}
+      </video>
     </div>
   </div>
   <div class="alma-campaign__actions">
