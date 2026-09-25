@@ -1506,3 +1506,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: made the Products dropdown use the live `kits` collection title and URL, while preserving the separate Layering page link. Updated the homepage gifting rail and All Products collection-tab label to `kits`.
 - Files: `snippets/alma-navigation-links.liquid`, `templates/index.json`, `templates/collection.json`, `README.md`.
 - Checks: collection URL/title mapping review, JSON validation, and `git diff --check`.
+
+### 2026-09-25 - Extend ALMA collection headings to every collection page
+
+- Request: refine the title and description styling on the remaining collection screens to match All Products, while retaining filters.
+- Changed: gave individual collection pages the same centered ALMA heading rhythm, editable eyebrow, display type, measured description, and responsive spacing as All Products. Removed the obsolete hard-coded solid-perfume title exception. The native Dawn filters, sorting, pagination, and product grid remain untouched.
+- Files: `sections/main-collection-banner.liquid`, `assets/alma-theme.css`, `README.md`.
+- Checks: Liquid structure and section-schema review, CSS selector review, and `git diff --check`.

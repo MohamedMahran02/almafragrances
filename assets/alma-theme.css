@@ -1507,12 +1507,20 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
 }
 
 
-/* Branded collection heading for the All Products route. */
-.alma-all-products-hero .collection-hero__inner { display: block; max-width: 92rem; padding-top: clamp(5rem, 8vw, 10rem); padding-bottom: clamp(3.5rem, 5vw, 6rem); text-align: center; }
-.alma-all-products-hero .collection-hero__text-wrapper { width: 100%; }
-.alma-all-products-hero .alma-all-products-hero__eyebrow { margin: 0 0 1.3rem; color: var(--alma-muted); font-family: var(--font-body-family); font-size: 1.05rem; font-weight: 700; letter-spacing: .17em; line-height: 1.3; text-transform: uppercase; }
-.alma-all-products-hero .collection-hero__title { margin: 0; color: var(--alma-ink); font-family: var(--font-heading-family); font-size: clamp(4.4rem, 6.6vw, 7.8rem); font-weight: 400; letter-spacing: -.04em; line-height: .94; }
-@media screen and (max-width: 749px) { .alma-all-products-hero .collection-hero__inner { padding-top: 5.2rem; padding-bottom: 3.2rem; } }
+/* Branded collection headings for All Products and individual collection pages. */
+.alma-collection-hero:not(.collection-hero--with-image) .collection-hero__inner { display: block; max-width: 92rem; padding-top: clamp(5rem, 8vw, 10rem); padding-bottom: clamp(3.5rem, 5vw, 6rem); text-align: center; }
+.alma-collection-hero .collection-hero__text-wrapper { width: 100%; }
+.alma-all-products-hero .alma-all-products-hero__eyebrow,
+.alma-collection-hero .alma-collection-hero__eyebrow { margin: 0 0 1.3rem; color: var(--alma-muted); font-family: var(--font-body-family); font-size: 1.05rem; font-weight: 700; letter-spacing: .17em; line-height: 1.3; text-transform: uppercase; }
+.alma-collection-hero .collection-hero__title { margin: 0; color: var(--alma-ink); font-family: var(--font-heading-family); font-size: clamp(4.4rem, 6.6vw, 7.8rem); font-weight: 400; letter-spacing: -.04em; line-height: .94; }
+.alma-collection-hero .alma-collection-hero__description { max-width: 62rem; margin: 2.4rem auto 0; color: #4b4945; font-family: var(--font-body-family); font-size: clamp(1.45rem, 1.5vw, 1.8rem); line-height: 1.65; }
+.alma-collection-hero .alma-collection-hero__description p { margin: 0; }
+.alma-collection-hero .alma-collection-hero__description p + p { margin-top: 1.1rem; }
+@media screen and (max-width: 749px) {
+  .alma-collection-hero:not(.collection-hero--with-image) .collection-hero__inner { padding-top: 5.2rem; padding-bottom: 3.2rem; }
+  .alma-collection-hero .collection-hero__title { font-size: clamp(3.8rem, 13vw, 5.4rem); }
+  .alma-collection-hero .alma-collection-hero__description { margin-top: 1.8rem; font-size: 1.45rem; line-height: 1.55; }
+}
 
 
 /* Responsive source images for the homepage Dukhoon editorial. */
