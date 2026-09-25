@@ -1371,3 +1371,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: added a dedicated static-ritual class with viewport-based dimensions. Desktop uses the available viewport height; mobile divides that height between the static image and compact content area, retaining access to all Shopify product and CTA content.
 - Files: `sections/alma-editorial-feature.liquid`, `assets/alma-theme.css`, `README.md`.
 - Checks: responsive class targeting and viewport-height selector review, plus `git diff --check` pass.
+
+### 2026-09-25 - Fill the desktop Layer it your way viewport
+
+- Request: make the desktop Layer it your way section fill the screen.
+- Changed: removed the desktop 72rem height cap; the static ritual editorial now uses the full viewport height beneath the header.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: desktop viewport-height rule review and `git diff --check` pass.

@@ -1427,7 +1427,7 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
 .alma-scent-finder-modal:not([open]) { display: none !important; }
 
 /* Keep the static Layer it your way editorial within the viewport. */
-.alma-editorial--ritual-static { height: min(72rem, calc(100svh - var(--header-height, 8rem))); min-height: 0; }
+.alma-editorial--ritual-static { height: calc(100svh - var(--header-height, 8rem)); min-height: 0; }
 .alma-editorial--ritual-static .alma-editorial__media,
 .alma-editorial--ritual-static .alma-editorial__image { height: 100%; min-height: 0; }
 .alma-editorial--ritual-static .alma-editorial__content { min-height: 0; overflow: hidden; }
