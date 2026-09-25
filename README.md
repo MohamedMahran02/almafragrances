@@ -1562,3 +1562,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: made the lotion card media link the fixed 3:4 frame and made each variant image fill it with `object-fit: cover`, removing the mobile fixed-height override that could stretch cards.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: responsive 3:4 media-frame selector review and `git diff --check`.
+
+### 2026-09-25 - Add Shopify descriptions for all layering bundles
+
+- Request: add generated bundle descriptions that state the included products for all 17 layering bundles.
+- Changed: used the authenticated Shopify Admin GraphQL API to update and verify descriptions for the seven `Spray Perfumes Layering` products (`Fresh Vanilla`, `Vanilla Leather`, `Vanilla Oud`, `Fresh Oud`, `Soft Alma`, `Leather & Oud`, `Fresh Alma`) and the ten `Layering` products (`Soft Vanilla`, `Fresh & Feminine`, `Warm Arabia`, `Deep Oud`, `Leather Ritual`, `Rosy Oud`, `Soft Signature`, `Creamy Fresh`, `Modern Oriental`, `Sweet & Bold`). Every description includes an ALMA-aligned scent summary plus an `Included in this bundle` product list.
+- Files: Shopify product records; `README.md`.
+- Checks: Admin API response and stored-description verification completed for all 17 products.
