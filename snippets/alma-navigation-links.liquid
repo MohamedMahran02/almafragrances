@@ -6,11 +6,16 @@
 
   assign gifting_url = collections['layering-kits'].url | default: '/collections/layering-kits'
   assign contact_url = pages.contact.url | default: '/pages/contact'
-  assign spray_collection_url = collections['alma-perfumes'].url | default: '/collections/alma-perfumes'
-  assign solid_collection_url = collections['alma-solids-مخمريات'].url | default: '/collections/alma-solids-مخمريات'
-  assign lotions_collection_url = collections['alma-lotions'].url | default: '/collections/alma-lotions'
-  assign dokhon_collection_url = collections['alma-dokhon'].url | default: '/collections/alma-dokhon'
-  assign charms_collection_url = collections['alma-solid-charms'].url | default: '/collections/alma-solid-charms'
+  assign spray_collection = collections['alma-perfumes']
+  assign solid_collection = collections['alma-makhmaria-s-solid-perfume']
+  assign lotions_collection = collections['alma-hands-and-body-lotions-collections']
+  assign dokhon_collection = collections['alma-dokhon']
+  assign charms_collection = collections['alma-solid-charms']
+  assign spray_collection_url = spray_collection.url | default: '/collections/alma-perfumes'
+  assign solid_collection_url = solid_collection.url | default: '/collections/alma-makhmaria-s-solid-perfume'
+  assign lotions_collection_url = lotions_collection.url | default: '/collections/alma-hands-and-body-lotions-collections'
+  assign dokhon_collection_url = dokhon_collection.url | default: '/collections/alma-dokhon'
+  assign charms_collection_url = charms_collection.url | default: '/collections/alma-solid-charms'
   assign layering_page_url = pages['layering'].url | default: '/pages/layering'
   assign layering_page_title = pages['layering'].title | default: 'Layering'
 -%}
@@ -26,11 +31,11 @@
         </summary>
         <ul class="header__submenu list-menu list-menu--disclosure color-{{ section.settings.menu_color_scheme }} gradient caption-large motion-reduce global-settings-popup" role="list" tabindex="-1">
           <li><a class="header__menu-item list-menu__item link link--text focus-inset caption-large" href="{{ routes.all_products_collection_url }}">{{ 'alma.nav.shop_all' | t }}</a></li>
-          <li><a class="header__menu-item list-menu__item link link--text focus-inset caption-large" href="{{ spray_collection_url }}">{{ 'alma.home.wardrobe.spray.label' | t }}</a></li>
-          <li><a class="header__menu-item list-menu__item link link--text focus-inset caption-large" href="{{ solid_collection_url }}">{{ 'alma.home.wardrobe.solid.label' | t }}</a></li>
-          <li><a class="header__menu-item list-menu__item link link--text focus-inset caption-large" href="{{ lotions_collection_url }}">{{ 'alma.nav.lotions' | t }}</a></li>
-          <li><a class="header__menu-item list-menu__item link link--text focus-inset caption-large" href="{{ dokhon_collection_url }}">{{ 'alma.nav.dukhon' | t }}</a></li>
-          <li><a class="header__menu-item list-menu__item link link--text focus-inset caption-large" href="{{ charms_collection_url }}">{{ 'alma.nav.charms' | t }}</a></li>
+          <li><a class="header__menu-item list-menu__item link link--text focus-inset caption-large" href="{{ spray_collection_url }}">{{ spray_collection.title | default: 'Alma Spray Perfumes' | escape }}</a></li>
+          <li><a class="header__menu-item list-menu__item link link--text focus-inset caption-large" href="{{ solid_collection_url }}">{{ solid_collection.title | default: 'Alma Solids Perfumes' | escape }}</a></li>
+          <li><a class="header__menu-item list-menu__item link link--text focus-inset caption-large" href="{{ lotions_collection_url }}">{{ lotions_collection.title | default: 'Alma Lotions' | escape }}</a></li>
+          <li><a class="header__menu-item list-menu__item link link--text focus-inset caption-large" href="{{ dokhon_collection_url }}">{{ dokhon_collection.title | default: 'Alma Dukhoon' | escape }}</a></li>
+          <li><a class="header__menu-item list-menu__item link link--text focus-inset caption-large" href="{{ charms_collection_url }}">{{ charms_collection.title | default: 'Alma Solid Charms' | escape }}</a></li>
           <li><a class="header__menu-item list-menu__item link link--text focus-inset caption-large" href="{{ layering_page_url }}">{{ 'alma.nav.layering' | t }}</a></li>
         </ul>
       </details>

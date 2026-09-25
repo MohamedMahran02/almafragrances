@@ -49,14 +49,14 @@
         "solid": {
           "type": "collection",
           "settings": {
-            "collection": "alma-solid-perfumes",
+            "collection": "alma-makhmaria-s-solid-perfume",
             "label": "Alma Solid Perfumes"
           }
         },
         "lotions": {
           "type": "collection",
           "settings": {
-            "collection": "alma-lotions",
+            "collection": "alma-hands-and-body-lotions-collections",
             "label": ""
           }
         },
@@ -217,42 +217,42 @@
           "type": "collection",
           "settings": {
             "collection": "alma-perfumes",
-            "label": "Spray Perfumes"
+            "label": ""
           }
         },
         "solid": {
           "type": "collection",
           "settings": {
-            "collection": "alma-solids-مخمريات",
-            "label": "Solid Perfumes"
+            "collection": "alma-makhmaria-s-solid-perfume",
+            "label": ""
           }
         },
         "lotions": {
           "type": "collection",
           "settings": {
-            "collection": "alma-lotions",
-            "label": "Lotions"
+            "collection": "alma-hands-and-body-lotions-collections",
+            "label": ""
           }
         },
         "dukhon": {
           "type": "collection",
           "settings": {
             "collection": "alma-dokhon",
-            "label": "Dukhoon"
+            "label": ""
           }
         },
         "charms": {
           "type": "collection",
           "settings": {
             "collection": "alma-solid-charms",
-            "label": "Solid Charms"
+            "label": ""
           }
         },
         "layering": {
           "type": "collection",
           "settings": {
             "collection": "layering-kits",
-            "label": "Layering & Kits"
+            "label": ""
           }
         }
       },

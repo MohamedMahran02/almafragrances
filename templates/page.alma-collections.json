@@ -12,7 +12,7 @@
         "collection_2": {
           "type": "collection",
           "settings": {
-            "collection": "alma-discovery-collection"
+            "collection": "start-here"
           }
         },
         "collection_3": {
@@ -36,7 +36,7 @@
         "collection_6": {
           "type": "collection",
           "settings": {
-            "collection": "alma-lotions"
+            "collection": "alma-hands-and-body-lotions-collections"
           }
         },
         "collection_7": {
@@ -60,7 +60,7 @@
         "collection_10": {
           "type": "collection",
           "settings": {
-            "collection": "alma-solids-مخمريات"
+            "collection": "alma-makhmaria-s-solid-perfume"
           }
         },
         "collection_11": {

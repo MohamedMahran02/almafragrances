@@ -51,7 +51,7 @@
         "lotions": {
           "type": "collection_tab",
           "settings": {
-            "collection": "alma-lotions",
+            "collection": "alma-hands-and-body-lotions-collections",
             "label": "Alma Lotions"
           }
         },
@@ -65,7 +65,7 @@
         "discovery": {
           "type": "collection_tab",
           "settings": {
-            "collection": "alma-discovery-collection",
+            "collection": "start-here",
             "label": "Discovery Collection"
           }
         },
@@ -86,7 +86,7 @@
         "solid_perfumes": {
           "type": "collection_tab",
           "settings": {
-            "collection": "alma-solid-perfumes",
+            "collection": "alma-makhmaria-s-solid-perfume",
             "label": "Alma Solid Perfumes"
           }
         }
