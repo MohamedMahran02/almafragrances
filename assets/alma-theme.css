@@ -1526,12 +1526,6 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
 /* Responsive source images for the homepage Dukhoon editorial. */
 .alma-editorial--dukhon-responsive .alma-editorial__media > picture { display: block; width: 100%; height: 100%; }
 .alma-editorial--dukhon-responsive .alma-editorial__image { width: 100%; height: 100%; object-fit: cover; }
-@media screen and (min-width: 750px) {
-  /* The supplied landscape artwork includes a white matte; crop it within the media frame. */
-  .alma-editorial--dukhon-responsive .alma-editorial__image { transform: scale(1.5); transform-origin: center; }
-}
-
-
 /* Native collection filters, sorting and product prices in the ALMA collection treatment. */
 .alma-collection-catalog .facets-wrapper,
 .alma-collection-catalog .alma-collection-sort {

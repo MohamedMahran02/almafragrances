@@ -1527,3 +1527,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: restored the native filter-row heading offset within the ALMA filter styling so its text shares the same visual line as the filter controls.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: desktop facets flex-row alignment review and `git diff --check`.
+
+### 2026-09-25 - Restore Dukhoon image framing
+
+- Request: restore the original Dukhoon homepage image with its visible borders.
+- Changed: removed the desktop-only scale crop from the responsive Dukhoon image, restoring the supplied artwork’s original framing.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: responsive Dukhoon selector review and `git diff --check`.
