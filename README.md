@@ -1569,3 +1569,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: used the authenticated Shopify Admin GraphQL API to update and verify descriptions for the seven `Spray Perfumes Layering` products (`Fresh Vanilla`, `Vanilla Leather`, `Vanilla Oud`, `Fresh Oud`, `Soft Alma`, `Leather & Oud`, `Fresh Alma`) and the ten `Layering` products (`Soft Vanilla`, `Fresh & Feminine`, `Warm Arabia`, `Deep Oud`, `Leather Ritual`, `Rosy Oud`, `Soft Signature`, `Creamy Fresh`, `Modern Oriental`, `Sweet & Bold`). Every description includes an ALMA-aligned scent summary plus an `Included in this bundle` product list.
 - Files: Shopify product records; `README.md`.
 - Checks: Admin API response and stored-description verification completed for all 17 products.
+
+### 2026-09-25 - Enable quick add for Gifting by ALMA
+
+- Request: replace the homepage Gifting by ALMA product-card `Discover` links with Add to cart controls.
+- Changed: enabled the existing Shopify-native quick-add setting for the Gifting by ALMA section. Its kit cards now submit the selected available variant to the native cart and open the cart drawer, using the established ALMA add-to-cart styling.
+- Files: `templates/index.json`, `README.md`.
+- Checks: homepage section setting, native product-form path, and JSON diff review.

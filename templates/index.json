@@ -210,7 +210,7 @@
         "best_selling_collection": "layering-kits",
         "best_selling_label": "kits",
         "products_to_show": 4,
-        "enable_quick_add": false,
+        "enable_quick_add": true,
         "product_link_label": "Discover"
       }
     },
