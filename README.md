@@ -1478,3 +1478,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: added the supplied desktop and mobile Dukhoon images as theme assets and made the homepage Dukhoon editorial select the mobile source below 750px and desktop source at wider widths. The existing Theme Editor image override remains available.
 - Files: `assets/alma-dukhon-desktop.jpg`, `assets/alma-dukhon-mobile.jpg`, `sections/alma-editorial-feature.liquid`, `assets/alma-theme.css`, `README.md`.
 - Checks: image dimension review, Liquid fallback-path review, section schema validation, and `git diff --check`.
+
+### 2026-09-25 - Fill the desktop Dukhoon media frame
+
+- Request: make the desktop Dukhoon image fill the screen instead of appearing small.
+- Changed: cropped the white matte embedded in the supplied desktop artwork inside the homepage media frame, allowing the Dukhoon photograph to fill the section. The mobile image remains unscaled because it has no matte.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: desktop and mobile source-image visual review, responsive selector review, and `git diff --check`.
