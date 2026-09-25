@@ -1414,3 +1414,11 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: updated the second Layering tab to source the Shopify `spray-perfumes-layering` collection in both the dedicated template and Default-page fallback.
 - Files: `templates/page.alma-layering.json`, `sections/main-page.liquid`, `README.md`.
 - Checks: template JSON validation, source handle review, and `git diff --check`.
+
+### 2026-09-25 - Add a collection switcher to All Products
+
+- Request: make the All Products page switch between collections like the Layering page.
+- Changed: added an accessible collection tab interface for `/collections/all`; it starts with All Products and uses Shopify-selected collection blocks for the ALMA collections, including Spray Perfumes Layering. Individual collection pages retain Dawn?s existing collection grid.
+- Files: `snippets/alma-all-products-hub.liquid`, `assets/alma-products-hub.js`, `sections/main-collection-product-grid.liquid`, `assets/alma-theme.css`, `templates/collection.json`, `README.md`.
+- Configuration: manage the tab collection order and labels in the All Products collection template in the Theme Editor.
+- Checks: section schema and collection template JSON validation, JavaScript syntax check, and `git diff --check`.

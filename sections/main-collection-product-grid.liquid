@@ -36,6 +36,12 @@
   }
 {%- endstyle -%}
 
+{%- if collection.handle == 'all' -%}
+  <script src="{{ 'alma-products-hub.js' | asset_url }}" defer="defer"></script>
+  <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
+    {% render 'alma-all-products-hub', section: section %}
+  </div>
+{%- else -%}
 <collection-component
   view-event-payload="{{ collection | standard_event_data: 'view' | escape }}"
   data-collection-id="{{ collection.id }}"
@@ -200,6 +206,7 @@
     {%- endif -%}
   </div>
 </collection-component>
+{%- endif -%}
 
 {% schema %}
 {
@@ -214,6 +221,21 @@
       "step": 4,
       "default": 16,
       "label": "t:sections.main-collection-product-grid.settings.products_per_page.label"
+    },
+    {
+      "type": "text",
+      "id": "all_products_label",
+      "label": "All Products tab label",
+      "default": "All Products"
+    },
+    {
+      "type": "range",
+      "id": "collection_tab_products_to_show",
+      "min": 4,
+      "max": 36,
+      "step": 4,
+      "default": 24,
+      "label": "Products shown per collection tab"
     },
     {
       "type": "range",
@@ -411,6 +433,18 @@
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
     }
-  ]
+
+  ],
+  "blocks": [
+    {
+      "type": "collection_tab",
+      "name": "Collection tab",
+      "settings": [
+        { "type": "collection", "id": "collection", "label": "Collection" },
+        { "type": "text", "id": "label", "label": "Tab label", "info": "Leave blank to use the collection title." }
+      ]
+    }
+  ],
+  "max_blocks": 12
 }
 {% endschema %}

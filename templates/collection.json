@@ -34,8 +34,110 @@
         "filter_type": "horizontal",
         "enable_sorting": true,
         "padding_top": 36,
-        "padding_bottom": 36
-      }
+        "padding_bottom": 36,
+        "all_products_label": "All Products",
+        "collection_tab_products_to_show": 24
+      },
+      "blocks": {
+        "best_sellers": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "best-sellers",
+            "label": "Best Sellers"
+          }
+        },
+        "perfumes": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "alma-perfumes",
+            "label": "Alma Perfumes"
+          }
+        },
+        "lotions": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "alma-lotions",
+            "label": "Alma Lotions"
+          }
+        },
+        "dokhon": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "alma-dokhon",
+            "label": "Alma Dokhon"
+          }
+        },
+        "discovery": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "alma-discovery-collection",
+            "label": "Discovery Collection"
+          }
+        },
+        "charms": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "alma-solid-charms",
+            "label": "Alma Solid Charms"
+          }
+        },
+        "kits": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "layering-kits",
+            "label": "Layering & Kits"
+          }
+        },
+        "warm": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "warm-and-bold",
+            "label": "Warm and Bold"
+          }
+        },
+        "deep": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "arabic-and-deep",
+            "label": "Arabic and Deep"
+          }
+        },
+        "soft": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "soft-and-clean",
+            "label": "Soft and Clean"
+          }
+        },
+        "spray_layering": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "spray-perfumes-layering",
+            "label": "Spray Perfumes Layering"
+          }
+        },
+        "solid_perfumes": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "alma-solid-perfumes",
+            "label": "Alma Solid Perfumes"
+          }
+        }
+      },
+      "block_order": [
+        "best_sellers",
+        "perfumes",
+        "solid_perfumes",
+        "lotions",
+        "dokhon",
+        "discovery",
+        "charms",
+        "kits",
+        "warm",
+        "deep",
+        "soft",
+        "spray_layering"
+      ]
     }
   },
   "order": [

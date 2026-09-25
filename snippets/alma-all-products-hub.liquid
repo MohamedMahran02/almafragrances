@@ -1,0 +1,46 @@
+{%- liquid
+  assign all_label = section.settings.all_products_label | default: 'All Products'
+  assign products_to_show = section.settings.collection_tab_products_to_show
+-%}
+<alma-products-hub class="alma-products-hub page-width" data-alma-products-hub aria-labelledby="AlmaProductsHub-{{ section.id }}">
+  <div class="alma-products-hub__tabs" role="tablist" aria-label="Product collections">
+    <button class="alma-products-hub__tab is-active" type="button" role="tab" id="AlmaProductsTab-{{ section.id }}-all" aria-selected="true" aria-controls="AlmaProductsPanel-{{ section.id }}-all" data-alma-products-tab="all">{{ all_label | escape }}</button>
+    {%- for block in section.blocks -%}
+      {%- assign collection_handle = block.settings.collection.handle | default: block.settings.collection -%}
+      {%- assign tab_collection = collections[collection_handle] -%}
+      {%- if tab_collection != blank -%}
+        <button class="alma-products-hub__tab" type="button" role="tab" id="AlmaProductsTab-{{ section.id }}-{{ block.id }}" aria-selected="false" aria-controls="AlmaProductsPanel-{{ section.id }}-{{ block.id }}" data-alma-products-tab="{{ block.id }}" tabindex="-1" {{ block.shopify_attributes }}>{% if block.settings.label != blank %}{{ block.settings.label | escape }}{% else %}{{ tab_collection.title | escape }}{% endif %}</button>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+
+  <div class="alma-products-hub__panels">
+    <div class="alma-products-hub__panel is-active" id="AlmaProductsPanel-{{ section.id }}-all" role="tabpanel" aria-labelledby="AlmaProductsTab-{{ section.id }}-all" data-alma-products-panel="all">
+      {%- paginate collection.products by products_to_show -%}
+        <ul class="alma-products-hub__products grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop" role="list">
+          {%- for product in collection.products -%}
+            {%- assign lazy_load = true -%}
+            {%- if forloop.index <= 2 -%}{%- assign lazy_load = false -%}{%- endif -%}
+            <li class="grid__item">{% render 'card-product', card_product: product, media_aspect_ratio: section.settings.image_ratio, image_shape: section.settings.image_shape, show_secondary_image: section.settings.show_secondary_image, show_vendor: section.settings.show_vendor, show_rating: section.settings.show_rating, lazy_load: lazy_load, quick_add: section.settings.quick_add, section_id: section.id, product_view_context: 'collection' %}</li>
+          {%- endfor -%}
+        </ul>
+        {%- if paginate.pages > 1 -%}{% render 'pagination', paginate: paginate, anchor: '' %}{%- endif -%}
+      {%- endpaginate -%}
+    </div>
+
+    {%- for block in section.blocks -%}
+      {%- assign collection_handle = block.settings.collection.handle | default: block.settings.collection -%}
+      {%- assign tab_collection = collections[collection_handle] -%}
+      {%- if tab_collection != blank -%}
+        <div class="alma-products-hub__panel" id="AlmaProductsPanel-{{ section.id }}-{{ block.id }}" role="tabpanel" aria-labelledby="AlmaProductsTab-{{ section.id }}-{{ block.id }}" data-alma-products-panel="{{ block.id }}" hidden>
+          <ul class="alma-products-hub__products grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop" role="list">
+            {%- for product in tab_collection.products limit: products_to_show -%}
+              <li class="grid__item">{% render 'card-product', card_product: product, media_aspect_ratio: section.settings.image_ratio, image_shape: section.settings.image_shape, show_secondary_image: section.settings.show_secondary_image, show_vendor: section.settings.show_vendor, show_rating: section.settings.show_rating, lazy_load: true, quick_add: section.settings.quick_add, section_id: section.id, product_view_context: 'collection' %}</li>
+            {%- endfor -%}
+          </ul>
+          {%- if tab_collection.products_count > products_to_show -%}<p class="alma-products-hub__view-all"><a class="alma-text-link" href="{{ tab_collection.url }}">View all {{ tab_collection.title | escape }}</a></p>{%- endif -%}
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</alma-products-hub>
