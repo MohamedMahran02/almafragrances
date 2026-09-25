@@ -1583,3 +1583,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: removed the mobile-only fixed-height grid and its internal scrolling/cropping from the static Layer it your way editorial. The section now stacks its image and content naturally on mobile, while its desktop viewport-fit presentation remains unchanged.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: mobile selector and cascade review, plus `git diff --check`.
+
+### 2026-09-25 - Match mobile lotion cards to the homepage carousel behavior
+
+- Request: make the homepage Alma Lotions variant cards scroll horizontally on mobile like the other collection cards.
+- Changed: gave mobile lotion variant cards the same centered mandatory scroll-snap target used by standard homepage product cards, including a stop at each card.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: homepage gallery structure and mobile scroll-snap selector review, plus `git diff --check`.
