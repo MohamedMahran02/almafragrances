@@ -1443,3 +1443,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: constrained the All Products switcher to a centered desktop content width and increased its responsive horizontal inset, including mobile card spacing.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: responsive spacing selector review and `git diff --check`.
+
+### 2026-09-25 - Enforce product-grid edge spacing
+
+- Request: ensure products are visibly inset from the screen corners.
+- Changed: applied the spacing directly to the All Products product grid and added a dedicated inset class to Dawn?s standard collection grid, so both All Products and individual collection pages have enforced edge spacing.
+- Files: `sections/main-collection-product-grid.liquid`, `assets/alma-theme.css`, `README.md`.
+- Checks: product-grid selector review and `git diff --check`.

@@ -1496,3 +1496,14 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
   .alma-products-hub__products { row-gap: 3.2rem; column-gap: 1rem; }
 }
 @media (prefers-reduced-motion: reduce) { .alma-products-hub__panel, .alma-products-hub__tab::after { animation: none; transition: none; } }
+
+
+/* Directly inset product grids so card media never meets the viewport edge. */
+.alma-products-hub__products { box-sizing: border-box; padding-inline: clamp(1.6rem, 3vw, 4rem); }
+@media screen and (min-width: 750px) {
+  .alma-collection-grid-inset { padding-right: clamp(6rem, 7vw, 12rem); padding-left: clamp(6rem, 7vw, 12rem); }
+}
+@media screen and (max-width: 749px) {
+  .alma-collection-grid-inset { padding-right: 2.4rem; padding-left: 2.4rem; }
+  .alma-products-hub__products { padding-inline: .8rem; }
+}
