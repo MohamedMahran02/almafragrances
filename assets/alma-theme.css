@@ -1550,7 +1550,7 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
   letter-spacing: .15em;
   text-transform: uppercase;
 }
-.alma-collection-catalog .facets__heading { margin-top: 0; }
+.alma-collection-catalog .facets__wrapper .facets__heading { margin: -1.5rem 2rem 0 0; }
 .alma-collection-catalog .facets__summary {
   color: var(--alma-ink);
   font-family: var(--font-body-family);

@@ -1520,3 +1520,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: added a collection-only ALMA treatment for the existing native Dawn filter summaries, active filter chips, desktop and mobile sort controls, product count, filter drawers, and card prices including sale states. Existing facets markup, filter JavaScript, sorting options, pagination, and product data remain unchanged.
 - Files: `sections/main-collection-product-grid.liquid`, `assets/alma-theme.css`, `README.md`.
 - Checks: collection-control selector and Liquid class review, plus `git diff --check`.
+
+### 2026-09-25 - Align the collection filter-row label
+
+- Request: align the Filter label with the other controls in the collection filter row.
+- Changed: restored the native filter-row heading offset within the ALMA filter styling so its text shares the same visual line as the filter controls.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: desktop facets flex-row alignment review and `git diff --check`.
