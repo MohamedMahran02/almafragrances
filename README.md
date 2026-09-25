@@ -1513,3 +1513,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: gave individual collection pages the same centered ALMA heading rhythm, editable eyebrow, display type, measured description, and responsive spacing as All Products. Removed the obsolete hard-coded solid-perfume title exception. The native Dawn filters, sorting, pagination, and product grid remain untouched.
 - Files: `sections/main-collection-banner.liquid`, `assets/alma-theme.css`, `README.md`.
 - Checks: Liquid structure and section-schema review, CSS selector review, and `git diff --check`.
+
+### 2026-09-25 - Style native collection filters, sorting and pricing
+
+- Request: style filtering, sorting and prices on collection pages to match the branded collection headings.
+- Changed: added a collection-only ALMA treatment for the existing native Dawn filter summaries, active filter chips, desktop and mobile sort controls, product count, filter drawers, and card prices including sale states. Existing facets markup, filter JavaScript, sorting options, pagination, and product data remain unchanged.
+- Files: `sections/main-collection-product-grid.liquid`, `assets/alma-theme.css`, `README.md`.
+- Checks: collection-control selector and Liquid class review, plus `git diff --check`.

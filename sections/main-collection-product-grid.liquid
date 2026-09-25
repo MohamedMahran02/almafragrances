@@ -46,11 +46,11 @@
   view-event-payload="{{ collection | standard_event_data: 'view' | escape }}"
   data-collection-id="{{ collection.id }}"
 >
-  <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
+  <div class="section-{{ section.id }}-padding alma-collection-catalog gradient color-{{ section.settings.color_scheme }}">
     {%- paginate collection.products by section.settings.products_per_page -%}
       {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
       {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
-        <facet-filters-form class="facets facets-vertical-sort page-width small-hide">
+        <facet-filters-form class="facets facets-vertical-sort alma-collection-sort page-width small-hide">
           <form class="facets-vertical-form" id="FacetSortForm">
             <div class="facet-filters sorting caption">
               <div class="facet-filters__field">
@@ -113,7 +113,7 @@
         {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
           <aside
             aria-labelledby="verticalTitle"
-            class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
+            class="facets-wrapper alma-collection-facets{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
             id="main-collection-filters"
             data-id="{{ section.id }}"
           >
@@ -150,7 +150,7 @@
             </div>
           {%- else -%}
             <div
-              class="collection alma-collection-grid-inset{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
+              class="collection alma-collection-grid-inset alma-collection-product-grid{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
             >
               <div class="loading-overlay gradient"></div>
               <ul
