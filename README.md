@@ -1485,3 +1485,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: cropped the white matte embedded in the supplied desktop artwork inside the homepage media frame, allowing the Dukhoon photograph to fill the section. The mobile image remains unscaled because it has no matte.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: desktop and mobile source-image visual review, responsive selector review, and `git diff --check`.
+
+### 2026-09-25 - Correct Products navigation and standardize product-card ratios
+
+- Request: make Products dropdown names resolve to the correct collection pages and use a 3:4 product aspect ratio throughout the website.
+- Changed: changed each Products dropdown target from a constructed path to the corresponding Shopify collection URL, including the Layering page link. Updated the shared Shopify product-card renderer and custom ALMA homepage product rail to use portrait 3:4 media.
+- Files: `snippets/alma-navigation-links.liquid`, `snippets/card-product.liquid`, `assets/alma-theme.css`, `README.md`.
+- Checks: navigation collection-target review, shared card-ratio review, and `git diff --check`.

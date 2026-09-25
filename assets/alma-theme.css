@@ -201,7 +201,7 @@ html[dir="rtl"] .alma-theme .alma-header-predictive-search .predictive-search { 
 .alma-favourites__grid::-webkit-scrollbar { display: none; }
 .alma-product { min-width: 0; padding-bottom: 2rem; }
 .alma-product__image-link { display: block; background: #fff; }
-.alma-product__image { display: block; width: 100%; height: clamp(27rem, 27vw, 40rem); margin: 0 auto 2.2rem; object-fit: cover; }
+.alma-product__image { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; margin: 0 auto 2.2rem; object-fit: cover; }
 .alma-product h3 { min-height: 2rem; margin: 0 0 .8rem; font-size: 1.6rem; line-height: 1.25; }
 .alma-product h3 a { color: inherit; text-decoration: none; }
 .alma-product__type { margin: 0 0 .6rem; color: var(--alma-muted); font-size: 1.2rem; }
