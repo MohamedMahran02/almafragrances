@@ -1,5 +1,6 @@
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'alma-favourites.js' | asset_url }}" defer="defer"></script>
+{%- if section.settings.enable_quick_add -%}<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>{%- endif -%}
 <script src="{{ 'alma-scroll-gallery.js' | asset_url }}" defer="defer"></script>
 {%- liquid
   assign has_collections = false
@@ -57,7 +58,21 @@
               {% render 'alma-static-rating', product: product %}
               {%- if product.type != blank -%}<p class="alma-product__type">{{ product.type | escape }}</p>{%- endif -%}
               {% render 'price', product: product %}
-              <a class="alma-text-link" href="{{ product.url }}">{% render 'alma-localized-copy', scope: 'home', section_id: section.id, field: 'product_link_label', value: section.settings.product_link_label %}<span class="visually-hidden"> - {{ product.title | escape }}</span></a>
+              {%- if section.settings.enable_quick_add -%}
+                {%- assign alma_product_form_id = 'AlmaProductForm-' | append: section.id | append: '-' | append: product_track_id | append: '-' | append: product.id -%}
+                <product-form data-section-id="{{ section.id }}" class="alma-product__form">
+                  {%- form 'product', product, id: alma_product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" class="product-variant-id"{% unless product.selected_or_first_available_variant.available %} disabled{% endunless %}>
+                    <button type="submit" name="add" class="alma-product__add-button" aria-haspopup="dialog" aria-label="{{ 'products.product.add_to_cart' | t }}: {{ product.title | escape }}" aria-live="polite" data-sold-out-message="true" id="{{ alma_product_form_id }}-submit"{% unless product.selected_or_first_available_variant.available %} disabled{% endunless %}>
+                      <span>{% if product.selected_or_first_available_variant.available %}{{ 'products.product.add_to_cart' | t }}{% else %}{{ 'products.product.sold_out' | t }}{% endif %}</span>
+                      <span class="sold-out-message hidden">{{ 'products.product.sold_out' | t }}</span>
+                      {%- render 'loading-spinner' -%}
+                    </button>
+                  {%- endform -%}
+                </product-form>
+              {%- else -%}
+                <a class="alma-text-link" href="{{ product.url }}">{% render 'alma-localized-copy', scope: 'home', section_id: section.id, field: 'product_link_label', value: section.settings.product_link_label %}<span class="visually-hidden"> - {{ product.title | escape }}</span></a>
+              {%- endif -%}
             </article>
           {%- endfor -%}
         </div>
@@ -85,7 +100,21 @@
                 {% render 'alma-static-rating', product: product %}
                 {%- if product.type != blank -%}<p class="alma-product__type">{{ product.type | escape }}</p>{%- endif -%}
                 {% render 'price', product: product %}
+                {%- if section.settings.enable_quick_add -%}
+                {%- assign alma_product_form_id = 'AlmaProductForm-' | append: section.id | append: '-' | append: product_track_id | append: '-' | append: product.id -%}
+                <product-form data-section-id="{{ section.id }}" class="alma-product__form">
+                  {%- form 'product', product, id: alma_product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" class="product-variant-id"{% unless product.selected_or_first_available_variant.available %} disabled{% endunless %}>
+                    <button type="submit" name="add" class="alma-product__add-button" aria-haspopup="dialog" aria-label="{{ 'products.product.add_to_cart' | t }}: {{ product.title | escape }}" aria-live="polite" data-sold-out-message="true" id="{{ alma_product_form_id }}-submit"{% unless product.selected_or_first_available_variant.available %} disabled{% endunless %}>
+                      <span>{% if product.selected_or_first_available_variant.available %}{{ 'products.product.add_to_cart' | t }}{% else %}{{ 'products.product.sold_out' | t }}{% endif %}</span>
+                      <span class="sold-out-message hidden">{{ 'products.product.sold_out' | t }}</span>
+                      {%- render 'loading-spinner' -%}
+                    </button>
+                  {%- endform -%}
+                </product-form>
+              {%- else -%}
                 <a class="alma-text-link" href="{{ product.url }}">{% render 'alma-localized-copy', scope: 'home', section_id: section.id, field: 'product_link_label', value: section.settings.product_link_label %}<span class="visually-hidden"> - {{ product.title | escape }}</span></a>
+              {%- endif -%}
               </article>
             {%- endfor -%}
           </div>
@@ -104,6 +133,7 @@
     {"type":"collection","id":"best_selling_collection","label":"Best selling collection","info":"This collection always appears as the first tab."},
     {"type":"text","id":"best_selling_label","label":"Best selling tab label","default":"Best Selling"},
     {"type":"range","id":"products_to_show","label":"Products per tab","min":4,"max":24,"step":4,"default":24},
+    {"type":"checkbox","id":"enable_quick_add","label":"Enable Add to cart buttons","default":false},
     {"type":"text","id":"product_link_label","label":"Product link label","default":"Choose options"}
   ],
   "max_blocks":12,

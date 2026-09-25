@@ -42,6 +42,7 @@
         "perfumes": {
           "type": "collection",
           "settings": {
+        "enable_quick_add": true,
             "collection": "alma-perfumes",
             "label": ""
           }
@@ -116,6 +117,7 @@
         "lotion": {
           "type": "product",
           "settings": {
+        "show_featured_product": false,
             "product": "alma-arabia-hand-and-body-lotion",
             "label": "Lotion"
           }
@@ -166,6 +168,7 @@
     "dukhon_story": {
       "type": "alma-editorial-feature",
       "settings": {
+        "show_featured_product": false,
         "eyebrow": "For the space around you",
         "heading": "A deeper atmosphere",
         "text": "<p>ALMA Dukhoon brings the ritual into your home with a warm, enveloping presence.</p>",

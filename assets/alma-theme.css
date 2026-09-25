@@ -1588,3 +1588,30 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
   .alma-collection-catalog .mobile-facets__sort { border-top: 1px solid var(--alma-line); }
   .alma-collection-catalog .mobile-facets__sort .select__select { color: var(--alma-ink); font-family: var(--font-body-family); font-size: 1.05rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
 }
+
+
+/* Shopify-native quick add in the main homepage fragrance collection. */
+.alma-product__form { margin-top: 1.7rem; }
+.alma-product__add-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.8rem;
+  padding: .8rem 1.4rem;
+  border: 1px solid var(--alma-ink);
+  border-radius: 0;
+  background: transparent;
+  color: var(--alma-ink);
+  cursor: pointer;
+  font-family: var(--font-body-family);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .13em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  transition: background-color .25s ease, color .25s ease;
+}
+.alma-product__add-button:hover:not([disabled]) { background: var(--alma-wine); border-color: var(--alma-wine); color: #fff; }
+.alma-product__add-button[disabled] { cursor: not-allowed; opacity: .55; }
+.alma-product__add-button .loading__spinner { right: .8rem; left: auto; }

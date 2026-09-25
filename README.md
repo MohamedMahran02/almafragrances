@@ -1534,3 +1534,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: removed the desktop-only scale crop from the responsive Dukhoon image, restoring the supplied artwork’s original framing.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: responsive Dukhoon selector review and `git diff --check`.
+
+### 2026-09-25 - Simplify homepage editorial products and enable collection quick add
+
+- Request: remove the Alma Dukhoon and Alma Layering Box title-price lines from the homepage, and replace Choose options with Add to cart in The ALMA fragrance collection.
+- Changed: added a Theme Editor visibility setting for editorial featured-product lines and disabled it only for the homepage Dukhoon and Layer it your way sections. Added an opt-in, Shopify-native AJAX Add to cart form to the ALMA fragrance collection; it adds each product’s first available variant and uses the existing cart drawer. Gifting retains its existing Discover link.
+- Files: `sections/alma-editorial-feature.liquid`, `sections/alma-favourites.liquid`, `templates/index.json`, `assets/alma-theme.css`, `README.md`.
+- Checks: index JSON and section-schema validation, native product-form structure review, and `git diff --check`.
