@@ -1597,3 +1597,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: used the Shopify Admin GraphQL API to move Compare-at price to Price and clear Compare-at price on 172 variants across 21 active products. Discount codes were not changed.
 - Files: Shopify product-variant pricing records; `README.md`.
 - Checks: `productVariantsBulkUpdate` responses verified each updated variant, followed by a store-wide active-product scan confirming zero remaining Compare-at prices.
+
+### 2026-09-25 - Keep one homepage lotion card per scent
+
+- Request: prepare the homepage lotion carousel for scent-and-size variants while keeping one card per scent and moving size selection to the product page.
+- Changed: homepage lotion cards now group variants by the first option (Scent), choose an available representative variant for each scent, and link to that product variant with a `Choose size` action instead of adding a preselected size directly to cart. Other uses of the reusable lotion card preserve native quick add.
+- Files: `sections/alma-favourites.liquid`, `snippets/alma-lotion-variant-card.liquid`, `README.md`.
+- Checks: Liquid grouping, representative-variant, product URL, and quick-add path review; `git diff --check`.

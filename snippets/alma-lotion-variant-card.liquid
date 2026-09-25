@@ -1,11 +1,11 @@
 {%- comment -%}
   Renders one Shopify product variant as a lotion card.
-  Accepts: product, variant, section_id, card_id, image_sizes, lazy_load.
+  Accepts: product, variant, section_id, card_id, image_sizes, lazy_load, display_title, allow_quick_add, product_link_label.
 {%- endcomment -%}
 {%- liquid
   assign lotion_variant_url = product.url | append: '?variant=' | append: variant.id
   assign lotion_variant_image = variant.featured_media.preview_image | default: variant.image | default: product.featured_image
-  assign lotion_variant_title = variant.title
+  assign lotion_variant_title = display_title | default: variant.title
   if lotion_variant_title == blank or lotion_variant_title == 'Default Title'
     assign lotion_variant_title = product.title
   endif
@@ -14,6 +14,10 @@
   assign lotion_loading = 'lazy'
   if lazy_load == false
     assign lotion_loading = 'eager'
+  endif
+  assign use_lotion_quick_add = true
+  if allow_quick_add == false
+    assign use_lotion_quick_add = false
   endif
 -%}
 <article class="alma-lotion-variant-card">
@@ -26,18 +30,28 @@
   <h3><a href="{{ lotion_variant_url }}">{{ lotion_variant_title | escape }}</a></h3>
   {% render 'alma-static-rating', product: product %}
   {% render 'price', product: product, target_variant: variant %}
-  <product-form data-section-id="{{ section_id }}" class="alma-product__form">
-    {%- form 'product', product, id: lotion_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
-      <input type="hidden" name="id" value="{{ variant.id }}" class="product-variant-id"{% unless variant.available %} disabled{% endunless %}>
-      <button type="submit" name="add" class="alma-product__add-button" aria-haspopup="dialog" aria-label="{{ 'products.product.add_to_cart' | t }}: {{ lotion_variant_title | escape }}" aria-live="polite" data-sold-out-message="true" id="{{ lotion_form_id }}-submit"{% unless variant.available %} disabled{% endunless %}>
-        <span class="alma-cta-label">
-          <img class="alma-cta-label__dot" src="{{ 'alma-cta-dot.svg' | asset_url }}" width="17" height="16" alt="" aria-hidden="true">
-          <span class="alma-cta-label__text">{% if variant.available %}{{ 'products.product.add_to_cart' | t }}{% else %}{{ 'products.product.sold_out' | t }}{% endif %}</span>
-          <img class="alma-cta-label__dot" src="{{ 'alma-cta-dot.svg' | asset_url }}" width="17" height="16" alt="" aria-hidden="true">
-        </span>
-        <span class="sold-out-message hidden">{{ 'products.product.sold_out' | t }}</span>
-        {%- render 'loading-spinner' -%}
-      </button>
-    {%- endform -%}
-  </product-form>
+  {%- if use_lotion_quick_add -%}
+    <product-form data-section-id="{{ section_id }}" class="alma-product__form">
+      {%- form 'product', product, id: lotion_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+        <input type="hidden" name="id" value="{{ variant.id }}" class="product-variant-id"{% unless variant.available %} disabled{% endunless %}>
+        <button type="submit" name="add" class="alma-product__add-button" aria-haspopup="dialog" aria-label="{{ 'products.product.add_to_cart' | t }}: {{ lotion_variant_title | escape }}" aria-live="polite" data-sold-out-message="true" id="{{ lotion_form_id }}-submit"{% unless variant.available %} disabled{% endunless %}>
+          <span class="alma-cta-label">
+            <img class="alma-cta-label__dot" src="{{ 'alma-cta-dot.svg' | asset_url }}" width="17" height="16" alt="" aria-hidden="true">
+            <span class="alma-cta-label__text">{% if variant.available %}{{ 'products.product.add_to_cart' | t }}{% else %}{{ 'products.product.sold_out' | t }}{% endif %}</span>
+            <img class="alma-cta-label__dot" src="{{ 'alma-cta-dot.svg' | asset_url }}" width="17" height="16" alt="" aria-hidden="true">
+          </span>
+          <span class="sold-out-message hidden">{{ 'products.product.sold_out' | t }}</span>
+          {%- render 'loading-spinner' -%}
+        </button>
+      {%- endform -%}
+    </product-form>
+  {%- else -%}
+    <a class="alma-product__add-button" href="{{ lotion_variant_url }}" aria-label="{{ product_link_label | default: 'Choose size' }}: {{ lotion_variant_title | escape }}">
+      <span class="alma-cta-label">
+        <img class="alma-cta-label__dot" src="{{ 'alma-cta-dot.svg' | asset_url }}" width="17" height="16" alt="" aria-hidden="true">
+        <span class="alma-cta-label__text">{{ product_link_label | default: 'Choose size' }}</span>
+        <img class="alma-cta-label__dot" src="{{ 'alma-cta-dot.svg' | asset_url }}" width="17" height="16" alt="" aria-hidden="true">
+      </span>
+    </a>
+  {%- endif -%}
 </article>

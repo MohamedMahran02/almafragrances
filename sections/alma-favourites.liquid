@@ -95,9 +95,24 @@
           <div class="alma-favourites__grid" id="{{ product_track_id }}" data-alma-scroll-track role="region" aria-label="{{ chosen_collection.title | escape }} products" tabindex="0">
             {%- if chosen_collection.handle == 'alma-hands-and-body-lotions-collections' -%}
               {%- for product in chosen_collection.products -%}
-                {%- for variant in product.variants -%}
-                  {% render 'alma-lotion-variant-card', product: product, variant: variant, section_id: section.id, card_id: product_track_id, image_sizes: '(min-width: 990px) 25vw, 82vw', lazy_load: true %}
-                {%- endfor -%}
+                {%- assign scent_option = product.options_with_values | first -%}
+                {%- if scent_option != blank -%}
+                  {%- for scent_value in scent_option.values -%}
+                    {%- assign scent_name = scent_value.name | default: scent_value -%}
+                    {%- assign scent_variant = blank -%}
+                    {%- for variant in product.variants -%}
+                      {%- if variant.option1 == scent_name -%}
+                        {%- if scent_variant == blank or variant.available -%}
+                          {%- assign scent_variant = variant -%}
+                        {%- endif -%}
+                        {%- if variant.available -%}{%- break -%}{%- endif -%}
+                      {%- endif -%}
+                    {%- endfor -%}
+                    {%- if scent_variant != blank -%}
+                      {% render 'alma-lotion-variant-card', product: product, variant: scent_variant, section_id: section.id, card_id: product_track_id, image_sizes: '(min-width: 990px) 25vw, 82vw', lazy_load: true, display_title: scent_name, allow_quick_add: false, product_link_label: 'Choose size' %}
+                    {%- endif -%}
+                  {%- endfor -%}
+                {%- endif -%}
               {%- endfor -%}
             {%- else -%}
             {%- for product in chosen_collection.products limit: section.settings.products_to_show -%}
