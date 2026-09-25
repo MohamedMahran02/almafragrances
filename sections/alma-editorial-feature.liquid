@@ -1,21 +1,23 @@
+{%- assign alma_ritual_eyebrow = section.settings.eyebrow | downcase -%}
 {%- liquid
   assign feature_product = section.settings.product
   assign feature_image = section.settings.image
-  if feature_image == blank and feature_product != blank
+  assign use_ritual_fallback_image = false
+  if feature_image == blank and alma_ritual_eyebrow == 'the alma ritual'
+    assign use_ritual_fallback_image = true
+  elsif feature_image == blank and feature_product != blank
     assign feature_image = feature_product.featured_image
   endif
 -%}
-{%- assign alma_ritual_eyebrow = section.settings.eyebrow | downcase -%}
-<section class="alma-editorial alma-editorial--{{ section.settings.tone }} alma-editorial--{{ section.settings.media_position }} alma-editorial--{{ section.settings.layout | default: 'split' }}{% if alma_ritual_eyebrow == 'the alma ritual' %} alma-editorial--ritual-motion{% endif %}{% if section.settings.layout == 'immersive' and feature_product.handle == 'alma-dokhon' and section.settings.image == blank %} alma-editorial--dukhon-wide{% endif %}" aria-labelledby="AlmaEditorial-{{ section.id }}">
+<section class="alma-editorial alma-editorial--{{ section.settings.tone }} alma-editorial--{{ section.settings.media_position }} alma-editorial--{{ section.settings.layout | default: 'split' }}{% if section.settings.layout == 'immersive' and feature_product.handle == 'alma-dokhon' and section.settings.image == blank %} alma-editorial--dukhon-wide{% endif %}" aria-labelledby="AlmaEditorial-{{ section.id }}">
   <div class="alma-editorial__media">
-    {%- if feature_image != blank -%}
+    {%- if use_ritual_fallback_image -%}
+      <img class="alma-editorial__image" src="{{ 'alma-layer-it-your-way.jpg' | asset_url }}" width="1365" height="2048" loading="lazy" alt="{{ section.settings.heading | escape }}">
+    {%- elsif feature_image != blank -%}
       {%- assign feature_alt = feature_image.alt | default: section.settings.heading -%}
       {{ feature_image | image_url: width: 1800 | image_tag: loading: 'lazy', widths: '480, 720, 960, 1200, 1600, 1800', sizes: '(min-width: 990px) 55vw, 100vw', class: 'alma-editorial__image', alt: feature_alt }}
     {%- else -%}
       {{ 'lifestyle-1' | placeholder_svg_tag: 'alma-editorial__image placeholder-svg' }}
-    {%- endif -%}
-    {%- if alma_ritual_eyebrow == 'the alma ritual' -%}
-      {%- for block in section.blocks -%}{%- assign ritual_product = block.settings.product -%}{%- if ritual_product.featured_image != blank -%}{{ ritual_product.featured_image | image_url: width: 1800 | image_tag: loading: 'lazy', widths: '480, 720, 960, 1200, 1600, 1800', sizes: '(min-width: 990px) 55vw, 100vw', class: 'alma-editorial__image alma-editorial__ritual-slide', alt: ritual_product.title }}{%- endif -%}{%- endfor -%}
     {%- endif -%}
     <div class="alma-editorial__media-copy" aria-hidden="true">
       {%- if section.settings.eyebrow != blank -%}<p class="alma-editorial__eyebrow">{% render 'alma-localized-copy', scope: 'home', section_id: section.id, field: 'eyebrow', value: section.settings.eyebrow %}</p>{%- endif -%}

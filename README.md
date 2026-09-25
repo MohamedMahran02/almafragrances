@@ -1357,3 +1357,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: added an explicit closed-dialog rule so the finder cannot render as page content after closing. Reduced the shared mobile launcher frame to 14rem and tightened its top and bottom padding so the labels sit directly under the X without a long empty tail.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: dialog open-state selector precedence and screenshot-based mobile launcher dimension review, plus `git diff --check`, pass.
+
+### 2026-09-25 - Use a static Layer it your way image
+
+- Request: use the supplied Layer it your way image and remove the image animation.
+- Changed: added the supplied image as the static default for The ALMA ritual / Layer it your way editorial section. Removed the product-slide markup and the loaded ritual-motion script. The existing Theme Editor **Override image** picker still lets the store owner replace this default with a Shopify-managed image.
+- Files: `assets/alma-layer-it-your-way.jpg`, `sections/alma-editorial-feature.liquid`, `layout/theme.liquid`, `README.md`.
+- Checks: Liquid fallback and static-image rendering path review, asset existence check, and `git diff --check` pass.
