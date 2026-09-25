@@ -3,16 +3,24 @@
   assign feature_product = section.settings.product
   assign feature_image = section.settings.image
   assign use_ritual_fallback_image = false
+  assign use_dukhon_fallback_images = false
   if feature_image == blank and alma_ritual_eyebrow == 'the alma ritual'
     assign use_ritual_fallback_image = true
+  elsif feature_image == blank and section.settings.layout == 'immersive' and feature_product.handle == 'alma-dokhon'
+    assign use_dukhon_fallback_images = true
   elsif feature_image == blank and feature_product != blank
     assign feature_image = feature_product.featured_image
   endif
 -%}
-<section class="alma-editorial alma-editorial--{{ section.settings.tone }} alma-editorial--{{ section.settings.media_position }} alma-editorial--{{ section.settings.layout | default: 'split' }}{% if alma_ritual_eyebrow == 'the alma ritual' %} alma-editorial--ritual-static{% endif %}{% if section.settings.layout == 'immersive' and feature_product.handle == 'alma-dokhon' and section.settings.image == blank %} alma-editorial--dukhon-wide{% endif %}" aria-labelledby="AlmaEditorial-{{ section.id }}">
+<section class="alma-editorial alma-editorial--{{ section.settings.tone }} alma-editorial--{{ section.settings.media_position }} alma-editorial--{{ section.settings.layout | default: 'split' }}{% if alma_ritual_eyebrow == 'the alma ritual' %} alma-editorial--ritual-static{% endif %}{% if use_dukhon_fallback_images %} alma-editorial--dukhon-responsive{% endif %}" aria-labelledby="AlmaEditorial-{{ section.id }}">
   <div class="alma-editorial__media">
     {%- if use_ritual_fallback_image -%}
       <img class="alma-editorial__image" src="{{ 'alma-layer-it-your-way.jpg' | asset_url }}" width="1365" height="2048" loading="lazy" alt="{{ section.settings.heading | escape }}">
+    {%- elsif use_dukhon_fallback_images -%}
+      <picture>
+        <source media="(max-width: 749px)" srcset="{{ 'alma-dukhon-mobile.jpg' | asset_url }}">
+        <img class="alma-editorial__image" src="{{ 'alma-dukhon-desktop.jpg' | asset_url }}" width="2720" height="1536" loading="lazy" alt="{{ section.settings.heading | escape }}">
+      </picture>
     {%- elsif feature_image != blank -%}
       {%- assign feature_alt = feature_image.alt | default: section.settings.heading -%}
       {{ feature_image | image_url: width: 1800 | image_tag: loading: 'lazy', widths: '480, 720, 960, 1200, 1600, 1800', sizes: '(min-width: 990px) 55vw, 100vw', class: 'alma-editorial__image', alt: feature_alt }}

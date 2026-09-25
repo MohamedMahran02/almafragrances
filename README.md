@@ -1471,3 +1471,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: removed the product display limit and View all links from the shared Layering hub; each tab now renders its complete Shopify collection.
 - Files: `snippets/alma-layering-hub-content.liquid`, `sections/alma-layering-hub.liquid`, `sections/main-page.liquid`, `templates/page.alma-layering.json`, `assets/alma-theme.css`, `README.md`.
 - Checks: section schema and template JSON validation, Liquid collection-loop review, and `git diff --check`.
+
+### 2026-09-25 - Use responsive Dukhoon images on the homepage
+
+- Request: use the supplied Dukhoon images for desktop and mobile on the homepage.
+- Changed: added the supplied desktop and mobile Dukhoon images as theme assets and made the homepage Dukhoon editorial select the mobile source below 750px and desktop source at wider widths. The existing Theme Editor image override remains available.
+- Files: `assets/alma-dukhon-desktop.jpg`, `assets/alma-dukhon-mobile.jpg`, `sections/alma-editorial-feature.liquid`, `assets/alma-theme.css`, `README.md`.
+- Checks: image dimension review, Liquid fallback-path review, section schema validation, and `git diff --check`.
