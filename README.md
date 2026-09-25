@@ -1407,3 +1407,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: extracted the two-option hub into shared markup and render it for the `layering` page handle from both the dedicated template and Shopify's Default page template. This prevents the page from falling back to a title-only screen if the default template remains selected.
 - Files: `snippets/alma-layering-hub-content.liquid`, `sections/alma-layering-hub.liquid`, `sections/main-page.liquid`, `README.md`.
 - Checks: shared Liquid markup review, section schema JSON validation, and `git diff --check`.
+
+### 2026-09-25 - Show spray perfume bundles in Layering
+
+- Request: show the newly created spray perfume layering bundles on the Layering page.
+- Changed: updated the second Layering tab to source the Shopify `spray-perfumes-layering` collection in both the dedicated template and Default-page fallback.
+- Files: `templates/page.alma-layering.json`, `sections/main-page.liquid`, `README.md`.
+- Checks: template JSON validation, source handle review, and `git diff --check`.
