@@ -39,13 +39,6 @@
         "collection_tab_products_to_show": 24
       },
       "blocks": {
-        "best_sellers": {
-          "type": "collection_tab",
-          "settings": {
-            "collection": "best-sellers",
-            "label": "Best Sellers"
-          }
-        },
         "perfumes": {
           "type": "collection_tab",
           "settings": {
@@ -88,34 +81,6 @@
             "label": "Layering & Kits"
           }
         },
-        "warm": {
-          "type": "collection_tab",
-          "settings": {
-            "collection": "warm-and-bold",
-            "label": "Warm and Bold"
-          }
-        },
-        "deep": {
-          "type": "collection_tab",
-          "settings": {
-            "collection": "arabic-and-deep",
-            "label": "Arabic and Deep"
-          }
-        },
-        "soft": {
-          "type": "collection_tab",
-          "settings": {
-            "collection": "soft-and-clean",
-            "label": "Soft and Clean"
-          }
-        },
-        "spray_layering": {
-          "type": "collection_tab",
-          "settings": {
-            "collection": "spray-perfumes-layering",
-            "label": "Spray Perfumes Layering"
-          }
-        },
         "solid_perfumes": {
           "type": "collection_tab",
           "settings": {
@@ -125,18 +90,13 @@
         }
       },
       "block_order": [
-        "best_sellers",
         "perfumes",
         "solid_perfumes",
         "lotions",
         "dokhon",
         "discovery",
         "charms",
-        "kits",
-        "warm",
-        "deep",
-        "soft",
-        "spray_layering"
+        "kits"
       ]
     }
   },

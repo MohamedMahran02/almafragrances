@@ -1422,3 +1422,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `snippets/alma-all-products-hub.liquid`, `assets/alma-products-hub.js`, `sections/main-collection-product-grid.liquid`, `assets/alma-theme.css`, `templates/collection.json`, `README.md`.
 - Configuration: manage the tab collection order and labels in the All Products collection template in the Theme Editor.
 - Checks: section schema and collection template JSON validation, JavaScript syntax check, and `git diff --check`.
+
+### 2026-09-25 - Remove selected tabs from All Products
+
+- Request: remove Best Sellers, Warm and Bold, Arabic and Deep, Soft and Clean, and Spray Perfumes Layering from the All Products page while retaining the other collection tabs.
+- Changed: removed only those five collection-tab blocks from the All Products template.
+- Files: `templates/collection.json`, `README.md`.
+- Checks: collection template JSON validation and `git diff --check`.
