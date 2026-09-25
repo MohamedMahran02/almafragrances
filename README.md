@@ -1450,3 +1450,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: applied the spacing directly to the All Products product grid and added a dedicated inset class to Dawn?s standard collection grid, so both All Products and individual collection pages have enforced edge spacing.
 - Files: `sections/main-collection-product-grid.liquid`, `assets/alma-theme.css`, `README.md`.
 - Checks: product-grid selector review and `git diff --check`.
+
+### 2026-09-25 - Brand the All Products page title
+
+- Request: improve the generic Products title above the collection switcher.
+- Changed: replaced the All Products route?s generic heading with editable ALMA FRAGRANCES eyebrow and The ALMA collection title styling; individual collection page headings remain unchanged.
+- Files: `sections/main-collection-banner.liquid`, `templates/collection.json`, `assets/alma-theme.css`, `README.md`.
+- Checks: section schema and collection template JSON validation, plus `git diff --check`.
