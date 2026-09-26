@@ -1,6 +1,6 @@
 {%- comment -%}
   Renders one Shopify product variant as a lotion card.
-  Accepts: product, variant, section_id, card_id, image_sizes, lazy_load, display_title, allow_quick_add, product_link_label.
+  Accepts: product, variant, section_id, card_id, image_sizes, lazy_load, display_title, allow_quick_add, product_link_label, show_product_title, show_action.
 {%- endcomment -%}
 {%- liquid
   assign lotion_variant_url = product.url | append: '?variant=' | append: variant.id
@@ -19,6 +19,14 @@
   if allow_quick_add == false
     assign use_lotion_quick_add = false
   endif
+  assign show_lotion_product_title = true
+  if show_product_title == false
+    assign show_lotion_product_title = false
+  endif
+  assign show_lotion_action = true
+  if show_action == false
+    assign show_lotion_action = false
+  endif
 -%}
 <article class="alma-lotion-variant-card">
   <a class="alma-lotion-variant-card__image-link" href="{{ lotion_variant_url }}">
@@ -27,12 +35,14 @@
     {%- endif -%}
   </a>
   <div class="alma-lotion-variant-card__information card-information">
-    <p class="alma-lotion-variant-card__eyebrow">{{ product.title | escape }}</p>
+    {%- if show_lotion_product_title -%}
+      <p class="alma-lotion-variant-card__eyebrow">{{ product.title | escape }}</p>
+    {%- endif -%}
     <h3 class="card__heading h5"><a href="{{ lotion_variant_url }}">{{ lotion_variant_title | escape }}</a></h3>
     {% render 'alma-static-rating', product: product %}
     {% render 'price', product: product, target_variant: variant %}
   </div>
-  {%- if use_lotion_quick_add -%}
+  {%- if show_lotion_action and use_lotion_quick_add -%}
     <product-form data-section-id="{{ section_id }}" class="alma-product__form">
       {%- form 'product', product, id: lotion_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
         <input type="hidden" name="id" value="{{ variant.id }}" class="product-variant-id"{% unless variant.available %} disabled{% endunless %}>
@@ -47,7 +57,7 @@
         </button>
       {%- endform -%}
     </product-form>
-  {%- else -%}
+  {%- elsif show_lotion_action -%}
     <a class="alma-product__add-button" href="{{ lotion_variant_url }}" aria-label="{{ product_link_label | default: 'Choose size' }}: {{ lotion_variant_title | escape }}">
       <span class="alma-cta-label">
         <img class="alma-cta-label__dot" src="{{ 'alma-cta-dot.svg' | asset_url }}" width="17" height="16" alt="" aria-hidden="true">

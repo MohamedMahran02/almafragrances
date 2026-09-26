@@ -37,7 +37,7 @@
             {%- if tab_collection.handle == 'alma-hands-and-body-lotions-collections' -%}
               {%- for product in tab_collection.products -%}
                 {%- for variant in product.variants -%}
-                  <li class="grid__item">{% render 'alma-lotion-variant-card', product: product, variant: variant, section_id: section.id, card_id: block.id, image_sizes: '(min-width: 990px) 25vw, 50vw', lazy_load: true %}</li>
+                  <li class="grid__item">{% render 'alma-lotion-variant-card', product: product, variant: variant, section_id: section.id, card_id: block.id, image_sizes: '(min-width: 990px) 25vw, 50vw', lazy_load: true, show_product_title: false, show_action: false %}</li>
                 {%- endfor -%}
               {%- endfor -%}
             {%- else -%}

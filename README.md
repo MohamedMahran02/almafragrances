@@ -1617,7 +1617,7 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Request: make lotion listing cards match the text styling, spacing, and layout of the rest of the products page.
 - Changed: wrapped lotion variant details in the native product-card information pattern; aligned the card text left, matched the catalog heading and price treatment, and applied the same desktop and mobile information spacing. Homepage lotion cards retain their centered carousel presentation.
 - Files: `snippets/alma-lotion-variant-card.liquid`, `assets/alma-theme.css`, `README.md`.
-- Checks: `shopify theme check --path .` completed with only the existing `scheme_classes` warnings in `layout/password.liquid` and `layout/theme.liquid`; `git diff --check` passed.
+- Checks: `shopify theme check --path .` found no offenses in the changed files; it still reports 970 existing `MatchingTranslations` errors in `locales/ar.json` and seven existing warnings in unrelated Dawn files. `git diff --check` passed.
 - Remaining work: confirm the connected Shopify theme reflects the pushed update.
 
 
@@ -1629,3 +1629,12 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: Shopify product, media, variant, and collection data; `README.md`.
 - Checks: Admin GraphQL query verified title, active status, 260 AED price, tracked inventory policy, collection membership, description, and both media records.
 - Remaining work: add stock in Shopify when the product is ready to sell.
+
+
+### 2026-09-26 - Match lotion cards to the catalog card design
+
+- Request: make lotion product cards look like the spray perfume and other product cards, and remove anything preventing that shared design.
+- Changed: catalog lotion cards now hide the custom parent-product label and action button, use the standard product-card heading scale and spacing, and retain their individual variant image, rating, price, and link. The homepage grouped scent cards retain their label and Choose size action.
+- Files: `snippets/alma-lotion-variant-card.liquid`, `sections/main-collection-product-grid.liquid`, `snippets/alma-all-products-hub.liquid`, `assets/alma-theme.css`, `README.md`.
+- Checks: `shopify theme check --path .` found no offenses in the changed files; it still reports 970 existing `MatchingTranslations` errors in `locales/ar.json` and seven existing warnings in unrelated Dawn files. `git diff --check` passed.
+- Remaining work: confirm the connected Shopify theme reflects the pushed update.

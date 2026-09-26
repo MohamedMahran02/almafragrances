@@ -168,7 +168,7 @@
                   {%- for product in collection.products -%}
                     {%- for variant in product.variants -%}
                       <li class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"{% if settings.animations_reveal_on_scroll %} data-cascade style="--animation-order: {{ forloop.index }};"{% endif %}>
-                        {% render 'alma-lotion-variant-card', product: product, variant: variant, section_id: section.id, card_id: collection.handle, image_sizes: '(min-width: 990px) 25vw, 50vw', lazy_load: true %}
+                        {% render 'alma-lotion-variant-card', product: product, variant: variant, section_id: section.id, card_id: collection.handle, image_sizes: '(min-width: 990px) 25vw, 50vw', lazy_load: true, show_product_title: false, show_action: false %}
                       </li>
                     {%- endfor -%}
                   {%- endfor -%}
