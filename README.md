@@ -1619,3 +1619,13 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `snippets/alma-lotion-variant-card.liquid`, `assets/alma-theme.css`, `README.md`.
 - Checks: `shopify theme check --path .` completed with only the existing `scheme_classes` warnings in `layout/password.liquid` and `layout/theme.liquid`; `git diff --check` passed.
 - Remaining work: confirm the connected Shopify theme reflects the pushed update.
+
+
+### 2026-09-26 - Add Rose Noir solid perfume
+
+- Request: create a Rose Noir solid perfume from the supplied product and notes images, with a description based on its scent notes, at 260 AED and zero inventory.
+- Changed: created active Shopify product `Rose Noir`, added it to `Alma Solids Perfumes`, uploaded the supplied product and notes images with descriptive alt text, and set its single tracked variant to 260 AED with `DENY` inventory policy. The product was created without inventory quantities, so it begins at zero stock.
+- Product copy: sandalwood, white musk, and dark caramel; 25g; a warm, smooth solid perfume for hair and skin.
+- Files: Shopify product, media, variant, and collection data; `README.md`.
+- Checks: Admin GraphQL query verified title, active status, 260 AED price, tracked inventory policy, collection membership, description, and both media records.
+- Remaining work: add stock in Shopify when the product is ready to sell.
