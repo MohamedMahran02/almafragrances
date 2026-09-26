@@ -1611,3 +1611,11 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: added the `Size` option to Shopify product `Alma Daily Essentials Lotion`, retaining current scent variants as `Small`, and created six `250 ml` variants for Arabia, Leather luxe, Oud, Sandalwood, Vanilla bloom, and Delice vanilla. Each new variant is priced at 130 AED and linked to its supplied product image. Luma remains Small-only because no 250 ml image was supplied.
 - Files: Shopify product options, variants, and product media; `README.md`.
 - Checks: Admin GraphQL query verified all six 250 ml variant titles, 130 AED prices, and image-alt associations. Inventory was intentionally left for manual entry.
+
+### 2026-09-26 - Align lotion variants with the product catalog
+
+- Request: make lotion listing cards match the text styling, spacing, and layout of the rest of the products page.
+- Changed: wrapped lotion variant details in the native product-card information pattern; aligned the card text left, matched the catalog heading and price treatment, and applied the same desktop and mobile information spacing. Homepage lotion cards retain their centered carousel presentation.
+- Files: `snippets/alma-lotion-variant-card.liquid`, `assets/alma-theme.css`, `README.md`.
+- Checks: `shopify theme check --path .` completed with only the existing `scheme_classes` warnings in `layout/password.liquid` and `layout/theme.liquid`; `git diff --check` passed.
+- Remaining work: confirm the connected Shopify theme reflects the pushed update.

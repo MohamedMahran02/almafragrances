@@ -1622,16 +1622,22 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
 }
 
 
-/* Lotion variants are presented as individual purchasable Shopify cards. */
-.alma-lotion-variant-card { min-width: 0; padding-bottom: 2rem; text-align: var(--text-alignment, center); }
-.alma-lotion-variant-card__image-link { display: block; aspect-ratio: 3 / 4; margin-bottom: 2rem; overflow: hidden; background: #fff; }
+/* Lotion variants use the same content rhythm and catalog type treatment as standard product cards. */
+.alma-lotion-variant-card { min-width: 0; padding-bottom: 2rem; text-align: left; }
+.alma-lotion-variant-card__image-link { display: block; aspect-ratio: 3 / 4; overflow: hidden; background: #fff; }
 .alma-lotion-variant-card__image { display: block; width: 100%; height: 100%; margin: 0; object-fit: cover; }
-.alma-lotion-variant-card__eyebrow { margin: 0 0 .5rem; color: var(--alma-muted); font-family: var(--font-body-family); font-size: 1rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
-.alma-lotion-variant-card h3 { min-height: 2rem; margin: 0 0 .8rem; font-size: 1.8rem; line-height: 1.2; }
-.alma-lotion-variant-card h3 a { color: inherit; text-decoration: none; }
-.alma-lotion-variant-card .price { margin: .8rem 0 1rem; font-size: 1.3rem; }
+.alma-lotion-variant-card__information { padding: 1.3rem 0 0; }
+.alma-lotion-variant-card__eyebrow { margin: 0; color: var(--alma-muted); font-family: var(--font-body-family); font-size: 1rem; font-weight: 700; letter-spacing: .12em; line-height: 1.35; text-transform: uppercase; }
+.alma-lotion-variant-card .card__heading { min-height: 0; margin: 0; font-size: 1.6rem; line-height: 1.25; }
+.alma-lotion-variant-card .card__heading a { color: inherit; text-decoration: none; }
+.alma-collection-product-grid .alma-lotion-variant-card .price,
+.alma-products-hub__products .alma-lotion-variant-card .price { color: var(--alma-wine); font-family: var(--font-body-family); font-size: 1.25rem; font-weight: 600; letter-spacing: .08em; line-height: 1.35; }
 .alma-lotion-variant-card .alma-product__form { margin-top: 1.7rem; }
 
+@media screen and (min-width: 750px) {
+  .alma-lotion-variant-card__information { padding-top: 1.7rem; }
+}
+
 @media screen and (max-width: 749px) {
-  .alma-favourites__grid .alma-lotion-variant-card { scroll-snap-align: center; scroll-snap-stop: always; }
+  .alma-favourites__grid .alma-lotion-variant-card { scroll-snap-align: center; scroll-snap-stop: always; text-align: center; }
 }
