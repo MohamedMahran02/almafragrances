@@ -4,7 +4,7 @@
   const arabicCurrencySuffix = /(?<=\d)\s*(?:AED|Dhs\.?)\b/gi;
   const arabicDirham = 'د.إ';
   const arabicStorefront = document.documentElement.lang.toLowerCase().startsWith('ar');
-  const skippedElements = 'script, style, noscript, textarea, input, select, option, [data-alma-keep-dhs]';
+  const skippedElements = 'script, style, noscript, textarea, input, select, option, .money, [data-currency], [data-alma-keep-dhs]';
 
   const normalizeText = (textNode) => {
     if (!textNode?.nodeValue || textNode.parentElement?.closest(skippedElements)) return;

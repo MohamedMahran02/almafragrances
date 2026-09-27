@@ -1638,3 +1638,13 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `snippets/alma-lotion-variant-card.liquid`, `sections/main-collection-product-grid.liquid`, `snippets/alma-all-products-hub.liquid`, `assets/alma-theme.css`, `README.md`.
 - Checks: `shopify theme check --path .` found no offenses in the changed files; it still reports 970 existing `MatchingTranslations` errors in `locales/ar.json` and seven existing warnings in unrelated Dawn files. `git diff --check` passed.
 - Remaining work: confirm the connected Shopify theme reflects the pushed update.
+
+
+### 2026-09-27 - Restore storefront currency conversion
+
+- Request: fix Beast Currency Converter so the selected currency displays outside the cart drawer in the active unpublished theme.
+- Cause: product and catalog price markup did not include the `money` class that Beast uses to identify amounts for conversion; the ALMA text formatter also observed all price text after conversion.
+- Changed: marked every amount in the shared `price` snippet with `money`, covering product, collection, search, homepage, and lotion card prices. Excluded `.money` and app currency markup from the ALMA formatter so it leaves converter output intact.
+- Files: `snippets/price.liquid`, `assets/alma-money-format.js`, `README.md`.
+- Checks: `git diff --check` passed. `shopify theme check --path .` found no offenses in the changed files; the existing theme baseline remains 970 `MatchingTranslations` errors in `locales/ar.json` and seven warnings in unrelated Dawn files.
+- Remaining work: open the unpublished theme preview and change currency once to confirm the app converts the new price markers.
