@@ -170,8 +170,8 @@
                 -%}
               </a>
             {%- endif -%}
-            {%- if localization.available_languages and localization.available_languages.size > 1 -%}
-              <div class="menu-drawer__localization header-localization">
+            <div class="menu-drawer__localization header-localization alma-drawer-localization-row">
+              {%- if localization.available_languages and localization.available_languages.size > 1 -%}
                 <nav class="alma-drawer-language" aria-label="{{ 'localization.language_label' | t }}">
                   {%- assign drawer_languages = localization.available_languages | sort_natural: 'iso_code' -%}
                   {%- for language in drawer_languages -%}
@@ -185,9 +185,9 @@
                     {%- unless forloop.last -%}<span class="alma-drawer-language__separator" aria-hidden="true">|</span>{%- endunless -%}
                   {%- endfor -%}
                 </nav>
-              </div>
-            {%- endif -%}
-            <div class="alma-drawer-currency" data-alma-drawer-currency aria-label="Currency selector"></div>
+              {%- endif -%}
+              <div class="alma-drawer-currency" data-alma-drawer-currency aria-label="Currency selector"></div>
+            </div>
             <ul class="list list-social list-unstyled" role="list">
               {%- if settings.social_twitter_link != blank -%}
                 <li class="list-social__item">

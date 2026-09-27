@@ -1667,3 +1667,11 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `sections/header.liquid`, `assets/alma-currency-drawer.js`, `assets/alma-theme.css`, `README.md`.
 - Checks: `node --check assets/alma-currency-drawer.js` and `git diff --check` passed. `shopify theme check --path .` found no offenses in the modified header file; the existing theme baseline remains 970 `MatchingTranslations` errors in `locales/ar.json` and seven unrelated Dawn warnings.
 - Remaining work: confirm the selector appears in the mobile side menu after Beast finishes loading.
+
+### 2026-09-27 - Refine the mobile currency selector and expanded header search
+
+- Request: place the mobile Beast selector beside AR/EN in the drawer without extending it vertically, make its options open upward with readable text, and reduce the expanded header-search field so it no longer covers Contact.
+- Changed: grouped the mobile language links and the existing Beast selector target in one flex row. Styled Beast's injected control for the drawer surface, including dark readable current and option text, a compact width, and an upward-opening options list. Reduced the desktop expanded-search width while preserving its existing animation.
+- Files: `snippets/header-drawer.liquid`, `assets/alma-theme.css`, `README.md`.
+- Checks: Liquid structure review, responsive selector/cascade review, and `git diff --check`.
+- Remaining work: confirm the mobile drawer selector opens upward after Beast loads, and that desktop expanded search clears Contact in the connected Shopify preview.
