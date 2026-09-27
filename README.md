@@ -1648,3 +1648,12 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `snippets/price.liquid`, `assets/alma-money-format.js`, `README.md`.
 - Checks: `git diff --check` passed. `shopify theme check --path .` found no offenses in the changed files; the existing theme baseline remains 970 `MatchingTranslations` errors in `locales/ar.json` and seven warnings in unrelated Dawn files.
 - Remaining work: open the unpublished theme preview and change currency once to confirm the app converts the new price markers.
+
+
+### 2026-09-27 - Position header utilities and mobile currency selector
+
+- Request: move the language, currency, cart, and search controls slightly right and show the Beast currency selector in the mobile side menu alongside language links.
+- Changed: shifted desktop header utility controls 0.9rem to the right without changing header dimensions. Added one mobile drawer currency slot and a responsive script that moves the existing Beast app block between the desktop header and mobile drawer on viewport changes, preserving a single active selector.
+- Files: `sections/header.liquid`, `snippets/header-drawer.liquid`, `layout/theme.liquid`, `assets/alma-currency-drawer.js`, `assets/alma-theme.css`, `README.md`.
+- Checks: `node --check assets/alma-currency-drawer.js` and `git diff --check` passed. `shopify theme check --path .` found no offenses in the modified header or drawer files; the existing theme baseline remains 970 `MatchingTranslations` errors in `locales/ar.json` and seven unrelated Dawn warnings.
+- Remaining work: confirm the selector appears in the mobile side menu and retains its selected currency after opening and closing the menu.
