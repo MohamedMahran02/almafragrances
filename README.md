@@ -1683,3 +1683,12 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: responsive review-rail selector review and `git diff --check`.
 - Remaining work: confirm the connected Shopify preview scrolls through every review card horizontally.
+
+### 2026-09-27 - Separate Notes and Size from Shopify soft breaks
+
+- Request: keep Size out of the product-page Notes accordion when the Shopify product description uses a new line between those labels.
+- Cause: Shopify can store a visual new line as a `<br>` inside one rich-text paragraph; the previous parser only recognized separate paragraph elements.
+- Changed: the dynamic description parser now splits rich-text paragraphs containing a Notes or Size label at Shopify soft breaks before building the accordions. Product descriptions remain the sole content source, and separate paragraphs continue to work unchanged.
+- Files: `assets/alma-description-accordions.js`, `README.md`.
+- Checks: `node --check assets/alma-description-accordions.js` and `git diff --check`.
+- Remaining work: confirm a product description containing `Notes: [notes]` followed by a soft-break `Size: [size]` renders two separate product-page accordions in the connected Shopify preview.
