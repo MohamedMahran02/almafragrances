@@ -1675,3 +1675,11 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `snippets/header-drawer.liquid`, `assets/alma-theme.css`, `README.md`.
 - Checks: Liquid structure review, responsive selector/cascade review, and `git diff --check`.
 - Remaining work: confirm the mobile drawer selector opens upward after Beast loads, and that desktop expanded search clears Contact in the connected Shopify preview.
+
+### 2026-09-27 - Keep customer reviews in one horizontal row
+
+- Request: show the expanded customer-review list as one horizontal scroller rather than wrapping it into a second row.
+- Changed: converted the desktop review layout from a three-column grid to a single, touch and trackpad-scrollable flex rail. Review cards retain their existing visual treatment and use scroll snapping; mobile retains its existing card scale in the same one-row rail.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: responsive review-rail selector review and `git diff --check`.
+- Remaining work: confirm the connected Shopify preview scrolls through every review card horizontally.
