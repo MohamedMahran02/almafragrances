@@ -1657,3 +1657,13 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `sections/header.liquid`, `snippets/header-drawer.liquid`, `layout/theme.liquid`, `assets/alma-currency-drawer.js`, `assets/alma-theme.css`, `README.md`.
 - Checks: `node --check assets/alma-currency-drawer.js` and `git diff --check` passed. `shopify theme check --path .` found no offenses in the modified header or drawer files; the existing theme baseline remains 970 `MatchingTranslations` errors in `locales/ar.json` and seven unrelated Dawn warnings.
 - Remaining work: confirm the selector appears in the mobile side menu and retains its selected currency after opening and closing the menu.
+
+
+### 2026-09-27 - Correct Beast selector relocation and header spacing
+
+- Request: move header utilities farther right so expanded search clears navigation, and correctly move the visible mobile currency selector into the side drawer.
+- Cause: Beast injects its `.doubly-wrapper` beside the cart icon after its asynchronous script loads, instead of rendering the visible selector inside the app-block markup.
+- Changed: updated the responsive handler to observe and relocate the injected Beast wrapper itself, including wrappers created after load. Increased the desktop header utility offset and moved the homepage icon group closer to the right edge without changing header height.
+- Files: `sections/header.liquid`, `assets/alma-currency-drawer.js`, `assets/alma-theme.css`, `README.md`.
+- Checks: `node --check assets/alma-currency-drawer.js` and `git diff --check` passed. `shopify theme check --path .` found no offenses in the modified header file; the existing theme baseline remains 970 `MatchingTranslations` errors in `locales/ar.json` and seven unrelated Dawn warnings.
+- Remaining work: confirm the selector appears in the mobile side menu after Beast finishes loading.
