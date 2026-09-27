@@ -351,12 +351,36 @@
     "customer_reviews": {
       "type": "alma-customer-reviews",
       "blocks": {
+        "review_97p4WX": {
+          "type": "review",
+          "settings": {
+            "quote": "Amazing fragrance and beautiful packaging. It lasts really well, and the Sandal sample was such a lovely touch.",
+            "name": "Fatima A.",
+            "location": "Abu Dhabi"
+          }
+        },
+        "review_jETwX7": {
+          "type": "review",
+          "settings": {
+            "quote": "Such a beautiful feminine scent—light, soft, and long-lasting. I even got compliments from my friends.",
+            "name": "Alya M.",
+            "location": "Dubai"
+          }
+        },
+        "review_djdjxT": {
+          "type": "review",
+          "settings": {
+            "quote": "Absolutely love it. The Oud Makhmaria smells amazing, feels elegant, and lasted on me until the next day",
+            "name": "Mariam A.",
+            "location": "Dubai"
+          }
+        },
         "review_1": {
           "type": "review",
           "settings": {
             "quote": "A beautiful, long-lasting scent that feels refined without ever being too much.",
             "name": "Noura A.",
-            "location": "Jumeirah, Dubai"
+            "location": "Abu Dhabi"
           }
         },
         "review_2": {
@@ -364,7 +388,7 @@
           "settings": {
             "quote": "The layering ritual has become my favourite part of getting ready for a Dubai evening.",
             "name": "Mariam S.",
-            "location": "Dubai Marina"
+            "location": "Dubai"
           }
         },
         "review_3": {
@@ -372,11 +396,14 @@
           "settings": {
             "quote": "The presentation is so thoughtful. It made a truly special gift for someone close to me.",
             "name": "Hala R.",
-            "location": "Downtown Dubai"
+            "location": "Dubai"
           }
         }
       },
       "block_order": [
+        "review_97p4WX",
+        "review_jETwX7",
+        "review_djdjxT",
         "review_1",
         "review_2",
         "review_3"
