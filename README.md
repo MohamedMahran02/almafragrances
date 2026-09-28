@@ -1708,3 +1708,11 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: desktop and mobile watermark positioning review, plus `git diff --check`.
 - Remaining work: confirm the connected Shopify desktop preview has the intended left crop and white margin before the photograph.
+
+### 2026-09-28 - Match the Layer it your way watermark composition
+
+- Request: match the supplied reference composition exactly for the Layer it your way watermark.
+- Changed: positioned the oversized watermark from the upper left of the white content panel, retaining the intentional left and vertical crop plus the reserved white margin before the adjacent photograph.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: reference-to-CSS composition review and `git diff --check`.
+- Remaining work: confirm the connected Shopify preview at desktop width matches the approved reference placement.
