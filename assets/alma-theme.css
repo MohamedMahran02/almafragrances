@@ -1598,6 +1598,7 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
 }
 .alma-collection-product-grid .card-information .price-item { margin-right: .7rem; }
 .alma-collection-product-grid .card-information .price--on-sale .price-item--regular { color: var(--alma-muted); font-size: 1.1rem; }
+.alma-theme .price__sale s.price-item--regular { text-decoration-line: line-through !important; text-decoration-style: dashed; text-decoration-thickness: 1px; text-decoration-color: currentColor; }
 .alma-collection-product-grid .card-information .price__badge-sale { border: 1px solid var(--alma-wine); border-radius: 0; background: transparent; color: var(--alma-wine); font-size: .9rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
 @media screen and (max-width: 749px) {
   .alma-collection-catalog .facets-wrapper { margin-bottom: 2.4rem; padding: 1.2rem 0; }

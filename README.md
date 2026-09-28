@@ -1732,3 +1732,11 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: watermark-position selector review and `git diff --check`.
 - Remaining work: confirm the connected Shopify desktop preview reflects the adjusted placement.
+
+### 2026-09-28 - Restore compare-at price strike-through
+
+- Request: restore the dashed strike-through on Shopify compare-at prices.
+- Changed: explicitly applied the dashed line-through treatment to the existing native sale-price markup, preserving Shopify price and compare-at values.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: sale-price selector review and `git diff --check`.
+- Remaining work: confirm an on-sale product in the connected Shopify preview shows its compare-at price with the restored dashed strike-through.
