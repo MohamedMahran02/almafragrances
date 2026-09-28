@@ -1,5 +1,7 @@
 (() => {
-  const mobileViewport = window.matchMedia('(max-width: 989px)');
+  // Keep the app selector in the drawer only on phone layouts. Wider screens
+  // use the normal header placement beside the cart.
+  const mobileViewport = window.matchMedia('(max-width: 749px)');
 
   const relocateCurrencySelector = () => {
     const drawer = document.querySelector('[data-alma-drawer-currency]');

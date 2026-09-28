@@ -1540,6 +1540,47 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
 /* Beast creates either a wrapper or a floating container. Both must become a normal header control after relocation. */
 .alma-theme .header__icons > :is(.doubly-wrapper, .doubly-float) { position: static !important; inset: auto !important; z-index: auto !important; display: inline-block !important; float: none !important; min-width: 0 !important; margin: 0 !important; }
 
+/* On tablet and desktop, Beast stays as a compact header control beside Cart.
+   The drawer styling remains reserved for the phone menu. */
+@media screen and (min-width: 750px) {
+  .alma-theme .header__icons > :is(.doubly-wrapper, .doubly-float) {
+    margin-left: 1.2rem !important;
+  }
+
+  .alma-theme .header__icons > :is(.doubly-wrapper, .doubly-float) .doubly-nice-select {
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 0 1.5rem 0 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    color: var(--alma-ink) !important;
+    font-family: var(--font-body-family) !important;
+    font-size: 1.3rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .alma-theme .header__icons > :is(.doubly-wrapper, .doubly-float) .doubly-nice-select .current {
+    color: var(--alma-ink) !important;
+    line-height: 1.2 !important;
+  }
+
+  .alma-theme .header__icons > :is(.doubly-wrapper, .doubly-float) .doubly-nice-select::after {
+    top: 50% !important;
+    right: .2rem !important;
+    border-color: var(--alma-ink) !important;
+  }
+
+  .alma-theme .header__icons > :is(.doubly-wrapper, .doubly-float) .doubly-nice-select .list {
+    top: calc(100% + .8rem) !important;
+    right: 0 !important;
+    bottom: auto !important;
+    left: auto !important;
+    margin: 0 !important;
+    transform-origin: center top;
+  }
+}
+
 
 /* Branded collection headings for All Products and individual collection pages. */
 .alma-collection-hero:not(.collection-hero--with-image) .collection-hero__inner { display: block; max-width: 92rem; padding-top: clamp(5rem, 8vw, 10rem); padding-bottom: clamp(3.5rem, 5vw, 6rem); text-align: center; }

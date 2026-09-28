@@ -1806,3 +1806,12 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `assets/alma-currency-drawer.js`, `assets/alma-ritual-signup.js`, `assets/alma-theme.css`, `sections/alma-editorial-feature.liquid`, `README.md`.
 - Checks: live Beast app markup inspection, `node --check` for both changed scripts, Liquid structure review, and `git diff --check`.
 - Remaining work: confirm the connected storefront loads Beast inside the mobile drawer and next to Cart on desktop, and that no ritual-offer close icon appears before the dialog is triggered.
+
+### 2026-09-29 - Restore desktop currency selector placement
+
+- Request: retain the working phone currency drawer, while returning the Beast Currency Converter to the desktop header with a normal downward menu and without the added white selector treatment.
+- Cause: the relocation breakpoint included viewports up to 989 px, so desktop and laptop windows could be treated as the phone layout and move the selector into the side drawer.
+- Changed: limited drawer relocation to phone widths below 750 px. At wider sizes, Beast now sits beside Cart with spacing from the adjacent icon, a transparent text-only selector, and a downward-opening menu. The existing mobile drawer and upward-opening selector rules were left unchanged.
+- Files: `assets/alma-currency-drawer.js`, `assets/alma-theme.css`, `README.md`.
+- Checks: `node --check assets/alma-currency-drawer.js` and `git diff --check`.
+- Remaining work: confirm the published storefront keeps the selector in the mobile drawer on phones and beside Cart on Mac, Windows, and tablet layouts.
