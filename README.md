@@ -1833,3 +1833,12 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: live Beast app markup review, CSS selector review, and `git diff --check`.
 - Remaining work: confirm the published desktop header shows only the UAE flag and AED before opening its selector.
+
+### 2026-09-29 - Center the desktop currency caret
+
+- Request: keep the UAE flag, AED code, and caret on the same visual line as the desktop header icons.
+- Cause: Beast positions its caret from its top edge, which left it visibly lower than the flag and AED after the header control was compacted.
+- Changed: centered the closed and open caret transforms on the selector's vertical midpoint while retaining the existing open-state rotation.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: live Beast CSS behavior review, CSS selector review, and `git diff --check`.
+- Remaining work: confirm the published desktop selector caret shares the same center line as its flag, AED code, search, and cart icons.
