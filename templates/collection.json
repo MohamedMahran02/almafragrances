@@ -12,40 +12,29 @@
     "banner": {
       "type": "main-collection-banner",
       "settings": {
+        "all_products_eyebrow": "ALMA FRAGRANCES",
+        "all_products_heading": "The ALMA collection",
+        "collection_eyebrow": "ALMA FRAGRANCES",
         "show_collection_description": true,
         "show_collection_image": false,
-        "color_scheme": "scheme-1",
-        "all_products_eyebrow": "ALMA FRAGRANCES",
-        "all_products_heading": "The ALMA collection"
+        "color_scheme": "scheme-1"
       }
     },
     "product-grid": {
       "type": "main-collection-product-grid",
-      "settings": {
-        "products_per_page": 16,
-        "columns_desktop": 4,
-        "columns_mobile": "2",
-        "color_scheme": "scheme-1",
-        "image_ratio": "square",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "enable_filtering": true,
-        "filter_type": "horizontal",
-        "enable_sorting": true,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "all_products_label": "All Products",
-        "collection_tab_products_to_show": 24
-      },
       "blocks": {
         "perfumes": {
           "type": "collection_tab",
           "settings": {
             "collection": "alma-perfumes",
             "label": "Alma Perfumes"
+          }
+        },
+        "solid_perfumes": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "alma-makhmaria-s-solid-perfume",
+            "label": "Alma Solid Perfumes"
           }
         },
         "lotions": {
@@ -75,13 +64,6 @@
             "collection": "alma-solid-charms",
             "label": "Alma Solid Charms"
           }
-        },
-        "solid_perfumes": {
-          "type": "collection_tab",
-          "settings": {
-            "collection": "alma-makhmaria-s-solid-perfume",
-            "label": "Alma Solid Perfumes"
-          }
         }
       },
       "block_order": [
@@ -91,7 +73,26 @@
         "dokhon",
         "discovery",
         "charms"
-      ]
+      ],
+      "settings": {
+        "products_per_page": 16,
+        "all_products_label": "All Products",
+        "collection_tab_products_to_show": 24,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
