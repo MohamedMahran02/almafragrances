@@ -1692,3 +1692,11 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `assets/alma-description-accordions.js`, `README.md`.
 - Checks: `node --check assets/alma-description-accordions.js` and `git diff --check`.
 - Remaining work: confirm a product description containing `Notes: [notes]` followed by a soft-break `Size: [size]` renders two separate product-page accordions in the connected Shopify preview.
+
+### 2026-09-28 - Add the Layer it your way logo watermark
+
+- Request: use the supplied ALMA icon at low opacity to give the white Layer it your way editorial panel the same branded depth shown in the supplied reference.
+- Changed: added the supplied transparent icon as a theme asset and applied it behind the Layer it your way text, steps, and CTA only. The watermark scales and softens for mobile while its content remains readable and interactive.
+- Files: `assets/alma-ritual-logo-watermark.webp`, `assets/alma-theme.css`, `README.md`.
+- Checks: supplied-image alpha channel review, responsive selector review, and `git diff --check`.
+- Remaining work: confirm the connected Shopify preview shows the watermark at the intended opacity on desktop and mobile.
