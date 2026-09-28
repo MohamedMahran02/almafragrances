@@ -1716,3 +1716,11 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: reverted CSS diff review and `git diff --check`.
 - Remaining work: confirm the connected Shopify preview reflects the restored watermark position.
+
+### 2026-09-28 - Nudge the Layer it your way watermark right
+
+- Request: move the restored Layer it your way watermark slightly to the right.
+- Changed: shifted the desktop watermark 3rem right while retaining its scale, left crop, and white margin before the adjacent photograph.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: watermark-position selector review and `git diff --check`.
+- Remaining work: confirm the connected Shopify desktop preview reflects the adjusted placement.
