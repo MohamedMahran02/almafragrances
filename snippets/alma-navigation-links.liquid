@@ -20,7 +20,31 @@
   assign layering_page_title = pages['layering'].title | default: 'Layering'
 -%}
 {%- if mobile -%}
-  <li><a class="{{ link_class }}" href="{{ routes.all_products_collection_url }}"{% if request.path == routes.all_products_collection_url %} aria-current="page"{% endif %}>{{ 'alma.nav.products' | t }}</a></li>
+  <li>
+    <details id="Details-menu-drawer-alma-products">
+      <summary id="HeaderDrawer-AlmaProducts" class="{{ link_class }}{% if request.path == routes.all_products_collection_url %} menu-drawer__menu-item--active{% endif %}">
+        {{ 'alma.nav.products' | t }}
+        <span class="svg-wrapper">{{- 'icon-arrow.svg' | inline_asset_content -}}</span>
+        <span class="svg-wrapper">{{- 'icon-caret.svg' | inline_asset_content -}}</span>
+      </summary>
+      <div id="link-alma-products" class="menu-drawer__submenu has-submenu gradient motion-reduce" tabindex="-1">
+        <div class="menu-drawer__inner-submenu">
+          <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
+            <span class="svg-wrapper">{{- 'icon-arrow.svg' | inline_asset_content -}}</span>
+            {{ 'alma.nav.products' | t }}
+          </button>
+          <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
+            <li><a class="{{ link_class }}" href="{{ routes.all_products_collection_url }}"{% if request.path == routes.all_products_collection_url %} aria-current="page"{% endif %}>{{ 'alma.nav.shop_all' | t }}</a></li>
+            <li><a class="{{ link_class }}" href="{{ spray_collection_url }}">{{ spray_collection.title | default: 'Alma Spray Perfumes' | escape }}</a></li>
+            <li><a class="{{ link_class }}" href="{{ solid_collection_url }}">{{ solid_collection.title | default: 'Alma Solids Perfumes' | escape }}</a></li>
+            <li><a class="{{ link_class }}" href="{{ lotions_collection_url }}">{{ lotions_collection.title | default: 'Alma Lotions' | escape }}</a></li>
+            <li><a class="{{ link_class }}" href="{{ dokhon_collection_url }}">{{ dokhon_collection.title | default: 'Alma Dukhoon' | escape }}</a></li>
+            <li><a class="{{ link_class }}" href="{{ charms_collection_url }}">{{ charms_collection.title | default: 'Alma Solid Charms' | escape }}</a></li>
+          </ul>
+        </div>
+      </div>
+    </details>
+  </li>
 {%- else -%}
   <li class="alma-products-menu">
     <header-menu>

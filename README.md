@@ -1789,3 +1789,11 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `snippets/cart-drawer.liquid`, `assets/alma-theme.css`, `README.md`.
 - Checks: Liquid nesting review, recommendation action layout review, and `git diff --check`.
 - Remaining work: confirm the connected Shopify cart drawer shows the image-overlay action immediately on desktop and mobile.
+
+### 2026-09-29 - Nest mobile Products navigation and restore two-column product grids
+
+- Request: give Products in the mobile side drawer the same nested collection navigation as desktop, and fix Products and Layering mobile product cards rendering as a single narrow column.
+- Changed: converted the mobile Products item into Dawn's native nested drawer submenu with the shared Shop all, spray perfumes, solid perfumes, lotions, Dukhoon, and solid charms links. Explicitly rendered the All Products, Layering, and native collection grids as two equal columns below 750 px so every product card fills its intended half of the screen.
+- Files: `snippets/alma-navigation-links.liquid`, `assets/alma-theme.css`, `README.md`.
+- Checks: native drawer structure review, mobile grid cascade review, `shopify theme check` (existing 977 baseline offenses only), and `git diff --check`.
+- Remaining work: confirm the connected Shopify mobile preview opens the Products submenu and displays all affected product pages in two columns.
