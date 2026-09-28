@@ -1716,4 +1716,3 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: reverted CSS diff review and `git diff --check`.
 - Remaining work: confirm the connected Shopify preview reflects the restored watermark position.
-
