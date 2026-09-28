@@ -1824,3 +1824,12 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `assets/cart-drawer.js`, `assets/component-cart-drawer.css`, `assets/alma-theme.css`, `README.md`.
 - Checks: JavaScript syntax checks for `cart-drawer.js` and `alma-currency-drawer.js`, inactive drawer overlay selector review, and `git diff --check`.
 - Remaining work: confirm the published storefront cart closes without dimming on a mobile device and the desktop currency control is visually aligned beside Cart.
+
+### 2026-09-29 - Remove duplicate desktop Beast currency field
+
+- Request: show only the AED code and UAE flag in the desktop header currency control.
+- Cause: the prior desktop alignment selector also matched Beast's hidden native `select.currency-switcher` and forced it to display, exposing the full “United Arab Emirates Dirham” option alongside the styled control.
+- Changed: restored the native select to hidden and limited desktop header presentation to Beast's visible `doubly-nice-select`. The UAE flag and AED value now share one centered control beside Cart.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: live Beast app markup review, CSS selector review, and `git diff --check`.
+- Remaining work: confirm the published desktop header shows only the UAE flag and AED before opening its selector.

@@ -1548,8 +1548,12 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
     align-self: center;
   }
 
-  .alma-theme .header__icons > :is(.doubly-wrapper, .doubly-float) :is(.doubly-nice-select, select.currency-switcher) {
-    display: flex !important;
+  .alma-theme .header__icons > :is(.doubly-wrapper, .doubly-float) select.currency-switcher {
+    display: none !important;
+  }
+
+  .alma-theme .header__icons > :is(.doubly-wrapper, .doubly-float) .doubly-nice-select {
+    display: inline-flex !important;
     align-items: center !important;
     min-height: 0 !important;
     height: auto !important;
@@ -1564,8 +1568,17 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
   }
 
   .alma-theme .header__icons > :is(.doubly-wrapper, .doubly-float) .doubly-nice-select .current {
+    display: inline-flex;
+    align-items: center;
     color: #fff !important;
     line-height: 1.2 !important;
+    white-space: nowrap;
+  }
+
+  .alma-theme .header__icons > :is(.doubly-wrapper, .doubly-float) .doubly-nice-select .current .flags {
+    flex: 0 0 3rem;
+    margin: 0 .5rem 0 0 !important;
+    float: none !important;
   }
 
   .alma-theme .header__icons > :is(.doubly-wrapper, .doubly-float) .doubly-nice-select::after {
