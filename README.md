@@ -1772,3 +1772,11 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `snippets/cart-drawer.liquid`, `assets/alma-theme.css`, `README.md`.
 - Checks: cart drawer refresh-path review, Liquid structure review, and `git diff --check`.
 - Remaining work: configure product recommendations in Shopify Search & Discovery for the strongest related-product results, then confirm the rail in the connected preview with a non-empty cart.
+
+### 2026-09-28 - Keep cart recommendation add buttons visible
+
+- Request: show the cart-drawer recommendation Add to cart button by default rather than only on product-card hover.
+- Changed: explicitly kept the recommendation form and its burgundy add button visible, in normal document flow, and fully opaque. This overrides inherited card hover behavior without changing the button's hover feedback.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: recommendation selector cascade review and `git diff --check`.
+- Remaining work: confirm the connected Shopify preview shows every recommendation Add to cart button without hovering.
