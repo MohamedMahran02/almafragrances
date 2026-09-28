@@ -1700,3 +1700,11 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `assets/alma-ritual-logo-watermark.webp`, `assets/alma-theme.css`, `README.md`.
 - Checks: supplied-image alpha channel review, responsive selector review, and `git diff --check`.
 - Remaining work: confirm the connected Shopify preview shows the watermark at the intended opacity on desktop and mobile.
+
+### 2026-09-28 - Enlarge and offset the Layer it your way watermark
+
+- Request: make the Layer it your way watermark larger and crop it toward the left, while keeping a white negative-space margin before the adjacent photograph.
+- Changed: increased the watermark scale, shifted it beyond the left edge, and constrained its painted area before the content panel's right edge. The adjacent photo remains clear of the watermark.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: desktop and mobile watermark positioning review, plus `git diff --check`.
+- Remaining work: confirm the connected Shopify desktop preview has the intended left crop and white margin before the photograph.
