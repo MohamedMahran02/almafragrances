@@ -1740,3 +1740,11 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: sale-price selector review and `git diff --check`.
 - Remaining work: confirm an on-sale product in the connected Shopify preview shows its compare-at price with the restored dashed strike-through.
+
+### 2026-09-28 - Use the Shopify Gifting collection on the homepage
+
+- Request: use the Shopify collection named Gifting for the Gifting by ALMA homepage section instead of kits.
+- Changed: changed the section?s first collection to the live `gifting` handle and updated its tab label to Gifting. Existing product rail styling and Shopify-native quick add remain in place.
+- Files: `templates/index.json`, `README.md`.
+- Checks: live `gifting` collection endpoint review, JSONC structure review, and `git diff --check`.
+- Remaining work: confirm the connected Shopify preview displays the Gifting collection products.

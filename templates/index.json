@@ -207,8 +207,8 @@
       ],
       "settings": {
         "title": "Gifting by ALMA",
-        "best_selling_collection": "layering-kits",
-        "best_selling_label": "kits",
+        "best_selling_collection": "gifting",
+        "best_selling_label": "Gifting",
         "products_to_show": 4,
         "enable_quick_add": true,
         "product_link_label": "Discover"
