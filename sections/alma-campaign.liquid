@@ -30,7 +30,7 @@
       {%- endfor -%}
       <div class="alma-ritual__text rte">{% render 'alma-localized-copy', scope: 'home', section_id: section.id, field: 'text_html', value: section.settings.text, richtext: true %}</div>
       {%- if section.settings.link_label != blank -%}
-        <a class="alma-text-link alma-cta--text" href="{{ section.settings.link | default: collections['layering-kits'].url | default: routes.all_products_collection_url }}">
+        <a class="alma-text-link alma-cta--text" href="{{ section.settings.link | default: pages['layering'].url | default: routes.all_products_collection_url }}">
           <span class="alma-cta-label">
             <img class="alma-cta-label__dot" src="{{ 'alma-cta-dot.svg' | asset_url }}" width="17" height="16" alt="" aria-hidden="true">
             <span class="alma-cta-label__text">{% render 'alma-localized-copy', scope: 'home', section_id: section.id, field: 'link_label', value: section.settings.link_label %}</span>

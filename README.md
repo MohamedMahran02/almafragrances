@@ -1756,3 +1756,11 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `snippets/alma-navigation-links.liquid`, `README.md`.
 - Checks: shared navigation path review and `git diff --check`.
 - Remaining work: confirm the Gifting navbar link opens the collection page in the connected Shopify preview.
+
+### 2026-09-28 - Remove Kits storefront entries and prioritize 250 ml lotions
+
+- Request: remove the Kits collection from website navigation and collection selectors, and show the larger lotion variants in The ALMA fragrance collection.
+- Changed: removed the `layering-kits` collection from the shared Products dropdown, homepage fragrance and wardrobe selectors, All Products selector, and the ALMA collections banner page. The Layer it your way fallback now opens the Layering page. The homepage Alma Lotions selector now shows one card per scent and prefers its 250 ml variant whenever it exists, while keeping the available non-250 ml fallback for scents such as Luma.
+- Files: `snippets/alma-navigation-links.liquid`, `sections/alma-favourites.liquid`, `sections/alma-campaign.liquid`, `snippets/alma-collections-page-banners.liquid`, `templates/index.json`, `templates/collection.json`, `templates/page.alma-collections.json`, `README.md`.
+- Checks: JSONC structure validation, storefront reference audit, and `git diff --check`.
+- Remaining work: confirm the connected Shopify preview no longer exposes Kits and that the Alma Lotions tab displays the 250 ml cards for scents that have that size.

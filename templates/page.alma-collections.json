@@ -30,12 +30,6 @@
             "collection": "alma-solid-charms"
           }
         },
-        "collection_4": {
-          "type": "collection",
-          "settings": {
-            "collection": "layering-kits"
-          }
-        },
         "collection_5": {
           "type": "collection",
           "settings": {
@@ -83,7 +77,6 @@
         "collection_1",
         "collection_2",
         "collection_3",
-        "collection_4",
         "collection_5",
         "collection_6",
         "collection_7",

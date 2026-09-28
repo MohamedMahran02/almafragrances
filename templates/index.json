@@ -73,13 +73,6 @@
             "collection": "alma-solid-charms",
             "label": ""
           }
-        },
-        "layering": {
-          "type": "collection",
-          "settings": {
-            "collection": "layering-kits",
-            "label": ""
-          }
         }
       },
       "block_order": [
@@ -87,8 +80,7 @@
         "solid",
         "lotions",
         "dokhoon",
-        "charms",
-        "layering"
+        "charms"
       ],
       "settings": {
         "title": "The ALMA fragrance collection",
@@ -251,13 +243,6 @@
             "collection": "alma-solid-charms",
             "label": ""
           }
-        },
-        "layering": {
-          "type": "collection",
-          "settings": {
-            "collection": "layering-kits",
-            "label": ""
-          }
         }
       },
       "block_order": [
@@ -265,8 +250,7 @@
         "solid",
         "lotions",
         "dukhon",
-        "charms",
-        "layering"
+        "charms"
       ],
       "settings": {
         "heading": "Explore the ALMA collections",

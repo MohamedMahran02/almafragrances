@@ -100,14 +100,21 @@
                   {%- for scent_value in scent_option.values -%}
                     {%- assign scent_name = scent_value.name | default: scent_value -%}
                     {%- assign scent_variant = blank -%}
+                    {%- assign large_scent_variant = blank -%}
                     {%- for variant in product.variants -%}
                       {%- if variant.option1 == scent_name -%}
                         {%- if scent_variant == blank or variant.available -%}
                           {%- assign scent_variant = variant -%}
                         {%- endif -%}
-                        {%- if variant.available -%}{%- break -%}{%- endif -%}
+                        {%- assign variant_title = variant.title | downcase -%}
+                        {%- if variant_title contains '250' -%}
+                          {%- if large_scent_variant == blank or variant.available -%}
+                            {%- assign large_scent_variant = variant -%}
+                          {%- endif -%}
+                        {%- endif -%}
                       {%- endif -%}
                     {%- endfor -%}
+                    {%- if large_scent_variant != blank -%}{%- assign scent_variant = large_scent_variant -%}{%- endif -%}
                     {%- if scent_variant != blank -%}
                       {% render 'alma-lotion-variant-card', product: product, variant: scent_variant, section_id: section.id, card_id: product_track_id, image_sizes: '(min-width: 990px) 25vw, 82vw', lazy_load: true, display_title: scent_name, allow_quick_add: false, product_link_label: 'Choose size' %}
                     {%- endif -%}

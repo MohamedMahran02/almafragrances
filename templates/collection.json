@@ -76,13 +76,6 @@
             "label": "Alma Solid Charms"
           }
         },
-        "kits": {
-          "type": "collection_tab",
-          "settings": {
-            "collection": "layering-kits",
-            "label": "kits"
-          }
-        },
         "solid_perfumes": {
           "type": "collection_tab",
           "settings": {
@@ -97,8 +90,7 @@
         "lotions",
         "dokhon",
         "discovery",
-        "charms",
-        "kits"
+        "charms"
       ]
     }
   },
