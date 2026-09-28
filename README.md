@@ -1797,3 +1797,12 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `snippets/alma-navigation-links.liquid`, `assets/alma-theme.css`, `README.md`.
 - Checks: native drawer structure review, mobile grid cascade review, `shopify theme check` (existing 977 baseline offenses only), and `git diff --check`.
 - Remaining work: confirm the connected Shopify mobile preview opens the Products submenu and displays all affected product pages in two columns.
+
+### 2026-09-29 - Stabilize Beast currency placement and ritual offer launcher
+
+- Request: keep the currency selector in the mobile side drawer and fix its desktop placement, while preventing the 5% offer close icon from appearing before the popup has opened.
+- Cause: Beast Currency Converter creates a `.doubly-float` container on launch when no static wrapper exists, but the relocation code only handled `.doubly-wrapper`. The ritual-offer wrapper initially rendered visible even while its launcher button was being hidden by deferred JavaScript.
+- Changed: relocated both Beast container types, reset floating positioning after placement in the mobile drawer or desktop header next to Cart, and kept the mobile selector's existing upward-opening presentation. The ritual launcher wrapper now renders hidden, remains hidden before the ritual is reached, and is revealed only after its dialog closes or on a later visit.
+- Files: `assets/alma-currency-drawer.js`, `assets/alma-ritual-signup.js`, `assets/alma-theme.css`, `sections/alma-editorial-feature.liquid`, `README.md`.
+- Checks: live Beast app markup inspection, `node --check` for both changed scripts, Liquid structure review, and `git diff --check`.
+- Remaining work: confirm the connected storefront loads Beast inside the mobile drawer and next to Cart on desktop, and that no ritual-offer close icon appears before the dialog is triggered.

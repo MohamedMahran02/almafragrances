@@ -6,7 +6,7 @@
     const cart = document.querySelector('.header__icons .header__icon--cart');
     if (!drawer || !cart) return;
 
-    document.querySelectorAll('.doubly-wrapper').forEach((selector) => {
+    document.querySelectorAll('.doubly-wrapper, .doubly-float').forEach((selector) => {
       if (mobileViewport.matches) {
         if (selector.parentElement !== drawer) drawer.append(selector);
       } else if (selector.parentElement !== cart.parentElement || selector.previousElementSibling !== cart) {

@@ -117,7 +117,7 @@
       </div>
     </dialog>
     {%- endform -%}
-    <div class="alma-ritual-signup-launcher-wrap" data-alma-ritual-signup-launcher-wrap>
+    <div class="alma-ritual-signup-launcher-wrap" data-alma-ritual-signup-launcher-wrap hidden>
       <button class="alma-ritual-signup-launcher" type="button" data-alma-ritual-signup-launcher data-alma-ritual-signup-section="{{ section.id }}" aria-controls="AlmaRitualSignup-{{ section.id }}">
         {% render 'alma-localized-copy', scope: 'home', section_id: section.id, field: 'signup_launcher_label', value: section.settings.signup_launcher_label %}
       </button>

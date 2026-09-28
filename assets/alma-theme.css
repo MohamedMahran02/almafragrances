@@ -443,7 +443,7 @@ html[dir="rtl"] .alma-theme .alma-header-predictive-search .predictive-search { 
   .alma-theme .alma-drawer-localization-row.menu-drawer__localization .alma-drawer-language { flex: 0 0 auto; padding: 0; }
   .alma-drawer-currency { display: flex; align-items: center; min-height: 0; }
   .alma-drawer-currency:empty { display: none; }
-  .alma-drawer-currency .doubly-wrapper { display: inline-block !important; float: none !important; min-width: 0 !important; padding: 0 !important; color: var(--alma-ink) !important; }
+  .alma-drawer-currency :is(.doubly-wrapper, .doubly-float) { position: static !important; inset: auto !important; z-index: auto !important; display: inline-block !important; float: none !important; min-width: 0 !important; padding: 0 !important; color: var(--alma-ink) !important; }
   .alma-drawer-currency .doubly-nice-select,
   .alma-drawer-currency select.currency-switcher { min-width: 7.2rem; background: #fff !important; color: var(--alma-ink) !important; }
   .alma-drawer-currency .doubly-nice-select .current,
@@ -1536,6 +1536,9 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
     min-width: 0;
   }
 }
+
+/* Beast creates either a wrapper or a floating container. Both must become a normal header control after relocation. */
+.alma-theme .header__icons > :is(.doubly-wrapper, .doubly-float) { position: static !important; inset: auto !important; z-index: auto !important; display: inline-block !important; float: none !important; min-width: 0 !important; margin: 0 !important; }
 
 
 /* Branded collection headings for All Products and individual collection pages. */

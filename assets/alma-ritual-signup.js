@@ -10,7 +10,14 @@
   if (!ritual) return;
 
   const seenKey = `alma-ritual-signup-seen-${sectionId}`;
-  const hideLauncher = () => { if (launcherWrap) launcherWrap.hidden = true; };
+  const hideLauncher = () => {
+    launcher.hidden = true;
+    if (launcherWrap) launcherWrap.hidden = true;
+  };
+  const showLauncher = () => {
+    if (launcherWrap) launcherWrap.hidden = false;
+    launcher.hidden = false;
+  };
   dismissControl?.addEventListener('click', hideLauncher);
   const bodyClass = 'alma-ritual-signup-is-open';
   let hasOpened = false;
@@ -35,7 +42,7 @@
     if (!modal.open) modal.showModal();
     hasOpened = true;
     document.body.classList.add(bodyClass);
-    launcher.hidden = true;
+    hideLauncher();
   };
 
   const close = () => {
@@ -49,7 +56,7 @@
   modal.addEventListener('close', () => {
     document.body.classList.remove(bodyClass);
     setSeen();
-    launcher.hidden = false;
+    showLauncher();
   });
 
   const form = modal.closest('form');
@@ -85,11 +92,11 @@
   }
 
   if (wasSeen()) {
-    launcher.hidden = false;
+    showLauncher();
     return;
   }
 
-  launcher.hidden = true;
+  hideLauncher();
   const observer = new IntersectionObserver((entries) => {
     if (hasOpened || !entries.some((entry) => entry.isIntersecting)) return;
     observer.disconnect();
