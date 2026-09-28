@@ -1764,3 +1764,11 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `snippets/alma-navigation-links.liquid`, `sections/alma-favourites.liquid`, `sections/alma-campaign.liquid`, `snippets/alma-collections-page-banners.liquid`, `templates/index.json`, `templates/collection.json`, `templates/page.alma-collections.json`, `README.md`.
 - Checks: JSONC structure validation, storefront reference audit, and `git diff --check`.
 - Remaining work: confirm the connected Shopify preview no longer exposes Kits and that the Alma Lotions tab displays the 250 ml cards for scents that have that size.
+
+### 2026-09-28 - Add native cart drawer recommendations
+
+- Request: show recommended products in the cart side drawer with direct add-to-cart controls styled for ALMA.
+- Changed: added a Shopify product-recommendations rail that uses the first cart item to request related products, excludes items already in the cart, and refreshes whenever Dawn re-renders the drawer. Each recommendation uses Shopify product data, price, availability, and first available variant with an in-drawer add-to-cart button. Styled the rail with ALMA typography, burgundy actions, white product imagery, and horizontal scrolling cards.
+- Files: `snippets/cart-drawer.liquid`, `assets/alma-theme.css`, `README.md`.
+- Checks: cart drawer refresh-path review, Liquid structure review, and `git diff --check`.
+- Remaining work: configure product recommendations in Shopify Search & Discovery for the strongest related-product results, then confirm the rail in the connected preview with a non-empty cart.

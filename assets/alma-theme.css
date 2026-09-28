@@ -1653,6 +1653,29 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
 .alma-products-hub__products .alma-lotion-variant-card .price { color: var(--alma-wine); font-family: var(--font-body-family); font-size: 1.25rem; font-weight: 600; letter-spacing: .08em; line-height: 1.35; }
 .alma-lotion-variant-card .alma-product__form { margin-top: 1.7rem; }
 
+/* Cart drawer recommendations retain Shopify product data while using ALMA's compact editorial card treatment. */
+.alma-cart-recommendations { display: block; padding: 0 0 2.4rem; }
+.alma-cart-recommendations__inner { padding: 2.4rem 0 0; border-top: 1px solid var(--alma-line); }
+.alma-cart-recommendations__heading { margin-bottom: 1.6rem; }
+.alma-cart-recommendations__heading p { margin: 0 0 .5rem; color: var(--alma-muted); font-size: .95rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+.alma-cart-recommendations__heading h3 { margin: 0; color: var(--alma-ink); font-family: var(--font-heading-family); font-size: 2.2rem; font-weight: 400; line-height: 1.1; }
+.alma-cart-recommendations__list { display: grid; grid-auto-columns: minmax(13rem, 43%); grid-auto-flow: column; gap: 1.2rem; margin: 0; padding: 0 .1rem .5rem; overflow-x: auto; list-style: none; scroll-padding-inline: .1rem; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.alma-cart-recommendations__list::-webkit-scrollbar { display: none; }
+.alma-cart-recommendations__item { min-width: 0; scroll-snap-align: start; }
+.alma-cart-recommendations__image { display: block; aspect-ratio: 3 / 4; overflow: hidden; background: #fff; }
+.alma-cart-recommendations__image img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+.alma-cart-recommendations__image:hover img { transform: scale(1.03); }
+.alma-cart-recommendations__details { padding-top: .9rem; }
+.alma-cart-recommendations__details > a { display: block; overflow: hidden; color: var(--alma-ink); font-family: var(--font-heading-family); font-size: 1.45rem; line-height: 1.15; text-decoration: none; text-overflow: ellipsis; white-space: nowrap; }
+.alma-cart-recommendations__details .price { display: block; margin-top: .45rem; color: var(--alma-wine); font-family: var(--font-body-family); font-size: 1.05rem; font-weight: 600; letter-spacing: .06em; }
+.alma-cart-recommendations__details .price-item { margin-right: .35rem; }
+.alma-cart-recommendations__form { display: block; margin-top: .9rem; }
+.alma-cart-recommendations__add { position: relative; display: flex; align-items: center; justify-content: center; width: 100%; min-height: 3.5rem; padding: .5rem .8rem; border: 1px solid var(--alma-wine); border-radius: 0; background: var(--alma-wine); color: #fff; cursor: pointer; font-family: var(--font-body-family); font-size: .92rem; font-weight: 700; letter-spacing: .11em; line-height: 1.2; text-transform: uppercase; transition: background-color .2s ease, color .2s ease; }
+.alma-cart-recommendations__add:hover:not([disabled]) { background: #fff; color: var(--alma-wine); }
+.alma-cart-recommendations__add[disabled] { border-color: var(--alma-line); background: transparent; color: var(--alma-muted); cursor: not-allowed; }
+.alma-cart-recommendations__add .loading__spinner { position: absolute; right: .7rem; width: 1.4rem; }
+.alma-cart-recommendations__add .loading__spinner .path { stroke: currentColor; }
+
 @media screen and (min-width: 750px) {
   .alma-lotion-variant-card__information { padding-top: 1.7rem; }
 }
