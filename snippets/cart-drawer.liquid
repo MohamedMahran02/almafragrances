@@ -515,14 +515,12 @@
                         {%- assign recommendation_variant = recommendation.selected_or_first_available_variant -%}
                         {%- assign recommendation_form_id = 'CartDrawerRecommendation-' | append: cart.items.first.product.id | append: '-' | append: recommendation.id -%}
                         <li class="alma-cart-recommendations__item">
-                          <a class="alma-cart-recommendations__image" href="{{ recommendation.url }}">
-                            {%- if recommendation.featured_image != blank -%}
-                              {{ recommendation.featured_image | image_url: width: 360 | image_tag: loading: 'lazy', widths: '180, 240, 360', sizes: '42vw', alt: recommendation.featured_image.alt | default: recommendation.title }}
-                            {%- endif -%}
-                          </a>
-                          <div class="alma-cart-recommendations__details">
-                            <a href="{{ recommendation.url }}">{{ recommendation.title | escape }}</a>
-                            {% render 'price', product: recommendation %}
+                          <div class="alma-cart-recommendations__media">
+                            <a class="alma-cart-recommendations__image" href="{{ recommendation.url }}">
+                              {%- if recommendation.featured_image != blank -%}
+                                {{ recommendation.featured_image | image_url: width: 360 | image_tag: loading: 'lazy', widths: '180, 240, 360', sizes: '42vw', alt: recommendation.featured_image.alt | default: recommendation.title }}
+                              {%- endif -%}
+                            </a>
                             <product-form data-section-id="cart-drawer" class="alma-cart-recommendations__form">
                               {%- form 'product', recommendation, id: recommendation_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                                 <input type="hidden" name="id" value="{{ recommendation_variant.id }}" class="product-variant-id"{% unless recommendation_variant.available %} disabled{% endunless %}>
@@ -532,6 +530,10 @@
                                 </button>
                               {%- endform -%}
                             </product-form>
+                          </div>
+                          <div class="alma-cart-recommendations__details">
+                            <a href="{{ recommendation.url }}">{{ recommendation.title | escape }}</a>
+                            {% render 'price', product: recommendation %}
                           </div>
                         </li>
                         {%- assign displayed_recommendations = displayed_recommendations | plus: 1 -%}

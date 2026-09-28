@@ -1780,3 +1780,12 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: recommendation selector cascade review and `git diff --check`.
 - Remaining work: confirm the connected Shopify preview shows every recommendation Add to cart button without hovering.
+
+### 2026-09-29 - Surface cart recommendation actions on product images
+
+- Request: keep the cart-drawer recommendation Add to cart action visible by default.
+- Cause: the action followed the product image, name, and price, so it could sit below the immediately visible portion of compact recommendation cards.
+- Changed: moved each native add-to-cart form into a permanent burgundy overlay on the lower edge of its recommendation image. The action remains directly connected to the Shopify variant and cart drawer refresh flow.
+- Files: `snippets/cart-drawer.liquid`, `assets/alma-theme.css`, `README.md`.
+- Checks: Liquid nesting review, recommendation action layout review, and `git diff --check`.
+- Remaining work: confirm the connected Shopify cart drawer shows the image-overlay action immediately on desktop and mobile.
