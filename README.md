@@ -1748,3 +1748,11 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `templates/index.json`, `README.md`.
 - Checks: live `gifting` collection endpoint review, JSONC structure review, and `git diff --check`.
 - Remaining work: confirm the connected Shopify preview displays the Gifting collection products.
+
+### 2026-09-28 - Point navbar Gifting to its Shopify collection
+
+- Request: make the navbar Gifting link open the Shopify Gifting collection page.
+- Changed: changed the shared desktop and mobile navigation link to resolve the live `gifting` collection URL.
+- Files: `snippets/alma-navigation-links.liquid`, `README.md`.
+- Checks: shared navigation path review and `git diff --check`.
+- Remaining work: confirm the Gifting navbar link opens the collection page in the connected Shopify preview.
