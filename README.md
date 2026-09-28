@@ -1815,3 +1815,12 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `assets/alma-currency-drawer.js`, `assets/alma-theme.css`, `README.md`.
 - Checks: `node --check assets/alma-currency-drawer.js` and `git diff --check`.
 - Remaining work: confirm the published storefront keeps the selector in the mobile drawer on phones and beside Cart on Mac, Windows, and tablet layouts.
+
+### 2026-09-29 - Fix cart overlay close state and desktop currency alignment
+
+- Request: remove the dimmed page overlay when the mobile cart drawer closes, and align the desktop currency selector with the white header icons.
+- Cause: a cart refresh can queue a delayed drawer open after the visitor has already closed it, leaving the overlay state visible. The desktop Beast control inherited its compact text-control position but not the header icon alignment and white header color.
+- Changed: cancel pending cart-drawer open callbacks during close and explicitly disable the inactive overlay. Aligned the desktop currency control in the header icon row, set its displayed text and caret to white, and retained dark option-list text for readability.
+- Files: `assets/cart-drawer.js`, `assets/component-cart-drawer.css`, `assets/alma-theme.css`, `README.md`.
+- Checks: JavaScript syntax checks for `cart-drawer.js` and `alma-currency-drawer.js`, inactive drawer overlay selector review, and `git diff --check`.
+- Remaining work: confirm the published storefront cart closes without dimming on a mobile device and the desktop currency control is visually aligned beside Cart.

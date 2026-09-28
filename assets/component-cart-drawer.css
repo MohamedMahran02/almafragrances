@@ -15,6 +15,15 @@
   visibility: visible;
 }
 
+.drawer:not(.active) {
+  background-color: transparent;
+  pointer-events: none;
+}
+
+cart-drawer:not(.active) .cart-drawer__overlay {
+  display: none;
+}
+
 .drawer__inner {
   height: 100%;
   width: 40rem;

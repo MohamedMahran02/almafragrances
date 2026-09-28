@@ -27,12 +27,14 @@ class CartDrawer extends HTMLElement {
 
   open(triggeredBy) {
     if (this.classList.contains('active')) return;
+    this.shouldRemainOpen = true;
+    clearTimeout(this.openTimeout);
     if (triggeredBy) this.setActiveElement(triggeredBy);
     const cartDrawerNote = this.querySelector('[id^="Details-"] summary');
     if (cartDrawerNote && !cartDrawerNote.hasAttribute('role')) this.setSummaryAccessibility(cartDrawerNote);
     // here the animation doesn't seem to always get triggered. A timeout seem to help
-    setTimeout(() => {
-      this.classList.add('animate', 'active');
+    this.openTimeout = setTimeout(() => {
+      if (this.shouldRemainOpen) this.classList.add('animate', 'active');
     });
 
     this.addEventListener(
@@ -56,6 +58,9 @@ class CartDrawer extends HTMLElement {
   }
 
   close() {
+    this.shouldRemainOpen = false;
+    clearTimeout(this.openTimeout);
+    clearTimeout(this.renderOpenTimeout);
     this.classList.remove('active');
     removeTrapFocus(this.activeElement);
     document.body.classList.remove('overflow-hidden');
@@ -89,7 +94,8 @@ class CartDrawer extends HTMLElement {
       sectionElement.innerHTML = this.getSectionInnerHTML(parsedState.sections[section.id], section.selector);
     });
 
-    setTimeout(() => {
+    clearTimeout(this.renderOpenTimeout);
+    this.renderOpenTimeout = setTimeout(() => {
       this.querySelector('#CartDrawer-Overlay').addEventListener('click', this.close.bind(this));
       this.open();
     });

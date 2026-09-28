@@ -1545,30 +1545,33 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
 @media screen and (min-width: 750px) {
   .alma-theme .header__icons > :is(.doubly-wrapper, .doubly-float) {
     margin-left: 1.2rem !important;
+    align-self: center;
   }
 
-  .alma-theme .header__icons > :is(.doubly-wrapper, .doubly-float) .doubly-nice-select {
+  .alma-theme .header__icons > :is(.doubly-wrapper, .doubly-float) :is(.doubly-nice-select, select.currency-switcher) {
+    display: flex !important;
+    align-items: center !important;
     min-height: 0 !important;
     height: auto !important;
     padding: 0 1.5rem 0 0 !important;
     border: 0 !important;
     border-radius: 0 !important;
     background: transparent !important;
-    color: var(--alma-ink) !important;
+    color: #fff !important;
     font-family: var(--font-body-family) !important;
     font-size: 1.3rem !important;
     line-height: 1.2 !important;
   }
 
   .alma-theme .header__icons > :is(.doubly-wrapper, .doubly-float) .doubly-nice-select .current {
-    color: var(--alma-ink) !important;
+    color: #fff !important;
     line-height: 1.2 !important;
   }
 
   .alma-theme .header__icons > :is(.doubly-wrapper, .doubly-float) .doubly-nice-select::after {
     top: 50% !important;
     right: .2rem !important;
-    border-color: var(--alma-ink) !important;
+    border-color: #fff !important;
   }
 
   .alma-theme .header__icons > :is(.doubly-wrapper, .doubly-float) .doubly-nice-select .list {
@@ -1578,6 +1581,11 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
     left: auto !important;
     margin: 0 !important;
     transform-origin: center top;
+  }
+
+  .alma-theme .header__icons > :is(.doubly-wrapper, .doubly-float) .doubly-nice-select .list,
+  .alma-theme .header__icons > :is(.doubly-wrapper, .doubly-float) .doubly-nice-select .option {
+    color: var(--alma-ink) !important;
   }
 }
 
