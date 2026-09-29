@@ -1866,3 +1866,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: at the desktop breakpoint (990 px and wider), the utility row uses one 1.2rem gap, centered 4.4rem control boxes, no per-control outer margins, and a centered inline-flex Beast wrapper. The margin reset covers English and Arabic. Search's expanding width, dropdown placement, white currency text, hidden native select, header height and phone rules are preserved.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: reviewed responsive and RTL selector precedence and ran `git diff --check`. Browser connection returned `No browser is available`; visual alignment and expanded-search clearance in actual Mac/Windows browsers remain unverified.
+
+### 2026-09-29 - Tighten desktop Search-to-Cart spacing
+
+- Request: slightly reduce the gap between Search and Cart.
+- Changed: reduced that desktop gap by .4rem (1.2rem to .8rem) using a logical start margin on Cart, preserving the remaining utility gaps and mobile layout.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: desktop scope and RTL logical-margin review; `git diff --check`. Rendered browser verification remains unavailable.
