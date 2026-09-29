@@ -1873,3 +1873,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: reduced that desktop gap by .4rem (1.2rem to .8rem) using a logical start margin on Cart, preserving the remaining utility gaps and mobile layout.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: desktop scope and RTL logical-margin review; `git diff --check`. Rendered browser verification remains unavailable.
+
+### 2026-09-29 - Further reduce desktop Search-to-Cart spacing
+
+- Request: bring Search and Cart closer again.
+- Changed: increased the desktop Cart start offset from -.4rem to -.8rem, reducing the effective gap from .8rem to .4rem. Other utility gaps and phone styles are unchanged.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: reviewed the one-line desktop CSS change and ran `git diff --check`; rendered browser verification remains unavailable.

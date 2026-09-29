@@ -1629,7 +1629,7 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
   }
 
   html[dir] .alma-theme .header__icons > .header__icon--cart {
-    margin-inline-start: -.4rem !important;
+    margin-inline-start: -.8rem !important;
   }
 }
 
