@@ -1858,3 +1858,11 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: added an explicit `homepage_card` presentation to the lotion snippet and enabled it only in the homepage favourites section. This uses the same `alma-product` image, heading, rating, product-type, price and mobile snap styles as its neighbouring products. The lotion rail allows horizontal touch panning and pinch zoom; the special forced-stop rule is removed. Variant image/price/URL, one-card-per-scent selection, preferred 250 ml variants and Choose size links remain Shopify-driven. Catalog callers keep their existing presentation.
 - Files: `snippets/alma-lotion-variant-card.liquid`, `sections/alma-favourites.liquid`, `assets/alma-theme.css`, `README.md`.
 - Checks: scoped diff review, `git diff --check`, and Shopify Theme Check (no offenses in changed files; existing 970 Arabic translation errors and seven unrelated warnings). Browser connection again returned `No browser is available`, so rendered desktop/mobile appearance and real touch gestures cannot be claimed as verified in this session.
+
+### 2026-09-29 - Standardize desktop header utility spacing
+
+- Request: align Search, Cart, currency and AR | EN with consistent spacing on desktop and Mac.
+- Findings: Dawn's negative Cart margin combined with separate currency and language margins produced unequal gaps.
+- Changed: at the desktop breakpoint (990 px and wider), the utility row uses one 1.2rem gap, centered 4.4rem control boxes, no per-control outer margins, and a centered inline-flex Beast wrapper. The margin reset covers English and Arabic. Search's expanding width, dropdown placement, white currency text, hidden native select, header height and phone rules are preserved.
+- Files: `assets/alma-theme.css`, `README.md`.
+- Checks: reviewed responsive and RTL selector precedence and ran `git diff --check`. Browser connection returned `No browser is available`; visual alignment and expanded-search clearance in actual Mac/Windows browsers remain unverified.

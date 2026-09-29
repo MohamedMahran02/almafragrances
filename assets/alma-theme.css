@@ -1607,6 +1607,28 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
 }
 
 
+/* One spacing system for desktop utilities, including asynchronously inserted Beast controls. */
+@media screen and (min-width: 990px) {
+  .alma-theme .header__icons {
+    flex-wrap: nowrap;
+    align-items: center;
+    column-gap: 1.2rem;
+  }
+
+  html[dir] .alma-theme .header__icons > :is(.alma-header-search, .header__icon--cart, .alma-header-language, .doubly-wrapper, .doubly-float) {
+    flex-shrink: 0;
+    align-self: center;
+    height: 4.4rem;
+    margin: 0 !important;
+  }
+
+  .alma-theme .header__icons > :is(.doubly-wrapper, .doubly-float) {
+    display: inline-flex !important;
+    align-items: center;
+    padding: 0 !important;
+  }
+}
+
 /* Branded collection headings for All Products and individual collection pages. */
 .alma-collection-hero:not(.collection-hero--with-image) .collection-hero__inner { display: block; max-width: 92rem; padding-top: clamp(5rem, 8vw, 10rem); padding-bottom: clamp(3.5rem, 5vw, 6rem); text-align: center; }
 .alma-collection-hero .collection-hero__text-wrapper { width: 100%; }
