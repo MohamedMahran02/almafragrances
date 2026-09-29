@@ -1842,3 +1842,11 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: live Beast CSS behavior review, CSS selector review, and `git diff --check`.
 - Remaining work: confirm the published desktop selector caret shares the same center line as its flag, AED code, search, and cart icons.
+
+### 2026-09-29 - Inset and horizontally scroll mobile All Products tabs
+
+- Request: keep collection labels away from phone edges and scroll the mobile collection selector horizontally instead of moving the page vertically.
+- Changed: made the custom All Products container a block with border-box sizing so its width and padding apply reliably. Removed the mobile tab rail's negative margin and first-tab padding reset. Kept the row within the 2.4rem page inset; enabled horizontal touch panning and mapped vertical wheel movement over an overflowing mobile rail to horizontal movement, including RTL. Native horizontal wheel gestures and pinch zoom remain available.
+- Files: `assets/alma-theme.css`, `assets/alma-products-hub.js`, `README.md`. Collection data, template order, and desktop wheel behavior are preserved.
+- Checks: JavaScript syntax and Git whitespace checks passed. A Node execution harness verified mobile wheel movement, native horizontal gestures, zoom bypass, desktop bypass, no-overflow bypass, and RTL movement.
+- Limitation: Browser runtime returned `No browser is available`; rendered phone layout and touch-device verification remain unverified. No publication claim is based solely on the GitHub push.

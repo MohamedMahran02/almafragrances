@@ -5,6 +5,17 @@ if (!customElements.get('alma-products-hub')) {
       this.initialized = true;
       this.tabs = [...this.querySelectorAll('[data-alma-products-tab]')];
       this.panels = [...this.querySelectorAll('[data-alma-products-panel]')];
+      const tablist = this.querySelector('.alma-products-hub__tabs');
+      tablist?.addEventListener('wheel', (event) => {
+        if (!window.matchMedia('(max-width: 749px)').matches || event.ctrlKey) return;
+        if (tablist.scrollWidth <= tablist.clientWidth) return;
+        // Keep native horizontal trackpad scrolling; map vertical wheels to the rail.
+        if (Math.abs(event.deltaX) >= Math.abs(event.deltaY)) return;
+        event.preventDefault();
+        const unit = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? tablist.clientWidth : 1;
+        const direction = getComputedStyle(tablist).direction === 'rtl' ? -1 : 1;
+        tablist.scrollLeft += event.deltaY * unit * direction;
+      }, { passive: false });
       this.tabs.forEach((tab, index) => {
         tab.addEventListener('click', () => this.select(tab));
         tab.addEventListener('keydown', (event) => {
