@@ -1765,5 +1765,5 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
 }
 
 @media screen and (max-width: 749px) {
-  .alma-favourites__grid .alma-lotion-variant-card { scroll-snap-align: center; scroll-snap-stop: always; text-align: center; }
+  .alma-favourites__grid--lotions { touch-action: pan-x pinch-zoom; overscroll-behavior-x: contain; }
 }

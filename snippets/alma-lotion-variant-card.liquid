@@ -1,6 +1,6 @@
 {%- comment -%}
   Renders one Shopify product variant as a lotion card.
-  Accepts: product, variant, section_id, card_id, image_sizes, lazy_load, display_title, allow_quick_add, product_link_label, show_product_title, show_action.
+  Accepts: product, variant, section_id, card_id, image_sizes, lazy_load, display_title, allow_quick_add, product_link_label, show_product_title, show_action, homepage_card.
 {%- endcomment -%}
 {%- liquid
   assign lotion_variant_url = product.url | append: '?variant=' | append: variant.id
@@ -28,7 +28,18 @@
     assign show_lotion_action = false
   endif
 -%}
-<article class="alma-lotion-variant-card">
+<article class="{% if homepage_card %}alma-product{% else %}alma-lotion-variant-card{% endif %}">
+{%- if homepage_card -%}
+  <a class="alma-product__image-link" href="{{ lotion_variant_url }}">
+    {%- if lotion_variant_image != blank -%}
+      {{ lotion_variant_image | image_url: width: 1200 | image_tag: loading: lotion_loading, widths: '320, 480, 720, 960, 1200', sizes: lotion_image_sizes, class: 'alma-product__image', alt: lotion_variant_image.alt | default: lotion_variant_title }}
+    {%- endif -%}
+  </a>
+  <h3><a href="{{ lotion_variant_url }}">{{ lotion_variant_title | escape }}</a></h3>
+  {% render 'alma-static-rating', product: product %}
+  {%- if product.type != blank -%}<p class="alma-product__type">{{ product.type | escape }}</p>{%- endif -%}
+  {% render 'price', product: product, target_variant: variant %}
+{%- else -%}
   <a class="alma-lotion-variant-card__image-link" href="{{ lotion_variant_url }}">
     {%- if lotion_variant_image != blank -%}
       {{ lotion_variant_image | image_url: width: 1200 | image_tag: loading: lotion_loading, widths: '320, 480, 720, 960, 1200', sizes: lotion_image_sizes, class: 'alma-lotion-variant-card__image', alt: lotion_variant_image.alt | default: lotion_variant_title }}
@@ -42,6 +53,7 @@
     {% render 'alma-static-rating', product: product %}
     {% render 'price', product: product, target_variant: variant %}
   </div>
+{%- endif -%}
   {%- if show_lotion_action and use_lotion_quick_add -%}
     <product-form data-section-id="{{ section_id }}" class="alma-product__form">
       {%- form 'product', product, id: lotion_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}

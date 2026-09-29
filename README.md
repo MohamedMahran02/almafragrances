@@ -1850,3 +1850,11 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Files: `assets/alma-theme.css`, `assets/alma-products-hub.js`, `README.md`. Collection data, template order, and desktop wheel behavior are preserved.
 - Checks: JavaScript syntax and Git whitespace checks passed. A Node execution harness verified mobile wheel movement, native horizontal gestures, zoom bypass, desktop bypass, no-overflow bypass, and RTL movement.
 - Limitation: Browser runtime returned `No browser is available`; rendered phone layout and touch-device verification remain unverified. No publication claim is based solely on the GitHub push.
+
+### 2026-09-29 - Match homepage lotion cards to the product carousel
+
+- Request: repair the homepage Alma Lotions mobile scrolling and match its desktop/mobile cards to the other homepage products without changing catalog cards.
+- Findings: homepage lotions were rendering the catalog-specific card classes, including left-aligned desktop content and a different image/title/price spacing. A lotion-only `scroll-snap-stop: always` rule also forced every swipe to stop at each item.
+- Changed: added an explicit `homepage_card` presentation to the lotion snippet and enabled it only in the homepage favourites section. This uses the same `alma-product` image, heading, rating, product-type, price and mobile snap styles as its neighbouring products. The lotion rail allows horizontal touch panning and pinch zoom; the special forced-stop rule is removed. Variant image/price/URL, one-card-per-scent selection, preferred 250 ml variants and Choose size links remain Shopify-driven. Catalog callers keep their existing presentation.
+- Files: `snippets/alma-lotion-variant-card.liquid`, `sections/alma-favourites.liquid`, `assets/alma-theme.css`, `README.md`.
+- Checks: scoped diff review, `git diff --check`, and Shopify Theme Check (no offenses in changed files; existing 970 Arabic translation errors and seven unrelated warnings). Browser connection again returned `No browser is available`, so rendered desktop/mobile appearance and real touch gestures cannot be claimed as verified in this session.
