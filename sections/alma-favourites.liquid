@@ -101,8 +101,10 @@
                     {%- assign scent_name = scent_value.name | default: scent_value -%}
                     {%- assign scent_variant = blank -%}
                     {%- assign large_scent_variant = blank -%}
+                    {%- assign scent_variant_count = 0 -%}
                     {%- for variant in product.variants -%}
                       {%- if variant.option1 == scent_name -%}
+                        {%- assign scent_variant_count = scent_variant_count | plus: 1 -%}
                         {%- if scent_variant == blank or variant.available -%}
                           {%- assign scent_variant = variant -%}
                         {%- endif -%}
@@ -116,7 +118,9 @@
                     {%- endfor -%}
                     {%- if large_scent_variant != blank -%}{%- assign scent_variant = large_scent_variant -%}{%- endif -%}
                     {%- if scent_variant != blank -%}
-                      {% render 'alma-lotion-variant-card', product: product, variant: scent_variant, section_id: section.id, card_id: product_track_id, image_sizes: '(min-width: 990px) 25vw, 82vw', lazy_load: true, display_title: scent_name, allow_quick_add: false, product_link_label: 'Choose size', homepage_card: true %}
+                      {%- assign scent_quick_add = false -%}
+                      {%- if scent_variant_count == 1 -%}{%- assign scent_quick_add = true -%}{%- endif -%}
+                      {% render 'alma-lotion-variant-card', product: product, variant: scent_variant, section_id: section.id, card_id: product_track_id, image_sizes: '(min-width: 990px) 25vw, 82vw', lazy_load: true, display_title: scent_name, allow_quick_add: scent_quick_add, product_link_label: 'Choose size', homepage_card: true %}
                     {%- endif -%}
                   {%- endfor -%}
                 {%- endif -%}

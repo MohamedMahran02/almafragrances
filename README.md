@@ -1880,3 +1880,10 @@ Latest change: Admin translations are saved, the generated Privacy Policy is in 
 - Changed: increased the desktop Cart start offset from -.4rem to -.8rem, reducing the effective gap from .8rem to .4rem. Other utility gaps and phone styles are unchanged.
 - Files: `assets/alma-theme.css`, `README.md`.
 - Checks: reviewed the one-line desktop CSS change and ran `git diff --check`; rendered browser verification remains unavailable.
+
+### 2026-09-29 - Direct add for homepage lotions with one size
+
+- Request: give Alma hands and body lotion items without size choices a direct Add to cart action in the homepage Alma Lotions tab.
+- Changed: count Shopify variants for each displayed scent. A scent with exactly one variant uses the existing native product form to add that exact variant; unavailable variants show Sold out. Scents with multiple variants keep Choose size and their product-page link. Card styling and preferred 250 ml images remain unchanged.
+- Files: `sections/alma-favourites.liquid`, `README.md`.
+- Checks: reviewed the variant-count condition, exact variant form ID, availability guard and diff whitespace. Shopify Theme Check reports only the existing 970 Arabic translation errors and seven unrelated warnings, with no offenses in the modified section. Live cart interaction remains unverified without a browser connection.
