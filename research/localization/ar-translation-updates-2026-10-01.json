@@ -1,0 +1,2563 @@
+{
+  "shop": "4deffe-4.myshopify.com",
+  "locale": "ar",
+  "date": "2026-10-01",
+  "updates": [
+    {
+      "resourceId": "gid://shopify/Product/10831439298852",
+      "key": "title",
+      "source": "Fresh Vanilla",
+      "digest": "ceefbac748cf24c9e61a7aabae3698fb373aebbe03d9ba515a1f57122547e343",
+      "before": null,
+      "value": "فريش فانيلا"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831439298852",
+      "key": "body_html",
+      "source": "<p>Fresh, creamy and feminine. A bright everyday pairing where Luma meets the soft sweetness of Delice Vanilla.</p><p><strong>Included in this bundle</strong></p><ul>\n<li>Luma Perfume</li>\n<li>Delice Vanilla Perfume</li>\n</ul>",
+      "digest": "f02451c6339409065ff00a719f41fcfb658acb3e129d65faa9f62c72d1b66ac0",
+      "before": null,
+      "value": "<p dir=\"rtl\">مزيج منعش وكريمي بلمسة أنثوية. ثنائي مشرق لكل يوم يجمع لوما بحلاوة ديليس فانيلا الناعمة.</p>\n<p dir=\"rtl\"><strong>تتضمن المجموعة</strong></p>\n<ul dir=\"rtl\"><li>عطر لوما</li><li>عطر ديليس فانيلا</li></ul>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831439659300",
+      "key": "title",
+      "source": "Vanilla Leather",
+      "digest": "e3ef851d5e445873c76750dd1bcd8047353549e9954dc7ba4405b91c01daeb07",
+      "before": null,
+      "value": "فانيلا ليذر"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831439659300",
+      "key": "body_html",
+      "source": "<p>Warm leather softened with sweet, powdery vanilla. A confident scent ritual with a smooth, comforting finish.</p><p><strong>Included in this bundle</strong></p><ul>\n<li>Leather Luxe Perfume</li>\n<li>Delice Vanilla Perfume</li>\n</ul>",
+      "digest": "0e79d376575929a0fe90630827cc82a72b0b2a609a171d9a9ef8b8f3353ecb11",
+      "before": null,
+      "value": "<p dir=\"rtl\">نفحات جلد دافئة تلطفها الفانيلا الحلوة والبودرية. طقس عطري واثق بلمسة نهائية ناعمة ومريحة.</p>\n<p dir=\"rtl\"><strong>تتضمن المجموعة</strong></p>\n<ul dir=\"rtl\"><li>عطر ليذر لوكس</li><li>عطر ديليس فانيلا</li></ul>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831440118052",
+      "key": "title",
+      "source": "Vanilla Oud",
+      "digest": "eb5d05d8e901a2029cb83db57b860f86902227607d09e9e9147d4bd749249c20",
+      "before": null,
+      "value": "فانيلا عود"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831440118052",
+      "key": "body_html",
+      "source": "<p>Rich oud balanced with creamy vanilla. Deep, enveloping and made for an unforgettable trail.</p><p><strong>Included in this bundle</strong></p><ul>\n<li>Oud Intense Perfume</li>\n<li>Delice Vanilla Perfume</li>\n</ul>",
+      "digest": "f93ef22d03c098039d04ea7ad5fa40664402a3f4f015ad795826e0687ba333fc",
+      "before": null,
+      "value": "<p dir=\"rtl\">عود غني توازنه الفانيلا الكريمية. مزيج عميق يحتضنك ويترك أثراً لا يُنسى.</p>\n<p dir=\"rtl\"><strong>تتضمن المجموعة</strong></p>\n<ul dir=\"rtl\"><li>عطر عود إنتنس</li><li>عطر ديليس فانيلا</li></ul>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831440544036",
+      "key": "title",
+      "source": "Fresh Oud",
+      "digest": "05e7c3913d303a6fca5b1a743629dc74c07c0830942dcb06a5d75a249ecbba9f",
+      "before": null,
+      "value": "فريش عود"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831440544036",
+      "key": "body_html",
+      "source": "<p>Deep oud with a fresh, bright floral touch. A refined contrast for a polished signature scent.</p><p><strong>Included in this bundle</strong></p><ul>\n<li>Oud Intense Perfume</li>\n<li>Luma Perfume</li>\n</ul>",
+      "digest": "3f649b79e08fca9b260789ee5c626883156090583ade3ff863252c5dc1621199",
+      "before": null,
+      "value": "<p dir=\"rtl\">عود عميق بلمسة زهرية مشرقة ومنعشة. تناغم يجمع التباين والرقي ليمنحك عطراً مميزاً.</p>\n<p dir=\"rtl\"><strong>تتضمن المجموعة</strong></p>\n<ul dir=\"rtl\"><li>عطر عود إنتنس</li><li>عطر لوما</li></ul>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831441690916",
+      "key": "title",
+      "source": "Soft Alma",
+      "digest": "2eea858d52ac8517b2f82844a3972fc3e5af6d2464a0e02d84d2b4215bf5abb7",
+      "before": null,
+      "value": "سوفت ألما"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831441690916",
+      "key": "body_html",
+      "source": "<p>The ALMA signature with a softer vanilla finish. Familiar, warm and beautifully easy to wear.</p><p><strong>Included in this bundle</strong></p><ul>\n<li>Alma Perfume</li>\n<li>Delice Vanilla Perfume</li>\n</ul>",
+      "digest": "0de7f16831db14f86ded01d0739b0fb745069509b1c9bc80259b2e46d0cc5d1c",
+      "before": null,
+      "value": "<p dir=\"rtl\">بصمة ألما المميزة بلمسة فانيلا أكثر نعومة. مزيج مألوف ودافئ يسهل الاستمتاع به كل يوم.</p>\n<p dir=\"rtl\"><strong>تتضمن المجموعة</strong></p>\n<ul dir=\"rtl\"><li>عطر ألما</li><li>عطر ديليس فانيلا</li></ul>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831442706724",
+      "key": "title",
+      "source": "Leather & Oud",
+      "digest": "8c4dffb536ed23f9a6658ff18ee32582c0926e83355ab193440449047e4fa197",
+      "before": null,
+      "value": "ليذر آند عود"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831442706724",
+      "key": "body_html",
+      "source": "<p>Deep, warm and bold. Leather Luxe and Oud Intense create a powerful, lasting layering ritual.</p><p><strong>Included in this bundle</strong></p><ul>\n<li>Leather Luxe Perfume</li>\n<li>Oud Intense Perfume</li>\n</ul>",
+      "digest": "4e6f7e5afabccea50c183d7e867ddf17677f52836078a514096f86a704307887",
+      "before": null,
+      "value": "<p dir=\"rtl\">عميق ودافئ وجريء. يجمع ليذر لوكس وعود إنتنس في طقس لدمج العطور بحضور قوي وأثر يدوم.</p>\n<p dir=\"rtl\"><strong>تتضمن المجموعة</strong></p>\n<ul dir=\"rtl\"><li>عطر ليذر لوكس</li><li>عطر عود إنتنس</li></ul>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831443132708",
+      "key": "title",
+      "source": "Fresh Alma",
+      "digest": "2247c3965992d794c5f05aef8c7272b2bda1ca54e91060db651cf6765deee168",
+      "before": null,
+      "value": "فريش ألما"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831443132708",
+      "key": "body_html",
+      "source": "<p>Clean, fresh and easy to wear every day. The ALMA signature is lifted by Luma's bright floral character.</p><p><strong>Included in this bundle</strong></p><ul>\n<li>Alma Perfume</li>\n<li>Luma Perfume</li>\n</ul>",
+      "digest": "253b5baaa69086dc38ef8276947b928b7edda7e7941776d50f8283e70786c051",
+      "before": null,
+      "value": "<p dir=\"rtl\">نقي ومنعش ومناسب لكل يوم. تضيف نفحات لوما الزهرية المشرقة انتعاشاً إلى بصمة ألما المميزة.</p>\n<p dir=\"rtl\"><strong>تتضمن المجموعة</strong></p>\n<ul dir=\"rtl\"><li>عطر ألما</li><li>عطر لوما</li></ul>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831452078372",
+      "key": "title",
+      "source": "Soft Vanilla",
+      "digest": "9462f77d8dc41da3ce360c297a63279234cdab9221c7b3b59f17e29f4d2644e0",
+      "before": null,
+      "value": "سوفت فانيلا"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831452078372",
+      "key": "body_html",
+      "source": "<p>A soft, comforting vanilla ritual designed to leave skin and hair delicately scented. Layer the lotion, Mukhammaria and perfume for a creamy finish that stays close.</p><p><strong>Included in this bundle</strong></p><ul>\n<li>Delice Vanilla Lotion</li>\n<li>Delice Vanilla Mukhammaria</li>\n<li>Delice Vanilla Perfume</li>\n</ul>",
+      "digest": "01a97d9684178a65d5e6163a15a26e401891c0d9a1c05c670ec3228c9194262a",
+      "before": null,
+      "value": "<p dir=\"rtl\">طقس فانيلا ناعم ومريح يعطر البشرة والشعر برقة. ضعي اللوشن ثم المخمرية والعطر للحصول على لمسة كريمية قريبة من البشرة.</p>\n<p dir=\"rtl\"><strong>تتضمن المجموعة</strong></p>\n<ul dir=\"rtl\"><li>لوشن ديليس فانيلا</li><li>مخمرية ديليس فانيلا</li><li>عطر ديليس فانيلا</li></ul>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831452537124",
+      "key": "title",
+      "source": "Fresh & Feminine",
+      "digest": "e8512598b4b5b2fe591c77516dff1febbf493c7e65dd9111a55b1ed1e1c45d3a",
+      "before": null,
+      "value": "فريش آند فيمينين"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831452537124",
+      "key": "body_html",
+      "source": "<p>A luminous floral ritual with a smooth, feminine finish. Vanilla Bloom layers beautifully with Luma for a fresh scent that feels effortless from morning to night.</p><p><strong>Included in this bundle</strong></p><ul>\n<li>Vanilla Bloom Lotion</li>\n<li>Vanilla Bloom Mukhammaria</li>\n<li>Luma Perfume</li>\n</ul>",
+      "digest": "3dc16f043c2e43104ed4eedc30478196eac2faf7315aec010495ad05000fa1e0",
+      "before": null,
+      "value": "<p dir=\"rtl\">طقس زهري مشرق بلمسة أنثوية ناعمة. يتناغم فانيلا بلوم مع لوما ليمنحك رائحة منعشة ترافقك بسهولة من الصباح إلى المساء.</p>\n<p dir=\"rtl\"><strong>تتضمن المجموعة</strong></p>\n<ul dir=\"rtl\"><li>لوشن فانيلا بلوم</li><li>مخمرية فانيلا بلوم</li><li>عطر لوما</li></ul>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831452733732",
+      "key": "title",
+      "source": "Warm Arabia",
+      "digest": "278082fca86ebf4ff7b943eacc5216c772ceec685c42a789248af700740ba1dc",
+      "before": null,
+      "value": "وورم أرابيا"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831452733732",
+      "key": "body_html",
+      "source": "<p>A warm Arabian ritual with creamy skin care, rich Mukhammaria and intense oud. Made for a deep, elegant fragrance presence.</p><p><strong>Included in this bundle</strong></p><ul>\n<li>Arabia Lotion</li>\n<li>Arabia Mukhammaria</li>\n<li>Oud Intense Perfume</li>\n</ul>",
+      "digest": "c3b7149c5f5808cd62ef804103605ac17043e2789007d257152c4d43be8faafc",
+      "before": null,
+      "value": "<p dir=\"rtl\">طقس عربي دافئ يجمع العناية الكريمية بالبشرة والمخمرية الغنية والعود المكثف، لحضور عطري عميق وأنيق.</p>\n<p dir=\"rtl\"><strong>تتضمن المجموعة</strong></p>\n<ul dir=\"rtl\"><li>لوشن أرابيا</li><li>مخمرية أرابيا</li><li>عطر عود إنتنس</li></ul>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831469674788",
+      "key": "title",
+      "source": "Deep Oud",
+      "digest": "6da8d2c679120b592127d27064240f56c63f241433ebff021bd5ce35bb83aff6",
+      "before": null,
+      "value": "ديب عود"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831469674788",
+      "key": "body_html",
+      "source": "<p>A full oud ritual for those who love depth and longevity. Rich layers of oud create a warm, magnetic scent story.</p><p><strong>Included in this bundle</strong></p><ul>\n<li>Oud Lotion</li>\n<li>Oud Mukhammaria</li>\n<li>Oud Intense Perfume</li>\n</ul>",
+      "digest": "5d8b02706321ebf741a282fffcc4ffdf08fdd51dff78d6b9dd67271774e15d6f",
+      "before": null,
+      "value": "<p dir=\"rtl\">طقس عود متكامل لمحبي العمق والثبات. طبقات غنية من العود تنسج رائحة دافئة وآسرة.</p>\n<p dir=\"rtl\"><strong>تتضمن المجموعة</strong></p>\n<ul dir=\"rtl\"><li>لوشن عود</li><li>مخمرية عود</li><li>عطر عود إنتنس</li></ul>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831470002468",
+      "key": "title",
+      "source": "Leather Ritual",
+      "digest": "f255e97f5a96c1bc2186dc17c8f509fa61bc2443ceb8a9aa05ce86caf7929b22",
+      "before": null,
+      "value": "ليذر ريتوال"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831470002468",
+      "key": "body_html",
+      "source": "<p>A smooth, assertive leather ritual with a sophisticated finish. Build depth from skin care to perfume for a confident, lasting scent.</p><p><strong>Included in this bundle</strong></p><ul>\n<li>Leather Luxe Lotion</li>\n<li>Leather Luxe Mukhammaria</li>\n<li>Leather Luxe Perfume</li>\n</ul>",
+      "digest": "d1b2152e6dd1833ca302da8d7be4b7d9f51ad958bc785645c7b9284e68a1ee69",
+      "before": null,
+      "value": "<p dir=\"rtl\">طقس جلدي ناعم وواثق بلمسة راقية. ابنِي عمق الرائحة بدءاً من العناية بالبشرة وصولاً إلى العطر، لحضور مميز يدوم.</p>\n<p dir=\"rtl\"><strong>تتضمن المجموعة</strong></p>\n<ul dir=\"rtl\"><li>لوشن ليذر لوكس</li><li>مخمرية ليذر لوكس</li><li>عطر ليذر لوكس</li></ul>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831471345956",
+      "key": "title",
+      "source": "Rosy Oud",
+      "digest": "41365471c1fce72715d2edb14b7a887b01ce3cca49a9beef50b25f49b556d408",
+      "before": null,
+      "value": "روزي عود"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831471345956",
+      "key": "body_html",
+      "source": "<p>Soft floral sweetness meets the depth of oud. This layered ritual is romantic, warm and quietly unforgettable.</p><p><strong>Included in this bundle</strong></p><ul>\n<li>Vanilla Bloom Lotion</li>\n<li>Rose Noir Mukhammaria</li>\n<li>Oud Intense Perfume</li>\n</ul>",
+      "digest": "27956d8735b9528e1c3f8ee55a5ac6b6f711404e1b0811d7bf7ffe7f4e6ccb49",
+      "before": null,
+      "value": "<p dir=\"rtl\">تلتقي الحلاوة الزهرية الناعمة بعمق العود في طقس عطري رومانسي ودافئ يترك أثراً هادئاً لا يُنسى.</p>\n<p dir=\"rtl\"><strong>تتضمن المجموعة</strong></p>\n<ul dir=\"rtl\"><li>لوشن فانيلا بلوم</li><li>مخمرية روز نوار</li><li>عطر عود إنتنس</li></ul>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831483339044",
+      "key": "title",
+      "source": "Soft Signature",
+      "digest": "03bc768639c83438211a3ade73ced3f6e077841165ea3ce3b1ab1c6b5d059d78",
+      "before": null,
+      "value": "سوفت سيغنتشر"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831483339044",
+      "key": "body_html",
+      "source": "<p>A clean, comforting ritual built around soft sandalwood and the ALMA signature. Elegant, balanced and easy to return to every day.</p><p><strong>Included in this bundle</strong></p><ul>\n<li>Sandalwood Lotion</li>\n<li>Sandalwood Mukhammaria</li>\n<li>Alma Perfume</li>\n</ul>",
+      "digest": "5d2efa9922f2f85953cd4db4b0a63d296ed129d57d4ac7e2af3d28d09607c665",
+      "before": null,
+      "value": "<p dir=\"rtl\">طقس نقي ومريح يجمع خشب الصندل الناعم وبصمة ألما المميزة. أنيق ومتوازن، لتعودي إليه كل يوم.</p>\n<p dir=\"rtl\"><strong>تتضمن المجموعة</strong></p>\n<ul dir=\"rtl\"><li>لوشن صندل</li><li>مخمرية صندل</li><li>عطر ألما</li></ul>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831495692580",
+      "key": "title",
+      "source": "Creamy Fresh",
+      "digest": "21a155ccfca22c5e4611207256a1eaf78999d2727c0516c28bb90f4bf62696a6",
+      "before": null,
+      "value": "كريمي فريش"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831495692580",
+      "key": "body_html",
+      "source": "<p>Creamy vanilla and fresh florals come together for a soft, radiant scent ritual. A bright finish with a gentle sweetness.</p><p><strong>Included in this bundle</strong></p><ul>\n<li>Delice Vanilla Lotion</li>\n<li>Vanilla Bloom Mukhammaria</li>\n<li>Luma Perfume</li>\n</ul>",
+      "digest": "56036144f0ad9d8373b70f57f413370fd4ca7411aaaea5f28e16d46360b631fe",
+      "before": null,
+      "value": "<p dir=\"rtl\">تجتمع الفانيلا الكريمية والنفحات الزهرية المنعشة في طقس عطري ناعم ومشرق، بلمسة حلاوة رقيقة.</p>\n<p dir=\"rtl\"><strong>تتضمن المجموعة</strong></p>\n<ul dir=\"rtl\"><li>لوشن ديليس فانيلا</li><li>مخمرية فانيلا بلوم</li><li>عطر لوما</li></ul>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831504736548",
+      "key": "title",
+      "source": "Modern Oriental",
+      "digest": "f7bcbbf4dfe5787ec3b3d09182de8ec9661b668b7ba2dc663129002e17ccc994",
+      "before": null,
+      "value": "مودرن أورينتال"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831504736548",
+      "key": "body_html",
+      "source": "<p>A modern oriental ritual where soft sandalwood meets Arabia and the ALMA signature. Warm, refined and effortlessly distinctive.</p><p><strong>Included in this bundle</strong></p><ul>\n<li>Sandalwood Lotion</li>\n<li>Arabia Mukhammaria</li>\n<li>Alma Perfume</li>\n</ul>",
+      "digest": "7301dc822af9160ae7f8694530d57d3d4b71082a19069c5e3755babd7ce4257a",
+      "before": null,
+      "value": "<p dir=\"rtl\">طقس شرقي عصري يلتقي فيه خشب الصندل الناعم بأرابيا وبصمة ألما المميزة. دافئ وراقٍ ومتفرد ببساطة.</p>\n<p dir=\"rtl\"><strong>تتضمن المجموعة</strong></p>\n<ul dir=\"rtl\"><li>لوشن صندل</li><li>مخمرية أرابيا</li><li>عطر ألما</li></ul>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831510929700",
+      "key": "title",
+      "source": "Sweet & Bold",
+      "digest": "18c202c17c17eeaf53af51cec6d0f6e624ec369e03f13aba852fb730894e2320",
+      "before": null,
+      "value": "سويت آند بولد"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10831510929700",
+      "key": "body_html",
+      "source": "<p>A sweet, bold ritual that layers creamy Delice Vanilla with the depth of Leather Luxe. Comforting, confident and long-lasting.</p><p><strong>Included in this bundle</strong></p><ul>\n<li>Delice Vanilla Lotion</li>\n<li>Delice Vanilla Mukhammaria</li>\n<li>Leather Luxe Perfume</li>\n</ul>",
+      "digest": "de4890b4c266ad09479d4da3a35d95838e680a62344d6a968773d3b0faad2514",
+      "before": null,
+      "value": "<p dir=\"rtl\">طقس حلو وجريء يجمع ديليس فانيلا الكريمية بعمق ليذر لوكس. مزيج مريح وواثق يدوم طويلاً.</p>\n<p dir=\"rtl\"><strong>تتضمن المجموعة</strong></p>\n<ul dir=\"rtl\"><li>لوشن ديليس فانيلا</li><li>مخمرية ديليس فانيلا</li><li>عطر ليذر لوكس</li></ul>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/15353558204708",
+      "key": "title",
+      "source": "Rose Noir",
+      "digest": "57731f78df707f043ccdcddd0d912b2aee4285e34725eddf3e90997a10a34819",
+      "before": null,
+      "value": "روز نوار"
+    },
+    {
+      "resourceId": "gid://shopify/Product/15353558204708",
+      "key": "body_html",
+      "source": "<p>Rose Noir is a warm, elegant solid perfume designed for hair and skin.</p>\n<p>Notes: Sandalwood, White Musk, Dark Caramel</p>\n<p>Size: 25g</p>\n<p>A smooth blend of creamy sandalwood and clean white musk, deepened by rich dark caramel. It settles into a soft, comforting scent with a warm, addictive finish. Perfect for layering or wearing alone.</p>",
+      "digest": "35a65e44ed292326748cdde4f7223aaa71db14608193ae588d8893be16e3355a",
+      "before": null,
+      "value": "<p dir=\"rtl\">روز نوار عطر صلب دافئ وأنيق مصمم للشعر والبشرة.</p>\n<p dir=\"rtl\">مزيج ناعم من خشب الصندل الكريمي والمسك الأبيض النقي، تعمّقه لمسات الكراميل الداكن الغني. يستقر على رائحة ناعمة ومريحة بلمسة دافئة وآسرة. مثالي بمفرده أو لدمجه مع عطورك المفضلة.</p>\n<p dir=\"rtl\">النفحات: خشب الصندل، المسك الأبيض، الكراميل الداكن.</p>\n<p dir=\"rtl\">الحجم: 25 جم</p>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/15356231123236",
+      "key": "title",
+      "source": "Dukhoon Gift",
+      "digest": "6e3a2f0444417db23876f2fe79551278ae97dedd32f13efeec6fca60e3b7131e",
+      "before": null,
+      "value": "هدية الدخون"
+    },
+    {
+      "resourceId": "gid://shopify/Product/15356235677988",
+      "key": "title",
+      "source": "Perfume and Dukhoon Set",
+      "digest": "24f193a4b8f47c8c602d362950ae091a8b237f4a7d95d3eb5e624c89ff5e0e40",
+      "before": null,
+      "value": "مجموعة العطر والدخون"
+    },
+    {
+      "resourceId": "gid://shopify/Product/15356235677988",
+      "key": "body_html",
+      "source": "<p>Perfume Size: 15ml<br><br></p>",
+      "digest": "9a63099f8c371c638a91cd115706b2acb5d9b483e208e30f167b90da46176040",
+      "before": null,
+      "value": "<p dir=\"rtl\">حجم العطر: 15 مل</p>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/15356253077796",
+      "key": "title",
+      "source": "Solid Pouch",
+      "digest": "4942b15ca4201ea35a88e973e1fd1867810214c647e3a57a34afae82cc31c541",
+      "before": null,
+      "value": "حقيبة العطر الصلب"
+    },
+    {
+      "resourceId": "gid://shopify/Product/15356253077796",
+      "key": "body_html",
+      "source": "<p>Choose Your Solid Perfume Scent </p>",
+      "digest": "44d3a25c395106928948886239a0ee6a7cf836a072fb99ba92ac1d8e2d0de7ca",
+      "before": null,
+      "value": "<p dir=\"rtl\">اختاري رائحة عطرك الصلب.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/15356257665316",
+      "key": "title",
+      "source": "Perfume Gift",
+      "digest": "8594373865c2035734007ccd3a2496b503141e5f16083bdf0c9361fdf5bc0d9b",
+      "before": null,
+      "value": "هدية العطر"
+    },
+    {
+      "resourceId": "gid://shopify/Product/15356257665316",
+      "key": "body_html",
+      "source": "<p>Size: 15ml</p>",
+      "digest": "8a2ee6104e48ed8e0789f8d0869ac47a86a20f1253d8704e6f2a2c3cbf9c73ce",
+      "before": null,
+      "value": "<p dir=\"rtl\">الحجم: 15 مل</p>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/9075878166820",
+      "key": "title",
+      "source": "Alma Vanilla Bloom",
+      "digest": "d42d263bd450c6f4625b81bb8014c4222381edec19734c9f5cea0a1cdb95a0ed",
+      "before": {
+        "key": "title",
+        "value": "زهرة الفانيليا ألما",
+        "outdated": false
+      },
+      "value": "ألما فانيلا بلوم"
+    },
+    {
+      "resourceId": "gid://shopify/Product/9075878166820",
+      "key": "body_html",
+      "source": "<p><span>Vanilla Bloom is made with vanilla and delicate rare floral notes, harmoniously fused with musk, offering a lasting sensation of pure bliss.</span><br></p>\n<p><span><strong>Notes: </strong>Vanilla, Rare florals, White Musk.<br><br><strong>Size:</strong> 25g</span></p>\n<p><span>يتكون عطر الفانيلا بلوم من الفانيلا و نفحات الأزهار النادرة الرقيقة ، يندمج بشكل متناغم مع المسك </span></p>\n<p><span>احساس بالنعيم الخالص</span></p>\n<p><span>يحتوي على : الفانيلا ، الزهور النادرة ، المسك الابيض</span></p>\n<p><span>الحجم : ٢٥ جرام</span></p>",
+      "digest": "7ff93b72574fcc4a6b5a10199da3c9f9f366d21e7c648f31546efccc6a20db30",
+      "before": {
+        "key": "body_html",
+        "value": "<p style=\";text-align:right;direction:rtl\"> <span data-mce-fragment=\"1\">يتكون عطر Vanilla Bloom من الفانيليا والروائح الزهرية النادرة الرقيقة، والتي تمتزج بشكل متناغم مع المسك، مما يوفر إحساسًا دائمًا بالنعيم الخالص.</span><br></p>\n\n<p style=\";text-align:right;direction:rtl\"> <span data-mce-fragment=\"1\"><strong>يحتوي على:</strong> الفانيليا، الزهور النادرة، المسك الأبيض<br> <strong data-mce-fragment=\"1\">الحجم:</strong> 25 جرام</span></p>\n\n <p style=\";text-align:right;direction:rtl\"><span data-mce-fragment=\"1\">يتكون عطر الفانيلا بلوم من الفانيلا و نفحات بخارية بخارية ، يندمج بشكل متناغم مع المسك</span></p>\n\n<p style=\";text-align:right;direction:rtl\"> <span data-mce-fragment=\"1\">احساس بالنعيم الخالص</span></p>\n\n<p style=\";text-align:right;direction:rtl\"> <span data-mce-fragment=\"1\">يحتوي على : الفانيلا ، زهور النبات ، المسك الأبيض﻿</span></p>\n\n<p style=\";text-align:right;direction:rtl\"><span data-mce-fragment=\"1\">الحجم : ٢٥ جرام</span></p>",
+        "outdated": true
+      },
+      "value": "<p dir=\"rtl\">يجمع فانيلا بلوم بين الفانيلا ونفحات زهرية نادرة ورقيقة، تتناغم مع المسك لتمنحك إحساساً بالنعيم يدوم.</p>\n<p dir=\"rtl\">النفحات: الفانيلا، أزهار نادرة، المسك الأبيض.</p>\n<p dir=\"rtl\">الحجم: 25 جم</p>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/9076154859812",
+      "key": "title",
+      "source": "Alma Arabia",
+      "digest": "caae82b295344f5d2f975230ffc7273ce31e49ea0ad0997d15c08b9d979df24b",
+      "before": {
+        "key": "title",
+        "value": "ألما العربية",
+        "outdated": false
+      },
+      "value": "ألما أرابيا"
+    },
+    {
+      "resourceId": "gid://shopify/Product/9076154859812",
+      "key": "product_type",
+      "source": "Makhmaria",
+      "digest": "2b56879915f6cf7a4e6db34f8a1eea048741025063dc26cc6db3179ec8da3887",
+      "before": {
+        "key": "product_type",
+        "value": "مخمرة",
+        "outdated": false
+      },
+      "value": "مخمرية"
+    },
+    {
+      "resourceId": "gid://shopify/Product/9076154859812",
+      "key": "body_html",
+      "source": "<p>Arabia scent is infused with saffron, oud, and white musk, for an irresistible fragrance that radiates sophistication and allure.</p>\n<p><strong><span>Notes: </span></strong><span>Saffron</span><span>, Oud, White Musk</span></p>\n<p><br><strong>Size:</strong><span> 25g</span> </p>\n<p>رائحة عربية مليئة بالزعفران و العود و المسك الابيض </p>\n<p>عطر لا يقاوم يشع بالرقي و الجاذبية</p>\n<p>يحتوي على : الزعفران ، العود ، المسك الابيض</p>\n<p>الحجم: ٢٥ جرام</p>",
+      "digest": "b9f95874d822bbf3a15e5fbcc604fee1a95d89a7417648e2d0856c2d9315c5a9",
+      "before": {
+        "key": "body_html",
+        "value": "<p style=\";text-align:right;direction:rtl\"> عطر عربي ممزوج بالزعفران والعود والمسك الأبيض، للحصول على عطر لا يقاوم يشع بالرقي والجاذبية.</p>\n\n<p style=\";text-align:right;direction:rtl\"> <strong>يتضمن:<span> </span></strong><span>الزعفران</span> <span>والعود والمسك الأبيض</span><br> <strong data-mce-fragment=\"1\">الحجم:</strong> <span>25 جرام</span></p>\n\n <p style=\";text-align:right;direction:rtl\">عطر عربية مليئة بالزعفران و العود و المسك الابيض</p>\n\n<p style=\";text-align:right;direction:rtl\"> عطر لا يقاوم يشع بالرقي و الجاذبية</p>\n\n<p style=\";text-align:right;direction:rtl\"> يحتوي على : الزعفران ، العود ، المسك الابيض</p>\n\n<p style=\";text-align:right;direction:rtl\"> الحجم: ٢٥ جرام</p>",
+        "outdated": true
+      },
+      "value": "<p dir=\"rtl\">تمتزج في أرابيا نفحات الزعفران والعود والمسك الأبيض لتمنحك عطراً لا يقاوم يشع بالرقي والجاذبية.</p>\n<p dir=\"rtl\">النفحات: الزعفران، العود، المسك الأبيض.</p>\n<p dir=\"rtl\">الحجم: 25 جم</p>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/9923658547492",
+      "key": "body_html",
+      "source": "<p dir=\"rtl\"><span>هذا هو العطر اللي الكل يرجع له. الزعفران مع البخور في تركيبة أنيقة وثابتة تدوم لساعات طويلة.</span></p>\n<p dir=\"rtl\"><span>اكتشفي سرّه اليوم..</span></p>\n<p dir=\"rtl\"><span>الحجم : ٥٠ مل. </span></p>\n<p><span>Our Best Seller. A rich blend of saffron and bahur that leaves a warm, luxurious trail and lasts all day. Once you try it, it becomes your signature scent.</span></p>\n<p><span>Add it to your collection today.</span></p>\n<p><span>Notes: Saffron, Bakhoor</span></p>\n<p><span>size : 50 ml.</span></p>",
+      "digest": "dcd18e603d8ac51579274bd4118c3bf6b25bb44d9d30835e7a3cee76216d0622",
+      "before": {
+        "key": "body_html",
+        "value": "<p dir=\"rtl\"><span>هذا هو عطرنا الأكثر مبيعاً. مزيج غني من الزعفران والبخور يترك أثراً دافئاً وفاخراً ويدوم طوال اليوم. بمجرد تجربته، سيصبح عطرك المفضل.</span></p>\n<p dir=\"rtl\"><span>أضيفيه إلى مجموعتك اليوم.</span></p>\n<p dir=\"rtl\"><span>الحجم: 50 مل.</span></p>",
+        "outdated": true
+      },
+      "value": "<p dir=\"rtl\">عطرنا الأكثر مبيعاً. مزيج غني من الزعفران والبخور يترك أثراً دافئاً وفاخراً يدوم طوال اليوم. بمجرد تجربته، يصبح بصمتك العطرية.</p>\n<p dir=\"rtl\">أضيفيه إلى مجموعتك اليوم.</p>\n<p dir=\"rtl\">النفحات: الزعفران، البخور.</p>\n<p dir=\"rtl\">الحجم: 50 مل</p>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10033785831716",
+      "key": "body_html",
+      "source": "<p dir=\"rtl\" style=\"text-align: left;\"> <span>Luxury in a bottle. Leather Locks (50ml) now comes in a spray—leather and tobacco perfection<br><br><strong>Notes:</strong> Leather, Tobacco<br><br><strong>Size:</strong> 50ml</span></p>\n<p dir=\"rtl\"><span>رُقي وفخامة. عطر ليذر لوكس بحجم 50 مل برائحة الجلد والتبغ متوفر الآن !</span></p>",
+      "digest": "560f9468789a96301a366a929254041abe3abb0748eb0e08cbe61c2c6f0c808f",
+      "before": {
+        "key": "body_html",
+        "value": "<p dir=\"rtl\"> <span>فخامة في زجاجة. ليذر لوكس (50 مل) يأتي الآن بعبوة بخاخ—مزيج مثالي من الجلد والتبغ.</span></p>\n<p dir=\"rtl\"><span>رُقي وفخامة. عطر ليذر لوكس بحجم 50 مل برائحة الجلد والتبغ متوفر الآن !</span></p>",
+        "outdated": true
+      },
+      "value": "<p dir=\"rtl\">فخامة في زجاجة. يأتي ليذر لوكس الآن بعطر بخاخ يجمع الجلد والتبغ في تناغم راقٍ.</p>\n<p dir=\"rtl\">النفحات: الجلد، التبغ.</p>\n<p dir=\"rtl\">الحجم: 50 مل</p>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10071723671844",
+      "key": "title",
+      "source": "Delice Vanilla perfume",
+      "digest": "41d353d130b98d831829f43ea652de82dc9e26b7bde5bbf03a47cbc2a806645d",
+      "before": {
+        "key": "title",
+        "value": "عطر لولو فانيلا",
+        "outdated": true
+      },
+      "value": "عطر ديليس فانيلا"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10071723671844",
+      "key": "body_html",
+      "source": "<p><span>Soft, powdery, and effortlessly elegant. Lolo Vanilla blends fresh floral notes with warm white musk and creamy vanilla for a scent that’s gentle, comforting, and long-lasting.</span></p>\n<p> </p>\n<p><span>Notes: Powder, Floral, White Musk, Vanilla</span></p>\n<p><span>#SmellLikeAlma</span></p>",
+      "digest": "3c157a82a98d80cce08079b8fc42d0332be8ed384c7d258a1c339de84669404a",
+      "before": {
+        "key": "body_html",
+        "value": "<p><span>ناعم، بودري، وأنيق بكل سلاسة. يمزج \"لولو فانيلا\" بين النفحات الزهرية المنعشة والمسك الأبيض الدافئ والفانيليا الكريمية، ليمنحك عطراً رقيقاً ومريحاً يدوم طويلاً.</span></p>\n<p> </p>\n<p><span>النفحات: بودرة، زهور، مسك أبيض، فانيليا</span></p>\n<p><span>#تألقي_مع_ألما</span></p>",
+        "outdated": false
+      },
+      "value": "<p dir=\"rtl\">ناعم وبودري وأنيق ببساطة. يمزج ديليس فانيلا النفحات الزهرية المنعشة بالمسك الأبيض الدافئ والفانيلا الكريمية، ليمنحك عطراً رقيقاً ومريحاً يدوم طويلاً.</p>\n<p dir=\"rtl\">النفحات: البودرة، الأزهار، المسك الأبيض، الفانيلا.</p>\n<p dir=\"rtl\">#SmellLikeAlma</p>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10072279810340",
+      "key": "body_html",
+      "source": "<p><span>Your skin’s new pocket-sized bestie! Our Hand &amp; Body Lotion is perfect for on-the-go hydration—soft, smooth, and never sticky. Glow wherever you go.</span></p>",
+      "digest": "d6ad9a8a72b9665f0993b3c322a1a26a42539b1be460db2de1c1e7fc72a12c78",
+      "before": {
+        "key": "body_html",
+        "value": "<p><span>رفيق بشرتك الجديد بحجم الجيب! لوشن اليدين والجسم مثالي للترطيب أثناء التنقل—بشرة ناعمة وملساء، وغير لزجة أبداً. تألقي أينما ذهبتِ.</span></p>\n<p><span>العبوة الواحدة: 90 جرام.</span></p>",
+        "outdated": true
+      },
+      "value": "<p dir=\"rtl\">رفيق بشرتك الجديد بحجم الجيب! لوشن اليدين والجسم مثالي للترطيب أثناء التنقل، لبشرة ناعمة وملساء دون إحساس لزج. تألقي أينما ذهبتِ.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10074335281444",
+      "key": "title",
+      "source": "Delice Vanilla",
+      "digest": "9b3da09a1e53886a77eee5c363b960645e4c03e270e4b4e34e3c77fe41635a6c",
+      "before": {
+        "key": "title",
+        "value": "لولو فانيلا",
+        "outdated": true
+      },
+      "value": "ديليس فانيلا"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10074335281444",
+      "key": "body_html",
+      "source": "<p><span>A soft, feminine scent designed for hair and skin.</span></p>\n<p><span>Notes: Vanilla, soft fruity floral notes, white musk, powder</span></p>\n<p><span>Size: 25g</span></p>\n<p><span>A delicate blend of creamy vanilla, soft fruit florals, and powdery musk that creates a smooth, comforting fragrance with a gentle sweetness. Perfect for layering or wearing alone.</span></p>\n<p dir=\"rtl\"><span>عطر ناعم وأنثوي مصمم للشعر والبشرة.</span></p>\n<p dir=\"rtl\"><span>النوتات: فانيلا، نفحات فاكهية زهرية ناعمة، مسك أبيض، بودرة</span></p>\n<p dir=\"rtl\"><span>الحجم: 25 جم</span></p>\n<p dir=\"rtl\"><span>مزيج ناعم من الفانيلا الكريمية مع لمسات فاكهية زهرية خفيفة ومسكية بودرية، يمنحك رائحة دافئة وناعمة. مثالي لوحده أو مع التدرج بالعطور</span></p>\n<p><span> </span></p>",
+      "digest": "60614e2e7e5b19bf76d2647684dde5d1c71adcdc3082037e9a4aa61a440d3afe",
+      "before": {
+        "key": "body_html",
+        "value": "<p><span>A soft, feminine scent designed for hair and skin.</span></p>\n<p><span>Notes: Vanilla, soft fruity floral notes, white musk, powder</span></p>\n<p><span>Size: 25g</span></p>\n<p><span>A delicate blend of creamy vanilla, soft fruit florals, and powdery musk that creates a smooth, comforting fragrance with a gentle sweetness. Perfect for layering or wearing alone.</span></p>\n<p dir=\"rtl\"><span>عطر ناعم وأنثوي مصمم للشعر والبشرة.</span></p>\n<p dir=\"rtl\"><span>النوتات: فانيلا، نفحات فاكهية زهرية ناعمة، مسك أبيض، بودرة</span></p>\n<p dir=\"rtl\"><span>الحجم: 25 جم</span></p>\n<p dir=\"rtl\"><span>مزيج رقيق من الفانيلا الكريمية، ونفحات الفواكه الزهرية الناعمة، والمسك البودري، مما يخلق عطراً انسيابياً ومريحاً بحلاوة لطيفة. مثالي للاستخدام الطبقي أو بمفرده.</span></p>\n<p><span> </span></p>",
+        "outdated": false
+      },
+      "value": "<p dir=\"rtl\">عطر ناعم وأنثوي مصمم للشعر والبشرة.</p>\n<p dir=\"rtl\">مزيج رقيق من الفانيلا الكريمية والنفحات الفاكهية الزهرية الناعمة والمسك البودري، يمنحك رائحة ناعمة ومريحة بحلاوة خفيفة. مثالي بمفرده أو لدمجه مع عطورك المفضلة.</p>\n<p dir=\"rtl\">النفحات: الفانيلا، نفحات فاكهية زهرية ناعمة، المسك الأبيض، البودرة.</p>\n<p dir=\"rtl\">الحجم: 25 جم</p>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10334614421796",
+      "key": "body_html",
+      "source": "<p><span>Fragrance Notes</span></p>\n<p><span>Top: Fresh citrus</span></p>\n<p><span>Heart: Soft white florals</span></p>\n<p><span>Base: Clean musk with a touch of vanilla</span></p>\n<p><span>Scent Style: Fresh • Soft • Warm • Summery</span></p>\n<p><span>size : 50 ml </span></p>",
+      "digest": "aba4fbcbbb0dcf0ba7665ea5b1e8daf33d83d7ed669de1491849b2cf8514f477",
+      "before": {
+        "key": "body_html",
+        "value": "<p> </p>\n<p><span>مكونات العطر</span></p>\n<p><span>القمة: حمضيات منعشة</span></p>\n<p><span>القلب: زهور بيضاء ناعمة</span></p>\n<p><span>القاعدة: مسك نظيف مع لمسة من الفانيليا</span></p>\n<p><span>نمط العطر: منعش • ناعم • دافئ • صيفي</span></p>\n<p><span>الحجم: 50 مل </span></p>",
+        "outdated": true
+      },
+      "value": "<p dir=\"rtl\">النفحات:</p>\n<p dir=\"rtl\">مقدمة العطر: حمضيات منعشة.</p>\n<p dir=\"rtl\">قلب العطر: أزهار بيضاء ناعمة.</p>\n<p dir=\"rtl\">قاعدة العطر: مسك نقي بلمسة من الفانيلا.</p>\n<p dir=\"rtl\">طابع العطر: منعش • ناعم • دافئ • صيفي.</p>\n<p dir=\"rtl\">الحجم: 50 مل</p>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10407602258212",
+      "key": "title",
+      "source": "Alma Dukhoon",
+      "digest": "2be6b7e3ec8a55b675943ee61be86fe6d15bccb2eae05152f344e7dcf415a475",
+      "before": {
+        "key": "title",
+        "value": "ألمى دخن",
+        "outdated": true
+      },
+      "value": "دخون ألما"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10407602258212",
+      "key": "body_html",
+      "source": "<p>دخون Alma</p>\n<p>فخامة تُحس قبل أن تُوصف<br>تركيبة غنية ومُشبّعة بأرقى الزيوت العطرية، تنبعث منها رائحة عميقة، دافئة وآسرة تدوم طويلًا<br>لمسة واحدة تكفي لتترك حضورًا أنيقًا لا يُنسى</p>\n<p>Alma Dukhoon… luxury you feel before it’s described.<br>A rich, oil-infused blend crafted to release a deep, warm, captivating scent that lingers beautifully.<br>One touch is enough to leave a lasting, elegant impression.</p>",
+      "digest": "85578a64fd63ef002464ef6d5ffe790841ce2ac67ca0b7f497be37f1c4638faa",
+      "before": {
+        "key": "body_html",
+        "value": "<p>دخون Alma</p>\n<p>فخامة تُحس قبل أن تُوصف<br>تركيبة غنية ومُشبّعة بأرقى الزيوت العطرية، تنبعث منها رائحة عميقة، دافئة وآسرة تدوم طويلًا<br>لمسة واحدة تكفي لتترك حضورًا أنيقًا لا يُنسى</p>\n<p>دخون Alma... فخامة تُحس قبل أن تُوصف.<br>تركيبة غنية ومُشبّعة بأرقى الزيوت العطرية، تنبعث منها رائحة عميقة، دافئة وآسرة تدوم طويلًا.<br>لمسة واحدة تكفي لتترك أثرًا أنيقًا لا يُنسى.</p>",
+        "outdated": true
+      },
+      "value": "<p dir=\"rtl\">دخون ألما… فخامة تُحس قبل أن تُوصف.</p>\n<p dir=\"rtl\">تركيبة غنية ومشبّعة بأرقى الزيوت العطرية، تنبعث منها رائحة عميقة ودافئة وآسرة تدوم طويلاً.</p>\n<p dir=\"rtl\">لمسة واحدة تكفي لتترك حضوراً أنيقاً لا يُنسى.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/9075744211236",
+      "key": "body_html",
+      "source": "<p>(Mix &amp; Match Box – 3 x 10g Jars)<br><span></span></p>\n<p><span>Not sure which scent to choose? Try them all.</span></p>\n<p><span>The Alma Mix &amp; Match Box lets you pick 3 of your favorite solid perfumes in 10g mini jars. Create your own combination and explore different moods and scents.</span></p>\n<p><span>Perfect for discovering your signature scent or gifting someone special.</span></p>\n<p> </p>\n<p style=\"text-align: right;\"><span>بوكس ميكس آند ماتش )– 3 × 10 جم)</span></p>\n<p dir=\"rtl\"><span>مش عارفة تختاري أي عطر؟ جرّبيهم كلهم.</span></p>\n<p dir=\"rtl\"><span>بوكس ألما ميكس آند ماتش يتيح لك اختيار 3 من عطورك المفضلة في عبوات صغيرة 10 جم. اخلطي بين الروائح واكتشفي تركيبتك الخاصة.</span></p>\n<p dir=\"rtl\"><span>مثالي لاكتشاف عطرك المميز أو كهدية مميزة.</span></p>",
+      "digest": "3bcaeb20a65e8fed87226134464d60027b6c53794296b9ddb2d94f7fafb974f0",
+      "before": {
+        "key": "body_html",
+        "value": "<p>(Mix &amp; Match Box – 3 x 10g Jars)<br><span></span></p>\n<p><span>Not sure which scent to choose? Try them all.</span></p>\n<p><span>The Alma Mix &amp; Match Box lets you pick 3 of your favorite solid perfumes in 10g mini jars. Create your own combination and explore different moods and scents.</span></p>\n<p><span>Perfect for discovering your signature scent or gifting someone special.</span></p>\n<p> </p>\n<p style=\"text-align: right;\"><span>بوكس ميكس آند ماتش (3 × 10 جم)</span></p>\n<p dir=\"rtl\"><span>محتارة في اختيار العطر المناسب؟ جربيهم كلهم.</span></p>\n<p dir=\"rtl\"><span>يمنحك بوكس \"ألما\" ميكس آند ماتش حرية اختيار 3 من عطورك الصلبة المفضلة في عبوات صغيرة سعة 10 جم. اصنعي تشكيلتك الخاصة واكتشفي أمزجة وروائح متنوعة.</span></p>\n<p dir=\"rtl\"><span>مثالي لاكتشاف عطرك المميز أو لتقديمه كهدية لشخص عزيز.</span></p>",
+        "outdated": false
+      },
+      "value": "<p dir=\"rtl\">صندوق ميكس آند ماتش — 3 عبوات × 10 جم.</p>\n<p dir=\"rtl\">لستِ متأكدة من العطر الذي تختارينه؟ جرّبي روائح مختلفة.</p>\n<p dir=\"rtl\">يتيح لك صندوق ألما ميكس آند ماتش اختيار 3 من عطورك الصلبة المفضلة في عبوات مصغرة بحجم 10 جم. ابتكري توليفتك الخاصة واكتشفي روائح تناسب مختلف حالاتك ومزاجك.</p>\n<p dir=\"rtl\">مثالي لاكتشاف بصمتك العطرية أو لإهدائه لشخص مميز.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10033863262500",
+      "key": "body_html",
+      "source": "<p class=\"p1\"><span class=\"s1\">Alma Match – The Perfect Pair</span></p>\n<p class=\"p1\"><span class=\"s2\">Enhance your fragrance routine with </span><span class=\"s1\">Alma Match</span><span class=\"s2\">, a perfectly paired </span><span class=\"s1\">solid perfume and body lotion</span><span class=\"s2\"> for a long-lasting scent. Layer them together for an elevated experience that stays with you all day.</span><span class=\"s2\"></span></p>\n<p class=\"p1\"><span class=\"s1\">ألما ماتش – الثنائي المثالي</span></p>\n<p class=\"p1\"><span class=\"s2\">ارتقِ بروتين عطرك مع </span><span class=\"s1\">ألما ماتش</span><span class=\"s2\">، الثنائي المثالي من </span><span class=\"s1\">العطر الصلب ولوشن الجسم</span><span class=\"s2\"> لرائحة تدوم طويلاً. استخدمهما معًا لتجربة عطرية تدوم طوال اليوم.</span></p>",
+      "digest": "997f6ce65ebf4ae1d78a87e8cd4338e3c24ce3c85e1af9202ddfcedd68fce835",
+      "before": {
+        "key": "body_html",
+        "value": "<p class=\"p1\"><span class=\"s1\">Alma Match – The Perfect Pair</span></p>\n<p class=\"p1\"><span class=\"s2\">Enhance your fragrance routine with </span><span class=\"s1\">Alma Match</span><span class=\"s2\">, a perfectly paired </span><span class=\"s1\">solid perfume and body lotion</span><span class=\"s2\"> for a long-lasting scent. Layer them together for an elevated experience that stays with you all day.</span><span class=\"s2\"></span></p>\n<p class=\"p1\"><span class=\"s1\">ألما ماتش – الثنائي المثالي</span></p>\n<p class=\"p1\"><span class=\"s2\">ارتقِ بروتين تعطيرك مع </span><span class=\"s1\">ألما ماتش</span><span class=\"s2\">، الثنائي المثالي المكون من </span><span class=\"s1\">عطر صلب ولوشن للجسم</span><span class=\"s2\"> لرائحة تدوم طويلاً. استخدمهما معًا لتجربة أرقى تدوم معك طوال اليوم.</span></p>",
+        "outdated": false
+      },
+      "value": "<p dir=\"rtl\">ألما ماتش — الثنائي المثالي.</p>\n<p dir=\"rtl\">ارتقي بروتين عطرك مع ألما ماتش، ثنائي متناغم من العطر الصلب ولوشن الجسم لرائحة تدوم طويلاً. استخدميهما معاً لتجربة عطرية ترافقك طوال اليوم.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/Product/10033863852324",
+      "key": "body_html",
+      "source": "<p class=\"p1\"><span class=\"s1\">Alma Match – The Perfect Pair</span></p>\n<p class=\"p1\"><span class=\"s2\">Enhance your fragrance routine with </span><span class=\"s1\">Alma Match</span><span class=\"s2\">, a perfectly paired </span><span class=\"s1\">solid perfume and body lotion</span><span class=\"s2\"> for a long-lasting scent. Layer them together for an elevated experience that stays with you all day.</span><span class=\"s2\"></span></p>\n<p class=\"p1\"><span class=\"s1\">ألما ماتش – الثنائي المثالي</span></p>\n<p class=\"p1\"><span class=\"s2\">ارتقِ بروتين عطرك مع </span><span class=\"s1\">ألما ماتش</span><span class=\"s2\">، الثنائي المثالي من </span><span class=\"s1\">العطر الصلب ولوشن الجسم</span><span class=\"s2\"> لرائحة تدوم طويلاً. استخدمهما معًا لتجربة عطرية تدوم طوال اليوم.</span></p>",
+      "digest": "997f6ce65ebf4ae1d78a87e8cd4338e3c24ce3c85e1af9202ddfcedd68fce835",
+      "before": {
+        "key": "body_html",
+        "value": "<p class=\"p1\"><span class=\"s1\">Alma Match – The Perfect Pair</span></p>\n<p class=\"p1\"><span class=\"s2\">Enhance your fragrance routine with </span><span class=\"s1\">Alma Match</span><span class=\"s2\">, a perfectly paired </span><span class=\"s1\">solid perfume and body lotion</span><span class=\"s2\"> for a long-lasting scent. Layer them together for an elevated experience that stays with you all day.</span><span class=\"s2\"></span></p>\n<p class=\"p1\"><span class=\"s1\">ألما ماتش – الثنائي المثالي</span></p>\n<p class=\"p1\"><span class=\"s2\">ارتقِ بروتين عطرك مع </span><span class=\"s1\">ألما ماتش</span><span class=\"s2\">، الثنائي المثالي المكون من </span><span class=\"s1\">عطر صلب ولوشن للجسم</span><span class=\"s2\"> لرائحة تدوم طويلاً. استخدمهما معاً لتجربة استثنائية ترافقك طوال اليوم.</span></p>",
+        "outdated": false
+      },
+      "value": "<p dir=\"rtl\">ألما ماتش — الثنائي المثالي.</p>\n<p dir=\"rtl\">ارتقي بروتين عطرك مع ألما ماتش، ثنائي متناغم من العطر الصلب ولوشن الجسم لرائحة تدوم طويلاً. استخدميهما معاً لتجربة عطرية ترافقك طوال اليوم.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/Collection/634268647716",
+      "key": "title",
+      "source": "Alma Solids Perfumes",
+      "digest": "c06765f12a195f0e6fa0f76404f30cb2b3b76ef87764946fe99084d6536f950f",
+      "before": {
+        "key": "title",
+        "value": "Alma Solids - مخمريات",
+        "outdated": true
+      },
+      "value": "عطور ألما الصلبة"
+    },
+    {
+      "resourceId": "gid://shopify/Collection/634268647716",
+      "key": "body_html",
+      "source": "<p> </p>\n<p><span>A new way to wear perfume.</span></p>\n<p>Alma Solid Perfume is a handcrafted, alcohol-free formula designed for both hair and skin—so you can scent your hair without dryness or damage.</p>\n<p><span>Enriched with almond &amp; coconut oils, it delivers a soft, long-lasting fragrance in a compact form made for everyday use.</span></p>\n<p><span>Wear it alone or layer it with your favorite scents to create a signature scent that’s uniquely yours.</span></p>\n<p dir=\"rtl\"><span>طريقة جديدة لاستخدام العطر.</span></p>\n<p dir=\"rtl\"><span>عطر ألما الصلب بتركيبة يدوية وخالي من الكحول، مصمم للاستخدام على الشعر والبشرة بدون ما يسبب جفاف أو ضرر.</span></p>\n<p dir=\"rtl\"><span>مُعزّز بزيوت اللوز وجوز الهند ليمنحك رائحة ناعمة وثابتة في حجم عملي يناسب يومك.</span></p>\n<p dir=\"rtl\"><span>استخدميه لوحده أو مع التدرج بالعطور لابتكار رائحة مميزة تعبر عنك.</span></p>\n<p dir=\"rtl\"> </p>",
+      "digest": "659088f0b7c3c4b4aea964c4871a6d1f4e1c5113308d965b9c2088d5a2d9eee6",
+      "before": {
+        "key": "body_html",
+        "value": "<p> </p>\n<p><span>طريقة جديدة لاستخدام العطر.</span></p>\n<p>عطر \"ألما\" الصلب هو تركيبة يدوية خالية من الكحول، مصممة للشعر والبشرة معاً، لتتمكني من تعطير شعرك دون التسبب في جفافه أو تلفه.</p>\n<p><span>معزز بزيت اللوز وزيت جوز الهند، يمنحك رائحة ناعمة تدوم طويلاً في عبوة مدمجة مصممة للاستخدام اليومي.</span></p>\n<p><span>استخدميه بمفرده أو امزجيه مع عطورك المفضلة لابتكار رائحة خاصة تميزك وحدك.</span></p>\n<p dir=\"rtl\"><span>طريقة جديدة لاستخدام العطر.</span></p>\n<p dir=\"rtl\"><span>عطر ألما الصلب بتركيبة يدوية وخالي من الكحول، مصمم للاستخدام على الشعر والبشرة بدون ما يسبب جفاف أو ضرر.</span></p>\n<p dir=\"rtl\"><span>مُعزّز بزيوت اللوز وجوز الهند ليمنحك رائحة ناعمة وثابتة في حجم عملي يناسب يومك.</span></p>\n<p dir=\"rtl\"><span>استخدميه لوحده أو مع التدرج بالعطور لابتكار رائحة مميزة تعبر عنك.</span></p>\n<p dir=\"rtl\"> </p>",
+        "outdated": false
+      },
+      "value": "<p dir=\"rtl\">طريقة جديدة لاستخدام العطر.</p>\n<p dir=\"rtl\">عطر ألما الصلب بتركيبة مصنوعة يدوياً وخالية من الكحول، مصمم للشعر والبشرة لتتمكني من تعطير شعرك دون جفاف أو تلف.</p>\n<p dir=\"rtl\">معزز بزيوت اللوز وجوز الهند، ليمنحك رائحة ناعمة تدوم طويلاً في عبوة عملية للاستخدام اليومي.</p>\n<p dir=\"rtl\">استخدميه بمفرده أو ادمجيه مع عطورك المفضلة لابتكار بصمة عطرية تخصك.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/Collection/635032535332",
+      "key": "title",
+      "source": "Alma Spray Perfumes",
+      "digest": "e1e7ff1f1dfa5b5243c7414f90c18ed824f81d06ad32e14dba2b6368b68a8b37",
+      "before": {
+        "key": "title",
+        "value": "عطور ألما",
+        "outdated": true
+      },
+      "value": "عطور ألما البخاخة"
+    },
+    {
+      "resourceId": "gid://shopify/Collection/635032535332",
+      "key": "body_html",
+      "source": "<p><span>Luxury in every drop. Discover the exquisite scents of our perfume collection.</span></p>\n<p dir=\"rtl\"><span>الفخامة في كل قطرة. اكتشف روائع مجموعة عطورنا</span></p>",
+      "digest": "b8f373017b6a58939c9c816d620c02ddc2f5673413ac806f9080aabd52ec26d0",
+      "before": {
+        "key": "body_html",
+        "value": "<p><span>Luxury in every drop. Discover the exquisite scents of our perfume collection.</span></p>\n<p dir=\"rtl\"><span>الفخامة في كل قطرة. اكتشف الروائح الرائعة في مجموعة عطورنا.</span></p>",
+        "outdated": false
+      },
+      "value": "<p dir=\"rtl\">فخامة في كل قطرة. اكتشفي الروائح الفريدة في مجموعة عطورنا.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/Collection/638301602084",
+      "key": "title",
+      "source": "Alma Lotions",
+      "digest": "7e0fafddf668bfd81d5277c82559eba3c125ac720964ef4230eb0f3c63fed23f",
+      "before": {
+        "key": "title",
+        "value": "لوشن ألما",
+        "outdated": true
+      },
+      "value": "لوشن ألما"
+    },
+    {
+      "resourceId": "gid://shopify/Collection/648136294692",
+      "key": "title",
+      "source": "kits",
+      "digest": "9ea848b635203fc2340d2099862a035c0c67bfd220b17490746216038fe30ab1",
+      "before": {
+        "key": "title",
+        "value": "الطبقات والمعدات",
+        "outdated": true
+      },
+      "value": "مجموعات"
+    },
+    {
+      "resourceId": "gid://shopify/Collection/648136294692",
+      "key": "body_html",
+      "source": "<p>“Creat your perfect scent combination-limited seasonal kits available” </p>",
+      "digest": "fda3eb6e713aa7cee5aa60b9d4bb2849d549fbe3942d7f3cc48a17f17abef04f",
+      "before": {
+        "key": "body_html",
+        "value": "<p>“ابتكري مزيج عطرك المثالي - مجموعات موسمية محدودة متاحة الآن” </p>",
+        "outdated": false
+      },
+      "value": "<p dir=\"rtl\">ابتكري توليفتك العطرية المثالية — مجموعات موسمية محدودة متاحة الآن.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/Collection/652186190116",
+      "key": "title",
+      "source": "Alma Discovery Collection",
+      "digest": "36cb86164b8898e827ce16ce0b273b606901500b301be28bc1a2c637803340b6",
+      "before": {
+        "key": "title",
+        "value": "مجموعة ألما ديسكفري",
+        "outdated": false
+      },
+      "value": "مجموعة اكتشاف ألما"
+    },
+    {
+      "resourceId": "gid://shopify/Collection/652186190116",
+      "key": "body_html",
+      "source": "<p><span>Start Your Scent Journey</span></p>\n<p><span>Not sure where to begin?</span></p>\n<p><span>This is the perfect place to explore Alma.</span></p>\n<p><span>Discover our most-loved essentials in travel-friendly sizes,</span></p>\n<p><span>designed to help you find your signature scent and experience the art of layering.</span></p>\n<p><br><span></span></p>\n<p> </p>\n<p dir=\"rtl\"><span>ابدئي رحلتك مع العطر</span></p>\n<p dir=\"rtl\"><span>مو متأكدة من وين تبدئي؟</span></p>\n<p dir=\"rtl\"><span>هذا المكان المناسب لك.</span></p>\n<p dir=\"rtl\"><span>اكتشفي منتجات ألما الأساسية بأحجام صغيرة وسهلة الاستخدام،</span></p>\n<p dir=\"rtl\"><span>عشان تختاري عطرك المفضل وتعيشي تجربة الـ layering خطوة بخطوة</span></p>",
+      "digest": "6b98a980a3fc12fe8e77fa3b4938f7a6a8ae8ae7100bc22a7ba9de54cdc7d138",
+      "before": {
+        "key": "body_html",
+        "value": "<p><span>ابدئي رحلتك العطرية</span></p>\n<p><span>لستِ متأكدة من أين تبدئين؟</span></p>\n<p><span>هذا هو المكان الأمثل لاستكشاف ألما.</span></p>\n<p><span>اكتشفي منتجاتنا الأساسية الأكثر تفضيلاً بأحجام مناسبة للسفر،</span></p>\n<p><span>صُممت خصيصاً لتساعدك في العثور على عطرك المميز والاستمتاع بفن دمج العطور.</span></p>\n<p><br><span></span></p>\n<p> </p>\n<p dir=\"rtl\"><span>ابدئي رحلتك مع العطر</span></p>\n<p dir=\"rtl\"><span>مو متأكدة من وين تبدئي؟</span></p>\n<p dir=\"rtl\"><span>هذا المكان المناسب لك.</span></p>\n<p dir=\"rtl\"><span>اكتشفي منتجات ألما الأساسية بأحجام صغيرة وسهلة الاستخدام،</span></p>\n<p dir=\"rtl\"><span>عشان تختاري عطرك المفضل وتعيشي تجربة الـ layering خطوة بخطوة</span></p>",
+        "outdated": false
+      },
+      "value": "<p dir=\"rtl\">ابدئي رحلتك العطرية.</p>\n<p dir=\"rtl\">لستِ متأكدة من أين تبدئين؟ هذا هو المكان المثالي لاستكشاف ألما.</p>\n<p dir=\"rtl\">اكتشفي منتجاتنا الأساسية المفضلة بأحجام مناسبة للسفر، صُممت لتساعدك على العثور على بصمتك العطرية وتجربة فن دمج العطور.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/Collection/652314804516",
+      "key": "title",
+      "source": "Soft and clean",
+      "digest": "232c0899b46be5f80a7f53555755ebcf367f0131f02092bff298fb49f4c59525",
+      "before": {
+        "key": "title",
+        "value": "ناعمة ونظيفة",
+        "outdated": false
+      },
+      "value": "ناعمة ونقية"
+    },
+    {
+      "resourceId": "gid://shopify/Collection/652314804516",
+      "key": "body_html",
+      "source": "<p>Light , fresh and effortless.</p>\n<p>Perfect for everyday wear - soft scents that feel clean , elegant and naturally you.</p>\n<p>ناعمة ، نظيفة و خفيفة</p>\n<p>مثالية للاستعمال اليومي - روائح منعشة تعطي إحساس نظيف و أناقة.</p>",
+      "digest": "7104b1148f04af9ab13e7dc080959c5195eacf881fa8cc288c1a58fc1ab98cb5",
+      "before": {
+        "key": "body_html",
+        "value": "<p>خفيفة، منعشة وانسيابية.</p>\n<p>مثالية للاستخدام اليومي - عطور ناعمة تمنحك إحساساً بالنظافة والأناقة وتعبر عن طبيعتك.</p>\n<p>ناعمة ، نظيفة و خفيفة</p>\n<p>مثالية للاستعمال اليومي - روائح منعشة تعطي إحساس نظيف و أناقة.</p>",
+        "outdated": false
+      },
+      "value": "<p dir=\"rtl\">خفيفة ومنعشة وبسيطة.</p>\n<p dir=\"rtl\">عطور ناعمة مثالية للاستخدام اليومي، تمنحك إحساساً بالنقاء والأناقة وتعبر عنك بطبيعتك.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/Collection/652314902820",
+      "key": "title",
+      "source": "Warm and bold",
+      "digest": "0a6a01aeb9d2600674af2c96a7891bde65d5af83cd19a231ea892b49190d886f",
+      "before": {
+        "key": "title",
+        "value": "دافئ وجريء",
+        "outdated": false
+      },
+      "value": "دافئة وجريئة"
+    },
+    {
+      "resourceId": "gid://shopify/Collection/652314902820",
+      "key": "body_html",
+      "source": "<p>Confident , warm and addictive.</p>\n<p>A selection of rich and comforting scents designed to leave a lasting impression-bold , smooth and impossible to ignore.</p>\n<p>دافئة، جريئة لا تنسى</p>\n<p>مجموعة بروائح غنية و مريحة تعطي حضور قوي ، تترك انطباع يدوم</p>",
+      "digest": "ff23b8f501aa7d95ffdcd1cfa9950330bcbc1049cc7c7c38d15417353a4487a4",
+      "before": {
+        "key": "body_html",
+        "value": "<p>واثقة، دافئة وآسرة.</p>\n<p>تشكيلة من الروائح الغنية والمريحة المصممة لترك انطباع يدوم؛ جريئة، ناعمة ولا يمكن تجاهلها.</p>\n<p>دافئة، جريئة لا تنسى</p>\n<p>مجموعة بروائح غنية و مريحة تعطي حضور قوي ، تترك انطباع يدوم</p>",
+        "outdated": false
+      },
+      "value": "<p dir=\"rtl\">واثقة ودافئة وآسرة.</p>\n<p dir=\"rtl\">تشكيلة من الروائح الغنية والمريحة المصممة لتترك انطباعاً يدوم؛ جريئة وناعمة ولا يمكن تجاهلها.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/Collection/652315001124",
+      "key": "title",
+      "source": "Arabic and Deep",
+      "digest": "7dafd2fcccec43cec29fd4995d867328cdcc9f754a3b03c7a88596f455754e09",
+      "before": {
+        "key": "title",
+        "value": "العربية والعمق",
+        "outdated": false
+      },
+      "value": "عربية وعميقة"
+    },
+    {
+      "resourceId": "gid://shopify/Collection/652315001124",
+      "key": "body_html",
+      "source": "<p>Deep , rich , and unforgatble.</p>\n<p>This collection is crafted for those who love bold Arabic notes-Oud , smoke and warm intensity that lingers long after you leave.</p>\n<p>عطور عميقة و فخمة تترك أثر</p>\n<p>تشكيلة لمحبي الروائح العربية القوية-العود ، الدخان ، و النفحات الدافئة التي تدوم</p>",
+      "digest": "cedd793595f454feba2bc1f2737bc655e5bf07d2070b6ef2ddbc5232d28f5e0b",
+      "before": {
+        "key": "body_html",
+        "value": "<p>عميقة، غنية، ولا تُنسى.</p>\n<p>صُممت هذه التشكيلة لمحبي النوتات العربية الجريئة؛ العود، والبخور، والنفحات الدافئة التي تبقى طويلاً بعد رحيلك.</p>\n<p>عطور عميقة و فخمة تترك أثر</p>\n<p>تشكيلة لمحبي الروائح العربية القوية-العود ، الدخان ، و النفحات الدافئة التي تدوم</p>",
+        "outdated": false
+      },
+      "value": "<p dir=\"rtl\">عميقة وغنية ولا تُنسى.</p>\n<p dir=\"rtl\">تشكيلة لمحبي النفحات العربية الجريئة: العود والدخان والكثافة الدافئة التي يبقى أثرها طويلاً بعد رحيلك.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/Collection/652315230500",
+      "key": "body_html",
+      "source": "<p>Our most loves scents - chosen by our customers.</p>\n<p>from bold Oud to soft everyday favourites , these are the scents people come back for.</p>\n<p>أكثر العطور حبا من عملائنا</p>\n<p>من العود القوي إلى الروائح اليومية الناعمة - هذه اختيارات يثق فيها عملاؤنا</p>",
+      "digest": "6b86fc2c442c355a734eac13fb17b3a08b9f7147e568f2e1aae5c008f9d36d21",
+      "before": {
+        "key": "body_html",
+        "value": "<p>أكثر عطورنا تفضيلاً - باختيار عملائنا.</p>\n<p>من العود القوي إلى الروائح اليومية الناعمة، هذه هي العطور التي يطلبها عملاؤنا باستمرار.</p>\n<p>أكثر العطور حبا من عملائنا</p>\n<p>من العود القوي إلى الروائح اليومية الناعمة - هذه اختيارات يثق فيها عملاؤنا</p>",
+        "outdated": false
+      },
+      "value": "<p dir=\"rtl\">عطورنا الأكثر محبة، باختيار عملائنا.</p>\n<p dir=\"rtl\">من العود الجريء إلى العطور اليومية الناعمة، هذه هي الروائح التي يعود إليها عملاؤنا دائماً.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/Collection/655963029796",
+      "key": "title",
+      "source": "Alma Solid Charms",
+      "digest": "8e866870b91ed4f5cf63e4cce49177414e9fd83663890d194c48e3944f09d1f8",
+      "before": {
+        "key": "title",
+        "value": "تعليقات ألما الصلبة",
+        "outdated": true
+      },
+      "value": "تعليقات ألما للعطر الصلب"
+    },
+    {
+      "resourceId": "gid://shopify/Collection/655963029796",
+      "key": "body_html",
+      "source": "<p>Your signature solid perfume .. on the go !</p>",
+      "digest": "de7f5e2100ce9bedf7c7ac9a45909ba8a8c20f8e4e92651c0e7bdc4339cd57bf",
+      "before": {
+        "key": "body_html",
+        "value": "<p>عطرك الصلب المميز .. أثناء التنقل !</p>",
+        "outdated": false
+      },
+      "value": "<p dir=\"rtl\">عطرك الصلب المميز يرافقك أينما ذهبتِ!</p>"
+    },
+    {
+      "resourceId": "gid://shopify/Collection/660554416420",
+      "key": "title",
+      "source": "Alma Dukhoon",
+      "digest": "2be6b7e3ec8a55b675943ee61be86fe6d15bccb2eae05152f344e7dcf415a475",
+      "before": {
+        "key": "title",
+        "value": "ألم دخان",
+        "outdated": true
+      },
+      "value": "دخون ألما"
+    },
+    {
+      "resourceId": "gid://shopify/Collection/662025830692",
+      "key": "title",
+      "source": "Spray Perfumes Layering",
+      "digest": "370291a431b5af4e85cd15ca06ae289bc07db83f59b418d5aeb3782de6cb6a70",
+      "before": null,
+      "value": "دمج العطور البخاخة"
+    },
+    {
+      "resourceId": "gid://shopify/Collection/662026879268",
+      "key": "title",
+      "source": "Layering",
+      "digest": "bb9ce03ea6935986f231880187080a646e4740dd959edb0608231d9f63eae4c6",
+      "before": null,
+      "value": "دمج العطور"
+    },
+    {
+      "resourceId": "gid://shopify/Collection/662161916196",
+      "key": "title",
+      "source": "Gifting",
+      "digest": "6e70f33a471ea385ed7903f243e6dd8704b1f3008802c42ceff7b93248a41e38",
+      "before": null,
+      "value": "الهدايا"
+    },
+    {
+      "resourceId": "gid://shopify/Page/133430444324",
+      "key": "title",
+      "source": "Contact",
+      "digest": "2b5c3d26721ae9c350cf3009318b626f0fc8a90b4a2ac0ca8099c05aa849282e",
+      "before": {
+        "key": "title",
+        "value": "اتصال",
+        "outdated": false
+      },
+      "value": "تواصلي معنا"
+    },
+    {
+      "resourceId": "gid://shopify/Page/167689781540",
+      "key": "title",
+      "source": "Layering",
+      "digest": "bb9ce03ea6935986f231880187080a646e4740dd959edb0608231d9f63eae4c6",
+      "before": null,
+      "value": "دمج العطور"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOption/17806960034084",
+      "key": "name",
+      "source": "Size",
+      "digest": "1af851907331c0ed99e7c63b4e55df808bc5fc4c990a1cf80ca8c0f76daf1f3b",
+      "before": null,
+      "value": "الحجم"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOption/17811045744932",
+      "key": "name",
+      "source": "Scents",
+      "digest": "cd0cd1cd38f06bd014f7975f35342b6be91df034179a0cad1edfbd85f791e6d0",
+      "before": null,
+      "value": "الروائح"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOption/17811064258852",
+      "key": "name",
+      "source": "Pouch Color",
+      "digest": "eb7bd611274ef09d13f5c1da713ad60fb31dbe7cd6e791eb01bf8470d2925d39",
+      "before": null,
+      "value": "لون الحقيبة"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOption/17811064291620",
+      "key": "name",
+      "source": "Solid Perfume Scent",
+      "digest": "3c0e2fd42936ee35d9622cc1b830c9e79316ce97446574f2cc48642750781f5b",
+      "before": null,
+      "value": "رائحة العطر الصلب"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOption/17811069272356",
+      "key": "name",
+      "source": "Design",
+      "digest": "0072e6b934945d5ba08f9729e00847391922f2f6026a435e704634fb93bf4502",
+      "before": null,
+      "value": "التصميم"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOption/17811069305124",
+      "key": "name",
+      "source": "Scent",
+      "digest": "0ed0346b3b1c18c5c934113ba8d815f0bbadfb55a28686f83c249f0bcf73d3d3",
+      "before": null,
+      "value": "الرائحة"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOptionValue/6161111548196",
+      "key": "name",
+      "source": "Delice Vanilla",
+      "digest": "9b3da09a1e53886a77eee5c363b960645e4c03e270e4b4e34e3c77fe41635a6c",
+      "before": {
+        "key": "name",
+        "value": "لولو فانيلا",
+        "outdated": true
+      },
+      "value": "ديليس فانيلا"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOptionValue/6644176617764",
+      "key": "name",
+      "source": "Rose Noir",
+      "digest": "57731f78df707f043ccdcddd0d912b2aee4285e34725eddf3e90997a10a34819",
+      "before": {
+        "key": "name",
+        "value": "ألمى وإيمان",
+        "outdated": true
+      },
+      "value": "روز نوار"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOptionValue/6644176650532",
+      "key": "name",
+      "source": "Delice Vanilla",
+      "digest": "9b3da09a1e53886a77eee5c363b960645e4c03e270e4b4e34e3c77fe41635a6c",
+      "before": {
+        "key": "name",
+        "value": "لولو فانيلا",
+        "outdated": true
+      },
+      "value": "ديليس فانيلا"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOptionValue/6912733315364",
+      "key": "name",
+      "source": "Full Size Dokhoon — 100g | 9 hand crafted pieces",
+      "digest": "543355f6532f8d4b3d791698a7c0ba0641cf06904e232f36687d899a1ee4850b",
+      "before": {
+        "key": "name",
+        "value": "دخون بحجم كامل - 100 جرام | 12 قطعة مصنوعة يدوياً",
+        "outdated": true
+      },
+      "value": "دخون بالحجم الكامل — 100 جم | 9 قطع مصنوعة يدوياً"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOptionValue/7923489636644",
+      "key": "name",
+      "source": "Delice vanilla",
+      "digest": "2a2a180e4d41b72aaabe6437a636cbe9cb1245b69bea37ae068985e70f0d70dd",
+      "before": null,
+      "value": "ديليس فانيلا"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOptionValue/14858599072036",
+      "key": "name",
+      "source": "100 ml",
+      "digest": "9e3dbd649e8f884d7d110cf7932c2930a61839110663dc5c2a9d937f3605b3e5",
+      "before": null,
+      "value": "100 مل"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOptionValue/14858599104804",
+      "key": "name",
+      "source": "250 ml",
+      "digest": "13fff0df731a86926db246cc1a9b2932e4d71a46ca07cca14b2a1a4a1e9b3be0",
+      "before": null,
+      "value": "250 مل"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOptionValue/14871308468516",
+      "key": "name",
+      "source": "Alma",
+      "digest": "112850868fd082f1e47c9920e8f037b92047fbc9ad91eaf38afd5c583a40f89e",
+      "before": null,
+      "value": "ألما"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOptionValue/14871308501284",
+      "key": "name",
+      "source": "Oud Intense",
+      "digest": "d7b18a4b6adc09d0e6972a061c49abf6dd10388f6d9308a54f227739e5813e8e",
+      "before": null,
+      "value": "عود إنتنس"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOptionValue/14871308599588",
+      "key": "name",
+      "source": "Leather luxe",
+      "digest": "bee9280e8575f382c71dc968eb6597591ae8924abc67e91a9bcf72c605ac2d76",
+      "before": null,
+      "value": "ليذر لوكس"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOptionValue/14871308665124",
+      "key": "name",
+      "source": "Delice Vanilla",
+      "digest": "9b3da09a1e53886a77eee5c363b960645e4c03e270e4b4e34e3c77fe41635a6c",
+      "before": null,
+      "value": "ديليس فانيلا"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOptionValue/14871330914596",
+      "key": "name",
+      "source": "Luma",
+      "digest": "7f81d3537996aca8298176bb63589afd1eca60b1b281a326cbff6a117c750120",
+      "before": null,
+      "value": "لوما"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOptionValue/14871413293348",
+      "key": "name",
+      "source": "Emerald",
+      "digest": "af1ccb31304d74a7940a2f62ec8ffef5eca8e82c211399d2d1b1f6e26db89da2",
+      "before": null,
+      "value": "زمردي"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOptionValue/14871413326116",
+      "key": "name",
+      "source": "Blush Pink",
+      "digest": "3136ee19463ccf002dad742e69d36f39b15a75b0408165b5dfbf30432850f24a",
+      "before": null,
+      "value": "وردي ناعم"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOptionValue/14871413358884",
+      "key": "name",
+      "source": "Purple",
+      "digest": "7d465fb9b9314846b72698017691e756af05e0a548e347a3b7c54ca5b85270de",
+      "before": null,
+      "value": "بنفسجي"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOptionValue/14871413391652",
+      "key": "name",
+      "source": "Lilac Flower",
+      "digest": "30d82cadff8d2493e05340e4f01b69e7bdbe9d2931569d179d8640e7b55e6c48",
+      "before": null,
+      "value": "زهرة الليلك"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOptionValue/14871413424420",
+      "key": "name",
+      "source": "Oud",
+      "digest": "5fe42c7021bc44a6682c74d4080542548e1ec332bddcb69905db5a061e62c1c6",
+      "before": null,
+      "value": "عود"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOptionValue/14871413457188",
+      "key": "name",
+      "source": "Arabia",
+      "digest": "0c4e4ffb70adfec418002738cf78ecc6146ff1e628fa14a589f8059c05160485",
+      "before": null,
+      "value": "أرابيا"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOptionValue/14871413489956",
+      "key": "name",
+      "source": "Vanilla Bloom",
+      "digest": "cec52fb525736f918fef4932c0ccf1b2844d80ecaca11b328f0651bb72c32a96",
+      "before": null,
+      "value": "فانيلا بلوم"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOptionValue/14871413522724",
+      "key": "name",
+      "source": "Sandalwood",
+      "digest": "2c4270aad2c69c06729704775286edf81d6eaa7e283ae2def80314334902e767",
+      "before": null,
+      "value": "صندل"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOptionValue/14871413555492",
+      "key": "name",
+      "source": "Leather Lux",
+      "digest": "8d23f42ab3efa1c7b3fae40db0800288a53261ed6e88dd914440dcab30a19f25",
+      "before": null,
+      "value": "ليذر لوكس"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOptionValue/14871413588260",
+      "key": "name",
+      "source": "Delice Vanilla",
+      "digest": "9b3da09a1e53886a77eee5c363b960645e4c03e270e4b4e34e3c77fe41635a6c",
+      "before": null,
+      "value": "ديليس فانيلا"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOptionValue/14871436493092",
+      "key": "name",
+      "source": "Butterfly",
+      "digest": "a30f6a02eaa26200e5fef37612610be42ff953b75987d93deb645f83b0770845",
+      "before": null,
+      "value": "فراشة"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOptionValue/14871436525860",
+      "key": "name",
+      "source": "Lilac Flowers",
+      "digest": "9b7c4758ebd9ac86c6af3c2e8a15c4e9d45ed9880db11912fa66b8fb71708db1",
+      "before": null,
+      "value": "أزهار الليلك"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOptionValue/14871436558628",
+      "key": "name",
+      "source": "Pink Flower Butterflies",
+      "digest": "53f973e8a20bd27a19e2c3489ba24ae3e6ef7350c707460979a8aec8e9b43e55",
+      "before": null,
+      "value": "فراشات وأزهار وردية"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOptionValue/14871436591396",
+      "key": "name",
+      "source": "Alma",
+      "digest": "112850868fd082f1e47c9920e8f037b92047fbc9ad91eaf38afd5c583a40f89e",
+      "before": null,
+      "value": "ألما"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOptionValue/14871436624164",
+      "key": "name",
+      "source": "Oud Intense",
+      "digest": "d7b18a4b6adc09d0e6972a061c49abf6dd10388f6d9308a54f227739e5813e8e",
+      "before": null,
+      "value": "عود إنتنس"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOptionValue/14871436656932",
+      "key": "name",
+      "source": "Leather Lux",
+      "digest": "8d23f42ab3efa1c7b3fae40db0800288a53261ed6e88dd914440dcab30a19f25",
+      "before": null,
+      "value": "ليذر لوكس"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOptionValue/14871436689700",
+      "key": "name",
+      "source": "Delice Vanilla",
+      "digest": "9b3da09a1e53886a77eee5c363b960645e4c03e270e4b4e34e3c77fe41635a6c",
+      "before": null,
+      "value": "ديليس فانيلا"
+    },
+    {
+      "resourceId": "gid://shopify/ProductOptionValue/14871436722468",
+      "key": "name",
+      "source": "Luma",
+      "digest": "7f81d3537996aca8298176bb63589afd1eca60b1b281a326cbff6a117c750120",
+      "before": null,
+      "value": "لوما"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.article.json.main.share.share_label:3syj88j5f6ixv",
+      "source": "Share",
+      "digest": "29887a5ff9846ccc23327565a07e17fa6dcaea6211f1898ae825f84ae38f4223",
+      "before": null,
+      "value": "مشاركة"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.collection.json.banner.all_products_eyebrow:ta92ok1kvtlw",
+      "source": "ALMA FRAGRANCES",
+      "digest": "f512cf4e5514d169bac61ec5ab09dba30383942e343145589b4aab0f98ef1e92",
+      "before": null,
+      "value": "عطور ألما"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.collection.json.banner.all_products_heading:ta8x778kt199",
+      "source": "The ALMA collection",
+      "digest": "21b6f62a8986d11288038c6c7cbd569a5c88c7bb4bbad316cf47800dce55c5d7",
+      "before": null,
+      "value": "مجموعة ألما"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.collection.json.banner.collection_eyebrow:112s6gu6w5tp0",
+      "source": "ALMA FRAGRANCES",
+      "digest": "f512cf4e5514d169bac61ec5ab09dba30383942e343145589b4aab0f98ef1e92",
+      "before": null,
+      "value": "عطور ألما"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.collection.json.product-grid.all_products_label:20k1to38hvdcp",
+      "source": "All Products",
+      "digest": "a9463067273aeb267b45dee2094d551854d3d406a0635e4ee68751206cfc86e6",
+      "before": null,
+      "value": "جميع المنتجات"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.collection.json.product-grid.perfumes.label:10cvh5jokw390",
+      "source": "Alma Perfumes",
+      "digest": "f765de5c466265781f0c4ee6e1fdcbee040d3be3d1380b44e2bca989f9fe4618",
+      "before": null,
+      "value": "عطور ألما"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.collection.json.product-grid.solid_perfumes.label:xtcc1w26ilkm",
+      "source": "Alma Solid Perfumes",
+      "digest": "1ce9061b8606a46ef82e2f321a1d442f9eaf5a670a5d60aa5f71b0267f95132b",
+      "before": null,
+      "value": "عطور ألما الصلبة"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.collection.json.product-grid.lotions.label:3v0jbnlqvoauv",
+      "source": "Alma Lotions",
+      "digest": "7e0fafddf668bfd81d5277c82559eba3c125ac720964ef4230eb0f3c63fed23f",
+      "before": null,
+      "value": "لوشن ألما"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.collection.json.product-grid.dokhon.label:3agc760w0tkj6",
+      "source": "Alma Dokhon",
+      "digest": "14a728f2995ce15e1b4e16b886e92703cf786caee46661f2150ce8e9099a2028",
+      "before": null,
+      "value": "دخون ألما"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.collection.json.product-grid.discovery.label:m6q0qpu0uq0h",
+      "source": "Discovery Collection",
+      "digest": "b86261a4b8521bdfda6d145bcc9a671a499a2b16ddd8be159d23683f0abb7051",
+      "before": null,
+      "value": "مجموعة الاكتشاف"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.collection.json.product-grid.charms.label:48wnxfb0na4d",
+      "source": "Alma Solid Charms",
+      "digest": "8e866870b91ed4f5cf63e4cce49177414e9fd83663890d194c48e3944f09d1f8",
+      "before": null,
+      "value": "تعليقات ألما للعطر الصلب"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.image_banner.text:13cjrbw0ms5oh",
+      "source": "<p>Lotion, solid perfume and spray perfume come together on the skin. Layer each texture, one after another, to create a lasting fragrance ritual that feels entirely your own.</p>",
+      "digest": "b8079af83b3acbe1bd8e65a83d331fbe280028e99106d8eed1f2b68dec1a0aba",
+      "before": null,
+      "value": "<p>يتناغم اللوشن والعطر الصلب والعطر البخاخ على البشرة. ضعي كل قوام تلو الآخر، لتبتكري طقساً عطرياً يدوم ويعبّر عنك وحدك.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.image_banner.heading.heading:1j7a9nwb7go7",
+      "source": "A ritual, entirely yours",
+      "digest": "54022f932abc092041499deba9eed2f301d6d948a3daa313283d2b3f76dad58b",
+      "before": null,
+      "value": "طقس عطري يشبهك"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.image_banner.button.button_label_1:38hqd72gah9io",
+      "source": "Shop now",
+      "digest": "8b9cb1b7a3fc77a60066a17199fa49c15775106dc0f92fecd3830fdd74ca947b",
+      "before": null,
+      "value": "تسوقي الآن"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.featured_collection.title:vud3cy1kl8qx",
+      "source": "The ALMA fragrance collection",
+      "digest": "c436e554ba09bcd7dc25ad649f131f9587ab9f1dba6599a8a4318af70905cff7",
+      "before": null,
+      "value": "مجموعة عطور ألما"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.featured_collection.best_selling_label:1gxjfd9q4vrix",
+      "source": "Best Selling",
+      "digest": "088ae500e64f8282efc97c2d0a30f10241f5f1ec12de5198cdd9696d990c95f3",
+      "before": null,
+      "value": "الأكثر مبيعاً"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.featured_collection.solid.label:3p71c35vrueo9",
+      "source": "Alma Solid Perfumes",
+      "digest": "1ce9061b8606a46ef82e2f321a1d442f9eaf5a670a5d60aa5f71b0267f95132b",
+      "before": null,
+      "value": "عطور ألما الصلبة"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.scent_finder.heading:3pf7b4po4i7bu",
+      "source": "Find Your Aura",
+      "digest": "803925f5c07a00edb6372a77ed178c11ec9d604898c487648e6b06b1d376e8f0",
+      "before": null,
+      "value": "اكتشفي هالتك العطرية"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.scent_finder.text:1wzl60wcsyqzz",
+      "source": "<p>Choose the notes you love. We’ll reveal the ALMA fragrances that share your scent.</p>",
+      "digest": "482b4101c087d2edebb1e1d6c5349365cde8d8abdde3e61efe9f4e8d92d9b584",
+      "before": null,
+      "value": "<p>اختاري النفحات التي تحبينها لنكشف لك عطور ألما الأقرب إلى ذوقك.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.scent_finder.prompt:8afxgdj5o5g6",
+      "source": "Which notes draw you in?",
+      "digest": "89c3d5156dc1c9074121bbf33bdfcbc1199da0ea24813105405df487e7a4fad5",
+      "before": null,
+      "value": "أي النفحات تأسرك؟"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.scent_finder.initial_message:3ba6ubeyzdptk",
+      "source": "Select one or more notes to begin.",
+      "digest": "b858e1060d6e7c51e199dc10f8805200765881ed4b8de55ae97a49849fd73697",
+      "before": null,
+      "value": "اختاري نفحة واحدة أو أكثر للبدء."
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.layering_story.eyebrow:1pm3x02xlg4vy",
+      "source": "The ALMA ritual",
+      "digest": "bb5ced50c018cda8c5442e2f900463ce9c0600907747099627835376128dadce",
+      "before": null,
+      "value": "طقس ألما العطري"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.layering_story.heading:1pm3vv82u2xon",
+      "source": "Layer it your way",
+      "digest": "9eaf13e4048300f00252b50693a677c2eaae733b28587b30eb8f421e29f46822",
+      "before": null,
+      "value": "ادمجي العطور على طريقتك"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.layering_story.text:2qx6vro0rx9ua",
+      "source": "<p>Begin with lotion, deepen the scent with solid perfume, then finish with spray perfume. Three textures, one scent story that belongs to you.</p>",
+      "digest": "0856f191851488ca4fe5fa195fa3536ae0c8521f43ece762e977f415091b124e",
+      "before": null,
+      "value": "<p>ابدئي باللوشن، وأضيفي عمقاً للرائحة بالعطر الصلب، ثم اختتمي بالعطر البخاخ. ثلاثة قوامات تحكي قصة عطرية تخصك.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.layering_story.link_label:2b6el3rewaom",
+      "source": "Explore layering",
+      "digest": "597a48fb03095184e8cb240b51ee16783deed41174cae3842b12a0e97ea53bb3",
+      "before": null,
+      "value": "اكتشفي دمج العطور"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.layering_story.steps_label:23b62zoyg8ovr",
+      "source": "Lotion, solid perfume and spray perfume",
+      "digest": "2f2dab11110565a4541239b29f77c93d976a121912d185650917db1b5139520a",
+      "before": null,
+      "value": "لوشن وعطر صلب وعطر بخاخ"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.layering_story.signup_eyebrow:15nbhiex5cwc7",
+      "source": "A gift for your ritual",
+      "digest": "ef12cae1d25c5eceab493a0f72a6116f32ccc3399f153b82f9adf50399115345",
+      "before": null,
+      "value": "هدية لطقسك العطري"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.layering_story.signup_heading:15nbf9koaf2dq",
+      "source": "Take 5% off your first ALMA ritual",
+      "digest": "cb2e19360306073087ee0e4e89ea4ab92ccdcb4964d9f8d12fededfd8ece72a1",
+      "before": null,
+      "value": "خصم 5% على أول تجربة لك مع ألما"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.layering_story.signup_text:1w6fmpx652liz",
+      "source": "<p>Share your details for a private welcome offer and first access to new ALMA stories.</p>",
+      "digest": "d1be6beb5ccb0f9f5ff3853570e62aff98684fc2d09857f5704ff86ffe6e029f",
+      "before": null,
+      "value": "<p>شاركي بياناتك لتحصلي على عرض ترحيبي خاص، وتكوني من أول من يكتشف جديد ألما.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.layering_story.signup_button_label:318eib736d3ex",
+      "source": "Unlock my 5% off",
+      "digest": "fa0b41901c392d5317b16dfbe6651272b95aade1dc1b243caf38b2db611043c5",
+      "before": null,
+      "value": "احصلي على خصم 5%"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.layering_story.signup_fine_print:12hkbe7ljbtyk",
+      "source": "By joining, you agree to receive ALMA news and offers.",
+      "digest": "eed5f4e5fa4ed12078635955a3ed5a477276f1211ed2a7a638711e3f9f18a0cc",
+      "before": null,
+      "value": "بانضمامك، توافقين على تلقي أخبار ألما وعروضها."
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.layering_story.signup_success_heading:tz5isnhyedv6",
+      "source": "Your welcome offer is ready",
+      "digest": "84b85b264d20d4108bae368cf09effa899d6ff7b40bbb8719892d300d01ffc3c",
+      "before": null,
+      "value": "عرضك الترحيبي جاهز"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.layering_story.signup_success_text:vy0bebhoyft3",
+      "source": "<p>Thank you for joining ALMA. Use your code at checkout and enjoy 5% off your first ritual.</p>",
+      "digest": "e7c7b2f40861c7a69b646ea44474b3249d65615057394472395e7ea5373ae30b",
+      "before": null,
+      "value": "<p>شكراً لانضمامك إلى ألما. استخدمي رمزك عند إتمام الطلب واستمتعي بخصم 5% على تجربتك الأولى.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.layering_story.signup_launcher_label:3i1s7b1dcvt1x",
+      "source": "5% off your ritual",
+      "digest": "1053b757f163ec39a47cc724df32de383f94736ae55da351b51b00e964efe30b",
+      "before": null,
+      "value": "خصم 5% على طقسك العطري"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.layering_story.lotion.label:13yq2qdyw56r1",
+      "source": "Lotion",
+      "digest": "258ab4d90756afc518a3386248627e8773199094201b1241ca00fa15e51e657c",
+      "before": null,
+      "value": "لوشن"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.layering_story.solid.label:3t7phhrx7pp73",
+      "source": "Solid Perfume",
+      "digest": "cc118f87c86a99fbf609df3b0783f5aaba33f3a4cb072567f36eec6c0ff1c59a",
+      "before": null,
+      "value": "عطر صلب"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.layering_story.spray.label:2ivg8qe5ks6wr",
+      "source": "Spray Perfume",
+      "digest": "affdced5fefd0e8e9e8df91a73879b873b10b2c79d59e341203fbf30c9e4b1ea",
+      "before": null,
+      "value": "عطر بخاخ"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.dukhon_story.eyebrow:3mz676ghz8bbi",
+      "source": "For the space around you",
+      "digest": "b221b709abda4c255478f7b23c6733154876cdfa3657c887fae1fcf6b4908d2a",
+      "before": null,
+      "value": "للمكان من حولك"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.dukhon_story.heading:3mz69ffa0n99z",
+      "source": "A deeper atmosphere",
+      "digest": "5cdc289e7c14bbc41ff0b4f0e0ba5b208c1644b54919d5eb9d1ca43d8b5f1091",
+      "before": null,
+      "value": "أجواء أكثر عمقاً"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.dukhon_story.text:1jugb3xoxohgi",
+      "source": "<p>ALMA Dukhoon brings the ritual into your home with a warm, enveloping presence.</p>",
+      "digest": "224e837eadae43f6adb8b5fdbc95fcc1130151ec41136acb67a01d132f34bd43",
+      "before": null,
+      "value": "<p>ينقل دخون ألما الطقس العطري إلى منزلك بحضور دافئ يغمر المكان.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.dukhon_story.link_label:3rt78syltwi3q",
+      "source": "Discover Dukhoon",
+      "digest": "fb5b34f67037cc82559bbd06aed01ea6715699c03f3c9f32e103ff45bf5bbf99",
+      "before": null,
+      "value": "اكتشفي الدخون"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.dukhon_story.steps_label:7oeopzmvio1z",
+      "source": "Complete the ritual",
+      "digest": "2791d96aee05e76f5958aa838fa75371029fe6063741b7c2fd6b67a8cbb08423",
+      "before": null,
+      "value": "أكملي طقسك العطري"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.dukhon_story.signup_eyebrow:2caa7ovk7mdon",
+      "source": "A gift for your ritual",
+      "digest": "ef12cae1d25c5eceab493a0f72a6116f32ccc3399f153b82f9adf50399115345",
+      "before": null,
+      "value": "هدية لطقسك العطري"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.dukhon_story.signup_heading:2caa13eom4ovy",
+      "source": "Take 5% off your first ALMA ritual",
+      "digest": "cb2e19360306073087ee0e4e89ea4ab92ccdcb4964d9f8d12fededfd8ece72a1",
+      "before": null,
+      "value": "خصم 5% على أول تجربة لك مع ألما"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.dukhon_story.signup_text:fsysqg04jc97",
+      "source": "<p>Share your details for a private welcome offer and first access to new ALMA stories.</p>",
+      "digest": "d1be6beb5ccb0f9f5ff3853570e62aff98684fc2d09857f5704ff86ffe6e029f",
+      "before": null,
+      "value": "<p>شاركي بياناتك لتحصلي على عرض ترحيبي خاص، وتكوني من أول من يكتشف جديد ألما.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.dukhon_story.signup_button_label:2p9iid5rcb0ah",
+      "source": "Unlock my 5% off",
+      "digest": "fa0b41901c392d5317b16dfbe6651272b95aade1dc1b243caf38b2db611043c5",
+      "before": null,
+      "value": "احصلي على خصم 5%"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.dukhon_story.signup_fine_print:1kry49wjctj8c",
+      "source": "By joining, you agree to receive ALMA news and offers.",
+      "digest": "eed5f4e5fa4ed12078635955a3ed5a477276f1211ed2a7a638711e3f9f18a0cc",
+      "before": null,
+      "value": "بانضمامك، توافقين على تلقي أخبار ألما وعروضها."
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.dukhon_story.signup_success_heading:30udupi9w403m",
+      "source": "Your welcome offer is ready",
+      "digest": "84b85b264d20d4108bae368cf09effa899d6ff7b40bbb8719892d300d01ffc3c",
+      "before": null,
+      "value": "عرضك الترحيبي جاهز"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.dukhon_story.signup_success_text:3ky030d818it3",
+      "source": "<p>Thank you for joining ALMA. Use your code at checkout and enjoy 5% off your first ritual.</p>",
+      "digest": "e7c7b2f40861c7a69b646ea44474b3249d65615057394472395e7ea5373ae30b",
+      "before": null,
+      "value": "<p>شكراً لانضمامك إلى ألما. استخدمي رمزك عند إتمام الطلب واستمتعي بخصم 5% على تجربتك الأولى.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.dukhon_story.signup_launcher_label:i4s1bizknuxx",
+      "source": "5% off your ritual",
+      "digest": "1053b757f163ec39a47cc724df32de383f94736ae55da351b51b00e964efe30b",
+      "before": null,
+      "value": "خصم 5% على طقسك العطري"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.gifting_story.title:188088c5qf54g",
+      "source": "Gifting by ALMA",
+      "digest": "9977eeaf42e817c25905b68ac013be268ea83d8c1fc42ada8a390ab73f891d27",
+      "before": null,
+      "value": "هدايا ألما"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.gifting_story.best_selling_label:34z2f4btz4d1c",
+      "source": "Gifting",
+      "digest": "6e70f33a471ea385ed7903f243e6dd8704b1f3008802c42ceff7b93248a41e38",
+      "before": null,
+      "value": "الهدايا"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.gifting_story.product_link_label:1ip06au3m6nul",
+      "source": "Discover",
+      "digest": "d4a33d5b78bccebe3f16843dc30e6c0f73b4eb6efb4e7114ddfebde7fa2c9954",
+      "before": null,
+      "value": "اكتشفي"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.gifting_story.gifts.label:fdy9bu1fsw0y",
+      "source": "Gifts & rituals",
+      "digest": "2266485c5db8a5a7d983ace256513bc711a434aadd2d2645cfb76d77678cb094",
+      "before": null,
+      "value": "هدايا وطقوس عطرية"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.wardrobe.heading:1w67peyh6dujm",
+      "source": "Explore the ALMA collections",
+      "digest": "5095a06ec84568c5b0d5ae5fe1d6b9a638a31f2008a008729de5a0d843085cf9",
+      "before": null,
+      "value": "اكتشفي مجموعات ألما"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.wardrobe.text:32xr7rmhnomzb",
+      "source": "<p>Perfume for skin, space and every part of your ritual.</p>",
+      "digest": "38f8b352993314dc320d857526e0027253edb1213dd62dcc10f09a8c5b69b82a",
+      "before": null,
+      "value": "<p>عطور لبشرتك ولمكانك ولكل تفاصيل طقسك العطري.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.services.heading:16gf41g2agvg6",
+      "source": "The ALMA experience",
+      "digest": "35ea64b24bbdc0761200353fe16f64dc80d9c13e467737a9ef454c13aabb02f9",
+      "before": null,
+      "value": "تجربة ألما"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.services.wardrobe.heading:hd2mab3h26qf",
+      "source": "Smelling amazing",
+      "digest": "066da79d9297a8dbf0a6a3e9c4864425463fd5ae1a1e6344afa39d24b79fda5f",
+      "before": null,
+      "value": "رائحة تأسر الحواس"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.services.wardrobe.text:1jt7rzkfz391e",
+      "source": "<p>Fragrance that stays close, evolves beautifully and becomes part of your presence.</p>",
+      "digest": "bcb63aaad923e65745fd72e385a25dec5a2e3f689531425004d60afdb5da2106",
+      "before": null,
+      "value": "<p>عطر يرافقك، وتتفتح نفحاته بجمال، ليصبح جزءاً من حضورك.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.services.wardrobe.link_label:xqznp1kzsuiu",
+      "source": "Shop all",
+      "digest": "f9975d69cc1b19352eacfbc77d4f09af8c3b32e8aded66d41b7691f1cece599c",
+      "before": null,
+      "value": "تسوقي الكل"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.services.ritual.heading:sem6ds1rc5ru",
+      "source": "Layering",
+      "digest": "bb9ce03ea6935986f231880187080a646e4740dd959edb0608231d9f63eae4c6",
+      "before": null,
+      "value": "دمج العطور"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.services.ritual.text:2ejehn3v936kv",
+      "source": "<p>Pair lotion, solid perfume and spray to build a scent that lasts in your own way.</p>",
+      "digest": "18d8608ad467d4ff27d561e2918d0d85e1f6c45c5957b4f8f4000844f3d0e048",
+      "before": null,
+      "value": "<p>اجمعي اللوشن والعطر الصلب والبخاخ لتبتكري رائحة تدوم على طريقتك.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.services.ritual.link_label:36p3ddux5tj4b",
+      "source": "Discover layering",
+      "digest": "39e9e32c79f0e1242d6da902b61d5b91ef4e9c220b4ed49a3e567908a6a50112",
+      "before": null,
+      "value": "اكتشفي دمج العطور"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.services.gifting.heading:jpjfik4rfsh",
+      "source": "Gifting",
+      "digest": "6e70f33a471ea385ed7903f243e6dd8704b1f3008802c42ceff7b93248a41e38",
+      "before": null,
+      "value": "الهدايا"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.services.gifting.text:1mzrfco8j0sdg",
+      "source": "<p>Thoughtful ALMA pieces and sets chosen for the rituals they will make their own.</p>",
+      "digest": "4a18cb829f8dc2363e39f3223d9cf1de749c1376aa3f22edd5641d4ebe6b257a",
+      "before": null,
+      "value": "<p>منتجات ومجموعات من ألما مختارة بعناية، ليبتكر أحباؤك طقوسهم العطرية الخاصة.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.services.gifting.link_label:1geosagen9f4w",
+      "source": "Explore gifting",
+      "digest": "8ba8c96e94fc9202f2b395d5a845439b591546b60090dc1585893509f1e1f1e7",
+      "before": null,
+      "value": "اكتشفي الهدايا"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.ugc_content.heading:3iscjsodxg8jj",
+      "source": "In the ALMA world",
+      "digest": "a9589f46cca98a109fdf0f0c891c808ea8cbe0c836181db49ad8aca9dd6821c5",
+      "before": null,
+      "value": "في عالم ألما"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.ugc_content.text:2lnkymm6yc8ve",
+      "source": "<p>Rituals, layering and quiet moments shared by the ALMA community.</p>",
+      "digest": "d4e08c263a9a36948486e40c1ec1af34d0b42c1b043c1961cbb36a5f52e1c332",
+      "before": null,
+      "value": "<p>طقوس عطرية وتجارب دمج ولحظات هادئة يشاركها مجتمع ألما.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.ugc_content.video_1.title:6gmy5tb7bo43",
+      "source": "An ALMA ritual",
+      "digest": "6239674edaf6cd96f81a896b2b1849120fbb34c69006af1357bd9b77a0f04087",
+      "before": null,
+      "value": "طقس من ألما"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.ugc_content.video_2.title:3nofbirj3av3k",
+      "source": "Layered your way",
+      "digest": "4d673f7d8c5e6b183eaba3be88f7ca45cb1b5dcb76d32ae5da753e462a236b6f",
+      "before": null,
+      "value": "دمج العطور على طريقتك"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.ugc_content.video_3.title:1pfpki3o3m2hd",
+      "source": "A moment with ALMA",
+      "digest": "34dcec7d7375aee38ae801a92c618fc7ecaf95b48a45b002e4079791ee2a62d7",
+      "before": null,
+      "value": "لحظة مع ألما"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.customer_reviews.heading:oculsdsn88tm",
+      "source": "ALMA, in their words",
+      "digest": "09499dec4f768dc6064964d01925865d1134f9adeb305610e1339c817347c923",
+      "before": null,
+      "value": "ألما بكلماتهم"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.customer_reviews.review_97p4WX.quote:1psrf1b3z2wzn",
+      "source": "Amazing fragrance and beautiful packaging. It lasts really well, and the Sandal sample was such a lovely touch.",
+      "digest": "52872f80b23e3d48f46e18a3c67bbf4bcbf6a30cb0a74f2f8519a922db984874",
+      "before": null,
+      "value": "عطر رائع وتغليف جميل. يدوم بشكل ممتاز، وكانت عينة الصندل لمسة لطيفة جداً."
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.customer_reviews.review_97p4WX.name:64b2o2akebsu",
+      "source": "Fatima A.",
+      "digest": "ed78e27dcc6e9a1487d3497642eb727a4ea27a0624ecd96c69c44246486c0999",
+      "before": null,
+      "value": "فاطمة أ."
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.customer_reviews.review_97p4WX.location:1jwn2gj0k2538",
+      "source": "Abu Dhabi",
+      "digest": "5c7dfd7a7d9d77efb358a37e81a7b07814a07e95902e29fac242f4894e0993c4",
+      "before": null,
+      "value": "أبوظبي"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.customer_reviews.review_jETwX7.quote:1cdvlm3iavtx",
+      "source": "Such a beautiful feminine scent—light, soft, and long-lasting. I even got compliments from my friends.",
+      "digest": "008f45d2bee6431088c8df2305c0a186f9065bb1d7367094815eaff0a51fd8e7",
+      "before": null,
+      "value": "رائحة أنثوية جميلة، خفيفة وناعمة وتدوم طويلاً. حتى صديقاتي أثنين عليها."
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.customer_reviews.review_jETwX7.name:cs4yvalsydlk",
+      "source": "Alya M.",
+      "digest": "107b9a04492de4e679609fd59a7a78ecc61b004ac8a90acb9cdbc32f48509c8d",
+      "before": null,
+      "value": "علياء م."
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.customer_reviews.review_jETwX7.location:2hbewbcq81f1e",
+      "source": "Dubai",
+      "digest": "6c425048aa7badd9d84615bd8620ca1864efd81cfdb69dcd5d5a94b68013d48d",
+      "before": null,
+      "value": "دبي"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.customer_reviews.review_djdjxT.quote:2ar8bgfqfotfu",
+      "source": "Absolutely love it. The Oud Makhmaria smells amazing, feels elegant, and lasted on me until the next day",
+      "digest": "846d73a25a4e225ea54193d4c74ef7f4f8a3d8c3d4a5b9dfac1b54ccd5adf545",
+      "before": null,
+      "value": "أحببتها كثيراً. رائحة مخمرية العود رائعة وراقية، وبقيت معي حتى اليوم التالي."
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.customer_reviews.review_djdjxT.name:b026yd83g1av",
+      "source": "Mariam A.",
+      "digest": "06609664f873170c2b8b8d5c1a257157e6199d7ca09e04156d60b2b501ca95cf",
+      "before": null,
+      "value": "مريم أ."
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.customer_reviews.review_djdjxT.location:14hcfv2yrddgt",
+      "source": "Dubai",
+      "digest": "6c425048aa7badd9d84615bd8620ca1864efd81cfdb69dcd5d5a94b68013d48d",
+      "before": null,
+      "value": "دبي"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.customer_reviews.review_1.quote:1fzlanvidwg47",
+      "source": "A beautiful, long-lasting scent that feels refined without ever being too much.",
+      "digest": "449a5c78279d7eb3df0c0f6fa278fa3b2d9cad722f957f4d679985f739ae60b8",
+      "before": null,
+      "value": "رائحة جميلة تدوم طويلاً، راقية دون أن تكون طاغية."
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.customer_reviews.review_1.name:260quc7zzttwq",
+      "source": "Noura A.",
+      "digest": "6cf1bc385c234d34731ef028bc01dac000ec6549c8384494793159411395425d",
+      "before": null,
+      "value": "نورة أ."
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.customer_reviews.review_1.location:3clt509s0fbv4",
+      "source": "Abu Dhabi",
+      "digest": "5c7dfd7a7d9d77efb358a37e81a7b07814a07e95902e29fac242f4894e0993c4",
+      "before": null,
+      "value": "أبوظبي"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.customer_reviews.review_2.quote:3s58nispilsj8",
+      "source": "The layering ritual has become my favourite part of getting ready for a Dubai evening.",
+      "digest": "abb3f558451ac33d088efda4198a238e7233d123af0c5fc41c72e1730b7fb169",
+      "before": null,
+      "value": "أصبح طقس دمج العطور خطوتي المفضلة أثناء الاستعداد لأمسية في دبي."
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.customer_reviews.review_2.name:2ctfz4gvt04h5",
+      "source": "Mariam S.",
+      "digest": "e7ec1b7853f2725cea73e14de63d7f183c4d588c1fd26fbcf6e6c88f9d78b766",
+      "before": null,
+      "value": "مريم س."
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.customer_reviews.review_2.location:10pqmkcqd9c43",
+      "source": "Dubai",
+      "digest": "6c425048aa7badd9d84615bd8620ca1864efd81cfdb69dcd5d5a94b68013d48d",
+      "before": null,
+      "value": "دبي"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.customer_reviews.review_3.quote:1nootvbmpkqxh",
+      "source": "The presentation is so thoughtful. It made a truly special gift for someone close to me.",
+      "digest": "0195c6020453395e75d72092818bd4e097f2c0719e69ca0406d153ebc04b7eee",
+      "before": null,
+      "value": "التقديم مدروس بعناية. كانت بالفعل هدية مميزة لشخص عزيز عليّ."
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.customer_reviews.review_3.name:18a0n1a7majag",
+      "source": "Hala R.",
+      "digest": "a1939fc6770aa25b43200a228bf38f1589e0b5a75fb5e2268a52bea7acd7a1bd",
+      "before": null,
+      "value": "هالة ر."
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.index.json.customer_reviews.review_3.location:26ax0hhdckgcy",
+      "source": "Dubai",
+      "digest": "6c425048aa7badd9d84615bd8620ca1864efd81cfdb69dcd5d5a94b68013d48d",
+      "before": null,
+      "value": "دبي"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.list-collections.json.main.title:1d0ti1c25d6dr",
+      "source": "Collections",
+      "digest": "9f9feade761d22f340a4de9c586f222aa74658351faadc8365335bc3c548ba71",
+      "before": null,
+      "value": "المجموعات"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.page.alma-collections.json.main.eyebrow:1gg0vni2oikyo",
+      "source": "The ALMA collection",
+      "digest": "21b6f62a8986d11288038c6c7cbd569a5c88c7bb4bbad316cf47800dce55c5d7",
+      "before": null,
+      "value": "مجموعة ألما"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.page.alma-collections.json.main.heading:1gg0u18sr94m1",
+      "source": "Explore ALMA collections",
+      "digest": "841479a3ad031109b4562beacd2e1373190f77bd9c696c849aec98567686b1aa",
+      "before": null,
+      "value": "اكتشفي مجموعات ألما"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.page.alma-collections.json.main.intro:1hl2y2n1ytkvz",
+      "source": "<p>Discover fragrance rituals made for every mood, moment and layer.</p>",
+      "digest": "e6637e20375de647a962713e6ec33da048538b0da29b94c68f657a1f47276dc9",
+      "before": null,
+      "value": "<p>اكتشفي طقوساً عطرية تناسب كل مزاج ولحظة وطبقة عطرية.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.page.alma-collections.json.main.link_label:3gjcw8pynfiko",
+      "source": "Discover collection",
+      "digest": "2b4da20a904658f0d84ba16cc61e82e6b6d6e1c9372db3e3f919aff7a31bed1f",
+      "before": null,
+      "value": "اكتشفي المجموعة"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.page.alma-layering.json.main.eyebrow:3vckloyu86odi",
+      "source": "The ALMA ritual",
+      "digest": "bb5ced50c018cda8c5442e2f900463ce9c0600907747099627835376128dadce",
+      "before": null,
+      "value": "طقس ألما العطري"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.page.alma-layering.json.main.heading:3vckg3e2xmc0v",
+      "source": "Layering",
+      "digest": "bb9ce03ea6935986f231880187080a646e4740dd959edb0608231d9f63eae4c6",
+      "before": null,
+      "value": "دمج العطور"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.page.alma-layering.json.main.text:3os6jtk6awwqy",
+      "source": "<p>Choose your ritual, then discover the pieces made to layer together.</p>",
+      "digest": "fa2435543031066228be0cd0270b093d6a3dcb2626460f006c93e39439512d29",
+      "before": null,
+      "value": "<p>اختاري طقسك العطري، ثم اكتشفي المنتجات المصممة لتتناغم معاً.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.page.alma-layering.json.main.layering_label:22p0he857f5kd",
+      "source": "Layering",
+      "digest": "bb9ce03ea6935986f231880187080a646e4740dd959edb0608231d9f63eae4c6",
+      "before": null,
+      "value": "دمج العطور"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.page.alma-layering.json.main.spray_label:1fm8bez1lxfr",
+      "source": "Spray Perfumes Layering",
+      "digest": "370291a431b5af4e85cd15ca06ae289bc07db83f59b418d5aeb3782de6cb6a70",
+      "before": null,
+      "value": "دمج العطور البخاخة"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.page.contact.json.form.heading:3obzfzrz5xijx",
+      "source": "Start a conversation",
+      "digest": "258150cb3ee4ce738acc5aa1fa7289def8792bc04685cc092203702d18c5515e",
+      "before": null,
+      "value": "ابدئي الحديث معنا"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.page.contact.json.form.intro:23jc9x90ci0i3",
+      "source": "<p>Tell us how we can help. Our team will be in touch soon.</p>",
+      "digest": "42c6faae406245b8b09ecd097647d8a418da6bef76303f47c1634f97d4d7462f",
+      "before": null,
+      "value": "<p>أخبرينا كيف يمكننا مساعدتك. سيتواصل معك فريقنا قريباً.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.password.json.main.heading.heading:3jfchdkhhlz4x",
+      "source": "Opening soon",
+      "digest": "5bbcc826384b8acffe839b73c8dc964edbb4711c6d1f115b15ae47d1f80977ac",
+      "before": null,
+      "value": "الافتتاح قريباً"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.password.json.main.paragraph.text:3dpbi4yl0bkb6",
+      "source": "<p>Be the first to know when we launch.</p>",
+      "digest": "f89b77d13d1fb314284ef98ad8efbd60f0164f781ad07268d6e29be71a499786",
+      "before": null,
+      "value": "<p>كوني أول من يعرف موعد انطلاقنا.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.product.json.main.share.share_label:1ad7auctiy024",
+      "source": "Share",
+      "digest": "29887a5ff9846ccc23327565a07e17fa6dcaea6211f1898ae825f84ae38f4223",
+      "before": null,
+      "value": "مشاركة"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.product.json.related-products.heading:33ue0l8criumv",
+      "source": "You may also like",
+      "digest": "925a46fefcd19d1a323f6f865b136dbe743cc409bfed10b9035d0a1a3d5d2d94",
+      "before": null,
+      "value": "قد يعجبك أيضاً"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.sections/footer-group.json.footer.newsletter_heading:3mws8faawdff7",
+      "source": "Stay in the world of ALMA",
+      "digest": "f8f8eff0a3ced8721fe75512b947a4f4370bc7a5ce14a8716e65bf196c095b28",
+      "before": null,
+      "value": "ابقَي قريبة من عالم ألما"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "section.sections/footer-group.json.footer.newsletter_text:18aqptyndyzie",
+      "source": "<p>New fragrances, rituals and gifts—sent occasionally.</p>",
+      "digest": "0dbca1f19b3615bf11ccecc7063496b3857a3fda014e088a2d0266c925313bc9",
+      "before": null,
+      "value": "<p>عطور وطقوس وهدايا جديدة، نشاركك بها من حين لآخر.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.discover",
+      "source": "Discover",
+      "digest": "d4a33d5b78bccebe3f16843dc30e6c0f73b4eb6efb4e7114ddfebde7fa2c9954",
+      "before": {
+        "key": "alma.discover",
+        "value": "اكتشف",
+        "outdated": false
+      },
+      "value": "اكتشفي"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.related_products",
+      "source": "You may also like",
+      "digest": "925a46fefcd19d1a323f6f865b136dbe743cc409bfed10b9035d0a1a3d5d2d94",
+      "before": {
+        "key": "alma.related_products",
+        "value": "قد يعجبك أيضًا",
+        "outdated": false
+      },
+      "value": "قد يعجبك أيضاً"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.password.heading",
+      "source": "Opening soon",
+      "digest": "5bbcc826384b8acffe839b73c8dc964edbb4711c6d1f115b15ae47d1f80977ac",
+      "before": {
+        "key": "alma.password.heading",
+        "value": "الافتتاح قريبًا",
+        "outdated": false
+      },
+      "value": "الافتتاح قريباً"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.password.text_html",
+      "source": "<p>Be the first to know when we launch.</p>",
+      "digest": "f89b77d13d1fb314284ef98ad8efbd60f0164f781ad07268d6e29be71a499786",
+      "before": {
+        "key": "alma.password.text_html",
+        "value": "<p>كن أول من يعرف موعد انطلاقنا.</p>",
+        "outdated": false
+      },
+      "value": "<p>كوني أول من يعرف موعد انطلاقنا.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.contact.heading",
+      "source": "Start a conversation",
+      "digest": "258150cb3ee4ce738acc5aa1fa7289def8792bc04685cc092203702d18c5515e",
+      "before": {
+        "key": "alma.contact.heading",
+        "value": "ابدأ محادثة معنا",
+        "outdated": false
+      },
+      "value": "ابدئي الحديث معنا"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.contact.intro_html",
+      "source": "<p>Tell us how we can help. Our team will be in touch soon.</p>",
+      "digest": "42c6faae406245b8b09ecd097647d8a418da6bef76303f47c1634f97d4d7462f",
+      "before": {
+        "key": "alma.contact.intro_html",
+        "value": "<p>أخبرنا كيف يمكننا مساعدتك، وسيتواصل معك فريقنا قريبًا.</p>",
+        "outdated": false
+      },
+      "value": "<p>أخبرينا كيف يمكننا مساعدتك. سيتواصل معك فريقنا قريباً.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.nav.shop_all",
+      "source": "Shop all",
+      "digest": "f9975d69cc1b19352eacfbc77d4f09af8c3b32e8aded66d41b7691f1cece599c",
+      "before": {
+        "key": "alma.nav.shop_all",
+        "value": "تسوق الكل",
+        "outdated": false
+      },
+      "value": "تسوقي الكل"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.footer.newsletter_heading",
+      "source": "Stay in the world of ALMA",
+      "digest": "f8f8eff0a3ced8721fe75512b947a4f4370bc7a5ce14a8716e65bf196c095b28",
+      "before": {
+        "key": "alma.footer.newsletter_heading",
+        "value": "ابقَ على تواصل مع عالم ألما",
+        "outdated": false
+      },
+      "value": "ابقَي قريبة من عالم ألما"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.footer.newsletter_text_html",
+      "source": "<p>New fragrances, rituals and gifts—sent occasionally.</p>",
+      "digest": "0dbca1f19b3615bf11ccecc7063496b3857a3fda014e088a2d0266c925313bc9",
+      "before": {
+        "key": "alma.footer.newsletter_text_html",
+        "value": "<p>عطور وطقوس وهدايا جديدة تصلك من حين لآخر.</p>",
+        "outdated": false
+      },
+      "value": "<p>عطور وطقوس وهدايا جديدة، نشاركك بها من حين لآخر.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.layering_story.signup_text_html",
+      "source": "<p>Share your details for a private welcome offer and first access to new ALMA stories.</p>",
+      "digest": "d1be6beb5ccb0f9f5ff3853570e62aff98684fc2d09857f5704ff86ffe6e029f",
+      "before": {
+        "key": "alma.home.layering_story.signup_text_html",
+        "value": "<p>شاركنا بياناتك لتحصل على عرض ترحيبي خاص وتكون أول من يعرف جديد ألما.</p>",
+        "outdated": false
+      },
+      "value": "<p>شاركي بياناتك لتحصلي على عرض ترحيبي خاص، وتكوني من أول من يكتشف جديد ألما.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.layering_story.signup_success_text_html",
+      "source": "<p>Thank you for joining ALMA. Use your code at checkout and enjoy 5% off your first ritual.</p>",
+      "digest": "e7c7b2f40861c7a69b646ea44474b3249d65615057394472395e7ea5373ae30b",
+      "before": {
+        "key": "alma.home.layering_story.signup_success_text_html",
+        "value": "<p>شكرًا لانضمامك إلى ألما. استخدم رمزك عند إتمام الطلب واستمتع بخصم ٥٪ على أول طقس عطري لك.</p>",
+        "outdated": false
+      },
+      "value": "<p>شكراً لانضمامك إلى ألما. استخدمي رمزك عند إتمام الطلب واستمتعي بخصم 5% على تجربتك الأولى.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.image_banner.text_html",
+      "source": "<p>Lotion, solid perfume and spray perfume come together on the skin. Layer each texture, one after another, to create a lasting fragrance ritual that feels entirely your own.</p>",
+      "digest": "b8079af83b3acbe1bd8e65a83d331fbe280028e99106d8eed1f2b68dec1a0aba",
+      "before": {
+        "key": "alma.home.image_banner.text_html",
+        "value": "<p>يلتقي اللوشن والعطر الصلب والعطر الرذاذي على البشرة. طبّق كل تركيبة بالتتابع لتصنع طقسًا عطريًا يدوم ويعبّر عنك وحدك.</p>",
+        "outdated": false
+      },
+      "value": "<p>يتناغم اللوشن والعطر الصلب والعطر البخاخ على البشرة. ضعي كل قوام تلو الآخر، لتبتكري طقساً عطرياً يدوم ويعبّر عنك وحدك.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.image_banner.heading.heading",
+      "source": "A ritual, entirely yours",
+      "digest": "54022f932abc092041499deba9eed2f301d6d948a3daa313283d2b3f76dad58b",
+      "before": {
+        "key": "alma.home.image_banner.heading.heading",
+        "value": "طقس عطري يشبهك تمامًا",
+        "outdated": false
+      },
+      "value": "طقس عطري يشبهك"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.image_banner.button.button_label_1",
+      "source": "Shop all",
+      "digest": "f9975d69cc1b19352eacfbc77d4f09af8c3b32e8aded66d41b7691f1cece599c",
+      "before": {
+        "key": "alma.home.image_banner.button.button_label_1",
+        "value": "تسوق الكل",
+        "outdated": false
+      },
+      "value": "تسوقي الآن"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.featured_collection.best_selling_label",
+      "source": "Best Selling",
+      "digest": "088ae500e64f8282efc97c2d0a30f10241f5f1ec12de5198cdd9696d990c95f3",
+      "before": {
+        "key": "alma.home.featured_collection.best_selling_label",
+        "value": "الأكثر مبيعًا",
+        "outdated": false
+      },
+      "value": "الأكثر مبيعاً"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.scent_finder.heading",
+      "source": "Find Your Aura",
+      "digest": "803925f5c07a00edb6372a77ed178c11ec9d604898c487648e6b06b1d376e8f0",
+      "before": {
+        "key": "alma.home.scent_finder.heading",
+        "value": "اكتشف هالتك العطرية",
+        "outdated": false
+      },
+      "value": "اكتشفي هالتك العطرية"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.scent_finder.text_html",
+      "source": "<p>Choose the notes you love. We’ll reveal the ALMA fragrances that share your scent.</p>",
+      "digest": "482b4101c087d2edebb1e1d6c5349365cde8d8abdde3e61efe9f4e8d92d9b584",
+      "before": {
+        "key": "alma.home.scent_finder.text_html",
+        "value": "<p>اختر النوتات التي تحبها، وسنكشف لك عطور ألما التي تشاركك ذوقك.</p>",
+        "outdated": false
+      },
+      "value": "<p>اختاري النفحات التي تحبينها لنكشف لك عطور ألما الأقرب إلى ذوقك.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.scent_finder.prompt",
+      "source": "Which notes draw you in?",
+      "digest": "89c3d5156dc1c9074121bbf33bdfcbc1199da0ea24813105405df487e7a4fad5",
+      "before": {
+        "key": "alma.home.scent_finder.prompt",
+        "value": "أي النوتات تجذبك؟",
+        "outdated": false
+      },
+      "value": "أي النفحات تأسرك؟"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.scent_finder.initial_message",
+      "source": "Select one or more notes to begin.",
+      "digest": "b858e1060d6e7c51e199dc10f8805200765881ed4b8de55ae97a49849fd73697",
+      "before": {
+        "key": "alma.home.scent_finder.initial_message",
+        "value": "اختر نوتة واحدة أو أكثر للبدء.",
+        "outdated": false
+      },
+      "value": "اختاري نفحة واحدة أو أكثر للبدء."
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.layering_story.heading",
+      "source": "Layer it your way",
+      "digest": "9eaf13e4048300f00252b50693a677c2eaae733b28587b30eb8f421e29f46822",
+      "before": {
+        "key": "alma.home.layering_story.heading",
+        "value": "نسّق عطرك بطريقتك",
+        "outdated": false
+      },
+      "value": "ادمجي العطور على طريقتك"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.layering_story.text_html",
+      "source": "<p>Begin with lotion, deepen the scent with solid perfume, then finish with spray perfume. Three textures, one scent story that belongs to you.</p>",
+      "digest": "0856f191851488ca4fe5fa195fa3536ae0c8521f43ece762e977f415091b124e",
+      "before": {
+        "key": "alma.home.layering_story.text_html",
+        "value": "<p>ابدأ باللوشن، ثم عمّق الرائحة بالعطر الصلب، وأكملها بالعطر الرذاذي. ثلاث تركيبات وحكاية عطرية واحدة تخصك.</p>",
+        "outdated": false
+      },
+      "value": "<p>ابدئي باللوشن، وأضيفي عمقاً للرائحة بالعطر الصلب، ثم اختتمي بالعطر البخاخ. ثلاثة قوامات تحكي قصة عطرية تخصك.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.layering_story.link_label",
+      "source": "Explore layering",
+      "digest": "597a48fb03095184e8cb240b51ee16783deed41174cae3842b12a0e97ea53bb3",
+      "before": {
+        "key": "alma.home.layering_story.link_label",
+        "value": "اكتشف تنسيق العطور",
+        "outdated": false
+      },
+      "value": "اكتشفي دمج العطور"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.layering_story.steps_label",
+      "source": "Lotion, solid perfume and spray perfume",
+      "digest": "2f2dab11110565a4541239b29f77c93d976a121912d185650917db1b5139520a",
+      "before": {
+        "key": "alma.home.layering_story.steps_label",
+        "value": "لوشن وعطر صلب وعطر رذاذي",
+        "outdated": false
+      },
+      "value": "لوشن وعطر صلب وعطر بخاخ"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.layering_story.signup_heading",
+      "source": "Take 5% off your first ALMA ritual",
+      "digest": "cb2e19360306073087ee0e4e89ea4ab92ccdcb4964d9f8d12fededfd8ece72a1",
+      "before": {
+        "key": "alma.home.layering_story.signup_heading",
+        "value": "احصل على خصم ٥٪ على أول طقس عطري من ألما",
+        "outdated": false
+      },
+      "value": "خصم 5% على أول تجربة لك مع ألما"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.layering_story.signup_button_label",
+      "source": "Unlock my 5% off",
+      "digest": "fa0b41901c392d5317b16dfbe6651272b95aade1dc1b243caf38b2db611043c5",
+      "before": {
+        "key": "alma.home.layering_story.signup_button_label",
+        "value": "احصل على خصم ٥٪",
+        "outdated": false
+      },
+      "value": "احصلي على خصم 5%"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.layering_story.signup_fine_print",
+      "source": "By joining, you agree to receive ALMA news and offers.",
+      "digest": "eed5f4e5fa4ed12078635955a3ed5a477276f1211ed2a7a638711e3f9f18a0cc",
+      "before": {
+        "key": "alma.home.layering_story.signup_fine_print",
+        "value": "بانضمامك، توافق على تلقي أخبار ألما وعروضها.",
+        "outdated": false
+      },
+      "value": "بانضمامك، توافقين على تلقي أخبار ألما وعروضها."
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.layering_story.signup_launcher_label",
+      "source": "5% off your ritual",
+      "digest": "1053b757f163ec39a47cc724df32de383f94736ae55da351b51b00e964efe30b",
+      "before": {
+        "key": "alma.home.layering_story.signup_launcher_label",
+        "value": "خصم ٥٪ على طقسك العطري",
+        "outdated": false
+      },
+      "value": "خصم 5% على طقسك العطري"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.layering_story.spray.label",
+      "source": "Spray Perfume",
+      "digest": "affdced5fefd0e8e9e8df91a73879b873b10b2c79d59e341203fbf30c9e4b1ea",
+      "before": {
+        "key": "alma.home.layering_story.spray.label",
+        "value": "عطر رذاذي",
+        "outdated": false
+      },
+      "value": "عطر بخاخ"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.dukhon_story.heading",
+      "source": "A deeper atmosphere",
+      "digest": "5cdc289e7c14bbc41ff0b4f0e0ba5b208c1644b54919d5eb9d1ca43d8b5f1091",
+      "before": {
+        "key": "alma.home.dukhon_story.heading",
+        "value": "أجواء أكثر عمقًا",
+        "outdated": false
+      },
+      "value": "أجواء أكثر عمقاً"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.dukhon_story.text_html",
+      "source": "<p>ALMA Dukhoon brings the ritual into your home with a warm, enveloping presence.</p>",
+      "digest": "224e837eadae43f6adb8b5fdbc95fcc1130151ec41136acb67a01d132f34bd43",
+      "before": {
+        "key": "alma.home.dukhon_story.text_html",
+        "value": "<p>ينقل دخون ألما الطقس العطري إلى منزلك بحضور دافئ يملأ المكان.</p>",
+        "outdated": false
+      },
+      "value": "<p>ينقل دخون ألما الطقس العطري إلى منزلك بحضور دافئ يغمر المكان.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.dukhon_story.link_label",
+      "source": "Discover Dukhoon",
+      "digest": "fb5b34f67037cc82559bbd06aed01ea6715699c03f3c9f32e103ff45bf5bbf99",
+      "before": {
+        "key": "alma.home.dukhon_story.link_label",
+        "value": "اكتشف الدخون",
+        "outdated": false
+      },
+      "value": "اكتشفي الدخون"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.dukhon_story.steps_label",
+      "source": "Complete the ritual",
+      "digest": "2791d96aee05e76f5958aa838fa75371029fe6063741b7c2fd6b67a8cbb08423",
+      "before": {
+        "key": "alma.home.dukhon_story.steps_label",
+        "value": "أكمل طقسك العطري",
+        "outdated": false
+      },
+      "value": "أكملي طقسك العطري"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.gifting_story.title",
+      "source": "Gifting by ALMA",
+      "digest": "9977eeaf42e817c25905b68ac013be268ea83d8c1fc42ada8a390ab73f891d27",
+      "before": {
+        "key": "alma.home.gifting_story.title",
+        "value": "هدايا من ألما",
+        "outdated": false
+      },
+      "value": "هدايا ألما"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.gifting_story.best_selling_label",
+      "source": "Best Selling",
+      "digest": "088ae500e64f8282efc97c2d0a30f10241f5f1ec12de5198cdd9696d990c95f3",
+      "before": {
+        "key": "alma.home.gifting_story.best_selling_label",
+        "value": "الأكثر مبيعًا",
+        "outdated": false
+      },
+      "value": "الهدايا"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.gifting_story.product_link_label",
+      "source": "Discover",
+      "digest": "d4a33d5b78bccebe3f16843dc30e6c0f73b4eb6efb4e7114ddfebde7fa2c9954",
+      "before": {
+        "key": "alma.home.gifting_story.product_link_label",
+        "value": "اكتشف",
+        "outdated": false
+      },
+      "value": "اكتشفي"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.wardrobe.heading",
+      "source": "Explore the ALMA wardrobe",
+      "digest": "0b26e5b10308ed62758d4cdf21bbf2472c6f3c55f3b2a9f2ccb2163cf2b67503",
+      "before": {
+        "key": "alma.home.wardrobe.heading",
+        "value": "اكتشف عالم ألما العطري",
+        "outdated": false
+      },
+      "value": "اكتشفي مجموعات ألما"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.wardrobe.text_html",
+      "source": "<p>Perfume for skin, space and every part of your ritual.</p>",
+      "digest": "38f8b352993314dc320d857526e0027253edb1213dd62dcc10f09a8c5b69b82a",
+      "before": {
+        "key": "alma.home.wardrobe.text_html",
+        "value": "<p>عطور للبشرة والمكان ولكل لحظة في طقسك العطري.</p>",
+        "outdated": false
+      },
+      "value": "<p>عطور لبشرتك ولمكانك ولكل تفاصيل طقسك العطري.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.services.wardrobe.heading",
+      "source": "The complete wardrobe",
+      "digest": "762c77386473fa2840fd68a273501ba2347d02cab2e3499327ad436bcf96f609",
+      "before": {
+        "key": "alma.home.services.wardrobe.heading",
+        "value": "عالم عطري متكامل",
+        "outdated": false
+      },
+      "value": "رائحة تأسر الحواس"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.services.wardrobe.text_html",
+      "source": "<p>Perfumes, solids, lotions, Dukhoon, charms and ready-made kits.</p>",
+      "digest": "23ba9322659251f775ef3839ece14691868af2939a73b865b7009c88a85e7dd1",
+      "before": {
+        "key": "alma.home.services.wardrobe.text_html",
+        "value": "<p>عطور ولوشن ودخون وتعليقات عطرية ومجموعات جاهزة.</p>",
+        "outdated": false
+      },
+      "value": "<p>عطر يرافقك، وتتفتح نفحاته بجمال، ليصبح جزءاً من حضورك.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.services.wardrobe.link_label",
+      "source": "Shop all",
+      "digest": "f9975d69cc1b19352eacfbc77d4f09af8c3b32e8aded66d41b7691f1cece599c",
+      "before": {
+        "key": "alma.home.services.wardrobe.link_label",
+        "value": "تسوق الكل",
+        "outdated": false
+      },
+      "value": "تسوقي الكل"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.services.ritual.heading",
+      "source": "A three-step ritual",
+      "digest": "255054ee50d635ebef7838c51447fa3c8d6cacbd1e94cac1bcc32329ae055605",
+      "before": {
+        "key": "alma.home.services.ritual.heading",
+        "value": "طقس عطري من ثلاث خطوات",
+        "outdated": false
+      },
+      "value": "دمج العطور"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.services.ritual.text_html",
+      "source": "<p>Lotion, solid perfume and spray perfume build a scent with depth.</p>",
+      "digest": "66f685718763c8ebbf0c6e7aefd3d0803d4b6b0134e5bc40a5921cdbf952c0a9",
+      "before": {
+        "key": "alma.home.services.ritual.text_html",
+        "value": "<p>اللوشن والعطر الصلب والعطر الرذاذي يصنعون رائحة غنية ومتدرجة.</p>",
+        "outdated": false
+      },
+      "value": "<p>اجمعي اللوشن والعطر الصلب والبخاخ لتبتكري رائحة تدوم على طريقتك.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.services.ritual.link_label",
+      "source": "Discover layering",
+      "digest": "39e9e32c79f0e1242d6da902b61d5b91ef4e9c220b4ed49a3e567908a6a50112",
+      "before": {
+        "key": "alma.home.services.ritual.link_label",
+        "value": "اكتشف تنسيق العطور",
+        "outdated": false
+      },
+      "value": "اكتشفي دمج العطور"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.services.gifting.heading",
+      "source": "Personal gifting",
+      "digest": "e562cef2d74e5603ba132f5057daed83a9da738dea8e589d4aca04dd4f83a289",
+      "before": {
+        "key": "alma.home.services.gifting.heading",
+        "value": "هدايا بلمسة شخصية",
+        "outdated": false
+      },
+      "value": "الهدايا"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.services.gifting.text_html",
+      "source": "<p>Curated sets and ritual pieces for a present chosen their way.</p>",
+      "digest": "14168a86356fbf0303f1d8b80b5bda0d9c1c0ad55b0270b421f46868fe33c8b4",
+      "before": {
+        "key": "alma.home.services.gifting.text_html",
+        "value": "<p>مجموعات مختارة وقطع عطرية لتمنح من تحب هدية تشبهه.</p>",
+        "outdated": false
+      },
+      "value": "<p>منتجات ومجموعات من ألما مختارة بعناية، ليبتكر أحباؤك طقوسهم العطرية الخاصة.</p>"
+    },
+    {
+      "resourceId": "gid://shopify/OnlineStoreTheme/192648806692",
+      "key": "alma.home.services.gifting.link_label",
+      "source": "Explore gifting",
+      "digest": "8ba8c96e94fc9202f2b395d5a845439b591546b60090dc1585893509f1e1f1e7",
+      "before": {
+        "key": "alma.home.services.gifting.link_label",
+        "value": "اكتشف الهدايا",
+        "outdated": false
+      },
+      "value": "اكتشفي الهدايا"
+    }
+  ],
+  "verification": {
+    "verified": 275,
+    "sourceUnchanged": true
+  }
+}

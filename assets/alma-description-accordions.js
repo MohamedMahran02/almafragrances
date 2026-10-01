@@ -1,6 +1,6 @@
 (() => {
-  const sectionNames = new Set(['notes', 'size']);
-  const sectionPattern = /^(notes|size)\s*:?\s*(.*)$/i;
+  const sectionPattern = /^(fragrance notes|notes|size|النفحات العطرية|النفحات|النوتات|مكونات العطر|الحجم)(?=\s|[:：]|$)\s*[:：]?\s*(.*)$/i;
+  const isArabic = document.documentElement.lang.toLowerCase().startsWith('ar');
 
   const separateSoftBreakSections = (content) => {
     [...content.children].forEach((element) => {
@@ -34,13 +34,15 @@
     let insertAfter = description;
     [...content.children].forEach((heading) => {
       const match = heading.textContent.trim().match(sectionPattern);
-      if (!match || !sectionNames.has(match[1].toLowerCase())) return;
-      const name = match[1].toLowerCase();
+      if (!match || heading.hidden || !content.contains(heading)) return;
+      const name = /^(size|الحجم)$/i.test(match[1]) ? 'size' : 'notes';
       const inlineContent = match[2].trim();
       const accordion = document.createElement('details');
       accordion.className = 'product__accordion accordion quick-add-hidden alma-product-description';
       accordion.innerHTML = '<summary><div class="summary__title"><h2 class="h4 accordion__title inline-richtext"></h2></div><span class="alma-product-description__symbol" aria-hidden="true"></span></summary><div class="accordion__content rte"></div>';
-      accordion.querySelector('.accordion__title').textContent = name.toUpperCase();
+      accordion.querySelector('.accordion__title').textContent = isArabic
+        ? (name === 'size' ? 'الحجم' : 'النفحات')
+        : name.toUpperCase();
       const target = accordion.querySelector('.accordion__content');
       if (inlineContent) {
         const paragraph = document.createElement('p');
