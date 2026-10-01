@@ -1803,3 +1803,20 @@ html[dir="rtl"] .alma-theme .alma-cta-label__text { line-height: 1.5; }
   html[dir="rtl"] .alma-theme .alma-favourites__tabs { width: 100%; margin-inline: 0; padding-inline: 1.5rem; }
   html[dir="rtl"] .alma-theme .alma-layering-hub__tabs { margin-inline: 0; max-width: 100%; }
 }
+
+/* Arabic phones: off-canvas panels must not enlarge the page's scroll area.
+   Clip the viewport shells, not the nested product/collection scroll tracks. */
+@media screen and (max-width: 749px) {
+  html[lang="ar"][dir="rtl"],
+  html[lang="ar"][dir="rtl"] body.alma-theme {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-x: clip;
+    overscroll-behavior-x: none;
+  }
+  html[lang="ar"][dir="rtl"] .alma-theme cart-drawer.drawer {
+    width: 100%;
+    overflow: hidden;
+  }
+}

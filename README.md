@@ -17,6 +17,8 @@ Follow-up Arabic fixes: cart recommendation controls inherit closed-drawer visib
 
 Arabic Layering follow-up: editorial image/layout/signup detection uses the stable `layering_story` section key, not translated heading text. Cart recommendation headings and the default Layering page use native locale keys (`alma.cart_recommendations` and `alma.layering_page`) with English/Arabic values.
 
+Arabic phone overflow follow-up: at widths up to 749px, the Arabic RTL document/body use horizontal clipping and the fixed cart shell contains its off-screen slide. Nested carousels retain their existing scrolling. Actual phone viewport metrics remain unverified without a connected browser.
+
 ### Historical implementation context
 
 - The user authorized starting the build directly in the supplied Shopify theme and pushing completed edits to GitHub.
@@ -1931,3 +1933,12 @@ Preserve products, prices, inventory, URLs, note references, commerce and integr
 - Files: sections/alma-editorial-feature.liquid, sections/main-page.liquid, snippets/alma-layering-hub-content.liquid, snippets/cart-drawer.liquid, locales/en.default.json, locales/ar.json, README.md.
 - Checks: confirmed the live Arabic page previously contained the fallback English introduction; JSON parsing and diff whitespace passed. Theme Check reports no Liquid issues in changed files. Existing 970 Arabic matching-translation errors and seven unrelated warnings remain; nine new English/Arabic keys produce matching-translation notices in each of 30 other bundled locales not translated by this request. Browser connection remains unavailable, so no visual or interactive claim is made. Context7 is unavailable; official Shopify storefront-locale documentation was used.
 - Continuation: never select editorial behavior based on translated text. Both Layering template paths and AJAX cart recommendation markup must use native locale text. Verify connected-theme image and translated content after GitHub synchronization.
+
+### 2026-10-01 - Contain Arabic mobile document overflow
+
+- Request: stop Arabic-only mobile page movement sideways while scrolling vertically; previous tab fixes were insufficient.
+- Source finding: the RTL cart panel translates left outside a fixed full-viewport shell with visible overflow. The earlier fix aligned the drawer and hid its labels, but did not contain its off-screen geometry. The document used only a global overflow-x:hidden rule, which does not provide the non-scrollable clipping boundary supplied by overflow-x:clip. A browser measurement identifying all overflow contributors is still unavailable; the drawer is a source-supported candidate, not a measured sole cause.
+- Changed: under max-width:749px and lang=ar/dir=rtl, constrain document/body width to 100%, clip horizontal viewport overflow with a hidden fallback, prevent horizontal overscroll chaining and contain the cart panel within its fixed shell. No touch-action restriction, body position lock or carousel overflow change. English, desktop, vertical page scrolling rules and mobile internal product/category tracks are preserved.
+- Files: assets/alma-theme.css and README.md. Checks: scoped selector/cascade and Git diff whitespace review. No external packages added; MDN overflow-x documentation consulted (Context7 unavailable).
+- Validation limitation: Browser discovery returned no connections. The frontend-testing-debugging skill requires user authorization to fall back to standalone browser automation; that optional request was sent and remains unanswered. No standalone browser was used. Width measurements, touch swipe, menu/cart transitions and screenshots are unverified. Do not describe this as a reproduced-and-passed browser test.
+- Continuation: when browser access is available, compare document scrollWidth/clientWidth on /ar at phone sizes before/after opening and closing the menu/cart, and confirm nested carousels still scroll independently. If visible content remains wider, identify its bounding box before making further sizing changes.
