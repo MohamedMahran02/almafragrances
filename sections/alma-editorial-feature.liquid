@@ -1,10 +1,16 @@
-{%- assign alma_ritual_eyebrow = section.settings.eyebrow | downcase -%}
+{%- liquid
+  assign alma_editorial_key = section.id | split: '__' | last
+  assign alma_is_ritual = false
+  if alma_editorial_key == 'layering_story'
+    assign alma_is_ritual = true
+  endif
+-%}
 {%- liquid
   assign feature_product = section.settings.product
   assign feature_image = section.settings.image
   assign use_ritual_fallback_image = false
   assign use_dukhon_fallback_images = false
-  if feature_image == blank and alma_ritual_eyebrow == 'the alma ritual'
+  if feature_image == blank and alma_is_ritual
     assign use_ritual_fallback_image = true
   elsif feature_image == blank and section.settings.layout == 'immersive' and feature_product.handle == 'alma-dokhon'
     assign use_dukhon_fallback_images = true
@@ -12,7 +18,7 @@
     assign feature_image = feature_product.featured_image
   endif
 -%}
-<section class="alma-editorial alma-editorial--{{ section.settings.tone }} alma-editorial--{{ section.settings.media_position }} alma-editorial--{{ section.settings.layout | default: 'split' }}{% if alma_ritual_eyebrow == 'the alma ritual' %} alma-editorial--ritual-static{% endif %}{% if use_dukhon_fallback_images %} alma-editorial--dukhon-responsive{% endif %}" aria-labelledby="AlmaEditorial-{{ section.id }}">
+<section class="alma-editorial alma-editorial--{{ section.settings.tone }} alma-editorial--{{ section.settings.media_position }} alma-editorial--{{ section.settings.layout | default: 'split' }}{% if alma_is_ritual %} alma-editorial--ritual-static{% endif %}{% if use_dukhon_fallback_images %} alma-editorial--dukhon-responsive{% endif %}" aria-labelledby="AlmaEditorial-{{ section.id }}">
   <div class="alma-editorial__media">
     {%- if use_ritual_fallback_image -%}
       <img class="alma-editorial__image" src="{{ 'alma-layer-it-your-way.jpg' | asset_url }}" width="1365" height="2048" loading="lazy" alt="{{ section.settings.heading | escape }}">
@@ -42,6 +48,9 @@
       <div class="alma-editorial__product-line"><span>{{ feature_product.title | escape }}</span>{% render 'price', product: feature_product %}</div>
     {%- endif -%}
     {%- assign feature_link = section.settings.link -%}
+    {%- if feature_link == '/pages/layering' -%}
+      {%- assign feature_link = pages['layering'].url -%}
+    {%- endif -%}
     {%- if feature_link == blank and feature_product != blank -%}{%- assign feature_link = feature_product.url -%}{%- endif -%}
     {%- if section.settings.link_label != blank and feature_link != blank -%}
       <a class="alma-button" href="{{ feature_link }}">
@@ -68,7 +77,7 @@
     {%- endif -%}
   </div>
 </section>
-{%- if alma_ritual_eyebrow == 'the alma ritual' and section.settings.enable_ritual_signup -%}
+{%- if alma_is_ritual and section.settings.enable_ritual_signup -%}
     {%- assign ritual_form_id = 'AlmaRitualSignupForm-' | append: section.id -%}
     {%- form 'customer', id: ritual_form_id, class: 'alma-ritual-signup-modal__form' -%}
     <dialog

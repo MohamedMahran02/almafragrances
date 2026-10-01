@@ -20,13 +20,20 @@
   {{ 'component-card.css' | asset_url | stylesheet_tag }}
   {{ 'component-price.css' | asset_url | stylesheet_tag }}
   <script src="{{ 'alma-layering-hub.js' | asset_url }}" defer="defer"></script>
+  {%- liquid
+    assign layering_eyebrow = 'alma.layering_page.eyebrow' | t
+    assign layering_heading = 'alma.layering_page.heading' | t
+    assign layering_intro = 'alma.layering_page.intro_html' | t
+    assign layering_label = 'alma.layering_page.layering_label' | t
+    assign spray_label = 'alma.layering_page.spray_label' | t
+  -%}
   {% render 'alma-layering-hub-content',
     hub_id: section.id,
-    eyebrow: 'The ALMA ritual',
-    heading: 'Layering',
-    text: '<p>Choose your ritual, then discover the pieces made to layer together.</p>',
-    layering_label: 'Layering',
-    spray_label: 'Spray Perfumes Layering',
+    eyebrow: layering_eyebrow,
+    heading: layering_heading,
+    text: layering_intro,
+    layering_label: layering_label,
+    spray_label: spray_label,
     layering_collection: collections['layering'],
     spray_collection: collections['spray-perfumes-layering']
   %}

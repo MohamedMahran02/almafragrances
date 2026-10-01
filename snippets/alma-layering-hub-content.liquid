@@ -5,7 +5,7 @@
     {%- if text != blank -%}<div class="rte">{{ text }}</div>{%- endif -%}
   </header>
 
-  <div class="alma-layering-hub__tabs" role="tablist" aria-label="Layering options">
+  <div class="alma-layering-hub__tabs" role="tablist" aria-label="{{ 'alma.layering_page.options' | t }}">
     <button class="alma-layering-hub__tab is-active" type="button" role="tab" id="AlmaLayeringTab-{{ hub_id }}-1" aria-selected="true" aria-controls="AlmaLayeringPanel-{{ hub_id }}-1" data-alma-layering-tab="1">{{ layering_label | escape }}</button>
     <button class="alma-layering-hub__tab" type="button" role="tab" id="AlmaLayeringTab-{{ hub_id }}-2" aria-selected="false" aria-controls="AlmaLayeringPanel-{{ hub_id }}-2" data-alma-layering-tab="2" tabindex="-1">{{ spray_label | escape }}</button>
   </div>
@@ -30,7 +30,7 @@
           </ul>
         {%- else -%}
           <div class="alma-layering-hub__empty">
-            <p>Select a collection for {{ panel_title | escape }} in the Theme Editor.</p>
+            <p>{{ 'alma.layering_page.empty' | t }}</p>
           </div>
         {%- endif -%}
       </div>

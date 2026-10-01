@@ -523,6 +523,20 @@
     }
   },
   "alma": {
+"cart_recommendations": {
+    "eyebrow": "Complete your ritual",
+    "heading": "You may also love"
+  },
+  "layering_page": {
+    "eyebrow": "The ALMA ritual",
+    "heading": "Layering",
+    "intro_html": "<p>Choose your ritual, then discover the pieces made to layer together.</p>",
+    "layering_label": "Layering",
+    "spray_label": "Spray Perfumes Layering",
+    "options": "Layering options",
+    "empty": "New combinations are coming soon."
+  },
+
     "brand": "ALMA Fragrances",
     "campaign_image_alt": "ALMA spray and solid perfume in warm evening light",
     "discover": "Discover",

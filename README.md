@@ -15,6 +15,8 @@ The Arabic homepage and Layering page return `lang="ar"` / `dir="rtl"`; the home
 
 Follow-up Arabic fixes: cart recommendation controls inherit closed-drawer visibility; RTL cart alignment matches its leftward slide; mobile homepage and Layering collection rails stay within their containers. A further 53 Shopify translation fields replace literal wording and transliterated descriptive bundle names with natural Arabic. See `research/localization/ar-semantic-updates-2026-10-01.json`. Browser rendering remains unverified.
 
+Arabic Layering follow-up: editorial image/layout/signup detection uses the stable `layering_story` section key, not translated heading text. Cart recommendation headings and the default Layering page use native locale keys (`alma.cart_recommendations` and `alma.layering_page`) with English/Arabic values.
+
 ### Historical implementation context
 
 - The user authorized starting the build directly in the supplied Shopify theme and pushing completed edits to GitHub.
@@ -1920,3 +1922,12 @@ Preserve products, prices, inventory, URLs, note references, commerce and integr
 - Files: assets/alma-theme.css, the translation change record and README.md. Shopify's automatic locale synchronization was incorporated before pushing.
 - Checks: Git diff whitespace review and Theme Check; existing unrelated Arabic MatchingTranslations errors remain. Browser list is empty, so rendered mobile width and desktop scrolling cannot be claimed as visually verified. The floating-label fix is supported by the visibility inheritance and RTL positioning rules in source, not a browser reproduction.
 - Continuation: validate Arabic mobile horizontal rails and open/close Cart on the connected theme when a browser is available. Preserve inheritance on recommendation controls; never force visible on descendants of a closed drawer. Use the fresh Shopify translation values for subsequent semantic edits.
+
+### 2026-10-01 - Restore Arabic Layering image and translate fallback page/cart
+
+- Request: restore the Arabic homepage Layering image on desktop/phone, translate cart recommendations and the Layering page.
+- Findings: editorial image/layout/signup activation compared the translated eyebrow against an exact English phrase. The live Arabic Layering page uses the default-page fallback, which passed English literal strings despite the custom template already having Shopify translations. Cart recommendation headings were also English literals.
+- Changed: identify the existing Layering section by its stable section key; retain the supplied static image at both breakpoints and native merchant-selected images. Use locale-aware page URLs for the editorial Layering link. Replace default-page and cart heading literals with native translation keys, and translate tab accessibility/empty text. Custom-template section settings remain editable and retain their native translations. No template order, collection assignment, product data or styling changes.
+- Files: sections/alma-editorial-feature.liquid, sections/main-page.liquid, snippets/alma-layering-hub-content.liquid, snippets/cart-drawer.liquid, locales/en.default.json, locales/ar.json, README.md.
+- Checks: confirmed the live Arabic page previously contained the fallback English introduction; JSON parsing and diff whitespace passed. Theme Check reports no Liquid issues in changed files. Existing 970 Arabic matching-translation errors and seven unrelated warnings remain; nine new English/Arabic keys produce matching-translation notices in each of 30 other bundled locales not translated by this request. Browser connection remains unavailable, so no visual or interactive claim is made. Context7 is unavailable; official Shopify storefront-locale documentation was used.
+- Continuation: never select editorial behavior based on translated text. Both Layering template paths and AJAX cart recommendation markup must use native locale text. Verify connected-theme image and translated content after GitHub synchronization.

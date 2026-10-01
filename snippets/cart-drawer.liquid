@@ -497,8 +497,8 @@
             {%- if recommendations.performed and recommendations.products_count > 0 -%}
               <aside class="alma-cart-recommendations__inner" aria-labelledby="CartDrawerRecommendationsTitle">
                 <div class="alma-cart-recommendations__heading">
-                  <p>Complete your ritual</p>
-                  <h3 id="CartDrawerRecommendationsTitle">You may also love</h3>
+                  <p>{{ 'alma.cart_recommendations.eyebrow' | t }}</p>
+                  <h3 id="CartDrawerRecommendationsTitle">{{ 'alma.cart_recommendations.heading' | t }}</h3>
                 </div>
                 <ul class="alma-cart-recommendations__list" role="list">
                   {%- assign displayed_recommendations = 0 -%}
