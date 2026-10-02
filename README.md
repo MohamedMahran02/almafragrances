@@ -21,6 +21,8 @@ Arabic phone overflow follow-up: at widths up to 749px, the Arabic RTL document/
 
 Arabic finder notes: `alma.notes.*` locale keys cover all 22 supported note names (all 15 currently rendered choices), with matching tokens unchanged. Add future vocabulary in both locale files and the supported-key list; translated metaobject names still pass through.
 
+Arabic catalog heading alignment: center the collection-hero title, eyebrow wrapper and rich-text description for All Products and individual collections at all widths. Preserve RTL reading direction and right-aligned product/filter details.
+
 ### Historical implementation context
 
 - The user authorized starting the build directly in the supplied Shopify theme and pushing completed edits to GitHub.
@@ -1953,3 +1955,11 @@ Preserve products, prices, inventory, URLs, note references, commerce and integr
 - Files: snippets/alma-note-name.liquid, sections/alma-scent-finder.liquid, locales/en.default.json, locales/ar.json and README.md. Section/block orders are unchanged.
 - Checks: fetched current Arabic markup, verified all 15 current matching tokens have Arabic labels, parsed both locale JSON files and reviewed diff whitespace. Theme Check has no offenses in the modified Liquid files; existing Arabic translation errors remain, and other bundled languages lack the new note keys. No new dependencies or browser interaction tests were needed for this label-only change. Shopify storefront-locale documentation was already consulted; Context7 remains unavailable.
 - Continuation: note labels are editable through native Shopify theme translations. Keep matching values independent of these display labels and add any future English vocabulary to both native locale maps and the known-key list.
+
+### 2026-10-02 - Center Arabic catalog titles and collection descriptions
+
+- Request: center the Arabic Products page heading and collection descriptions.
+- Cause: the general RTL text-alignment selector explicitly right-aligned collection hero titles/descriptions, overriding the catalog introduction's centered layout.
+- Changed: add a more specific catalog-only RTL rule centering the title, text wrapper (including eyebrow) and description. Description paragraphs/divs/headings also override inline text alignment from Shopify rich-text content. Reading direction stays RTL; cards, filters, individual product details and English styling are untouched. Applies to mobile and desktop, including All Products.
+- Files: assets/alma-theme.css and README.md. Validation: selector specificity/markup review and git diff --check; no template/order or data edits. Visual browser verification remains unavailable from the prior disconnected browser state.
+- Continuation: preserve catalog-introduction centering when changing global RTL rules.

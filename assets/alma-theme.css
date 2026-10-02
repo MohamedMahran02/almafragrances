@@ -1717,6 +1717,11 @@ html[dir="rtl"] .alma-theme .alma-customer-review:last-child { border-left: 0; }
 }
 
 
+
+/* Arabic catalog introductions keep the same centered hierarchy as English. */
+html[dir="rtl"] .alma-theme .alma-collection-hero :is(.collection-hero__text-wrapper, .collection-hero__title, .collection-hero__description) { text-align: center; }
+html[dir="rtl"] .alma-theme .alma-collection-hero .collection-hero__description :is(p, div, h2, h3, h4) { text-align: center !important; }
+
 /* Shopify-native quick add in the main homepage fragrance collection. */
 .alma-product__form { margin-top: 2rem; }
 .alma-product__add-button {
