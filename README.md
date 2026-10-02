@@ -19,6 +19,8 @@ Arabic Layering follow-up: editorial image/layout/signup detection uses the stab
 
 Arabic phone overflow follow-up: at widths up to 749px, the Arabic RTL document/body use horizontal clipping and the fixed cart shell contains its off-screen slide. Nested carousels retain their existing scrolling. Actual phone viewport metrics remain unverified without a connected browser.
 
+Arabic finder notes: `alma.notes.*` locale keys cover all 22 supported note names (all 15 currently rendered choices), with matching tokens unchanged. Add future vocabulary in both locale files and the supported-key list; translated metaobject names still pass through.
+
 ### Historical implementation context
 
 - The user authorized starting the build directly in the supplied Shopify theme and pushing completed edits to GitHub.
@@ -1942,3 +1944,12 @@ Preserve products, prices, inventory, URLs, note references, commerce and integr
 - Files: assets/alma-theme.css and README.md. Checks: scoped selector/cascade and Git diff whitespace review. No external packages added; MDN overflow-x documentation consulted (Context7 unavailable).
 - Validation limitation: Browser discovery returned no connections. The frontend-testing-debugging skill requires user authorization to fall back to standalone browser automation; that optional request was sent and remains unanswered. No standalone browser was used. Width measurements, touch swipe, menu/cart transitions and screenshots are unverified. Do not describe this as a reproduced-and-passed browser test.
 - Continuation: when browser access is available, compare document scrollWidth/clientWidth on /ar at phone sizes before/after opening and closing the menu/cart, and confirm nested carousels still scroll independently. If visible content remains wider, identify its bounding box before making further sizing changes.
+
+### 2026-10-02 - Complete Arabic scent finder note labels
+
+- Request: translate remaining English note choices in the Arabic popup.
+- Findings: the existing snippet covered only 13 English names; the live popup rendered 15 notes, six in English (Bakhoor, Cocoa, Fruity, Saffron, Tobacco, Woody).
+- Changed: move all 22 supported note labels into English/Arabic native locale keys under alma.notes; render known Arabic labels using Shopify's t filter. Use natural scent-category wording for floral/fruity/powder/woody. Already translated or unknown names still pass through. Preserve checkbox matching values, product note metadata and matching logic. Also allow comma-separated fallback note strings to supply their own label rather than an empty name property.
+- Files: snippets/alma-note-name.liquid, sections/alma-scent-finder.liquid, locales/en.default.json, locales/ar.json and README.md. Section/block orders are unchanged.
+- Checks: fetched current Arabic markup, verified all 15 current matching tokens have Arabic labels, parsed both locale JSON files and reviewed diff whitespace. Theme Check has no offenses in the modified Liquid files; existing Arabic translation errors remain, and other bundled languages lack the new note keys. No new dependencies or browser interaction tests were needed for this label-only change. Shopify storefront-locale documentation was already consulted; Context7 remains unavailable.
+- Continuation: note labels are editable through native Shopify theme translations. Keep matching values independent of these display labels and add any future English vocabulary to both native locale maps and the known-key list.

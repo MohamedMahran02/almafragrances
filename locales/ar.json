@@ -522,6 +522,31 @@
     }
   },
   "alma": {
+"notes": {
+    "almond": "لوز",
+    "amber": "عنبر",
+    "bakhoor": "بخور",
+    "caramel": "كراميل",
+    "citrus": "حمضيات",
+    "cocoa": "كاكاو",
+    "coconut": "جوز الهند",
+    "floral": "نفحات زهرية",
+    "fruity": "نفحات فاكهية",
+    "jasmine": "ياسمين",
+    "leather": "جلد",
+    "musk": "مسك",
+    "oud": "عود",
+    "pear": "كمثرى",
+    "powder": "نفحات بودرية",
+    "rose": "ورد",
+    "saffron": "زعفران",
+    "sandalwood": "خشب الصندل",
+    "spices": "توابل",
+    "tobacco": "تبغ",
+    "vanilla": "فانيلا",
+    "woody": "نفحات خشبية"
+  },
+
 "cart_recommendations": {
     "eyebrow": "أكملي تجربتك العطرية",
     "heading": "قد يعجبك أيضاً"

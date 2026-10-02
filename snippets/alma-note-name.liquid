@@ -1,21 +1,12 @@
 {%- if request.locale.iso_code == 'ar' -%}
   {%- assign note_key = name | downcase | strip -%}
-  {%- case note_key -%}
-    {%- when 'amber' -%}عنبر
-    {%- when 'citrus' -%}حمضيات
-    {%- when 'coconut' -%}جوز الهند
-    {%- when 'floral' -%}زهور
-    {%- when 'jasmine' -%}ياسمين
-    {%- when 'leather' -%}جلد
-    {%- when 'musk' -%}مسك
-    {%- when 'oud' -%}عود
-    {%- when 'pear' -%}كمثرى
-    {%- when 'powder' -%}بودرة
-    {%- when 'rose' -%}ورد
-    {%- when 'sandalwood' -%}خشب الصندل
-    {%- when 'vanilla' -%}فانيليا
-    {%- else -%}{{- name | escape -}}
-  {%- endcase -%}
+  {%- assign known_notes = 'almond,amber,bakhoor,caramel,citrus,cocoa,coconut,floral,fruity,jasmine,leather,musk,oud,pear,powder,rose,saffron,sandalwood,spices,tobacco,vanilla,woody' | split: ',' -%}
+  {%- if known_notes contains note_key -%}
+    {%- assign translation_key = 'alma.notes.' | append: note_key -%}
+    {{- translation_key | t -}}
+  {%- else -%}
+    {{- name | escape -}}
+  {%- endif -%}
 {%- else -%}
   {{- name | escape -}}
 {%- endif -%}

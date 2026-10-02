@@ -523,6 +523,31 @@
     }
   },
   "alma": {
+"notes": {
+    "almond": "Almond",
+    "amber": "Amber",
+    "bakhoor": "Bakhoor",
+    "caramel": "Caramel",
+    "citrus": "Citrus",
+    "cocoa": "Cocoa",
+    "coconut": "Coconut",
+    "floral": "Floral",
+    "fruity": "Fruity",
+    "jasmine": "Jasmine",
+    "leather": "Leather",
+    "musk": "Musk",
+    "oud": "Oud",
+    "pear": "Pear",
+    "powder": "Powder",
+    "rose": "Rose",
+    "saffron": "Saffron",
+    "sandalwood": "Sandalwood",
+    "spices": "Spices",
+    "tobacco": "Tobacco",
+    "vanilla": "Vanilla",
+    "woody": "Woody"
+  },
+
 "cart_recommendations": {
     "eyebrow": "Complete your ritual",
     "heading": "You may also love"

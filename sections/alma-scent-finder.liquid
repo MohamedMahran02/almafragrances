@@ -32,7 +32,7 @@
         <p id="AlmaScentFinderHelp-{{ section.id }}" class="visually-hidden">{{ 'alma.finder.help' | t }}</p>
         <div class="alma-scent-finder__note-grid">
           {%- for note in finder_notes -%}
-            {%- assign note_label = note.name.value | default: note.name | strip -%}
+            {%- assign note_label = note.name.value | default: note.name | default: note | strip -%}
             <label class="alma-scent-finder__note">
               {%- capture localized_note -%}{% render 'alma-note-name', name: note_label %}{%- endcapture -%}
               <input type="checkbox" value="{{ note_label | downcase | escape }}" data-note-label="{{ localized_note | escape }}">
