@@ -1825,3 +1825,18 @@ html[dir="rtl"] .alma-theme .alma-cta-label__text { line-height: 1.5; }
     overflow: hidden;
   }
 }
+
+/* Arabic mobile eyebrow text must use natural joined-letter spacing. */
+@media screen and (max-width: 749px) {
+  html[lang="ar"] .alma-theme :is(
+    [class*="__eyebrow"],
+    .alma-layering-hub__heading > p,
+    .alma-collection-banners__heading > p,
+    .alma-customer-reviews__heading > p,
+    .alma-cart-recommendations__heading > p
+  ) {
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+  }
+}

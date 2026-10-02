@@ -23,6 +23,8 @@ Arabic finder notes: `alma.notes.*` locale keys cover all 22 supported note name
 
 Arabic catalog heading alignment: center the collection-hero title, eyebrow wrapper and rich-text description for All Products and individual collections at all widths. Preserve RTL reading direction and right-aligned product/filter details.
 
+Arabic mobile subtitles above headings use normal letter/word spacing (up to 749px); preserve this override when adjusting the English uppercase eyebrow styling.
+
 ### Historical implementation context
 
 - The user authorized starting the build directly in the supplied Shopify theme and pushing completed edits to GitHub.
@@ -1963,3 +1965,11 @@ Preserve products, prices, inventory, URLs, note references, commerce and integr
 - Changed: add a more specific catalog-only RTL rule centering the title, text wrapper (including eyebrow) and description. Description paragraphs/divs/headings also override inline text alignment from Shopify rich-text content. Reading direction stays RTL; cards, filters, individual product details and English styling are untouched. Applies to mobile and desktop, including All Products.
 - Files: assets/alma-theme.css and README.md. Validation: selector specificity/markup review and git diff --check; no template/order or data edits. Visual browser verification remains unavailable from the prior disconnected browser state.
 - Continuation: preserve catalog-introduction centering when changing global RTL rules.
+
+### 2026-10-02 - Remove Arabic mobile eyebrow letter gaps
+
+- Request: remove the spaced letters in small subtitles above headings, shown in the supplied Arabic Layering phone screenshot.
+- Cause: the Layering eyebrow explicitly sets letter-spacing:.16em; similar editorial/catalog/popup subtitles use .12–.17em, overriding the inherited Arabic body reset.
+- Changed: mobile-only Arabic override resets letter/word spacing and uppercase transformation for eyebrow classes and heading-introduction paragraphs, including Layering, collection banners, reviews and cart recommendations. Font, size, color, alignment, English and desktop rules are preserved.
+- Files: assets/alma-theme.css and README.md. Checks: screenshot/source comparison, selector-specificity and breakpoint review, git diff --check. Rendered browser verification remains unavailable. No content, templates or section order changed.
+- Continuation: Arabic subtitles require natural joined-letter spacing; do not apply English uppercase tracking to them on mobile.
