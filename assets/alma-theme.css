@@ -1826,14 +1826,16 @@ html[dir="rtl"] .alma-theme .alma-cta-label__text { line-height: 1.5; }
   }
 }
 
-/* Arabic mobile eyebrow text must use natural joined-letter spacing. */
+/* Arabic mobile subtitles and requested controls use natural joined-letter spacing. */
 @media screen and (max-width: 749px) {
   html[lang="ar"] .alma-theme :is(
     [class*="__eyebrow"],
     .alma-layering-hub__heading > p,
     .alma-collection-banners__heading > p,
     .alma-customer-reviews__heading > p,
-    .alma-cart-recommendations__heading > p
+    .alma-cart-recommendations__heading > p,
+    .alma-products-hub__tab,
+    .alma-scent-finder__notes legend
   ) {
     letter-spacing: normal;
     word-spacing: normal;

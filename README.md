@@ -23,7 +23,7 @@ Arabic finder notes: `alma.notes.*` locale keys cover all 22 supported note name
 
 Arabic catalog heading alignment: center the collection-hero title, eyebrow wrapper and rich-text description for All Products and individual collections at all widths. Preserve RTL reading direction and right-aligned product/filter details.
 
-Arabic mobile subtitles above headings use normal letter/word spacing (up to 749px); preserve this override when adjusting the English uppercase eyebrow styling.
+Arabic mobile subtitles above headings, All Products collection tabs and the scent-finder note prompt use normal letter/word spacing (up to 749px); preserve this override when adjusting the English uppercase eyebrow styling.
 
 ### Historical implementation context
 
@@ -1973,3 +1973,10 @@ Preserve products, prices, inventory, URLs, note references, commerce and integr
 - Changed: mobile-only Arabic override resets letter/word spacing and uppercase transformation for eyebrow classes and heading-introduction paragraphs, including Layering, collection banners, reviews and cart recommendations. Font, size, color, alignment, English and desktop rules are preserved.
 - Files: assets/alma-theme.css and README.md. Checks: screenshot/source comparison, selector-specificity and breakpoint review, git diff --check. Rendered browser verification remains unavailable. No content, templates or section order changed.
 - Continuation: Arabic subtitles require natural joined-letter spacing; do not apply English uppercase tracking to them on mobile.
+
+### 2026-10-02 - Remove Arabic mobile tracking from collection tabs and note prompt
+
+- Request: remove letter gaps from the All Products collection selector and the Arabic scent popup question on phones.
+- Changed: extend the existing Arabic-only max-width:749px typography reset to .alma-products-hub__tab and .alma-scent-finder__notes legend. This overrides their explicit .13em/.14em tracking without changing font size, tab padding, horizontal scrolling, popup geometry, matching, English or desktop presentation.
+- Files: assets/alma-theme.css and README.md. Checks: reviewed selectors against rendered Liquid classes and existing responsive rules; git diff --check. No new dependencies or content edits; browser visual testing remains unavailable.
+- Continuation: retain this targeted typography reset for these Arabic mobile controls.
