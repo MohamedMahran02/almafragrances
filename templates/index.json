@@ -198,9 +198,9 @@
         "gifts"
       ],
       "settings": {
-        "title": "Gifting by ALMA",
+        "title": "Offers by ALMA",
         "best_selling_collection": "gifting",
-        "best_selling_label": "Gifting",
+        "best_selling_label": "Offers",
         "products_to_show": 4,
         "enable_quick_add": true,
         "product_link_label": "Discover"
