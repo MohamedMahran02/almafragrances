@@ -27,6 +27,8 @@ Arabic mobile subtitles above headings, All Products collection tabs and the sce
 
 Navbar label update (2026-10-06): the existing Gifting navigation link reads Offers / العروض on desktop and mobile. Its destination remains the Gifting collection.
 
+Offers collection Arabic title updated natively to العروض (2026-10-06), verified current in Shopify. The unchanged collection handle is gifting.
+
 ### Historical implementation context
 
 - The user authorized starting the build directly in the supplied Shopify theme and pushing completed edits to GitHub.
@@ -1990,3 +1992,11 @@ Preserve products, prices, inventory, URLs, note references, commerce and integr
 - Changed only alma.nav.gifting in English/Arabic native locale files to Offers / العروض. Shared navigation uses these keys for desktop and mobile. The existing Gifting collection destination and homepage gifting content remain unchanged.
 - Files: locales/en.default.json, locales/ar.json, README.md. Checks: parsed both locale JSON files, asserted exact nav values, reviewed diff and git diff --check. No visual layout change or browser test needed.
 - Continuation: keep Offers as the navbar label unless requested otherwise; the underlying locale key is retained for compatibility.
+
+### 2026-10-06 - Update Offers collection Arabic title
+
+- Request: correct the unchanged Arabic heading inside the renamed Offers collection.
+- Cause: Shopify retained الهدايا as an outdated collection-title translation after the English source changed to Offers. Navbar locale edits do not update collection resource translations.
+- Changed: registered title=العروض for Arabic on collection 662161916196 using its current Offers source digest. Read back the value with outdated:false. Native translation remains editable in Translate & Adapt. No URL, product membership, description, template or styling changes.
+- Files: research/localization/ar-offers-title-2026-10-06.json (before/after, digest, verification; no credentials) and README.md. Checks: fresh source/title inspection, mutation userErrors empty, native translation readback, JSON serialization and git diff --check.
+- Continuation: rename native collection translations when changing collection source titles; the handle remains gifting.

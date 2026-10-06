@@ -1,0 +1,18 @@
+{
+  "resourceId": "gid://shopify/Collection/662161916196",
+  "locale": "ar",
+  "key": "title",
+  "source": "Offers",
+  "digest": "e98bf0e26046c00ddc2cb23e8d83d5a42832ec5331889926ebec11ad5c0a71e8",
+  "before": {
+    "key": "title",
+    "value": "الهدايا",
+    "outdated": true
+  },
+  "value": "العروض",
+  "verified": {
+    "key": "title",
+    "value": "العروض",
+    "outdated": false
+  }
+}
