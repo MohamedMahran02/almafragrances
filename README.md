@@ -25,6 +25,8 @@ Arabic catalog heading alignment: center the collection-hero title, eyebrow wrap
 
 Arabic mobile subtitles above headings, All Products collection tabs and the scent-finder note prompt use normal letter/word spacing (up to 749px); preserve this override when adjusting the English uppercase eyebrow styling.
 
+Navbar label update (2026-10-06): the existing Gifting navigation link reads Offers / العروض on desktop and mobile. Its destination remains the Gifting collection.
+
 ### Historical implementation context
 
 - The user authorized starting the build directly in the supplied Shopify theme and pushing completed edits to GitHub.
@@ -1980,3 +1982,11 @@ Preserve products, prices, inventory, URLs, note references, commerce and integr
 - Changed: extend the existing Arabic-only max-width:749px typography reset to .alma-products-hub__tab and .alma-scent-finder__notes legend. This overrides their explicit .13em/.14em tracking without changing font size, tab padding, horizontal scrolling, popup geometry, matching, English or desktop presentation.
 - Files: assets/alma-theme.css and README.md. Checks: reviewed selectors against rendered Liquid classes and existing responsive rules; git diff --check. No new dependencies or content edits; browser visual testing remains unavailable.
 - Continuation: retain this targeted typography reset for these Arabic mobile controls.
+
+### 2026-10-06 - Rename navbar Gifting to Offers
+
+- Request: verify MohamedMahran02 authentication and rename the navbar label to Offers.
+- Verified local Git credentials against GitHub /user: MohamedMahran02. Pulled Shopify homepage updates in c45d5d1 before editing and preserved them.
+- Changed only alma.nav.gifting in English/Arabic native locale files to Offers / العروض. Shared navigation uses these keys for desktop and mobile. The existing Gifting collection destination and homepage gifting content remain unchanged.
+- Files: locales/en.default.json, locales/ar.json, README.md. Checks: parsed both locale JSON files, asserted exact nav values, reviewed diff and git diff --check. No visual layout change or browser test needed.
+- Continuation: keep Offers as the navbar label unless requested otherwise; the underlying locale key is retained for compatibility.
