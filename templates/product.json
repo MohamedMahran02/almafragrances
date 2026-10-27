@@ -49,18 +49,18 @@
           "type": "description",
           "settings": {}
         },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        },
         "tabby_pay_later_pdp_final_YVicBY": {
           "type": "shopify://apps/tabby-pay-later/blocks/pdp-final/b31c2495-41fc-4b20-9fc7-8cb2e9dd9a95",
           "settings": {
             "merchant_code": "",
             "should_inherit_bg": false,
             "no_price_display": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
           }
         }
       },
@@ -72,8 +72,8 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share",
-        "tabby_pay_later_pdp_final_YVicBY"
+        "tabby_pay_later_pdp_final_YVicBY",
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,
