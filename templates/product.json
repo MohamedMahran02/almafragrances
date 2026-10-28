@@ -57,6 +57,12 @@
             "no_price_display": false
           }
         },
+        "custom_liquid_VdUtEY": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'tamara' %}"
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -73,6 +79,7 @@
         "buy_buttons",
         "description",
         "tabby_pay_later_pdp_final_YVicBY",
+        "custom_liquid_VdUtEY",
         "share"
       ],
       "settings": {
